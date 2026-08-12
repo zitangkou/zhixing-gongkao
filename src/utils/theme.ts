@@ -30,7 +30,7 @@ function setNativeChrome(dark: boolean) {
   callNative(() =>
     Taro.setNavigationBarColor({
       frontColor: '#ffffff',
-      backgroundColor: dark ? '#8B0000' : '#D0021B',
+      backgroundColor: dark ? '#3D5A7A' : '#1E3A5F',
       animation: { duration: 200, timingFunc: 'easeIn' },
     }),
   )

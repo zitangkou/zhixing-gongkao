@@ -53,7 +53,7 @@ function formatTime(iso: string) {
   .summary {
     text-align: center;
     padding: 24px;
-    background: linear-gradient(135deg, #D0021B, #8B0000);
+    background: linear-gradient(135deg, #1E3A5F, #142940);
     border-radius: 12px;
     color: #fff;
     margin-bottom: 16px;

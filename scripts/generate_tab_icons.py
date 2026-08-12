@@ -222,9 +222,9 @@ def render_tab(draw_fn, color) -> list[tuple[int, int, int, int]]:
 def draw_logo() -> list[tuple[int, int, int, int]]:
     size = LOGO_SIZE
     px = blank(size)
-    red = (208, 2, 27, 255)
+    red = (30, 58, 95, 255)
     white = (255, 255, 255, 255)
-    # rounded red badge
+    # rounded blue badge
     fill_round_rect(px, size, 8, 8, size - 9, size - 9, 44, red)
     # open book shape
     # left page
@@ -249,7 +249,7 @@ def draw_logo() -> list[tuple[int, int, int, int]]:
 
 
 GRAY = (153, 153, 153, 255)
-RED = (208, 2, 27, 255)
+RED = (30, 58, 95, 255)
 
 for name, fn in [("home", draw_home), ("quiz", draw_quiz), ("user", draw_user)]:
     write_png(ICON_OUT / f"{name}.png", TAB_SIZE, render_tab(fn, GRAY))

@@ -1,5 +1,5 @@
-/** 主题色：中国红 */
-export const PRIMARY_COLOR = '#D0021B'
+/** 主题色：深蓝 */
+export const PRIMARY_COLOR = '#1E3A5F'
 export const BG_COLOR = '#FFFFFF'
 export const PAGE_BG = '#F5F5F5'
 

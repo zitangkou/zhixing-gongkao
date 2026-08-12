@@ -56,7 +56,7 @@ function zoomOut() {
     font-size: 17px;
     font-weight: 600;
     text-align: center;
-    background: linear-gradient(135deg, #D0021B, #8B0000);
+    background: linear-gradient(135deg, #1E3A5F, #142940);
     color: #fff;
   }
   .canvas-area {

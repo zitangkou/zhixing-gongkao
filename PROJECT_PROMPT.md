@@ -32,9 +32,9 @@
 
 | 用途 | 变量 | 亮色值 | 暗色值 |
 |---|---|---|---|
-| 品牌主色 | `$primary-color` | `#d0021b` | `#e85d6a` |
-| 品牌深色 | `$primary-dark` | `#8b0000` | `#8f2f3a` |
-| 品牌浅色底 | `$primary-light` | `rgba(208,2,27,.1)` | `rgba(232,93,106,.16)` |
+| 品牌主色 | `$primary-color` | `#1e3a5f` | `#3d5a7a` |
+| 品牌深色 | `$primary-dark` | `#142940` | `#5a7a9e` |
+| 品牌浅色底 | `$primary-light` | `rgba(30,58,95,.1)` | `rgba(61,90,122,.16)` |
 | 正文 | `$text-primary` | `#1a1a1a` | `#e4e4e6` |
 | 次要文字 | `$text-secondary` | `#666` | `#a8a8ae` |
 | 弱文字 | `$text-muted` | `#999` | `#7c7c84` |

@@ -1,12 +1,12 @@
 /* 运行时主题：品牌色与表面色均走 CSS 变量，暗色统一切换 */
 :root,
 page {
-  --zk-primary: #d0021b;
-  --zk-primary-mid: #a80116;
-  --zk-primary-dark: #8b0000;
-  --zk-primary-light: rgba(208, 2, 27, 0.1);
-  --zk-primary-soft: rgba(208, 2, 27, 0.14);
-  --zk-primary-faint: rgba(208, 2, 27, 0.06);
+  --zk-primary: #1e3a5f;
+  --zk-primary-mid: #182b44;
+  --zk-primary-dark: #142940;
+  --zk-primary-light: rgba(30, 58, 95, 0.1);
+  --zk-primary-soft: rgba(30, 58, 95, 0.14);
+  --zk-primary-faint: rgba(30, 58, 95, 0.06);
   --zk-text-primary: #1a1a1a;
   --zk-text-secondary: #666666;
   --zk-text-muted: #999999;
@@ -31,12 +31,12 @@ html.theme-dark,
 page.theme-dark,
 .theme-dark {
   /* 深色：柔和炭灰层级，避免纯黑 + 发光描边 */
-  --zk-primary: #e85d6a;
-  --zk-primary-mid: #c44a56;
-  --zk-primary-dark: #8f2f3a;
-  --zk-primary-light: rgba(232, 93, 106, 0.16);
-  --zk-primary-soft: rgba(232, 93, 106, 0.22);
-  --zk-primary-faint: rgba(232, 93, 106, 0.08);
+  --zk-primary: #3d5a7a;
+  --zk-primary-mid: #4a6a8e;
+  --zk-primary-dark: #5a7a9e;
+  --zk-primary-light: rgba(61, 90, 122, 0.16);
+  --zk-primary-soft: rgba(61, 90, 122, 0.22);
+  --zk-primary-faint: rgba(61, 90, 122, 0.08);
   --zk-text-primary: #e4e4e6;
   --zk-text-secondary: #a8a8ae;
   --zk-text-muted: #7c7c84;
@@ -63,7 +63,7 @@ $primary-color: var(--zk-primary);
 $primary-dark: var(--zk-primary-dark);
 $primary-mid: var(--zk-primary-mid);
 /* soft-chip 等仍需编译期 hex */
-$primary-hex: #d0021b;
+$primary-hex: #1e3a5f;
 $accent-blue: #2f6fed;
 $accent-green: #0f9d6c;
 $accent-amber: #c47d00;

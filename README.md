@@ -39,11 +39,11 @@ uvicorn app.main:app --reload --port 8000
 USE_MOCK=true npm run dev:h5
 ```
 
-此时 `src/mock/service.ts` 覆盖登录、文章、计划、英语、人民日报、读书、足迹等接口。生产 / Docker **不要**开启 `USE_MOCK`。
+此时 `src/mock/service.ts` 覆盖登录、文章、计划、人民日报、足迹、知识复习、错题、资料分析等接口。生产 / Docker **不要**开启 `USE_MOCK`。
 
 ## 技术说明
 
-- 主色调：中国红 `#D0021B`
+- 主色调：深蓝 `#1E3A5F`（暗色 `#3D5A7A`）
 - 生产部署与数据备份见 `deploy-ali.md`
 
 ## 目录结构

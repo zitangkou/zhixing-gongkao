@@ -57,7 +57,7 @@ function isChapterRead(chapter: ArticleSection) {
     vertical-align: top;
     &.active {
       background: $primary-light;
-      border-color: rgba(208, 2, 27, 0.35);
+      border-color: rgba(30, 58, 95, 0.35);
       .idx, .label { color: $primary-color; }
     }
     &.read:not(.active) {

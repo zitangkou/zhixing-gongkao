@@ -56,15 +56,15 @@ export const feedbackState = reactive({
 function themeConfirmColor(): string {
   try {
     if (typeof document !== 'undefined' && document.documentElement.classList.contains('theme-dark')) {
-      return '#E85D6A'
+      return '#3D5A7A'
     }
     const raw = Taro.getStorageSync('settings')
     const data = typeof raw === 'string' ? JSON.parse(raw || '{}') : raw
-    if (data?.darkMode) return '#E85D6A'
+    if (data?.darkMode) return '#3D5A7A'
   } catch {
     /* ignore */
   }
-  return '#D0021B'
+  return '#1E3A5F'
 }
 
 function hasRenderer(): boolean {
