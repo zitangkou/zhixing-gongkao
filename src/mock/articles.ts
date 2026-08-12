@@ -304,10 +304,3 @@ export const mockRankUsers = [
   { userId: 'u5', nickname: '知识猎人', avatar: '', score: 1650 },
   { userId: 'self', nickname: '我', avatar: '', score: 120 },
 ]
-
-export const mockRechargePackages = [
-  { id: 'pkg-1', points: 100, price: 6, label: '入门包' },
-  { id: 'pkg-2', points: 500, price: 28, label: '进阶包' },
-  { id: 'pkg-3', points: 1000, price: 50, label: '学霸包' },
-  { id: 'pkg-4', points: 2000, price: 88, label: '尊享包' },
-]

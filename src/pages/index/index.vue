@@ -117,14 +117,6 @@
           <text class="n">{{ reviewStat('corpusInboxCount') }}</text>
           <text class="l">语料</text>
         </view>
-        <view class="review-hub-stat">
-          <text class="n">{{ reviewStat('vocabReviewCount') }}</text>
-          <text class="l">单词</text>
-        </view>
-        <view class="review-hub-stat">
-          <text class="n">{{ reviewStat('tvExpressionDueCount') }}</text>
-          <text class="l">美剧</text>
-        </view>
         <text class="review-hub-arrow">›</text>
       </view>
     </view>
@@ -182,9 +174,7 @@ import {
   Date,
   Edit,
   Fabulous,
-  Heart,
   Order,
-  Voice,
 } from '@nutui/icons-vue-taro'
 import AppTabBar from '@/components/AppTabBar.vue'
 import ArticleCard from '@/components/ArticleCard.vue'
@@ -249,9 +239,9 @@ const examDomains: DomainItem[] = [
 ]
 
 const extraDomains: DomainItem[] = [
-  { name: '英语', desc: '文章跟读', url: '/pages/english/index', icon: Voice, tone: 'tone-blue' },
+  { name: '知识框架', desc: '考点导图', url: '/pages/knowledge/index', icon: Order, tone: 'tone-blue' },
   { name: '资料分析', desc: '公式刷题', url: '/pages/ziliao/index', icon: Category, tone: 'tone-green' },
-  { name: '健康', desc: '身心节律', url: '/pages/health/index', icon: Heart, tone: 'tone-green' },
+  { name: '错题本', desc: '行测错题', url: '/pages/question/wrong', icon: Edit, tone: 'tone-red' },
   { name: '本周计划', desc: '节奏安排', url: '/pages/plan/week', icon: Date, tone: 'tone-amber' },
 ]
 
@@ -264,7 +254,6 @@ async function fetchReviewHub() {
         ...res.data,
         wrongWaitingCount: res.data.wrongWaitingCount ?? 0,
         wrongRecommendCount: res.data.wrongRecommendCount ?? res.data.wrongReviewCount ?? 0,
-        tvExpressionDueCount: res.data.tvExpressionDueCount ?? 0,
       }
     }
   } finally {
@@ -466,7 +455,7 @@ function onExamDomain(item: DomainItem) {
       }
     }
   }
-  /* 不用通用 .section：健康/三刀等页会注入未 scoped 的 .section{card}，
+  /* 不用通用 .section：部分子页会注入未 scoped 的 .section{card}，
      switchTab 回首页时样式仍留在文档里，刷新才消失 */
   .home-block {
     padding: 0 16px;

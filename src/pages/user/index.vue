@@ -71,16 +71,6 @@
           <view class="cell-icon"><Edit :color="brandIcon" size="18" /></view>
         </template>
       </nut-cell>
-      <nut-cell title="英语" is-link @click="go('/pages/english/index')">
-        <template #icon>
-          <view class="cell-icon"><Voice :color="brandIcon" size="18" /></view>
-        </template>
-      </nut-cell>
-      <nut-cell title="读书" is-link @click="go('/pages/dushu/index')">
-        <template #icon>
-          <view class="cell-icon"><Order :color="brandIcon" size="18" /></view>
-        </template>
-      </nut-cell>
       <nut-cell title="时事印象" is-link @click="go('/pages/events/index')">
         <template #icon>
           <view class="cell-icon"><Date :color="brandIcon" size="18" /></view>
@@ -123,21 +113,6 @@
       </view>
     </view>
 
-    <!-- 生活 -->
-    <text class="section-label">生活</text>
-    <view class="menu-group">
-      <nut-cell title="健康" is-link @click="go('/pages/health/index')">
-        <template #icon>
-          <view class="cell-icon"><Heart :color="brandIcon" size="18" /></view>
-        </template>
-      </nut-cell>
-      <nut-cell title="财富" is-link @click="go('/pages/wealth/index')">
-        <template #icon>
-          <view class="cell-icon"><Order :color="brandIcon" size="18" /></view>
-        </template>
-      </nut-cell>
-    </view>
-
     <!-- 设置 -->
     <text class="section-label">设置</text>
     <view class="menu-group">
@@ -176,13 +151,11 @@ import {
   Date,
   Edit,
   Fabulous,
-  Heart,
   Message,
   Order,
   PoweroffCircleFill,
   Setting,
   StarFill,
-  Voice,
 } from '@nutui/icons-vue-taro'
 import AppTabBar from '@/components/AppTabBar.vue'
 import PointsBadge from '@/components/PointsBadge.vue'

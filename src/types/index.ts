@@ -158,12 +158,6 @@ export interface SignStatus {
   [date: string]: boolean
 }
 
-export interface RechargePackage {
-  id: string
-  points: number
-  price: number
-  label: string
-}
 
 export interface AnswerResult {
   correct: boolean
@@ -172,11 +166,6 @@ export interface AnswerResult {
   pointsEarned: number
 }
 
-export interface PayOrder {
-  orderId: string
-  amount: number
-  payUrl: string
-}
 
 export interface ArticleListPage {
   items: Article[]
@@ -283,7 +272,6 @@ export interface ReviewHub {
   knowledgeDueCount: number
   articleReviewCount: number
   corpusInboxCount: number
-  vocabReviewCount: number
   articleWrongCount: number
   manualWrongCount: number
   wrongReviewCount: number
@@ -291,8 +279,6 @@ export interface ReviewHub {
   wrongWaitingCount: number
   /** 今日智能推荐题量 */
   wrongRecommendCount: number
-  /** 美剧口语句型到期 */
-  tvExpressionDueCount: number
   /** 今日复习总预算 */
   todayBudget?: number
   /** 今日推荐完成量 */
@@ -315,156 +301,9 @@ export interface ReviewHub {
 
 // ===== 美剧口语训练 =====
 
-export interface TvDialogueLine {
-  id: string
-  sceneId: string
-  speaker: string
-  en: string
-  zh: string
-  phoneticNote: string
-  sortOrder: number
-}
-
-export interface TvExpression {
-  id: string
-  sceneId: string | null
-  episodeId: string | null
-  showId: string | null
-  phrase: string
-  meaning: string
-  usageScene: string
-  similar: string
-  myExample: string
-  lifeUse: string
-  sourceLine: string
-  reviewStage: number
-  nextReviewAt: string | null
-  reviewCount: number
-  mastered: boolean
-  due: boolean
-  createdAt: string
-  updatedAt: string
-}
-
-export interface TvStudySession {
-  id: string
-  sceneId: string
-  episodeId: string
-  studyDate: string
-  stepBlind: boolean
-  stepParse: boolean
-  stepShadow: boolean
-  stepRetell: boolean
-  stepReview: boolean
-  blindNote: string
-  retellText: string
-  retellSeconds: number
-  durationSec: number
-  completedCount: number
-  createdAt: string
-  updatedAt: string
-}
-
-export interface TvScene {
-  id: string
-  episodeId: string
-  title: string
-  timeRange: string
-  sceneSummary: string
-  targetCount: number
-  sortOrder: number
-  lineCount: number
-  expressionCount: number
-  todaySession: TvStudySession | null
-  createdAt: string
-  updatedAt: string
-}
-
-export interface TvSceneDetail extends TvScene {
-  lines: TvDialogueLine[]
-  expressions: TvExpression[]
-}
-
-export interface TvEpisode {
-  id: string
-  showId: string
-  season: number
-  episode: number
-  title: string
-  summary: string
-  status: string
-  sceneCount: number
-  expressionCount: number
-  label: string
-  createdAt: string
-  updatedAt: string
-}
-
-export interface TvShow {
-  id: string
-  title: string
-  stage: string
-  reason: string
-  note: string
-  coverUrl: string
-  sortOrder: number
-  episodeCount: number
-  expressionCount: number
-  createdAt: string
-  updatedAt: string
-}
-
-export interface TvHub {
-  showCount: number
-  expressionDueCount: number
-  expressionTotal: number
-  expressionMastered: number
-  activeScenes: TvScene[]
-}
-
-export interface TvWeeklyReview {
-  weekStart: string
-  weekEnd: string
-  sessionCount: number
-  completedSessionCount: number
-  newExpressionCount: number
-  masteredCount: number
-  shadowCount: number
-  episodesTouched: number
-  durationSec: number
-}
 
 // ===== 英语学习 =====
 
-export interface EnglishArticle {
-  id: string
-  title: string
-  source: string
-  level: string
-  content: string
-  vocabHighlights: { word: string; meaning: string; pos: string; sentence: string }[]
-  audioUrl: string
-  tags: string[]
-  difficulty: number
-  isPublished: boolean
-  readCount: number
-  createdAt: string
-}
-
-export interface UserVocab {
-  id: string
-  word: string
-  phonetic: string
-  meaning: string
-  pos: string
-  exampleSentence: string
-  articleId: string | null
-  familiarity: number
-  reviewCount: number
-  nextReviewAt: string | null
-  mastered: boolean
-  createdAt: string
-}
 
 export interface RmrbArticle {
   id: string
@@ -657,71 +496,6 @@ export interface ShenlunDrillLog {
   createdAt: string
 }
 
-export interface DushuBook {
-  id: string
-  title: string
-  author: string
-  category: string
-  status: string
-  currentChapter: string
-  coverNote: string
-  createdAt: string
-  updatedAt: string
-}
-
-export interface DushuDailyLog {
-  id: string
-  bookId: string
-  bookTitle: string
-  bookCategory: string
-  logDate: string
-  chapter: string
-  goal: string
-  output: Record<string, string>
-  oralNote: string
-  tags: string
-  durationMin: number
-  createdAt: string
-  updatedAt: string
-}
-
-export interface DushuPersonCard {
-  id: string
-  bookId: string
-  bookTitle: string
-  name: string
-  trait: string
-  success: string
-  failure: string
-  lesson: string
-  tags: string
-  createdAt: string
-  updatedAt: string
-}
-
-export interface DushuBookSummary {
-  id: string
-  bookId: string
-  bookTitle: string
-  coreQuestion: string
-  skeleton: string
-  insights: string[]
-  story: string
-  model: string
-  action: string
-  createdAt: string
-  updatedAt: string
-}
-
-export interface DushuStats {
-  weekReadDays: number
-  weekReadTarget: number
-  weekOutputCount: number
-  todayDone: boolean
-  readingBookTitle: string
-  bookCount: number
-  personCardCount: number
-}
 
 /** 知行足迹 / 成长总览 */
 export interface GrowthDayBar {
@@ -752,229 +526,9 @@ export interface GrowthOverview {
 }
 
 /** 健康模块 */
-export interface HealthCbt {
-  anxious: string
-  why: string
-  worst: string
-  probability: string
-  acceptable: string
-  nextStep: string
-}
-
-export interface HealthRumination {
-  triggered: boolean
-  stoppedInTime: boolean
-  note: string
-}
-
-export interface HealthReview {
-  bestThing: string
-  tomorrowGoal: string
-  bodyAssessment?: string
-}
-
-export interface HealthMealSlot {
-  eaten: boolean
-  items: string
-  light: boolean
-  time: string
-  /** 餐后自我评估 1–5，0=未评 */
-  score?: number
-  /** 餐后感受 */
-  feel?: string
-}
-
-export interface HealthMeals {
-  breakfast: HealthMealSlot
-  lunch: HealthMealSlot
-  dinner: HealthMealSlot
-  snack: HealthMealSlot
-  waterCups: number
-  note: string
-}
-
-export interface HealthStool {
-  times: number
-  form: string
-  ease: string
-  urineOk: boolean
-  note: string
-}
-
-export interface HealthTask {
-  id: string
-  phase: number
-  domain: string
-  skill: string
-  skillLabel: string
-  title: string
-  detail: string
-  optional: boolean
-}
-
-export interface HealthPhase {
-  phase: number
-  weekStart: number
-  weekEnd: number
-  title: string
-  goal: string
-  principle: string
-  focusSkills: string[]
-}
-
-export interface HealthWeekPoint {
-  date: string
-  label: string
-  value: number
-  isToday: boolean
-}
-
-export interface HealthDailyLog {
-  id: string
-  logDate: string
-  mood: number
-  sleepQuality: number
-  sleepBefore23: boolean
-  mealsRegular: boolean
-  mealsLight: boolean
-  weekendLieFlat: boolean
-  habitNote: string
-  meals: HealthMeals
-  stool: HealthStool
-  stomach: number
-  dampness: number
-  skin: number
-  skinItch: boolean
-  skinFlare: boolean
-  walkMin: number
-  bodyNote: string
-  anxiety: number
-  energy: number
-  socialCount: number
-  studyMin: number
-  tasksDone: string[]
-  cbt: HealthCbt
-  rumination: HealthRumination
-  review: HealthReview
-  bodyAssessment?: string
-  createdAt?: string
-  updatedAt?: string
-}
-
-export interface HealthOverview {
-  programStartDate: string
-  weekIndex: number
-  phase: HealthPhase
-  todayCheckedIn: boolean
-  streakDays: number
-  todayTasks: HealthTask[]
-  todayLog: HealthDailyLog | null
-  weekMood: HealthWeekPoint[]
-  weekEnergy: HealthWeekPoint[]
-  weekStomach: HealthWeekPoint[]
-  weekSkin: HealthWeekPoint[]
-  weekDampness: HealthWeekPoint[]
-  weekMindStats: {
-    exposureTaskCompletions: number
-    cbtDays: number
-    avgAnxiety: number
-    avgEnergy: number
-    socialCountSum: number
-  }
-  lowEnergyHint: boolean
-  softTips: string[]
-  privateFocus: string
-  disclaimer: string
-}
-
-export interface UserSpeakingSentence {
-  id: string
-  sentence: string
-  note: string
-  articleId: string | null
-  articleTitle: string
-  recordingUrl: string
-  practiceCount: number
-  lastPracticeAt: string | null
-  createdAt: string
-}
-
-export interface SpeakingLesson {
-  id: string
-  title: string
-  topic: string
-  level: string
-  dialogue: { speaker: string; en: string; zh: string }[]
-  keySentences: { en: string; zh: string; pattern: string }[]
-  tips: string
-  isPublished: boolean
-  createdAt: string
-}
-
-export interface SpeakingAttempt {
-  id: string
-  lessonId: string
-  recordingUrl: string
-  selfRating: number
-  note: string
-  createdAt: string
-}
-
-export interface GrammarLesson {
-  id: string
-  title: string
-  category: string
-  level: string
-  explanation: string
-  examples: { en: string; zh: string }[]
-  commonMistakes: { wrong: string; correct: string; note: string }[]
-  sortOrder: number
-  isPublished: boolean
-  createdAt: string
-}
-
-export interface EnglishStats {
-  todayMinutes: number
-  weekMinutes: number
-  newVocabCount: number
-  reviewVocabCount: number
-  speakingCount: number
-  grammarMasteredCount: number
-  grammarLearningCount: number
-  articleReadCount: number
-  recentLogs: {
-    id: string
-    logType: string
-    durationSec: number
-    wordsLearned: number
-    sentencesPracticed: number
-    studyDate: string
-    note: string
-  }[]
-}
 
 // ===== 音标学习 =====
 
-export interface PhoneticLesson {
-  id: string
-  symbol: string
-  category: 'unit_vowel' | 'diphthong' | 'consonant'
-  description: string
-  mouthShape: string
-  tips: string
-  exampleWords: { word: string; meaning: string }[]
-  commonSpellings: string[]
-  sortOrder: number
-  isPublished: boolean
-}
-
-export interface PhoneticProgressMap {
-  [lessonId: string]: {
-    status: string
-    practicedCount: number
-    lastPracticeAt: string | null
-  }
-}
 
 
 export interface ExamPaper {
@@ -1117,84 +671,6 @@ export interface ManualWrong {
 }
 
 /** 记账模块 */
-export interface LedgerExpense {
-  id: string
-  amountCents: number
-  amount: number
-  occurDate: string
-  category: string
-  note: string
-  images: string[]
-  createdAt: string
-  updatedAt: string
-}
-
-export interface LedgerRepayment {
-  id: string
-  loanId: string
-  amountCents: number
-  amount: number
-  repayDate: string
-  method: string
-  note: string
-  images: string[]
-  createdAt: string
-  updatedAt: string
-}
-
-export interface LedgerLoan {
-  id: string
-  counterparty: string
-  principalCents: number
-  principal: number
-  repaidCents: number
-  repaid: number
-  remainingCents: number
-  remaining: number
-  lendDate: string
-  dueDate: string
-  status: 'open' | 'settled' | string
-  note: string
-  images: string[]
-  repayments?: LedgerRepayment[]
-  createdAt: string
-  updatedAt: string
-}
-
-export interface LedgerCounterparty {
-  name: string
-  loanCount: number
-  openCount: number
-  principalCents: number
-  principal: number
-  repaidCents: number
-  repaid: number
-  remainingCents: number
-  remaining: number
-  lastLendDate: string
-}
-
-export interface LedgerCategoryStat {
-  category: string
-  amountCents: number
-  amount: number
-  percent: number
-  count: number
-}
-
-export interface LedgerOverview {
-  month: string
-  monthExpenseCents: number
-  monthExpense: number
-  todayExpenseCents: number
-  todayExpense: number
-  openLoanCount: number
-  remainingCents: number
-  remaining: number
-  categories: LedgerCategoryStat[]
-  expenseCategories: string[]
-  repayMethods: string[]
-}
 
 /** 语料本 · 跨来源词句素材 */
 export type CorpusStatus = 'inbox' | 'clarified' | 'owned' | 'used' | string
@@ -1231,99 +707,6 @@ export interface CorpusStats {
 }
 
 /** 财富 / 投资大脑 */
-export interface WealthAllocationItem {
-  key: string
-  label: string
-  amountCents: number
-  amount: number
-  percent: number
-}
-
-export interface WealthSnapshot {
-  id: string
-  snapDate: string
-  cashCents: number
-  depositCents: number
-  fundCents: number
-  stockCents: number
-  otherCents: number
-  cash: number
-  deposit: number
-  fund: number
-  stock: number
-  other: number
-  totalCents: number
-  total: number
-  allocations: WealthAllocationItem[]
-  note: string
-  createdAt: string
-  updatedAt: string
-}
-
-export interface WealthPrinciple {
-  id: string
-  layer: number
-  layerLabel: string
-  title: string
-  content: string
-  sortOrder: number
-  isEnabled: boolean
-  createdAt: string
-  updatedAt: string
-}
-
-export interface WealthJournal {
-  id: string
-  side: 'buy' | 'sell' | string
-  symbol: string
-  name: string
-  tradeDate: string
-  price: number
-  positionPct: number
-  reasons: string[]
-  reasonNote: string
-  riskNote: string
-  stopLoss: number
-  targetPrice: number
-  emotion: string
-  confidence: number
-  sleepHours: number
-  workStress: number
-  hadQuarrel: boolean
-  followedPlan: boolean | null
-  checklistOk: boolean
-  resultTag: string
-  note: string
-  createdAt: string
-  updatedAt: string
-}
-
-export interface WealthReview {
-  weekStart: string
-  weekEnd: string
-  tradeCount: number
-  buyCount: number
-  sellCount: number
-  winCount: number
-  lossCount: number
-  followedPlanCount: number
-  brokePlanCount: number
-  topWinReasons: { reason: string; count: number }[]
-  topLossReasons: { reason: string; count: number }[]
-  emotionStats: { emotion: string; count: number; lossCount: number }[]
-  buyReasonPresets: string[]
-  sellReasonPresets: string[]
-  layerLabels: Record<string, string>
-}
-
-export interface WealthHub {
-  latestSnapshot: WealthSnapshot | null
-  principleCount: number
-  journalCount: number
-  weekTradeCount: number
-  weekWinCount: number
-  weekLossCount: number
-}
 
 /** 时事新闻 · 事件印象 */
 export interface EventImpression {

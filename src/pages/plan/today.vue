@@ -109,7 +109,8 @@ const plan = computed(() => planStore.today)
 const SUBJECT_CLASS: Record<string, string> = {
   行测: 'subj-red',
   申论: 'subj-amber',
-  英语: 'subj-blue',
+  时政: 'subj-blue',
+  资料: 'subj-blue',
   健身: 'subj-green',
   阅读: 'subj-muted',
   休息: 'subj-muted',

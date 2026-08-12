@@ -58,14 +58,6 @@
           <text class="num" :class="{ warn: hub.corpusInboxCount > 0 }">{{ hub.corpusInboxCount }}</text>
           <text class="label">语料</text>
         </view>
-        <view class="stat" @tap="goVocab">
-          <text class="num" :class="{ warn: hub.vocabReviewCount > 0 }">{{ hub.vocabReviewCount }}</text>
-          <text class="label">单词</text>
-        </view>
-        <view class="stat" @tap="goTvExpr">
-          <text class="num" :class="{ warn: (hub.tvExpressionDueCount || 0) > 0 }">{{ hub.tvExpressionDueCount || 0 }}</text>
-          <text class="label">美剧</text>
-        </view>
       </view>
 
       <!-- 今日错题：文案写清优先队列 -->
@@ -103,24 +95,6 @@
             <text class="entry-name">文章复习</text>
             <text class="entry-desc">
               {{ hub.articleReviewCount ? `${hub.articleReviewCount} 篇待复习` : '暂无到期文章' }}
-            </text>
-          </view>
-          <text class="entry-arrow">›</text>
-        </view>
-        <view class="entry" @tap="goVocab">
-          <view class="entry-main">
-            <text class="entry-name">单词复习</text>
-            <text class="entry-desc">
-              {{ hub.vocabReviewCount ? `${hub.vocabReviewCount} 个待复习` : '今日无待复习单词' }}
-            </text>
-          </view>
-          <text class="entry-arrow">›</text>
-        </view>
-        <view class="entry" @tap="goTvExpr">
-          <view class="entry-main">
-            <text class="entry-name">美剧句型</text>
-            <text class="entry-desc">
-              {{ hub.tvExpressionDueCount ? `${hub.tvExpressionDueCount} 张待复习` : '今日无待复习句型' }}
             </text>
           </view>
           <text class="entry-arrow">›</text>
@@ -178,9 +152,7 @@ const hubTotal = computed(() => {
     (h.knowledgeDueCount || 0) +
     (h.articleReviewCount || 0) +
     (h.wrongRecommendCount || h.wrongReviewCount || 0) +
-    (h.corpusInboxCount || 0) +
-    (h.vocabReviewCount || 0) +
-    (h.tvExpressionDueCount || 0)
+    (h.corpusInboxCount || 0)
   )
 })
 const todayBudget = computed(() => hub.value?.todayBudget || 30)
@@ -237,14 +209,6 @@ function goCorpus() {
   go('/pages/corpus/index?tab=inbox')
 }
 
-function goVocab() {
-  go('/pages/english/vocab?tab=review')
-}
-
-function goTvExpr() {
-  go('/pages/english/tv/expression-bank?tab=review')
-}
-
 async function load() {
   loading.value = true
   error.value = ''
@@ -255,7 +219,6 @@ async function load() {
         ...res.data,
         wrongWaitingCount: res.data.wrongWaitingCount ?? 0,
         wrongRecommendCount: res.data.wrongRecommendCount ?? res.data.wrongReviewCount ?? 0,
-        tvExpressionDueCount: res.data.tvExpressionDueCount ?? 0,
         todayBudget: res.data.todayBudget ?? 30,
         todayRecommended: res.data.todayRecommended ?? res.data.totalCount ?? 0,
         backlogCount: res.data.backlogCount ?? 0,
