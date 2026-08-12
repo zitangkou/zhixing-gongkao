@@ -108,32 +108,7 @@ def test_api_smoke_critical_path():
 
         # 模块探针
         _ok(client.get("/api/rmrb/stats", headers=headers))
-        _ok(client.get("/api/dushu/stats", headers=headers))
-        _ok(client.get("/api/english/stats", headers=headers))
         _ok(client.get("/api/articles/daily"))
-
-        # 健康：概览 + 打卡（含胃/湿气/皮肤）
-        health = _ok(client.get("/api/health/overview", headers=headers))
-        assert "phase" in health and "todayTasks" in health
-        daily = _ok(
-            client.post(
-                "/api/health/daily",
-                headers=headers,
-                json={
-                    "mood": 6,
-                    "energy": 5,
-                    "anxiety": 4,
-                    "stomach": 7,
-                    "dampness": 3,
-                    "skin": 2,
-                    "mealsRegular": True,
-                    "tasksDone": ["p1-walk"],
-                    "cbt": {"anxious": "有一点", "why": "社交", "worst": "尴尬", "probability": "低", "acceptable": "能"},
-                },
-            )
-        )
-        assert daily["mood"] == 6 and daily["skin"] == 2
-        assert "p1-walk" in daily["tasksDone"]
 
 
 def teardown_module(_mod=None):

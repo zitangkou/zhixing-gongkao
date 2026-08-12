@@ -11,8 +11,7 @@ from app.core.response import ApiResponse
 from app.core.security import create_access_token, verify_password
 from app.database import get_db
 from app.models import AdminUser, AppUser, Article, Category, Question, Role, SystemSetting, gen_id
-from app.models import CorpusItem, EventImpression, HealthDailyLog, HealthUserState
-from app.models import DushuBook, DushuDailyLog, DushuPersonCard, DushuBookSummary
+from app.models import CorpusItem, EventImpression
 from app.schemas import (
     AdminLogin,
     AdminToken,
@@ -38,15 +37,6 @@ from app.schemas import (
     ExamQuestionCreate,
     ExamQuestionOut,
     ExamQuestionUpdate,
-    EnglishArticleCreate,
-    EnglishArticleOut,
-    EnglishArticleUpdate,
-    GrammarLessonCreate,
-    GrammarLessonOut,
-    PhoneticLessonCreate,
-    PhoneticLessonOut,
-    SpeakingLessonCreate,
-    SpeakingLessonOut,
     PlanTemplateCreate,
     PlanTemplateOut,
     PlanTemplateUpdate,
@@ -123,20 +113,6 @@ from app.services.exam_service import (
     update_question as update_exam_question,
 )
 from app.services.exam_import import parse_import as parse_exam_import
-from app.services.english_service import (
-    create_article as create_english_article,
-    create_grammar_lesson as create_grammar_lesson_svc,
-    create_speaking_lesson as create_speaking_lesson_svc,
-    delete_article as delete_english_article,
-    delete_grammar_lesson as delete_grammar_lesson_svc,
-    delete_speaking_lesson as delete_speaking_lesson_svc,
-    list_articles as list_english_articles,
-    list_grammar_lessons as list_grammar_lessons_admin,
-    list_speaking_lessons as list_speaking_lessons_admin,
-    update_article as update_english_article,
-    update_grammar_lesson as update_grammar_lesson_svc,
-    update_speaking_lesson as update_speaking_lesson_svc,
-)
 from app.services.ziliao_service import (
     create_formula as create_ziliao_formula,
     create_trick as create_ziliao_trick,
@@ -153,13 +129,6 @@ from app.services.ziliao_service import (
     update_formula as update_ziliao_formula,
     update_trick as update_ziliao_trick,
     update_type as update_ziliao_type,
-)
-from app.services.phonetic_service import (
-    create_phonetic as create_phonetic_svc,
-    delete_phonetic as delete_phonetic_svc,
-    list_phonetics as list_phonetics_admin,
-    seed_default_phonetics,
-    update_phonetic as update_phonetic_svc,
 )
 from app.services.rmrb_service import (
     create_article as create_rmrb_article,
@@ -1299,188 +1268,43 @@ async def admin_exam_upload(
 
 
 # 文章
-@router.get("/english/articles")
-def admin_english_articles(
-    level: str | None = None,
-    _admin=Depends(require_permission("english:read")),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([a.model_dump() for a in list_english_articles(db, level=level, is_published=None)])
 
 
-@router.post("/english/article")
-def admin_english_create_article(
-    body: EnglishArticleCreate,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    out = create_english_article(db, body)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/english/article/{article_id}")
-def admin_english_update_article(
-    article_id: str,
-    body: EnglishArticleUpdate,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    out = update_english_article(db, article_id, body)
-    if not out:
-        return ApiResponse.fail("文章不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/english/article/{article_id}")
-def admin_english_delete_article(
-    article_id: str,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    if not delete_english_article(db, article_id):
-        return ApiResponse.fail("文章不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
 # 口语
-@router.get("/english/speaking")
-def admin_english_speaking_list(
-    _admin=Depends(require_permission("english:read")),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([s.model_dump() for s in list_speaking_lessons_admin(db)])
 
 
-@router.post("/english/speaking")
-def admin_english_create_speaking(
-    body: SpeakingLessonCreate,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    out = create_speaking_lesson_svc(db, body)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/english/speaking/{lesson_id}")
-def admin_english_update_speaking(
-    lesson_id: str,
-    body: dict,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    out = update_speaking_lesson_svc(db, lesson_id, body)
-    if not out:
-        return ApiResponse.fail("课程不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/english/speaking/{lesson_id}")
-def admin_english_delete_speaking(
-    lesson_id: str,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    if not delete_speaking_lesson_svc(db, lesson_id):
-        return ApiResponse.fail("课程不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
 # 语法
-@router.get("/english/grammar")
-def admin_english_grammar_list(
-    _admin=Depends(require_permission("english:read")),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([g.model_dump() for g in list_grammar_lessons_admin(db)])
 
 
-@router.post("/english/grammar")
-def admin_english_create_grammar(
-    body: GrammarLessonCreate,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    out = create_grammar_lesson_svc(db, body)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/english/grammar/{lesson_id}")
-def admin_english_update_grammar(
-    lesson_id: str,
-    body: dict,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    out = update_grammar_lesson_svc(db, lesson_id, body)
-    if not out:
-        return ApiResponse.fail("课程不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/english/grammar/{lesson_id}")
-def admin_english_delete_grammar(
-    lesson_id: str,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    if not delete_grammar_lesson_svc(db, lesson_id):
-        return ApiResponse.fail("课程不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
 # ===== 音标管理 =====
 
 
-@router.get("/english/phonetics")
-def admin_phonetics_list(
-    category: str | None = None,
-    _admin=Depends(require_permission("english:read")),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([p.model_dump() for p in list_phonetics_admin(db, category)])
 
 
-@router.post("/english/phonetic")
-def admin_phonetic_create(
-    body: PhoneticLessonCreate,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    out = create_phonetic_svc(db, body)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/english/phonetic/{lesson_id}")
-def admin_phonetic_update(
-    lesson_id: str,
-    body: dict,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    out = update_phonetic_svc(db, lesson_id, body)
-    if not out:
-        return ApiResponse.fail("音标不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/english/phonetic/{lesson_id}")
-def admin_phonetic_delete(
-    lesson_id: str,
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    if not delete_phonetic_svc(db, lesson_id):
-        return ApiResponse.fail("音标不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.post("/english/phonetics/seed")
-def admin_phonetics_seed(
-    _admin=Depends(require_permission("english:write")),
-    db: Session = Depends(get_db),
-):
-    seed_default_phonetics(db)
-    return ApiResponse.ok({"ok": True})
 
 
 # ===== 人民日报模块 =====
@@ -2177,183 +2001,27 @@ def admin_events_delete(
 # 健康数据看板（health）
 # ============================================================
 
-@router.get("/health/users")
-def admin_health_users(
-    _admin=Depends(require_permission("health:read")),
-    db: Session = Depends(get_db),
-):
-    """所有开启健康计划的用户及其阶段进度。"""
-    states = db.query(HealthUserState).all()
-    out = []
-    for s in states:
-        user = db.get(AppUser, s.user_id)
-        out.append({
-            "userId": s.user_id,
-            "nickname": user.nickname if user else "",
-            "programStartDate": s.program_start_date,
-            "privateFocus": s.private_focus,
-        })
-    return ApiResponse.ok(out)
 
 
-@router.get("/health/overview")
-def admin_health_overview(
-    user_id: str,
-    _admin=Depends(require_permission("health:read")),
-    db: Session = Depends(get_db),
-):
-    """指定用户的健康总览。"""
-    user = db.get(AppUser, user_id)
-    if not user:
-        return ApiResponse.fail("用户不存在", code=404)
-    from app.services.health_service import get_overview
-    return ApiResponse.ok(get_overview(db, user).model_dump())
 
 
-@router.get("/health/daily")
-def admin_health_daily(
-    user_id: str,
-    start: str | None = None,
-    end: str | None = None,
-    _admin=Depends(require_permission("health:read")),
-    db: Session = Depends(get_db),
-):
-    """指定用户的每日打卡记录（支持日期范围）。"""
-    user = db.get(AppUser, user_id)
-    if not user:
-        return ApiResponse.fail("用户不存在", code=404)
-    if start and end:
-        from app.services.health_service import list_daily_range
-        logs = list_daily_range(db, user, start, end)
-    else:
-        from app.services.health_service import get_daily
-        log = get_daily(db, user)
-        logs = [log] if log else []
-    return ApiResponse.ok([l.model_dump() for l in logs])
 
 
-@router.get("/health/phases")
-def admin_health_phases(
-    _admin=Depends(require_permission("health:read")),
-):
-    """8 周阶段计划定义（全局）。"""
-    from app.services.health_service import list_phases
-    return ApiResponse.ok([p.model_dump() for p in list_phases()])
 
 
 # ============================================================
 # 读书内容管理（dushu）
 # ============================================================
 
-@router.get("/dushu/books")
-def admin_dushu_books(
-    user_id: str | None = None,
-    status: str | None = None,
-    _admin=Depends(require_permission("dushu:read")),
-    db: Session = Depends(get_db),
-):
-    """跨用户查看书架。"""
-    query = db.query(DushuBook)
-    if user_id:
-        query = query.filter(DushuBook.user_id == user_id)
-    if status:
-        query = query.filter(DushuBook.status == status)
-    books = query.order_by(DushuBook.created_at.desc()).all()
-    from app.services.dushu_service import _book_out
-    return ApiResponse.ok([_book_out(b).model_dump() for b in books])
 
 
-@router.get("/dushu/daily")
-def admin_dushu_daily(
-    user_id: str,
-    book_id: str | None = None,
-    _admin=Depends(require_permission("dushu:read")),
-    db: Session = Depends(get_db),
-):
-    """指定用户的每日阅读输出卡。"""
-    user = db.get(AppUser, user_id)
-    if not user:
-        return ApiResponse.fail("用户不存在", code=404)
-    from app.services.dushu_service import list_daily
-    return ApiResponse.ok([d.model_dump() for d in list_daily(db, user, book_id)])
 
 
-@router.get("/dushu/persons")
-def admin_dushu_persons(
-    user_id: str,
-    book_id: str | None = None,
-    _admin=Depends(require_permission("dushu:read")),
-    db: Session = Depends(get_db),
-):
-    """指定用户的历史人物卡。"""
-    user = db.get(AppUser, user_id)
-    if not user:
-        return ApiResponse.fail("用户不存在", code=404)
-    from app.services.dushu_service import list_persons
-    return ApiResponse.ok([p.model_dump() for p in list_persons(db, user, book_id)])
 
 
-@router.get("/dushu/summaries")
-def admin_dushu_summaries(
-    user_id: str,
-    _admin=Depends(require_permission("dushu:read")),
-    db: Session = Depends(get_db),
-):
-    """指定用户的一书一页总结。"""
-    user = db.get(AppUser, user_id)
-    if not user:
-        return ApiResponse.fail("用户不存在", code=404)
-    from app.services.dushu_service import list_summaries
-    return ApiResponse.ok([s.model_dump() for s in list_summaries(db, user)])
 
 
-@router.get("/dushu/stats")
-def admin_dushu_stats(
-    user_id: str,
-    _admin=Depends(require_permission("dushu:read")),
-    db: Session = Depends(get_db),
-):
-    """指定用户的读书统计。"""
-    user = db.get(AppUser, user_id)
-    if not user:
-        return ApiResponse.fail("用户不存在", code=404)
-    from app.services.dushu_service import get_stats
-    return ApiResponse.ok(get_stats(db, user).model_dump())
 
 
-@router.put("/dushu/book/{book_id}")
-def admin_dushu_update_book(
-    book_id: str,
-    body: dict,
-    _admin=Depends(require_permission("dushu:write")),
-    db: Session = Depends(get_db),
-):
-    book = db.get(DushuBook, book_id)
-    if not book:
-        return ApiResponse.fail("书籍不存在", code=404)
-    allowed = {"title", "author", "category", "status", "current_chapter", "cover_note"}
-    for k, v in body.items():
-        if k in allowed:
-            setattr(book, k, v)
-    db.commit()
-    db.refresh(book)
-    from app.services.dushu_service import _book_out
-    return ApiResponse.ok(_book_out(book).model_dump())
 
 
-@router.delete("/dushu/book/{book_id}")
-def admin_dushu_delete_book(
-    book_id: str,
-    _admin=Depends(require_permission("dushu:write")),
-    db: Session = Depends(get_db),
-):
-    book = db.get(DushuBook, book_id)
-    if not book:
-        return ApiResponse.fail("书籍不存在", code=404)
-    # 级联删除关联的日志、人物卡、总结
-    db.query(DushuDailyLog).filter(DushuDailyLog.book_id == book_id).delete()
-    db.query(DushuPersonCard).filter(DushuPersonCard.book_id == book_id).delete()
-    db.query(DushuBookSummary).filter(DushuBookSummary.book_id == book_id).delete()
-    db.delete(book)
-    db.commit()
-    return ApiResponse.ok({"ok": True})

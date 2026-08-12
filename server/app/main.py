@@ -269,26 +269,6 @@ def _ensure_question_columns():
             conn.execute(text(sql))
 
 
-def _ensure_health_daily_columns():
-    """兼容旧 health_daily_logs：补 meals_json / stool_json"""
-    from sqlalchemy import inspect, text
-
-    insp = inspect(engine)
-    if not insp.has_table("health_daily_logs"):
-        return
-    cols = {c["name"] for c in insp.get_columns("health_daily_logs")}
-    alters: list[str] = []
-    if "meals_json" not in cols:
-        alters.append("ALTER TABLE health_daily_logs ADD COLUMN meals_json TEXT DEFAULT '{}'")
-    if "stool_json" not in cols:
-        alters.append("ALTER TABLE health_daily_logs ADD COLUMN stool_json TEXT DEFAULT '{}'")
-    if not alters:
-        return
-    with engine.begin() as conn:
-        for sql in alters:
-            conn.execute(text(sql))
-
-
 def _ensure_rmrb_article_columns():
     """兼容旧 rmrb_articles：补主题标签 tags"""
     from sqlalchemy import inspect, text
@@ -338,7 +318,6 @@ async def lifespan(_app: FastAPI):
     _ensure_corpus_knowledge_columns()
     _ensure_plan_task_priority_column()
     _ensure_shenlun_columns()
-    _ensure_health_daily_columns()
     _ensure_rmrb_article_columns()
     _ensure_ziliao_formula_plain_column()
     from app.seed import seed_if_empty
@@ -360,13 +339,6 @@ async def lifespan(_app: FastAPI):
             seed_default_templates(db)
         except Exception as e:
             print(f"[plan] 模板初始化失败: {e}")
-        # 启动时 seed 48 个 DJ 音标
-        try:
-            from app.services.phonetic_service import seed_default_phonetics
-
-            seed_default_phonetics(db)
-        except Exception as e:
-            print(f"[phonetic] 音标初始化失败: {e}")
         # 资料分析资源库 + 样例材料组（force 刷新 latex 种子时可在 Admin 点覆盖）
         try:
             from app.services.ziliao_service import seed_sample_drill_paper, seed_ziliao_resources

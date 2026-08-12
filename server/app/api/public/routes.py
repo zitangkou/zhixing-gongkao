@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from app.api.deps import get_app_user
 from app.core.response import ApiResponse
 from app.database import get_db
-from app.models import AppUser, Article, PointsLog, Question, RechargePackage, SignRecord
+from app.models import AppUser, Article, PointsLog, Question, SignRecord
 from app.schemas import (
     AnswerResult,
     AnswerSubmit,
@@ -23,15 +23,6 @@ from app.schemas import (
     ExamQuestionCreate,
     ExamQuestionOut,
     ExamQuestionUpdate,
-    EnglishArticleCreate,
-    EnglishArticleOut,
-    EnglishArticleUpdate,
-    EnglishStatsOut,
-    EnglishStudyLogCreate,
-    GrammarLessonCreate,
-    GrammarLessonOut,
-    GrammarProgressOut,
-    GrammarProgressUpdate,
     KnowledgeNodeUpdate,
     KnowledgeReviewAnswerBody,
     KnowledgeReviewSessionBody,
@@ -39,17 +30,6 @@ from app.schemas import (
     ManualWrongCreate,
     ManualWrongOut,
     ManualWrongUpdate,
-    PhoneticLessonOut,
-    SpeakingAttemptCreate,
-    SpeakingAttemptOut,
-    SpeakingLessonCreate,
-    SpeakingLessonOut,
-    UserSpeakingSentenceAdd,
-    UserSpeakingSentenceOut,
-    UserSpeakingSentenceUpdate,
-    UserVocabAdd,
-    UserVocabOut,
-    UserVocabUpdate,
     ShenlunMineLogUpdate,
     ShenlunMineLogUpsert,
     ShenlunNormTermAdd,
@@ -57,39 +37,10 @@ from app.schemas import (
     ShenlunDrillCreate,
     ShenlunSkeletonTemplateCreate,
     ShenlunTermCategoryCreate,
-    DushuBookCreate,
-    DushuBookUpdate,
-    DushuDailyLogUpsert,
-    DushuPersonCardCreate,
-    DushuPersonCardUpdate,
-    DushuBookSummaryUpsert,
-    HealthDailyLogUpsert,
-    LedgerExpenseCreate,
-    LedgerExpenseUpdate,
-    LedgerLoanCreate,
-    LedgerLoanUpdate,
-    LedgerRepaymentCreate,
-    LedgerRepaymentUpdate,
     CorpusItemCreate,
     CorpusItemUpdate,
     EventImpressionCreate,
     EventImpressionUpdate,
-    TvEpisodeCreate,
-    TvEpisodeUpdate,
-    TvExpressionCreate,
-    TvExpressionUpdate,
-    TvSceneCreate,
-    TvSceneUpdate,
-    TvShowCreate,
-    TvShowUpdate,
-    TvStudySessionUpdate,
-    WealthJournalCreate,
-    WealthJournalUpdate,
-    WealthPrincipleCreate,
-    WealthPrincipleUpdate,
-    WealthSnapshotCreate,
-    WealthSnapshotUpdate,
-    PayOrderOut,
     PlanTaskCreate,
     PlanTaskOut,
     PlanTaskUpdate,
@@ -99,7 +50,6 @@ from app.schemas import (
     QuizRankItemOut,
     QuizStatsOut,
     RankItemOut,
-    RechargePackageOut,
     ReviewCompleteBody,
     SectionReadBody,
     StudyRecordOut,
@@ -145,57 +95,6 @@ from app.services.exam_service import (
     start_attempt as start_exam_attempt,
     submit_answer as submit_exam_answer,
 )
-from app.services.english_service import (
-    add_shadowing as add_user_shadowing,
-    add_study_log as add_english_log,
-    add_vocab as add_user_vocab,
-    create_speaking_attempt as create_speaking_attempt_svc,
-    delete_shadowing as delete_user_shadowing,
-    delete_vocab as delete_user_vocab,
-    get_article as get_english_article,
-    get_grammar_lesson as get_grammar_lesson_pub,
-    get_speaking_lesson as get_speaking_lesson_pub,
-    get_stats as get_english_stats,
-    list_articles as list_english_articles_pub,
-    list_grammar_lessons as list_grammar_lessons_pub,
-    list_shadowing as list_user_shadowing,
-    list_speaking_attempts as list_speaking_attempts_pub,
-    list_speaking_lessons as list_speaking_lessons_pub,
-    list_vocabs as list_user_vocabs,
-    update_grammar_progress as update_grammar_progress_pub,
-    update_shadowing as update_user_shadowing,
-    update_vocab as update_user_vocab,
-)
-from app.services.phonetic_service import (
-    get_phonetic as get_phonetic_pub,
-    get_phonetic_progress as get_phonetic_progress_pub,
-    list_phonetics as list_phonetics_pub,
-    update_phonetic_progress as update_phonetic_progress_pub,
-)
-from app.services.tv_english_service import (
-    create_episode as tv_create_episode,
-    create_expression as tv_create_expression,
-    create_scene as tv_create_scene,
-    create_show as tv_create_show,
-    delete_episode as tv_delete_episode,
-    delete_expression as tv_delete_expression,
-    delete_scene as tv_delete_scene,
-    delete_show as tv_delete_show,
-    get_hub as tv_get_hub,
-    get_or_create_session as tv_get_session,
-    get_scene as tv_get_scene,
-    get_weekly_review as tv_get_weekly,
-    list_episodes as tv_list_episodes,
-    list_expressions as tv_list_expressions,
-    list_scenes as tv_list_scenes,
-    list_shows as tv_list_shows,
-    review_expression as tv_review_expression,
-    update_episode as tv_update_episode,
-    update_expression as tv_update_expression,
-    update_scene as tv_update_scene,
-    update_session as tv_update_session,
-    update_show as tv_update_show,
-)
 from app.services.ziliao_service import (
     get_drill_set as get_ziliao_drill_set,
     get_formula as get_ziliao_formula,
@@ -217,53 +116,7 @@ from app.services.rmrb_meta_service import (
     create_term_category as create_rmrb_term_category,
     get_meta as get_rmrb_meta,
 )
-from app.services.dushu_service import (
-    create_book as create_dushu_book,
-    create_person as create_dushu_person,
-    delete_book as delete_dushu_book,
-    delete_daily as delete_dushu_daily,
-    delete_person as delete_dushu_person,
-    get_book as get_dushu_book,
-    get_daily_by_date as get_dushu_daily_by_date,
-    get_stats as get_dushu_stats,
-    get_summary as get_dushu_summary,
-    list_books as list_dushu_books,
-    list_daily as list_dushu_daily,
-    list_persons as list_dushu_persons,
-    list_summaries as list_dushu_summaries,
-    update_book as update_dushu_book,
-    update_person as update_dushu_person,
-    upsert_daily as upsert_dushu_daily,
-    upsert_summary as upsert_dushu_summary,
-)
 from app.services.growth_service import get_growth_overview
-from app.services.health_service import (
-    get_daily as get_health_daily,
-    get_overview as get_health_overview,
-    list_daily_range as list_health_daily_range,
-    list_phases as list_health_phases,
-    reset_program as reset_health_program,
-    tasks_for_phase as health_tasks_for_phase,
-    update_private_focus as update_health_private_focus,
-    upsert_daily as upsert_health_daily,
-)
-from app.services.ledger_service import (
-    create_expense as create_ledger_expense,
-    create_loan as create_ledger_loan,
-    create_repayment as create_ledger_repayment,
-    delete_expense as delete_ledger_expense,
-    delete_loan as delete_ledger_loan,
-    delete_repayment as delete_ledger_repayment,
-    get_expense as get_ledger_expense,
-    get_loan as get_ledger_loan,
-    get_overview as get_ledger_overview,
-    list_counterparties as list_ledger_counterparties,
-    list_expenses as list_ledger_expenses,
-    list_loans as list_ledger_loans,
-    update_expense as update_ledger_expense,
-    update_loan as update_ledger_loan,
-    update_repayment as update_ledger_repayment,
-)
 from app.services.corpus_service import (
     create_item as create_corpus_item,
     delete_item as delete_corpus_item,
@@ -280,24 +133,6 @@ from app.services.event_impression_service import (
     get_hub as get_event_hub,
     list_events as list_event_impressions,
     update_event as update_event_impression,
-)
-from app.services.wealth_service import (
-    create_journal as create_wealth_journal,
-    create_principle as create_wealth_principle,
-    create_snapshot as create_wealth_snapshot,
-    delete_journal as delete_wealth_journal,
-    delete_principle as delete_wealth_principle,
-    delete_snapshot as delete_wealth_snapshot,
-    get_hub as get_wealth_hub,
-    get_journal as get_wealth_journal,
-    get_review as get_wealth_review,
-    get_snapshot as get_wealth_snapshot,
-    list_journals as list_wealth_journals,
-    list_principles as list_wealth_principles,
-    list_snapshots as list_wealth_snapshots,
-    update_journal as update_wealth_journal,
-    update_principle as update_wealth_principle,
-    update_snapshot as update_wealth_snapshot,
 )
 from app.services.shenlun_service import (
     add_drill as add_shenlun_drill,
@@ -342,10 +177,6 @@ from app.services.wrong_service import (
 from app.services.quiz_stats_service import get_quiz_rank, get_user_quiz_stats, submit_quiz_attempt
 
 router = APIRouter(prefix="/api", tags=["公开接口"])
-
-
-class RechargeBody(BaseModel):
-    packageId: str
 
 
 class FeedbackBody(BaseModel):
@@ -813,24 +644,8 @@ def rank_list(
     return ApiResponse.ok(items)
 
 
-@router.get("/recharge/packages")
-def recharge_packages(db: Session = Depends(get_db)):
-    rows = db.query(RechargePackage).filter(RechargePackage.is_active.is_(True)).order_by(RechargePackage.sort_order).all()
-    return ApiResponse.ok([
-        RechargePackageOut(id=r.id, points=r.points, price=r.price, label=r.label).model_dump() for r in rows
-    ])
 
 
-@router.post("/recharge")
-def create_order(body: RechargeBody, db: Session = Depends(get_db)):
-    import time
-
-    pkg = db.get(RechargePackage, body.packageId)
-    amount = pkg.price if pkg else 600
-    order_id = f"order-{int(time.time())}"
-    return ApiResponse.ok(
-        PayOrderOut(orderId=order_id, amount=amount, payUrl=f"mock://pay?orderId={order_id}").model_dump()
-    )
 
 
 @router.post("/feedback")
@@ -1206,662 +1021,120 @@ def exam_attempt_detail(
 # ===== 英语学习 =====
 
 
-@router.get("/english/articles")
-def english_articles(
-    level: str | None = None,
-    _user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([a.model_dump() for a in list_english_articles_pub(db, level=level)])
 
 
-@router.get("/english/article/{article_id}")
-def english_article_detail(
-    article_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    a = get_english_article(db, article_id)
-    if not a:
-        return ApiResponse.fail("文章不存在", code=404)
-    # 记录阅读日志
-    add_english_log(
-        db, user,
-        EnglishStudyLogCreate(logType="article", refId=article_id, durationSec=0),
-    )
-    return ApiResponse.ok(a.model_dump())
 
 
 # 生词本
-@router.get("/english/vocab")
-def english_vocab_list(
-    status: str | None = None,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([v.model_dump() for v in list_user_vocabs(db, user, status=status)])
 
 
-@router.post("/english/vocab")
-def english_vocab_add(
-    body: UserVocabAdd,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = add_user_vocab(db, user, body)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/english/vocab/{vocab_id}")
-def english_vocab_update(
-    vocab_id: str,
-    body: UserVocabUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = update_user_vocab(db, user, vocab_id, body)
-    if not out:
-        return ApiResponse.fail("生词不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/english/vocab/{vocab_id}")
-def english_vocab_delete(
-    vocab_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not delete_user_vocab(db, user, vocab_id):
-        return ApiResponse.fail("生词不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
 # 发音代理（edge-tts 优先，有道兜底）
-@router.get("/english/pronounce")
-def english_pronounce(text: str = Query(...), accent: str = Query("us")):
-    """返回英文 mp3：优先 Microsoft edge-tts，失败回退有道。"""
-    from fastapi.responses import Response
-
-    from app.services.tts_service import synthesize_english
-
-    cleaned = (text or "").strip()
-    if not cleaned:
-        return ApiResponse.fail("文本为空", code=400)
-    try:
-        raw = synthesize_english(cleaned, accent)
-        if not raw:
-            return ApiResponse.fail("发音服务暂不可用", code=502)
-        return Response(
-            content=raw,
-            media_type="audio/mpeg",
-            headers={"Cache-Control": "public, max-age=86400"},
-        )
-    except Exception as e:
-        return ApiResponse.fail(f"获取发音失败: {e}", code=502)
 
 
 # 跟读本（文章收藏句子）
-@router.get("/english/shadowing")
-def english_shadowing_list(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([s.model_dump() for s in list_user_shadowing(db, user)])
 
 
-@router.post("/english/shadowing")
-def english_shadowing_add(
-    body: UserSpeakingSentenceAdd,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = add_user_shadowing(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/english/shadowing/{sentence_id}")
-def english_shadowing_update(
-    sentence_id: str,
-    body: UserSpeakingSentenceUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = update_user_shadowing(db, user, sentence_id, body)
-    if not out:
-        return ApiResponse.fail("句子不存在", code=404)
-    if body.practiced:
-        add_english_log(
-            db, user,
-            EnglishStudyLogCreate(
-                logType="speaking", refId=sentence_id,
-                durationSec=0, sentencesPracticed=1,
-            ),
-        )
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/english/shadowing/{sentence_id}")
-def english_shadowing_delete(
-    sentence_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not delete_user_shadowing(db, user, sentence_id):
-        return ApiResponse.fail("句子不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
 # 口语课程（可选）
-@router.get("/english/speaking")
-def english_speaking_list(
-    topic: str | None = None,
-    _user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([s.model_dump() for s in list_speaking_lessons_pub(db, topic=topic)])
 
 
-@router.get("/english/speaking/{lesson_id}")
-def english_speaking_detail(
-    lesson_id: str,
-    _user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    s = get_speaking_lesson_pub(db, lesson_id)
-    if not s:
-        return ApiResponse.fail("课程不存在", code=404)
-    return ApiResponse.ok(s.model_dump())
 
 
-@router.get("/english/speaking/{lesson_id}/attempts")
-def english_speaking_attempts(
-    lesson_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([a.model_dump() for a in list_speaking_attempts_pub(db, user, lesson_id)])
 
 
-@router.post("/english/speaking/attempt")
-def english_speaking_attempt_create(
-    body: SpeakingAttemptCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = create_speaking_attempt_svc(db, user, body)
-    add_english_log(
-        db, user,
-        EnglishStudyLogCreate(
-            logType="speaking", refId=body.lessonId,
-            durationSec=0, sentencesPracticed=1,
-        ),
-    )
-    return ApiResponse.ok(out.model_dump())
 
 
 # 语法
-@router.get("/english/grammar")
-def english_grammar_list(
-    category: str | None = None,
-    _user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([g.model_dump() for g in list_grammar_lessons_pub(db, category=category)])
 
 
-@router.get("/english/grammar/{lesson_id}")
-def english_grammar_detail(
-    lesson_id: str,
-    _user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    g = get_grammar_lesson_pub(db, lesson_id)
-    if not g:
-        return ApiResponse.fail("课程不存在", code=404)
-    return ApiResponse.ok(g.model_dump())
 
 
-@router.put("/english/grammar/{lesson_id}/progress")
-def english_grammar_progress_update(
-    lesson_id: str,
-    body: GrammarProgressUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = update_grammar_progress_pub(db, user, lesson_id, body)
-    add_english_log(
-        db, user,
-        EnglishStudyLogCreate(logType="grammar", refId=lesson_id, durationSec=0),
-    )
-    return ApiResponse.ok(out.model_dump())
 
 
 # 学习记录
-@router.post("/english/log")
-def english_log_add(
-    body: EnglishStudyLogCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = add_english_log(db, user, body)
-    return ApiResponse.ok(out)
 
 
-@router.get("/english/stats")
-def english_stats(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(get_english_stats(db, user).model_dump())
 
 
 # 口语录音上传
-@router.post("/english/speaking/upload")
-async def english_speaking_upload(
-    file: UploadFile = File(...),
-    user: AppUser = Depends(get_app_user),
-):
-    from pathlib import Path
-    from uuid import uuid4
-
-    content_type = (file.content_type or "").lower()
-    allowed = {
-        "audio/mpeg": ".mp3",
-        "audio/mp3": ".mp3",
-        "audio/wav": ".wav",
-        "audio/x-wav": ".wav",
-        "audio/aac": ".aac",
-        "audio/mp4": ".m4a",
-        "audio/x-m4a": ".m4a",
-    }
-    ext = allowed.get(content_type, ".m4a")
-    raw = await file.read()
-    if not raw:
-        return ApiResponse.fail("文件为空", code=400)
-    if len(raw) > 5 * 1024 * 1024:
-        return ApiResponse.fail("录音不能超过 5MB", code=400)
-
-    upload_dir = Path(__file__).resolve().parents[3] / "data" / "uploads" / "speaking"
-    upload_dir.mkdir(parents=True, exist_ok=True)
-    filename = f"{user.id}_{uuid4().hex[:12]}{ext}"
-    dest = upload_dir / filename
-    dest.write_bytes(raw)
-    url = f"/uploads/speaking/{filename}"
-    return ApiResponse.ok({"url": url})
 
 
 # ===== 音标学习 =====
 
 
-@router.get("/english/phonetics")
-def english_phonetics_list(
-    category: str | None = None,
-    _user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([p.model_dump() for p in list_phonetics_pub(db, category)])
 
 
-@router.get("/english/phonetic/{lesson_id}")
-def english_phonetic_detail(
-    lesson_id: str,
-    _user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    p = get_phonetic_pub(db, lesson_id)
-    if not p:
-        return ApiResponse.fail("音标不存在", code=404)
-    return ApiResponse.ok(p.model_dump())
 
 
-@router.get("/english/phonetics/progress")
-def english_phonetics_progress(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(get_phonetic_progress_pub(db, user))
 
 
-@router.put("/english/phonetic/{lesson_id}/progress")
-def english_phonetic_progress_update(
-    lesson_id: str,
-    body: dict,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    status = body.get("status", "learning")
-    result = update_phonetic_progress_pub(db, user, lesson_id, status)
-    add_english_log(
-        db, user,
-        EnglishStudyLogCreate(logType="phonetic", refId=lesson_id, durationSec=0),
-    )
-    return ApiResponse.ok(result)
 
 
 # ===== 美剧口语训练 =====
 
 
-@router.get("/english/tv/hub")
-def english_tv_hub(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(tv_get_hub(db, user).model_dump())
 
 
-@router.get("/english/tv/weekly")
-def english_tv_weekly(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(tv_get_weekly(db, user).model_dump())
 
 
-@router.get("/english/tv/shows")
-def english_tv_shows(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([x.model_dump() for x in tv_list_shows(db, user)])
 
 
-@router.post("/english/tv/shows")
-def english_tv_show_create(
-    body: TvShowCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = tv_create_show(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/english/tv/shows/{show_id}")
-def english_tv_show_update(
-    show_id: str,
-    body: TvShowUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = tv_update_show(db, user, show_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    if not out:
-        return ApiResponse.fail("剧目不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/english/tv/shows/{show_id}")
-def english_tv_show_delete(
-    show_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not tv_delete_show(db, user, show_id):
-        return ApiResponse.fail("剧目不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.get("/english/tv/shows/{show_id}/episodes")
-def english_tv_episodes(
-    show_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([x.model_dump() for x in tv_list_episodes(db, user, show_id)])
 
 
-@router.post("/english/tv/episodes")
-def english_tv_episode_create(
-    body: TvEpisodeCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = tv_create_episode(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/english/tv/episodes/{episode_id}")
-def english_tv_episode_update(
-    episode_id: str,
-    body: TvEpisodeUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = tv_update_episode(db, user, episode_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    if not out:
-        return ApiResponse.fail("剧集不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/english/tv/episodes/{episode_id}")
-def english_tv_episode_delete(
-    episode_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not tv_delete_episode(db, user, episode_id):
-        return ApiResponse.fail("剧集不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.get("/english/tv/episodes/{episode_id}/scenes")
-def english_tv_scenes(
-    episode_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([x.model_dump() for x in tv_list_scenes(db, user, episode_id)])
 
 
-@router.post("/english/tv/scenes")
-def english_tv_scene_create(
-    body: TvSceneCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = tv_create_scene(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.get("/english/tv/scenes/{scene_id}")
-def english_tv_scene_detail(
-    scene_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = tv_get_scene(db, user, scene_id)
-    if not out:
-        return ApiResponse.fail("场景不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/english/tv/scenes/{scene_id}")
-def english_tv_scene_update(
-    scene_id: str,
-    body: TvSceneUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = tv_update_scene(db, user, scene_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    if not out:
-        return ApiResponse.fail("场景不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/english/tv/scenes/{scene_id}")
-def english_tv_scene_delete(
-    scene_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not tv_delete_scene(db, user, scene_id):
-        return ApiResponse.fail("场景不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.get("/english/tv/scenes/{scene_id}/session")
-def english_tv_session_get(
-    scene_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = tv_get_session(db, user, scene_id)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/english/tv/scenes/{scene_id}/session")
-def english_tv_session_update(
-    scene_id: str,
-    body: TvStudySessionUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = tv_update_session(db, user, scene_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.get("/english/tv/expressions")
-def english_tv_expressions(
-    status: str | None = Query(None),
-    sceneId: str | None = Query(None),
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(
-        [x.model_dump() for x in tv_list_expressions(db, user, status=status, scene_id=sceneId)]
-    )
 
 
-@router.get("/english/tv/expressions/due")
-def english_tv_expressions_due(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(
-        [x.model_dump() for x in tv_list_expressions(db, user, status="review")]
-    )
 
 
-@router.post("/english/tv/expressions")
-def english_tv_expression_create(
-    body: TvExpressionCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = tv_create_expression(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/english/tv/expressions/{expr_id}")
-def english_tv_expression_update(
-    expr_id: str,
-    body: TvExpressionUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = tv_update_expression(db, user, expr_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    if not out:
-        return ApiResponse.fail("表达卡不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.post("/english/tv/expressions/{expr_id}/review")
-def english_tv_expression_review(
-    expr_id: str,
-    body: dict,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    result = (body or {}).get("result", "good")
-    out = tv_review_expression(db, user, expr_id, result=result)
-    if not out:
-        return ApiResponse.fail("表达卡不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/english/tv/expressions/{expr_id}")
-def english_tv_expression_delete(
-    expr_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not tv_delete_expression(db, user, expr_id):
-        return ApiResponse.fail("表达卡不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
 # ===== 语音识别 ASR（默认前端免费 Web Speech；可选云） =====
 
 
-@router.get("/asr/status")
-def asr_status_api(
-    _user: AppUser = Depends(get_app_user),
-):
-    from app.services.asr_service import asr_status
-
-    return ApiResponse.ok(asr_status())
 
 
-@router.post("/asr/transcribe")
-async def asr_transcribe(
-    file: UploadFile = File(...),
-    _user: AppUser = Depends(get_app_user),
-):
-    from app.services.asr_service import asr_status, transcribe_audio
-
-    st = asr_status()
-    if not st.get("cloudAvailable"):
-        return ApiResponse.fail(
-            "云 ASR 未配置。当前请使用浏览器免费语音识别；或设置 ASR_PROVIDER=aliyun|tencent",
-            code=400,
-        )
-    raw = await file.read()
-    if not raw:
-        return ApiResponse.fail("空音频", code=400)
-    if len(raw) > 6 * 1024 * 1024:
-        return ApiResponse.fail("音频过大（建议 60 秒内）", code=400)
-    try:
-        text = transcribe_audio(
-            raw,
-            content_type=file.content_type or "audio/webm",
-            filename=file.filename or "speech.webm",
-        )
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    except Exception as e:
-        return ApiResponse.fail(f"识别失败：{e}", code=500)
-    return ApiResponse.ok({"text": text, "engine": st.get("provider")})
 
 
 # ===== 人民日报模块（独立：时评 / 开采本 / 规范词） =====
@@ -2075,12 +1348,6 @@ def rmrb_drill_add(
 # ===== 读书模块 =====
 
 
-@router.get("/dushu/stats")
-def dushu_stats(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(get_dushu_stats(db, user).model_dump())
 
 
 @router.get("/growth/overview")
@@ -2095,509 +1362,91 @@ def growth_overview(
 # ===== 健康模块 =====
 
 
-@router.get("/health/overview")
-def health_overview(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(get_health_overview(db, user).model_dump())
 
 
-@router.get("/health/phases")
-def health_phases(user: AppUser = Depends(get_app_user)):
-    return ApiResponse.ok([p.model_dump() for p in list_health_phases()])
 
 
-@router.get("/health/tasks")
-def health_tasks(
-    phase: int | None = None,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if phase is None:
-        ov = get_health_overview(db, user)
-        phase = ov.phase.phase
-    return ApiResponse.ok([t.model_dump() for t in health_tasks_for_phase(phase)])
 
 
-@router.get("/health/daily")
-def health_daily_get(
-    date: str | None = None,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = get_health_daily(db, user, date)
-    return ApiResponse.ok(out.model_dump() if out else None)
 
 
-@router.get("/health/daily/week")
-def health_daily_week(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    from datetime import timedelta
-    from app.timezone import now as tz_now
-
-    d = tz_now().date()
-    monday = d - timedelta(days=d.weekday())
-    start = monday.strftime("%Y-%m-%d")
-    end = (monday + timedelta(days=6)).strftime("%Y-%m-%d")
-    return ApiResponse.ok([x.model_dump() for x in list_health_daily_range(db, user, start, end)])
 
 
-@router.post("/health/daily")
-def health_daily_upsert(
-    body: HealthDailyLogUpsert,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(upsert_health_daily(db, user, body).model_dump())
 
 
-@router.post("/health/program/reset")
-def health_program_reset(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    st = reset_health_program(db, user)
-    return ApiResponse.ok({"programStartDate": st.program_start_date})
 
 
 class HealthFocusBody(BaseModel):
     text: str = ""
 
 
-@router.put("/health/focus")
-def health_focus_update(
-    body: HealthFocusBody,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok({"privateFocus": update_health_private_focus(db, user, body.text)})
 
 
-@router.get("/dushu/books")
-def dushu_books_list(
-    status: str | None = None,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([b.model_dump() for b in list_dushu_books(db, user, status)])
 
 
-@router.post("/dushu/books")
-def dushu_book_create(
-    body: DushuBookCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = create_dushu_book(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.get("/dushu/books/{book_id}")
-def dushu_book_detail(
-    book_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = get_dushu_book(db, user, book_id)
-    if not out:
-        return ApiResponse.fail("书籍不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/dushu/books/{book_id}")
-def dushu_book_update(
-    book_id: str,
-    body: DushuBookUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = update_dushu_book(db, user, book_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    if not out:
-        return ApiResponse.fail("书籍不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/dushu/books/{book_id}")
-def dushu_book_delete(
-    book_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not delete_dushu_book(db, user, book_id):
-        return ApiResponse.fail("书籍不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.get("/dushu/daily")
-def dushu_daily_list(
-    book_id: str | None = None,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([d.model_dump() for d in list_dushu_daily(db, user, book_id)])
 
 
-@router.get("/dushu/daily/by-date/{log_date}")
-def dushu_daily_by_date(
-    log_date: str,
-    book_id: str | None = None,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = get_dushu_daily_by_date(db, user, log_date, book_id)
-    return ApiResponse.ok(out.model_dump() if out else None)
 
 
-@router.post("/dushu/daily")
-def dushu_daily_upsert(
-    body: DushuDailyLogUpsert,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = upsert_dushu_daily(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/dushu/daily/{log_id}")
-def dushu_daily_delete(
-    log_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not delete_dushu_daily(db, user, log_id):
-        return ApiResponse.fail("记录不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.get("/dushu/persons")
-def dushu_persons_list(
-    book_id: str | None = None,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([p.model_dump() for p in list_dushu_persons(db, user, book_id)])
 
 
-@router.post("/dushu/persons")
-def dushu_person_create(
-    body: DushuPersonCardCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = create_dushu_person(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/dushu/persons/{card_id}")
-def dushu_person_update(
-    card_id: str,
-    body: DushuPersonCardUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = update_dushu_person(db, user, card_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    if not out:
-        return ApiResponse.fail("人物卡不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/dushu/persons/{card_id}")
-def dushu_person_delete(
-    card_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not delete_dushu_person(db, user, card_id):
-        return ApiResponse.fail("人物卡不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.get("/dushu/summaries")
-def dushu_summaries_list(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([s.model_dump() for s in list_dushu_summaries(db, user)])
 
 
-@router.get("/dushu/summaries/{book_id}")
-def dushu_summary_detail(
-    book_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = get_dushu_summary(db, user, book_id)
-    return ApiResponse.ok(out.model_dump() if out else None)
 
 
-@router.post("/dushu/summaries")
-def dushu_summary_upsert(
-    body: DushuBookSummaryUpsert,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = upsert_dushu_summary(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
 # ===== 记账模块 =====
 
 
-@router.get("/ledger/overview")
-def ledger_overview(
-    month: str | None = Query(None),
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(get_ledger_overview(db, user, month).model_dump())
 
 
-@router.get("/ledger/expenses")
-def ledger_expenses_list(
-    month: str | None = Query(None),
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([e.model_dump() for e in list_ledger_expenses(db, user, month)])
 
 
-@router.get("/ledger/expenses/{expense_id}")
-def ledger_expense_detail(
-    expense_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = get_ledger_expense(db, user, expense_id)
-    if not out:
-        return ApiResponse.fail("记录不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.post("/ledger/expenses")
-def ledger_expense_create(
-    body: LedgerExpenseCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = create_ledger_expense(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/ledger/expenses/{expense_id}")
-def ledger_expense_update(
-    expense_id: str,
-    body: LedgerExpenseUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = update_ledger_expense(db, user, expense_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    if not out:
-        return ApiResponse.fail("记录不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/ledger/expenses/{expense_id}")
-def ledger_expense_delete(
-    expense_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not delete_ledger_expense(db, user, expense_id):
-        return ApiResponse.fail("记录不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.get("/ledger/loans")
-def ledger_loans_list(
-    status: str | None = Query(None),
-    counterparty: str | None = Query(None),
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(
-        [x.model_dump() for x in list_ledger_loans(db, user, status, counterparty)]
-    )
 
 
-@router.get("/ledger/counterparties")
-def ledger_counterparties_list(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    """按对方汇总：一共欠多少、几笔未结清"""
-    return ApiResponse.ok([x.model_dump() for x in list_ledger_counterparties(db, user)])
 
 
-@router.get("/ledger/loans/{loan_id}")
-def ledger_loan_detail(
-    loan_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = get_ledger_loan(db, user, loan_id)
-    if not out:
-        return ApiResponse.fail("记录不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.post("/ledger/loans")
-def ledger_loan_create(
-    body: LedgerLoanCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = create_ledger_loan(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/ledger/loans/{loan_id}")
-def ledger_loan_update(
-    loan_id: str,
-    body: LedgerLoanUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = update_ledger_loan(db, user, loan_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    if not out:
-        return ApiResponse.fail("记录不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/ledger/loans/{loan_id}")
-def ledger_loan_delete(
-    loan_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not delete_ledger_loan(db, user, loan_id):
-        return ApiResponse.fail("记录不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.post("/ledger/loans/{loan_id}/repayments")
-def ledger_repay_create(
-    loan_id: str,
-    body: LedgerRepaymentCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = create_ledger_repayment(db, user, loan_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/ledger/repayments/{repay_id}")
-def ledger_repay_update(
-    repay_id: str,
-    body: LedgerRepaymentUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = update_ledger_repayment(db, user, repay_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    if not out:
-        return ApiResponse.fail("记录不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/ledger/repayments/{repay_id}")
-def ledger_repay_delete(
-    repay_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not delete_ledger_repayment(db, user, repay_id):
-        return ApiResponse.fail("记录不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.post("/ledger/upload")
-async def ledger_upload(
-    file: UploadFile = File(...),
-    user: AppUser = Depends(get_app_user),
-):
-    """凭据/小票图片上传"""
-    from pathlib import Path
-    from uuid import uuid4
-
-    content_type = (file.content_type or "").lower()
-    allowed = {
-        "image/jpeg": ".jpg",
-        "image/jpg": ".jpg",
-        "image/png": ".png",
-        "image/webp": ".webp",
-        "image/gif": ".gif",
-    }
-    ext = allowed.get(content_type)
-    raw = await file.read()
-    if not raw:
-        return ApiResponse.fail("文件为空", code=400)
-    if len(raw) > 5 * 1024 * 1024:
-        return ApiResponse.fail("图片不能超过 5MB", code=400)
-    if not ext:
-        name = (file.filename or "").lower()
-        if name.endswith(".png"):
-            ext = ".png"
-        elif name.endswith(".webp"):
-            ext = ".webp"
-        elif name.endswith(".gif"):
-            ext = ".gif"
-        elif name.endswith(".jpg") or name.endswith(".jpeg"):
-            ext = ".jpg"
-        elif raw[:8] == b"\x89PNG\r\n\x1a\n":
-            ext = ".png"
-        elif raw[:3] == b"GIF":
-            ext = ".gif"
-        elif len(raw) >= 12 and raw[:4] == b"RIFF" and raw[8:12] == b"WEBP":
-            ext = ".webp"
-        elif raw[:2] == b"\xff\xd8":
-            ext = ".jpg"
-        else:
-            return ApiResponse.fail("仅支持 jpg/png/webp/gif 图片", code=400)
-
-    upload_dir = Path(__file__).resolve().parents[3] / "data" / "uploads" / "ledger"
-    upload_dir.mkdir(parents=True, exist_ok=True)
-    filename = f"{user.id}_{uuid4().hex[:12]}{ext}"
-    dest = upload_dir / filename
-    dest.write_bytes(raw)
-    return ApiResponse.ok({"url": f"/uploads/ledger/{filename}"})
 
 
 # ===== 语料本 =====
@@ -2691,185 +1540,36 @@ def corpus_item_promote_term(
 # ===== 财富 / 投资大脑 =====
 
 
-@router.get("/wealth/hub")
-def wealth_hub(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(get_wealth_hub(db, user).model_dump())
 
 
-@router.get("/wealth/snapshots")
-def wealth_snapshots_list(
-    limit: int = Query(30, ge=1, le=100),
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([s.model_dump() for s in list_wealth_snapshots(db, user, limit)])
 
 
-@router.get("/wealth/snapshots/{snap_id}")
-def wealth_snapshot_detail(
-    snap_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = get_wealth_snapshot(db, user, snap_id)
-    if not out:
-        return ApiResponse.fail("快照不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.post("/wealth/snapshots")
-def wealth_snapshot_create(
-    body: WealthSnapshotCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(create_wealth_snapshot(db, user, body).model_dump())
 
 
-@router.put("/wealth/snapshots/{snap_id}")
-def wealth_snapshot_update(
-    snap_id: str,
-    body: WealthSnapshotUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = update_wealth_snapshot(db, user, snap_id, body)
-    if not out:
-        return ApiResponse.fail("快照不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/wealth/snapshots/{snap_id}")
-def wealth_snapshot_delete(
-    snap_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not delete_wealth_snapshot(db, user, snap_id):
-        return ApiResponse.fail("快照不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.get("/wealth/principles")
-def wealth_principles_list(
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([p.model_dump() for p in list_wealth_principles(db, user)])
 
 
-@router.post("/wealth/principles")
-def wealth_principle_create(
-    body: WealthPrincipleCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = create_wealth_principle(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/wealth/principles/{principle_id}")
-def wealth_principle_update(
-    principle_id: str,
-    body: WealthPrincipleUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = update_wealth_principle(db, user, principle_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    if not out:
-        return ApiResponse.fail("原则不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/wealth/principles/{principle_id}")
-def wealth_principle_delete(
-    principle_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not delete_wealth_principle(db, user, principle_id):
-        return ApiResponse.fail("原则不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.get("/wealth/journals")
-def wealth_journals_list(
-    side: str | None = Query(None),
-    limit: int = Query(50, ge=1, le=200),
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok([j.model_dump() for j in list_wealth_journals(db, user, side, limit)])
 
 
-@router.get("/wealth/journals/{journal_id}")
-def wealth_journal_detail(
-    journal_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    out = get_wealth_journal(db, user, journal_id)
-    if not out:
-        return ApiResponse.fail("日志不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.post("/wealth/journals")
-def wealth_journal_create(
-    body: WealthJournalCreate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = create_wealth_journal(db, user, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.put("/wealth/journals/{journal_id}")
-def wealth_journal_update(
-    journal_id: str,
-    body: WealthJournalUpdate,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    try:
-        out = update_wealth_journal(db, user, journal_id, body)
-    except ValueError as e:
-        return ApiResponse.fail(str(e), code=400)
-    if not out:
-        return ApiResponse.fail("日志不存在", code=404)
-    return ApiResponse.ok(out.model_dump())
 
 
-@router.delete("/wealth/journals/{journal_id}")
-def wealth_journal_delete(
-    journal_id: str,
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    if not delete_wealth_journal(db, user, journal_id):
-        return ApiResponse.fail("日志不存在", code=404)
-    return ApiResponse.ok({"ok": True})
 
 
-@router.get("/wealth/review")
-def wealth_review(
-    weekStart: str | None = Query(None),
-    user: AppUser = Depends(get_app_user),
-    db: Session = Depends(get_db),
-):
-    return ApiResponse.ok(get_wealth_review(db, user, weekStart).model_dump())
 
 
 # ===== 时事新闻 · 事件印象 =====

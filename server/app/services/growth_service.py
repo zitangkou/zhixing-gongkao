@@ -7,7 +7,6 @@ from sqlalchemy.orm import Session
 
 from app.models import (
     AppUser,
-    DushuDailyLog,
     ExamAttempt,
     ManualWrong,
     PlanTask,
@@ -17,10 +16,9 @@ from app.models import (
     WrongAnswer,
 )
 from app.schemas import GrowthDayBar, GrowthDomainProgress, GrowthOverviewOut
-from app.services.dushu_service import get_stats as get_dushu_stats
-from app.services.english_service import get_stats as get_english_stats
 from app.services.shenlun_service import get_stats as get_shenlun_stats
 from app.services.user_service import calc_sign_streak
+from app.services.ziliao_service import get_overview as get_ziliao_overview
 from app.timezone import now, today as today_str
 
 _WEEKDAY_LABELS = ["一", "二", "三", "四", "五", "六", "日"]
@@ -62,48 +60,10 @@ def get_growth_overview(db: Session, user: AppUser) -> GrowthOverviewOut:
             t.actual_minutes or 0
         )
 
-    # —— 读书分钟 ——
-    dushu_rows = (
-        db.query(DushuDailyLog)
-        .filter(
-            DushuDailyLog.user_id == user.id,
-            DushuDailyLog.log_date >= week_start,
-            DushuDailyLog.log_date <= week_end,
-        )
-        .all()
-    )
-    dushu_minutes_by_day: dict[str, int] = {d: 0 for d in week_dates}
-    for r in dushu_rows:
-        dushu_minutes_by_day[r.log_date] = dushu_minutes_by_day.get(r.log_date, 0) + int(
-            r.duration_min or 0
-        )
-
-    # —— 英语分钟（EnglishStudyLog）——
-    from app.models import EnglishStudyLog
-
-    eng_logs = (
-        db.query(EnglishStudyLog)
-        .filter(
-            EnglishStudyLog.user_id == user.id,
-            EnglishStudyLog.study_date >= week_start,
-            EnglishStudyLog.study_date <= week_end,
-        )
-        .all()
-    )
-    eng_minutes_by_day: dict[str, int] = {d: 0 for d in week_dates}
-    for l in eng_logs:
-        eng_minutes_by_day[l.study_date] = eng_minutes_by_day.get(l.study_date, 0) + int(
-            (l.duration_sec or 0) / 60
-        )
-
     week_minutes = 0
     week_bars: list[GrowthDayBar] = []
     for i, date in enumerate(week_dates):
-        mins = (
-            plan_minutes_by_day.get(date, 0)
-            + dushu_minutes_by_day.get(date, 0)
-            + eng_minutes_by_day.get(date, 0)
-        )
+        mins = plan_minutes_by_day.get(date, 0)
         # 无实际分钟时，用计划完成数估一个活跃度（每完成 1 任务计 15）
         if mins <= 0:
             day_tasks = [t for t in plan_rows if t.plan_date == date and t.status == "done"]
@@ -149,8 +109,7 @@ def get_growth_overview(db: Session, user: AppUser) -> GrowthOverviewOut:
     sign_days = db.query(SignRecord).filter(SignRecord.user_id == user.id).count()
 
     shenlun = get_shenlun_stats(db, user)
-    english = get_english_stats(db, user)
-    dushu = get_dushu_stats(db, user)
+    ziliao = get_ziliao_overview(db, user.id)
 
     domains = [
         GrowthDomainProgress(
@@ -166,22 +125,22 @@ def get_growth_overview(db: Session, user: AppUser) -> GrowthOverviewOut:
             detail=f"本周开采 {shenlun.weekMineDays} 天 · 词库 {shenlun.termCount}",
         ),
         GrowthDomainProgress(
-            key="english",
-            name="英语",
-            percent=_pct(english.weekMinutes, 210),  # 目标约每天 30 分钟
-            detail=f"本周 {english.weekMinutes} 分钟 · 语法掌握 {english.grammarMasteredCount}",
-        ),
-        GrowthDomainProgress(
-            key="dushu",
-            name="读书",
-            percent=_pct(dushu.weekReadDays, dushu.weekReadTarget or 7),
-            detail=f"本周阅读 {dushu.weekReadDays} 天 · 输出 {dushu.weekOutputCount} 次",
+            key="ziliao",
+            name="资料分析",
+            percent=_pct(ziliao.todayCorrect, ziliao.todayTotal) if ziliao.todayTotal else 0,
+            detail=f"今日 {ziliao.todayCorrect}/{ziliao.todayTotal} · 本周 {ziliao.weekSets} 套",
         ),
         GrowthDomainProgress(
             key="wrong",
             name="错题消化",
             percent=_pct(manual_mastered, manual_all) if manual_all else (100 if article_wrong == 0 else 0),
             detail=f"行测掌握 {manual_mastered}/{manual_all} · 文章错题 {article_wrong}",
+        ),
+        GrowthDomainProgress(
+            key="signin",
+            name="连续签到",
+            percent=_pct(streak, 30),
+            detail=f"连续 {streak} 天",
         ),
     ]
 

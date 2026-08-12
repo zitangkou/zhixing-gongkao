@@ -11,8 +11,6 @@ MODULE_CAPS = {
     "knowledge": 8,
     "article": 4,
     "wrong": 10,
-    "vocab": 5,
-    "tv_expression": 3,
     "corpus": 3,
 }
 
@@ -20,8 +18,6 @@ MODULE_LABELS = {
     "knowledge": "知识抽查",
     "article": "文章复习",
     "wrong": "错题复习",
-    "vocab": "单词复习",
-    "tv_expression": "美剧句型",
     "corpus": "语料内化",
 }
 

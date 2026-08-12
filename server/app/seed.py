@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from app.config import get_settings
 from app.core.permissions import ROLE_PERMISSIONS
 from app.core.security import hash_password
-from app.models import AdminUser, RechargePackage, Role, SystemSetting
+from app.models import AdminUser, Role, SystemSetting
 from app.services.category_service import seed_default_categories
 from app.services.featured_article import seed_featured_article
 
@@ -31,17 +31,9 @@ def seed_if_empty(db: Session) -> None:
             role_id=role.id,
         ))
 
-    if db.query(RechargePackage).count() == 0:
-        db.add_all([
-            RechargePackage(label="入门包", points=100, price=600, sort_order=1),
-            RechargePackage(label="进阶包", points=500, price=2800, sort_order=2),
-            RechargePackage(label="学霸包", points=1000, price=5000, sort_order=3),
-            RechargePackage(label="尊享包", points=2000, price=8800, sort_order=4),
-        ])
-
     if db.query(SystemSetting).count() == 0:
         defaults = [
-            ("site_name", "知行", "站点名称"),
+            ("site_name", "知行公考", "站点名称"),
             ("points_sign_base", "5", "签到基础积分"),
             ("points_read_article", "3", "阅读文章积分"),
             ("points_correct_answer", "2", "答对题目积分"),
