@@ -8,6 +8,7 @@ from datetime import timedelta
 from sqlalchemy.orm import Session
 
 from app.models import AppUser, ShenlunDrillLog, ShenlunMineLog, ShenlunNormTerm, ShenlunTermCategory, gen_id
+from app.services.activity_service import record_event
 from app.schemas import (
     ShenlunArgumentFieldValue,
     ShenlunArgumentPoint,
@@ -397,6 +398,12 @@ def upsert_mine(db: Session, user: AppUser, body: ShenlunMineLogUpsert) -> Shenl
     _sync_terms_from_mine(db, user, m, terms)
     db.commit()
     db.refresh(m)
+    record_event(
+        db,
+        user.id,
+        "shenlun_mined",
+        {"mineDate": mine_date, "articleId": body.articleId, "articleTitle": (body.articleTitle or "").strip()},
+    )
     return _mine_to_out(m)
 
 

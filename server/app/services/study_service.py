@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 from sqlalchemy.orm import Session
 
 from app.models import Article, SectionRead, StudyRecord, utcnow
+from app.services.activity_service import record_event
 from app.timezone import today as today_str
 
 REVIEW_INTERVALS = [1, 2, 4, 7, 15, 30]
@@ -75,6 +76,7 @@ def mark_section_read(db: Session, user_id: str, article_id: str, section_id: st
         db.commit()
     # 无论是否新读段落，都刷新「最近在学」
     touch_study_activity(db, user_id, article_id)
+    record_event(db, user_id, "article_read", {"articleId": article_id, "sectionId": section_id})
 
 def get_section_read_map(db: Session, user_id: str) -> dict[str, list[str]]:
     rows = db.query(SectionRead).filter(SectionRead.user_id == user_id).all()

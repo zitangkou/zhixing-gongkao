@@ -4,6 +4,7 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.models import AppUser, QuizAttempt
+from app.services.activity_service import record_event
 
 
 def _accuracy(correct: int, total: int) -> int:
@@ -33,6 +34,13 @@ def submit_quiz_attempt(
     db.add(attempt)
     db.commit()
     db.refresh(attempt)
+
+    record_event(
+        db,
+        user_id,
+        "quiz_done",
+        {"articleId": article_id, "quizMode": quiz_mode, "total": total, "correct": correct, "accuracy": accuracy},
+    )
 
     rank, total_participants = _calc_user_rank(db, user_id, article_id=article_id, quiz_mode=quiz_mode)
     best = _best_accuracy(db, user_id, article_id=article_id, quiz_mode=quiz_mode)

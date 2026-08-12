@@ -18,6 +18,7 @@ from app.models import (
     ZiliaoTrick,
     gen_id,
 )
+from app.services.activity_service import record_event
 from app.schemas import (
     ManualWrongCreate,
     ZiliaoDrillQuestionOut,
@@ -902,6 +903,20 @@ def submit_drill(
         )
     )
     db.commit()
+
+    record_event(
+        db,
+        user.id,
+        "drill_done",
+        {
+            "setId": body.setId,
+            "paperId": paper_id,
+            "typeCode": type_code,
+            "total": total,
+            "correct": correct_count,
+            "timeUsedSec": body.timeUsedSec,
+        },
+    )
 
     saved = 0
     if body.saveWrongs and wrongs:

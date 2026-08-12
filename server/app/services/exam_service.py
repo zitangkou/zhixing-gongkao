@@ -15,6 +15,7 @@ from app.models import (
     ExamQuestion,
     gen_id,
 )
+from app.services.activity_service import record_event
 from app.schemas import (
     ExamAnswerSubmit,
     ExamAttemptDetailOut,
@@ -532,6 +533,20 @@ def finish_attempt(db: Session, user: AppUser, attempt_id: str) -> ExamAttemptDe
     att.time_used_sec = int((att.finished_at - started).total_seconds())
     db.commit()
     db.refresh(att)
+
+    record_event(
+        db,
+        user.id,
+        "exam_done",
+        {
+            "attemptId": att.id,
+            "paperId": att.paper_id,
+            "score": att.score,
+            "correctCount": att.correct_count,
+            "answeredCount": att.answered_count,
+            "timeUsedSec": att.time_used_sec,
+        },
+    )
     return _build_attempt_detail(db, att)
 
 

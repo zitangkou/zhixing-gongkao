@@ -751,3 +751,16 @@ class ExamCountdown(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
 
+
+class ActivityEvent(Base):
+    """用户行为事件 · M4 成长/能力雷达/里程碑统计的数据底座（本期仅写入）"""
+
+    __tablename__ = "activity_events"
+
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=lambda: gen_id("aev"))
+    user_id: Mapped[str] = mapped_column(ForeignKey("app_users.id"), index=True)
+    event_type: Mapped[str] = mapped_column(String(32), index=True)
+    payload_json: Mapped[str] = mapped_column(Text, default="{}")  # JSON
+    event_date: Mapped[str] = mapped_column(String(10), index=True)  # YYYY-MM-DD
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+

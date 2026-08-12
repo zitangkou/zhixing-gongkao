@@ -6,6 +6,7 @@ from app.api.deps import get_app_user
 from app.core.response import ApiResponse
 from app.database import get_db
 from app.models import AppUser, Article, PointsLog, Question, SignRecord
+from app.services.activity_service import record_event
 from app.schemas import (
     AnswerResult,
     AnswerSubmit,
@@ -538,6 +539,7 @@ def sign_in(user: AppUser = Depends(get_app_user), db: Session = Depends(get_db)
 
     db.add(SignRecord(user_id=user.id, sign_date=today, points=5))
     db.commit()
+    record_event(db, user.id, "sign_in", {"points": 5})
     streak = calc_sign_streak(db, user.id, today)
     points = 5 + (10 if streak >= 7 and streak % 7 == 0 else 0)
     add_points_log(db, user, points, "签到", f"第{streak}天连续签到")
