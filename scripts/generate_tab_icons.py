@@ -213,6 +213,27 @@ def draw_user(color, size):
     return px
 
 
+def draw_today(color, size):
+    """今日：日历 + 对勾（当天待办）"""
+    px = blank(size)
+    w = size * 0.055
+    # calendar body
+    stroke_line(px, size, size * 0.28, size * 0.34, size * 0.72, size * 0.34, color, w)
+    stroke_line(px, size, size * 0.28, size * 0.34, size * 0.28, size * 0.78, color, w)
+    stroke_line(px, size, size * 0.28, size * 0.78, size * 0.72, size * 0.78, color, w)
+    stroke_line(px, size, size * 0.72, size * 0.78, size * 0.72, size * 0.34, color, w)
+    # binder rings
+    stroke_line(px, size, size * 0.36, size * 0.26, size * 0.40, size * 0.34, color, w)
+    stroke_line(px, size, size * 0.60, size * 0.26, size * 0.64, size * 0.34, color, w)
+    # header divider
+    stroke_line(px, size, size * 0.28, size * 0.46, size * 0.72, size * 0.46, color, w)
+    # checkmark
+    cw = size * 0.06
+    stroke_line(px, size, size * 0.42, size * 0.58, size * 0.48, size * 0.66, color, cw)
+    stroke_line(px, size, size * 0.48, size * 0.66, size * 0.60, size * 0.52, color, cw)
+    return px
+
+
 def render_tab(draw_fn, color) -> list[tuple[int, int, int, int]]:
     big = TAB_SIZE * SS
     px = draw_fn(color, big)
@@ -251,7 +272,12 @@ def draw_logo() -> list[tuple[int, int, int, int]]:
 GRAY = (153, 153, 153, 255)
 RED = (30, 58, 95, 255)
 
-for name, fn in [("home", draw_home), ("quiz", draw_quiz), ("user", draw_user)]:
+for name, fn in [
+    ("today", draw_today),
+    ("home", draw_home),
+    ("quiz", draw_quiz),
+    ("user", draw_user),
+]:
     write_png(ICON_OUT / f"{name}.png", TAB_SIZE, render_tab(fn, GRAY))
     write_png(ICON_OUT / f"{name}-active.png", TAB_SIZE, render_tab(fn, RED))
 

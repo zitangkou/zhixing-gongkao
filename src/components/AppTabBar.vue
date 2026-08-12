@@ -10,14 +10,19 @@
         :class="{ active: selected === item.key }"
         @tap="onSwitch(item)"
       >
-        <view class="tab-icon-wrap" :class="{ active: selected === item.key }">
+        <view
+          class="tab-icon-wrap"
+          :class="{ active: selected === item.key }"
+        >
           <component
             :is="item.icon"
             :color="selected === item.key ? activeColor : mutedColor"
             size="20"
           />
         </view>
-        <text class="tab-text">{{ item.text }}</text>
+        <text class="tab-text">
+          {{ item.text }}
+        </text>
       </view>
     </view>
   </view>
@@ -26,7 +31,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import Taro, { useDidShow } from '@tarojs/taro'
-import { Edit, Home, My } from '@nutui/icons-vue-taro'
+import { Clock, Edit, Home, My } from '@nutui/icons-vue-taro'
 import AppFeedback from '@/components/AppFeedback.vue'
 import { useBrandColor } from '@/utils/brandColor'
 
@@ -34,16 +39,17 @@ const inlineFeedback = process.env.TARO_ENV !== 'h5'
 
 const props = withDefaults(
   defineProps<{
-    /** 当前 tab：home | quiz | user */
-    active?: 'home' | 'quiz' | 'user'
+    /** 当前 tab：today | home | quiz | user */
+    active?: 'today' | 'home' | 'quiz' | 'user'
   }>(),
   { active: undefined },
 )
 
-const selected = ref<'home' | 'quiz' | 'user'>(props.active || 'home')
+const selected = ref<'today' | 'home' | 'quiz' | 'user'>(props.active || 'today')
 const { brandColor: activeColor, mutedColor } = useBrandColor()
 
 const tabs = [
+  { key: 'today' as const, path: '/pages/today/index', text: '今日', icon: Clock },
   { key: 'home' as const, path: '/pages/index/index', text: '学习', icon: Home },
   { key: 'quiz' as const, path: '/pages/question/index', text: '练习', icon: Edit },
   { key: 'user' as const, path: '/pages/user/index', text: '我的', icon: My },

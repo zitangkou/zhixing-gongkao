@@ -862,3 +862,15 @@ export interface ZiliaoDrillSubmitResult {
   }[]
   savedWrongCount: number
 }
+
+// ===== 考试倒计时 =====
+
+export interface ExamCountdown {
+  id: string
+  examName: string
+  examDate: string
+  note: string
+  daysLeft: number
+  createdAt?: string
+  updatedAt?: string
+}

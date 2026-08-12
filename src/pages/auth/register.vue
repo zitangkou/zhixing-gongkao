@@ -64,7 +64,7 @@ async function onRegister() {
   try {
     await userStore.register(username.value.trim(), password.value, passwordConfirm.value)
     await bootstrapApp(true)
-    Taro.switchTab({ url: '/pages/index/index' })
+    Taro.switchTab({ url: '/pages/today/index' })
   } catch (e) {
     showToast(e instanceof Error ? e.message : '注册失败', 'error')
   } finally {

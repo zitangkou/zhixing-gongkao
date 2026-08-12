@@ -54,6 +54,7 @@ import type {
   ZiliaoOverview,
   ZiliaoQuestionType,
   ZiliaoTrick,
+  ExamCountdown,
 } from '@/types'
 import type { RankType } from '@/constants'
 import { mockService } from '@/mock/service'
@@ -883,6 +884,20 @@ export const api = {
     return isMock
       ? mockService.submitZiliaoDrill(data)
       : request('/api/ziliao/drill/submit', { method: 'POST', data })
+  },
+
+  getCountdown(): Promise<ApiRes<ExamCountdown | null>> {
+    return isMock ? mockService.getCountdown() : request('/api/countdown')
+  },
+
+  saveCountdown(data: { examName: string; examDate: string; note?: string }): Promise<ApiRes<ExamCountdown>> {
+    return isMock
+      ? mockService.saveCountdown(data)
+      : request('/api/countdown', { method: 'PUT', data })
+  },
+
+  deleteCountdown(): Promise<ApiRes<{ deleted: boolean }>> {
+    return isMock ? mockService.deleteCountdown() : request('/api/countdown', { method: 'DELETE' })
   },
 }
 

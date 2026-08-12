@@ -737,3 +737,17 @@ class ZiliaoPracticeLog(Base):
     practice_date: Mapped[str] = mapped_column(String(10), index=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
+
+class ExamCountdown(Base):
+    """考试倒计时 · 每个用户一条目标考试记录（upsert）"""
+
+    __tablename__ = "exam_countdowns"
+
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=lambda: gen_id("ecd"))
+    user_id: Mapped[str] = mapped_column(ForeignKey("app_users.id"), index=True)
+    exam_name: Mapped[str] = mapped_column(String(128), default="")
+    exam_date: Mapped[str] = mapped_column(String(10), default="")  # YYYY-MM-DD
+    note: Mapped[str] = mapped_column(Text, default="")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
+

@@ -151,6 +151,7 @@ const mockState = {
     isMember: false,
   } as UserInfo,
   events: null as import('@/types').EventImpression[] | null,
+  countdown: null as import('@/types').ExamCountdown | null,
   manualWrongs: [] as import('@/types').ManualWrong[],
   planTasksByDate: {} as Record<string, import('@/types').PlanTask[]>,
   planReviewsByDate: {} as Record<string, import('@/types').DailyReview>,
@@ -1670,6 +1671,31 @@ export const mockService = {
         savedWrongCount: data.saveWrongs === false ? 0 : wrongs.length,
       },
     }
+  },
+
+  async getCountdown(): Promise<ApiRes<import('@/types').ExamCountdown | null>> {
+    await delay(100)
+    return ok(mockState.countdown)
+  },
+
+  async saveCountdown(data: { examName: string; examDate: string; note?: string }): Promise<ApiRes<import('@/types').ExamCountdown>> {
+    await delay(100)
+    const daysLeft = Math.max(0, Math.ceil((new Date(data.examDate).getTime() - Date.now()) / 86400000))
+    mockState.countdown = {
+      id: 'ecd_mock',
+      examName: data.examName,
+      examDate: data.examDate,
+      note: data.note || '',
+      daysLeft,
+      updatedAt: new Date().toISOString(),
+    }
+    return ok(mockState.countdown)
+  },
+
+  async deleteCountdown(): Promise<ApiRes<{ deleted: boolean }>> {
+    await delay(100)
+    mockState.countdown = null
+    return ok({ deleted: true })
   },
 }
 

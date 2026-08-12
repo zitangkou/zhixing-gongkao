@@ -2,6 +2,7 @@ export default defineAppConfig({
   pages: [
     'pages/auth/login',
     'pages/auth/register',
+    'pages/today/index',
     'pages/index/index',
     'pages/article/detail',
     'pages/article/mindmap',
@@ -66,6 +67,12 @@ export default defineAppConfig({
     list: [
       // H5 开发态会误删 iconPath 首字符（assets → ssets），必须写 ./ 前缀；
       // 生产构建会自动改写并打包到 /static/images/*.png
+      {
+        pagePath: 'pages/today/index',
+        text: '今日',
+        iconPath: './assets/icons/today.png',
+        selectedIconPath: './assets/icons/today-active.png',
+      },
       {
         pagePath: 'pages/index/index',
         text: '学习',

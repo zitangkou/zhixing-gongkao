@@ -1765,3 +1765,21 @@ class ZiliaoDrillSubmitOut(BaseModel):
     timeUsedSec: int
     wrongs: list[ZiliaoDrillWrongItem] = []
     savedWrongCount: int = 0
+
+
+# ===== 考试倒计时 =====
+
+class ExamCountdownOut(BaseModel):
+    id: str
+    examName: str
+    examDate: str
+    note: str = ""
+    daysLeft: int = 0
+    createdAt: datetime | None = None
+    updatedAt: datetime | None = None
+
+
+class ExamCountdownUpsert(BaseModel):
+    examName: str
+    examDate: str
+    note: str = ""
