@@ -12,7 +12,6 @@
 | 学员端应用 | `src/` | Taro 4、Vue 3、TypeScript、NutUI、Pinia | 面向 H5 / 微信小程序的学习、练习、复盘、个人中心 |
 | 后端 API | `server/app/` | FastAPI、SQLAlchemy 2、SQLite、JWT | 业务接口、数据持久化、鉴权、文件上传、启动初始化 |
 | 管理后台 | `server/admin-web/` | Vue 3、Vite、Element Plus、Pinia | 内容、题库、用户、配置、权限和资源管理 |
-| 内容库样例 | `obsidian/` | Markdown | 知识框架、人民日报、语料本等内容源样例 |
 
 整体形态是一个单体仓库、多前端入口的应用：
 
@@ -124,7 +123,6 @@ FastAPI 后端 ---- SQLite / data/uploads
 │   ├── prompts/            # AI 出题提示词
 │   ├── tests/              # 后端测试
 │   └── requirements.txt    # Python 依赖
-├── obsidian/               # Markdown 内容库样例
 ├── docker/                 # Nginx 与启动脚本
 ├── scripts/                # 部署、路由冒烟、文章解析等脚本
 ├── config/                 # Taro 构建配置
