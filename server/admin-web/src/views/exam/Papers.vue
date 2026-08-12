@@ -425,7 +425,7 @@ onMounted(load)
 .preview-list { max-height: 200px; overflow-y: auto; }
 .preview-item { background: #fff; padding: 8px; border-radius: 4px; margin-bottom: 6px; font-size: 12px; }
 .pi-head { display: flex; justify-content: space-between; color: #888; margin-bottom: 4px; }
-.pi-type { color: #D0021B; }
+.pi-type { color: #1E3A5F; }
 .pi-stem { color: #333; margin-bottom: 4px; }
 .pi-ans { color: #07c160; }
 </style>

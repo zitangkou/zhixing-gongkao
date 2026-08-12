@@ -15,5 +15,6 @@ server/tests/_smoke.db-wal
 server/.env
 server/admin-dist/
 server/admin-web/node_modules/
+server/admin-web/tsconfig.tsbuildinfo
 deploy-ali.md
 cal.md

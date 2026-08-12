@@ -65,12 +65,6 @@ const router = createRouter({
           meta: { title: '试卷题库', permissions: ['exam:read'] },
         },
         {
-          path: 'english',
-          name: 'english',
-          component: () => import('@/views/english/List.vue'),
-          meta: { title: '英语学习', permissions: ['english:read'] },
-        },
-        {
           path: 'ziliao',
           name: 'ziliao',
           component: () => import('@/views/ziliao/List.vue'),
@@ -93,18 +87,6 @@ const router = createRouter({
           name: 'events',
           component: () => import('@/views/events/List.vue'),
           meta: { title: '时事事件', permissions: ['events:read'] },
-        },
-        {
-          path: 'health',
-          name: 'health',
-          component: () => import('@/views/health/Dashboard.vue'),
-          meta: { title: '健康看板', permissions: ['health:read'] },
-        },
-        {
-          path: 'dushu',
-          name: 'dushu',
-          component: () => import('@/views/dushu/List.vue'),
-          meta: { title: '读书管理', permissions: ['dushu:read'] },
         },
         {
           path: 'settings',

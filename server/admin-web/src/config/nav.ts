@@ -2,7 +2,6 @@ import type { Component } from 'vue'
 import {
   Calendar,
   Collection,
-  DataLine,
   Document,
   Folder,
   Notebook,
@@ -61,16 +60,6 @@ export const NAV_GROUPS: NavGroup[] = [
     ],
   },
   {
-    key: 'growth',
-    title: '个人成长',
-    icon: DataLine,
-    children: [
-      { path: '/english', title: '英语学习', icon: Reading, permissions: ['english:read'] },
-      { path: '/dushu', title: '读书管理', icon: Reading, permissions: ['dushu:read'] },
-      { path: '/health', title: '健康看板', icon: DataLine, permissions: ['health:read'] },
-    ],
-  },
-  {
     key: 'system',
     title: '系统',
     icon: Setting,
@@ -95,13 +84,10 @@ export const ROUTE_TITLES: Record<string, string> = {
   '/knowledge': '知识框架',
   '/plan': '学习计划',
   '/exam': '试卷题库',
-  '/english': '英语学习',
   '/ziliao': '资料分析',
   '/rmrb': '人民日报',
   '/corpus': '语料本',
   '/events': '时事事件',
-  '/health': '健康看板',
-  '/dushu': '读书管理',
   '/settings': '系统设置',
 }
 
