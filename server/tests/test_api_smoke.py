@@ -1,0 +1,144 @@
+"""关键路径 API 冒烟：注册登录 → 计划/足迹/知识/错题考点 → 模块 stats。
+
+使用独立临时库，避免污染开发库。须在导入 app 之前设置 DATABASE_URL。
+"""
+from __future__ import annotations
+
+import os
+import uuid
+from pathlib import Path
+
+_DB = Path(__file__).resolve().parent / "_smoke.db"
+if _DB.exists():
+    _DB.unlink()
+os.environ["DATABASE_URL"] = f"sqlite:///{_DB}"
+os.environ["ALLOW_REGISTER"] = "true"
+os.environ["SECRET_KEY"] = "smoke-test-secret"
+
+from app.config import get_settings
+
+get_settings.cache_clear()
+
+from fastapi.testclient import TestClient  # noqa: E402
+from app.main import app  # noqa: E402
+
+
+def _ok(res):
+    assert res.status_code == 200, res.text
+    body = res.json()
+    assert body.get("code") == 0, body
+    return body.get("data")
+
+
+def test_api_smoke_critical_path():
+    with TestClient(app) as client:
+        health = client.get("/health")
+        assert health.status_code == 200
+        assert health.json().get("status") == "ok"
+
+        cfg = _ok(client.get("/api/config"))
+        assert "allowRegister" in cfg
+
+        username = f"smoke_{uuid.uuid4().hex[:8]}"
+        password = "SmokeTest1!"
+        auth = _ok(
+            client.post(
+                "/api/auth/register",
+                json={
+                    "username": username,
+                    "password": password,
+                    "passwordConfirm": password,
+                },
+            )
+        )
+        token = auth["access_token"]
+        headers = {"Authorization": f"Bearer {token}"}
+
+        me = _ok(client.get("/api/user/me", headers=headers))
+        assert me["username"] == username
+
+        login = _ok(
+            client.post(
+                "/api/auth/login",
+                json={"username": username, "password": password},
+            )
+        )
+        assert login["access_token"]
+
+        # 计划 / 足迹
+        plan = _ok(client.get("/api/plan/today", headers=headers))
+        assert plan is not None
+
+        growth = _ok(client.get("/api/growth/overview", headers=headers))
+        assert "weekBars" in growth and "domains" in growth
+
+        # 知识：列表始终可用；sync 在无目录时返回业务错误（非 5xx）
+        trees = _ok(client.get("/api/knowledge/trees", headers=headers))
+        assert isinstance(trees, list)
+        sync_res = client.post("/api/knowledge/sync", headers=headers)
+        assert sync_res.status_code == 200
+        sync_body = sync_res.json()
+        assert sync_body.get("code") in (0, 400)
+        status = _ok(client.get("/api/knowledge/status", headers=headers))
+        assert status is not None
+
+        # 行测错题 + 考点字段
+        wrong = _ok(
+            client.post(
+                "/api/manual-wrong",
+                headers=headers,
+                json={
+                    "subject": "行测",
+                    "questionType": "判断推理",
+                    "stem": "冒烟测试题干",
+                    "myAnswer": "A",
+                    "correctAnswer": "B",
+                    "knowledgeNodeId": "node-smoke",
+                    "knowledgeTreeKey": "xingce",
+                    "knowledgePath": "判断推理/冒烟",
+                    "images": [],
+                },
+            )
+        )
+        assert wrong["knowledgeNodeId"] == "node-smoke"
+        assert wrong["knowledgePath"] == "判断推理/冒烟"
+
+        listed = _ok(client.get("/api/manual-wrong", headers=headers))
+        assert any(w.get("id") == wrong["id"] for w in listed)
+
+        # 模块探针
+        _ok(client.get("/api/rmrb/stats", headers=headers))
+        _ok(client.get("/api/dushu/stats", headers=headers))
+        _ok(client.get("/api/english/stats", headers=headers))
+        _ok(client.get("/api/articles/daily"))
+
+        # 健康：概览 + 打卡（含胃/湿气/皮肤）
+        health = _ok(client.get("/api/health/overview", headers=headers))
+        assert "phase" in health and "todayTasks" in health
+        daily = _ok(
+            client.post(
+                "/api/health/daily",
+                headers=headers,
+                json={
+                    "mood": 6,
+                    "energy": 5,
+                    "anxiety": 4,
+                    "stomach": 7,
+                    "dampness": 3,
+                    "skin": 2,
+                    "mealsRegular": True,
+                    "tasksDone": ["p1-walk"],
+                    "cbt": {"anxious": "有一点", "why": "社交", "worst": "尴尬", "probability": "低", "acceptable": "能"},
+                },
+            )
+        )
+        assert daily["mood"] == 6 and daily["skin"] == 2
+        assert "p1-walk" in daily["tasksDone"]
+
+
+def teardown_module(_mod=None):
+    if _DB.exists():
+        try:
+            _DB.unlink()
+        except OSError:
+            pass

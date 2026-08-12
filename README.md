@@ -1,0 +1,61 @@
+# 知行
+
+个人学习与复盘系统（公考为主线）— 基于 **Taro 4 + Vue 3 + TypeScript + NutUI + Pinia** 的跨端应用（微信小程序 + H5）。
+
+Slogan：**读得进，练得出**
+
+## 功能
+
+- 公考主线：时政阅读、申论/人民日报、知识框架、真题套卷
+- 能力拓展：英语、读书、健康（身心节律）、学习计划
+- 智能出题、错题本、艾宾浩斯复习
+- 积分、签到、排行榜、知行足迹
+
+**全量功能说明（各模块明细）→ [FEATURES.md](./FEATURES.md)**
+
+## 快速开始
+
+```bash
+cd ~/Projects/zhengkao-tong
+npm install
+npm run dev:h5      # H5 开发 http://localhost:10086（默认连真实 API）
+npm run dev:weapp   # 微信小程序，用开发者工具打开 dist 目录
+```
+
+后端另开终端：
+
+```bash
+cd server
+source .venv/bin/activate
+uvicorn app.main:app --reload --port 8000
+```
+
+## Mock 与真实 API
+
+- **默认连真实 API**（`USE_MOCK` 未设置或非 `true`）
+- 纯前端本地演示（不启后端）时：
+
+```bash
+USE_MOCK=true npm run dev:h5
+```
+
+此时 `src/mock/service.ts` 覆盖登录、文章、计划、英语、人民日报、读书、足迹等接口。生产 / Docker **不要**开启 `USE_MOCK`。
+
+## 技术说明
+
+- 主色调：中国红 `#D0021B`
+- 生产部署与数据备份见 `deploy-ali.md`
+
+## 目录结构
+
+```
+src/
+├── api/          # 接口封装
+├── components/   # 公共组件
+├── constants/    # 常量
+├── mock/         # Mock 数据与服务
+├── pages/        # 页面
+├── store/        # Pinia 状态
+├── styles/       # 全局样式
+└── utils/        # 工具函数（记忆曲线、出题等）
+```

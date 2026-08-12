@@ -1,0 +1,36 @@
+{
+  "formulas": [
+    {
+      "code": "F001",
+      "name": "增长率",
+      "category": "增长",
+      "definition": "反映现期相对基期的增长快慢。",
+      "latex": "r=\\dfrac{A_{1}-A_{0}}{A_{0}}",
+      "formulaPlain": "增长率 = (现期 - 基期) / 基期",
+      "scenarios": "同比增长多少、增幅是多少、增长率是多少",
+      "pitfalls": "分母是基期不是现期；注意百分数与百分点区别",
+      "related_type_codes": ["T001", "T002", "T003"],
+      "related_trick_codes": ["K001", "K002"],
+      "keywords": ["增长率", "同比", "增幅"],
+      "exam_freq": 5,
+      "sort_order": 1,
+      "is_published": true
+    },
+    {
+      "code": "F002",
+      "name": "增长量",
+      "category": "增长",
+      "definition": "现期与基期的差额。",
+      "latex": "\\Delta A=A_{1}-A_{0}=A_{1}\\times\\dfrac{r}{1+r}",
+      "formulaPlain": "增长量 = 现期 - 基期 = 现期 x r/(1+r)",
+      "scenarios": "增长了多少、增加多少",
+      "pitfalls": "增长量与增长率易混；单位要统一",
+      "related_type_codes": ["T004"],
+      "related_trick_codes": ["K002", "K004"],
+      "keywords": ["增长量", "增加了"],
+      "exam_freq": 5,
+      "sort_order": 2,
+      "is_published": true
+    }
+  ]
+}

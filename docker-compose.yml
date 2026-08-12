@@ -1,0 +1,16 @@
+services:
+  zhixing-gongkao:
+    platform: linux/amd64
+    build: .
+    ports:
+      - "8081:80"
+    env_file:
+      - .env
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - zhixing-gongkao-data:/app/server/data
+    restart: unless-stopped
+
+volumes:
+  zhixing-gongkao-data:

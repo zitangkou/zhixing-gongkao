@@ -1,0 +1,112 @@
+import type { Component } from 'vue'
+import {
+  Calendar,
+  Collection,
+  DataLine,
+  Document,
+  Folder,
+  Notebook,
+  Reading,
+  Setting,
+  Tickets,
+  TrendCharts,
+  User,
+} from '@element-plus/icons-vue'
+
+export interface NavItem {
+  path: string
+  title: string
+  icon: Component
+  /** 任一权限即可显示；空数组表示登录即可 */
+  permissions: string[]
+}
+
+export interface NavGroup {
+  key: string
+  title: string
+  icon: Component
+  children: NavItem[]
+}
+
+/** 侧栏菜单：按业务域分组的两级结构 */
+export const NAV_GROUPS: NavGroup[] = [
+  {
+    key: 'content',
+    title: '内容运营',
+    icon: Document,
+    children: [
+      { path: '/articles', title: '文章管理', icon: Document, permissions: ['article:read'] },
+      { path: '/categories', title: '分类管理', icon: Folder, permissions: ['article:read', 'article:write'] },
+    ],
+  },
+  {
+    key: 'teaching',
+    title: '备考教学',
+    icon: Reading,
+    children: [
+      { path: '/knowledge', title: '知识框架', icon: Collection, permissions: ['knowledge:read'] },
+      { path: '/plan', title: '学习计划', icon: Calendar, permissions: ['plan:read'] },
+      { path: '/exam', title: '试卷题库', icon: Tickets, permissions: ['exam:read'] },
+      { path: '/ziliao', title: '资料分析', icon: Tickets, permissions: ['ziliao:read'] },
+    ],
+  },
+  {
+    key: 'material',
+    title: '素材积累',
+    icon: Notebook,
+    children: [
+      { path: '/rmrb', title: '人民日报', icon: Notebook, permissions: ['rmrb:read'] },
+      { path: '/corpus', title: '语料本', icon: Collection, permissions: ['corpus:read'] },
+      { path: '/events', title: '时事事件', icon: TrendCharts, permissions: ['events:read'] },
+    ],
+  },
+  {
+    key: 'growth',
+    title: '个人成长',
+    icon: DataLine,
+    children: [
+      { path: '/english', title: '英语学习', icon: Reading, permissions: ['english:read'] },
+      { path: '/dushu', title: '读书管理', icon: Reading, permissions: ['dushu:read'] },
+      { path: '/health', title: '健康看板', icon: DataLine, permissions: ['health:read'] },
+    ],
+  },
+  {
+    key: 'system',
+    title: '系统',
+    icon: Setting,
+    children: [
+      { path: '/users', title: '用户管理', icon: User, permissions: ['user:read'] },
+      { path: '/settings', title: '系统设置', icon: Setting, permissions: ['setting:read', 'admin:read'] },
+    ],
+  },
+]
+
+/** 拍平后的全部叶子菜单（路由守卫回退、首页跳转用） */
+export const FLAT_NAV_ITEMS: NavItem[] = NAV_GROUPS.flatMap((g) => g.children)
+
+/** @deprecated 兼容旧引用，等价于 FLAT_NAV_ITEMS */
+export const NAV_ITEMS: NavItem[] = FLAT_NAV_ITEMS
+
+export const ROUTE_TITLES: Record<string, string> = {
+  '/articles': '文章管理',
+  '/articles/new': '新建文章',
+  '/categories': '分类管理',
+  '/users': '用户管理',
+  '/knowledge': '知识框架',
+  '/plan': '学习计划',
+  '/exam': '试卷题库',
+  '/english': '英语学习',
+  '/ziliao': '资料分析',
+  '/rmrb': '人民日报',
+  '/corpus': '语料本',
+  '/events': '时事事件',
+  '/health': '健康看板',
+  '/dushu': '读书管理',
+  '/settings': '系统设置',
+}
+
+export function canAccess(userPerms: string[], required: string[]): boolean {
+  if (!required.length) return true
+  if (userPerms.includes('*')) return true
+  return required.some((p) => userPerms.includes(p))
+}
