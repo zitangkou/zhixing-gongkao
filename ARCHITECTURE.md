@@ -1,7 +1,7 @@
-# 知行项目架构与业务功能梳理
+# 知行公考项目架构与业务功能梳理
 
-> 更新时间：2026-07-30  
-> 项目定位：个人学习与复盘系统，公考备考为主线，扩展英语、读书、健康、财务、事件复盘等个人成长模块。
+> 更新时间：2026-08-13  
+> 项目定位：纯公考备考应用（时政阅读、资料分析、申论、真题套卷、错题闭环、今日驾驶舱）。
 
 ## 1. 系统总览
 
@@ -12,7 +12,7 @@
 | 学员端应用 | `src/` | Taro 4、Vue 3、TypeScript、NutUI、Pinia | 面向 H5 / 微信小程序的学习、练习、复盘、个人中心 |
 | 后端 API | `server/app/` | FastAPI、SQLAlchemy 2、SQLite、JWT | 业务接口、数据持久化、鉴权、文件上传、启动初始化 |
 | 管理后台 | `server/admin-web/` | Vue 3、Vite、Element Plus、Pinia | 内容、题库、用户、配置、权限和资源管理 |
-| 内容库样例 | `obsidian/` | Markdown | 知识框架、人民日报、英语、语料本等内容源样例 |
+| 内容库样例 | `obsidian/` | Markdown | 知识框架、人民日报、语料本等内容源样例 |
 
 整体形态是一个单体仓库、多前端入口的应用：
 
@@ -41,13 +41,14 @@ FastAPI 后端 ---- SQLite / data/uploads
 - `src/pages/`：业务页面，按模块拆分。
 - `src/components/`：公共组件，如文章卡片、知识树、题目项、思维导图、反馈层、积分徽章等。
 - `src/store/`：Pinia 状态，覆盖用户、题目、文章、计划、设置、知识、手动错题等。
-- `src/utils/`：跨模块工具，如鉴权、媒体 URL、上传、记忆曲线、语音输入、知识树、英语文本、财富/账本计算等。
+- `src/utils/`：跨模块工具，如鉴权、媒体 URL、上传、记忆曲线、语音输入、知识树等。
 - `src/mock/service.ts`：`USE_MOCK=true` 时的本地演示服务。
 
-底部 Tab 有三个主入口：
+底部 Tab 有四个主入口：
 
 | Tab | 页面 | 业务定位 |
 | --- | --- | --- |
+| 今日 | `pages/today/index` | 今日驾驶舱：考试倒计时、今日清单、复习提醒、昨日足迹、快捷操作 |
 | 学习 | `pages/index/index` | 学习首页，聚合公考主线、能力拓展和推荐内容 |
 | 练习 | `pages/question/index` | 刷题、错题、复习、套卷等练习入口 |
 | 我的 | `pages/user/index` | 账号、签到、积分、排行、成长足迹和模块入口 |
@@ -59,7 +60,7 @@ FastAPI 后端 ---- SQLite / data/uploads
 - `main.py`：FastAPI 应用入口，注册 CORS、公开路由、管理路由、上传目录和管理后台静态资源。
 - `api/public/routes.py`：学员端接口，统一前缀 `/api`。
 - `api/admin/routes.py`：管理端接口，统一前缀 `/admin`。
-- `models/__init__.py`：SQLAlchemy ORM 模型，覆盖用户、文章、题目、错题、计划、知识、英语、读书、健康、账本、财富等表。
+- `models/__init__.py`：SQLAlchemy ORM 模型，覆盖用户、文章、题目、错题、计划、知识、套卷、资料、申论、倒计时、行为事件等表。
 - `schemas/`：Pydantic 入参和出参结构。
 - `services/`：业务服务层，承载主要业务规则。
 - `core/`：权限、响应结构、安全工具。
@@ -72,7 +73,7 @@ FastAPI 后端 ---- SQLite / data/uploads
 
 - `Base.metadata.create_all()` 创建表。
 - 对旧 SQLite 表做兼容补列。
-- 初始化默认管理员、默认内容、计划模板、DJ 48 音标、资料分析资源。
+- 初始化默认管理员、默认内容、计划模板、资料分析资源。
 - 尝试从 Obsidian Markdown 同步知识框架。
 
 ### 2.3 管理后台
@@ -95,7 +96,6 @@ FastAPI 后端 ---- SQLite / data/uploads
 | 知识框架 | Markdown 上传、树同步、节点维护 |
 | 学习计划 | 周计划模板维护、同步到待办 |
 | 试卷题库 | 试卷、题目、批量导入 |
-| 英语学习 | 英文文章、口语课、语法、音标 |
 | 资料分析 | 公式、题型、秒杀技巧、练习资源 |
 | 人民日报 | 时评文章、规范词、骨架模板、句式、论证方法 |
 | 系统设置 | 键值配置、角色权限矩阵 |
@@ -150,24 +150,19 @@ FastAPI 后端 ---- SQLite / data/uploads
 | 人民日报/申论 | `pages/rmrb/*` | `rmrb_service.py`、`rmrb_meta_service.py`、`shenlun_service.py` | 时评阅读、开采本、规范词、骨架模板、阶梯训练 |
 | 资料分析 | `pages/ziliao/*` | `ziliao_service.py` | 公式库、题型库、技巧库、专项练习、结果统计 |
 
-### 4.2 能力拓展
+### 4.2 素材积累与能力辅助
 
 | 模块 | 学员端页面 | 后端服务 | 核心能力 |
 | --- | --- | --- | --- |
-| 英语 | `pages/english/*` | `english_service.py`、`phonetic_service.py`、`tts_service.py`、`asr_service.py` | 英文文章、生词、跟读、口语课、语法、音标、发音/录音 |
-| 剧集英语 | `pages/english/tv/*` | `tv_english_service.py` | 剧集、分集、场景、表达库、复习、每周回顾 |
-| 读书 | `pages/dushu/*` | `dushu_service.py` | 书架、今日阅读输出、人物卡、一书一页摘要 |
 | 语料本 | `pages/corpus/*` | `corpus_service.py` | 语料采集、标签、来源、知识点挂载、沉淀到规范词 |
 
 ### 4.3 个人成长与生活管理
 
 | 模块 | 学员端页面 | 后端服务 | 核心能力 |
 | --- | --- | --- | --- |
+| 今日驾驶舱 | `pages/today/index` | `countdown_service.py`、`growth_service.py`、`review_hub_service.py`、`plan_service.py` | 考试倒计时、今日清单、复习提醒、昨日足迹 |
 | 学习计划 | `pages/plan/*` | `plan_service.py` | 今日清单、本周计划、任务完成/跳过、每日复盘、模板同步 |
 | 复习中心 | `pages/review/*` | `review_hub_service.py`、`srs.py` | 聚合文章错题、手动错题、知识点等到期复习 |
-| 健康 | `pages/health/*` | `health_service.py` | 8 周恢复计划、今日打卡、心理训练、身体记录、习惯和晚间复盘 |
-| 账本 | `pages/ledger/*` | `ledger_service.py` | 支出、借贷、还款、往来对象、图片上传 |
-| 财富 | `pages/wealth/*` | `wealth_service.py` | 财务快照、原则、日志、周期复盘 |
 | 事件复盘 | `pages/events/*` | `event_impression_service.py` | 事件记录、情绪/印象复盘、时间线 |
 | 成长足迹 | `pages/user/growth` | `growth_service.py` | 签到、学习分钟、正确率、积分和多领域进度聚合 |
 
@@ -178,7 +173,7 @@ FastAPI 后端 ---- SQLite / data/uploads
 | 用户认证 | `auth_service.py`、`core/security.py`、`utils/auth.ts` | 学员登录注册、JWT、改密、资料更新 |
 | 管理认证 | `api/deps.py`、`core/permissions.py` | 管理员 JWT、RBAC、权限矩阵 |
 | 积分签到 | `user_service.py`、`growth_service.py` | 签到、积分流水、排行 |
-| 上传 | `upload_paths.py`、`utils/upload.ts` | 头像、错题图、录音、账本图片 |
+| 上传 | `upload_paths.py`、`utils/upload.ts` | 头像、错题图 |
 | Mock | `src/mock/service.ts` | 无后端演示和本地调试 |
 | 主题 | `store/settings.ts`、`utils/theme.ts` | 深色模式、本地持久化 |
 
@@ -191,16 +186,13 @@ FastAPI 后端 ---- SQLite / data/uploads
 | 权限与账号 | `Role`、`AdminUser`、`AppUser`、`SystemSetting` |
 | 内容与题目 | `Category`、`Article`、`Question`、`StudyRecord`、`SectionRead` |
 | 练习与复习 | `WrongAnswer`、`QuizAttempt`、`ManualWrong` |
-| 积分成长 | `PointsLog`、`SignRecord`、`RechargePackage` |
+| 积分成长 | `PointsLog`、`SignRecord` |
 | 计划 | `PlanTask`、`PlanTemplate`、`DailyReview` |
 | 知识框架 | `KnowledgeNode` |
 | 真题套卷 | `ExamPaper`、`ExamQuestion`、`ExamAttempt`、`ExamAnswer` |
-| 英语 | `EnglishArticle`、`UserVocab`、`UserSpeakingSentence`、`SpeakingLesson`、`SpeakingAttempt`、`GrammarLesson`、`GrammarProgress`、`EnglishStudyLog`、`PhoneticLesson`、`PhoneticProgress` |
-| 剧集英语 | `TvShow`、`TvEpisode`、`TvScene`、`TvDialogueLine`、`TvExpression`、`TvStudySession` |
+| 倒计时与行为 | `ExamCountdown`、`ActivityEvent` |
 | 人民日报/申论 | `RmrbArticle`、`ShenlunMineLog`、`ShenlunNormTerm`、`ShenlunDrillLog`、`ShenlunTermCategory`、`ShenlunSkeletonTemplate`、`ShenlunSentenceType`、`ShenlunArgumentMethod` |
-| 读书 | `DushuBook`、`DushuDailyLog`、`DushuPersonCard`、`DushuBookSummary` |
-| 健康 | `HealthUserState`、`HealthDailyLog` |
-| 财务与事件 | `LedgerExpense`、`LedgerLoan`、`LedgerRepayment`、`WealthSnapshot`、`WealthPrinciple`、`WealthJournal`、`EventImpression` |
+| 事件复盘 | `EventImpression` |
 | 语料与资料分析 | `CorpusItem`、`ZiliaoFormula`、`ZiliaoQuestionType`、`ZiliaoTrick`、`ZiliaoPracticeLog` |
 
 ## 6. 接口分层
@@ -218,10 +210,10 @@ FastAPI 后端 ---- SQLite / data/uploads
 - `/api/plan/*`：学习计划。
 - `/api/knowledge/*`：知识框架。
 - `/api/exam/*`：真题套卷。
-- `/api/english/*`：英语学习与剧集英语。
+- `/api/countdown`：目标考试倒计时（GET/PUT/DELETE）。
 - `/api/rmrb/*`：人民日报/申论。
 - `/api/ziliao/*`：资料分析。
-- `/api/dushu/*`、`/api/health/*`、`/api/ledger/*`、`/api/wealth/*`、`/api/events/*`、`/api/corpus/*`：拓展和个人管理模块。
+- `/api/events/*`、`/api/corpus/*`：事件复盘、语料本。
 
 ### 6.2 管理端 API
 
@@ -234,7 +226,6 @@ FastAPI 后端 ---- SQLite / data/uploads
 - `/admin/knowledge/*`：知识框架管理。
 - `/admin/plan/*`：计划模板。
 - `/admin/exam/*`：试卷题库。
-- `/admin/english/*`：英语内容。
 - `/admin/rmrb/*`：人民日报/申论元数据。
 - `/admin/ziliao/*`：资料分析资源。
 
@@ -248,14 +239,14 @@ FastAPI 后端 ---- SQLite / data/uploads
 npm run dev:h5
 ```
 
-默认 H5 开发端口是 `10086`。`USE_MOCK=true` 时使用前端 Mock；否则请求真实后端。
+默认 H5 开发端口是 `10087`。`USE_MOCK=true` 时使用前端 Mock；否则请求真实后端。
 
 后端：
 
 ```bash
 cd server
 source .venv/bin/activate
-uvicorn app.main:app --reload --port 8000
+uvicorn app.main:app --reload --port 8001
 ```
 
 管理后台：
@@ -272,9 +263,9 @@ npm run dev
 | `DATABASE_URL` | `sqlite:///./data/zhengkao.db` | 后端数据库 |
 | `SECRET_KEY` | 开发默认值 | JWT 密钥，生产必须修改 |
 | `ALLOW_REGISTER` | `true` | 是否开放学员端自助注册 |
-| `CORS_ORIGINS` | `http://localhost:10086,http://localhost:10087` | 允许跨域来源 |
+| `CORS_ORIGINS` | `http://localhost:10087` | 允许跨域来源 |
 | `USE_MOCK` | `false` | 前端是否启用 Mock |
-| `TARO_APP_API_URL` | `http://127.0.0.1:8000` | 前端 API 地址，Docker 同域时可为空 |
+| `TARO_APP_API_URL` | `http://127.0.0.1:8001` | 前端 API 地址，Docker 同域时可为空 |
 | `LLM_ENABLED` | `false` | 是否启用 AI 出题等能力 |
 | `LLM_BASE_URL` / `LLM_MODEL` | DeepSeek 相关默认值 | LLM 服务配置 |
 | `ASR_PROVIDER` | `none` | 云端语音识别供应商 |

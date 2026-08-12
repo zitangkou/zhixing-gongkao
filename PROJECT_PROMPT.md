@@ -1,4 +1,4 @@
-# 知行（zhengkao-tong）项目开发规范 Prompt
+# 知行公考（zhixing-gongkao）项目开发规范 Prompt
 
 > 新增任何功能 / 页面 / 组件时，将本文件作为系统上下文注入，确保布局、样式、交互与全局一致。
 
@@ -8,7 +8,7 @@
 
 | 维度 | 说明 |
 |---|---|
-| 产品 | 公考学习小程序「知行」，覆盖行测（时政阅读、资料分析、常识判断）、英语、读书、健康、记账等模块 |
+| 产品 | 公考备考应用「知行公考」，覆盖时政阅读、资料分析、申论·人民日报、真题套卷、错题闭环等公考模块 |
 | 技术栈 | Taro 4 + Vue 3 (Composition API `<script setup>`) + NutUI Taro + Pinia + Sass + TypeScript |
 | 运行端 | 微信小程序 + H5（双端兼容，`process.env.TARO_ENV` 区分） |
 | 单位 | **一律 px**，禁止 rpx |
@@ -121,7 +121,7 @@ usePullDownRefresh(async () => {
 |---|---|---|
 | **Hub / 入口页** | hero 统计卡 + 功能入口列表/网格 | `ziliao/index.vue` |
 | **列表页** | 筛选 chips + 卡片列表 + 空态 | `ziliao/formulas.vue`, `exam/list.vue` |
-| **详情页** | 头部卡片 + 分段 section | `ziliao/formula-detail.vue`, `dushu/book-detail.vue` |
+| **详情页** | 头部卡片 + 分段 section | `ziliao/formula-detail.vue`, `rmrb/article-detail.vue` |
 | **表单 / 编辑页** | 字段组 + 底部固定操作栏 | `events/edit.vue` |
 | **答题 / 练习页** | 进度条 + 题卡 + 选项 + 底部导航 | `ziliao/drill.vue`, `exam/taking.vue` |
 | **结果页** | 分数卡 + 错题解析 + 操作按钮组 | `ziliao/result.vue`, `exam/result.vue` |

@@ -1,14 +1,14 @@
-# 知行
+# 知行公考
 
-个人学习与复盘系统（公考为主线）— 基于 **Taro 4 + Vue 3 + TypeScript + NutUI + Pinia** 的跨端应用（微信小程序 + H5）。
+纯公考备考应用 — 基于 **Taro 4 + Vue 3 + TypeScript + NutUI + Pinia** 的跨端应用（微信小程序 + H5）。
 
-Slogan：**读得进，练得出**
+Slogan：**以「上岸」为唯一目标**
 
 ## 功能
 
-- 公考主线：时政阅读、申论/人民日报、知识框架、真题套卷
-- 能力拓展：英语、读书、健康（身心节律）、学习计划
-- 智能出题、错题本、艾宾浩斯复习
+- 今日驾驶舱：考试倒计时、今日清单、复习提醒、昨日足迹
+- 公考主线：时政阅读、资料分析、申论/人民日报、知识框架、真题套卷
+- 练习闭环：多种刷题模式、错题本（文章/手动）、艾宾浩斯复习、复习中心
 - 积分、签到、排行榜、知行足迹
 
 **全量功能说明（各模块明细）→ [FEATURES.md](./FEATURES.md)**
@@ -16,9 +16,9 @@ Slogan：**读得进，练得出**
 ## 快速开始
 
 ```bash
-cd ~/Projects/zhengkao-tong
+cd ~/Projects/zhixing-gongkao
 npm install
-npm run dev:h5      # H5 开发 http://localhost:10086（默认连真实 API）
+npm run dev:h5      # H5 开发 http://localhost:10087（默认连真实 API）
 npm run dev:weapp   # 微信小程序，用开发者工具打开 dist 目录
 ```
 
@@ -27,7 +27,7 @@ npm run dev:weapp   # 微信小程序，用开发者工具打开 dist 目录
 ```bash
 cd server
 source .venv/bin/activate
-uvicorn app.main:app --reload --port 8000
+uvicorn app.main:app --reload --port 8001
 ```
 
 ## Mock 与真实 API
