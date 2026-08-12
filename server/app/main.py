@@ -422,7 +422,7 @@ def manage_redirect():
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "service": "zhengkao-tong-server"}
+    return {"status": "ok", "service": "zhixing-gongkao-server"}
 
 
 from app.upload_paths import UPLOADS_DIR

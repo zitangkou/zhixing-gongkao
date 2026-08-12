@@ -24,7 +24,7 @@ PEOPLE_RSS_FEEDS = [
 ]
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; ZhengkaoTongBot/1.0; +https://github.com/zitangkou/zhengkao-tong)",
+    "User-Agent": "Mozilla/5.0 (compatible; ZhixingGongkaoBot/1.0; +https://github.com/zitangkou/zhixing-gongkao)",
 }
 
 
