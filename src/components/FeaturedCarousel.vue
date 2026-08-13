@@ -34,13 +34,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { Article } from '@/types'
-import { useBrandColor } from '@/utils/brandColor'
+import { useBrandColor, withAlpha } from '@/utils/brandColor'
 
 defineProps<{ articles: Article[] }>()
 const emit = defineEmits<{ tap: [id: string] }>()
 const { brandColor, darkMode } = useBrandColor()
 const indicatorMuted = computed(() =>
-  darkMode.value ? 'rgba(232,93,106,0.28)' : 'rgba(208,2,27,0.18)',
+  withAlpha(brandColor.value, darkMode.value ? 0.28 : 0.18),
 )
 
 function onTap(id: string) {

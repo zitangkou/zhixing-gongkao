@@ -430,7 +430,7 @@ useDidShow(load)
   &.conclusion {
     margin-top: 12px;
     padding: 10px 12px;
-    background: rgba(30, 58, 95, 0.04);
+    background: $primary-faint;
     border-radius: 8px;
     border-left: 3px solid $primary-color;
     .kv-label {

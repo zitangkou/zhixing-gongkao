@@ -192,7 +192,7 @@ useDidShow(load)
 .bar-track {
   height: 8px;
   border-radius: 4px;
-  background: rgba(30, 58, 95, 0.1);
+  background: $primary-light;
   overflow: hidden;
 }
 
@@ -256,7 +256,7 @@ useDidShow(load)
   max-width: 28px;
   min-height: 0;
   border-radius: 4px 4px 2px 2px;
-  background: rgba(30, 58, 95, 0.45);
+  background: $primary-bar;
   transition: height 0.3s ease;
 }
 

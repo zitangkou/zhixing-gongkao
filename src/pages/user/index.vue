@@ -116,6 +116,14 @@
     <!-- 设置 -->
     <text class="section-label">设置</text>
     <view class="menu-group">
+      <nut-cell title="主题色" is-link @click="themeVisible = true">
+        <template #icon>
+          <view class="cell-icon"><Photograph :color="brandIcon" size="18" /></view>
+        </template>
+        <template #link>
+          <text class="theme-name">{{ currentThemeName }}</text>
+        </template>
+      </nut-cell>
       <nut-cell title="深色模式" :is-link="false">
         <template #icon>
           <view class="cell-icon"><Setting :color="brandIcon" size="18" /></view>
@@ -137,11 +145,12 @@
     </view>
 
     <AppTabBar active="user" />
+    <ThemePicker v-model:visible="themeVisible" />
   </view>
 </template>
 
 <script setup lang="ts">
-import { computed, reactive } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import Taro from '@tarojs/taro'
 import { Avatar as NutAvatar, Cell as NutCell, Switch as NutSwitch, Tag as NutTag } from '@nutui/nutui-taro'
 import {
@@ -153,12 +162,15 @@ import {
   Fabulous,
   Message,
   Order,
+  Photograph,
   PoweroffCircleFill,
   Setting,
   StarFill,
 } from '@nutui/icons-vue-taro'
 import AppTabBar from '@/components/AppTabBar.vue'
 import PointsBadge from '@/components/PointsBadge.vue'
+import ThemePicker from '@/components/ThemePicker.vue'
+import { getBrandTheme } from '@/constants/theme'
 import { useSettingsStore } from '@/store/settings'
 import { useUserStore } from '@/store/user'
 import { resetBootstrap } from '@/utils/bootstrap'
@@ -176,6 +188,9 @@ const darkMode = computed({
   get: () => settingsStore.darkMode,
   set: (v: boolean) => settingsStore.setDarkMode(!!v),
 })
+
+const themeVisible = ref(false)
+const currentThemeName = computed(() => getBrandTheme(settingsStore.brandTheme).name)
 
 const expanded = reactive({ wrong: false })
 
@@ -295,6 +310,10 @@ async function onLogout() {
       margin-left: 16px;
     }
     .collapse-arrow {
+      color: $text-muted;
+      font-size: 14px;
+    }
+    .theme-name {
       color: $text-muted;
       font-size: 14px;
     }

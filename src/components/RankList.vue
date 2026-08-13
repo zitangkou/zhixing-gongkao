@@ -41,7 +41,7 @@ defineProps<{ list: RankItem[] }>()
     border-radius: 10px;
     &.self {
       background: $primary-light;
-      border: 1px solid rgba(30, 58, 95, 0.3);
+      border: 1px solid $primary-strong;
     }
     &.top3 .score { color: $primary-color; font-weight: 700; }
     .rank-num {

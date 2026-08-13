@@ -9,6 +9,7 @@ import { bootstrapApp } from '@/utils/bootstrap'
 import { useSettingsStore } from '@/store/settings'
 import { applyTheme } from '@/utils/theme'
 import { ensureFeedbackHost } from '@/utils/feedbackHost'
+import { DEFAULT_BRAND_THEME } from '@/constants/theme'
 
 /** 尽早读本地偏好，减少首屏闪白 */
 function applyThemeFromStorage() {
@@ -16,7 +17,9 @@ function applyThemeFromStorage() {
     const raw = Taro.getStorageSync('settings')
     if (!raw) return
     const data = typeof raw === 'string' ? JSON.parse(raw) : raw
-    if (data?.darkMode) applyTheme(true)
+    if (data?.darkMode || data?.brandTheme) {
+      applyTheme(!!data.darkMode, data.brandTheme ?? DEFAULT_BRAND_THEME)
+    }
   } catch {
     /* ignore */
   }

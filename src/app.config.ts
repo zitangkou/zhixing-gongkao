@@ -54,14 +54,14 @@ export default defineAppConfig({
     'pages/rmrb/drill',
   ],
   window: {
-    navigationBarBackgroundColor: '#1E3A5F',
+    navigationBarBackgroundColor: '#D0021B',
     navigationBarTitleText: '知行公考',
     navigationBarTextStyle: 'white',
     backgroundColor: '#F3F4F6',
   },
   tabBar: {
     color: '#999999',
-    selectedColor: '#1E3A5F',
+    selectedColor: '#D0021B',
     backgroundColor: '#FFFFFF',
     borderStyle: 'white',
     list: [
