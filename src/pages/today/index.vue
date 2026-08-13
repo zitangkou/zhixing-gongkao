@@ -22,7 +22,7 @@
         @tap="goSignIn"
       >
         <view class="q-icon-wrap">
-          <Date
+          <DateIcon
             :color="brandColor"
             size="20"
           />
@@ -78,7 +78,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import Taro, { useDidShow } from '@tarojs/taro'
-import { CheckChecked, Date, Edit, Fabulous } from '@nutui/icons-vue-taro'
+import { CheckChecked, Date as DateIcon, Edit, Fabulous } from '@nutui/icons-vue-taro'
 import AppTabBar from '@/components/AppTabBar.vue'
 import ExamCountdownCard from '@/components/today/ExamCountdownCard.vue'
 import TodayTaskList from '@/components/today/TodayTaskList.vue'
