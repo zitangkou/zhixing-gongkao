@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
 
 ## Commands
 
@@ -57,8 +57,8 @@ npm run build        # vue-tsc -b && vite build → 产出 server/admin-dist
 
 ### 后端 `server/app/`（FastAPI + SQLAlchemy 2 + SQLite）
 
-- **两个单体路由文件**：`api/public/routes.py`（前缀 `/api`，对接学员端）+ `api/admin/routes.py`（前缀 `/admin`，需 JWT + RBAC）。
-- **约定单文件**：所有 ORM 模型集中在 `models/__init__.py`，所有 Pydantic schema 集中在 `schemas/__init__.py`，业务规则放 `services/<domain>_service.py`。改模型/加表按此放置。
+- **路由按域拆分**：`api/public/`（前缀 `/api`，对接学员端）与 `api/admin/`（前缀 `/admin`，需 JWT + RBAC）各拆为多个域文件，`routes.py` 负责聚合；新增接口按域放入对应文件。
+- **模型 / schema 按域拆分**：ORM 模型在 `models/`（base + 域模块，`__init__.py` 统一 re-export），Pydantic schema 在 `schemas/`（16 个域模块，`__init__.py` 统一 re-export）；业务规则放 `services/<domain>_service.py`。改模型/加表按此放置，保持 `from app.models import X` / `from app.schemas import X` 兼容。
 - 启动时 `Base.metadata.create_all(bind=engine)` 自动建新表 + 旧表兼容补列，无需迁移脚本。
 - 开发期用户标识：学员端请求头 `X-User-Id: u-demo-001`。
 - **行为事件**：`services/activity_service.py` 的 `record_event()` 是唯一写 `activity_events` 表的入口，各业务服务（签到、读文章、答题、套卷交卷、资料练习、申论开采）在 commit 后调用，payload 存 JSON。

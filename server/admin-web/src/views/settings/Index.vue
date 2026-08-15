@@ -55,7 +55,7 @@ const rolesLoading = ref(false)
 const settings = ref<SettingItem[]>([])
 const roles = ref<Array<{ id: string; code: string; name: string; permissions: string[] }>>([])
 
-const BOOL_KEYS = new Set(['allow_register', 'crawl_enabled', 'llm_enabled'])
+const BOOL_KEYS = new Set(['allow_register', 'llm_enabled'])
 
 function isBoolSetting(row: SettingItem) {
   return BOOL_KEYS.has(row.key) || row.value === 'true' || row.value === 'false'

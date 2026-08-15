@@ -16,6 +16,7 @@
 | 组件 | 共享组件放 `src/components/`，页面私有组件内联 |
 | API | `src/api/index.ts` 统一导出 `api` 对象，返回 `{ code, data, message }` |
 | 状态 | Pinia store 放 `src/store/`，页面级状态用 `ref` / `reactive` |
+| 事件处理器 | 模板内联处理器禁止多语句（如 `@tap="a = 1; load()"`），须抽成方法；prettier 会拆成无分号多行导致 Taro 模板编译失败 |
 
 ---
 
@@ -32,9 +33,9 @@
 
 | 用途 | 变量 | 亮色值 | 暗色值 |
 |---|---|---|---|
-| 品牌主色 | `$primary-color` | `#1e3a5f` | `#3d5a7a` |
-| 品牌深色 | `$primary-dark` | `#142940` | `#5a7a9e` |
-| 品牌浅色底 | `$primary-light` | `rgba(30,58,95,.1)` | `rgba(61,90,122,.16)` |
+| 品牌主色 | `$primary-color` | `#d0021b`（默认中国红） | `#e85d6a` |
+| 品牌深色 | `$primary-dark` | `#8b0000` | `#8f2f3a` |
+| 品牌浅色底 | `$primary-light` | `rgba(208,2,27,.1)` | `rgba(232,93,106,.16)` |
 | 正文 | `$text-primary` | `#1a1a1a` | `#e4e4e6` |
 | 次要文字 | `$text-secondary` | `#666` | `#a8a8ae` |
 | 弱文字 | `$text-muted` | `#999` | `#7c7c84` |
@@ -52,6 +53,11 @@
 - `$accent-blue: #2f6fed`
 - `$accent-green: #0f9d6c`
 - `$accent-amber: #c47d00`
+
+**品牌主题（5 套，运行时切换）：** 中国红（默认）`#d0021b` / 深蓝 `#1e3a5f` / 墨绿 `#0f7d4f` / 靛紫 `#5b3a8e` / 琥珀橙 `#c47d00`。
+- JS 真值源：`src/constants/theme.ts`；SCSS 表：`variables.scss` 的 `$brand-themes`（两者必须同步）。
+- `$primary-*` 是 `--zk-*` CSS 变量的别名，**色值随主题自动变化**，禁止按某个主题的 hex 硬编码。
+- 主题 / 深色切换在学员端「我的」相关页面提供；H5 自定义 TabBar 随主题，小程序原生 tabBar 需额外同步（待优化，见 OPTIMIZATION.md）。
 
 **规则：**
 - 文字 / 背景 / 边框 → 用 `$` 变量（运行时 CSS var，暗色自动切换）

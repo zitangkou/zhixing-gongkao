@@ -57,10 +57,10 @@ FastAPI 后端 ---- SQLite / data/uploads
 后端位于 `server/app/`：
 
 - `main.py`：FastAPI 应用入口，注册 CORS、公开路由、管理路由、上传目录和管理后台静态资源。
-- `api/public/routes.py`：学员端接口，统一前缀 `/api`。
-- `api/admin/routes.py`：管理端接口，统一前缀 `/admin`。
-- `models/__init__.py`：SQLAlchemy ORM 模型，覆盖用户、文章、题目、错题、计划、知识、套卷、资料、申论、倒计时、行为事件等表。
-- `schemas/`：Pydantic 入参和出参结构。
+- `api/public/`：学员端接口（按域拆分：auth_user / article_quiz / plan / knowledge / manual_wrong / exam / rmrb / corpus / events / ziliao / countdown），`routes.py` 聚合，统一前缀 `/api`。
+- `api/admin/`：管理端接口（按域拆分 13 个文件），`routes.py` 聚合，统一前缀 `/admin`。
+- `models/`：SQLAlchemy ORM 模型（base + 11 个域模块），`__init__.py` 统一 re-export。
+- `schemas/`：Pydantic 入参和出参结构（按域拆分 16 个模块，`__init__.py` 统一 re-export）。
 - `services/`：业务服务层，承载主要业务规则。
 - `core/`：权限、响应结构、安全工具。
 - `database.py`：数据库连接和 Session 管理。
@@ -276,7 +276,7 @@ npm run dev
 2. Node 20 alpine 构建管理后台到 `server/admin-dist/`。
 3. Python 3.12 slim 运行 FastAPI，同时安装 Nginx 承载 H5。
 
-`docker-compose.yml` 暴露 `80` 端口，并把后端 `data` 目录挂到 Docker volume。上传文件、SQLite 数据库等运行态数据都在 `server/data`，备份时需要完整备份该目录。
+`docker-compose.yml` 将宿主机 `8081` 映射到容器内 `80`，并把后端 `data` 目录挂到 Docker volume。上传文件、SQLite 数据库等运行态数据都在 `server/data`，备份时需要完整备份该目录。
 
 ## 8. 关键业务流程
 
@@ -336,11 +336,10 @@ Obsidian Markdown / 管理端上传
 ## 9. 架构特点与注意事项
 
 - 后端业务集中在一个 FastAPI 单体内，适合个人项目快速迭代。
-- ORM 模型集中在单文件，查找方便，但模型数量已经较多，后续可按领域拆分。
+- ORM 模型 / schema / 路由已按领域拆分为多文件，`__init__.py` 与聚合入口保持原有 import 兼容。
 - 旧库兼容逻辑写在 `main.py` 启动阶段，适合 SQLite 小规模迁移；长期建议引入 Alembic。
-- 前端 API 封装集中在 `src/api/index.ts`，调用方便，但文件会继续膨胀，后续可按业务域拆分。
+- 前端 API 封装已按业务域拆分到 `src/api/domains/`，`index.ts` 聚合导出 `api` 对象，调用方无需改动。
 - 学员端页面很多，`app.config.ts` 是了解功能覆盖面的最直接入口。
 - 管理后台权限采用菜单权限和接口权限双层控制，权限定义集中在 `server/app/core/permissions.py`。
 - 上传文件不进 SQLite，部署和迁移时必须同时备份数据库和 `data/uploads`。
 - `FEATURES.md` 已经覆盖较细的功能清单；本文档重点是架构、模块边界和业务流。
-

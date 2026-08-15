@@ -163,7 +163,7 @@ const days = [
   { key: 'sun', label: '周日' },
 ]
 
-const subjects = ['行测', '申论', '英语', '健身', '阅读', '休息', '复盘', '其他']
+const subjects = ['行测', '申论', '时政', '资料', '阅读', '休息', '复盘', '其他']
 
 const dialogTitle = computed(() => (editId.value ? '编辑任务模板' : '新增任务模板'))
 

@@ -1,4 +1,4 @@
-# 政考通 Docker 部署
+# 知行公考 Docker 部署
 
 适用于 **暂无域名、通过服务器 IP 访问** 的第一版上线（H5 + 后端 + 管理后台）。
 
@@ -6,11 +6,11 @@
 
 | 路径 | 说明 |
 |------|------|
-| `http://<IP>/` | 移动端 H5 |
-| `http://<IP>/api/*` | 用户 API（需 JWT 登录） |
-| `http://<IP>/manage/` | 管理后台 |
-| `http://<IP>/admin/*` | 管理 API |
-| `http://<IP>/health` | 健康检查 |
+| `http://<IP>:8081/` | 移动端 H5（宿主机端口见 `docker-compose.yml`，容器内为 80） |
+| `http://<IP>:8081/api/*` | 用户 API（需 JWT 登录） |
+| `http://<IP>:8081/manage/` | 管理后台 |
+| `http://<IP>:8081/admin/*` | 管理 API |
+| `http://<IP>:8081/health` | 健康检查 |
 
 容器内 Nginx 反代 + Uvicorn，SQLite 数据持久化到 Docker Volume。
 
@@ -20,8 +20,8 @@
 # 服务器首次
 apt update && apt install -y git docker.io docker-compose-plugin
 cd /opt
-git clone https://github.com/zitangkou/zhengkao-tong.git
-cd zhengkao-tong
+git clone https://github.com/zitangkou/zhixing-gongkao.git
+cd zhixing-gongkao
 cp .env.docker.example .env
 nano .env   # SECRET_KEY、ADMIN_PASSWORD
 
@@ -41,7 +41,7 @@ docker compose up -d --build
 后续更新：
 
 ```bash
-cd /opt/zhengkao-tong
+cd /opt/zhixing-gongkao
 bash scripts/deploy-update.sh
 ```
 
@@ -55,8 +55,8 @@ bash scripts/deploy-update.sh
 
 ## 访问
 
-- H5：`http://你的公网IP/`
-- 管理后台：`http://你的公网IP/manage/`
+- H5：`http://你的公网IP:8081/`
+- 管理后台：`http://你的公网IP:8081/manage/`
 
 首次打开 H5 需注册账号。
 
@@ -73,17 +73,17 @@ bash scripts/deploy-update.sh
 
 ```bash
 docker compose build
-docker save zhengkao-tong-zhengkao:latest | gzip > zhengkao-image.tar.gz
+docker save zhixing-gongkao-zhixing-gongkao:latest | gzip > zhengkao-image.tar.gz
 scp zhengkao-image.tar.gz root@<IP>:/opt/
 # 服务器
 docker load < /opt/zhengkao-image.tar.gz
-cd /opt/zhengkao-tong && docker compose up -d
+cd /opt/zhixing-gongkao && docker compose up -d
 ```
 
 ## 本地开发
 
 ```bash
-cd server && source .venv/bin/activate && uvicorn app.main:app --reload --port 8000
+cd server && source .venv/bin/activate && uvicorn app.main:app --reload --port 8001
 npm run dev:h5
 cd server/admin-web && npm run dev
 ```

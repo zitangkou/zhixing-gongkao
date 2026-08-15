@@ -81,16 +81,6 @@ export interface AppUser {
   created_at: string
 }
 
-export interface CrawlLog {
-  id: number
-  source: string
-  status: string
-  fetched_count: number
-  new_count: number
-  message: string
-  started_at: string
-  finished_at: string | null
-}
 
 export const ARTICLE_STATUSES = [
   { value: 'draft', label: '草稿' },
