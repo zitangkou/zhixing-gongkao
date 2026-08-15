@@ -1,7 +1,7 @@
 <template>
   <view class="article-card" :class="{ featured: article.isFeatured }" @tap="onTap">
     <view class="card-meta">
-      <text v-if="article.isFeatured" class="chip chip-pin">置顶</text>
+      <text v-if="article.isFeatured" class="chip chip-pin"> 置顶 </text>
       <text
         v-if="article.importance && article.importance >= 4"
         class="chip"
@@ -9,12 +9,22 @@
       >
         {{ article.importanceLabel || '重点' }}
       </text>
-      <text class="chip chip-source">{{ article.source }}</text>
-      <text class="meta-date">{{ article.publishDate }}</text>
+      <text class="chip chip-source">
+        {{ article.source }}
+      </text>
+      <text class="meta-date">
+        {{ article.publishDate }}
+      </text>
     </view>
-    <text v-if="article.categoryName" class="category-line">{{ article.categoryName }}</text>
-    <text class="title">{{ article.title }}</text>
-    <text class="summary">{{ article.summary }}</text>
+    <text v-if="article.categoryName" class="category-line">
+      {{ article.categoryName }}
+    </text>
+    <text class="title">
+      {{ article.title }}
+    </text>
+    <text class="summary">
+      {{ article.summary }}
+    </text>
     <view class="card-footer">
       <view class="tags">
         <text
@@ -29,7 +39,7 @@
           {{ article.sections.length }} 章
         </text>
       </view>
-      <text class="action">阅读 ›</text>
+      <text class="action"> 阅读 › </text>
     </view>
   </view>
 </template>
@@ -64,9 +74,7 @@ function onTap() {
   overflow: hidden;
 
   &.featured {
-    background:
-      radial-gradient(120% 80% at 100% 0%, $primary-faint 0%, transparent 50%),
-      $card-bg;
+    background: radial-gradient(120% 80% at 100% 0%, $primary-faint 0%, transparent 50%), $card-bg;
 
     &::before {
       content: '';

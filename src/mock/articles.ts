@@ -8,9 +8,7 @@ const createMindMap = (title: string, children: MindMapNode[]): MindMapNode => (
   children,
 })
 
-function buildArticle(
-  base: Omit<Article, 'content'> & { sections: ArticleSection[] },
-): Article {
+function buildArticle(base: Omit<Article, 'content'> & { sections: ArticleSection[] }): Article {
   return {
     ...base,
     content: sectionsToContent(base.sections),

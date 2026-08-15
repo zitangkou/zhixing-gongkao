@@ -1,5 +1,5 @@
 <template>
-  <view class="page-review-quiz">
+  <view class="page-review-quiz" :class="themeClass">
     <view v-if="loading" class="state-box">
       <text class="state-title">抽题中…</text>
     </view>
@@ -62,9 +62,11 @@ import Taro from '@tarojs/taro'
 import { api } from '@/api'
 import { showToast } from '@/utils/platform'
 import type { KnowledgeReviewCard, KnowledgeReviewResult } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '知识抽查' })
 
+const { themeClass } = useThemeClass()
 const loading = ref(true)
 const loadError = ref('')
 const cards = ref<KnowledgeReviewCard[]>([])

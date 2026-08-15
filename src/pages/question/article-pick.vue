@@ -1,5 +1,5 @@
 <template>
-  <view class="page-pick">
+  <view class="page-pick" :class="themeClass">
     <text class="tip">选一篇文章，按该文题目练习</text>
     <view v-if="loading" class="state-box">
       <text class="state-title">加载中…</text>
@@ -36,9 +36,11 @@ import { computed, onMounted, ref } from 'vue'
 import Taro from '@tarojs/taro'
 import { useArticleStore } from '@/store/article'
 import { bootstrapApp } from '@/utils/bootstrap'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '按文章练' })
 
+const { themeClass } = useThemeClass()
 const articleStore = useArticleStore()
 const loading = ref(true)
 const loadError = ref('')

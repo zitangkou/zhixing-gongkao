@@ -1,45 +1,21 @@
 <template>
-  <view
-    class="due-review-alert"
-    @tap="goHub"
-  >
-    <view
-      v-if="loading && !hub"
-      class="dra-loading"
-    >
-      复习加载中…
-    </view>
-    <view
-      v-else-if="hub && total > 0"
-      class="dra-body warn"
-    >
+  <view class="due-review-alert" @tap="goHub">
+    <view v-if="loading && !hub" class="dra-loading"> 复习加载中… </view>
+    <view v-else-if="hub && total > 0" class="dra-body warn">
       <view class="dra-main">
-        <text class="dra-title">
-          今日有 {{ total }} 项复习/内化待完成
-        </text>
+        <text class="dra-title"> 今日有 {{ total }} 项复习/内化待完成 </text>
         <text class="dra-desc">
           {{ summary }}
         </text>
       </view>
-      <text class="dra-cta">
-        去处理 ›
-      </text>
+      <text class="dra-cta"> 去处理 › </text>
     </view>
-    <view
-      v-else
-      class="dra-body ok"
-    >
+    <view v-else class="dra-body ok">
       <view class="dra-main">
-        <text class="dra-title">
-          今日复习已清
-        </text>
-        <text class="dra-desc">
-          保持节奏，按计划推进
-        </text>
+        <text class="dra-title"> 今日复习已清 </text>
+        <text class="dra-desc"> 保持节奏，按计划推进 </text>
       </view>
-      <text class="dra-cta">
-        查看 ›
-      </text>
+      <text class="dra-cta"> 查看 › </text>
     </view>
   </view>
 </template>
@@ -109,7 +85,9 @@ onMounted(load)
     background: rgba($accent-amber, 0.12);
     border-radius: 10px;
     padding: 12px;
-    .dra-title { color: $accent-amber; }
+    .dra-title {
+      color: $accent-amber;
+    }
   }
   .dra-main {
     flex: 1;

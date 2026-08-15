@@ -1,5 +1,5 @@
 <template>
-  <view class="page-exam-list">
+  <view class="page-exam-list" :class="themeClass">
     <view class="filter-bar">
       <text
         v-for="t in tabs"
@@ -48,9 +48,11 @@ import { onMounted, ref } from 'vue'
 import Taro, { useDidShow } from '@tarojs/taro'
 import { api } from '@/api'
 import type { ExamPaper } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '真题套卷' })
 
+const { themeClass } = useThemeClass()
 const loading = ref(false)
 const loadError = ref('')
 const papers = ref<ExamPaper[]>([])

@@ -61,9 +61,7 @@ function setNativeChrome(dark: boolean, brand: BrandThemeId) {
       backgroundColorBottom: dark ? '#121212' : '#f3f4f6',
     }),
   )
-  callNative(() =>
-    Taro.setBackgroundTextStyle({ textStyle: dark ? 'light' : 'dark' }),
-  )
+  callNative(() => Taro.setBackgroundTextStyle({ textStyle: dark ? 'light' : 'dark' }))
 }
 
 /** 应用「品牌主题 × 深色/浅色」到 DOM 与原生壳 */

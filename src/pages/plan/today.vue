@@ -1,5 +1,5 @@
 <template>
-  <view class="page-plan">
+  <view class="page-plan" :class="themeClass">
     <view v-if="planStore.loading && !planStore.today" class="state-box">
       <text class="state-title">加载中…</text>
       <text class="state-desc">正在同步今日清单</text>
@@ -97,10 +97,12 @@ import Taro, { useDidShow } from '@tarojs/taro'
 import { Button as NutButton, Input as NutInput } from '@nutui/nutui-taro'
 import { usePlanStore } from '@/store/plan'
 import { promptText, showConfirm, showToast } from '@/utils/platform'
-import type { DailyReview, PlanTask } from '@/types'
+import type { PlanTask } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '今日清单' })
 
+const { themeClass } = useThemeClass()
 const planStore = usePlanStore()
 const newContent = ref('')
 

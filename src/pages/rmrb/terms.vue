@@ -1,5 +1,5 @@
 <template>
-  <view class="page-terms">
+  <view class="page-terms" :class="themeClass">
     <view class="filter-bar">
       <text
         v-for="t in statusTabs"
@@ -87,9 +87,11 @@ import { api } from '@/api'
 import { promptText, showConfirm, showToast } from '@/utils/platform'
 import { RMRB_TERM_CATEGORIES_FALLBACK, splitRmrbTerms } from '@/utils/rmrb'
 import type { ShenlunNormTerm } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '规范词库' })
 
+const { themeClass } = useThemeClass()
 const loading = ref(false)
 const terms = ref<ShenlunNormTerm[]>([])
 const activeStatus = ref<'learning' | 'mastered'>('learning')

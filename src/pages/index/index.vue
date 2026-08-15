@@ -1,5 +1,5 @@
 <template>
-  <view class="page-index page-with-tabbar">
+  <view class="page-index page-with-tabbar" :class="themeClass">
     <view class="banner">
       <view class="banner-top">
         <view class="banner-brand">
@@ -188,11 +188,12 @@ import { useArticleStore } from '@/store/article'
 import { useQuestionStore } from '@/store/question'
 import { showToast, tryNotify } from '@/utils/platform'
 import { bootstrapApp } from '@/utils/bootstrap'
-import { useBrandColor } from '@/utils/brandColor'
+import { useBrandColor, useThemeClass } from '@/utils/brandColor'
 import type { ReviewHub } from '@/types'
 
 definePageConfig({ navigationBarTitleText: '知行' })
 
+const { themeClass } = useThemeClass()
 const userStore = useUserStore()
 const articleStore = useArticleStore()
 const questionStore = useQuestionStore()

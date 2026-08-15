@@ -6,6 +6,19 @@ import type { ApiRes } from '@/types'
 type UploadResult<T> = ApiRes<T>
 
 /**
+ * 生成空 data 的错误响应。
+ * 类型断言收敛在同步函数里，避免 weapp 构建时 regenerator 对 async 内 TSAsExpression 报错。
+ */
+function errorResult<T>(code: number, message: string): UploadResult<T> {
+  return { code, data: null as unknown as T, message }
+}
+
+/** 从任意错误对象提取 errMsg（断言集中于此，同步函数不受 regenerator 影响） */
+function errMessage(e: unknown): string {
+  return (e as { errMsg?: string })?.errMsg || '上传失败'
+}
+
+/**
  * 跨端文件上传：H5 用 FormData+fetch（避免 blob 路径导致 uploadFile 失败），
  * 小程序用 Taro.uploadFile。
  */
@@ -35,16 +48,12 @@ export async function uploadFile<T>(
       const res = await fetch(url, { method: 'POST', headers, body: form })
       if (res.status === 401) {
         clearToken()
-        return { code: 401, data: null as unknown as T, message: '登录已过期，请重新登录' }
+        return errorResult<T>(401, '登录已过期，请重新登录')
       }
-      const body = (await res.json()) as ApiRes<T>
+      const body: ApiRes<T> = await res.json()
       return body
     } catch (e) {
-      return {
-        code: -1,
-        data: null as unknown as T,
-        message: e instanceof Error ? e.message : '上传失败',
-      }
+      return errorResult<T>(-1, e instanceof Error ? e.message : '上传失败')
     }
   }
 
@@ -56,23 +65,19 @@ export async function uploadFile<T>(
       header: headers,
       success(res) {
         try {
-          const body = JSON.parse(res.data) as ApiRes<T>
+          const body: ApiRes<T> = JSON.parse(res.data)
           if (res.statusCode === 401) {
             clearToken()
-            resolve({ code: 401, data: null as unknown as T, message: '登录已过期，请重新登录' })
+            resolve(errorResult<T>(401, '登录已过期，请重新登录'))
             return
           }
           resolve(body)
         } catch {
-          resolve({ code: -1, data: null as unknown as T, message: '上传响应解析失败' })
+          resolve(errorResult<T>(-1, '上传响应解析失败'))
         }
       },
       fail(err) {
-        resolve({
-          code: -1,
-          data: null as unknown as T,
-          message: (err as { errMsg?: string })?.errMsg || '上传失败',
-        })
+        resolve(errorResult<T>(-1, errMessage(err)))
       },
     })
   })

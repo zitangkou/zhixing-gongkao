@@ -1,12 +1,14 @@
 <template>
   <view v-if="visible" class="corpus-capture" :style="barStyle">
     <view class="preview">
-      <text class="preview-label">已选</text>
-      <text class="preview-text">{{ preview }}</text>
+      <text class="preview-label"> 已选 </text>
+      <text class="preview-text">
+        {{ preview }}
+      </text>
     </view>
     <view class="actions">
-      <view class="btn ghost" @tap="clear">取消</view>
-      <view class="btn primary" @tap="capture">记入语料</view>
+      <view class="btn ghost" @tap="clear"> 取消 </view>
+      <view class="btn primary" @tap="capture"> 记入语料 </view>
     </view>
   </view>
 </template>

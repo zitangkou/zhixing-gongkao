@@ -1,5 +1,5 @@
 <template>
-  <view class="page-day">
+  <view class="page-day" :class="themeClass">
     <view v-if="loading && !plan" class="state-box">
       <text class="state-title">加载中…</text>
       <text class="state-desc">正在获取当日清单</text>
@@ -50,9 +50,11 @@ import { computed, ref } from 'vue'
 import { useDidShow, useRouter } from '@tarojs/taro'
 import { api } from '@/api'
 import type { DayPlan } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '日清单详情' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const date = ref(router.params?.date || new Date().toISOString().slice(0, 10))
 const dayPlan = ref<DayPlan | null>(null)

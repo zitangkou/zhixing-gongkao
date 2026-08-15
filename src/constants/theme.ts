@@ -46,7 +46,7 @@ export const BRAND_THEMES: Record<BrandThemeId, BrandThemeDef> = {
   amber: {
     id: 'amber',
     name: '琥珀橙',
-    light: { primary: '#c47d00', mid: '#9e6400', dark: '#7a4d00' },
+    light: { primary: '#a26500', mid: '#825000', dark: '#653c00' },
     dark: { primary: '#e0a84a', mid: '#c48f38', dark: '#9c6f2a' },
   },
 }

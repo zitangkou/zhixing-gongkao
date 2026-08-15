@@ -1,5 +1,5 @@
 <template>
-  <view class="page-rmrb-list">
+  <view class="page-rmrb-list" :class="themeClass">
     <view class="hint">只收录评论/人民时评。按主题归类，读完后可「三刀解剖」写入开采本。</view>
 
     <scroll-view v-if="tagOptions.length" class="tag-scroll" scroll-x :show-scrollbar="false">
@@ -47,9 +47,11 @@ import Taro, { useDidShow } from '@tarojs/taro'
 import { Button as NutButton } from '@nutui/nutui-taro'
 import { api } from '@/api'
 import type { RmrbArticle } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '时评阅读' })
 
+const { themeClass } = useThemeClass()
 const loading = ref(false)
 const allList = ref<RmrbArticle[]>([])
 const activeTag = ref('')

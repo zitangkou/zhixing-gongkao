@@ -1,5 +1,5 @@
 <template>
-  <view class="page-taking" v-if="started">
+  <view class="page-taking" v-if="started" :class="themeClass">
     <view class="top-bar">
       <view class="timer" :class="{ urgent: remainSec < 300 }">
         <text class="timer-icon">⏱</text>
@@ -62,7 +62,7 @@
       </view>
     </view>
   </view>
-  <view v-else class="loading">加载中...</view>
+  <view v-else class="loading" :class="themeClass">加载中...</view>
 </template>
 
 <script setup lang="ts">
@@ -72,9 +72,11 @@ import { Button as NutButton } from '@nutui/nutui-taro'
 import { api } from '@/api'
 import { showConfirm, showToast } from '@/utils/platform'
 import type { ExamTakingQuestion } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '答题中' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const paperId = ref(router.params?.paperId || '')
 const started = ref(false)
@@ -88,7 +90,6 @@ const submitting = ref(false)
 let timer: ReturnType<typeof setInterval> | null = null
 
 const remainSec = ref(0)
-const remainStarted = ref(0) // 剩余倒计时起点
 
 const currentQ = computed(() => questions.value[currentIndex.value])
 

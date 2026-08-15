@@ -1,5 +1,5 @@
 <template>
-  <view class="page-rank">
+  <view class="page-rank" :class="themeClass">
     <view class="tabs">
       <view
         v-for="t in rankTypes"
@@ -20,9 +20,11 @@ import { ref, onMounted } from 'vue'
 import RankList from '@/components/RankList.vue'
 import { useQuestionStore } from '@/store/question'
 import { RANK_TYPE_LABELS, type RankType } from '@/constants'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '刷题排行榜' })
 
+const { themeClass } = useThemeClass()
 const questionStore = useQuestionStore()
 const activeType = ref<RankType>('weekly')
 

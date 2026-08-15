@@ -1,5 +1,5 @@
 <template>
-  <view class="page-events">
+  <view class="page-events" :class="themeClass">
     <view class="hero">
       <view class="hero-text">
         <text class="hero-title">时事印象</text>
@@ -116,9 +116,11 @@ import Taro, { useDidShow } from '@tarojs/taro'
 import { api } from '@/api'
 import { formatKnowledgeLabel } from '@/utils/knowledge'
 import type { EventHub, EventImpression } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '时事印象' })
 
+const { themeClass } = useThemeClass()
 const loading = ref(false)
 const mode = ref<'timeline' | 'framework'>('timeline')
 const hub = ref<EventHub | null>(null)

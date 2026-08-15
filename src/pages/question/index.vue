@@ -1,5 +1,5 @@
 <template>
-  <view class="page-quiz page-with-tabbar">
+  <view class="page-quiz page-with-tabbar" :class="themeClass">
     <view class="mode-panel">
       <view class="task-card">
         <text class="task-title">今日练习</text>
@@ -108,10 +108,11 @@ import { QUIZ_MODES } from '@/constants/article'
 import { useQuestionStore } from '@/store/question'
 import type { QuizMode } from '@/types'
 import { bootstrapApp } from '@/utils/bootstrap'
-import { useBrandColor } from '@/utils/brandColor'
+import { useBrandColor, useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '练习' })
 
+const { themeClass } = useThemeClass()
 const questionStore = useQuestionStore()
 const { brandColor } = useBrandColor()
 const quizModes = QUIZ_MODES

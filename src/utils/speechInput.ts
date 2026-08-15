@@ -107,7 +107,10 @@ export type SpeechSession = {
 }
 
 /** Web Speech：点一次开始，再点停止 */
-export function startWebSpeech(handlers: SpeechHandlers, opts?: { lang?: string }): SpeechSession | null {
+export function startWebSpeech(
+  handlers: SpeechHandlers,
+  opts?: { lang?: string },
+): SpeechSession | null {
   const Ctor = getSpeechRecognitionCtor()
   if (!Ctor) {
     handlers.onError?.('当前浏览器不支持免费语音识别，可改用 Chrome/Edge，或配置云 ASR')

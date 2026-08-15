@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro'
-import { api, isMock } from '@/api'
+import { isMock } from '@/api'
 import { useArticleStore } from '@/store/article'
 import { useQuestionStore } from '@/store/question'
 import { useUserStore } from '@/store/user'
@@ -35,10 +35,7 @@ export async function bootstrapApp(force = false) {
   }
 
   bootstrapped = true
-  await Promise.all([
-    articleStore.syncStudyData(),
-    questionStore.loadWrongQuestions(),
-  ])
+  await Promise.all([articleStore.syncStudyData(), questionStore.loadWrongQuestions()])
 }
 
 export function resetBootstrap() {

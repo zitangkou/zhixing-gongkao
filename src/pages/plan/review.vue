@@ -1,5 +1,5 @@
 <template>
-  <view class="page-review">
+  <view class="page-review" :class="themeClass">
     <view class="review-section">
       <text class="section-label">完成度（{{ form.completion }}%）</text>
       <slider :value="form.completion" :min="0" :max="100" :step="5" :activeColor="brandColor" @change="onCompletion" />
@@ -49,12 +49,13 @@ import { reactive, ref } from 'vue'
 import Taro, { useDidShow } from '@tarojs/taro'
 import { Button as NutButton, Textarea as NutTextarea } from '@nutui/nutui-taro'
 import { usePlanStore } from '@/store/plan'
-import { useBrandColor } from '@/utils/brandColor'
+import { useBrandColor, useThemeClass } from '@/utils/brandColor'
 import { flushFormBeforeSave } from '@/utils/formFlush'
 import { showToast } from '@/utils/platform'
 
 definePageConfig({ navigationBarTitleText: '今日复盘' })
 
+const { themeClass } = useThemeClass()
 const planStore = usePlanStore()
 const { brandColor } = useBrandColor()
 const saving = ref(false)

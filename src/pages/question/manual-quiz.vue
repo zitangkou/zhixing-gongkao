@@ -1,5 +1,5 @@
 <template>
-  <view class="page-manual-quiz">
+  <view class="page-manual-quiz" :class="themeClass">
     <view v-if="loading" class="state-box">
       <text class="state-title">准备题目中…</text>
     </view>
@@ -77,9 +77,11 @@ import { api } from '@/api'
 import { resolveMediaUrl } from '@/utils/media'
 import { showToast } from '@/utils/platform'
 import type { ManualWrong } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '行测错题复习' })
 
+const { themeClass } = useThemeClass()
 const SESSION_CAP = 15
 const loading = ref(true)
 const loadError = ref('')

@@ -1,14 +1,16 @@
 <template>
   <view class="voice-btn-wrap">
-    <view
-      class="voice-btn"
-      :class="{ on: listening, busy }"
-      @tap="onTap"
-    >
-      <text class="icon">{{ listening ? '⏹' : '🎙' }}</text>
-      <text class="label">{{ labelText }}</text>
+    <view class="voice-btn" :class="{ on: listening, busy }" @tap="onTap">
+      <text class="icon">
+        {{ listening ? '⏹' : '🎙' }}
+      </text>
+      <text class="label">
+        {{ labelText }}
+      </text>
     </view>
-    <text v-if="preview" class="preview">{{ preview }}</text>
+    <text v-if="preview" class="preview">
+      {{ preview }}
+    </text>
   </view>
 </template>
 
@@ -141,14 +143,25 @@ onBeforeUnmount(() => {
   border-radius: 6px;
   background: $page-bg;
   border: 1px solid $border-color;
-  .icon { font-size: 12px; line-height: 1; }
-  .label { font-size: 11px; color: $text-secondary; font-weight: 600; }
+  .icon {
+    font-size: 12px;
+    line-height: 1;
+  }
+  .label {
+    font-size: 11px;
+    color: $text-secondary;
+    font-weight: 600;
+  }
   &.on {
     background: $primary-soft;
     border-color: $primary-soft;
-    .label { color: $primary-color; }
+    .label {
+      color: $primary-color;
+    }
   }
-  &.busy:not(.on) .label { color: $text-muted; }
+  &.busy:not(.on) .label {
+    color: $text-muted;
+  }
 }
 .preview {
   max-width: 160px;

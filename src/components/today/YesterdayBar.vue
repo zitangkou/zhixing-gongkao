@@ -1,41 +1,24 @@
 <template>
-  <view
-    class="yesterday-bar"
-    @tap="goGrowth"
-  >
-    <view
-      v-if="loading && !overview"
-      class="yb-loading"
-    >
-      足迹加载中…
-    </view>
-    <view
-      v-else
-      class="yb-stats"
-    >
+  <view class="yesterday-bar" @tap="goGrowth">
+    <view v-if="loading && !overview" class="yb-loading"> 足迹加载中… </view>
+    <view v-else class="yb-stats">
       <view class="yb-stat">
         <text class="yb-num">
           {{ yesterdayMinutes }}
         </text>
-        <text class="yb-label">
-          昨日学习(分)
-        </text>
+        <text class="yb-label"> 昨日学习(分) </text>
       </view>
       <view class="yb-stat">
         <text class="yb-num">
           {{ overview?.signStreak || 0 }}
         </text>
-        <text class="yb-label">
-          连续签到(天)
-        </text>
+        <text class="yb-label"> 连续签到(天) </text>
       </view>
       <view class="yb-stat">
         <text class="yb-num">
           {{ overview?.weekMinutes || 0 }}
         </text>
-        <text class="yb-label">
-          本周累计(分)
-        </text>
+        <text class="yb-label"> 本周累计(分) </text>
       </view>
     </view>
   </view>

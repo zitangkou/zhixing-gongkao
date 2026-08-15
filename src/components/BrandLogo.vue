@@ -2,8 +2,12 @@
   <view class="brand-logo" :class="[`size-${size}`, { light }]">
     <image class="brand-logo__img" :src="logoSrc" mode="aspectFit" />
     <view v-if="showText" class="brand-logo__text">
-      <text class="brand-logo__name">{{ APP_NAME }}</text>
-      <text v-if="tagline" class="brand-logo__tagline">{{ tagline }}</text>
+      <text class="brand-logo__name">
+        {{ APP_NAME }}
+      </text>
+      <text v-if="tagline" class="brand-logo__tagline">
+        {{ tagline }}
+      </text>
     </view>
   </view>
 </template>
@@ -71,20 +75,37 @@ withDefaults(
 
   &.size-sm {
     gap: 8px;
-    .brand-logo__img { width: 36px; height: 36px; }
-    .brand-logo__name { font-size: 16px; }
+    .brand-logo__img {
+      width: 36px;
+      height: 36px;
+    }
+    .brand-logo__name {
+      font-size: 16px;
+    }
   }
 
   &.size-md {
-    .brand-logo__img { width: 52px; height: 52px; }
-    .brand-logo__name { font-size: 22px; }
+    .brand-logo__img {
+      width: 52px;
+      height: 52px;
+    }
+    .brand-logo__name {
+      font-size: 22px;
+    }
   }
 
   &.size-lg {
     gap: 14px;
-    .brand-logo__img { width: 64px; height: 64px; }
-    .brand-logo__name { font-size: 28px; }
-    .brand-logo__tagline { font-size: 13px; }
+    .brand-logo__img {
+      width: 64px;
+      height: 64px;
+    }
+    .brand-logo__name {
+      font-size: 28px;
+    }
+    .brand-logo__tagline {
+      font-size: 13px;
+    }
   }
 }
 </style>

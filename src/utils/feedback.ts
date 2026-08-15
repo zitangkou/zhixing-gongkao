@@ -66,7 +66,8 @@ function themeConfirmColor(): string {
 
 function hasRenderer(): boolean {
   // H5 由 body 宿主承接；小程序需页面内有 <AppFeedback />
-  if (process.env.TARO_ENV === 'h5') return feedbackState.hostReady || feedbackState.rendererCount > 0
+  if (process.env.TARO_ENV === 'h5')
+    return feedbackState.hostReady || feedbackState.rendererCount > 0
   return feedbackState.rendererCount > 0
 }
 
@@ -82,11 +83,7 @@ export function ensureFeedbackHost() {
   hostEnsure?.()
 }
 
-export function pushToast(
-  title: string,
-  icon: ToastIcon = 'none',
-  duration = 2000,
-) {
+export function pushToast(title: string, icon: ToastIcon = 'none', duration = 2000) {
   ensureFeedbackHost()
   if (!hasRenderer()) {
     Taro.showToast({
@@ -133,7 +130,7 @@ function openDialog(partial: Partial<DialogState> & { mode: 'confirm' | 'prompt'
     return new Promise<boolean | string | null>((resolve) => {
       Taro.showModal({
         title: partial.title || '',
-        content: partial.mode === 'prompt' ? (partial.defaultValue || '') : (partial.content || ''),
+        content: partial.mode === 'prompt' ? partial.defaultValue || '' : partial.content || '',
         editable: partial.mode === 'prompt',
         placeholderText: partial.placeholder || '',
         confirmText: partial.confirmText || '确定',
@@ -186,7 +183,12 @@ export function askConfirm(
 
 export function askPrompt(
   title: string,
-  options?: { placeholder?: string; defaultValue?: string; confirmText?: string; cancelText?: string },
+  options?: {
+    placeholder?: string
+    defaultValue?: string
+    confirmText?: string
+    cancelText?: string
+  },
 ): Promise<string | null> {
   return openDialog({
     mode: 'prompt',

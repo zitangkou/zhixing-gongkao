@@ -15,15 +15,23 @@
         <view class="slide-accent" />
         <view class="slide-body">
           <view class="slide-meta">
-            <text class="chip chip-pin">置顶</text>
-            <text class="chip chip-source">{{ article.source }}</text>
-            <text class="meta-date">{{ article.publishDate }}</text>
+            <text class="chip chip-pin"> 置顶 </text>
+            <text class="chip chip-source">
+              {{ article.source }}
+            </text>
+            <text class="meta-date">
+              {{ article.publishDate }}
+            </text>
           </view>
-          <text class="slide-title">{{ article.title }}</text>
-          <text class="slide-summary">{{ article.summary }}</text>
+          <text class="slide-title">
+            {{ article.title }}
+          </text>
+          <text class="slide-summary">
+            {{ article.summary }}
+          </text>
           <view class="slide-footer">
-            <text class="chip chip-hint">重点必读</text>
-            <text class="slide-action">立即阅读 ›</text>
+            <text class="chip chip-hint"> 重点必读 </text>
+            <text class="slide-action"> 立即阅读 › </text>
           </view>
         </view>
       </view>
@@ -39,9 +47,7 @@ import { useBrandColor, withAlpha } from '@/utils/brandColor'
 defineProps<{ articles: Article[] }>()
 const emit = defineEmits<{ tap: [id: string] }>()
 const { brandColor, darkMode } = useBrandColor()
-const indicatorMuted = computed(() =>
-  withAlpha(brandColor.value, darkMode.value ? 0.28 : 0.18),
-)
+const indicatorMuted = computed(() => withAlpha(brandColor.value, darkMode.value ? 0.28 : 0.18))
 
 function onTap(id: string) {
   emit('tap', id)
@@ -81,9 +87,7 @@ function onTap(id: string) {
     display: flex;
     flex-direction: column;
     /* 右上角极淡暖色，与灰底形成层次，但不抢内容 */
-    background:
-      radial-gradient(120% 80% at 100% 0%, $primary-faint 0%, transparent 55%),
-      $card-bg;
+    background: radial-gradient(120% 80% at 100% 0%, $primary-faint 0%, transparent 55%), $card-bg;
   }
 
   .slide-meta {

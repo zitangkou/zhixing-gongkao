@@ -53,9 +53,7 @@ export const useArticleStore = defineStore('article', {
     recommendedArticles: (state) => state.recommendedList,
     readProgress: (state) => {
       if (state.dailyArticles.length === 0) return 0
-      const read = state.dailyArticles.filter((a) =>
-        state.articleHistory.includes(a.id),
-      ).length
+      const read = state.dailyArticles.filter((a) => state.articleHistory.includes(a.id)).length
       return Math.round((read / state.dailyArticles.length) * 100)
     },
   },

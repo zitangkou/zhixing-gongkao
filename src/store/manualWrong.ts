@@ -64,12 +64,15 @@ export const useManualWrongStore = defineStore('manualWrong', {
       }
       return res
     },
-    async update(id: string, data: {
-      mastered?: boolean
-      reviewCount?: number
-      note?: string
-      images?: string[]
-    }) {
+    async update(
+      id: string,
+      data: {
+        mastered?: boolean
+        reviewCount?: number
+        note?: string
+        images?: string[]
+      },
+    ) {
       const res = await api.updateManualWrong(id, data)
       if (res.code === 0 && res.data) {
         const idx = this.list.findIndex((w) => w.id === id)

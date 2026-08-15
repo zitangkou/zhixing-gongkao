@@ -1,5 +1,5 @@
 <template>
-  <view class="page-mine-edit">
+  <view class="page-mine-edit" :class="themeClass">
     <text class="hw-tip">平板手写：先点输入框，再切到手写输入法；多行框更适合长句手写。</text>
     <view class="meta-row">
       <view class="meta-date">
@@ -325,9 +325,11 @@ import type {
   ShenlunTemplateItem,
   ShenlunVerbItem,
 } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '三刀解剖' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const mineId = ref('')
 const articleId = ref('')

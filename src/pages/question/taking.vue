@@ -1,5 +1,5 @@
 <template>
-  <view class="page-taking">
+  <view class="page-taking" :class="themeClass">
     <view v-if="loading" class="empty-tip">加载题目中...</view>
 
     <view v-else-if="finished && !reviewFromResults" class="result-panel">
@@ -95,9 +95,11 @@ import QuestionItem from '@/components/QuestionItem.vue'
 import { useQuestionStore } from '@/store/question'
 import type { QuizAnswerRecord, Question, QuizMode } from '@/types'
 import { showConfirm, showToast } from '@/utils/platform'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '刷题' })
 
+const { themeClass } = useThemeClass()
 const CORRECT_AUTO_NEXT_MS = 2000
 
 const router = useRouter()

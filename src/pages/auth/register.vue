@@ -1,5 +1,5 @@
 <template>
-  <view class="page-auth">
+  <view class="page-auth" :class="themeClass">
     <view class="auth-header">
       <BrandLogo size="md" tagline="知行合一 · 开启学习" />
       <text class="subtitle">用户名 3-32 位，支持字母、数字、下划线</text>
@@ -28,9 +28,11 @@ import { api } from '@/api'
 import { useUserStore } from '@/store/user'
 import { bootstrapApp } from '@/utils/bootstrap'
 import { showToast } from '@/utils/platform'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '注册' })
 
+const { themeClass } = useThemeClass()
 const userStore = useUserStore()
 const username = ref('')
 const password = ref('')

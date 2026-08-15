@@ -1,5 +1,5 @@
 <template>
-  <view class="page-edit">
+  <view class="page-edit" :class="themeClass">
     <view class="mode-tabs">
       <text class="mode" :class="{ on: mode === 'photo' }" @tap="mode = 'photo'">图片上传</text>
       <text class="mode" :class="{ on: mode === 'full' }" @tap="mode = 'full'">完整录入</text>
@@ -118,9 +118,11 @@ import { flushFormBeforeSave } from '@/utils/formFlush'
 import type { KnowledgePickValue } from '@/utils/knowledge'
 import { resolveMediaUrl } from '@/utils/media'
 import { showToast } from '@/utils/platform'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '录入错题' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const editId = ref('')
 const isEdit = ref(false)

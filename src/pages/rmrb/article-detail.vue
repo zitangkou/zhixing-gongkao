@@ -1,5 +1,5 @@
 <template>
-  <view class="page-rmrb-detail" v-if="article">
+  <view class="page-rmrb-detail" v-if="article" :class="themeClass">
     <text class="source">{{ article.source }} · {{ article.publishDate }}</text>
     <text class="title selectable-text" user-select selectable>{{ article.title }}</text>
     <view v-if="article.tags?.length" class="tags">
@@ -20,7 +20,7 @@
       :bottom-offset="120"
     />
   </view>
-  <view v-else class="empty">加载中...</view>
+  <view v-else class="empty" :class="themeClass">加载中...</view>
 </template>
 
 <script setup lang="ts">
@@ -32,9 +32,11 @@ import { api } from '@/api'
 import { buildCorpusEditUrl } from '@/utils/corpus'
 import { copyText, showToast } from '@/utils/platform'
 import type { RmrbArticle } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '时评详情' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const article = ref<RmrbArticle | null>(null)
 

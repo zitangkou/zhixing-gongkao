@@ -1,5 +1,5 @@
 <template>
-  <view class="page-corpus">
+  <view class="page-corpus" :class="themeClass">
     <view class="hero">
       <view class="hero-text">
         <text class="hero-title">语料本</text>
@@ -71,9 +71,11 @@ import { api } from '@/api'
 import { corpusStatusLabel } from '@/utils/corpus'
 import { formatKnowledgeLabel } from '@/utils/knowledge'
 import type { CorpusItem, CorpusStats } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '语料本' })
 
+const { themeClass } = useThemeClass()
 const tabs = [
   { value: 'inbox', label: '待内化' },
   { value: 'clarified', label: '已澄清' },

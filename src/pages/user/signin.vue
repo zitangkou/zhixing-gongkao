@@ -1,5 +1,5 @@
 <template>
-  <view class="page-signin">
+  <view class="page-signin" :class="themeClass">
     <SignCalendar :sign-status="userStore.signStatus" :streak="userStore.signStreak" />
     <nut-button
       type="primary"
@@ -22,9 +22,11 @@ import { Button as NutButton } from '@nutui/nutui-taro'
 import SignCalendar from '@/components/SignCalendar.vue'
 import { useUserStore } from '@/store/user'
 import { showToast } from '@/utils/platform'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '每日签到' })
 
+const { themeClass } = useThemeClass()
 const userStore = useUserStore()
 
 async function handleSignIn() {

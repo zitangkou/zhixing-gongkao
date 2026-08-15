@@ -1,5 +1,5 @@
 <template>
-  <view class="page-drill">
+  <view class="page-drill" :class="themeClass">
     <view class="tip">阶梯训练：关键词串联 → 句式仿写 → 口述概括。每天任选一项，写满就算完成。</view>
 
     <view class="tabs">
@@ -46,9 +46,11 @@ import VoiceInputBtn from '@/components/VoiceInputBtn.vue'
 import { api } from '@/api'
 import { showToast } from '@/utils/platform'
 import type { ShenlunDrillLog, ShenlunMineLog, ShenlunNormTerm } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '阶梯训练' })
 
+const { themeClass } = useThemeClass()
 const mode = ref<'sentence' | 'imitate' | 'oral'>('sentence')
 const content = ref('')
 const promptText = ref('')

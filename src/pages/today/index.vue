@@ -1,5 +1,5 @@
 <template>
-  <view class="page-today page-with-tabbar">
+  <view class="page-today page-with-tabbar" :class="themeClass">
     <view class="today-header">
       <view class="today-greet">
         <text class="today-hi">
@@ -86,10 +86,11 @@ import DueReviewAlert from '@/components/today/DueReviewAlert.vue'
 import YesterdayBar from '@/components/today/YesterdayBar.vue'
 import { APP_SLOGAN } from '@/constants/brand'
 import { useUserStore } from '@/store/user'
-import { useBrandColor } from '@/utils/brandColor'
+import { useBrandColor, useThemeClass } from '@/utils/brandColor'
 
 const userStore = useUserStore()
 const { brandColor } = useBrandColor()
+const { themeClass } = useThemeClass()
 const countdownCard = ref<{ load: () => void } | null>(null)
 
 const WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六']

@@ -52,9 +52,7 @@ const safeIndex = computed(() => {
   return Math.min(Math.max(0, v), n - 1)
 })
 
-const hint = computed(() =>
-  labels.value.length > 1 ? '点击选择 · 电脑端可滚轮切换' : '',
-)
+const hint = computed(() => (labels.value.length > 1 ? '点击选择 · 电脑端可滚轮切换' : ''))
 
 let lastAt = 0
 const THROTTLE_MS = 90

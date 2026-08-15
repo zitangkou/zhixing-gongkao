@@ -1,5 +1,5 @@
 <template>
-  <view class="zl-page" v-if="result">
+  <view class="zl-page" v-if="result" :class="themeClass">
     <view class="zl-score-card">
       <text class="zl-score">{{ result.correctCount }} / {{ result.totalCount }}</text>
       <text class="zl-label">正确题数</text>
@@ -33,9 +33,11 @@ import { computed, onMounted, ref } from 'vue'
 import Taro, { useRouter } from '@tarojs/taro'
 import { Button as NutButton } from '@nutui/nutui-taro'
 import type { ZiliaoDrillSubmitResult } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '练习结果' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const result = ref<ZiliaoDrillSubmitResult | null>(null)
 

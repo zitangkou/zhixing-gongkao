@@ -1,5 +1,5 @@
 <template>
-  <view class="page-knowledge">
+  <view class="page-knowledge" :class="themeClass">
     <view class="kb-header">
       <view class="kb-header-row">
         <text class="kb-tip">共 {{ trees.length }} 棵知识树 · 长按节点可加备注/标重点</text>
@@ -92,9 +92,11 @@ import KnowledgeTree from '@/components/KnowledgeTree.vue'
 import { useKnowledgeStore } from '@/store/knowledge'
 import { promptText, showToast } from '@/utils/platform'
 import type { KnowledgeNode, KnowledgeReviewResult } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '知识框架' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const kbStore = useKnowledgeStore()
 const currentKey = ref('')

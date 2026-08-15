@@ -1,7 +1,7 @@
 <template>
   <nut-popup v-model:visible="visible" position="bottom" round :closeable="true">
     <view class="theme-picker">
-      <text class="picker-title">主题色</text>
+      <text class="picker-title"> 主题色 </text>
       <view class="swatch-row">
         <view
           v-for="t in themes"
@@ -13,7 +13,9 @@
           <view class="swatch-dot" :style="{ background: t.light.primary }">
             <CheckChecked v-if="t.id === settingsStore.brandTheme" color="#fff" size="16" />
           </view>
-          <text class="swatch-name">{{ t.name }}</text>
+          <text class="swatch-name">
+            {{ t.name }}
+          </text>
         </view>
       </view>
     </view>

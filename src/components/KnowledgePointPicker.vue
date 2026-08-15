@@ -1,17 +1,19 @@
 <template>
   <view class="kb-picker">
     <view class="picker-trigger" @tap="open">
-      <text v-if="displayLabel" class="picked">{{ displayLabel }}</text>
-      <text v-else class="placeholder">点选知识框架考点（可选）</text>
-      <text v-if="modelValue.path" class="clear" @tap.stop="clear">清除</text>
-      <text v-else class="arrow">›</text>
+      <text v-if="displayLabel" class="picked">
+        {{ displayLabel }}
+      </text>
+      <text v-else class="placeholder"> 点选知识框架考点（可选） </text>
+      <text v-if="modelValue.path" class="clear" @tap.stop="clear"> 清除 </text>
+      <text v-else class="arrow"> › </text>
     </view>
 
     <view v-if="visible" class="sheet-mask" @tap="close">
       <view class="sheet" @tap.stop>
         <view class="sheet-hd">
-          <text class="sheet-title">选择考点</text>
-          <text class="sheet-close" @tap="close">关闭</text>
+          <text class="sheet-title"> 选择考点 </text>
+          <text class="sheet-close" @tap="close"> 关闭 </text>
         </view>
 
         <scroll-view scroll-x class="tree-tabs">
@@ -21,12 +23,16 @@
             class="tab"
             :class="{ active: currentKey === t.treeKey }"
             @tap="selectTree(t.treeKey)"
-          >{{ t.title }}</text>
+          >
+            {{ t.title }}
+          </text>
         </scroll-view>
 
-        <view v-if="loading" class="sheet-empty">加载中...</view>
+        <view v-if="loading" class="sheet-empty"> 加载中... </view>
         <scroll-view v-else scroll-y class="node-list">
-          <view v-if="!flatNodes.length" class="sheet-empty">该知识树暂无节点，请先同步知识库</view>
+          <view v-if="!flatNodes.length" class="sheet-empty">
+            该知识树暂无节点，请先同步知识库
+          </view>
           <view
             v-for="n in flatNodes"
             :key="n.id"
@@ -35,8 +41,12 @@
             :style="{ paddingLeft: 12 + n.depth * 12 + 'px' }"
             @tap="pick(n)"
           >
-            <text class="node-mark">{{ n.hasChildren ? '▸' : '·' }}</text>
-            <text class="node-title">{{ n.title }}</text>
+            <text class="node-mark">
+              {{ n.hasChildren ? '▸' : '·' }}
+            </text>
+            <text class="node-title">
+              {{ n.title }}
+            </text>
           </view>
         </scroll-view>
       </view>
@@ -159,12 +169,15 @@ watch(
       font-size: 13px;
       color: $text-muted;
     }
-    .clear, .arrow {
+    .clear,
+    .arrow {
       font-size: 12px;
       color: $text-muted;
       flex-shrink: 0;
     }
-    .clear { color: $primary-color; }
+    .clear {
+      color: $primary-color;
+    }
   }
 }
 
@@ -195,8 +208,15 @@ watch(
   align-items: center;
   justify-content: space-between;
   padding: 14px 16px 8px;
-  .sheet-title { font-size: 16px; font-weight: 700; color: $text-primary; }
-  .sheet-close { font-size: 13px; color: $text-muted; }
+  .sheet-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: $text-primary;
+  }
+  .sheet-close {
+    font-size: 13px;
+    color: $text-muted;
+  }
 }
 
 .tree-tabs {
@@ -232,10 +252,21 @@ watch(
   border-bottom: 1px solid $border-color;
   &.active {
     background: $primary-light;
-    .node-title { color: $primary-color; font-weight: 700; }
+    .node-title {
+      color: $primary-color;
+      font-weight: 700;
+    }
   }
-  .node-mark { color: $text-muted; font-size: 12px; width: 12px; }
-  .node-title { font-size: 13px; color: $text-primary; line-height: 1.35; }
+  .node-mark {
+    color: $text-muted;
+    font-size: 12px;
+    width: 12px;
+  }
+  .node-title {
+    font-size: 13px;
+    color: $text-primary;
+    line-height: 1.35;
+  }
 }
 
 .sheet-empty {

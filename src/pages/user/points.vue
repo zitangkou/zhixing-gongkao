@@ -1,5 +1,5 @@
 <template>
-  <view class="page-points">
+  <view class="page-points" :class="themeClass">
     <view class="summary">
       <text class="label">当前积分</text>
       <text class="value">{{ userStore.points }}</text>
@@ -27,9 +27,11 @@
 import { ref, computed, onMounted } from 'vue'
 import { Tag as NutTag } from '@nutui/nutui-taro'
 import { useUserStore } from '@/store/user'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '积分明细' })
 
+const { themeClass } = useThemeClass()
 const userStore = useUserStore()
 const filter = ref<'all' | 'income' | 'expense'>('all')
 

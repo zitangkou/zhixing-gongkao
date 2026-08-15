@@ -2,10 +2,14 @@
   <view class="mind-map">
     <view v-for="node in nodes" :key="node.id" class="tree-node">
       <view class="node-header" @tap="toggle(node.id)">
-        <text class="arrow" :class="{ open: isOpen(node.id) }">▶</text>
-        <text class="node-title">{{ node.title }}</text>
+        <text class="arrow" :class="{ open: isOpen(node.id) }"> ▶ </text>
+        <text class="node-title">
+          {{ node.title }}
+        </text>
       </view>
-      <view v-if="node.content && isOpen(node.id)" class="node-content">{{ node.content }}</view>
+      <view v-if="node.content && isOpen(node.id)" class="node-content">
+        {{ node.content }}
+      </view>
       <view v-if="node.children && isOpen(node.id)" class="children">
         <MindMap :nodes="node.children" />
       </view>
@@ -23,9 +27,7 @@ const props = withDefaults(defineProps<{ nodes: MindMapNode[]; defaultOpen?: boo
   defaultOpen: true,
 })
 
-const openSet = ref<Set<string>>(new Set(
-  props.defaultOpen ? props.nodes.map((n) => n.id) : [],
-))
+const openSet = ref<Set<string>>(new Set(props.defaultOpen ? props.nodes.map((n) => n.id) : []))
 
 function toggle(id: string) {
   if (openSet.value.has(id)) openSet.value.delete(id)
@@ -55,9 +57,14 @@ function isOpen(id: string) {
         margin-right: 8px;
         transition: transform 0.2s;
         color: $primary-color;
-        &.open { transform: rotate(90deg); }
+        &.open {
+          transform: rotate(90deg);
+        }
       }
-      .node-title { font-size: 14px; font-weight: 500; }
+      .node-title {
+        font-size: 14px;
+        font-weight: 500;
+      }
     }
     .node-content {
       padding: 10px 16px 10px 28px;
@@ -67,7 +74,10 @@ function isOpen(id: string) {
       background: $primary-light;
       border-radius: 0 0 6px 6px;
     }
-    .children { padding-left: 16px; margin-top: 4px; }
+    .children {
+      padding-left: 16px;
+      margin-top: 4px;
+    }
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <view class="page-rmrb">
+  <view class="page-rmrb" :class="themeClass">
     <view class="hero-card" v-if="stats">
       <view class="hero-item">
         <text class="hero-num">{{ stats.weekMineDays }}/{{ stats.weekMineTarget }}</text>
@@ -43,9 +43,11 @@ import { onMounted, ref } from 'vue'
 import Taro, { useDidShow } from '@tarojs/taro'
 import { api } from '@/api'
 import type { ShenlunStats } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '人民日报学习' })
 
+const { themeClass } = useThemeClass()
 const stats = ref<ShenlunStats | null>(null)
 
 function go(url: string) {

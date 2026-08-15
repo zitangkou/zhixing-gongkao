@@ -55,7 +55,6 @@ export function generateReviewTasks(
     const article = articleMap.get(record.articleId)
     if (!article) continue
 
-    const baseDate = record.lastReviewDate || record.studyDate
     const nextDate = getNextReviewDate(record.studyDate, record.reviewCount)
     if (!nextDate) continue
 

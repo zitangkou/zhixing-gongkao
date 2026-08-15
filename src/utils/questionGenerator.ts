@@ -231,7 +231,14 @@ export function generateQuestionsFromArticle(article: Article): Question[] {
   // 1. highlight 挖空（政治术语）
   for (const source of sources) {
     if (!source.highlight) continue
-    push(createHighlightBlankQuestion(article, source.highlight, questions.length, `出自「${source.sectionTitle}」要点。`))
+    push(
+      createHighlightBlankQuestion(
+        article,
+        source.highlight,
+        questions.length,
+        `出自「${source.sectionTitle}」要点。`,
+      ),
+    )
   }
 
   // 2. —— 条目选择题（六项原则等）
@@ -282,17 +289,11 @@ export function buildQuestionBank(articles: Article[]): Map<string, Question[]> 
 }
 
 /** 校验答案 */
-export function checkAnswer(
-  question: Question,
-  answer: string | string[],
-): boolean {
+export function checkAnswer(question: Question, answer: string | string[]): boolean {
   const correct = question.correctAnswer
   if (Array.isArray(correct)) {
     if (!Array.isArray(answer)) return false
-    return (
-      correct.length === answer.length &&
-      correct.every((c) => answer.includes(c))
-    )
+    return correct.length === answer.length && correct.every((c) => answer.includes(c))
   }
   return answer === correct
 }

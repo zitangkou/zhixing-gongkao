@@ -1,8 +1,10 @@
 <template>
   <view class="points-badge" :class="[`tone-${tone}`]" @tap.stop="$emit('tap')">
     <StarFill :color="iconColor" size="12" />
-    <text class="value">{{ points }}</text>
-    <text v-if="showLabel" class="label">积分</text>
+    <text class="value">
+      {{ points }}
+    </text>
+    <text v-if="showLabel" class="label"> 积分 </text>
   </view>
 </template>
 

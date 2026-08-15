@@ -1,5 +1,5 @@
 <template>
-  <view class="page-mindmap" v-if="article">
+  <view class="page-mindmap" v-if="article" :class="themeClass">
     <text class="title">{{ article.mindMap.title }}</text>
     <scroll-view scroll-x scroll-y class="canvas-area" :scale-area="true">
       <view class="tree-wrapper" :style="{ transform: `scale(${scale})` }">
@@ -21,9 +21,11 @@ import { Button as NutButton } from '@nutui/nutui-taro'
 import MindMap from '@/components/MindMap.vue'
 import { useArticleStore } from '@/store/article'
 import type { Article } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '知识框架' })
 
+const { themeClass } = useThemeClass()
 const articleStore = useArticleStore()
 const article = ref<Article | null>(null)
 const scale = ref(1)

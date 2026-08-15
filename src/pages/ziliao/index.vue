@@ -1,5 +1,5 @@
 <template>
-  <view class="zl-page">
+  <view class="zl-page" :class="themeClass">
     <view class="zl-hero-card">
       <view v-if="showLoadSkeleton" class="zl-hero-row zl-hero-skeleton">
         <view v-for="item in 3" :key="item" class="zl-hero-item">
@@ -141,12 +141,13 @@ import { Category, Edit, Order, Star } from '@nutui/icons-vue-taro'
 import { api } from '@/api'
 import type { ZiliaoOverview, ZiliaoWeakType } from '@/types'
 import { showToast } from '@/utils/platform'
-import { useBrandColor } from '@/utils/brandColor'
+import { useBrandColor, useThemeClass } from '@/utils/brandColor'
 
 const brandColor = useBrandColor()
 
 definePageConfig({ navigationBarTitleText: '资料分析', enablePullDownRefresh: true })
 
+const { themeClass } = useThemeClass()
 const overview = ref<ZiliaoOverview>({
   formulaCount: 0,
   typeCount: 0,

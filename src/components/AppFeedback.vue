@@ -11,18 +11,17 @@
     <div v-if="toast.icon !== 'none'" class="zk-toast__icon" :class="`is-${toast.icon}`">
       <span>{{ toast.icon === 'success' ? '✓' : '!' }}</span>
     </div>
-    <div class="zk-toast__text">{{ toast.title }}</div>
+    <div class="zk-toast__text">
+      {{ toast.title }}
+    </div>
   </div>
 
   <!-- Dialog / Prompt -->
-  <div
-    v-if="dialog.visible"
-    class="zk-mask"
-    @click="onMask"
-    @tap="onMask"
-  >
+  <div v-if="dialog.visible" class="zk-mask" @click="onMask" @tap="onMask">
     <div class="zk-dialog" @click.stop @tap.stop>
-      <div v-if="dialog.title" class="zk-dialog__title">{{ dialog.title }}</div>
+      <div v-if="dialog.title" class="zk-dialog__title">
+        {{ dialog.title }}
+      </div>
       <div v-if="dialog.mode === 'confirm' && dialog.content" class="zk-dialog__content">
         {{ dialog.content }}
       </div>
@@ -126,7 +125,9 @@ function onMask(e?: Event) {
   border-radius: 14px;
   background: var(--zk-card-bg);
   color: var(--zk-text-primary);
-  box-shadow: var(--zk-shadow-float), 0 0 0 1px var(--zk-border-color);
+  box-shadow:
+    var(--zk-shadow-float),
+    0 0 0 1px var(--zk-border-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,8 +147,12 @@ function onMask(e?: Event) {
   font-size: 15px;
   font-weight: 700;
   color: #fff;
-  &.is-success { background: var(--zk-success); }
-  &.is-error { background: var(--zk-danger); }
+  &.is-success {
+    background: var(--zk-success);
+  }
+  &.is-error {
+    background: var(--zk-danger);
+  }
 }
 
 .zk-toast__text {
@@ -160,12 +165,20 @@ function onMask(e?: Event) {
 
 .zk-toast--none {
   padding: 12px 16px;
-  .zk-toast__text { font-size: 13px; }
+  .zk-toast__text {
+    font-size: 13px;
+  }
 }
 
 @keyframes zk-toast-in {
-  from { opacity: 0; transform: translateX(-50%) translateY(8px) scale(0.96); }
-  to { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
 }
 
 .zk-mask {
@@ -188,8 +201,12 @@ html.theme-dark .zk-mask,
 }
 
 @keyframes zk-mask-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .zk-dialog {
@@ -205,8 +222,14 @@ html.theme-dark .zk-mask,
 }
 
 @keyframes zk-dialog-in {
-  from { opacity: 0; transform: translateY(8px) scale(0.98); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .zk-dialog__title {
@@ -275,7 +298,9 @@ html.theme-dark .zk-mask,
   appearance: none;
   -webkit-appearance: none;
   pointer-events: auto;
-  &:active { background: var(--zk-hover-bg); }
+  &:active {
+    background: var(--zk-hover-bg);
+  }
   &--ok {
     border-left: 1px solid var(--zk-border-color);
     color: var(--zk-primary);

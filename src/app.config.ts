@@ -21,6 +21,7 @@ export default defineAppConfig({
     'pages/user/rank',
     'pages/user/growth',
     'pages/user/feedback',
+    'pages/user/data',
     'pages/corpus/index',
     'pages/corpus/edit',
     'pages/plan/today',

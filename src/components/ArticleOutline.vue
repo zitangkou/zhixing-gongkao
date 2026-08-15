@@ -7,8 +7,12 @@
       :class="{ active: activeId === item.id, read: isChapterRead(item) }"
       @tap="emit('select', item.id)"
     >
-      <text class="idx">{{ idx + 1 }}</text>
-      <text class="label">{{ item.title }}</text>
+      <text class="idx">
+        {{ idx + 1 }}
+      </text>
+      <text class="label">
+        {{ item.title }}
+      </text>
     </view>
   </scroll-view>
 </template>
@@ -58,11 +62,17 @@ function isChapterRead(chapter: ArticleSection) {
     &.active {
       background: $primary-light;
       border-color: $primary-strong;
-      .idx, .label { color: $primary-color; }
+      .idx,
+      .label {
+        color: $primary-color;
+      }
     }
     &.read:not(.active) {
       border-color: rgba(7, 193, 96, 0.35);
-      .idx { background: rgba(7, 193, 96, 0.15); color: var(--zk-success); }
+      .idx {
+        background: rgba(7, 193, 96, 0.15);
+        color: var(--zk-success);
+      }
     }
     .idx {
       width: 18px;

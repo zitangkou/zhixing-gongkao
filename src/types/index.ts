@@ -158,14 +158,12 @@ export interface SignStatus {
   [date: string]: boolean
 }
 
-
 export interface AnswerResult {
   correct: boolean
   analysis: string
   correctAnswer: string | string[]
   pointsEarned: number
 }
-
 
 export interface ArticleListPage {
   items: Article[]
@@ -298,12 +296,6 @@ export interface ReviewHub {
   }>
   totalCount: number
 }
-
-// ===== 美剧口语训练 =====
-
-
-// ===== 英语学习 =====
-
 
 export interface RmrbArticle {
   id: string
@@ -496,7 +488,6 @@ export interface ShenlunDrillLog {
   createdAt: string
 }
 
-
 /** 知行足迹 / 成长总览 */
 export interface GrowthDayBar {
   date: string
@@ -524,12 +515,6 @@ export interface GrowthOverview {
   weekBars: GrowthDayBar[]
   domains: GrowthDomainProgress[]
 }
-
-/** 健康模块 */
-
-// ===== 音标学习 =====
-
-
 
 export interface ExamPaper {
   id: string
@@ -640,7 +625,13 @@ export interface ExamAttemptAnswer {
 
 export interface ExamAttemptDetail extends ExamAttempt {
   answers: ExamAttemptAnswer[]
-  sectionStats: { section: string; total: number; correct: number; answered: number; accuracy: number }[]
+  sectionStats: {
+    section: string
+    total: number
+    correct: number
+    answered: number
+    accuracy: number
+  }[]
 }
 
 // ===== 手动错题 =====
@@ -873,4 +864,27 @@ export interface ExamCountdown {
   daysLeft: number
   createdAt?: string
   updatedAt?: string
+}
+
+// ===== 数据导出/导入 =====
+
+/** 核心学习进度导出体（后端 snake_case 原样透传，前端不做字段映射） */
+export interface DataExport {
+  version: number
+  exportedAt: string
+  wrongAnswers: Record<string, unknown>[]
+  manualWrongs: Record<string, unknown>[]
+  corpusItems: Record<string, unknown>[]
+  planTasks: Record<string, unknown>[]
+  dailyReviews: Record<string, unknown>[]
+  pointsLogs: Record<string, unknown>[]
+}
+
+export interface DataImportResult {
+  wrongAnswers: number
+  manualWrongs: number
+  corpusItems: number
+  planTasks: number
+  dailyReviews: number
+  pointsLogs: number
 }

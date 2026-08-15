@@ -1,5 +1,5 @@
 <template>
-  <view class="page-detail" v-if="article">
+  <view class="page-detail" v-if="article" :class="themeClass">
     <view class="tabs">
       <view class="tab" :class="{ active: tab === 'content' }" @tap="tab = 'content'">正文</view>
       <view class="tab" :class="{ active: tab === 'mindmap' }" @tap="tab = 'mindmap'">知识框架</view>
@@ -118,9 +118,11 @@ import {
 import { buildCorpusEditUrl } from '@/utils/corpus'
 import { showToast, copyText } from '@/utils/platform'
 import type { Article } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '文章详情' })
 
+const { themeClass } = useThemeClass()
 const articleStore = useArticleStore()
 const tab = ref<'content' | 'mindmap'>('content')
 const readMode = ref<'list' | 'pager'>('list')

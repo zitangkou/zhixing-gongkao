@@ -1,5 +1,5 @@
 <template>
-  <view class="zl-page" v-if="detail">
+  <view class="zl-page" v-if="detail" :class="themeClass">
     <view class="zl-top-bar">
       <text class="zl-progress">{{ currentIndex + 1 }} / {{ detail.questions.length }}</text>
       <text class="zl-timer">{{ formatSec(elapsed) }}</text>
@@ -52,7 +52,7 @@
       <nut-button v-else type="primary" :loading="submitting" @click="onSubmit">交卷</nut-button>
     </view>
   </view>
-  <view v-else class="zl-loading">加载中...</view>
+  <view v-else class="zl-loading" :class="themeClass">加载中...</view>
 </template>
 
 <script setup lang="ts">
@@ -62,9 +62,11 @@ import { Button as NutButton } from '@nutui/nutui-taro'
 import { api } from '@/api'
 import type { ZiliaoDrillSetDetail } from '@/types'
 import { showConfirm, showToast } from '@/utils/platform'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '专项练习' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const setId = decodeURIComponent(router.params?.setId || '')
 const typeCode = router.params?.typeCode || ''

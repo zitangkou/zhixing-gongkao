@@ -10,10 +10,7 @@
         :class="{ active: selected === item.key }"
         @tap="onSwitch(item)"
       >
-        <view
-          class="tab-icon-wrap"
-          :class="{ active: selected === item.key }"
-        >
+        <view class="tab-icon-wrap" :class="{ active: selected === item.key }">
           <component
             :is="item.icon"
             :color="selected === item.key ? activeColor : mutedColor"

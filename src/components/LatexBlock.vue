@@ -1,11 +1,15 @@
 <template>
   <view class="latex-block" :class="[`size-${size}`]">
     <view v-if="html" class="latex-render">
-      <!-- eslint-disable-next-line vue/no-v-html -->
+      <!-- eslint-disable-next-line vue/no-v-html, vue/no-v-text-v-html-on-component -->
       <view v-html="html" />
     </view>
-    <text v-else class="latex-fallback">{{ fallbackText }}</text>
-    <text v-if="showPlain && plain && html" class="latex-plain">{{ plain }}</text>
+    <text v-else class="latex-fallback">
+      {{ fallbackText }}
+    </text>
+    <text v-if="showPlain && plain && html" class="latex-plain">
+      {{ plain }}
+    </text>
   </view>
 </template>
 

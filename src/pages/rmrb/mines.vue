@@ -1,5 +1,5 @@
 <template>
-  <view class="page-mines">
+  <view class="page-mines" :class="themeClass">
     <view class="stats-card" v-if="stats">
       <view class="stat">
         <text class="num">{{ stats.weekMineDays }}/{{ stats.weekMineTarget }}</text>
@@ -197,9 +197,11 @@ import { Button as NutButton } from '@nutui/nutui-taro'
 import { api } from '@/api'
 import { splitRmrbTerms } from '@/utils/rmrb'
 import type { ShenlunMineLog, ShenlunStats } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '开采本' })
 
+const { themeClass } = useThemeClass()
 const loading = ref(false)
 const list = ref<ShenlunMineLog[]>([])
 const stats = ref<ShenlunStats | null>(null)

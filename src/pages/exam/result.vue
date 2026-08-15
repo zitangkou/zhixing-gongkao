@@ -1,5 +1,5 @@
 <template>
-  <view class="page-result">
+  <view class="page-result" :class="themeClass">
     <view v-if="loading" class="state-box">
       <text class="state-title">加载中…</text>
       <text class="state-desc">正在获取成绩单</text>
@@ -83,9 +83,11 @@ import Taro, { useRouter } from '@tarojs/taro'
 import { Button as NutButton } from '@nutui/nutui-taro'
 import { api } from '@/api'
 import type { ExamAttemptDetail } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '成绩单' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const attemptId = ref(router.params?.attemptId || '')
 const loading = ref(true)

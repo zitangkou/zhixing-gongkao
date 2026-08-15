@@ -1,5 +1,5 @@
 <template>
-  <view class="zl-page" v-if="item">
+  <view class="zl-page" v-if="item" :class="themeClass">
     <view class="zl-head">
       <text class="zl-chip">{{ item.category }}</text>
       <text class="zl-title">{{ item.name }}</text>
@@ -33,9 +33,11 @@ import Taro, { useRouter } from '@tarojs/taro'
 import { api } from '@/api'
 import LatexBlock from '@/components/LatexBlock.vue'
 import type { ZiliaoFormula } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '公式详情' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const item = ref<ZiliaoFormula | null>(null)
 

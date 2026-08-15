@@ -1,8 +1,12 @@
 <template>
   <view class="question-item" :class="{ readonly: readonly }">
     <view class="stem-row">
-      <text class="type-tag" :class="question.type">{{ typeLabel }}</text>
-      <text class="stem">{{ question.stem }}</text>
+      <text class="type-tag" :class="question.type">
+        {{ typeLabel }}
+      </text>
+      <text class="stem">
+        {{ question.stem }}
+      </text>
     </view>
 
     <view v-if="question.type === 'judge' || question.type === 'single'" class="options">
@@ -13,10 +17,10 @@
         :class="optionClass(opt)"
         @tap="selectOption(opt)"
       >
-        <text class="opt-label">{{ String.fromCharCode(65 + idx) }}.</text>
+        <text class="opt-label"> {{ String.fromCharCode(65 + idx) }}. </text>
         <text>{{ opt }}</text>
-        <text v-if="showResult && isCorrectOpt(opt)" class="result-icon">✓</text>
-        <text v-if="showResult && isWrongOpt(opt)" class="result-icon wrong">✗</text>
+        <text v-if="showResult && isCorrectOpt(opt)" class="result-icon"> ✓ </text>
+        <text v-if="showResult && isWrongOpt(opt)" class="result-icon wrong"> ✗ </text>
       </view>
     </view>
 
@@ -28,10 +32,10 @@
         :class="multiOptionClass(opt)"
         @tap="toggleMultiOption(opt)"
       >
-        <text class="opt-label">{{ String.fromCharCode(65 + idx) }}.</text>
+        <text class="opt-label"> {{ String.fromCharCode(65 + idx) }}. </text>
         <text>{{ opt }}</text>
-        <text v-if="showResult && isCorrectOpt(opt)" class="result-icon">✓</text>
-        <text v-if="showResult && isWrongMultiOpt(opt)" class="result-icon wrong">✗</text>
+        <text v-if="showResult && isCorrectOpt(opt)" class="result-icon"> ✓ </text>
+        <text v-if="showResult && isWrongMultiOpt(opt)" class="result-icon wrong"> ✗ </text>
       </view>
       <text v-if="!showResult && !readonly && selectedMulti.length" class="multi-hint">
         已选 {{ selectedMulti.length }} 项，点「下一题」提交
@@ -39,10 +43,10 @@
     </view>
 
     <view v-if="showResult" class="analysis">
-      <text class="analysis-label">解析</text>
+      <text class="analysis-label"> 解析 </text>
       <text>{{ analysisText }}</text>
       <view v-if="sourceText" class="source">
-        <text class="source-label">原文：</text>
+        <text class="source-label"> 原文： </text>
         <text>{{ sourceText }}</text>
       </view>
     </view>
@@ -195,9 +199,18 @@ const sourceText = computed(() => {
     border-radius: 4px;
     background: $elevated;
     color: $text-secondary;
-    &.single { background: rgba($accent-blue, 0.12); color: $accent-blue; }
-    &.multiple { background: $primary-light; color: $primary-color; }
-    &.judge { background: rgba($accent-amber, 0.14); color: $accent-amber; }
+    &.single {
+      background: rgba($accent-blue, 0.12);
+      color: $accent-blue;
+    }
+    &.multiple {
+      background: $primary-light;
+      color: $primary-color;
+    }
+    &.judge {
+      background: rgba($accent-amber, 0.14);
+      color: $accent-amber;
+    }
   }
   .stem {
     flex: 1;
@@ -217,12 +230,30 @@ const sourceText = computed(() => {
       color: $text-primary;
       font-size: 16px;
       line-height: 1.6;
-      &.selected { border-color: $primary-color; background: $primary-light; }
-      &.correct { border-color: var(--zk-success); background: rgba(7, 193, 96, 0.16); }
-      &.wrong { border-color: var(--zk-danger); background: rgba(238, 10, 36, 0.16); }
-      .opt-label { margin-right: 8px; font-weight: 600; color: $primary-color; }
-      .result-icon { margin-left: auto; color: var(--zk-success); font-weight: bold;
-        &.wrong { color: var(--zk-danger); }
+      &.selected {
+        border-color: $primary-color;
+        background: $primary-light;
+      }
+      &.correct {
+        border-color: var(--zk-success);
+        background: rgba(7, 193, 96, 0.16);
+      }
+      &.wrong {
+        border-color: var(--zk-danger);
+        background: rgba(238, 10, 36, 0.16);
+      }
+      .opt-label {
+        margin-right: 8px;
+        font-weight: 600;
+        color: $primary-color;
+      }
+      .result-icon {
+        margin-left: auto;
+        color: var(--zk-success);
+        font-weight: bold;
+        &.wrong {
+          color: var(--zk-danger);
+        }
       }
     }
     .multi-hint {
@@ -239,12 +270,20 @@ const sourceText = computed(() => {
     border-radius: 8px;
     font-size: 14px;
     line-height: 1.6;
-    .analysis-label { display: block; font-size: 14px; font-weight: 600; color: $primary-color; margin-bottom: 6px; }
+    .analysis-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: $primary-color;
+      margin-bottom: 6px;
+    }
     .source {
       margin-top: 10px;
       padding-top: 10px;
       border-top: 1px dashed $border-color;
-      .source-label { color: $text-muted; }
+      .source-label {
+        color: $text-muted;
+      }
     }
   }
 }

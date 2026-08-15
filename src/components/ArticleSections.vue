@@ -2,25 +2,35 @@
   <view class="article-sections">
     <view
       v-for="section in sections"
-      :key="section.id"
       :id="`sec-${section.id}`"
+      :key="section.id"
       class="section-block"
       :class="[`level-${section.level}`, { 'is-read': isRead(section.id) }]"
     >
       <view class="section-header" @tap="onHeaderTap(section)">
         <view class="title-row">
-          <text v-if="section.level === 1" class="chapter-badge">第{{ chapterIndex(section.id) }}章</text>
-          <text class="section-title">{{ section.title }}</text>
-          <text v-if="isReadable(section) && isRead(section.id)" class="read-badge">已读</text>
+          <text v-if="section.level === 1" class="chapter-badge">
+            第{{ chapterIndex(section.id) }}章
+          </text>
+          <text class="section-title">
+            {{ section.title }}
+          </text>
+          <text v-if="isReadable(section) && isRead(section.id)" class="read-badge"> 已读 </text>
         </view>
-        <text v-if="hasBody(section)" class="toggle-icon">{{ isOpen(section.id) ? '▼' : '▶' }}</text>
+        <text v-if="hasBody(section)" class="toggle-icon">
+          {{ isOpen(section.id) ? '▼' : '▶' }}
+        </text>
       </view>
 
       <view v-if="isOpen(section.id)" class="section-body">
-        <text v-if="section.content" class="section-content selectable-text" user-select selectable>{{ section.content }}</text>
+        <text v-if="section.content" class="section-content selectable-text" user-select selectable>
+          {{ section.content }}
+        </text>
         <view v-if="section.highlight" class="highlight">
-          <text class="highlight-label">要点</text>
-          <text class="selectable-text" user-select selectable>{{ section.highlight }}</text>
+          <text class="highlight-label"> 要点 </text>
+          <text class="selectable-text" user-select selectable>
+            {{ section.highlight }}
+          </text>
         </view>
         <view
           v-if="isReadable(section) && !isRead(section.id)"
@@ -98,17 +108,28 @@ function chapterIndex(id: string) {
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-      .section-header { min-height: 56px; box-sizing: border-box; }
+      .section-header {
+        min-height: 56px;
+        box-sizing: border-box;
+      }
       .section-title {
         height: 43.5px;
       }
     }
     &.is-read.level-2,
     &.is-read.level-3 {
-      .section-header { opacity: 0.92; }
+      .section-header {
+        opacity: 0.92;
+      }
     }
-    &.level-2 { padding-left: 12px; margin-top: 8px; }
-    &.level-3 { padding-left: 8px; margin-top: 6px; }
+    &.level-2 {
+      padding-left: 12px;
+      margin-top: 8px;
+    }
+    &.level-3 {
+      padding-left: 8px;
+      margin-top: 6px;
+    }
   }
 
   .section-header {
@@ -116,8 +137,14 @@ function chapterIndex(id: string) {
     align-items: center;
     justify-content: space-between;
     padding: 14px 16px;
-    .level-2 & { padding: 10px 12px; background: $page-bg; border-radius: 8px; }
-    .level-3 & { padding: 8px 10px; }
+    .level-2 & {
+      padding: 10px 12px;
+      background: $page-bg;
+      border-radius: 8px;
+    }
+    .level-3 & {
+      padding: 8px 10px;
+    }
   }
 
   .title-row {
@@ -159,8 +186,16 @@ function chapterIndex(id: string) {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     word-break: break-all;
-    .level-2 & { font-size: 14px; font-weight: 500; -webkit-line-clamp: 2; }
-    .level-3 & { font-size: 13px; color: $text-secondary; -webkit-line-clamp: 2; }
+    .level-2 & {
+      font-size: 14px;
+      font-weight: 500;
+      -webkit-line-clamp: 2;
+    }
+    .level-3 & {
+      font-size: 13px;
+      color: $text-secondary;
+      -webkit-line-clamp: 2;
+    }
   }
 
   .toggle-icon {
@@ -171,7 +206,9 @@ function chapterIndex(id: string) {
 
   .section-body {
     padding: 0 16px 14px;
-    .level-2 & { padding: 0 0 8px 0; }
+    .level-2 & {
+      padding: 0 0 8px 0;
+    }
   }
 
   .section-content {

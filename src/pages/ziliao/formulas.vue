@@ -1,5 +1,5 @@
 <template>
-  <view class="zl-page">
+  <view class="zl-page" :class="themeClass">
     <view v-if="loading" class="zl-state-box"><text class="zl-state-title">加载中…</text></view>
     <view v-else-if="!list.length" class="zl-state-box"><text class="zl-state-title">暂无公式</text></view>
     <template v-else>
@@ -41,9 +41,11 @@ import Taro, { usePullDownRefresh } from '@tarojs/taro'
 import { api } from '@/api'
 import LatexBlock from '@/components/LatexBlock.vue'
 import type { ZiliaoFormula } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '公式库', enablePullDownRefresh: true })
 
+const { themeClass } = useThemeClass()
 const list = ref<ZiliaoFormula[]>([])
 const loading = ref(true)
 const activeCat = ref('全部')

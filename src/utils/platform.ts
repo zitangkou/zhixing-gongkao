@@ -24,11 +24,7 @@ export function tryNotify(title: string, body: string): void {
 }
 
 /** 显示 Toast（主题自适应） */
-export function showToast(
-  title: string,
-  icon: ToastIcon = 'none',
-  duration = 2000,
-): void {
+export function showToast(title: string, icon: ToastIcon = 'none', duration = 2000): void {
   ensureFeedbackHost()
   pushToast(title, icon, duration)
 }

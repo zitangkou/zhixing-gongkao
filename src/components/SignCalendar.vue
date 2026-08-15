@@ -1,19 +1,19 @@
 <template>
   <view class="sign-calendar">
     <view class="calendar-header">
-      <text class="month">{{ currentMonth }}</text>
-      <text class="streak">连续签到 {{ streak }} 天</text>
+      <text class="month">
+        {{ currentMonth }}
+      </text>
+      <text class="streak"> 连续签到 {{ streak }} 天 </text>
     </view>
     <view class="weekdays">
-      <text v-for="d in weekdays" :key="d" class="weekday">{{ d }}</text>
+      <text v-for="d in weekdays" :key="d" class="weekday">
+        {{ d }}
+      </text>
     </view>
     <view class="days">
       <view v-for="(day, idx) in calendarDays" :key="idx" class="day-cell">
-        <view
-          v-if="day"
-          class="day"
-          :class="{ signed: signStatus[day], today: day === today }"
-        >
+        <view v-if="day" class="day" :class="{ signed: signStatus[day], today: day === today }">
           {{ day.slice(-2) }}
         </view>
       </view>
@@ -29,7 +29,7 @@ import { computed } from 'vue'
 import { formatDate } from '@/utils/memoryCurve'
 import type { SignStatus } from '@/types'
 
-const props = defineProps<{ signStatus: SignStatus; streak: number }>()
+defineProps<{ signStatus: SignStatus; streak: number }>()
 
 const weekdays = ['日', '一', '二', '三', '四', '五', '六']
 const today = formatDate()
@@ -64,21 +64,35 @@ const calendarDays = computed(() => {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
-    .month { font-size: 16px; font-weight: 600; }
-    .streak { color: $primary-color; font-size: 13px; }
+    .month {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .streak {
+      color: $primary-color;
+      font-size: 13px;
+    }
   }
   .weekdays {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     text-align: center;
     margin-bottom: 8px;
-    .weekday { font-size: 12px; color: $text-muted; }
+    .weekday {
+      font-size: 12px;
+      color: $text-muted;
+    }
   }
   .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 4px;
-    .day-cell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; }
+    .day-cell {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .day {
       width: 32px;
       height: 32px;
@@ -86,8 +100,13 @@ const calendarDays = computed(() => {
       text-align: center;
       border-radius: 50%;
       font-size: 13px;
-      &.signed { background: $primary-color; color: #fff; }
-      &.today { border: 2px solid $primary-color; }
+      &.signed {
+        background: $primary-color;
+        color: #fff;
+      }
+      &.today {
+        border: 2px solid $primary-color;
+      }
     }
   }
   .rules {

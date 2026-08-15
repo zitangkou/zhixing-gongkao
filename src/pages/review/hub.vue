@@ -1,5 +1,5 @@
 <template>
-  <view class="page-review-hub">
+  <view class="page-review-hub" :class="themeClass">
     <view v-if="loading && !hub" class="state-box">
       <text class="state-title">加载中…</text>
       <text class="state-desc">正在同步今日任务</text>
@@ -138,9 +138,11 @@ import { computed, onMounted, ref } from 'vue'
 import Taro, { useDidShow } from '@tarojs/taro'
 import { api } from '@/api'
 import type { ReviewHub } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '复习中心' })
 
+const { themeClass } = useThemeClass()
 const hub = ref<ReviewHub | null>(null)
 const loading = ref(false)
 const error = ref('')

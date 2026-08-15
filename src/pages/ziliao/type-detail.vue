@@ -1,5 +1,5 @@
 <template>
-  <view class="zl-page" v-if="item">
+  <view class="zl-page" v-if="item" :class="themeClass">
     <view class="zl-head">
       <text class="zl-chip">{{ item.category }}</text>
       <text class="zl-title">{{ item.name }}</text>
@@ -26,9 +26,11 @@ import { Button as NutButton } from '@nutui/nutui-taro'
 import { api } from '@/api'
 import type { ZiliaoQuestionType } from '@/types'
 import { showToast } from '@/utils/platform'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '题型详情' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const item = ref<ZiliaoQuestionType | null>(null)
 

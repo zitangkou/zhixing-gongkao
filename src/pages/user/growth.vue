@@ -1,5 +1,5 @@
 <template>
-  <view class="page-growth">
+  <view class="page-growth" :class="themeClass">
     <view v-if="loading && !data" class="empty-tip">加载中…</view>
     <view v-else-if="!data" class="empty-tip">暂无数据</view>
     <template v-else>
@@ -74,9 +74,11 @@ import { computed, onMounted, ref } from 'vue'
 import { useDidShow } from '@tarojs/taro'
 import { api } from '@/api'
 import type { GrowthOverview } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '知行足迹' })
 
+const { themeClass } = useThemeClass()
 const data = ref<GrowthOverview | null>(null)
 const loading = ref(false)
 

@@ -1,5 +1,5 @@
 <template>
-  <view class="page-feedback">
+  <view class="page-feedback" :class="themeClass">
     <nut-textarea
       v-model="content"
       placeholder="请描述题目错误或功能建议..."
@@ -20,9 +20,11 @@ import { Button as NutButton, Textarea as NutTextarea } from '@nutui/nutui-taro'
 import { api } from '@/api'
 import { useUserStore } from '@/store/user'
 import { showToast } from '@/utils/platform'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '反馈建议' })
 
+const { themeClass } = useThemeClass()
 const content = ref('')
 const userStore = useUserStore()
 

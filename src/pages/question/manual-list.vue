@@ -1,5 +1,5 @@
 <template>
-  <view class="page-mw-list">
+  <view class="page-mw-list" :class="themeClass">
     <view
       v-if="dueCount > 0"
       class="start-cta"
@@ -98,9 +98,11 @@ import { formatKnowledgeLabel } from '@/utils/knowledge'
 import { resolveMediaUrl } from '@/utils/media'
 import { showConfirm, showToast } from '@/utils/platform'
 import type { ManualWrong } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '行测错题本' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const store = useManualWrongStore()
 const fromReview = router.params?.from === 'review'

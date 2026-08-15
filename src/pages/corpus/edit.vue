@@ -1,5 +1,5 @@
 <template>
-  <view class="page-edit">
+  <view class="page-edit" :class="themeClass">
     <view class="status-bar">
       <text class="status-text">{{ statusLabel }}</text>
       <text v-if="promoted" class="promoted">已晋升规范词</text>
@@ -191,9 +191,11 @@ import {
 import { flushFormBeforeSave } from '@/utils/formFlush'
 import type { KnowledgePickValue } from '@/utils/knowledge'
 import { showConfirm, showToast } from '@/utils/platform'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '语料编辑' })
 
+const { themeClass } = useThemeClass()
 type TabKey = 'capture' | 'clarify' | 'own' | 'use'
 
 const router = useRouter()

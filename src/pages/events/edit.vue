@@ -1,5 +1,5 @@
 <template>
-  <view class="page-event-edit">
+  <view class="page-event-edit" :class="themeClass">
     <text class="tip">记清时间地点与核心内容，并挂到知识框架，方便以后按考点串联回忆。</text>
 
     <view class="field">
@@ -65,9 +65,11 @@ import { api } from '@/api'
 import { flushFormBeforeSave } from '@/utils/formFlush'
 import type { KnowledgePickValue } from '@/utils/knowledge'
 import { showConfirm, showToast } from '@/utils/platform'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '记事件印象' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const editId = ref('')
 const saving = ref(false)

@@ -1,5 +1,5 @@
 <template>
-  <view class="page-exam-detail">
+  <view class="page-exam-detail" :class="themeClass">
     <view v-if="loading" class="state-box">
       <text class="state-title">加载中…</text>
       <text class="state-desc">正在获取试卷详情</text>
@@ -72,11 +72,12 @@ import { computed, onMounted, ref } from 'vue'
 import Taro, { useRouter } from '@tarojs/taro'
 import { Button as NutButton } from '@nutui/nutui-taro'
 import { api } from '@/api'
-import { showToast } from '@/utils/platform'
 import type { ExamPaperDetail, ExamAttempt } from '@/types'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '试卷详情' })
 
+const { themeClass } = useThemeClass()
 const router = useRouter()
 const paperId = ref(router.params?.id || '')
 const loading = ref(true)

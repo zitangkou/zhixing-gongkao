@@ -1,5 +1,5 @@
 <template>
-  <view class="page-auth">
+  <view class="page-auth" :class="themeClass">
     <view class="auth-header">
       <BrandLogo size="lg" tagline="读得进，练得出" />
       <text class="subtitle">账号登录</text>
@@ -30,9 +30,11 @@ import { api } from '@/api'
 import { useUserStore } from '@/store/user'
 import { bootstrapApp } from '@/utils/bootstrap'
 import { showToast } from '@/utils/platform'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '登录' })
 
+const { themeClass } = useThemeClass()
 const userStore = useUserStore()
 const username = ref('')
 const password = ref('')

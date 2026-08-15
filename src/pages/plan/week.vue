@@ -1,5 +1,5 @@
 <template>
-  <view class="page-week">
+  <view class="page-week" :class="themeClass">
     <view v-if="planStore.weekLoading && !week.length" class="state-box">
       <text class="state-title">加载中…</text>
       <text class="state-desc">正在同步本周计划</text>
@@ -54,9 +54,11 @@
 import { computed } from 'vue'
 import Taro, { useDidShow } from '@tarojs/taro'
 import { usePlanStore } from '@/store/plan'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '本周计划' })
 
+const { themeClass } = useThemeClass()
 const planStore = usePlanStore()
 const week = computed(() => planStore.week)
 

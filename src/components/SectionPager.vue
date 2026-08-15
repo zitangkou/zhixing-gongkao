@@ -1,24 +1,34 @@
 <template>
-  <view class="section-pager" v-if="section">
+  <view v-if="section" class="section-pager">
     <view class="pager-meta">
-      <nut-tag type="primary" plain size="small">第 {{ index + 1 }}/{{ total }} 节</nut-tag>
-      <text v-if="isRead" class="read-tag">已读 ✓</text>
+      <nut-tag type="primary" plain size="small"> 第 {{ index + 1 }}/{{ total }} 节 </nut-tag>
+      <text v-if="isRead" class="read-tag"> 已读 ✓ </text>
     </view>
-    <text class="pager-title selectable-text" user-select selectable>{{ section.title }}</text>
-    <text class="pager-content selectable-text" user-select selectable>{{ section.content }}</text>
+    <text class="pager-title selectable-text" user-select selectable>
+      {{ section.title }}
+    </text>
+    <text class="pager-content selectable-text" user-select selectable>
+      {{ section.content }}
+    </text>
     <view v-if="section.highlight" class="highlight">
-      <text class="highlight-label">要点</text>
-      <text class="selectable-text" user-select selectable>{{ section.highlight }}</text>
+      <text class="highlight-label"> 要点 </text>
+      <text class="selectable-text" user-select selectable>
+        {{ section.highlight }}
+      </text>
     </view>
     <view class="pager-actions">
-      <nut-button size="small" plain :disabled="index === 0" @click="emit('prev')">上一节</nut-button>
+      <nut-button size="small" plain :disabled="index === 0" @click="emit('prev')">
+        上一节
+      </nut-button>
       <nut-button size="small" type="primary" plain @click="emit('mark-read')">
         {{ isRead ? '已标记' : '标记已读' }}
       </nut-button>
-      <nut-button size="small" plain :disabled="index >= total - 1" @click="emit('next')">下一节</nut-button>
+      <nut-button size="small" plain :disabled="index >= total - 1" @click="emit('next')">
+        下一节
+      </nut-button>
     </view>
   </view>
-  <view v-else class="empty-tip">暂无小节内容</view>
+  <view v-else class="empty-tip"> 暂无小节内容 </view>
 </template>
 
 <script setup lang="ts">
@@ -52,7 +62,10 @@ const emit = defineEmits<{
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
-    .read-tag { font-size: 12px; color: var(--zk-success); }
+    .read-tag {
+      font-size: 12px;
+      color: var(--zk-success);
+    }
   }
   .pager-title {
     display: block;

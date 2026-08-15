@@ -12,15 +12,15 @@ export const RMRB_TERM_CATEGORIES_FALLBACK = [
   '其他',
 ] as const
 
-export const RMRB_VERB_CATEGORIES_FALLBACK = [
-  '治理动作',
-  '分析评价',
-  '动词其他',
-] as const
+export const RMRB_VERB_CATEGORIES_FALLBACK = ['治理动作', '分析评价', '动词其他'] as const
 
 export const RMRB_TEMPLATE_TYPES_FALLBACK = [
   { value: 'dialectic', label: '对比转折型', tip: '继续沿用……，与其说是……，不如说是……。' },
-  { value: 'direction', label: '排比递进型', tip: '……并非……，而是在既有……内把……做得更……，于细微处见真章。' },
+  {
+    value: 'direction',
+    label: '排比递进型',
+    tip: '……并非……，而是在既有……内把……做得更……，于细微处见真章。',
+  },
   { value: 'solution', label: '条件递进型', tip: '……往……方向多走一步，……就增强几分。' },
   { value: 'quote', label: '金句型', tip: '利民之事，丝发必兴。（结尾升华）' },
 ] as const
@@ -30,13 +30,15 @@ export const RMRB_ARGUMENT_METHOD_PRESETS_FALLBACK = [
     name: '点例排比 + 类比延伸',
     scope: 'point',
     note: '点例各一句话；3个排比；再类比到其他领域',
-    template: '提出分论点 → 列举3个同一领域正面案例（各一句） → 提炼共性 → 类比其他2～3个领域 → 总结升华',
+    template:
+      '提出分论点 → 列举3个同一领域正面案例（各一句） → 提炼共性 → 类比其他2～3个领域 → 总结升华',
   },
   {
     name: '问题切入 + 典型案例深描 + 原因挖掘',
     scope: 'point',
     note: '案例稍展开：问题+做法+成效；再挖原因与对策',
-    template: '提出分论点 → 点出问题普遍性 → 典型案例1 → 典型案例2 → 提炼共性 → 挖掘原因 → 提出对策',
+    template:
+      '提出分论点 → 点出问题普遍性 → 典型案例1 → 典型案例2 → 提炼共性 → 挖掘原因 → 提出对策',
   },
   {
     name: '总—分—分—总',

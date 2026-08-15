@@ -1,5 +1,5 @@
 <template>
-  <view class="page-profile">
+  <view class="page-profile" :class="themeClass">
     <view class="avatar-card" @tap="onPickAvatar">
       <nut-avatar size="large" class="avatar">
         <image v-if="avatarUrl" class="avatar-img" :src="avatarUrl" mode="aspectFill" />
@@ -74,9 +74,11 @@ import { Avatar as NutAvatar, Button as NutButton, Input as NutInput } from '@nu
 import { useUserStore } from '@/store/user'
 import { resolveMediaUrl } from '@/utils/media'
 import { showToast } from '@/utils/platform'
+import { useThemeClass } from '@/utils/brandColor'
 
 definePageConfig({ navigationBarTitleText: '个人资料' })
 
+const { themeClass } = useThemeClass()
 const userStore = useUserStore()
 
 const username = computed(() => userStore.userInfo?.username || '')

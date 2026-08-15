@@ -83,8 +83,9 @@ export const useQuestionStore = defineStore('question', {
 
     upsertLocalWrong(question: Question, userAnswer?: string | string[]) {
       const articleStore = useArticleStore()
-      const article = articleStore.dailyArticles.find((a) => a.id === question.articleId)
-        || articleStore.currentArticle
+      const article =
+        articleStore.dailyArticles.find((a) => a.id === question.articleId) ||
+        articleStore.currentArticle
       const existing = this.wrongQuestions.find((w) => w.question.id === question.id)
       if (existing) {
         existing.wrongCount += 1

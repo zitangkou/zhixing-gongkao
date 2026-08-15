@@ -1,63 +1,31 @@
 <template>
-  <view
-    class="countdown-card"
-    :class="{ editing }"
-  >
-    <view
-      v-if="loading"
-      class="cd-loading"
-    >
-      加载考试信息…
-    </view>
+  <view class="countdown-card" :class="{ editing }">
+    <view v-if="loading" class="cd-loading"> 加载考试信息… </view>
 
     <template v-else-if="!editing">
-      <view
-        v-if="countdown"
-        class="cd-main"
-        @tap="startEdit"
-      >
-        <view class="cd-label">
-          距离「{{ countdown.examName }}」还有
-        </view>
+      <view v-if="countdown" class="cd-main" @tap="startEdit">
+        <view class="cd-label"> 距离「{{ countdown.examName }}」还有 </view>
         <view class="cd-number-row">
           <text class="cd-number">
             {{ Math.max(0, countdown.daysLeft) }}
           </text>
-          <text class="cd-unit">
-            天
-          </text>
+          <text class="cd-unit"> 天 </text>
         </view>
         <view class="cd-meta">
           <text>{{ countdown.examDate }}</text>
-          <text
-            v-if="countdown.note"
-            class="cd-note"
-          >
+          <text v-if="countdown.note" class="cd-note">
             {{ countdown.note }}
           </text>
         </view>
-        <view class="cd-edit-hint">
-          点击修改 ›
-        </view>
+        <view class="cd-edit-hint"> 点击修改 › </view>
       </view>
-      <view
-        v-else
-        class="cd-empty"
-        @tap="startEdit"
-      >
-        <text class="cd-empty-title">
-          设置目标考试
-        </text>
-        <text class="cd-empty-desc">
-          填写考试名称与日期，首页展示倒计时
-        </text>
+      <view v-else class="cd-empty" @tap="startEdit">
+        <text class="cd-empty-title"> 设置目标考试 </text>
+        <text class="cd-empty-desc"> 填写考试名称与日期，首页展示倒计时 </text>
       </view>
     </template>
 
-    <view
-      v-else
-      class="cd-editor"
-    >
+    <view v-else class="cd-editor">
       <text class="cd-editor-title">
         {{ countdown ? '修改考试信息' : '设置目标考试' }}
       </text>
@@ -67,34 +35,11 @@
         placeholder="考试名称，如：2027 国考"
         clearable
       />
-      <nut-input
-        v-model="draft.date"
-        class="cd-input"
-        type="date"
-        placeholder="考试日期"
-      />
-      <nut-input
-        v-model="draft.note"
-        class="cd-input"
-        placeholder="备注（可选）"
-        clearable
-      />
+      <nut-input v-model="draft.date" class="cd-input" type="date" placeholder="考试日期" />
+      <nut-input v-model="draft.note" class="cd-input" placeholder="备注（可选）" clearable />
       <view class="cd-actions">
-        <nut-button
-          size="small"
-          plain
-          @click="cancelEdit"
-        >
-          取消
-        </nut-button>
-        <nut-button
-          size="small"
-          type="primary"
-          :loading="saving"
-          @click="save"
-        >
-          保存
-        </nut-button>
+        <nut-button size="small" plain @click="cancelEdit"> 取消 </nut-button>
+        <nut-button size="small" type="primary" :loading="saving" @click="save"> 保存 </nut-button>
       </view>
     </view>
   </view>
@@ -150,7 +95,11 @@ async function save() {
   if (!draft.date) return showToast('请选择考试日期')
   saving.value = true
   try {
-    const res = await api.saveCountdown({ examName: draft.name.trim(), examDate: draft.date, note: draft.note.trim() })
+    const res = await api.saveCountdown({
+      examName: draft.name.trim(),
+      examDate: draft.date,
+      note: draft.note.trim(),
+    })
     if (res.code === 0 && res.data) {
       countdown.value = res.data
       editing.value = false
@@ -233,7 +182,9 @@ defineExpose({ load, remove })
   display: flex;
   flex-direction: column;
   gap: 2px;
-  .cd-note { font-size: 12px; }
+  .cd-note {
+    font-size: 12px;
+  }
 }
 
 .cd-edit-hint {

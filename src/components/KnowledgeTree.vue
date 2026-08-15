@@ -13,12 +13,16 @@
         @tap="onTap(node)"
         @longpress="onLongPress(node)"
       >
-        <text v-if="hasChildren(node)" class="kn-arrow">{{ expandedMap[node.id] ? '▾' : '▸' }}</text>
-        <text v-else class="kn-leaf-dot">·</text>
+        <text v-if="hasChildren(node)" class="kn-arrow">
+          {{ expandedMap[node.id] ? '▾' : '▸' }}
+        </text>
+        <text v-else class="kn-leaf-dot"> · </text>
         <view class="kn-status" :class="statusClass(node)" />
-        <text v-if="node.isStarred" class="kn-star">★</text>
-        <text class="kn-title">{{ node.title }}</text>
-        <text v-if="node.myNote" class="kn-note-icon">✎</text>
+        <text v-if="node.isStarred" class="kn-star"> ★ </text>
+        <text class="kn-title">
+          {{ node.title }}
+        </text>
+        <text v-if="node.myNote" class="kn-note-icon"> ✎ </text>
       </view>
       <view v-if="hasChildren(node) && expandedMap[node.id]" class="kn-children">
         <KnowledgeTree
