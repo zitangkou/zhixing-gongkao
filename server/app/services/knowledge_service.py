@@ -7,21 +7,20 @@ md 结构支持：
 - 标题/节点下的普通段落写入上一节点 content（便于以后放公式说明）
 
 知识库目录优先级：
-1. 环境变量 KNOWLEDGE_KB_DIR（部署时指向挂载目录）
-2. 本机 iCloud Obsidian 目录（开发时用）
-3. 后端 data/knowledge/ fallback（上传 md 落地处）
+1. 配置 KNOWLEDGE_KB_DIR（settings.knowledge_kb_dir，部署时指向挂载目录 / 开发时指向 Obsidian）
+2. 后端 data/knowledge/ fallback（上传 md 落地处）
 
 同步策略：merge 而非 delete+rebuild，按 (tree_key, path) 匹配保留
 my_note / is_starred / mastery_level / next_review_at / review_count / last_reviewed_at。
 """
 from __future__ import annotations
 
-import os
 import re
 from pathlib import Path
 
 from sqlalchemy.orm import Session
 
+from app.config import get_settings
 from app.models import KnowledgeNode, gen_id
 from app.schemas import KnowledgeNodeCreate, KnowledgeNodeOut, KnowledgeNodeUpdate, KnowledgeTreeOut
 
@@ -37,9 +36,6 @@ _PRESERVE_FIELDS = (
 
 # 后端本地 fallback 目录（上传 md 落地处、部署时也可挂载这里）
 LOCAL_KB = Path(__file__).resolve().parents[2] / "data" / "knowledge"
-
-# 本机 iCloud Obsidian 目录（开发时优先）
-OBSIDIAN_KB = Path.home() / "Library" / "Mobile Documents" / "iCloud~md~obsidian" / "Documents" / "公务员考试" / "知识框架"
 
 _HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 _LIST_RE = re.compile(r"^([-*+]|\d+\.)\s+")
@@ -59,11 +55,9 @@ TREE_TITLES = {
 
 def _resolve_kb_dir() -> Path | None:
     """按优先级解析知识库目录"""
-    env_dir = os.getenv("KNOWLEDGE_KB_DIR", "").strip()
-    if env_dir and Path(env_dir).is_dir():
-        return Path(env_dir)
-    if OBSIDIAN_KB.is_dir():
-        return OBSIDIAN_KB
+    cfg_dir = get_settings().knowledge_kb_dir.strip()
+    if cfg_dir and Path(cfg_dir).is_dir():
+        return Path(cfg_dir)
     # 本地 fallback：要有 md 文件才算
     if LOCAL_KB.is_dir() and any(LOCAL_KB.glob("*.md")):
         return LOCAL_KB

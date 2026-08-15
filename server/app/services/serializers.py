@@ -51,7 +51,9 @@ def parse_correct_answer(value: str) -> str | list[str]:
 
 
 def article_to_out(article: Article) -> ArticleOut:
-    mind_raw = parse_json(article.mind_map, {"id": "root", "title": article.title, "children": []})
+    mind_raw = parse_json(article.mind_map, None)
+    if not isinstance(mind_raw, dict) or not mind_raw.get("id") or not mind_raw.get("title"):
+        mind_raw = {"id": "root", "title": article.title, "children": []}
     sections_raw = parse_json(getattr(article, "sections", "[]") or "[]", [])
     if not sections_raw and article.content:
         from app.services.section_parser import build_sections_from_content

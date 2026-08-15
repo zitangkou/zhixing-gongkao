@@ -37,7 +37,6 @@ def seed_if_empty(db: Session) -> None:
             ("points_sign_base", "5", "签到基础积分"),
             ("points_read_article", "3", "阅读文章积分"),
             ("points_correct_answer", "2", "答对题目积分"),
-            ("crawl_enabled", "false", "是否启用定时爬虫（暂关闭）"),
         ]
         for key, value, desc in defaults:
             db.add(SystemSetting(key=key, value=value, description=desc))
