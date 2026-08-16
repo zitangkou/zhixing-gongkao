@@ -331,7 +331,7 @@
 | 媒体文件 | 头像、错题图 → `data/uploads/`（**不进 SQLite**） |
 | Mock 模式 | `USE_MOCK=true npm run dev:h5` 走本地 Mock；默认连真实 API |
 | LLM | `llm_enabled` 控制 AI 出题等，默认关闭 |
-| 爬虫 | 代码保留但触发与定时已关闭 |
+| 爬虫 | 已彻底删除（见 OPTIMIZATION.md P1） |
 | 注册开关 | 生产建议 `ALLOW_REGISTER=false` |
 | 反馈系统 | `utils/platform.ts`：showToast / showConfirm / promptText / copyText（禁止直接调 Taro.showToast） |
 | 导航封装 | `utils/platform.ts`：navigateTo / switchTab |
@@ -357,7 +357,7 @@
 
 | 项 | 现状 |
 |----|------|
-| 爬虫 | Admin 触发接口已注释关闭 |
+| 爬虫 | 已彻底删除（如需自动抓取需重建，见 OPTIMIZATION.md） |
 | 支付 | 无真实微信/支付宝对接（原充值页已整体移除） |
 | 足迹 Admin | 无管理端入口（用户侧数据为主） |
 | 行为事件统计 | `activity_events` 已埋点写入（7 处），但无统计/可视化页面（M4：上岸卡片 / 能力雷达 / 里程碑） |

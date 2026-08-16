@@ -1,16 +1,31 @@
+name: zhixing-gongkao
+
 services:
   zhixing-gongkao:
     platform: linux/amd64
     build: .
+    container_name: zhixing-gongkao
+    restart: unless-stopped
     ports:
-      - "8081:80"
+      # 方案B（域名网关，推荐）：只监听本机 127.0.0.1，由宿主机 Nginx 按域名转发；
+      # 方案A（IP:端口直连）：把 .env 的 HTTP_BIND 改为 0.0.0.0
+      - "${HTTP_BIND:-127.0.0.1}:${HTTP_PORT:-8081}:80"
     env_file:
       - .env
     environment:
       - TZ=Asia/Shanghai
     volumes:
       - zhixing-gongkao-data:/app/server/data
-    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1/health', timeout=3)"
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
 
 volumes:
   zhixing-gongkao-data:

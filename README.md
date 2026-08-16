@@ -11,7 +11,7 @@ Slogan：**以「上岸」为唯一目标**
 - 练习闭环：多种刷题模式、错题本（文章/手动）、艾宾浩斯复习、复习中心
 - 积分、签到、排行榜、知行足迹
 
-**全量功能说明（各模块明细）→ [FEATURES.md](./FEATURES.md)**
+**全量功能说明（各模块明细）→ [FEATURES.md](./FEATURES.md)** ｜ 项目进度 → [PROGRESS.md](./PROGRESS.md)
 
 ## 快速开始
 
@@ -29,6 +29,32 @@ cd server
 source .venv/bin/activate
 uvicorn app.main:app --reload --port 8001
 ```
+
+## 部署（云服务器，一键）
+
+```bash
+# 服务器首次（一次性）
+apt update && apt install -y git
+cd /opt
+git clone git@github.com:zitangkou/zhixing-gongkao.git   # 需先在 GitHub 添加服务器 SSH 公钥
+cd zhixing-gongkao
+bash deploy/setup-docker.sh    # 安装 Docker / Compose + 镜像加速（只跑一次）
+
+# 一键部署：自动生成 .env → 构建 → 启动 → 健康检查
+bash deploy.sh
+
+# 配置域名网关（可选，正式运营推荐）
+nano .env                      # 改 DOMAIN / CORS_ORIGINS / ALLOW_REGISTER
+cp deploy/nginx.conf /etc/nginx/sites-available/zhixing-gongkao
+# 编辑 server_name 与 proxy_pass 端口后：
+ln -sf /etc/nginx/sites-available/zhixing-gongkao /etc/nginx/sites-enabled/
+nginx -t && systemctl reload nginx
+```
+
+- 访问：`http://<IP>:8081/`（H5）、`http://<IP>:8081/manage/`（管理后台）；有域名走网关后为 `http://<域名>/`
+- 更新：`git pull && bash deploy.sh`；备份：`bash deploy/backup.sh`（每日定时：`bash deploy/install-backup.sh`）
+- 与其它项目共存：compose 项目名 / 容器名 / 端口（8081）/ 数据卷均与 coffee-order 等隔离；服务器已有 Docker 时 `setup-docker.sh` 会自动跳过全局配置，不影响现有容器
+- 完整手册（端口 / 路由 / HTTPS / 恢复）→ [DEPLOY.md](./DEPLOY.md)
 
 ## Mock 与真实 API
 

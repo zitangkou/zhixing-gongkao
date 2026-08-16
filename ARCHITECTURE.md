@@ -177,7 +177,7 @@ FastAPI 后端 ---- SQLite / data/uploads
 
 ## 5. 数据模型概览
 
-后端当前是 SQLite 单库，主要模型都集中在 `server/app/models/__init__.py`。可以按领域理解：
+后端当前是 SQLite 单库，模型按领域拆分在 `server/app/models/`（base + 11 个域模块），由 `__init__.py` 统一 re-export。可以按领域理解：
 
 | 领域 | 代表模型 |
 | --- | --- |
@@ -262,6 +262,9 @@ npm run dev
 | `SECRET_KEY` | 开发默认值 | JWT 密钥，生产必须修改 |
 | `ALLOW_REGISTER` | `true` | 是否开放学员端自助注册 |
 | `CORS_ORIGINS` | `http://localhost:10087` | 允许跨域来源 |
+| `HTTP_PORT` / `HTTP_BIND` | `8081` / `127.0.0.1` | 容器宿主监听端口与绑定地址（部署用） |
+| `BACKUP_DIR` / `BACKUP_RETENTION_DAYS` | `/opt/backups` / `14` | 备份目录与保留天数 |
+| `KNOWLEDGE_KB_DIR` | 空 | 知识框架本地目录（生产留空） |
 | `USE_MOCK` | `false` | 前端是否启用 Mock |
 | `TARO_APP_API_URL` | `http://127.0.0.1:8001` | 前端 API 地址，Docker 同域时可为空 |
 | `LLM_ENABLED` | `false` | 是否启用 AI 出题等能力 |
@@ -276,7 +279,9 @@ npm run dev
 2. Node 20 alpine 构建管理后台到 `server/admin-dist/`。
 3. Python 3.12 slim 运行 FastAPI，同时安装 Nginx 承载 H5。
 
-`docker-compose.yml` 将宿主机 `8081` 映射到容器内 `80`，并把后端 `data` 目录挂到 Docker volume。上传文件、SQLite 数据库等运行态数据都在 `server/data`，备份时需要完整备份该目录。
+`docker-compose.yml`（compose 项目名 `zhixing-gongkao`）默认把宿主机 `127.0.0.1:8081` 映射到容器内 `80`（可用 `.env` 的 `HTTP_BIND` / `HTTP_PORT` 调整），带健康检查，并把后端 `data` 目录挂到 Docker volume。容器内 Nginx 负责 H5 静态资源与 `/api`、`/admin`、`/manage`、`/uploads`、`/health` 的反代分流；上传文件、SQLite 数据库等运行态数据都在 `server/data`，备份需整包 tar（见 `deploy/backup.sh`）。
+
+一键部署：`deploy/setup-docker.sh`（一次性装 Docker）+ `deploy.sh`（构建启动 + 健康检查 + 路由验证）；单机域名网关配置见 `deploy/nginx.conf`，完整手册见 [`DEPLOY.md`](./DEPLOY.md)。
 
 ## 8. 关键业务流程
 

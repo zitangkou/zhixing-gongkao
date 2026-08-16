@@ -16,5 +16,6 @@ server/.env
 server/admin-dist/
 server/admin-web/node_modules/
 server/admin-web/tsconfig.tsbuildinfo
+/.env
 deploy-ali.md
 cal.md
