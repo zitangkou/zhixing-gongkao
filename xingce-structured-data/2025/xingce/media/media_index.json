@@ -1,0 +1,710 @@
+{
+  "pages": [
+    {
+      "file": "pages/20252447_p01_q74-75_quantity.jpg",
+      "description": "数量关系74-75",
+      "width": 1929,
+      "height": 2795,
+      "bytes": 577192
+    },
+    {
+      "file": "pages/20252447_p02_q76-78_graphic.jpg",
+      "description": "图形推理76-78",
+      "width": 1942,
+      "height": 2797,
+      "bytes": 644652
+    },
+    {
+      "file": "pages/20252447_p03_q79-82_graphic.jpg",
+      "description": "图形推理79-82含切面/展开图",
+      "width": 1941,
+      "height": 2780,
+      "bytes": 686450
+    },
+    {
+      "file": "pages/20252447_p04_q83-85_classify.jpg",
+      "description": "图形分类83-85",
+      "width": 1963,
+      "height": 2828,
+      "bytes": 786820
+    },
+    {
+      "file": "pages/20252447_p05_q86-89_definition.jpg",
+      "description": "定义判断86-89",
+      "width": 1929,
+      "height": 2795,
+      "bytes": 899383
+    },
+    {
+      "file": "pages/20252447_p06_q89-91_definition.jpg",
+      "description": "定义判断89-91",
+      "width": 1919,
+      "height": 2780,
+      "bytes": 882960
+    },
+    {
+      "file": "pages/20252447_p07_q91-93_definition.jpg",
+      "description": "定义判断91-93含搜索树图",
+      "width": 1940,
+      "height": 2811,
+      "bytes": 861812
+    },
+    {
+      "file": "pages/20252447_p08_q93-96_analogy.jpg",
+      "description": "定义93-95+类比96",
+      "width": 1941,
+      "height": 2780,
+      "bytes": 797283
+    },
+    {
+      "file": "pages/20254871_p04_q25-29_verbal_qty.jpg",
+      "description": "言语25-28+数量29",
+      "width": 1975,
+      "height": 2812,
+      "bytes": 795344
+    },
+    {
+      "file": "pages/20254871_p05_q30-35_quantity.jpg",
+      "description": "省级数量30-35",
+      "width": 1964,
+      "height": 2829,
+      "bytes": 782456
+    },
+    {
+      "file": "pages/20254871_p06_q36-39_qty_graphic.jpg",
+      "description": "数量36-38含几何图+图形39",
+      "width": 1974,
+      "height": 2827,
+      "bytes": 776980
+    },
+    {
+      "file": "pages/20254871_p07_q40-43_graphic.jpg",
+      "description": "省级图形40-43",
+      "width": 1975,
+      "height": 2845,
+      "bytes": 705692
+    },
+    {
+      "file": "pages/20254871_p08_q44-47_classify_def.jpg",
+      "description": "分类44-45+定义46-47",
+      "width": 1985,
+      "height": 2859,
+      "bytes": 880070
+    },
+    {
+      "file": "pages/20257276_p03_q101-104_qty_graphic.jpg",
+      "description": "行政执法数量101+图形102-104",
+      "width": 1950,
+      "height": 2827,
+      "bytes": 760537
+    },
+    {
+      "file": "pages/20257276_p04_q105-107_concept.jpg",
+      "description": "概念图105+定义106-107",
+      "width": 1974,
+      "height": 2812,
+      "bytes": 799530
+    },
+    {
+      "file": "pages/20252447_p13_data_analysis.jpg",
+      "description": "资料分析表+题111-115",
+      "width": 1951,
+      "height": 2811,
+      "bytes": 659224
+    },
+    {
+      "file": "pages/20252447_p14_data_analysis.jpg",
+      "description": "资料分析续",
+      "width": 1962,
+      "height": 2842,
+      "bytes": 768516
+    },
+    {
+      "file": "pages/20252447_p15_data_table_bar.jpg",
+      "description": "法律顾问表+柱状图题116-120",
+      "width": 1951,
+      "height": 2843,
+      "bytes": 718475
+    },
+    {
+      "file": "pages/20252447_p16_data_analysis.jpg",
+      "description": "资料分析续",
+      "width": 1950,
+      "height": 2842,
+      "bytes": 660249
+    },
+    {
+      "file": "pages/20252447_p17_data_analysis.jpg",
+      "description": "资料分析外贸等",
+      "width": 1919,
+      "height": 2796,
+      "bytes": 794077
+    },
+    {
+      "file": "pages/20252447_p18_pie_charts.jpg",
+      "description": "饼图选项题126-130",
+      "width": 1985,
+      "height": 2859,
+      "bytes": 758328
+    },
+    {
+      "file": "pages/20252447_p20_sun_moon.jpg",
+      "description": "日月升落示意图常识",
+      "width": 1930,
+      "height": 2749,
+      "bytes": 705337
+    },
+    {
+      "file": "pages/20254871_p13_data.jpg",
+      "description": "省级资料分析",
+      "width": 1920,
+      "height": 2751,
+      "bytes": 826951
+    },
+    {
+      "file": "pages/20254871_p14_data.jpg",
+      "description": "省级资料分析",
+      "width": 1942,
+      "height": 2797,
+      "bytes": 688238
+    },
+    {
+      "file": "pages/20254871_p15_bar_chart.jpg",
+      "description": "柱状图+厨房小家电表67-71",
+      "width": 1908,
+      "height": 2750,
+      "bytes": 619161
+    },
+    {
+      "file": "pages/20254871_p16_data.jpg",
+      "description": "省级资料分析",
+      "width": 1974,
+      "height": 2827,
+      "bytes": 666446
+    },
+    {
+      "file": "pages/20254871_p17_data.jpg",
+      "description": "省级资料分析",
+      "width": 1942,
+      "height": 2797,
+      "bytes": 673780
+    },
+    {
+      "file": "pages/20254871_p18_line_charts.jpg",
+      "description": "折线图选项题76",
+      "width": 1975,
+      "height": 2828,
+      "bytes": 849133
+    },
+    {
+      "file": "pages/20257276_p01_diff.jpg",
+      "description": "行政执法差异题页1",
+      "width": 1952,
+      "height": 2796,
+      "bytes": 901462
+    },
+    {
+      "file": "pages/20257276_p02_diff.jpg",
+      "description": "行政执法差异题页2",
+      "width": 1974,
+      "height": 2827,
+      "bytes": 940221
+    },
+    {
+      "file": "pages/20257276_p05_diff.jpg",
+      "description": "行政执法差异题页5",
+      "width": 1973,
+      "height": 2827,
+      "bytes": 768497
+    }
+  ],
+  "figures": [
+    {
+      "question_id": "q076",
+      "file": "figures/q076.jpg",
+      "label": "图形推理76题干+选项",
+      "source_page": "pages/20252447_p02_q76-78_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.12,
+        0.92,
+        0.32
+      ],
+      "width": 1631,
+      "height": 560,
+      "bytes": 167484
+    },
+    {
+      "question_id": "q077",
+      "file": "figures/q077.jpg",
+      "label": "图形推理77题干+选项",
+      "source_page": "pages/20252447_p02_q76-78_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.34,
+        0.92,
+        0.54
+      ],
+      "width": 1631,
+      "height": 560,
+      "bytes": 175762
+    },
+    {
+      "question_id": "q078",
+      "file": "figures/q078.jpg",
+      "label": "图形推理78题干+选项",
+      "source_page": "pages/20252447_p02_q76-78_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.56,
+        0.92,
+        0.88
+      ],
+      "width": 1631,
+      "height": 895,
+      "bytes": 232678
+    },
+    {
+      "question_id": "q079",
+      "file": "figures/q079.jpg",
+      "label": "图形推理79",
+      "source_page": "pages/20252447_p03_q79-82_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.05,
+        0.92,
+        0.22
+      ],
+      "width": 1630,
+      "height": 472,
+      "bytes": 126331
+    },
+    {
+      "question_id": "q080",
+      "file": "figures/q080.jpg",
+      "label": "立体切面80",
+      "source_page": "pages/20252447_p03_q79-82_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.24,
+        0.92,
+        0.48
+      ],
+      "width": 1630,
+      "height": 667,
+      "bytes": 220886
+    },
+    {
+      "question_id": "q081",
+      "file": "figures/q081.jpg",
+      "label": "展开图81",
+      "source_page": "pages/20252447_p03_q79-82_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.5,
+        0.92,
+        0.72
+      ],
+      "width": 1630,
+      "height": 611,
+      "bytes": 216648
+    },
+    {
+      "question_id": "q082",
+      "file": "figures/q082.jpg",
+      "label": "组合多面体82",
+      "source_page": "pages/20252447_p03_q79-82_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.74,
+        0.92,
+        0.98
+      ],
+      "width": 1630,
+      "height": 667,
+      "bytes": 133521
+    },
+    {
+      "question_id": "q083",
+      "file": "figures/q083.jpg",
+      "label": "图形分类83",
+      "source_page": "pages/20252447_p04_q83-85_classify.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.04,
+        0.92,
+        0.28
+      ],
+      "width": 1648,
+      "height": 678,
+      "bytes": 228384
+    },
+    {
+      "question_id": "q084",
+      "file": "figures/q084.jpg",
+      "label": "图形分类84",
+      "source_page": "pages/20252447_p04_q83-85_classify.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.3,
+        0.92,
+        0.52
+      ],
+      "width": 1648,
+      "height": 622,
+      "bytes": 217054
+    },
+    {
+      "question_id": "q085",
+      "file": "figures/q085.jpg",
+      "label": "图形分类85",
+      "source_page": "pages/20252447_p04_q83-85_classify.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.54,
+        0.92,
+        0.78
+      ],
+      "width": 1648,
+      "height": 678,
+      "bytes": 242571
+    },
+    {
+      "question_id": "q093_tree",
+      "file": "figures/q093_tree.jpg",
+      "label": "深度优先搜索树图93",
+      "source_page": "pages/20252447_p07_q91-93_definition.jpg",
+      "crop_box_frac": [
+        0.15,
+        0.55,
+        0.85,
+        0.78
+      ],
+      "width": 1358,
+      "height": 646,
+      "bytes": 203634
+    },
+    {
+      "question_id": "q038_geom",
+      "file": "figures/q038_geom.jpg",
+      "label": "厂区几何图38",
+      "source_page": "pages/20254871_p06_q36-39_qty_graphic.jpg",
+      "crop_box_frac": [
+        0.2,
+        0.42,
+        0.8,
+        0.62
+      ],
+      "width": 1185,
+      "height": 565,
+      "bytes": 112031
+    },
+    {
+      "question_id": "q039",
+      "file": "figures/q039.jpg",
+      "label": "图形推理39省级",
+      "source_page": "pages/20254871_p06_q36-39_qty_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.72,
+        0.92,
+        0.95
+      ],
+      "width": 1659,
+      "height": 650,
+      "bytes": 168754
+    },
+    {
+      "question_id": "q040",
+      "file": "figures/q040.jpg",
+      "label": "图形推理40省级",
+      "source_page": "pages/20254871_p07_q40-43_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.04,
+        0.92,
+        0.28
+      ],
+      "width": 1659,
+      "height": 683,
+      "bytes": 209857
+    },
+    {
+      "question_id": "q041",
+      "file": "figures/q041.jpg",
+      "label": "图形推理41省级",
+      "source_page": "pages/20254871_p07_q40-43_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.3,
+        0.92,
+        0.55
+      ],
+      "width": 1659,
+      "height": 711,
+      "bytes": 214324
+    },
+    {
+      "question_id": "q042",
+      "file": "figures/q042.jpg",
+      "label": "立体切面42省级",
+      "source_page": "pages/20254871_p07_q40-43_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.56,
+        0.92,
+        0.78
+      ],
+      "width": 1659,
+      "height": 626,
+      "bytes": 188683
+    },
+    {
+      "question_id": "q043",
+      "file": "figures/q043.jpg",
+      "label": "图形分类43省级",
+      "source_page": "pages/20254871_p07_q40-43_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.8,
+        0.92,
+        0.98
+      ],
+      "width": 1659,
+      "height": 512,
+      "bytes": 99782
+    },
+    {
+      "question_id": "q102",
+      "file": "figures/q102.jpg",
+      "label": "行政执法图形102",
+      "source_page": "pages/20257276_p03_q101-104_qty_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.28,
+        0.92,
+        0.5
+      ],
+      "width": 1638,
+      "height": 622,
+      "bytes": 256732
+    },
+    {
+      "question_id": "q103",
+      "file": "figures/q103.jpg",
+      "label": "行政执法立体103",
+      "source_page": "pages/20257276_p03_q101-104_qty_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.52,
+        0.92,
+        0.72
+      ],
+      "width": 1638,
+      "height": 565,
+      "bytes": 187737
+    },
+    {
+      "question_id": "q104",
+      "file": "figures/q104.jpg",
+      "label": "行政执法展开图104",
+      "source_page": "pages/20257276_p03_q101-104_qty_graphic.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.74,
+        0.92,
+        0.95
+      ],
+      "width": 1638,
+      "height": 594,
+      "bytes": 143939
+    },
+    {
+      "question_id": "q105",
+      "file": "figures/q105.jpg",
+      "label": "概念关系图105",
+      "source_page": "pages/20257276_p04_q105-107_concept.jpg",
+      "crop_box_frac": [
+        0.1,
+        0.18,
+        0.9,
+        0.48
+      ],
+      "width": 1579,
+      "height": 843,
+      "bytes": 287325
+    },
+    {
+      "question_id": "q126_pies",
+      "file": "figures/q126_pies.jpg",
+      "label": "饼图选项A-D题126",
+      "source_page": "pages/20252447_p18_pie_charts.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.12,
+        0.7,
+        0.38
+      ],
+      "width": 1231,
+      "height": 743,
+      "bytes": 184564
+    },
+    {
+      "question_id": "q120_bar",
+      "file": "figures/q120_bar.jpg",
+      "label": "柱状图题120",
+      "source_page": "pages/20252447_p15_data_table_bar.jpg",
+      "crop_box_frac": [
+        0.25,
+        0.72,
+        0.75,
+        0.92
+      ],
+      "width": 976,
+      "height": 569,
+      "bytes": 95261
+    },
+    {
+      "question_id": "q116_table",
+      "file": "figures/q116_table.jpg",
+      "label": "法律顾问数据表116-119",
+      "source_page": "pages/20252447_p15_data_table_bar.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.05,
+        0.92,
+        0.28
+      ],
+      "width": 1638,
+      "height": 654,
+      "bytes": 198878
+    },
+    {
+      "question_id": "common_sense_sunmoon",
+      "file": "figures/common_sense_sunmoon.jpg",
+      "label": "日月升落示意图",
+      "source_page": "pages/20252447_p20_sun_moon.jpg",
+      "crop_box_frac": [
+        0.12,
+        0.08,
+        0.88,
+        0.32
+      ],
+      "width": 1467,
+      "height": 660,
+      "bytes": 168863
+    },
+    {
+      "question_id": "q067_bar",
+      "file": "figures/q067_bar.jpg",
+      "label": "厨房小家电分品类柱状图",
+      "source_page": "pages/20254871_p15_bar_chart.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.42,
+        0.92,
+        0.72
+      ],
+      "width": 1603,
+      "height": 825,
+      "bytes": 203798
+    },
+    {
+      "question_id": "q066_bar",
+      "file": "figures/q066_bar.jpg",
+      "label": "集成电路柱状图题66",
+      "source_page": "pages/20254871_p15_bar_chart.jpg",
+      "crop_box_frac": [
+        0.2,
+        0.08,
+        0.7,
+        0.28
+      ],
+      "width": 954,
+      "height": 550,
+      "bytes": 101460
+    },
+    {
+      "question_id": "q076_lines",
+      "file": "figures/q076_lines.jpg",
+      "label": "折线图选项A-D题76",
+      "source_page": "pages/20254871_p18_line_charts.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.08,
+        0.75,
+        0.32
+      ],
+      "width": 1323,
+      "height": 678,
+      "bytes": 169076
+    },
+    {
+      "question_id": "q111_chart",
+      "file": "figures/q111_chart.jpg",
+      "label": "小巨人企业柱状图111-115资料",
+      "source_page": "pages/20252447_p13_data_analysis.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.18,
+        0.92,
+        0.48
+      ],
+      "width": 1638,
+      "height": 844,
+      "bytes": 262856
+    },
+    {
+      "question_id": "q111_table",
+      "file": "figures/q111_table.jpg",
+      "label": "城市小巨人企业数据表",
+      "source_page": "pages/20252447_p13_data_analysis.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.52,
+        0.92,
+        0.92
+      ],
+      "width": 1638,
+      "height": 1125,
+      "bytes": 308077
+    },
+    {
+      "question_id": "q115_pies",
+      "file": "figures/q115_pies.jpg",
+      "label": "饼图选项题115",
+      "source_page": "pages/20252447_p14_data_analysis.jpg",
+      "crop_box_frac": [
+        0.15,
+        0.42,
+        0.85,
+        0.62
+      ],
+      "width": 1373,
+      "height": 569,
+      "bytes": 194254
+    },
+    {
+      "question_id": "q121_charts",
+      "file": "figures/q121_charts.jpg",
+      "label": "电影票房双图121-125",
+      "source_page": "pages/20252447_p16_data_analysis.jpg",
+      "crop_box_frac": [
+        0.08,
+        0.12,
+        0.92,
+        0.72
+      ],
+      "width": 1638,
+      "height": 1705,
+      "bytes": 492299
+    }
+  ],
+  "conventions": {
+    "path_root": "gongkao_2025/",
+    "page_naming": "pages/{source}_{page}_{label}.jpg",
+    "figure_naming": "figures/q{number:03d}.jpg  or  figures/q{number:03d}_{suffix}.jpg",
+    "formula_field": "questions[].formulas[] with latex string",
+    "media_field": "questions[].media[] list of {path, kind, label}"
+  }
+}

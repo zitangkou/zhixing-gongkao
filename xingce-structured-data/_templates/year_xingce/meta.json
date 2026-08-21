@@ -1,0 +1,32 @@
+{
+  "exam_year": 0,
+  "exam_name": "YYYY年度国家公务员考试",
+  "subject": "行政职业能力测验",
+  "subject_code": "xingce",
+  "papers": {
+    "shengji": {
+      "paper_type": "省级",
+      "total_questions": 135,
+      "file": "papers/shengji.json"
+    },
+    "shidi": {
+      "paper_type": "市地级",
+      "total_questions": 130,
+      "file": "papers/shidi.json"
+    },
+    "xingzhengzhifa": {
+      "paper_type": "行政执法类",
+      "total_questions": 130,
+      "file": "papers/xingzhengzhifa.json"
+    }
+  },
+  "source_files": [],
+  "media": {
+    "pages_dir": "media/pages",
+    "figures_dir": "media/figures",
+    "formulas_dir": "media/formulas",
+    "index": "media/media_index.json"
+  },
+  "status": "empty",
+  "updated": ""
+}

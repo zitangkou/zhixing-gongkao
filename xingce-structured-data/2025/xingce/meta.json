@@ -1,0 +1,66 @@
+{
+  "exam_year": 2025,
+  "exam_name": "2025年度国家公务员考试",
+  "subject": "行政职业能力测验",
+  "subject_code": "xingce",
+  "papers": {
+    "shengji": {
+      "paper_type": "省级",
+      "total_questions": 135,
+      "modules": {
+        "政治理论": [1, 20],
+        "常识判断": [21, 35],
+        "言语理解与表达": [36, 65],
+        "数量关系": [66, 80],
+        "判断推理": [81, 115],
+        "资料分析": [116, 135]
+      },
+      "file": "papers/shengji.json"
+    },
+    "shidi": {
+      "paper_type": "市地级",
+      "total_questions": 130,
+      "modules": {
+        "政治理论": [1, 20],
+        "常识判断": [21, 35],
+        "言语理解与表达": [36, 65],
+        "数量关系": [66, 75],
+        "判断推理": [76, 110],
+        "资料分析": [111, 130]
+      },
+      "file": "papers/shidi.json"
+    },
+    "xingzhengzhifa": {
+      "paper_type": "行政执法类",
+      "total_questions": 130,
+      "modules": {
+        "政治理论": [1, 20],
+        "常识判断": [21, 35],
+        "言语理解与表达": [36, 65],
+        "数量关系": [66, 75],
+        "判断推理": [76, 110],
+        "资料分析": [111, 130]
+      },
+      "file": "papers/xingzhengzhifa.json"
+    }
+  },
+  "source_files": [
+    "20250123.pdf",
+    "20252447.pdf",
+    "20254871.pdf",
+    "20257276.pdf"
+  ],
+  "media": {
+    "pages_dir": "media/pages",
+    "figures_dir": "media/figures",
+    "formulas_dir": "media/formulas",
+    "index": "media/media_index.json"
+  },
+  "conventions": {
+    "primary_paper": "shengji",
+    "build_rule": "以省级全量为主；市地/行政执法 = 共享题 + 差异题补全",
+    "media_paths": "相对本目录 media/ 的相对路径"
+  },
+  "status": "ready",
+  "updated": "2026-08-21"
+}

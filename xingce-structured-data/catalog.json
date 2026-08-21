@@ -1,0 +1,63 @@
+{
+  "project": "国考行测真题结构化数据",
+  "root": "artifacts/gongkao",
+  "updated": "2026-08-21",
+  "years": [
+    {
+      "year": 2025,
+      "subject": "xingce",
+      "status": "ready",
+      "path": "2025/xingce",
+      "papers": [
+        {
+          "id": "shengji",
+          "paper_type": "省级",
+          "file": "2025/xingce/papers/shengji.json",
+          "total_questions": 135
+        },
+        {
+          "id": "shidi",
+          "paper_type": "市地级",
+          "file": "2025/xingce/papers/shidi.json",
+          "total_questions": 130
+        },
+        {
+          "id": "xingzhengzhifa",
+          "paper_type": "行政执法类",
+          "file": "2025/xingce/papers/xingzhengzhifa.json",
+          "total_questions": 130
+        }
+      ],
+      "media": {
+        "pages": "2025/xingce/media/pages",
+        "figures": "2025/xingce/media/figures",
+        "index": "2025/xingce/media/media_index.json"
+      },
+      "notes": "以省级为全量主卷；市地/行政执法由共享题+差异题补全"
+    },
+    {
+      "year": 2024,
+      "subject": "xingce",
+      "status": "empty",
+      "path": "2024/xingce",
+      "papers": [],
+      "notes": "待入库"
+    },
+    {
+      "year": 2023,
+      "subject": "xingce",
+      "status": "empty",
+      "path": "2023/xingce",
+      "papers": [],
+      "notes": "待入库"
+    },
+    {
+      "year": 2022,
+      "subject": "xingce",
+      "status": "empty",
+      "path": "2022/xingce",
+      "papers": [],
+      "notes": "待入库"
+    }
+  ]
+}
