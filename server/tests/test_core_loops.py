@@ -565,6 +565,8 @@ def test_shenlun_home_provisions_one_daily_article_task():
         assert task["contentId"] == "rmrb-daily-home"
         assert task["totalSteps"] == 4
         assert task["metadata"]["tags"] == ["民生", "基层治理"]
+        assert task["metadata"]["question"]["maxLength"] == 120
+        assert len(task["metadata"]["question"]["checks"]) == 3
 
 
 def teardown_module(_mod=None):

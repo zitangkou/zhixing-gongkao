@@ -21,6 +21,7 @@
 | 双产品 Sprint 0 | 申论/政治理论 PRD、共享底座设计、`product_key` 后端上下文、公开配置、前端请求/上传注入和产品 Store | 🟡 2026-08-23 第一批完成 |
 | 双产品 Sprint 0 | 通用今日任务、五态学习状态机、服务端草稿与跨端断点恢复、产品隔离、前端任务 Store | ✅ 2026-08-23 第二批完成 |
 | 申论 Sprint 1 | 垂直今日首页、审核文章自动编排、单主任务入口、阅读/三刀进度回写、Mock 演示数据 | ✅ 2026-08-23 第一批完成 |
+| 申论 Sprint 1 | 小题短作答、三项规则自检、自动草稿、表达沉淀入规范词库、今日任务完成页 | ✅ 2026-08-23 第二批完成 |
 
 ## 2. 当前质量基线（2026-08-23 实测）
 
@@ -65,6 +66,7 @@
 ## 5. 最近提交
 
 ```text
+755b9ce feat: launch shenlun daily training home
 f305b86 feat: add resumable daily task workflow
 0f88d16 feat: bootstrap shenlun and theory product foundation
 c8df137 feat(deploy): 一键部署云服务器脚本 + 部署文档与项目进度维护

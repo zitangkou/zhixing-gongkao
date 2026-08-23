@@ -295,6 +295,17 @@
       <nut-button type="primary" block :loading="saving" @click="onSaveSection">
         {{ saveLabel }}
       </nut-button>
+      <nut-button
+        v-if="taskId"
+        plain
+        type="primary"
+        block
+        class="daily-continue"
+        :loading="saving"
+        @click="goDailyAnswer"
+      >
+        完成拆解，继续作答
+      </nut-button>
       <text v-if="mineId" class="del-link" @tap="onDelete">删除本条</text>
     </view>
   </view>
@@ -335,6 +346,7 @@ definePageConfig({ navigationBarTitleText: '三刀解剖' })
 const { themeClass } = useThemeClass()
 const router = useRouter()
 const dailyTaskStore = useDailyTaskStore()
+const taskId = computed(() => (router.params?.taskId || '').trim())
 const mineId = ref('')
 const articleId = ref('')
 /** 避免页面缓存导致重复 load；id 变化时强制重载 */
@@ -951,15 +963,15 @@ async function onSaveSection() {
   const tab = activeTab.value
   if (tab === 'terms' && !termPayload().length) {
     showToast('请至少填写一个规范词')
-    return
+    return false
   }
   if (tab === 'quotes' && !quotePayload().length) {
     showToast('请至少填写一条金句')
-    return
+    return false
   }
   if (tab === 'verbs' && !verbPayload().length) {
     showToast('请至少填写一个动词')
-    return
+    return false
   }
   if (tab === 'argument') {
     const arg = buildArgumentPayload()
@@ -971,21 +983,21 @@ async function onSaveSection() {
       !!arg.templateId
     if (!hasArg) {
       showToast('请填写骨架内容或选择模版')
-      return
+      return false
     }
   }
   if (tab === 'templates') {
     const tpls = templates.value.filter((t) => t.original.trim() || t.template.trim() || t.imitate.trim())
     if (!tpls.length) {
       showToast('请至少填写一句式')
-      return
+      return false
     }
   }
 
   saving.value = true
   try {
     const id = await ensureMineId()
-    if (!id) return
+    if (!id) return false
 
     const meta = {
       articleId: articleId.value || null,
@@ -1012,12 +1024,11 @@ async function onSaveSection() {
         'success',
       )
       if (res.data) applyMine(res.data)
-      const taskId = (router.params?.taskId || '').trim()
-      const task = dailyTaskStore.tasks.find((item) => item.id === taskId)
-      if (taskId && task?.progress.state === 'in_progress') {
+      const task = dailyTaskStore.tasks.find((item) => item.id === taskId.value)
+      if (taskId.value && task?.progress.state === 'in_progress') {
         try {
           await dailyTaskStore.saveDraft(
-            taskId,
+            taskId.value,
             {
               ...task.progress.draft,
               articleId: articleId.value,
@@ -1031,12 +1042,22 @@ async function onSaveSection() {
           showToast('开采内容已保存，任务进度稍后同步', 'error')
         }
       }
+      return true
     } else {
       showToast(res.message || '保存失败', 'error')
+      return false
     }
   } finally {
     saving.value = false
   }
+}
+
+async function goDailyAnswer() {
+  const saved = await onSaveSection()
+  if (!saved || !taskId.value) return
+  Taro.navigateTo({
+    url: `/pages/shenlun/training?taskId=${encodeURIComponent(taskId.value)}`,
+  })
 }
 
 async function onDelete() {
@@ -1305,6 +1326,7 @@ useDidShow(() => {
   margin-top: 12px;
   padding: 10px 0 calc(10px + env(safe-area-inset-bottom));
   background: linear-gradient(180deg, transparent, $page-bg 28%);
+  .daily-continue { margin-top: 8px; }
   .del-link {
     display: block;
     text-align: center;

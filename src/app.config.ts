@@ -53,6 +53,7 @@ export default defineAppConfig({
     'pages/rmrb/mine-edit',
     'pages/rmrb/terms',
     'pages/rmrb/drill',
+    'pages/shenlun/training',
   ],
   window: {
     navigationBarBackgroundColor: '#D0021B',

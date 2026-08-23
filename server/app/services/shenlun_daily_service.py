@@ -75,6 +75,13 @@ def ensure_shenlun_daily_task(db: Session, task_date: str) -> DailyLearningTask 
                 "publishDate": article.publish_date or "",
                 "tags": _article_tags(article.tags),
                 "steps": SHENLUN_DAILY_STEPS,
+                "question": {
+                    "type": "概括练习",
+                    "prompt": "请用不超过120字，概括文章关注的核心问题与主要解决思路。",
+                    "maxLength": 120,
+                    "checks": ["对象和主题明确", "核心问题或成效清楚", "做法、原因有材料依据"],
+                },
+                "depositPrompt": "写下今天最值得迁移到申论作答中的一个规范表达。",
             },
             ensure_ascii=False,
         ),
