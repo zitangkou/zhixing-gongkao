@@ -38,10 +38,29 @@
     {
       "year": 2024,
       "subject": "xingce",
-      "status": "empty",
+      "status": "papers_assembled",
       "path": "2024/xingce",
-      "papers": [],
-      "notes": "待入库"
+      "papers": [
+        {
+          "id": "shengji",
+          "paper_type": "省级",
+          "file": "2024/xingce/papers/shengji.json",
+          "total_questions": 135
+        },
+        {
+          "id": "shidi",
+          "paper_type": "市地级",
+          "file": "2024/xingce/papers/shidi.json",
+          "total_questions": 125
+        },
+        {
+          "id": "xingzhengzhifa",
+          "paper_type": "行政执法类",
+          "file": "2024/xingce/papers/xingzhengzhifa.json",
+          "total_questions": 125
+        }
+      ],
+      "notes": "省级完整；市地/行政执法以省级为底组装，差异题已提取，精确替换可继续"
     },
     {
       "year": 2023,

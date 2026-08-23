@@ -32,7 +32,7 @@
     "formulas_dir": "media/formulas",
     "index": "media/media_index.json"
   },
-  "status": "extracting",
+  "status": "papers_assembled",
   "updated": "2026-08-23",
-  "notes": "常识/言语/数量/资料已结构化（_extract/）；判断进行中；差异题待补。总进度约95/135题文本完成。"
+  "notes": "三卷已组装：shengji 135题完整；shidi/xingzhengzhifa 约125题（以省级为底重排，差异题已提取至_extract/xzzf_diffs.json，精确槽位替换与市地言语差异可继续完善）。图形media待裁。"
 }
