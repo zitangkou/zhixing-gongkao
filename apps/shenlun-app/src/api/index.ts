@@ -79,6 +79,27 @@ export interface UserMe {
   signDates: string[]
 }
 
+export interface ShenlunMine {
+  id: string
+  mineDate: string
+  articleId: string
+  articleTitle: string
+  sourceExcerpt: string
+  argumentChain: string
+  templateSentence: string
+  terms: Array<{ term: string; category: string; plainWord?: string }>
+}
+
+export interface ShenlunDrill {
+  id: string
+  drillType: 'sentence' | 'imitate' | 'oral'
+  content: string
+  prompt: string
+  refMineId?: string | null
+  refTermIds: string[]
+  createdAt: string
+}
+
 interface AuthResult { access_token: string; token_type: string; user: UserMe }
 
 interface RequestOptions {
@@ -150,4 +171,13 @@ export const api = {
     templateSentence: string
     terms: string[]
   }) { return request<{ id: string }>('/api/rmrb/mines', { method: 'POST', data }) },
+  listMines() { return request<ShenlunMine[]>('/api/rmrb/mines') },
+  listDrills() { return request<ShenlunDrill[]>('/api/rmrb/drills') },
+  addDrill(data: {
+    drillType: 'sentence' | 'imitate' | 'oral'
+    content: string
+    prompt: string
+    refMineId?: string | null
+    refTermIds?: string[]
+  }) { return request<ShenlunDrill>('/api/rmrb/drills', { method: 'POST', data }) },
 }
