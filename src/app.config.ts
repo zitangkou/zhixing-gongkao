@@ -82,6 +82,8 @@ export default defineAppConfig({
     'pages/rmrb/drill',
     'pages/shenlun/training',
     'pages/theory/index',
+    'pages/theory/pack',
+    'pages/theory/review',
   ],
   window: {
     navigationBarBackgroundColor: '#D0021B',

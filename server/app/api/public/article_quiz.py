@@ -1,4 +1,5 @@
 from app.api.public._deps import *  # noqa: F401,F403
+from app.product import ProductContext
 
 router = APIRouter()
 
@@ -106,19 +107,25 @@ def mark_read(
 
 
 @router.get("/questions")
-def list_questions(articleId: str = Query(...), db: Session = Depends(get_db)):
+def list_questions(
+    articleId: str = Query(...),
+    product: ProductContext = Depends(get_product_context),
+    db: Session = Depends(get_db),
+):
     article = db.get(Article, articleId)
     if not article or not article.allow_quiz or article.status != "published":
         return ApiResponse.ok([])
-    rows = (
+    query = (
         db.query(Question)
         .filter(
             Question.article_id == articleId,
             Question.is_active.is_(True),
             Question.status == "approved",
         )
-        .all()
     )
+    if product.key == "theory":
+        query = query.filter(Question.source_sentence != "")
+    rows = query.all()
     return ApiResponse.ok([question_to_out(q).model_dump() for q in rows])
 
 
@@ -371,4 +378,3 @@ def complete_review_task(
 @router.get("/review/hub")
 def review_hub(user: AppUser = Depends(get_app_user), db: Session = Depends(get_db)):
     return ApiResponse.ok(get_review_hub(db, user).model_dump())
-

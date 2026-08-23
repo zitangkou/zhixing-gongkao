@@ -622,6 +622,21 @@ def test_theory_home_only_provisions_evidence_backed_pack():
                         is_active=True,
                     )
                 )
+            db.add(
+                Question(
+                    id="q-theory-without-evidence",
+                    article_id=article.id,
+                    type="single",
+                    stem="尚未补齐依据的题目",
+                    options='["A", "B"]',
+                    correct_answer='"A"',
+                    analysis="待补依据。",
+                    source_sentence="",
+                    status="approved",
+                    origin="manual",
+                    is_active=True,
+                )
+            )
             db.commit()
 
         first = _ok(client.get("/api/product/daily-tasks", headers=headers))
@@ -635,6 +650,23 @@ def test_theory_home_only_provisions_evidence_backed_pack():
         assert task["metadata"]["questionCount"] == 3
         assert task["metadata"]["evidenceCount"] == 3
         assert task["metadata"]["focuses"] == ["高质量发展", "新发展理念"]
+
+        theory_questions = _ok(
+            client.get(
+                "/api/questions",
+                params={"articleId": "art-theory-daily"},
+                headers=headers,
+            )
+        )
+        general_questions = _ok(
+            client.get(
+                "/api/questions",
+                params={"articleId": "art-theory-daily"},
+                headers={**user["headers"], "X-Product-Key": "general"},
+            )
+        )
+        assert len(theory_questions) == 3
+        assert len(general_questions) == 4
 
 
 def teardown_module(_mod=None):

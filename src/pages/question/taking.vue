@@ -34,8 +34,15 @@
         </view>
       </view>
 
-      <nut-button type="primary" block class="primary-btn" @click="leavePage">
-        {{ isWrongMode ? '返回复习' : '返回练习' }}
+      <nut-button
+        type="primary"
+        block
+        class="primary-btn"
+        :loading="syncingResult"
+        :disabled="syncingResult"
+        @click="leavePage"
+      >
+        {{ resultActionText }}
       </nut-button>
       <view v-if="isWrongSession && sessionSummary" class="wrong-session-summary">
         <text>掌握 {{ sessionSummary.mastered }} · 已安排下次 {{ sessionSummary.scheduled }} · 仍需复习 {{ sessionSummary.reset }}</text>
@@ -93,6 +100,7 @@ import Taro, { useRouter } from '@tarojs/taro'
 import { Button as NutButton } from '@nutui/nutui-taro'
 import QuestionItem from '@/components/QuestionItem.vue'
 import { useQuestionStore } from '@/store/question'
+import { useDailyTaskStore } from '@/store/dailyTask'
 import type { QuizAnswerRecord, Question, QuizMode } from '@/types'
 import { showConfirm, showToast } from '@/utils/platform'
 import { useThemeClass } from '@/utils/brandColor'
@@ -104,6 +112,8 @@ const CORRECT_AUTO_NEXT_MS = 2000
 
 const router = useRouter()
 const questionStore = useQuestionStore()
+const dailyTaskStore = useDailyTaskStore()
+const taskId = (router.params?.taskId || '').trim()
 
 const loading = ref(true)
 const questions = ref<Question[]>([])
@@ -113,6 +123,7 @@ const analysisText = ref('')
 const correctCount = ref(0)
 const earnedPoints = ref(0)
 const finished = ref(false)
+const syncingResult = ref(false)
 const reviewFromResults = ref(false)
 const lastAnswerCorrect = ref(false)
 const answerRecords = ref<Record<string, QuizAnswerRecord>>({})
@@ -164,6 +175,11 @@ const nextLabel = computed(() => {
 const isWrongRedo = computed(() => quizSession.value?.kind === 'wrong')
 const isWrongSession = computed(() => quizSession.value?.kind === 'wrong-session')
 const isWrongMode = computed(() => isWrongRedo.value || isWrongSession.value)
+const dailyTask = computed(() => dailyTaskStore.tasks.find((item) => item.id === taskId) || null)
+const resultActionText = computed(() => {
+  if (taskId) return '回收错因与依据'
+  return isWrongMode.value ? '返回复习' : '返回练习'
+})
 
 onMounted(() => {
   void boot()
@@ -174,6 +190,7 @@ onUnmounted(() => {
 })
 
 async function boot() {
+  if (taskId && !dailyTask.value) await dailyTaskStore.load()
   const { mode, articleId, wrongId, wrongSession } = router.params || {}
   if (wrongSession === '1' || wrongSession === 'true') {
     await startWrongSession()
@@ -228,6 +245,11 @@ function resetQuizState() {
 }
 
 function leavePage() {
+  if (syncingResult.value) return
+  if (taskId) {
+    Taro.redirectTo({ url: `/pages/theory/review?taskId=${encodeURIComponent(taskId)}` })
+    return
+  }
   const pages = Taro.getCurrentPages()
   if (pages.length > 1) {
     Taro.navigateBack()
@@ -436,10 +458,12 @@ async function goNext() {
 
 async function finishQuiz() {
   finished.value = true
+  syncingResult.value = Boolean(taskId)
   reviewFromResults.value = false
   const session = quizSession.value
   if (session?.kind === 'wrong' || session?.kind === 'wrong-session') {
     questionStore.completeDailyWrongReview()
+    syncingResult.value = false
     return
   }
   const mode = session?.kind === 'mode' ? session.mode : 'article'
@@ -458,6 +482,29 @@ async function finishQuiz() {
       bestAccuracy: stats.bestAccuracy ?? stats.accuracy,
     }
   }
+  if (taskId && dailyTask.value?.progress.state === 'in_progress') {
+    try {
+      const wrongQuestionIds = questions.value
+        .filter((question) => !answerRecords.value[question.id]?.correct)
+        .map((question) => question.id)
+      await dailyTaskStore.saveDraft(
+        taskId,
+        {
+          ...dailyTask.value.progress.draft,
+          quizCompleted: true,
+          quizTotal: totalCount.value,
+          quizCorrect: correctCount.value,
+          wrongQuestionIds,
+          quizAnswers: answerRecords.value,
+        },
+        3,
+        dailyTask.value.totalSteps,
+      )
+    } catch (error) {
+      showToast(error instanceof Error ? error.message : '测验结果同步失败', 'error')
+    }
+  }
+  syncingResult.value = false
 }
 
 function goReviewQuestion(index: number) {

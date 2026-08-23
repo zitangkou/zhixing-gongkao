@@ -165,7 +165,7 @@ async function openPack() {
   try {
     if (task.progress.state === 'not_started') await dailyTaskStore.start(task.id)
     const query = `id=${encodeURIComponent(task.contentId)}&taskId=${encodeURIComponent(task.id)}`
-    Taro.navigateTo({ url: `/pages/article/detail?${query}` })
+    Taro.navigateTo({ url: `/pages/theory/pack?${query}` })
   } catch (error) {
     showToast(error instanceof Error ? error.message : '学习包启动失败', 'error')
   } finally {

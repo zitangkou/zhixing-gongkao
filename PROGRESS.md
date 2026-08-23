@@ -23,6 +23,7 @@
 | 申论 Sprint 1 | 垂直今日首页、审核文章自动编排、单主任务入口、阅读/三刀进度回写、Mock 演示数据 | ✅ 2026-08-23 第一批完成 |
 | 申论 Sprint 1 | 小题短作答、三项规则自检、自动草稿、表达沉淀入规范词库、今日任务完成页 | ✅ 2026-08-23 第二批完成 |
 | 政治理论 Sprint 1 | 垂直今日首页、3题/证据质量门、权威文章自动编排、独立蓝色主题与三产品动态导航 | ✅ 2026-08-23 第一批完成 |
+| 政治理论 Sprint 1 | 无答案读前定向、原文精读门、证据题过滤、测验结果回写、逐题错因归类与完成页 | ✅ 2026-08-23 第二批完成 |
 
 ## 2. 当前质量基线（2026-08-23 实测）
 
@@ -67,6 +68,7 @@
 ## 5. 最近提交
 
 ```text
+38dc74d feat: launch theory daily learning home
 b94a7ef feat: complete shenlun first-training loop
 755b9ce feat: launch shenlun daily training home
 f305b86 feat: add resumable daily task workflow

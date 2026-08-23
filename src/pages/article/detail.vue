@@ -1,5 +1,5 @@
 <template>
-  <view class="page-detail" v-if="article" :class="themeClass">
+  <view v-if="article" class="page-detail" :class="themeClass">
     <view class="tabs">
       <view class="tab" :class="{ active: tab === 'content' }" @tap="tab = 'content'">正文</view>
       <view class="tab" :class="{ active: tab === 'mindmap' }" @tap="tab = 'mindmap'">知识框架</view>
@@ -82,7 +82,7 @@
         type="primary"
         block
         class="primary-btn"
-        :disabled="readDone"
+        :disabled="taskId ? dailyReadDone : readDone"
         @click="finishRead"
       >
         {{ finishReadLabel }}
@@ -109,6 +109,7 @@ import CorpusSelectCapture from '@/components/CorpusSelectCapture.vue'
 import MindMap from '@/components/MindMap.vue'
 import SectionPager from '@/components/SectionPager.vue'
 import { useArticleStore } from '@/store/article'
+import { useDailyTaskStore } from '@/store/dailyTask'
 import {
   countSections,
   flattenSections,
@@ -124,6 +125,7 @@ definePageConfig({ navigationBarTitleText: '文章详情' })
 
 const { themeClass } = useThemeClass()
 const articleStore = useArticleStore()
+const dailyTaskStore = useDailyTaskStore()
 const tab = ref<'content' | 'mindmap'>('content')
 const readMode = ref<'list' | 'pager'>('list')
 const readDone = ref(false)
@@ -132,6 +134,9 @@ const openIds = ref<Set<string>>(new Set())
 const activeChapterId = ref('')
 const scrollTarget = ref('')
 const pagerIndex = ref(0)
+const taskId = ref('')
+const dailyTask = computed(() => dailyTaskStore.tasks.find((item) => item.id === taskId.value) || null)
+const dailyReadDone = computed(() => (dailyTask.value?.progress.currentStep || 0) >= 2)
 
 const sectionStats = computed(() =>
   article.value?.sections?.length
@@ -162,6 +167,9 @@ const readProgress = computed(() => {
 const currentPagerSection = computed(() => readableSections.value[pagerIndex.value] || null)
 
 const finishReadLabel = computed(() => {
+  if (taskId.value) {
+    return dailyReadDone.value ? '本次精读已完成' : '完成原文精读'
+  }
   if (readDone.value) return '已阅读 +3积分'
   const allRead = article.value
     ? articleStore.isAllSectionsRead(
@@ -246,7 +254,10 @@ function scrollToSection(id: string) {
 }
 
 onMounted(async () => {
-  const { id } = Taro.getCurrentInstance().router?.params || {}
+  const params = Taro.getCurrentInstance().router?.params || {}
+  const { id } = params
+  taskId.value = (params.taskId || '').trim()
+  if (taskId.value && !dailyTask.value) await dailyTaskStore.load()
   if (id) {
     const data = await articleStore.getArticleDetail(id)
     article.value = data || null
@@ -269,14 +280,32 @@ async function finishRead() {
     showToast(`请先读完所有小节（${readSectionCount.value}/${allIds.length}）`)
     return
   }
-  const points = await articleStore.markAsRead(article.value.id)
+  const points = readDone.value ? 0 : await articleStore.markAsRead(article.value.id)
   readDone.value = true
-  showToast(`阅读完成，+${points}积分`, 'success')
+  if (taskId.value && dailyTask.value?.progress.state === 'in_progress') {
+    try {
+      await dailyTaskStore.saveDraft(
+        taskId.value,
+        { ...dailyTask.value.progress.draft, readingCompleted: true },
+        2,
+        dailyTask.value.totalSteps,
+      )
+    } catch (error) {
+      showToast(error instanceof Error ? error.message : '精读进度保存失败', 'error')
+      return
+    }
+  }
+  showToast(points ? `阅读完成，+${points}积分` : '本次精读已完成', 'success')
 }
 
 function goQuiz() {
   if (!article.value) return
-  Taro.navigateTo({ url: `/pages/question/taking?articleId=${article.value.id}` })
+  if (taskId.value && !dailyReadDone.value) {
+    showToast('请先完成本次原文精读')
+    return
+  }
+  const taskQuery = taskId.value ? `&taskId=${encodeURIComponent(taskId.value)}` : ''
+  Taro.navigateTo({ url: `/pages/question/taking?articleId=${article.value.id}${taskQuery}` })
 }
 
 async function onCopyArticle() {
