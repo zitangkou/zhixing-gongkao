@@ -14,6 +14,7 @@ export default defineConfig<'vite'>(() => ({
   defineConstants: {
     API_BASE_URL: JSON.stringify(process.env.TARO_APP_API_URL ?? 'http://127.0.0.1:8001'),
     PRODUCT_KEY: JSON.stringify('shenlun'),
+    USE_MOCK: JSON.stringify(process.env.USE_MOCK === 'true'),
   },
   mini: { postcss: { pxtransform: { enable: true, config: {} }, cssModules: { enable: false } } },
   h5: {

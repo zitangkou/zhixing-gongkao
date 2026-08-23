@@ -17,6 +17,7 @@
     "@tarojs/plugin-platform-weapp": "4.0.9",
     "@tarojs/runtime": "4.0.9",
     "@tarojs/taro": "4.0.9",
+    "pinia": "^2.2.6",
     "vue": "^3.5.13"
   },
   "devDependencies": {

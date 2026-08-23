@@ -1,10 +1,61 @@
 <template>
   <view class="page">
-    <view class="eyebrow">连续学习 7 天</view><view class="page-title">早上好，今天练一篇</view>
-    <view class="hero"><view class="hero-kicker">人民日报精读 · 约 18 分钟</view><view class="hero-title">从“千万工程”读懂基层治理</view><view class="hero-desc">用三刀法拆出立意、结构与表达，再完成一道真题化练习。</view><view class="hero-action">继续今日学习</view></view>
-    <view class="section-head"><view class="section-title">今日路径</view><view class="section-meta">1 / 3 已完成</view></view>
-    <view class="card row"><view class="step">1</view><view><view class="card-title">通读原文</view><view class="card-desc">抓主题句与材料逻辑</view></view><view class="tag">已完成</view></view>
-    <view class="card row"><view class="step">2</view><view><view class="card-title">三刀法拆解</view><view class="card-desc">切论点 · 切结构 · 切表达</view></view><view class="tag">进行中</view></view>
-    <view class="card row"><view class="step">3</view><view><view class="card-title">主动输出</view><view class="card-desc">概括题 + 金句仿写</view></view></view>
+    <view class="eyebrow">{{ todayLabel }} · 今日训练</view><view class="page-title">每天吃透一篇，表达自然有根</view>
+    <view v-if="store.loading && !store.task" class="card state-card">正在准备今日内容…</view>
+    <view v-else-if="store.task" class="hero">
+      <view class="hero-kicker">{{ sourceLabel }} · 约 {{ store.task.estimatedMinutes }} 分钟</view>
+      <view class="hero-title">{{ store.task.title }}</view><view class="hero-desc">{{ store.task.description }}</view>
+      <view class="progress-track"><view class="progress-fill" :style="{ width: `${store.progressPercent}%` }" /></view>
+      <view class="hero-action" @tap="startTask">{{ actionText }}</view>
+    </view>
+    <view v-else class="hero">
+      <view class="hero-kicker">人民日报精读 · 约 18 分钟</view><view class="hero-title">从一篇好文章开始今日申论</view>
+      <view class="hero-desc">{{ store.message || '内容通过教研审核后进入每日训练，先去精读库学习。' }}</view><view class="hero-action" @tap="openReading">进入精读库</view>
+    </view>
+    <view class="section-head"><view class="section-title">今日路径</view><view class="section-meta">{{ progressLabel }}</view></view>
+    <view v-for="(stepItem, index) in steps" :key="stepItem.key" class="card row">
+      <view class="step">{{ index + 1 }}</view><view><view class="card-title">{{ stepItem.title }}</view><view class="card-desc">{{ stepItem.description }}</view></view>
+      <view v-if="index < currentStep" class="tag">已完成</view><view v-else-if="index === currentStep && store.task" class="tag">当前</view>
+    </view>
+    <view class="section-head"><view class="section-title">学习沉淀</view><view class="section-meta">本周</view></view>
+    <view class="card insight-row"><view><view class="insight-num">{{ store.stats?.weekMineDays || 0 }}</view><view class="card-desc">精练天数</view></view><view><view class="insight-num">{{ store.stats?.termCount || 0 }}</view><view class="card-desc">规范表达</view></view><view><view class="insight-num">{{ store.stats?.weekDrillCount || 0 }}</view><view class="card-desc">迁移训练</view></view></view>
   </view>
 </template>
+
+<script setup lang="ts">
+import { computed, onMounted } from 'vue'
+import Taro, { useDidShow } from '@tarojs/taro'
+import { useDailyTaskStore } from '@/store/dailyTask'
+import { showToast } from '@/utils/platform'
+
+interface TaskStep { key: string; title: string; description: string }
+const fallbackSteps: TaskStep[] = [
+  { key: 'read', title: '精读定位', description: '读懂主题、对象与核心问题' },
+  { key: 'analyze', title: '三刀拆解', description: '拆骨架、抓规范表达、学句式' },
+  { key: 'answer', title: '小题作答', description: '围绕材料完成一次短作答' },
+  { key: 'deposit', title: '表达沉淀', description: '留下一个可迁移表达' },
+]
+const store = useDailyTaskStore()
+const todayLabel = computed(() => `${new Date().getMonth() + 1}月${new Date().getDate()}日`)
+const sourceLabel = computed(() => String(store.task?.metadata?.source || '人民时评'))
+const steps = computed(() => {
+  const value = store.task?.metadata?.steps
+  return Array.isArray(value) && value.length ? (value as TaskStep[]) : fallbackSteps
+})
+const currentStep = computed(() => store.task?.progress.currentStep || 0)
+const progressLabel = computed(() => store.task ? `${store.progressPercent}%` : '从第一步开始')
+const actionText = computed(() => {
+  if (store.starting) return '正在开始…'
+  if (store.task?.progress.state === 'completed') return '今日训练已完成'
+  return store.task?.progress.state === 'not_started' ? '开始今日学习' : '继续今日学习'
+})
+function openReading() { Taro.switchTab({ url: '/pages/reading/index' }) }
+async function startTask() {
+  if (store.starting || store.task?.progress.state === 'completed') return
+  if (await store.start()) openReading()
+  else showToast(store.message || '暂时无法开始')
+}
+function load() { void store.load() }
+onMounted(load)
+useDidShow(load)
+</script>

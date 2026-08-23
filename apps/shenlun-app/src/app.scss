@@ -8,6 +8,8 @@ page, body, #app { margin: 0; background: $page-bg; color: $text-primary; font-f
 .hero-kicker { font-size: 12px; opacity: .78; }
 .hero-title { margin-top: 9px; font-size: 22px; font-weight: 700; line-height: 1.4; }
 .hero-desc { margin-top: 8px; font-size: 13px; opacity: .82; line-height: 1.7; }
+.progress-track { height: 4px; margin-top: 18px; overflow: hidden; border-radius: 4px; background: rgba(255, 255, 255, .22); }
+.progress-fill { height: 100%; border-radius: 4px; background: $card-bg; transition: width .2s ease; }
 .hero-action { display: inline-flex; align-items: center; min-height: 44px; margin-top: 18px; padding: 0 18px; border-radius: 22px; background: $card-bg; color: $primary-color; font-weight: 700; }
 .section-head { display: flex; align-items: center; justify-content: space-between; margin: 24px 2px 12px; }
 .section-title { font-size: 17px; font-weight: 700; }
@@ -19,4 +21,7 @@ page, body, #app { margin: 0; background: $page-bg; color: $text-primary; font-f
 .card-title { font-size: 15px; font-weight: 650; }
 .card-desc { margin-top: 5px; color: $text-secondary; font-size: 12px; line-height: 1.6; }
 .tag { margin-left: auto; color: $primary-color; font-size: 12px; font-weight: 600; }
+.state-card { margin-top: 18px; color: $text-muted; text-align: center; }
+.insight-row { display: flex; justify-content: space-around; text-align: center; }
+.insight-num { color: $text-primary; font-size: 20px; font-weight: 700; }
 .empty-space { height: 12px; }
