@@ -35,6 +35,12 @@ const router = createRouter({
           meta: { title: '编辑文章', permissions: ['article:read'] },
         },
         {
+          path: 'content-ops',
+          name: 'content-ops',
+          component: () => import('@/views/contentOps/Index.vue'),
+          meta: { title: '账号运营', permissions: ['content_ops:read'] },
+        },
+        {
           path: 'categories',
           name: 'categories',
           component: () => import('@/views/categories/List.vue'),

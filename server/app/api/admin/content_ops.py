@@ -4,8 +4,8 @@ from app.api.deps import require_permission
 from app.core.response import ApiResponse
 from app.database import get_db
 from app.models import ContentOperationTemplate, ContentPublishPackage
-from app.schemas import ContentPublishPackageCreate, ContentPublishStatusBody
-from app.services.content_ops_service import create_package, package_out, template_out, transition_package
+from app.schemas import ContentPublishPackageCreate, ContentPublishPackageUpdate, ContentPublishStatusBody
+from app.services.content_ops_service import create_package, package_out, template_out, transition_package, update_package
 
 router = APIRouter()
 
@@ -37,4 +37,10 @@ def package_create(body: ContentPublishPackageCreate, _admin=Depends(require_per
 @router.post("/content-ops/packages/{package_id}/status")
 def package_status(package_id: str, body: ContentPublishStatusBody, _admin=Depends(require_permission("content_ops:write")), db: Session = Depends(get_db)):
     try: return ApiResponse.ok(transition_package(db, package_id, body.status, body.reviewNote))
+    except ValueError as exc: return ApiResponse.fail(str(exc), code=400)
+
+
+@router.put("/content-ops/packages/{package_id}")
+def package_update(package_id: str, body: ContentPublishPackageUpdate, _admin=Depends(require_permission("content_ops:write")), db: Session = Depends(get_db)):
+    try: return ApiResponse.ok(update_package(db, package_id, body))
     except ValueError as exc: return ApiResponse.fail(str(exc), code=400)

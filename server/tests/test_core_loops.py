@@ -316,13 +316,42 @@ def test_admin_rbac():
         )
         assert package["status"] == "draft"
 
+        package = _ok(
+            client.put(
+                f"/admin/content-ops/packages/{package['id']}",
+                headers=admin_headers,
+                json={
+                    "sourceTitle": "今日三刀训练（已编辑）",
+                    "deepLink": "/pages/rmrb/index?channel=wechat",
+                    "variants": {
+                        "wechat": {"title": "今日申论学习包", "body": "审核前正文"},
+                    },
+                },
+            )
+        )
+        assert package["sourceTitle"].endswith("（已编辑）")
+        assert list(package["variants"]) == ["wechat"]
+
         invalid_publish = client.post(
             f"/admin/content-ops/packages/{package['id']}/status",
             headers=admin_headers,
             json={"status": "published"},
         )
         assert invalid_publish.json()["code"] == 400
-        for status in ("teaching_review", "ops_review", "ready", "published"):
+        package = _ok(
+            client.post(
+                f"/admin/content-ops/packages/{package['id']}/status",
+                headers=admin_headers,
+                json={"status": "teaching_review", "reviewNote": "送教研"},
+            )
+        )
+        locked_edit = client.put(
+            f"/admin/content-ops/packages/{package['id']}",
+            headers=admin_headers,
+            json={"sourceTitle": "审核中不允许修改"},
+        )
+        assert locked_edit.json()["code"] == 400
+        for status in ("ops_review", "ready", "published"):
             package = _ok(
                 client.post(
                     f"/admin/content-ops/packages/{package['id']}/status",

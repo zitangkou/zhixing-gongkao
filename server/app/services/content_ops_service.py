@@ -2,7 +2,7 @@
 import json
 from sqlalchemy.orm import Session
 from app.models import ContentOperationTemplate, ContentPublishPackage, gen_id
-from app.schemas import ContentPublishPackageCreate
+from app.schemas import ContentPublishPackageCreate, ContentPublishPackageUpdate
 from app.timezone import now
 
 CHANNELS = ["xiaohongshu", "douyin", "bilibili", "wechat"]
@@ -91,5 +91,23 @@ def transition_package(db: Session, package_id: str, target: str, note: str = ""
         raise ValueError(f"发布包状态 {row.status} 不能变更为 {target}")
     row.status = target; row.review_note = note.strip()
     if target == "published": row.published_at = now()
+    db.commit(); db.refresh(row)
+    return package_out(row)
+
+
+def update_package(db: Session, package_id: str, body: ContentPublishPackageUpdate) -> dict:
+    row = db.get(ContentPublishPackage, package_id)
+    if not row:
+        raise ValueError("发布包不存在")
+    if row.status not in ("draft", "rejected"):
+        raise ValueError("只有草稿或已驳回发布包可以编辑")
+    data = body.model_dump(exclude_unset=True)
+    mapping = {"sourceTitle": "source_title", "campaignKey": "campaign_key", "deepLink": "deep_link", "plannedAt": "planned_at"}
+    if "variants" in data:
+        template = db.get(ContentOperationTemplate, row.template_id)
+        unknown = set(data.pop("variants") or {}) - set(_loads(template.channels_json, []))
+        if unknown: raise ValueError(f"模板不支持渠道: {', '.join(sorted(unknown))}")
+        row.variants_json = json.dumps(body.variants or {}, ensure_ascii=False)
+    for key, value in data.items(): setattr(row, mapping.get(key, key), value)
     db.commit(); db.refresh(row)
     return package_out(row)

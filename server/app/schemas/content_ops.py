@@ -18,3 +18,11 @@ class ContentPublishPackageCreate(BaseModel):
 class ContentPublishStatusBody(BaseModel):
     status: Literal["draft", "teaching_review", "ops_review", "ready", "published", "rejected"]
     reviewNote: str = ""
+
+
+class ContentPublishPackageUpdate(BaseModel):
+    sourceTitle: str | None = None
+    campaignKey: str | None = None
+    deepLink: str | None = None
+    variants: dict[str, dict[str, Any]] | None = None
+    plannedAt: datetime | None = None

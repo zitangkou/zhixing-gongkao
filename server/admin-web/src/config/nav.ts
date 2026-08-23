@@ -9,6 +9,7 @@ import {
   Setting,
   Tickets,
   TrendCharts,
+  Promotion,
   User,
 } from '@element-plus/icons-vue'
 
@@ -35,6 +36,7 @@ export const NAV_GROUPS: NavGroup[] = [
     icon: Document,
     children: [
       { path: '/articles', title: '文章管理', icon: Document, permissions: ['article:read'] },
+      { path: '/content-ops', title: '账号运营', icon: Promotion, permissions: ['content_ops:read'] },
       { path: '/categories', title: '分类管理', icon: Folder, permissions: ['article:read', 'article:write'] },
     ],
   },
@@ -79,6 +81,7 @@ export const NAV_ITEMS: NavItem[] = FLAT_NAV_ITEMS
 export const ROUTE_TITLES: Record<string, string> = {
   '/articles': '文章管理',
   '/articles/new': '新建文章',
+  '/content-ops': '账号运营',
   '/categories': '分类管理',
   '/users': '用户管理',
   '/knowledge': '知识框架',
