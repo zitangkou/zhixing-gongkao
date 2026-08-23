@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     database_url: str = "sqlite:///./data/zhixing.db"
     secret_key: str = "dev-secret-key-change-in-production"
     access_token_expire_minutes: int = 1440
-    cors_origins: str = "http://localhost:10086,http://localhost:10087"
+    cors_origins: str = "http://localhost:10086,http://localhost:10087,http://localhost:10088,http://localhost:10089"
     admin_username: str = "admin"
     admin_password: str = "admin123"
     # 是否开放移动端自助注册；生产建议 false，由管理员开通账号

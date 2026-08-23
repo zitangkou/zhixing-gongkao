@@ -261,7 +261,7 @@ npm run dev
 | `DATABASE_URL` | `sqlite:///./data/zhengkao.db` | 后端数据库 |
 | `SECRET_KEY` | 开发默认值 | JWT 密钥，生产必须修改 |
 | `ALLOW_REGISTER` | `true` | 是否开放学员端自助注册 |
-| `CORS_ORIGINS` | `http://localhost:10087` | 允许跨域来源 |
+| `CORS_ORIGINS` | `http://localhost:10086,http://localhost:10087,http://localhost:10088,http://localhost:10089` | 允许综合版、申论与政治理论本地前端跨域访问 |
 | `HTTP_PORT` / `HTTP_BIND` | `8081` / `127.0.0.1` | 容器宿主监听端口与绑定地址（部署用） |
 | `BACKUP_DIR` / `BACKUP_RETENTION_DAYS` | `/opt/backups` / `14` | 备份目录与保留天数 |
 | `KNOWLEDGE_KB_DIR` | 空 | 知识框架本地目录（生产留空） |
