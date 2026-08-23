@@ -1,4 +1,5 @@
 import Taro from '@tarojs/taro'
+import { getToken } from '@/utils/auth'
 
 export interface ApiResponse<T> {
   code: number
@@ -41,8 +42,8 @@ export interface DailyTaskList {
   tasks: DailyLearningTask[]
 }
 
-async function request<T>(path: string, options: { method?: 'GET' | 'POST'; data?: unknown } = {}): Promise<ApiResponse<T>> {
-  const token = Taro.getStorageSync('zhengkao_token') || ''
+async function request<T>(path: string, options: { method?: 'GET' | 'POST'; data?: unknown; auth?: boolean } = {}): Promise<ApiResponse<T>> {
+  const token = options.auth === false ? '' : getToken()
   try {
     const response = await Taro.request<ApiResponse<T>>({
       url: `${API_BASE_URL}${path}`,
@@ -67,6 +68,11 @@ async function request<T>(path: string, options: { method?: 'GET' | 'POST'; data
 }
 
 export const api = {
+  login(username: string, password: string) {
+    return request<{ access_token: string; token_type: string }>('/api/auth/login', {
+      method: 'POST', data: { username, password }, auth: false,
+    })
+  },
   getDailyTasks(date?: string) {
     const query = date ? `?date=${encodeURIComponent(date)}` : ''
     return request<DailyTaskList>(`/api/product/daily-tasks${query}`)

@@ -20,6 +20,7 @@ import { computed, onMounted } from 'vue'
 import Taro, { useDidShow } from '@tarojs/taro'
 import { useDailyTaskStore } from '@/store/dailyTask'
 import { showToast } from '@/utils/platform'
+import { isLoggedIn } from '@/utils/auth'
 
 interface TaskStep { key: string; title: string; description: string }
 const fallbackSteps: TaskStep[] = [
@@ -48,7 +49,13 @@ async function startTask() {
   if (await store.start()) openTopics()
   else showToast(store.message || '暂时无法开始')
 }
-function load() { void store.load() }
+function load() {
+  if (!isLoggedIn()) {
+    Taro.navigateTo({ url: '/pages/auth/login' })
+    return
+  }
+  void store.load()
+}
 onMounted(load)
 useDidShow(load)
 </script>
