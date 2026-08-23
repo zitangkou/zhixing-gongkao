@@ -7,6 +7,7 @@ from app.core.response import ApiResponse
 from app.database import get_db
 from app.models import AppUser, Article, PointsLog, Question, SignRecord
 from app.services.activity_service import record_event
+from app.product import get_product_context
 from app.schemas import (
     AnswerResult,
     AnswerSubmit,

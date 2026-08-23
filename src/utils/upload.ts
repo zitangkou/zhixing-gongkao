@@ -2,6 +2,7 @@ import Taro from '@tarojs/taro'
 import { clearToken, getToken } from '@/utils/auth'
 import { getPlatform } from '@/utils/platform'
 import type { ApiRes } from '@/types'
+import { CURRENT_PRODUCT_KEY } from '@/constants/product'
 
 type UploadResult<T> = ApiRes<T>
 
@@ -33,7 +34,8 @@ export async function uploadFile<T>(
 ): Promise<UploadResult<T>> {
   const field = options?.name || 'file'
   const token = getToken()
-  const headers: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {}
+  const headers: Record<string, string> = { 'X-Product-Key': CURRENT_PRODUCT_KEY }
+  if (token) headers.Authorization = `Bearer ${token}`
 
   if (getPlatform() === 'h5') {
     try {

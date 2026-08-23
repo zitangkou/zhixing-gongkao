@@ -9,7 +9,7 @@ import { apiPlan } from './domains/plan'
 import { apiRmrb } from './domains/rmrb'
 import { apiZiliao } from './domains/ziliao'
 export { isMock, initUserFromMock } from './_shared'
-export type { AuthResult, UserMeData } from './_shared'
+export type { AuthResult, ProductPublicConfig, ProductTabConfig, UserMeData } from './_shared'
 
 export const api = {
   ...apiAuth,

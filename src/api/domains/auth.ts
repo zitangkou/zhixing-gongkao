@@ -1,11 +1,27 @@
 import * as d from '../_shared'
+import { CURRENT_PRODUCT_KEY, LOCAL_PRODUCT_DEFAULTS } from '@/constants/product'
 
 export const apiAuth = {
-  getPublicConfig(): Promise<d.ApiRes<{ allowRegister: boolean }>> {
+  getPublicConfig(): Promise<d.ApiRes<{ allowRegister: boolean; product: d.ProductPublicConfig }>> {
     if (d.isMock) {
-      return Promise.resolve({ code: 0, data: { allowRegister: true }, message: 'ok' })
+      const product = LOCAL_PRODUCT_DEFAULTS[CURRENT_PRODUCT_KEY]
+      return Promise.resolve({
+        code: 0,
+        data: {
+          allowRegister: true,
+          product: {
+            key: CURRENT_PRODUCT_KEY,
+            ...product,
+            enabledModules: ['today', 'learning', 'quiz', 'profile'],
+            tabs: [],
+          },
+        },
+        message: 'ok',
+      })
     }
-    return d.request<{ allowRegister: boolean }>('/api/config', { auth: false })
+    return d.request<{ allowRegister: boolean; product: d.ProductPublicConfig }>('/api/config', {
+      auth: false,
+    })
   },
 
   register(

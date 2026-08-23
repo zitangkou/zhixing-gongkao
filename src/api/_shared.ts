@@ -123,6 +123,7 @@ export type { RankType } from '@/constants'
 import { mockService } from '@/mock/service'
 import { clearToken, getToken } from '@/utils/auth'
 import { API_BASE } from '@/utils/media'
+import { CURRENT_PRODUCT_KEY } from '@/constants/product'
 
 export { mockService } from '@/mock/service'
 export { clearToken, getToken } from '@/utils/auth'
@@ -153,12 +154,32 @@ export interface AuthResult {
   user: UserMeData
 }
 
+export interface ProductTabConfig {
+  key: string
+  title: string
+  route: string
+}
+
+export interface ProductPublicConfig {
+  key: 'general' | 'shenlun' | 'theory'
+  name: string
+  shortName: string
+  themeKey: string
+  homeMode: string
+  dailyTargetMin: number
+  enabledModules: string[]
+  tabs: ProductTabConfig[]
+}
+
 export async function request<T>(
   url: string,
   options?: { method?: string; data?: unknown; auth?: boolean },
 ): Promise<ApiRes<T>> {
   const needAuth = options?.auth !== false
-  const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+    'X-Product-Key': CURRENT_PRODUCT_KEY,
+  }
   if (needAuth && !isMock) {
     const token = getToken()
     if (token) headers.Authorization = `Bearer ${token}`

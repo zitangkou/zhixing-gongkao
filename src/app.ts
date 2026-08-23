@@ -7,6 +7,7 @@ import '@nutui/icons-vue-taro/dist/style_iconfont.css'
 import './app.scss'
 import { bootstrapApp } from '@/utils/bootstrap'
 import { useSettingsStore } from '@/store/settings'
+import { useProductStore } from '@/store/product'
 import { applyTheme } from '@/utils/theme'
 import { ensureFeedbackHost } from '@/utils/feedbackHost'
 import { DEFAULT_BRAND_THEME } from '@/constants/theme'
@@ -45,6 +46,7 @@ const App = createApp({
   onShow() {
     useSettingsStore().hydrateTheme()
     ensureFeedbackHost()
+    void useProductStore().loadPublicConfig()
     bootstrapApp()
   },
 })

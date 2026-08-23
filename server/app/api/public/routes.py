@@ -1,5 +1,6 @@
 """公开接口聚合：域路由按原顺序挂载，/api 前缀保持不变。"""
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from app.product import get_product_context
 from app.api.public.article_quiz import router as article_quiz_router
 from app.api.public.auth_user import router as auth_user_router
 from app.api.public.corpus import router as corpus_router
@@ -13,7 +14,11 @@ from app.api.public.plan import router as plan_router
 from app.api.public.rmrb import router as rmrb_router
 from app.api.public.ziliao import router as ziliao_router
 
-router = APIRouter(prefix="/api", tags=["公开接口"])
+router = APIRouter(
+    prefix="/api",
+    tags=["公开接口"],
+    dependencies=[Depends(get_product_context)],
+)
 router.include_router(auth_user_router)
 router.include_router(article_quiz_router)
 router.include_router(plan_router)

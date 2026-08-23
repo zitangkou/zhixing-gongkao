@@ -3,11 +3,14 @@ from app.api.public._deps import *  # noqa: F401,F403
 router = APIRouter()
 
 @router.get("/config")
-def public_config():
+def public_config(product=Depends(get_product_context)):
     """公开配置（无需登录），供前端控制注册入口等。"""
     from app.config import get_settings
     s = get_settings()
-    return ApiResponse.ok({"allowRegister": bool(s.allow_register)})
+    return ApiResponse.ok({
+        "allowRegister": bool(s.allow_register),
+        "product": product.to_public_dict(),
+    })
 
 
 @router.post("/auth/register")
@@ -122,4 +125,3 @@ async def upload_avatar(
     db.commit()
     db.refresh(user)
     return ApiResponse.ok(build_user_me_out(db, user).model_dump())
-

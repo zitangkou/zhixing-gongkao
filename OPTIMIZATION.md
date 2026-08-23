@@ -1,15 +1,16 @@
 # 知行公考 · 待优化清单与后续路线
 
-> 更新：2026-08-14（基于代码实际扫描，非仅凭文档）
+> 更新：2026-08-22（基于代码与本地命令实测，非仅凭文档）
 > 用途：集中记录质量基线、待优化项与后续功能路线；每次修复 / 重构 / 新增功能后同步更新本文件。
 
-## 1. 现状基线（2026-08-14 扫描）
+## 1. 现状基线（2026-08-22 复核）
 
 | 项 | 现状 |
 |---|---|
-| 后端测试 | 原 15 个用例全部通过（`server/tests/` 6 个文件）；公开 + 管理接口合计约 216 个。P0 已补 5 个核心闭环用例 → 20 passed |
-| 前端 lint | 原 14 errors + 3014 warnings，`npm run lint` 不通过；P0 已全量修复 → **0 problems** |
+| 后端测试 | `server/tests/` 现有 8 个测试文件；实测 **21 passed、37 warnings**。公开 / 管理 HTTP 路由分别为 107 / 109 个 |
+| 前端 lint | `npm run lint` 实测 **0 errors、85 warnings**，门禁通过；warning 主要为 Vue 模板格式规则，应清理并防止继续增长 |
 | 管理后台构建 | `vue-tsc -b && vite build` 通过；P2 已分包：主入口 59KB，vue / element / katex 独立 vendor chunk（element 1.07MB 仍偏大） |
+| H5 构建 | 2026-08-22 本机触发 `system-configuration` Rust worker 的 macOS `NULL object` panic 后挂起并中止；需用 CI / 干净 Node 环境区分环境问题与项目问题 |
 | 文件规模 | P2 已按域拆分：public/admin 路由各拆 11-13 个域文件；schemas 拆 16 个域模块；models 拆 12 个域模块；`src/api` 拆 9 个域模块 + `_shared`；`mock` 拆 8 个域模块 + `_core` |
 | 行为事件埋点 | `activity_service.record_event()` 共 7 处调用（文章阅读、答题、套卷交卷、资料练习、申论开采、签到），仅写入、无统计页 |
 | 文档漂移 | 品牌色默认值、管理端入口、`deploy-ali.md` 引用等 6+ 处与代码不一致（本文件生成时已同步修正） |
@@ -18,7 +19,7 @@
 
 ### 2.1 让 `npm run lint` 通过 ✅
 
-已完成（2026-08-14）：`eslint --fix` + `prettier` 全量统一，`npm run lint` 0 problems。
+已完成（2026-08-14）：`eslint --fix` + `prettier` 曾全量统一。2026-08-22 复核为 0 errors、85 warnings，说明后续提交重新引入了格式 warning；当前不阻断 lint，但“0 problems”基线已失效。
 
 - `src/utils/bootstrap.ts:2` — `api` 导入未使用
 - `src/utils/memoryCurve.ts:58` — `baseDate` 赋值未使用
@@ -30,7 +31,7 @@
 
 ### 2.2 补后端核心闭环测试 ✅
 
-已完成：新增 `server/tests/test_core_loops.py`，覆盖答题 → 错题 → SRS 复习推进 → 掌握移除、套卷开考/作答/交卷判分、签到积分、管理端 RBAC（只读角色写接口 403）、资料分析提交与统计；`pytest` 20 passed。
+已完成：新增 `server/tests/test_core_loops.py`，覆盖答题 → 错题 → SRS 复习推进 → 掌握移除、套卷开考/作答/交卷判分、签到积分、管理端 RBAC（只读角色写接口 403）、资料分析提交与统计；2026-08-22 实测 `pytest` 21 passed。
 
 现有 15 个用例集中在 smoke / 导入 / 序列化，建议优先补：
 
@@ -61,7 +62,7 @@
 
 全部已完成（2026-08-14）：
 
-1. **路由拆分 ✅**：`api/public/` 拆为 11 个域文件 + `_deps.py` + `routes.py` 聚合；`api/admin/` 拆为 13 个域文件 + `_deps.py` + 聚合入口。前缀与路由顺序保持不变，接口数量核对无丢失（public 105 个）。
+1. **路由拆分 ✅**：`api/public/` 与 `api/admin/` 均按域拆分并由 `routes.py` 聚合；前缀与路由顺序保持不变。2026-08-22 从 FastAPI 路由表实测为 public 107 个、admin 109 个 HTTP 路由。
 2. **schema 拆分 ✅**：`schemas/` 按域拆 16 个模块，`__init__.py` 统一 re-export，`from app.schemas import X` 全部兼容。
 3. **前端 API 层拆分 ✅**：`src/api/` 拆为 `_shared.ts`（request / isMock / 类型 / 上传）+ `domains/` 9 个域模块，`index.ts` 聚合导出 `api` 对象，调用方零改动。
 4. **Mock 拆分 ✅**：`src/mock/` 拆为 `_core.ts`（状态 + 辅助函数 + 数据）+ 8 个域模块，`service.ts` 聚合导出 `mockService`；域内 `this` 调用全部在同域内，组合后运行时行为不变。
@@ -76,6 +77,7 @@
 | 优先级 | 功能 | 现状与目标 |
 |---|---|---|
 | 高 | 行为事件统计页 | `activity_events` 已埋 7 处；补齐 M4：上岸卡片 / 能力雷达 / 里程碑可视化 |
+| 高 | 文档与质量基线回稳 | 清理 85 条 lint warning；修正 `server/app/main.py` 中“政考通”旧品牌及过时 API 描述；处理或约束 `python-jose` 弃用 warning |
 | 高 | 主题切换小程序端一致性 | 原生 `tabBar` 的 `selectedColor` 硬编码 `#D0021B`，H5 自定义 TabBar 随主题、小程序不随；需同步 |
 | 中 | 足迹 Admin 入口 | 目前仅有学员端 growth 数据，管理端无入口 |
 | 中 | AI 出题 | `LLM_ENABLED` 默认关闭；管理端 AI 出题按需开启（DeepSeek 配置已在 env） |

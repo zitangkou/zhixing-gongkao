@@ -23,3 +23,4 @@ declare module '@tarojs/components' {
 
 declare const USE_MOCK: boolean
 declare const API_BASE_URL: string
+declare const PRODUCT_KEY: string

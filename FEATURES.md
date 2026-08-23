@@ -61,7 +61,7 @@
     └── 资料 · 反馈 · 深色模式
 ```
 
-### 页面路由总览（52 页）
+### 页面路由总览（53 页）
 
 | 模块 | 页面数 | 路由前缀 |
 |------|--------|----------|
@@ -361,7 +361,7 @@
 | 支付 | 无真实微信/支付宝对接（原充值页已整体移除） |
 | 足迹 Admin | 无管理端入口（用户侧数据为主） |
 | 行为事件统计 | `activity_events` 已埋点写入（7 处），但无统计/可视化页面（M4：上岸卡片 / 能力雷达 / 里程碑） |
-| 质量与架构债 | lint 门禁已通过（0 problems）、核心闭环测试已补齐（20 passed）、CI 已接入；残留壳代码与单文件膨胀等见 [OPTIMIZATION.md](./OPTIMIZATION.md) |
+| 质量与架构债 | lint 门禁已通过（当前 0 errors、85 warnings）、核心闭环测试已补齐（21 passed）、CI 已接入；残留项见 [OPTIMIZATION.md](./OPTIMIZATION.md) |
 
 ---
 
@@ -403,4 +403,4 @@
 
 ---
 
-*最后更新：2026-08-14 · 基于 app.config.ts 52 个页面路由 + 23 个共享组件全量整理；优化与后续路线见 [OPTIMIZATION.md](./OPTIMIZATION.md)*
+*最后更新：2026-08-22 · 基于 app.config.ts 53 个页面路由 + 24 个共享组件复核；优化与后续路线见 [OPTIMIZATION.md](./OPTIMIZATION.md)*

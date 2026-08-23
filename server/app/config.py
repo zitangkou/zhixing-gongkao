@@ -13,6 +13,9 @@ class Settings(BaseSettings):
     admin_password: str = "admin123"
     # 是否开放移动端自助注册；生产建议 false，由管理员开通账号
     allow_register: bool = True
+    # 多产品：旧客户端不传 Header 时继续使用综合版。
+    default_product_key: str = "general"
+    enabled_product_keys: str = "general,shenlun,theory"
     # 知识框架本地目录（开发可用 Obsidian；生产留空则走 data/knowledge + 管理端上传）
     knowledge_kb_dir: str = ""
 
@@ -38,6 +41,10 @@ class Settings(BaseSettings):
     @property
     def cors_allow_credentials(self) -> bool:
         return "*" not in self.cors_origin_list
+
+    @property
+    def enabled_product_key_set(self) -> set[str]:
+        return {key.strip().lower() for key in self.enabled_product_keys.split(",") if key.strip()}
 
 
 @lru_cache
