@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  pages: ['pages/today/index', 'pages/topics/index', 'pages/practice/index', 'pages/profile/index', 'pages/auth/login'],
+  pages: ['pages/today/index', 'pages/topics/index', 'pages/practice/index', 'pages/profile/index', 'pages/auth/login', 'pages/auth/register'],
   window: { navigationBarBackgroundColor: '#D0021B', navigationBarTitleText: '知行政治理论', navigationBarTextStyle: 'white', backgroundColor: '#F4F5F7' },
   tabBar: { color: '#8A8F98', selectedColor: '#D0021B', backgroundColor: '#FFFFFF', list: [
     { pagePath: 'pages/today/index', text: '今日', iconPath: './assets/icons/today.png', selectedIconPath: './assets/icons/today-active.png' },

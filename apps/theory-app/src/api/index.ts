@@ -42,6 +42,21 @@ export interface DailyTaskList {
   tasks: DailyLearningTask[]
 }
 
+export interface UserMe {
+  id: string
+  username?: string
+  nickname: string
+  avatar: string
+  email: string
+  phone: string
+  isMember: boolean
+  points: number
+  hasSignedToday: boolean
+  signDates: string[]
+}
+
+interface AuthResult { access_token: string; token_type: string; user: UserMe }
+
 async function request<T>(path: string, options: { method?: 'GET' | 'POST'; data?: unknown; auth?: boolean } = {}): Promise<ApiResponse<T>> {
   const token = options.auth === false ? '' : getToken()
   try {
@@ -69,10 +84,16 @@ async function request<T>(path: string, options: { method?: 'GET' | 'POST'; data
 
 export const api = {
   login(username: string, password: string) {
-    return request<{ access_token: string; token_type: string }>('/api/auth/login', {
+    return request<AuthResult>('/api/auth/login', {
       method: 'POST', data: { username, password }, auth: false,
     })
   },
+  register(username: string, password: string, passwordConfirm: string) {
+    return request<AuthResult>('/api/auth/register', {
+      method: 'POST', data: { username, password, passwordConfirm }, auth: false,
+    })
+  },
+  getMe() { return request<UserMe>('/api/user/me') },
   getDailyTasks(date?: string) {
     const query = date ? `?date=${encodeURIComponent(date)}` : ''
     return request<DailyTaskList>(`/api/product/daily-tasks${query}`)

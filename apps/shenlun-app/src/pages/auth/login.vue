@@ -5,7 +5,7 @@
       <input v-model="username" class="auth-input" placeholder="用户名" />
       <input v-model="password" class="auth-input" password placeholder="密码" />
       <button class="auth-button" :disabled="loading" @tap="submit">{{ loading ? '登录中…' : '登录' }}</button>
-      <view class="auth-hint">使用统一知行公考账号登录</view>
+      <view class="auth-hint">使用统一知行公考账号登录</view><view class="auth-link" @tap="goRegister">没有账号？立即注册</view>
     </view>
   </view>
 </template>
@@ -20,6 +20,7 @@ import { showToast } from '@/utils/platform'
 const username = ref('')
 const password = ref('')
 const loading = ref(false)
+function goRegister() { Taro.navigateTo({ url: '/pages/auth/register' }) }
 async function submit() {
   if (!username.value.trim() || !password.value) return showToast('请输入用户名和密码')
   loading.value = true
