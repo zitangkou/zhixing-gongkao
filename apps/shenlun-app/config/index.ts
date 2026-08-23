@@ -18,7 +18,7 @@ export default defineConfig<'vite'>(() => ({
   },
   mini: { postcss: { pxtransform: { enable: true, config: {} }, cssModules: { enable: false } } },
   h5: {
-    publicPath: '/',
+    publicPath: process.env.TARO_APP_PUBLIC_PATH ?? '/',
     staticDirectory: 'static',
     devServer: { port: 10088 },
     postcss: { autoprefixer: { enable: true }, cssModules: { enable: false } },

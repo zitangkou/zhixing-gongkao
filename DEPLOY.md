@@ -51,7 +51,9 @@ bash deploy/install-backup.sh
         │
         ▼
 项目容器 Nginx（默认 127.0.0.1:8081）
-   ├── /          → H5 静态页（dist）
+   ├── /          → 综合 H5 静态页
+   ├── /shenlun/  → 申论独立 H5
+   ├── /theory/   → 政治理论独立 H5
    ├── /api/      → FastAPI 学员端接口（uvicorn:8000）
    ├── /admin/    → FastAPI 管理端接口（JWT + RBAC）
    ├── /manage/   → 管理后台静态页（admin-dist）
@@ -64,6 +66,8 @@ bash deploy/install-backup.sh
 | 路由 | 说明 | 容器内处理 |
 |---|---|---|
 | `/` | 学员端 H5 | nginx 静态 `try_files` |
+| `/shenlun/` | 申论独立 H5 | nginx 子目录静态 `try_files` |
+| `/theory/` | 政治理论独立 H5 | nginx 子目录静态 `try_files` |
 | `/api/*` | 学员端 API | nginx → uvicorn:8000 |
 | `/admin/*` | 管理端 API | nginx → uvicorn:8000 |
 | `/manage/*` | 管理后台 | nginx → FastAPI 挂载 admin-dist |
@@ -107,6 +111,8 @@ bash deploy/setup-docker.sh
 # 一键：生成 .env → 构建 → 启动 → 健康检查 → 验证 /、/api、/manage
 bash deploy.sh
 ```
+
+部署完成后可分别访问 `https://你的域名/shenlun/` 与 `https://你的域名/theory/`。两套前端独立构建、独立路由，但账号、内容审核、题库、任务进度和运营后台复用同一个后端。
 
 首次执行 `deploy.sh` 会自动生成 `.env`（随机 `SECRET_KEY` 与 `ADMIN_PASSWORD`，密码会打印在终端），随后建议：
 

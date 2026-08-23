@@ -12,5 +12,5 @@ export default defineConfig<'vite'>(() => ({
     USE_MOCK: JSON.stringify(process.env.USE_MOCK === 'true'),
   },
   mini: { postcss: { pxtransform: { enable: true, config: {} }, cssModules: { enable: false } } },
-  h5: { publicPath: '/', staticDirectory: 'static', devServer: { port: 10089 }, postcss: { autoprefixer: { enable: true }, cssModules: { enable: false } } },
+  h5: { publicPath: process.env.TARO_APP_PUBLIC_PATH ?? '/', staticDirectory: 'static', devServer: { port: 10089 }, postcss: { autoprefixer: { enable: true }, cssModules: { enable: false } } },
 }) satisfies UserConfigExport<'vite'>)
