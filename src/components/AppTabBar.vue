@@ -2,7 +2,7 @@
   <view class="app-tab-bar-root">
     <!-- 小程序无全局 body 挂载点，主 Tab 页内嵌反馈层；H5 已挂到 document.body -->
     <AppFeedback v-if="inlineFeedback" />
-    <view class="app-tab-bar">
+    <view v-if="showCustomTabs" class="app-tab-bar">
       <view
         v-for="item in tabs"
         :key="item.path"
@@ -30,27 +30,25 @@ import { onMounted, ref } from 'vue'
 import Taro, { useDidShow } from '@tarojs/taro'
 import { Clock, Edit, Home, My } from '@nutui/icons-vue-taro'
 import AppFeedback from '@/components/AppFeedback.vue'
+import { CURRENT_PRODUCT_TABS, type ProductTabKey } from '@/constants/productNavigation'
 import { useBrandColor } from '@/utils/brandColor'
 
 const inlineFeedback = process.env.TARO_ENV !== 'h5'
+const showCustomTabs = process.env.TARO_ENV === 'h5'
 
 const props = withDefaults(
   defineProps<{
     /** 当前 tab：today | home | quiz | user */
-    active?: 'today' | 'home' | 'quiz' | 'user'
+    active?: ProductTabKey
   }>(),
   { active: undefined },
 )
 
-const selected = ref<'today' | 'home' | 'quiz' | 'user'>(props.active || 'today')
+const selected = ref<ProductTabKey>(props.active || 'today')
 const { brandColor: activeColor, mutedColor } = useBrandColor()
 
-const tabs = [
-  { key: 'today' as const, path: '/pages/today/index', text: '今日', icon: Clock },
-  { key: 'home' as const, path: '/pages/index/index', text: '学习', icon: Home },
-  { key: 'quiz' as const, path: '/pages/question/index', text: '练习', icon: Edit },
-  { key: 'user' as const, path: '/pages/user/index', text: '我的', icon: My },
-]
+const iconMap = { clock: Clock, home: Home, edit: Edit, user: My }
+const tabs = CURRENT_PRODUCT_TABS.map((item) => ({ ...item, icon: iconMap[item.icon] }))
 
 function syncFromRoute() {
   if (props.active) {

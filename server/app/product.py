@@ -68,8 +68,8 @@ PRODUCTS: dict[str, ProductContext] = {
         enabled_modules=("today", "shenlun_learning", "shenlun_practice", "review", "profile"),
         tabs=(
             ProductTab("today", "今日", "/pages/rmrb/index"),
-            ProductTab("learning", "学习", "/pages/rmrb/article-list"),
-            ProductTab("practice", "练习", "/pages/rmrb/drill"),
+            ProductTab("learning", "精读", "/pages/rmrb/article-list"),
+            ProductTab("practice", "训练", "/pages/rmrb/drill"),
             ProductTab("profile", "我的", "/pages/user/index"),
         ),
     ),
@@ -82,7 +82,7 @@ PRODUCTS: dict[str, ProductContext] = {
         daily_target_min=15,
         enabled_modules=("today", "theory_topics", "theory_quiz", "review", "profile"),
         tabs=(
-            ProductTab("today", "今日", "/pages/today/index"),
+            ProductTab("today", "今日", "/pages/theory/index"),
             ProductTab("topics", "专题", "/pages/index/index"),
             ProductTab("quiz", "刷题", "/pages/question/index"),
             ProductTab("profile", "我的", "/pages/user/index"),

@@ -1,6 +1,8 @@
 import { defineStore } from 'pinia'
 import { api, type ProductPublicConfig } from '@/api'
 import { CURRENT_PRODUCT_KEY, LOCAL_PRODUCT_DEFAULTS } from '@/constants/product'
+import type { BrandThemeId } from '@/constants/theme'
+import { useSettingsStore } from '@/store/settings'
 
 const defaults = LOCAL_PRODUCT_DEFAULTS[CURRENT_PRODUCT_KEY]
 
@@ -30,6 +32,7 @@ export const useProductStore = defineStore('product', {
         return false
       }
       this.config = res.data.product
+      useSettingsStore().setBrandTheme(res.data.product.themeKey as BrandThemeId)
       this.allowRegister = res.data.allowRegister
       this.loaded = true
       this.loadError = ''

@@ -1,5 +1,5 @@
 <template>
-  <view class="page-rmrb" :class="themeClass">
+  <view class="page-rmrb" :class="[themeClass, { 'vertical-home': IS_SHENLUN_PRODUCT }]">
     <template v-if="IS_SHENLUN_PRODUCT">
       <view class="today-head">
         <text class="eyebrow">{{ todayLabel }} · 今日训练</text>
@@ -110,6 +110,7 @@
         </view>
       </view>
     </template>
+    <AppTabBar v-if="IS_SHENLUN_PRODUCT" active="today" />
   </view>
 </template>
 
@@ -117,6 +118,7 @@
 import { computed, onMounted, ref } from 'vue'
 import Taro, { useDidShow } from '@tarojs/taro'
 import { Button as NutButton } from '@nutui/nutui-taro'
+import AppTabBar from '@/components/AppTabBar.vue'
 import { api } from '@/api'
 import { IS_SHENLUN_PRODUCT } from '@/constants/product'
 import { useDailyTaskStore } from '@/store/dailyTask'
@@ -213,6 +215,7 @@ useDidShow(load)
 @import '@/styles/variables.scss';
 
 .page-rmrb { @include page-padding; padding-bottom: 32px; }
+.page-rmrb.vertical-home { padding-bottom: 104px; }
 .today-head { padding: 12px 2px 20px; }
 .eyebrow, .today-title, .today-subtitle, .task-source, .task-time, .task-title,
 .task-desc, .step-title, .step-desc, .empty-title, .empty-desc, .section-title,

@@ -1,3 +1,30 @@
+const buildProductKey = process.env.TARO_APP_PRODUCT_KEY || 'general'
+const buildProductTabs = {
+  general: [
+    ['pages/today/index', '今日'],
+    ['pages/index/index', '学习'],
+    ['pages/question/index', '练习'],
+    ['pages/user/index', '我的'],
+  ],
+  shenlun: [
+    ['pages/rmrb/index', '今日'],
+    ['pages/rmrb/article-list', '精读'],
+    ['pages/rmrb/drill', '训练'],
+    ['pages/user/index', '我的'],
+  ],
+  theory: [
+    ['pages/theory/index', '今日'],
+    ['pages/index/index', '专题'],
+    ['pages/question/index', '刷题'],
+    ['pages/user/index', '我的'],
+  ],
+}[buildProductKey] || [
+  ['pages/today/index', '今日'],
+  ['pages/index/index', '学习'],
+  ['pages/question/index', '练习'],
+  ['pages/user/index', '我的'],
+]
+
 export default defineAppConfig({
   pages: [
     'pages/auth/login',
@@ -54,6 +81,7 @@ export default defineAppConfig({
     'pages/rmrb/terms',
     'pages/rmrb/drill',
     'pages/shenlun/training',
+    'pages/theory/index',
   ],
   window: {
     navigationBarBackgroundColor: '#D0021B',
@@ -63,33 +91,33 @@ export default defineAppConfig({
   },
   tabBar: {
     color: '#999999',
-    selectedColor: '#D0021B',
+    selectedColor: buildProductKey === 'theory' ? '#1E3A5F' : '#D0021B',
     backgroundColor: '#FFFFFF',
     borderStyle: 'white',
     list: [
       // H5 开发态会误删 iconPath 首字符（assets → ssets），必须写 ./ 前缀；
       // 生产构建会自动改写并打包到 /static/images/*.png
       {
-        pagePath: 'pages/today/index',
-        text: '今日',
+        pagePath: buildProductTabs[0][0],
+        text: buildProductTabs[0][1],
         iconPath: './assets/icons/today.png',
         selectedIconPath: './assets/icons/today-active.png',
       },
       {
-        pagePath: 'pages/index/index',
-        text: '学习',
+        pagePath: buildProductTabs[1][0],
+        text: buildProductTabs[1][1],
         iconPath: './assets/icons/home.png',
         selectedIconPath: './assets/icons/home-active.png',
       },
       {
-        pagePath: 'pages/question/index',
-        text: '练习',
+        pagePath: buildProductTabs[2][0],
+        text: buildProductTabs[2][1],
         iconPath: './assets/icons/quiz.png',
         selectedIconPath: './assets/icons/quiz-active.png',
       },
       {
-        pagePath: 'pages/user/index',
-        text: '我的',
+        pagePath: buildProductTabs[3][0],
+        text: buildProductTabs[3][1],
         iconPath: './assets/icons/user.png',
         selectedIconPath: './assets/icons/user-active.png',
       },

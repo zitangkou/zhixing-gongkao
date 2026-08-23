@@ -25,6 +25,7 @@ import Taro from '@tarojs/taro'
 import { Button as NutButton, Input as NutInput } from '@nutui/nutui-taro'
 import BrandLogo from '@/components/BrandLogo.vue'
 import { api } from '@/api'
+import { PRODUCT_HOME_ROUTE } from '@/constants/productNavigation'
 import { useUserStore } from '@/store/user'
 import { bootstrapApp } from '@/utils/bootstrap'
 import { showToast } from '@/utils/platform'
@@ -66,7 +67,7 @@ async function onRegister() {
   try {
     await userStore.register(username.value.trim(), password.value, passwordConfirm.value)
     await bootstrapApp(true)
-    Taro.switchTab({ url: '/pages/today/index' })
+    Taro.switchTab({ url: PRODUCT_HOME_ROUTE })
   } catch (e) {
     showToast(e instanceof Error ? e.message : '注册失败', 'error')
   } finally {

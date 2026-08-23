@@ -569,6 +569,74 @@ def test_shenlun_home_provisions_one_daily_article_task():
         assert len(task["metadata"]["question"]["checks"]) == 3
 
 
+def test_theory_home_only_provisions_evidence_backed_pack():
+    """政治理论学习包至少含3道已审核且有原文依据的题。"""
+    task_date = today()
+    with TestClient(app) as client:
+        user = _register(client)
+        headers = {**user["headers"], "X-Product-Key": "theory"}
+        with SessionLocal() as db:
+            existing_ids = [
+                row[0]
+                for row in db.query(DailyLearningTask.id).filter(
+                    DailyLearningTask.product_key == "theory",
+                    DailyLearningTask.task_date == task_date,
+                )
+            ]
+            if existing_ids:
+                db.query(UserDailyTaskProgress).filter(
+                    UserDailyTaskProgress.task_id.in_(existing_ids)
+                ).delete(synchronize_session=False)
+                db.query(DailyLearningTask).filter(
+                    DailyLearningTask.id.in_(existing_ids)
+                ).delete(synchronize_session=False)
+            article = Article(
+                id="art-theory-daily",
+                title="准确把握高质量发展的实践要求",
+                source="权威理论文章",
+                publish_date=task_date,
+                summary="理解主体、目标和政策边界。",
+                content="理论文章正文",
+                sections="[]",
+                tags='["高质量发展", "新发展理念"]',
+                status="published",
+                allow_quiz=True,
+                is_published=True,
+                is_daily=True,
+                importance=5,
+            )
+            db.add(article)
+            for index in range(3):
+                db.add(
+                    Question(
+                        id=f"q-theory-evidence-{index}",
+                        article_id=article.id,
+                        type="single",
+                        stem=f"第{index + 1}道审核题",
+                        options='["A", "B"]',
+                        correct_answer='"A"',
+                        analysis="依据原文可知。",
+                        source_sentence=f"原文依据{index + 1}",
+                        status="approved",
+                        origin="manual",
+                        is_active=True,
+                    )
+                )
+            db.commit()
+
+        first = _ok(client.get("/api/product/daily-tasks", headers=headers))
+        second = _ok(client.get("/api/product/daily-tasks", headers=headers))
+
+        assert first["totalCount"] == 1
+        assert second["totalCount"] == 1
+        task = first["tasks"][0]
+        assert task["taskType"] == "theory_daily_pack"
+        assert task["contentId"] == "art-theory-daily"
+        assert task["metadata"]["questionCount"] == 3
+        assert task["metadata"]["evidenceCount"] == 3
+        assert task["metadata"]["focuses"] == ["高质量发展", "新发展理念"]
+
+
 def teardown_module(_mod=None):
     engine.dispose()
     for path in (_DB, Path(f"{_DB}-shm"), Path(f"{_DB}-wal")):

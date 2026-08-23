@@ -22,10 +22,11 @@
 | 双产品 Sprint 0 | 通用今日任务、五态学习状态机、服务端草稿与跨端断点恢复、产品隔离、前端任务 Store | ✅ 2026-08-23 第二批完成 |
 | 申论 Sprint 1 | 垂直今日首页、审核文章自动编排、单主任务入口、阅读/三刀进度回写、Mock 演示数据 | ✅ 2026-08-23 第一批完成 |
 | 申论 Sprint 1 | 小题短作答、三项规则自检、自动草稿、表达沉淀入规范词库、今日任务完成页 | ✅ 2026-08-23 第二批完成 |
+| 政治理论 Sprint 1 | 垂直今日首页、3题/证据质量门、权威文章自动编排、独立蓝色主题与三产品动态导航 | ✅ 2026-08-23 第一批完成 |
 
 ## 2. 当前质量基线（2026-08-23 实测）
 
-- 后端 `server/.venv/bin/python -m pytest -q`：**23 passed，50 warnings**（warning 来自 `python-jose` 使用即将弃用的 `datetime.utcnow()`）
+- 后端 `server/.venv/bin/python -m pytest -q`：**24 passed，52 warnings**（warning 来自 `python-jose` 使用即将弃用的 `datetime.utcnow()`）
 - 前端 `npm run lint`：**0 errors，85 warnings**；门禁通过，但格式类 warning 已重新积累，不能再表述为“0 problems”
 - 管理后台构建：2026-08-22 实测通过（主入口 59.17KB，Element Plus chunk 1.07MB）
 - H5 构建：本机运行时卡在 `system-configuration` Rust worker 的 macOS `NULL object` panic，已中止；更像本机构建环境问题，但本次不能记为通过
@@ -66,6 +67,7 @@
 ## 5. 最近提交
 
 ```text
+b94a7ef feat: complete shenlun first-training loop
 755b9ce feat: launch shenlun daily training home
 f305b86 feat: add resumable daily task workflow
 0f88d16 feat: bootstrap shenlun and theory product foundation
