@@ -9,6 +9,7 @@ export interface ContentPackageExport { schemaVersion: string; generatedAt: stri
 export const fetchContentTemplates = (productKey?: string) => getData<ContentOpsTemplate[]>(http.get('/admin/content-ops/templates', { params: { productKey } }))
 export const fetchContentPackages = (params?: { productKey?: string; status?: string }) => getData<ContentPackage[]>(http.get('/admin/content-ops/packages', { params }))
 export const createContentPackage = (data: Record<string, unknown>) => getData<ContentPackage>(http.post('/admin/content-ops/packages', data))
+export const generateContentPackageFromArticle = (data: Record<string, unknown>) => getData<ContentPackage>(http.post('/admin/content-ops/packages/generate-from-article', data))
 export const updateContentPackage = (id: string, data: Record<string, unknown>) => getData<ContentPackage>(http.put(`/admin/content-ops/packages/${id}`, data))
 export const updateContentPackageStatus = (id: string, status: ContentOpsStatus, reviewNote = '') => getData<ContentPackage>(http.post(`/admin/content-ops/packages/${id}/status`, { status, reviewNote }))
 export const exportContentPackage = (id: string) => getData<ContentPackageExport>(http.get(`/admin/content-ops/packages/${id}/export`))

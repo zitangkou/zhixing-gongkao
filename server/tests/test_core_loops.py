@@ -294,6 +294,42 @@ def test_admin_rbac():
 
         templates = _ok(client.get("/admin/content-ops/templates", headers=admin_headers))
         assert len(templates) == 10
+        theory_template = next(item for item in templates if item["code"] == "theory_current")
+        published_article = next(item for item in articles["items"] if item["status"] == "published")
+        generated_package = _ok(
+            client.post(
+                "/admin/content-ops/packages/generate-from-article",
+                headers=admin_headers,
+                json={
+                    "productKey": "theory",
+                    "templateId": theory_template["id"],
+                    "articleId": published_article["id"],
+                    "campaignKey": "theory-auto-20260823",
+                    "deepLink": "/pages/theory/index",
+                },
+            )
+        )
+        assert generated_package["sourceType"] == "article"
+        assert generated_package["slotValues"]["事实"]
+        assert not generated_package["slotValues"]["考法"]
+        assert generated_package["variants"]["wechat"]["ctaLink"].endswith("channel=wechat")
+        generated_review = client.post(
+            f"/admin/content-ops/packages/{generated_package['id']}/status",
+            headers=admin_headers,
+            json={"status": "teaching_review"},
+        )
+        assert generated_review.json()["code"] == 400
+        duplicate_generation = client.post(
+            "/admin/content-ops/packages/generate-from-article",
+            headers=admin_headers,
+            json={
+                "productKey": "theory",
+                "templateId": theory_template["id"],
+                "articleId": published_article["id"],
+            },
+        )
+        assert duplicate_generation.json()["code"] == 400
+
         shenlun_template = next(item for item in templates if item["code"] == "shenlun_three_cut")
         package = _ok(
             client.post(

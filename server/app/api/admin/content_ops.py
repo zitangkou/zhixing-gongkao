@@ -4,8 +4,8 @@ from app.api.deps import require_permission
 from app.core.response import ApiResponse
 from app.database import get_db
 from app.models import ContentOperationTemplate, ContentPublishPackage
-from app.schemas import ContentPublishPackageCreate, ContentPublishPackageUpdate, ContentPublishStatusBody
-from app.services.content_ops_service import create_package, export_package, package_out, template_out, transition_package, update_package
+from app.schemas import ContentPackageGenerateFromArticle, ContentPublishPackageCreate, ContentPublishPackageUpdate, ContentPublishStatusBody
+from app.services.content_ops_service import create_package, export_package, generate_package_from_article, package_out, template_out, transition_package, update_package
 
 router = APIRouter()
 
@@ -31,6 +31,12 @@ def packages(status: str | None = None, productKey: str | None = None, _admin=De
 @router.post("/content-ops/packages")
 def package_create(body: ContentPublishPackageCreate, _admin=Depends(require_permission("content_ops:write")), db: Session = Depends(get_db)):
     try: return ApiResponse.ok(create_package(db, body))
+    except ValueError as exc: return ApiResponse.fail(str(exc), code=400)
+
+
+@router.post("/content-ops/packages/generate-from-article")
+def package_generate_from_article(body: ContentPackageGenerateFromArticle, _admin=Depends(require_permission("content_ops:write")), db: Session = Depends(get_db)):
+    try: return ApiResponse.ok(generate_package_from_article(db, body))
     except ValueError as exc: return ApiResponse.fail(str(exc), code=400)
 
 

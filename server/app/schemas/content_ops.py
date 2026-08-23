@@ -28,3 +28,12 @@ class ContentPublishPackageUpdate(BaseModel):
     slotValues: dict[str, str] | None = None
     variants: dict[str, dict[str, Any]] | None = None
     plannedAt: datetime | None = None
+
+
+class ContentPackageGenerateFromArticle(BaseModel):
+    productKey: Literal["shenlun", "theory"]
+    templateId: str
+    articleId: str
+    campaignKey: str = ""
+    deepLink: str = ""
+    plannedAt: datetime | None = None

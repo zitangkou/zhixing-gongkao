@@ -1,8 +1,10 @@
 """模板化账号运营：固定栏目、跨平台发布包与双审核状态。"""
 import json
+import re
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from sqlalchemy.orm import Session
-from app.models import ContentOperationTemplate, ContentPublishPackage, gen_id
-from app.schemas import ContentPublishPackageCreate, ContentPublishPackageUpdate
+from app.models import Article, ContentOperationTemplate, ContentPublishPackage, gen_id
+from app.schemas import ContentPackageGenerateFromArticle, ContentPublishPackageCreate, ContentPublishPackageUpdate
 from app.timezone import now
 
 CHANNELS = ["xiaohongshu", "douyin", "bilibili", "wechat"]
@@ -88,6 +90,105 @@ def create_package(db: Session, body: ContentPublishPackageCreate) -> dict:
     return package_out(row)
 
 
+def _plain_text(value: str, limit: int) -> str:
+    text = re.sub(r"[#>*_`\[\]()]", " ", value or "")
+    text = re.sub(r"\s+", " ", text).strip()
+    return text[:limit]
+
+
+def _article_slot_values(article: Article, slots: list[str]) -> dict[str, str]:
+    summary = _plain_text(article.summary or article.content, 360)
+    excerpt = _plain_text(article.content or article.summary, 1200)
+    evidence = " · ".join(part for part in (article.source, article.publish_date, article.title) if part)
+    deterministic = {
+        "标题": article.title,
+        "原文": excerpt,
+        "材料": excerpt,
+        "短材料": excerpt,
+        "事实": summary,
+        "事件": summary,
+        "日期": article.publish_date,
+        "主体": article.source,
+        "规范表述": summary,
+        "原文依据": evidence,
+        "依据": evidence,
+        "导语": summary,
+        "本周主题": article.title,
+        "关键词": "、".join(_loads(article.tags, [])[:6]),
+    }
+    return {slot: deterministic.get(slot, "") for slot in slots}
+
+
+def _tracked_link(base: str, channel: str) -> str:
+    if not base:
+        return base
+    parts = urlsplit(base)
+    query = [(key, value) for key, value in parse_qsl(parts.query) if key != "channel"]
+    query.append(("channel", channel))
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
+
+
+def _article_variants(article: Article, template: ContentOperationTemplate, slots: dict[str, str], deep_link: str) -> dict:
+    filled = [f"{name}：{value}" for name, value in slots.items() if value]
+    missing = [name for name, value in slots.items() if not value]
+    core = "\n\n".join(filled)
+    missing_note = f"\n\n待教研补充：{'、'.join(missing)}" if missing else ""
+    titles = {
+        "xiaohongshu": f"{template.name}｜{article.title}",
+        "douyin": f"{article.title}，考试会怎么考？",
+        "bilibili": f"{template.name}：{article.title}",
+        "wechat": f"今日学习｜{article.title}",
+    }
+    prefixes = {
+        "xiaohongshu": "先收藏，再用一个考点框架读懂这篇材料。",
+        "douyin": "这条内容用一分钟讲清一个可迁移的考试知识点。",
+        "bilibili": "本期从原文、考点和迁移练习三个层次展开。",
+        "wechat": "今天用一篇已审核文章完成一次结构化学习。",
+    }
+    return {
+        channel: {
+            "title": titles[channel][:80],
+            "body": f"{prefixes[channel]}\n\n{core}{missing_note}",
+            "ctaLink": _tracked_link(deep_link, channel),
+            "generatedDraft": True,
+        }
+        for channel in _loads(template.channels_json, [])
+    }
+
+
+def generate_package_from_article(db: Session, body: ContentPackageGenerateFromArticle) -> dict:
+    article = db.get(Article, body.articleId)
+    if not article or article.status != "published" or not article.is_published:
+        raise ValueError("只有已发布文章可以生成运营发布包")
+    template = db.get(ContentOperationTemplate, body.templateId)
+    if not template or template.status != "enabled":
+        raise ValueError("运营模板不存在或未启用")
+    if template.product_key not in (body.productKey, "general"):
+        raise ValueError("模板与产品不匹配")
+    duplicate = db.query(ContentPublishPackage).filter(
+        ContentPublishPackage.source_type == "article",
+        ContentPublishPackage.source_id == article.id,
+        ContentPublishPackage.template_id == template.id,
+        ContentPublishPackage.status != "rejected",
+    ).first()
+    if duplicate:
+        raise ValueError("该文章已用此模板生成发布包，请直接编辑已有草稿")
+    slots = _article_slot_values(article, _loads(template.slots_json, []))
+    variants = _article_variants(article, template, slots, body.deepLink)
+    return create_package(db, ContentPublishPackageCreate(
+        productKey=body.productKey,
+        templateId=template.id,
+        sourceType="article",
+        sourceId=article.id,
+        sourceTitle=article.title,
+        campaignKey=body.campaignKey,
+        deepLink=body.deepLink,
+        slotValues=slots,
+        variants=variants,
+        plannedAt=body.plannedAt,
+    ))
+
+
 def transition_package(db: Session, package_id: str, target: str, note: str = "") -> dict:
     row = db.get(ContentPublishPackage, package_id)
     if not row:
@@ -147,7 +248,7 @@ def export_package(db: Session, package_id: str) -> dict:
             {
                 "channel": channel,
                 "content": content,
-                "deepLink": row.deep_link,
+                "deepLink": content.get("ctaLink") or row.deep_link,
                 "plannedAt": row.planned_at,
                 "manualPublishRequired": True,
             }

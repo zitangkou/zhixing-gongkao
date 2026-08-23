@@ -1,6 +1,7 @@
 <template>
   <PageShell title="账号内容运营">
     <template #extra>
+      <el-button v-if="canWrite" type="success" @click="openGenerate">从审核文章生成</el-button>
       <el-button v-if="canWrite" type="primary" @click="openCreate">新建发布包</el-button>
       <el-button @click="loadAll">刷新</el-button>
     </template>
@@ -96,6 +97,44 @@
       </el-tab-pane>
     </el-tabs>
 
+    <el-dialog v-model="generateVisible" title="从审核文章生成发布包" width="620px" destroy-on-close>
+      <el-alert title="系统只填充能从原文确定的槽位；其余字段会留空，补齐后才能送教研。" type="info" :closable="false" class="generate-tip" />
+      <el-form label-width="110px">
+        <el-row :gutter="16">
+          <el-col :span="12">
+            <el-form-item label="产品">
+              <el-select v-model="generateForm.productKey" style="width: 100%" @change="onGenerateProductChange">
+                <el-option label="申论" value="shenlun" /><el-option label="政治理论" value="theory" />
+              </el-select>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="栏目模板">
+              <el-select v-model="generateForm.templateId" style="width: 100%">
+                <el-option v-for="item in generateTemplates" :key="item.id" :label="item.name" :value="item.id" />
+              </el-select>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-form-item label="审核文章">
+          <el-select v-model="generateForm.articleId" filterable style="width: 100%" placeholder="选择已发布文章">
+            <el-option v-for="article in publishedArticles" :key="article.id" :label="article.title" :value="article.id">
+              <span>{{ article.title }}</span><span class="option-meta">{{ article.source }} · {{ article.publishDate }}</span>
+            </el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item label="小程序深链"><el-input v-model="generateForm.deepLink" placeholder="系统会自动附加渠道归因参数" /></el-form-item>
+        <el-row :gutter="16">
+          <el-col :span="12"><el-form-item label="活动标识"><el-input v-model="generateForm.campaignKey" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="计划发布时间"><el-date-picker v-model="generateForm.plannedAt" type="datetime" value-format="YYYY-MM-DDTHH:mm:ss" style="width: 100%" /></el-form-item></el-col>
+        </el-row>
+      </el-form>
+      <template #footer>
+        <el-button @click="generateVisible = false">取消</el-button>
+        <el-button type="primary" :loading="generating" @click="generateFromArticle">生成并继续编辑</el-button>
+      </template>
+    </el-dialog>
+
     <el-dialog v-model="dialogVisible" :title="editingId ? '编辑发布包' : '新建发布包'" width="760px" destroy-on-close>
       <el-form label-width="100px">
         <el-row :gutter="16">
@@ -156,8 +195,10 @@ import PageShell from '@/components/PageShell.vue'
 import ListState from '@/components/ListState.vue'
 import { useAdminList } from '@/composables/useAdminList'
 import { useAuthStore } from '@/stores/auth'
+import { fetchArticles } from '@/api/articles'
+import type { Article } from '@/types'
 import {
-  createContentPackage, exportContentPackage, fetchContentPackages, fetchContentTemplates, updateContentPackage,
+  createContentPackage, exportContentPackage, fetchContentPackages, fetchContentTemplates, generateContentPackageFromArticle, updateContentPackage,
   updateContentPackageStatus, type ContentOpsStatus, type ContentOpsTemplate, type ContentPackage,
 } from '@/api/contentOps'
 
@@ -169,19 +210,24 @@ const templates = ref<ContentOpsTemplate[]>([])
 const packages = ref<ContentPackage[]>([])
 const filters = reactive({ productKey: '', status: '' })
 const dialogVisible = ref(false)
+const generateVisible = ref(false)
 const saving = ref(false)
+const generating = ref(false)
 const calendarMonth = ref(new Date())
 const editingId = ref('')
 const selectedChannels = ref<string[]>([])
 const variantForms = reactive<Record<string, { title: string; body: string }>>({})
 const slotForms = reactive<Record<string, string>>({})
+const publishedArticles = ref<Article[]>([])
 const form = reactive({ productKey: 'shenlun', templateId: '', sourceType: 'daily_task', sourceId: '', sourceTitle: '', campaignKey: '', deepLink: '', plannedAt: '' })
+const generateForm = reactive({ productKey: 'shenlun', templateId: '', articleId: '', campaignKey: '', deepLink: '', plannedAt: '' })
 const statusOptions = [
   ['draft', '草稿'], ['teaching_review', '教研审核'], ['ops_review', '运营审核'],
   ['ready', '待发布'], ['published', '已发布'], ['rejected', '已驳回'],
 ].map(([value, label]) => ({ value, label }))
 const availableTemplates = computed(() => templates.value.filter((item) => item.productKey === form.productKey || item.productKey === 'general'))
 const currentTemplate = computed(() => templates.value.find((item) => item.id === form.templateId))
+const generateTemplates = computed(() => templates.value.filter((item) => item.productKey === generateForm.productKey || item.productKey === 'general'))
 
 const productLabel = (key: string) => ({ shenlun: '申论', theory: '政治理论', general: '通用' }[key] || key)
 const channelLabel = (key: string) => ({ xiaohongshu: '小红书', douyin: '抖音', bilibili: 'B站', wechat: '公众号' }[key] || key)
@@ -221,6 +267,20 @@ function onTemplateChange() {
   selectedChannels.value.forEach((channel) => initVariant(channel))
   currentTemplate.value?.slots.forEach((slot) => { slotForms[slot] ||= '' })
 }
+function onGenerateProductChange() { generateForm.templateId = generateTemplates.value[0]?.id || '' }
+async function openGenerate() {
+  Object.assign(generateForm, { productKey: 'shenlun', templateId: '', articleId: '', campaignKey: '', deepLink: '', plannedAt: '' })
+  if (!templates.value.length) {
+    try { await loadTemplates() }
+    catch (error) { ElMessage.error(error instanceof Error ? error.message : '栏目模板加载失败'); return }
+  }
+  onGenerateProductChange()
+  generateVisible.value = true
+  if (!publishedArticles.value.length) {
+    try { publishedArticles.value = (await fetchArticles({ page: 1, page_size: 100, status: 'published' })).items }
+    catch (error) { ElMessage.error(error instanceof Error ? error.message : '审核文章加载失败') }
+  }
+}
 function resetForm() {
   editingId.value = ''; Object.assign(form, { productKey: 'shenlun', templateId: '', sourceType: 'daily_task', sourceId: '', sourceTitle: '', campaignKey: '', deepLink: '', plannedAt: '' })
   onProductChange()
@@ -245,6 +305,18 @@ async function savePackage() {
     else await createContentPackage({ ...common, productKey: form.productKey, templateId: form.templateId, sourceType: form.sourceType, sourceId: form.sourceId })
     dialogVisible.value = false; await loadPackages(); ElMessage.success('发布包草稿已保存')
   } catch (error) { ElMessage.error(error instanceof Error ? error.message : '保存失败') } finally { saving.value = false }
+}
+async function generateFromArticle() {
+  if (!generateForm.templateId || !generateForm.articleId) { ElMessage.warning('请选择栏目模板和审核文章'); return }
+  generating.value = true
+  try {
+    const row = await generateContentPackageFromArticle({ ...generateForm, plannedAt: generateForm.plannedAt || null })
+    generateVisible.value = false
+    await loadPackages()
+    openEdit(row)
+    const missing = (templates.value.find((item) => item.id === row.templateId)?.slots || []).filter((slot) => !row.slotValues[slot])
+    ElMessage.success(missing.length ? `草稿已生成，请补齐 ${missing.length} 个待确认槽位` : '草稿已生成，请复核后送审')
+  } catch (error) { ElMessage.error(error instanceof Error ? error.message : '生成失败') } finally { generating.value = false }
 }
 async function advance(row: ContentPackage) {
   const target = nextStatus(row.status); if (!target) return
@@ -277,6 +349,8 @@ onMounted(loadAll)
 
 <style scoped>
 .intro { margin-bottom: 14px; }
+.generate-tip { margin-bottom: 18px; }
+.option-meta { float: right; margin-left: 16px; color: #909399; font-size: 12px; }
 .strong { font-weight: 600; line-height: 1.5; }
 .muted { color: #909399; font-size: 12px; margin-top: 3px; }
 .channel-tag { margin: 2px 5px 2px 0; }
