@@ -9,6 +9,7 @@ export default defineConfig<'vite'>(() => ({
   defineConstants: {
     API_BASE_URL: JSON.stringify(process.env.TARO_APP_API_URL ?? 'http://127.0.0.1:8001'),
     PRODUCT_KEY: JSON.stringify('theory'),
+    USE_MOCK: JSON.stringify(process.env.USE_MOCK === 'true'),
   },
   mini: { postcss: { pxtransform: { enable: true, config: {} }, cssModules: { enable: false } } },
   h5: { publicPath: '/', staticDirectory: 'static', devServer: { port: 10089 }, postcss: { autoprefixer: { enable: true }, cssModules: { enable: false } } },
