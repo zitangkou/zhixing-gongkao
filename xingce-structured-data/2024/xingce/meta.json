@@ -20,13 +20,19 @@
       "file": "papers/xingzhengzhifa.json"
     }
   },
-  "source_files": [],
+  "source_files": [
+    "20240124.pdf",
+    "20242548.pdf",
+    "20244972.pdf",
+    "20247377.pdf"
+  ],
   "media": {
     "pages_dir": "media/pages",
     "figures_dir": "media/figures",
     "formulas_dir": "media/formulas",
     "index": "media/media_index.json"
   },
-  "status": "empty",
-  "updated": ""
+  "status": "extracting",
+  "updated": "2026-08-23",
+  "notes": "常识/言语/数量/资料已结构化（_extract/）；判断进行中；差异题待补。总进度约95/135题文本完成。"
 }

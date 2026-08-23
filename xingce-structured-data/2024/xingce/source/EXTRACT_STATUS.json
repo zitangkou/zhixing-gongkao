@@ -1,0 +1,44 @@
+{
+  "year": 2024,
+  "updated": "2026-08-23",
+  "extracted": {
+    "常识判断": {
+      "range": "1-20",
+      "status": "done",
+      "file": "_extract/changshi.json"
+    },
+    "资料分析": {
+      "range": "116-135",
+      "status": "done",
+      "file": "_extract/ziliao.json"
+    },
+    "言语理解与表达": {
+      "range": "21-60",
+      "status": "done",
+      "file": "_extract/yuyan.json"
+    },
+    "数量关系": {
+      "range": "61-75",
+      "status": "done",
+      "file": "_extract/shuliang.json"
+    },
+    "判断推理": {
+      "range": "76-115",
+      "status": "pending",
+      "note": "图形题需media裁剪，逻辑题从Vyc提取"
+    }
+  },
+  "pdf_roles": {
+    "20240124.pdf": "主卷省级前部 常识1-20 + 言语21-60 + 数量前部",
+    "20242548.pdf": "主卷续 数量末 + 判断76-115 + 资料116-135 + 部分市地差异",
+    "20244972.pdf": "市地级言语差异题",
+    "20247377.pdf": "行政执法判断差异题"
+  },
+  "next": [
+    "完成数量61-75",
+    "完成判断76-115（图形media）",
+    "补差异题组装shidi/xingzhengzhifa",
+    "组装shengji.json 135题"
+  ],
+  "progress_summary": "常识1-20 + 言语21-60 + 数量61-75 + 资料116-135 已完成结构化；判断76-115待提取"
+}
