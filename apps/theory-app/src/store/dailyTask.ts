@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { api, type DailyLearningTask } from '@/api'
+import { api, type DailyLearningTask, type DailyTaskEvent } from '@/api'
 
 export const useDailyTaskStore = defineStore('theory-daily-task', {
   state: () => ({ task: null as DailyLearningTask | null, loading: false, starting: false, message: '' }),
@@ -31,6 +31,16 @@ export const useDailyTaskStore = defineStore('theory-daily-task', {
       this.starting = true
       const response = await api.updateDailyTask(this.task.id, { event: 'start' })
       this.starting = false
+      if (response.code !== 0 || !response.data) {
+        this.message = response.message
+        return false
+      }
+      this.task = response.data
+      return true
+    },
+    async transition(event: DailyTaskEvent, currentStep?: number, draft?: Record<string, unknown>) {
+      if (!this.task) return false
+      const response = await api.updateDailyTask(this.task.id, { event, currentStep, draft })
       if (response.code !== 0 || !response.data) {
         this.message = response.message
         return false

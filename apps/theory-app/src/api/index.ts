@@ -55,6 +55,44 @@ export interface UserMe {
   signDates: string[]
 }
 
+export interface ArticleSection {
+  id: string
+  title: string
+  level: number
+  content?: string
+  highlight?: string
+  children?: ArticleSection[]
+}
+
+export interface Article {
+  id: string
+  title: string
+  source: string
+  publishDate: string
+  summary: string
+  content: string
+  sections: ArticleSection[]
+  tags: string[]
+}
+
+export interface Question {
+  id: string
+  articleId: string
+  type: 'single' | 'multiple' | 'judge'
+  stem: string
+  options?: string[]
+  correctAnswer: string | string[]
+  analysis: string
+  sourceSentence: string
+}
+
+export interface AnswerResult {
+  correct: boolean
+  analysis: string
+  correctAnswer: string | string[]
+  pointsEarned: number
+}
+
 interface AuthResult { access_token: string; token_type: string; user: UserMe }
 
 async function request<T>(path: string, options: { method?: 'GET' | 'POST'; data?: unknown; auth?: boolean } = {}): Promise<ApiResponse<T>> {
@@ -100,5 +138,15 @@ export const api = {
   },
   updateDailyTask(taskId: string, payload: { event: DailyTaskEvent; currentStep?: number; draft?: Record<string, unknown> }) {
     return request<DailyLearningTask>(`/api/product/daily-tasks/${taskId}/progress`, { method: 'POST', data: payload })
+  },
+  getArticle(articleId: string) { return request<Article>(`/api/articles/${articleId}`) },
+  getQuestions(articleId: string) {
+    return request<Question[]>(`/api/questions?articleId=${encodeURIComponent(articleId)}`)
+  },
+  markArticleRead(articleId: string) {
+    return request<{ points: number }>(`/api/articles/${articleId}/read`, { method: 'POST' })
+  },
+  submitAnswer(questionId: string, answer: string | string[]) {
+    return request<AnswerResult>('/api/answer', { method: 'POST', data: { questionId, answer } })
   },
 }
