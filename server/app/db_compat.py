@@ -282,7 +282,20 @@ def _ensure_ziliao_formula_plain_column():
     if "formula_plain" in cols:
         return
     with engine.begin() as conn:
-        conn.execute(text("ALTER TABLE ziliao_formulas ADD COLUMN formula_plain TEXT DEFAULT ''"))
+            conn.execute(text("ALTER TABLE ziliao_formulas ADD COLUMN formula_plain TEXT DEFAULT ''"))
+
+
+def _ensure_content_ops_columns():
+    """兼容首版内容发布包：补结构化栏目槽位。"""
+    from sqlalchemy import inspect, text
+
+    insp = inspect(engine)
+    if not insp.has_table("content_publish_packages"):
+        return
+    cols = {c["name"] for c in insp.get_columns("content_publish_packages")}
+    if "slot_values_json" not in cols:
+        with engine.begin() as conn:
+            conn.execute(text("ALTER TABLE content_publish_packages ADD COLUMN slot_values_json TEXT DEFAULT '{}'"))
 
 
 def run_compat_migrations() -> None:
@@ -299,3 +312,4 @@ def run_compat_migrations() -> None:
     _ensure_shenlun_columns()
     _ensure_rmrb_article_columns()
     _ensure_ziliao_formula_plain_column()
+    _ensure_content_ops_columns()

@@ -28,6 +28,7 @@ class ContentPublishPackage(Base):
     source_title: Mapped[str] = mapped_column(String(256), default="")
     campaign_key: Mapped[str] = mapped_column(String(64), default="", index=True)
     deep_link: Mapped[str] = mapped_column(String(512), default="")
+    slot_values_json: Mapped[str] = mapped_column(Text, default="{}")
     variants_json: Mapped[str] = mapped_column(Text, default="{}")
     review_note: Mapped[str] = mapped_column(Text, default="")
     status: Mapped[str] = mapped_column(String(24), default="draft", index=True)

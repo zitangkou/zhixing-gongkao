@@ -332,6 +332,21 @@ def test_admin_rbac():
         assert package["sourceTitle"].endswith("（已编辑）")
         assert list(package["variants"]) == ["wechat"]
 
+        missing_slots = client.post(
+            f"/admin/content-ops/packages/{package['id']}/status",
+            headers=admin_headers,
+            json={"status": "teaching_review"},
+        )
+        assert missing_slots.json()["code"] == 400
+        package = _ok(
+            client.put(
+                f"/admin/content-ops/packages/{package['id']}",
+                headers=admin_headers,
+                json={"slotValues": {slot: f"{slot}内容" for slot in shenlun_template["slots"]}},
+            )
+        )
+        assert len(package["slotValues"]) == len(shenlun_template["slots"])
+
         invalid_publish = client.post(
             f"/admin/content-ops/packages/{package['id']}/status",
             headers=admin_headers,

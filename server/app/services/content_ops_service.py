@@ -59,6 +59,7 @@ def package_out(row: ContentPublishPackage) -> dict:
     return {"id": row.id, "productKey": row.product_key, "templateId": row.template_id,
             "sourceType": row.source_type, "sourceId": row.source_id, "sourceTitle": row.source_title,
             "campaignKey": row.campaign_key, "deepLink": row.deep_link,
+            "slotValues": _loads(row.slot_values_json, {}),
             "variants": _loads(row.variants_json, {}), "reviewNote": row.review_note, "status": row.status,
             "plannedAt": row.planned_at, "publishedAt": row.published_at,
             "createdAt": row.created_at, "updatedAt": row.updated_at}
@@ -73,10 +74,14 @@ def create_package(db: Session, body: ContentPublishPackageCreate) -> dict:
     unknown = set(body.variants) - set(_loads(template.channels_json, []))
     if unknown:
         raise ValueError(f"模板不支持渠道: {', '.join(sorted(unknown))}")
+    unknown_slots = set(body.slotValues) - set(_loads(template.slots_json, []))
+    if unknown_slots:
+        raise ValueError(f"模板不存在槽位: {', '.join(sorted(unknown_slots))}")
     row = ContentPublishPackage(
         id=gen_id("cpp"), product_key=body.productKey, template_id=template.id,
         source_type=body.sourceType, source_id=body.sourceId, source_title=body.sourceTitle,
         campaign_key=body.campaignKey, deep_link=body.deepLink,
+        slot_values_json=json.dumps(body.slotValues, ensure_ascii=False),
         variants_json=json.dumps(body.variants, ensure_ascii=False), planned_at=body.plannedAt,
     )
     db.add(row); db.commit(); db.refresh(row)
@@ -89,6 +94,12 @@ def transition_package(db: Session, package_id: str, target: str, note: str = ""
         raise ValueError("发布包不存在")
     if target not in TRANSITIONS.get(row.status, set()):
         raise ValueError(f"发布包状态 {row.status} 不能变更为 {target}")
+    if target == "teaching_review":
+        template = db.get(ContentOperationTemplate, row.template_id)
+        values = _loads(row.slot_values_json, {})
+        missing = [slot for slot in _loads(template.slots_json, []) if not str(values.get(slot, "")).strip()]
+        if missing:
+            raise ValueError(f"请先补齐模板槽位: {', '.join(missing)}")
     row.status = target; row.review_note = note.strip()
     if target == "published": row.published_at = now()
     db.commit(); db.refresh(row)
@@ -103,6 +114,12 @@ def update_package(db: Session, package_id: str, body: ContentPublishPackageUpda
         raise ValueError("只有草稿或已驳回发布包可以编辑")
     data = body.model_dump(exclude_unset=True)
     mapping = {"sourceTitle": "source_title", "campaignKey": "campaign_key", "deepLink": "deep_link", "plannedAt": "planned_at"}
+    if "slotValues" in data:
+        template = db.get(ContentOperationTemplate, row.template_id)
+        slot_values = data.pop("slotValues") or {}
+        unknown = set(slot_values) - set(_loads(template.slots_json, []))
+        if unknown: raise ValueError(f"模板不存在槽位: {', '.join(sorted(unknown))}")
+        row.slot_values_json = json.dumps(slot_values, ensure_ascii=False)
     if "variants" in data:
         template = db.get(ContentOperationTemplate, row.template_id)
         unknown = set(data.pop("variants") or {}) - set(_loads(template.channels_json, []))

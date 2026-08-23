@@ -11,6 +11,7 @@ class ContentPublishPackageCreate(BaseModel):
     sourceTitle: str = ""
     campaignKey: str = ""
     deepLink: str = ""
+    slotValues: dict[str, str] = Field(default_factory=dict)
     variants: dict[str, dict[str, Any]] = Field(default_factory=dict)
     plannedAt: datetime | None = None
 
@@ -24,5 +25,6 @@ class ContentPublishPackageUpdate(BaseModel):
     sourceTitle: str | None = None
     campaignKey: str | None = None
     deepLink: str | None = None
+    slotValues: dict[str, str] | None = None
     variants: dict[str, dict[str, Any]] | None = None
     plannedAt: datetime | None = None

@@ -129,6 +129,11 @@
             <el-checkbox v-for="channel in currentTemplate?.channels || []" :key="channel" :value="channel">{{ channelLabel(channel) }}</el-checkbox>
           </el-checkbox-group>
         </el-form-item>
+        <el-divider content-position="left">栏目结构化槽位</el-divider>
+        <el-form-item v-for="slot in currentTemplate?.slots || []" :key="slot" :label="slot">
+          <el-input v-model="slotForms[slot]" type="textarea" :autosize="{ minRows: 1, maxRows: 4 }" :placeholder="`填写${slot}`" />
+        </el-form-item>
+        <el-divider content-position="left">渠道变体</el-divider>
         <el-tabs v-if="selectedChannels.length" type="border-card">
           <el-tab-pane v-for="channel in selectedChannels" :key="channel" :label="channelLabel(channel)">
             <el-form-item label="渠道标题"><el-input v-model="variantForms[channel].title" /></el-form-item>
@@ -169,6 +174,7 @@ const calendarMonth = ref(new Date())
 const editingId = ref('')
 const selectedChannels = ref<string[]>([])
 const variantForms = reactive<Record<string, { title: string; body: string }>>({})
+const slotForms = reactive<Record<string, string>>({})
 const form = reactive({ productKey: 'shenlun', templateId: '', sourceType: 'daily_task', sourceId: '', sourceTitle: '', campaignKey: '', deepLink: '', plannedAt: '' })
 const statusOptions = [
   ['draft', '草稿'], ['teaching_review', '教研审核'], ['ops_review', '运营审核'],
@@ -209,8 +215,11 @@ function initVariant(channel: string, value?: { title?: string; body?: string })
 }
 function onProductChange() { form.templateId = availableTemplates.value[0]?.id || ''; onTemplateChange() }
 function onTemplateChange() {
+  Object.keys(variantForms).forEach((key) => delete variantForms[key])
+  Object.keys(slotForms).forEach((key) => delete slotForms[key])
   selectedChannels.value = [...(currentTemplate.value?.channels || [])]
-  selectedChannels.value.forEach((channel) => initVariant(channel, variantForms[channel]))
+  selectedChannels.value.forEach((channel) => initVariant(channel))
+  currentTemplate.value?.slots.forEach((slot) => { slotForms[slot] ||= '' })
 }
 function resetForm() {
   editingId.value = ''; Object.assign(form, { productKey: 'shenlun', templateId: '', sourceType: 'daily_task', sourceId: '', sourceTitle: '', campaignKey: '', deepLink: '', plannedAt: '' })
@@ -222,14 +231,16 @@ function openEdit(row: ContentPackage) {
   Object.assign(form, { productKey: row.productKey, templateId: row.templateId, sourceType: row.sourceType, sourceId: row.sourceId, sourceTitle: row.sourceTitle, campaignKey: row.campaignKey, deepLink: row.deepLink, plannedAt: row.plannedAt || '' })
   selectedChannels.value = Object.keys(row.variants)
   selectedChannels.value.forEach((channel) => initVariant(channel, row.variants[channel]))
+  currentTemplate.value?.slots.forEach((slot) => { slotForms[slot] = row.slotValues?.[slot] || '' })
   dialogVisible.value = true
 }
 async function savePackage() {
   if (!form.templateId || !form.sourceId.trim() || !selectedChannels.value.length) { ElMessage.warning('请补齐模板、母资产和至少一个渠道'); return }
   const variants = Object.fromEntries(selectedChannels.value.map((channel) => [channel, { ...variantForms[channel] }]))
+  const slotValues = Object.fromEntries((currentTemplate.value?.slots || []).map((slot) => [slot, slotForms[slot] || '']))
   saving.value = true
   try {
-    const common = { sourceTitle: form.sourceTitle, campaignKey: form.campaignKey, deepLink: form.deepLink, plannedAt: form.plannedAt || null, variants }
+    const common = { sourceTitle: form.sourceTitle, campaignKey: form.campaignKey, deepLink: form.deepLink, plannedAt: form.plannedAt || null, slotValues, variants }
     if (editingId.value) await updateContentPackage(editingId.value, common)
     else await createContentPackage({ ...common, productKey: form.productKey, templateId: form.templateId, sourceType: form.sourceType, sourceId: form.sourceId })
     dialogVisible.value = false; await loadPackages(); ElMessage.success('发布包草稿已保存')
