@@ -13,6 +13,7 @@ from app.api.admin.roles import router as roles_router
 from app.api.admin.settings import router as settings_router
 from app.api.admin.users import router as users_router
 from app.api.admin.ziliao import router as ziliao_router
+from app.api.admin.content_ops import router as content_ops_router
 
 router = APIRouter(prefix="/admin", tags=["管理后台"])
 router.include_router(auth_admin_router)
@@ -28,3 +29,4 @@ router.include_router(exam_router)
 router.include_router(rmrb_router)
 router.include_router(ziliao_router)
 router.include_router(misc_router)
+router.include_router(content_ops_router)

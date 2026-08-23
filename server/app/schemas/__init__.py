@@ -48,3 +48,4 @@ from app.schemas.ziliao import (
 from app.schemas.countdown import ExamCountdownOut, ExamCountdownUpsert
 from app.schemas.data import DataImportIn
 from app.schemas.product import DailyTaskListOut, DailyTaskProgressBody, DailyTaskProgressOut, DailyLearningTaskOut
+from app.schemas.content_ops import ContentPublishPackageCreate, ContentPublishStatusBody

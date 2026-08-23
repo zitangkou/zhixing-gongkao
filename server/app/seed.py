@@ -52,3 +52,7 @@ def seed_if_empty(db: Session) -> None:
     from app.services.rmrb_meta_service import ensure_rmrb_meta_defaults
 
     ensure_rmrb_meta_defaults(db)
+
+    from app.services.content_ops_service import ensure_content_ops_defaults
+
+    ensure_content_ops_defaults(db)

@@ -292,6 +292,46 @@ def test_admin_rbac():
         articles = _ok(client.get("/admin/articles", headers=admin_headers))
         assert isinstance(articles, dict) and "items" in articles
 
+        templates = _ok(client.get("/admin/content-ops/templates", headers=admin_headers))
+        assert len(templates) == 10
+        shenlun_template = next(item for item in templates if item["code"] == "shenlun_three_cut")
+        package = _ok(
+            client.post(
+                "/admin/content-ops/packages",
+                headers=admin_headers,
+                json={
+                    "productKey": "shenlun",
+                    "templateId": shenlun_template["id"],
+                    "sourceType": "daily_task",
+                    "sourceId": "dlt-demo",
+                    "sourceTitle": "今日三刀训练",
+                    "campaignKey": "xhs-20260823",
+                    "deepLink": "/pages/rmrb/index?channel=xiaohongshu",
+                    "variants": {
+                        "xiaohongshu": {"title": "一篇时评怎么拆", "slides": ["封面", "骨架"]},
+                        "wechat": {"title": "今日申论学习包", "body": "待审核正文"},
+                    },
+                },
+            )
+        )
+        assert package["status"] == "draft"
+
+        invalid_publish = client.post(
+            f"/admin/content-ops/packages/{package['id']}/status",
+            headers=admin_headers,
+            json={"status": "published"},
+        )
+        assert invalid_publish.json()["code"] == 400
+        for status in ("teaching_review", "ops_review", "ready", "published"):
+            package = _ok(
+                client.post(
+                    f"/admin/content-ops/packages/{package['id']}/status",
+                    headers=admin_headers,
+                    json={"status": status, "reviewNote": f"{status} ok"},
+                )
+            )
+        assert package["status"] == "published" and package["publishedAt"]
+
         # 新建只读管理员
         with SessionLocal() as db:
             role = db.query(Role).filter(Role.code == "viewer").first()
@@ -319,6 +359,7 @@ def test_admin_rbac():
 
         # 读接口可访问
         _ok(client.get("/admin/articles", headers=v_headers))
+        _ok(client.get("/admin/content-ops/templates", headers=v_headers))
 
         # 写接口被 403 拦截
         denied = client.post(
