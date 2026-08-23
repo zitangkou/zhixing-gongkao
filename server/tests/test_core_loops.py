@@ -38,10 +38,12 @@ from app.models import (  # noqa: E402
     ExamPaper,
     ExamQuestion,
     Question,
+    RmrbArticle,
     Role,
+    UserDailyTaskProgress,
     WrongAnswer,
 )
-from app.timezone import now  # noqa: E402
+from app.timezone import now, today  # noqa: E402
 
 # 本文件会在进入 TestClient 生命周期前直接写入测试数据，先显式建表，
 # 保证单独运行该测试文件时不依赖其他测试留下的数据库结构。
@@ -513,6 +515,56 @@ def test_daily_task_state_machine_and_product_isolation():
         )
         assert cross_product.status_code == 200
         assert cross_product.json()["code"] == 400
+
+
+def test_shenlun_home_provisions_one_daily_article_task():
+    """申论首页为今日选择一篇已审核文章，重复加载不重复编排。"""
+    task_date = today()
+    with TestClient(app) as client:
+        user = _register(client)
+        headers = {**user["headers"], "X-Product-Key": "shenlun"}
+        with SessionLocal() as db:
+            existing_ids = [
+                row[0]
+                for row in db.query(DailyLearningTask.id).filter(
+                    DailyLearningTask.product_key == "shenlun",
+                    DailyLearningTask.task_date == task_date,
+                )
+            ]
+            if existing_ids:
+                db.query(UserDailyTaskProgress).filter(
+                    UserDailyTaskProgress.task_id.in_(existing_ids)
+                ).delete(synchronize_session=False)
+            db.query(DailyLearningTask).filter(
+                DailyLearningTask.product_key == "shenlun",
+                DailyLearningTask.task_date == task_date,
+            ).delete(synchronize_session=False)
+            db.add(
+                RmrbArticle(
+                    id="rmrb-daily-home",
+                    title="以务实行动答好民生考题",
+                    source="人民时评",
+                    publish_date=task_date,
+                    summary="从群众关切出发，把好事实事办到心坎上。",
+                    content="测试文章正文",
+                    tags='["民生", "基层治理"]',
+                    is_published=True,
+                    sort_order=999,
+                )
+            )
+            db.commit()
+
+        first = _ok(client.get("/api/product/daily-tasks", headers=headers))
+        second = _ok(client.get("/api/product/daily-tasks", headers=headers))
+
+        assert first["date"] == task_date
+        assert first["totalCount"] == 1
+        assert second["totalCount"] == 1
+        task = first["tasks"][0]
+        assert task["taskType"] == "shenlun_article_training"
+        assert task["contentId"] == "rmrb-daily-home"
+        assert task["totalSteps"] == 4
+        assert task["metadata"]["tags"] == ["民生", "基层治理"]
 
 
 def teardown_module(_mod=None):

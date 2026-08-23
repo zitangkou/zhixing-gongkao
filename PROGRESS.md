@@ -20,10 +20,11 @@
 | 真题资产 | 2025 国考行测省级/市地/行政执法三卷题面与媒体已入库；答案、解析、细题型和应用适配待补 | 🟡 2026-08-22 |
 | 双产品 Sprint 0 | 申论/政治理论 PRD、共享底座设计、`product_key` 后端上下文、公开配置、前端请求/上传注入和产品 Store | 🟡 2026-08-23 第一批完成 |
 | 双产品 Sprint 0 | 通用今日任务、五态学习状态机、服务端草稿与跨端断点恢复、产品隔离、前端任务 Store | ✅ 2026-08-23 第二批完成 |
+| 申论 Sprint 1 | 垂直今日首页、审核文章自动编排、单主任务入口、阅读/三刀进度回写、Mock 演示数据 | ✅ 2026-08-23 第一批完成 |
 
 ## 2. 当前质量基线（2026-08-23 实测）
 
-- 后端 `server/.venv/bin/python -m pytest -q`：**22 passed，48 warnings**（warning 来自 `python-jose` 使用即将弃用的 `datetime.utcnow()`）
+- 后端 `server/.venv/bin/python -m pytest -q`：**23 passed，50 warnings**（warning 来自 `python-jose` 使用即将弃用的 `datetime.utcnow()`）
 - 前端 `npm run lint`：**0 errors，85 warnings**；门禁通过，但格式类 warning 已重新积累，不能再表述为“0 problems”
 - 管理后台构建：2026-08-22 实测通过（主入口 59.17KB，Element Plus chunk 1.07MB）
 - H5 构建：本机运行时卡在 `system-configuration` Rust worker 的 macOS `NULL object` panic，已中止；更像本机构建环境问题，但本次不能记为通过
@@ -64,6 +65,7 @@
 ## 5. 最近提交
 
 ```text
+f305b86 feat: add resumable daily task workflow
 0f88d16 feat: bootstrap shenlun and theory product foundation
 c8df137 feat(deploy): 一键部署云服务器脚本 + 部署文档与项目进度维护
 9e0edb3 chore: 管理后台清理 + 文档/待优化清单同步

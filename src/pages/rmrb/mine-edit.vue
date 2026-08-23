@@ -18,7 +18,9 @@
           class="tab"
           :class="{ on: activeTab === tab.key }"
           @tap="activeTab = tab.key"
-        >{{ tab.label }}</text>
+        >
+          {{ tab.label }}
+        </text>
       </view>
     </scroll-view>
 
@@ -305,6 +307,7 @@ import { Button as NutButton, Input as NutInput, Textarea as NutTextarea } from 
 import VoiceInputBtn from '@/components/VoiceInputBtn.vue'
 import WheelPicker from '@/components/WheelPicker.vue'
 import { api } from '@/api'
+import { useDailyTaskStore } from '@/store/dailyTask'
 import { flushFormBeforeSave } from '@/utils/formFlush'
 import { promptText, showConfirm, showToast } from '@/utils/platform'
 import {
@@ -331,6 +334,7 @@ definePageConfig({ navigationBarTitleText: '三刀解剖' })
 
 const { themeClass } = useThemeClass()
 const router = useRouter()
+const dailyTaskStore = useDailyTaskStore()
 const mineId = ref('')
 const articleId = ref('')
 /** 避免页面缓存导致重复 load；id 变化时强制重载 */
@@ -1008,6 +1012,25 @@ async function onSaveSection() {
         'success',
       )
       if (res.data) applyMine(res.data)
+      const taskId = (router.params?.taskId || '').trim()
+      const task = dailyTaskStore.tasks.find((item) => item.id === taskId)
+      if (taskId && task?.progress.state === 'in_progress') {
+        try {
+          await dailyTaskStore.saveDraft(
+            taskId,
+            {
+              ...task.progress.draft,
+              articleId: articleId.value,
+              mineId: mineId.value,
+              lastSection: tab,
+            },
+            2,
+            task.totalSteps,
+          )
+        } catch {
+          showToast('开采内容已保存，任务进度稍后同步', 'error')
+        }
+      }
     } else {
       showToast(res.message || '保存失败', 'error')
     }

@@ -1,5 +1,5 @@
 <template>
-  <view class="page-rmrb-detail" v-if="article" :class="themeClass">
+  <view v-if="article" class="page-rmrb-detail" :class="themeClass">
     <text class="source">{{ article.source }} · {{ article.publishDate }}</text>
     <text class="title selectable-text" user-select selectable>{{ article.title }}</text>
     <view v-if="article.tags?.length" class="tags">
@@ -29,6 +29,7 @@ import Taro, { useRouter } from '@tarojs/taro'
 import { Button as NutButton } from '@nutui/nutui-taro'
 import CorpusSelectCapture from '@/components/CorpusSelectCapture.vue'
 import { api } from '@/api'
+import { useDailyTaskStore } from '@/store/dailyTask'
 import { buildCorpusEditUrl } from '@/utils/corpus'
 import { copyText, showToast } from '@/utils/platform'
 import type { RmrbArticle } from '@/types'
@@ -38,6 +39,7 @@ definePageConfig({ navigationBarTitleText: '时评详情' })
 
 const { themeClass } = useThemeClass()
 const router = useRouter()
+const dailyTaskStore = useDailyTaskStore()
 const article = ref<RmrbArticle | null>(null)
 
 async function load() {
@@ -57,11 +59,26 @@ async function onCopy() {
   await copyText(text)
 }
 
-function goMine() {
+async function goMine() {
   if (!article.value) return
+  const taskId = (router.params?.taskId || '').trim()
+  const task = dailyTaskStore.tasks.find((item) => item.id === taskId)
+  if (taskId && task?.progress.state === 'in_progress') {
+    try {
+      await dailyTaskStore.saveDraft(
+        taskId,
+        { ...task.progress.draft, articleId: article.value.id, readCompleted: true },
+        1,
+        task.totalSteps,
+      )
+    } catch {
+      showToast('阅读进度暂未同步，将继续进入拆解', 'error')
+    }
+  }
   const title = encodeURIComponent(article.value.title || '')
+  const taskQuery = taskId ? `&taskId=${encodeURIComponent(taskId)}` : ''
   Taro.navigateTo({
-    url: `/pages/rmrb/mine-edit?articleId=${article.value.id}&title=${title}`,
+    url: `/pages/rmrb/mine-edit?articleId=${article.value.id}&title=${title}${taskQuery}`,
   })
 }
 
