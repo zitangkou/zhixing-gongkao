@@ -1,0 +1,2 @@
+<template><view class="page"><view class="eyebrow">学习档案</view><view class="page-title">我的申论</view><view class="hero"><view class="hero-kicker">本周投入</view><view class="hero-title">126 分钟 · 完成 8 项</view><view class="hero-desc">保持当前节奏，本周还需完成 2 次主动输出。</view></view><view class="section-head"><view class="section-title">学习资产</view></view><view v-for="item in items" :key="item" class="card row"><view class="card-title">{{ item }}</view><view class="tag">查看</view></view></view></template>
+<script setup lang="ts">const items = ['我的批注与开采', '收藏的表达', '训练与批改记录', '学习计划与设置']</script>
