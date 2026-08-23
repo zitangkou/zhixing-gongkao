@@ -111,3 +111,30 @@ def update_package(db: Session, package_id: str, body: ContentPublishPackageUpda
     for key, value in data.items(): setattr(row, mapping.get(key, key), value)
     db.commit(); db.refresh(row)
     return package_out(row)
+
+
+def export_package(db: Session, package_id: str) -> dict:
+    row = db.get(ContentPublishPackage, package_id)
+    if not row:
+        raise ValueError("发布包不存在")
+    if row.status not in ("ready", "published"):
+        raise ValueError("只有待发布或已发布的发布包可以导出")
+    template = db.get(ContentOperationTemplate, row.template_id)
+    variants = _loads(row.variants_json, {})
+    return {
+        "schemaVersion": "content-publish-package/v1",
+        "generatedAt": now(),
+        "template": template_out(template),
+        "package": package_out(row),
+        "channels": [
+            {
+                "channel": channel,
+                "content": content,
+                "deepLink": row.deep_link,
+                "plannedAt": row.planned_at,
+                "manualPublishRequired": True,
+            }
+            for channel, content in variants.items()
+        ],
+        "checklist": ["核对标题与正文", "核对事实和原文依据", "核对小程序深链", "人工发布后回填已发布状态"],
+    }

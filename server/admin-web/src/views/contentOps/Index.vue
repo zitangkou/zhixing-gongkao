@@ -44,9 +44,10 @@
             <el-table-column label="状态" width="120">
               <template #default="{ row }"><el-tag :type="statusType(row.status)">{{ statusLabel(row.status) }}</el-tag></template>
             </el-table-column>
-            <el-table-column label="操作" width="230" fixed="right">
+            <el-table-column label="操作" width="280" fixed="right">
               <template #default="{ row }">
                 <el-button v-if="canEdit(row)" link type="primary" @click="openEdit(row)">编辑</el-button>
+                <el-button v-if="canExport(row)" link type="primary" @click="downloadPackage(row)">导出</el-button>
                 <el-button v-if="canWrite && nextStatus(row.status)" link type="success" @click="advance(row)">
                   {{ nextAction(row.status) }}
                 </el-button>
@@ -72,6 +73,26 @@
             <div class="channel-row">{{ item.channels.map(channelLabel).join(' / ') }}</div>
           </el-card>
         </div>
+      </el-tab-pane>
+
+      <el-tab-pane label="排期日历" name="schedule">
+        <el-alert v-if="!scheduledPackages.length" title="暂无已排期内容，可在发布包草稿中设置计划发布时间" type="warning" :closable="false" />
+        <el-calendar v-else v-model="calendarMonth" class="schedule-calendar">
+          <template #date-cell="{ data }">
+            <div class="calendar-day">{{ Number(data.day.slice(-2)) }}</div>
+            <button
+              v-for="item in packagesForDay(data.day)"
+              :key="item.id"
+              class="calendar-item"
+              type="button"
+              :disabled="!canExport(item)"
+              :title="`${item.sourceTitle || item.sourceId} · ${statusLabel(item.status)}`"
+              @click.stop="downloadPackage(item)"
+            >
+              <span>{{ plannedTime(item.plannedAt) }}</span>{{ item.sourceTitle || item.sourceId }}
+            </button>
+          </template>
+        </el-calendar>
       </el-tab-pane>
     </el-tabs>
 
@@ -131,7 +152,7 @@ import ListState from '@/components/ListState.vue'
 import { useAdminList } from '@/composables/useAdminList'
 import { useAuthStore } from '@/stores/auth'
 import {
-  createContentPackage, fetchContentPackages, fetchContentTemplates, updateContentPackage,
+  createContentPackage, exportContentPackage, fetchContentPackages, fetchContentTemplates, updateContentPackage,
   updateContentPackageStatus, type ContentOpsStatus, type ContentOpsTemplate, type ContentPackage,
 } from '@/api/contentOps'
 
@@ -144,6 +165,7 @@ const packages = ref<ContentPackage[]>([])
 const filters = reactive({ productKey: '', status: '' })
 const dialogVisible = ref(false)
 const saving = ref(false)
+const calendarMonth = ref(new Date())
 const editingId = ref('')
 const selectedChannels = ref<string[]>([])
 const variantForms = reactive<Record<string, { title: string; body: string }>>({})
@@ -167,6 +189,16 @@ const nextStatus = (status: ContentOpsStatus) => nextStatusMap[status]
 const nextAction = (status: ContentOpsStatus) => nextActionLabels[status] || ''
 const canReject = (status: ContentOpsStatus) => ['teaching_review', 'ops_review', 'ready'].includes(status)
 const canEdit = (row: ContentPackage) => canWrite.value && ['draft', 'rejected'].includes(row.status)
+const canExport = (row: ContentPackage) => ['ready', 'published'].includes(row.status)
+const scheduledPackages = computed(() => packages.value.filter((item) => item.plannedAt).sort((a, b) => String(a.plannedAt).localeCompare(String(b.plannedAt))))
+const dateKey = (value?: string) => {
+  if (!value) return ''
+  const date = new Date(value)
+  const pad = (part: number) => String(part).padStart(2, '0')
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`
+}
+const packagesForDay = (day: string) => scheduledPackages.value.filter((item) => dateKey(item.plannedAt) === day)
+const plannedTime = (value?: string) => value ? new Date(value).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit', hour12: false }) : ''
 
 async function loadTemplates() { templates.value = await fetchContentTemplates() }
 async function loadPackages() { await runLoad(async () => { packages.value = await fetchContentPackages({ productKey: filters.productKey || undefined, status: filters.status || undefined }) }) }
@@ -216,6 +248,19 @@ async function reject(row: ContentPackage) {
     await updateContentPackageStatus(row.id, 'rejected', result.value); await loadPackages(); ElMessage.success('已驳回')
   } catch (error) { if (error !== 'cancel' && error !== 'close') ElMessage.error(error instanceof Error ? error.message : '操作失败') }
 }
+async function downloadPackage(row: ContentPackage) {
+  try {
+    const bundle = await exportContentPackage(row.id)
+    const blob = new Blob([JSON.stringify(bundle, null, 2)], { type: 'application/json;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const anchor = document.createElement('a')
+    anchor.href = url
+    anchor.download = `${row.campaignKey || row.id}-发布包.json`
+    anchor.click()
+    URL.revokeObjectURL(url)
+    ElMessage.success('发布素材包已导出，请人工发布并回填状态')
+  } catch (error) { ElMessage.error(error instanceof Error ? error.message : '导出失败') }
+}
 onMounted(loadAll)
 </script>
 
@@ -232,4 +277,10 @@ onMounted(loadAll)
 .slot-row { display: flex; flex-wrap: wrap; gap: 6px; }
 .slot-row span { padding: 3px 8px; border-radius: 5px; background: #f2f4f7; color: #606266; font-size: 12px; }
 .channel-row { margin-top: 12px; color: #909399; font-size: 12px; }
+.schedule-calendar { margin-top: 4px; }
+.schedule-calendar :deep(.el-calendar-day) { height: 116px; padding: 6px; overflow: auto; }
+.calendar-day { color: #606266; font-size: 13px; margin-bottom: 4px; }
+.calendar-item { display: block; width: 100%; margin: 3px 0; padding: 4px 6px; overflow: hidden; border: 0; border-radius: 4px; background: #ecf5ff; color: #337ecc; font-size: 11px; text-align: left; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
+.calendar-item:disabled { background: #f4f4f5; color: #909399; cursor: default; }
+.calendar-item span { margin-right: 4px; font-weight: 650; }
 </style>

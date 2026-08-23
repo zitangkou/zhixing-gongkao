@@ -351,6 +351,11 @@ def test_admin_rbac():
             json={"sourceTitle": "审核中不允许修改"},
         )
         assert locked_edit.json()["code"] == 400
+        locked_export = client.get(
+            f"/admin/content-ops/packages/{package['id']}/export",
+            headers=admin_headers,
+        )
+        assert locked_export.json()["code"] == 400
         for status in ("ops_review", "ready", "published"):
             package = _ok(
                 client.post(
@@ -359,6 +364,15 @@ def test_admin_rbac():
                     json={"status": status, "reviewNote": f"{status} ok"},
                 )
             )
+            if status == "ready":
+                publish_bundle = _ok(
+                    client.get(
+                        f"/admin/content-ops/packages/{package['id']}/export",
+                        headers=admin_headers,
+                    )
+                )
+                assert publish_bundle["schemaVersion"] == "content-publish-package/v1"
+                assert publish_bundle["channels"][0]["manualPublishRequired"] is True
         assert package["status"] == "published" and package["publishedAt"]
 
         # 新建只读管理员

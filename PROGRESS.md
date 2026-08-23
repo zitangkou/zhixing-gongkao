@@ -26,10 +26,11 @@
 | 政治理论 Sprint 1 | 无答案读前定向、原文精读门、证据题过滤、测验结果回写、逐题错因归类与完成页 | ✅ 2026-08-23 第二批完成 |
 | 内容运营 Sprint 1 | 10个固定栏目模板、四渠道变体、母资产/深链/排期、教研与运营双审核状态机、Admin API | ✅ 2026-08-23 第一批完成 |
 | 内容运营 Sprint 1 | 管理后台模板浏览、发布包新建/编辑、渠道文案维护、审核推进与驳回、审核中编辑锁定 | ✅ 2026-08-23 第二批完成 |
+| 内容运营 Sprint 1 | 月历式内容排期、待发布素材包 JSON 导出、人工发布清单与导出状态门 | ✅ 2026-08-23 第三批完成 |
 
 ## 2. 当前质量基线（2026-08-23 实测）
 
-- 后端 `server/.venv/bin/python -m pytest -q`：**24 passed，62 warnings**（warning 来自 `python-jose` 使用即将弃用的 `datetime.utcnow()`）
+- 后端 `server/.venv/bin/python -m pytest -q`：**24 passed，64 warnings**（warning 来自 `python-jose` 使用即将弃用的 `datetime.utcnow()`）
 - 前端 `npm run lint`：**0 errors，85 warnings**；门禁通过，但格式类 warning 已重新积累，不能再表述为“0 problems”
 - 管理后台构建：2026-08-23 实测通过（主入口 59.53KB，Element Plus chunk 1.07MB）
 - H5 构建：本机运行时卡在 `system-configuration` Rust worker 的 macOS `NULL object` panic，已中止；更像本机构建环境问题，但本次不能记为通过
@@ -70,6 +71,7 @@
 ## 5. 最近提交
 
 ```text
+463b82b feat: add content operations admin workspace
 32a66c4 feat: add reviewed content operations pipeline
 695837e feat: complete theory evidence-learning loop
 38dc74d feat: launch theory daily learning home
