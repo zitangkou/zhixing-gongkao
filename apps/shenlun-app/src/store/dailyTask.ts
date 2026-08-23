@@ -45,5 +45,15 @@ export const useDailyTaskStore = defineStore('shenlun-daily-task', {
       this.task = response.data
       return true
     },
+    async transition(event: 'save' | 'submit' | 'review' | 'complete', draft?: Record<string, unknown>, currentStep?: number) {
+      if (!this.task) return false
+      const response = await api.updateDailyTask(this.task.id, { event, draft, currentStep })
+      if (response.code !== 0 || !response.data) {
+        this.message = response.message
+        return false
+      }
+      this.task = response.data
+      return true
+    },
   },
 })

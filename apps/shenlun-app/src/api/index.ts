@@ -142,4 +142,12 @@ export const api = {
   },
   listArticles() { return request<RmrbArticle[]>('/api/rmrb/articles') },
   getArticle(id: string) { return request<RmrbArticle>(`/api/rmrb/articles/${id}`) },
+  saveMine(data: {
+    articleId: string
+    articleTitle: string
+    sourceExcerpt: string
+    argumentChain: string
+    templateSentence: string
+    terms: string[]
+  }) { return request<{ id: string }>('/api/rmrb/mines', { method: 'POST', data }) },
 }
