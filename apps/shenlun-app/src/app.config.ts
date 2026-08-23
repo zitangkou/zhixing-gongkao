@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  pages: ['pages/today/index', 'pages/reading/index', 'pages/training/index', 'pages/profile/index', 'pages/auth/login', 'pages/auth/register'],
+  pages: ['pages/today/index', 'pages/reading/index', 'pages/reading/detail', 'pages/training/index', 'pages/profile/index', 'pages/auth/login', 'pages/auth/register'],
   window: {
     navigationBarBackgroundColor: '#D0021B',
     navigationBarTitleText: '知行申论',

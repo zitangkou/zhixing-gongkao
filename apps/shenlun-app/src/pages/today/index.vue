@@ -53,7 +53,11 @@ const actionText = computed(() => {
 function openReading() { Taro.switchTab({ url: '/pages/reading/index' }) }
 async function startTask() {
   if (store.starting || store.task?.progress.state === 'completed') return
-  if (await store.start()) openReading()
+  if (await store.start()) {
+    const id = store.task?.contentId
+    if (id) Taro.navigateTo({ url: `/pages/reading/detail?id=${encodeURIComponent(id)}` })
+    else openReading()
+  }
   else showToast(store.message || '暂时无法开始')
 }
 function load() {

@@ -53,6 +53,19 @@ export interface ShenlunStats {
   weekDrillCount: number
 }
 
+export interface RmrbArticle {
+  id: string
+  title: string
+  source: string
+  publishDate: string
+  summary: string
+  content: string
+  tags: string[]
+  isPublished: boolean
+  sortOrder: number
+  readCount: number
+}
+
 export interface UserMe {
   id: string
   username?: string
@@ -127,4 +140,6 @@ export const api = {
   getStats() {
     return request<ShenlunStats>('/api/rmrb/stats')
   },
+  listArticles() { return request<RmrbArticle[]>('/api/rmrb/articles') },
+  getArticle(id: string) { return request<RmrbArticle>(`/api/rmrb/articles/${id}`) },
 }
