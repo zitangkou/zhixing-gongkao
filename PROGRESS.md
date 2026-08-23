@@ -29,10 +29,11 @@
 | 内容运营 Sprint 1 | 月历式内容排期、待发布素材包 JSON 导出、人工发布清单与导出状态门 | ✅ 2026-08-23 第三批完成 |
 | 内容运营 Sprint 1 | 发布包结构化栏目槽位、模板字段校验、缺项阻断送审、旧库自动补列 | ✅ 2026-08-23 第四批完成 |
 | 内容运营 Sprint 1 | 已发布文章一键生成结构化母稿与四平台草稿、渠道深链归因、缺项人工补齐与重复生成保护 | ✅ 2026-08-23 第五批完成 |
+| 内容运营 Sprint 1 | 未来7天内容库存、双科配比、审核积压、待发布与未排期提醒，状态变更实时刷新 | ✅ 2026-08-23 第六批完成 |
 
 ## 2. 当前质量基线（2026-08-23 实测）
 
-- 后端 `server/.venv/bin/python -m pytest -q`：**24 passed，69 warnings**（warning 来自 `python-jose` 使用即将弃用的 `datetime.utcnow()`）
+- 后端 `server/.venv/bin/python -m pytest -q`：**24 passed，70 warnings**（warning 来自 `python-jose` 使用即将弃用的 `datetime.utcnow()`）
 - 前端 `npm run lint`：**0 errors，85 warnings**；门禁通过，但格式类 warning 已重新积累，不能再表述为“0 problems”
 - 管理后台构建：2026-08-23 实测通过（主入口 59.57KB，Element Plus chunk 1.07MB）
 - H5 构建：本机运行时卡在 `system-configuration` Rust worker 的 macOS `NULL object` panic，已中止；更像本机构建环境问题，但本次不能记为通过
@@ -73,6 +74,7 @@
 ## 5. 最近提交
 
 ```text
+5220a11 feat: generate channel drafts from reviewed articles
 2d57b25 feat: enforce structured content template slots
 bc42b3b feat: add content schedule and publish export
 463b82b feat: add content operations admin workspace

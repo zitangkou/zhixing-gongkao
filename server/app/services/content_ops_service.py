@@ -1,6 +1,7 @@
 """模板化账号运营：固定栏目、跨平台发布包与双审核状态。"""
 import json
 import re
+from datetime import timedelta
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from sqlalchemy.orm import Session
 from app.models import Article, ContentOperationTemplate, ContentPublishPackage, gen_id
@@ -255,4 +256,45 @@ def export_package(db: Session, package_id: str) -> dict:
             for channel, content in variants.items()
         ],
         "checklist": ["核对标题与正文", "核对事实和原文依据", "核对小程序深链", "人工发布后回填已发布状态"],
+    }
+
+
+def content_ops_overview(db: Session, days: int = 7) -> dict:
+    current = now().replace(tzinfo=None)
+    start = current.replace(hour=0, minute=0, second=0, microsecond=0)
+    end = start + timedelta(days=days)
+    rows = db.query(ContentPublishPackage).all()
+    scheduled = [row for row in rows if row.planned_at and start <= row.planned_at < end]
+    status_counts = {status: 0 for status in TRANSITIONS}
+    for row in rows:
+        status_counts[row.status] = status_counts.get(row.status, 0) + 1
+    product_mix = {
+        product: sum(1 for row in scheduled if row.product_key == product)
+        for product in ("shenlun", "theory")
+    }
+    unplanned_drafts = sum(1 for row in rows if row.status in ("draft", "rejected") and not row.planned_at)
+    review_backlog = status_counts.get("teaching_review", 0) + status_counts.get("ops_review", 0)
+    ready_inventory = status_counts.get("ready", 0)
+    alerts = []
+    missing_products = [label for product, label in (("shenlun", "申论"), ("theory", "政治理论")) if product_mix[product] == 0]
+    if missing_products:
+        alerts.append({"level": "warning", "code": "product_mix_empty", "message": f"未来{days}天未安排{'、'.join(missing_products)}内容"})
+    if ready_inventory == 0:
+        alerts.append({"level": "warning", "code": "ready_empty", "message": "暂无待发布库存，请优先完成审核"})
+    if unplanned_drafts:
+        alerts.append({"level": "info", "code": "draft_unplanned", "message": f"{unplanned_drafts} 个草稿尚未排期"})
+    if review_backlog >= 10:
+        alerts.append({"level": "warning", "code": "review_backlog", "message": f"{review_backlog} 个发布包正在等待审核"})
+    return {
+        "windowDays": days,
+        "windowStart": start,
+        "windowEnd": end,
+        "scheduledCount": len(scheduled),
+        "readyInventory": ready_inventory,
+        "reviewBacklog": review_backlog,
+        "unplannedDrafts": unplanned_drafts,
+        "productMix": product_mix,
+        "statusCounts": status_counts,
+        "alerts": alerts,
+        "healthy": not any(item["level"] == "warning" for item in alerts),
     }

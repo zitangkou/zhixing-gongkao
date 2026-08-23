@@ -10,6 +10,16 @@
       从已审核教学母资产派生渠道内容。发布包必须依次经过教研审核、运营审核和待发布状态；首期导出后人工发布。
     </el-alert>
 
+    <div v-if="overview" class="metrics-grid">
+      <el-card shadow="never" class="metric-card"><div class="metric-value">{{ overview.scheduledCount }}</div><div class="metric-label">未来 7 天已排期</div><div class="metric-note">申论 {{ overview.productMix.shenlun }} · 政治理论 {{ overview.productMix.theory }}</div></el-card>
+      <el-card shadow="never" class="metric-card"><div class="metric-value">{{ overview.readyInventory }}</div><div class="metric-label">待发布库存</div><div class="metric-note">已过双审核，可导出发布</div></el-card>
+      <el-card shadow="never" class="metric-card"><div class="metric-value">{{ overview.reviewBacklog }}</div><div class="metric-label">审核处理中</div><div class="metric-note">教研审核 + 运营审核</div></el-card>
+      <el-card shadow="never" class="metric-card"><div class="metric-value">{{ overview.unplannedDrafts }}</div><div class="metric-label">未排期草稿</div><div class="metric-note">草稿与已驳回内容</div></el-card>
+    </div>
+    <div v-if="overview?.alerts.length" class="inventory-alerts">
+      <el-alert v-for="item in overview.alerts" :key="item.code" :title="item.message" :type="item.level" :closable="false" show-icon />
+    </div>
+
     <el-tabs v-model="activeTab">
       <el-tab-pane label="发布包" name="packages">
         <div class="toolbar">
@@ -198,8 +208,8 @@ import { useAuthStore } from '@/stores/auth'
 import { fetchArticles } from '@/api/articles'
 import type { Article } from '@/types'
 import {
-  createContentPackage, exportContentPackage, fetchContentPackages, fetchContentTemplates, generateContentPackageFromArticle, updateContentPackage,
-  updateContentPackageStatus, type ContentOpsStatus, type ContentOpsTemplate, type ContentPackage,
+  createContentPackage, exportContentPackage, fetchContentOpsOverview, fetchContentPackages, fetchContentTemplates, generateContentPackageFromArticle, updateContentPackage,
+  updateContentPackageStatus, type ContentOpsOverview, type ContentOpsStatus, type ContentOpsTemplate, type ContentPackage,
 } from '@/api/contentOps'
 
 const auth = useAuthStore()
@@ -208,6 +218,7 @@ const { loading, loadError, runLoad } = useAdminList()
 const activeTab = ref('packages')
 const templates = ref<ContentOpsTemplate[]>([])
 const packages = ref<ContentPackage[]>([])
+const overview = ref<ContentOpsOverview | null>(null)
 const filters = reactive({ productKey: '', status: '' })
 const dialogVisible = ref(false)
 const generateVisible = ref(false)
@@ -254,7 +265,9 @@ const plannedTime = (value?: string) => value ? new Date(value).toLocaleTimeStri
 
 async function loadTemplates() { templates.value = await fetchContentTemplates() }
 async function loadPackages() { await runLoad(async () => { packages.value = await fetchContentPackages({ productKey: filters.productKey || undefined, status: filters.status || undefined }) }) }
-async function loadAll() { await Promise.all([loadTemplates(), loadPackages()]) }
+async function loadOverview() { overview.value = await fetchContentOpsOverview() }
+async function loadAll() { await Promise.all([loadTemplates(), loadPackages(), loadOverview()]) }
+async function refreshOperations() { await Promise.all([loadPackages(), loadOverview()]) }
 
 function initVariant(channel: string, value?: { title?: string; body?: string }) {
   variantForms[channel] = { title: value?.title || '', body: value?.body || '' }
@@ -303,7 +316,7 @@ async function savePackage() {
     const common = { sourceTitle: form.sourceTitle, campaignKey: form.campaignKey, deepLink: form.deepLink, plannedAt: form.plannedAt || null, slotValues, variants }
     if (editingId.value) await updateContentPackage(editingId.value, common)
     else await createContentPackage({ ...common, productKey: form.productKey, templateId: form.templateId, sourceType: form.sourceType, sourceId: form.sourceId })
-    dialogVisible.value = false; await loadPackages(); ElMessage.success('发布包草稿已保存')
+    dialogVisible.value = false; await refreshOperations(); ElMessage.success('发布包草稿已保存')
   } catch (error) { ElMessage.error(error instanceof Error ? error.message : '保存失败') } finally { saving.value = false }
 }
 async function generateFromArticle() {
@@ -312,7 +325,7 @@ async function generateFromArticle() {
   try {
     const row = await generateContentPackageFromArticle({ ...generateForm, plannedAt: generateForm.plannedAt || null })
     generateVisible.value = false
-    await loadPackages()
+    await refreshOperations()
     openEdit(row)
     const missing = (templates.value.find((item) => item.id === row.templateId)?.slots || []).filter((slot) => !row.slotValues[slot])
     ElMessage.success(missing.length ? `草稿已生成，请补齐 ${missing.length} 个待确认槽位` : '草稿已生成，请复核后送审')
@@ -322,13 +335,13 @@ async function advance(row: ContentPackage) {
   const target = nextStatus(row.status); if (!target) return
   try {
     if (target === 'published') await ElMessageBox.confirm('确认已人工发布到对应平台？', '确认发布', { type: 'warning' })
-    await updateContentPackageStatus(row.id, target); await loadPackages(); ElMessage.success(nextAction(row.status))
+    await updateContentPackageStatus(row.id, target); await refreshOperations(); ElMessage.success(nextAction(row.status))
   } catch (error) { if (error !== 'cancel' && error !== 'close') ElMessage.error(error instanceof Error ? error.message : '操作失败') }
 }
 async function reject(row: ContentPackage) {
   try {
     const result = await ElMessageBox.prompt('请填写明确的驳回原因', '驳回发布包', { inputValidator: (value) => !!value.trim() || '驳回原因不能为空' })
-    await updateContentPackageStatus(row.id, 'rejected', result.value); await loadPackages(); ElMessage.success('已驳回')
+    await updateContentPackageStatus(row.id, 'rejected', result.value); await refreshOperations(); ElMessage.success('已驳回')
   } catch (error) { if (error !== 'cancel' && error !== 'close') ElMessage.error(error instanceof Error ? error.message : '操作失败') }
 }
 async function downloadPackage(row: ContentPackage) {
@@ -349,6 +362,12 @@ onMounted(loadAll)
 
 <style scoped>
 .intro { margin-bottom: 14px; }
+.metrics-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 12px; }
+.metric-card { border-color: #ebeef5; }
+.metric-value { color: #303133; font-size: 28px; font-weight: 650; line-height: 1.2; }
+.metric-label { margin-top: 6px; color: #606266; font-size: 14px; }
+.metric-note { margin-top: 5px; color: #909399; font-size: 12px; }
+.inventory-alerts { display: grid; gap: 8px; margin-bottom: 12px; }
 .generate-tip { margin-bottom: 18px; }
 .option-meta { float: right; margin-left: 16px; color: #909399; font-size: 12px; }
 .strong { font-weight: 600; line-height: 1.5; }
@@ -368,4 +387,5 @@ onMounted(loadAll)
 .calendar-item { display: block; width: 100%; margin: 3px 0; padding: 4px 6px; overflow: hidden; border: 0; border-radius: 4px; background: #ecf5ff; color: #337ecc; font-size: 11px; text-align: left; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
 .calendar-item:disabled { background: #f4f4f5; color: #909399; cursor: default; }
 .calendar-item span { margin-right: 4px; font-weight: 650; }
+@media (max-width: 1000px) { .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 </style>

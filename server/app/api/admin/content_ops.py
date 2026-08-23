@@ -5,9 +5,15 @@ from app.core.response import ApiResponse
 from app.database import get_db
 from app.models import ContentOperationTemplate, ContentPublishPackage
 from app.schemas import ContentPackageGenerateFromArticle, ContentPublishPackageCreate, ContentPublishPackageUpdate, ContentPublishStatusBody
-from app.services.content_ops_service import create_package, export_package, generate_package_from_article, package_out, template_out, transition_package, update_package
+from app.services.content_ops_service import content_ops_overview, create_package, export_package, generate_package_from_article, package_out, template_out, transition_package, update_package
 
 router = APIRouter()
+
+
+@router.get("/content-ops/overview")
+def overview(days: int = 7, _admin=Depends(require_permission("content_ops:read")), db: Session = Depends(get_db)):
+    safe_days = min(max(days, 1), 31)
+    return ApiResponse.ok(content_ops_overview(db, safe_days))
 
 
 @router.get("/content-ops/templates")

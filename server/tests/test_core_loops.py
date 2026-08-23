@@ -425,6 +425,11 @@ def test_admin_rbac():
                 assert publish_bundle["schemaVersion"] == "content-publish-package/v1"
                 assert publish_bundle["channels"][0]["manualPublishRequired"] is True
         assert package["status"] == "published" and package["publishedAt"]
+        ops_overview = _ok(client.get("/admin/content-ops/overview", headers=admin_headers))
+        assert ops_overview["windowDays"] == 7
+        assert ops_overview["statusCounts"]["published"] >= 1
+        assert ops_overview["unplannedDrafts"] >= 1
+        assert "product_mix_empty" in {item["code"] for item in ops_overview["alerts"]}
 
         # 新建只读管理员
         with SessionLocal() as db:
