@@ -311,14 +311,14 @@ def test_admin_rbac():
         )
         assert generated_package["sourceType"] == "article"
         assert generated_package["slotValues"]["事实"]
-        assert not generated_package["slotValues"]["考法"]
+        assert generated_package["slotValues"]["考法"]
         assert generated_package["variants"]["wechat"]["ctaLink"].endswith("channel=wechat")
         generated_review = client.post(
             f"/admin/content-ops/packages/{generated_package['id']}/status",
             headers=admin_headers,
             json={"status": "teaching_review"},
         )
-        assert generated_review.json()["code"] == 400
+        assert generated_review.json()["code"] == 0
         duplicate_generation = client.post(
             "/admin/content-ops/packages/generate-from-article",
             headers=admin_headers,
@@ -331,6 +331,37 @@ def test_admin_rbac():
         assert duplicate_generation.json()["code"] == 400
 
         shenlun_template = next(item for item in templates if item["code"] == "shenlun_three_cut")
+        rmrb_article = _ok(
+            client.post(
+                "/admin/rmrb/article",
+                headers=admin_headers,
+                json={
+                    "title": "基层治理学习材料",
+                    "source": "人民日报",
+                    "sourceUrl": "https://paper.people.com.cn/test-shenlun",
+                    "publishDate": "2026-08-20",
+                    "summary": "深入一线了解群众诉求，因地制宜提升基层治理效能。",
+                    "content": "学习基层治理既要摸清真实情况，也要真诚联系群众，并依据不同地区特点精准施策。",
+                    "tags": ["基层治理", "群众路线"],
+                },
+            )
+        )
+        assert rmrb_article["sourceUrl"].startswith("https://paper.people.com.cn/")
+        shenlun_generated = _ok(
+            client.post(
+                "/admin/content-ops/packages/generate-from-article",
+                headers=admin_headers,
+                json={
+                    "productKey": "shenlun",
+                    "templateId": shenlun_template["id"],
+                    "articleId": rmrb_article["id"],
+                    "deepLink": f"/shenlun/#/pages/reading/detail?id={rmrb_article['id']}",
+                },
+            )
+        )
+        assert shenlun_generated["sourceType"] == "rmrb_article"
+        assert all(shenlun_generated["slotValues"].values())
+        assert shenlun_generated["variants"]["wechat"]["ctaLink"].endswith("channel=wechat")
         package = _ok(
             client.post(
                 "/admin/content-ops/packages",
@@ -428,7 +459,7 @@ def test_admin_rbac():
         ops_overview = _ok(client.get("/admin/content-ops/overview", headers=admin_headers))
         assert ops_overview["windowDays"] == 7
         assert ops_overview["statusCounts"]["published"] >= 1
-        assert ops_overview["unplannedDrafts"] >= 1
+        assert ops_overview["reviewBacklog"] >= 1
         assert "product_mix_empty" in {item["code"] for item in ops_overview["alerts"]}
 
         # 新建只读管理员

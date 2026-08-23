@@ -67,6 +67,9 @@
         <el-form-item label="日期">
           <el-input v-model="form.publishDate" placeholder="YYYY-MM-DD" />
         </el-form-item>
+        <el-form-item label="原文链接">
+          <el-input v-model="form.sourceUrl" placeholder="https://paper.people.com.cn/..." />
+        </el-form-item>
         <el-form-item label="主题标签">
           <el-select
             v-model="form.tags"
@@ -139,6 +142,7 @@ const filterTag = ref('')
 const form = reactive({
   title: '',
   source: '人民时评',
+  sourceUrl: '',
   publishDate: '',
   summary: '',
   content: '',
@@ -158,6 +162,7 @@ function openDialog(row?: RmrbArticle) {
     editId.value = row.id
     form.title = row.title
     form.source = row.source
+    form.sourceUrl = row.sourceUrl || ''
     form.publishDate = row.publishDate
     form.summary = row.summary
     form.content = row.content
@@ -168,6 +173,7 @@ function openDialog(row?: RmrbArticle) {
     editId.value = null
     form.title = ''
     form.source = '人民时评'
+    form.sourceUrl = ''
     form.publishDate = new Date().toISOString().slice(0, 10)
     form.summary = ''
     form.content = ''

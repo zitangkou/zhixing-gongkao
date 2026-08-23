@@ -26,6 +26,7 @@ class RmrbArticle(Base):
     id: Mapped[str] = mapped_column(String(32), primary_key=True, default=lambda: gen_id("rmrb"))
     title: Mapped[str] = mapped_column(String(256))
     source: Mapped[str] = mapped_column(String(64), default="人民时评")  # 人民时评 / 评论
+    source_url: Mapped[str] = mapped_column(String(512), default="")
     publish_date: Mapped[str] = mapped_column(String(10), default="")  # YYYY-MM-DD
     summary: Mapped[str] = mapped_column(String(512), default="")
     content: Mapped[str] = mapped_column(Text, default="")
@@ -148,5 +149,4 @@ class ShenlunArgumentMethod(Base):
     is_enabled: Mapped[bool] = mapped_column(Boolean, default=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
-
 

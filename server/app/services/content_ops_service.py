@@ -4,7 +4,7 @@ import re
 from datetime import timedelta
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from sqlalchemy.orm import Session
-from app.models import Article, ContentOperationTemplate, ContentPublishPackage, gen_id
+from app.models import Article, ContentOperationTemplate, ContentPublishPackage, RmrbArticle, gen_id
 from app.schemas import ContentPackageGenerateFromArticle, ContentPublishPackageCreate, ContentPublishPackageUpdate
 from app.timezone import now
 
@@ -97,7 +97,7 @@ def _plain_text(value: str, limit: int) -> str:
     return text[:limit]
 
 
-def _article_slot_values(article: Article, slots: list[str]) -> dict[str, str]:
+def _article_slot_values(article: Article | RmrbArticle, slots: list[str]) -> dict[str, str]:
     summary = _plain_text(article.summary or article.content, 360)
     excerpt = _plain_text(article.content or article.summary, 1200)
     evidence = " · ".join(part for part in (article.source, article.publish_date, article.title) if part)
@@ -116,6 +116,28 @@ def _article_slot_values(article: Article, slots: list[str]) -> dict[str, str]:
         "导语": summary,
         "本周主题": article.title,
         "关键词": "、".join(_loads(article.tags, [])[:6]),
+        "骨架": "背景与问题 → 原因或影响 → 对策与落实 → 价值升华（规则草稿，需教研结合原文核对）",
+        "规范表达": summary,
+        "迁移练习": "请用不超过120字概括材料反映的核心问题与主要解决思路。",
+        "普通说法": "事情要做好、问题要解决",
+        "适用场景": "归纳概括、提出对策和文章写作中的措施表达",
+        "例句": summary,
+        "任务": "圈出不同主体及其关键动作，合并同类要点后分层作答。",
+        "参考要点": summary,
+        "易漏点": "主体、限定条件、因果关系与并列层次（需教研核对）",
+        "问题作答": summary,
+        "失分原因": "对象不清、要点遗漏、层次混乱或表述不规范",
+        "修改过程": "补对象 → 找动作 → 合并同类项 → 改写为规范短句",
+        "改后答案": summary,
+        "考法": "重点辨析主体、范围、程度和因果关系，可改写为判断或单选题。",
+        "命题角度": "关键词原义、主体边界、程度变化与因果倒置",
+        "练习题": f"判断：材料关于“{article.title}”的表述可以脱离原文限定条件理解。",
+        "表述A": summary,
+        "表述B": f"对“{article.title}”作扩大范围或改变程度的表述",
+        "差异": "核对主体、范围、程度和条件是否与原文一致。",
+        "题干": f"下列关于“{article.title}”的表述，符合原文的是：",
+        "选项": "依据原文设计一个正确项和三个主体/范围/程度干扰项（需教研补齐）",
+        "干扰方式": "主体偷换、范围扩大、程度变化、因果倒置",
     }
     return {slot: deterministic.get(slot, "") for slot in slots}
 
@@ -124,12 +146,17 @@ def _tracked_link(base: str, channel: str) -> str:
     if not base:
         return base
     parts = urlsplit(base)
+    if parts.fragment and "?" in parts.fragment:
+        route, fragment_query = parts.fragment.split("?", 1)
+        query = [(key, value) for key, value in parse_qsl(fragment_query) if key != "channel"]
+        query.append(("channel", channel))
+        return urlunsplit((parts.scheme, parts.netloc, parts.path, parts.query, f"{route}?{urlencode(query)}"))
     query = [(key, value) for key, value in parse_qsl(parts.query) if key != "channel"]
     query.append(("channel", channel))
     return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
 
 
-def _article_variants(article: Article, template: ContentOperationTemplate, slots: dict[str, str], deep_link: str) -> dict:
+def _article_variants(article: Article | RmrbArticle, template: ContentOperationTemplate, slots: dict[str, str], deep_link: str) -> dict:
     filled = [f"{name}：{value}" for name, value in slots.items() if value]
     missing = [name for name, value in slots.items() if not value]
     core = "\n\n".join(filled)
@@ -158,8 +185,16 @@ def _article_variants(article: Article, template: ContentOperationTemplate, slot
 
 
 def generate_package_from_article(db: Session, body: ContentPackageGenerateFromArticle) -> dict:
-    article = db.get(Article, body.articleId)
-    if not article or article.status != "published" or not article.is_published:
+    article: Article | RmrbArticle | None = None
+    source_type = "article"
+    if body.productKey == "shenlun":
+        article = db.get(RmrbArticle, body.articleId)
+        source_type = "rmrb_article"
+    if not article:
+        article = db.get(Article, body.articleId)
+        source_type = "article"
+    published = bool(article and article.is_published and (not isinstance(article, Article) or article.status == "published"))
+    if not published:
         raise ValueError("只有已发布文章可以生成运营发布包")
     template = db.get(ContentOperationTemplate, body.templateId)
     if not template or template.status != "enabled":
@@ -167,7 +202,6 @@ def generate_package_from_article(db: Session, body: ContentPackageGenerateFromA
     if template.product_key not in (body.productKey, "general"):
         raise ValueError("模板与产品不匹配")
     duplicate = db.query(ContentPublishPackage).filter(
-        ContentPublishPackage.source_type == "article",
         ContentPublishPackage.source_id == article.id,
         ContentPublishPackage.template_id == template.id,
         ContentPublishPackage.status != "rejected",
@@ -179,7 +213,7 @@ def generate_package_from_article(db: Session, body: ContentPackageGenerateFromA
     return create_package(db, ContentPublishPackageCreate(
         productKey=body.productKey,
         templateId=template.id,
-        sourceType="article",
+        sourceType=source_type,
         sourceId=article.id,
         sourceTitle=article.title,
         campaignKey=body.campaignKey,

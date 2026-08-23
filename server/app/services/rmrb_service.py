@@ -39,6 +39,7 @@ def _to_out(a: RmrbArticle) -> RmrbArticleOut:
         id=a.id,
         title=a.title,
         source=a.source or "人民时评",
+        sourceUrl=getattr(a, "source_url", "") or "",
         publishDate=a.publish_date or "",
         summary=a.summary or "",
         content=a.content or "",
@@ -106,6 +107,7 @@ def create_article(db: Session, body: RmrbArticleCreate) -> RmrbArticleOut:
         id=gen_id("rmrb"),
         title=body.title.strip(),
         source=(body.source or "人民时评").strip(),
+        source_url=(body.sourceUrl or "").strip(),
         publish_date=(body.publishDate or today_str()).strip(),
         summary=(body.summary or "").strip(),
         content=body.content or "",
@@ -126,6 +128,7 @@ def update_article(db: Session, article_id: str, body: RmrbArticleUpdate) -> Rmr
     data = body.model_dump(exclude_unset=True)
     mapping = {
         "publishDate": "publish_date",
+        "sourceUrl": "source_url",
         "isPublished": "is_published",
         "sortOrder": "sort_order",
     }

@@ -10,6 +10,7 @@ class RmrbArticleOut(BaseModel):
     id: str
     title: str
     source: str
+    sourceUrl: str = ""
     publishDate: str
     summary: str
     content: str
@@ -24,6 +25,7 @@ class RmrbArticleOut(BaseModel):
 class RmrbArticleCreate(BaseModel):
     title: str
     source: str = "人民时评"
+    sourceUrl: str = ""
     publishDate: str = ""
     summary: str = ""
     content: str = ""
@@ -35,6 +37,7 @@ class RmrbArticleCreate(BaseModel):
 class RmrbArticleUpdate(BaseModel):
     title: str | None = None
     source: str | None = None
+    sourceUrl: str | None = None
     publishDate: str | None = None
     summary: str | None = None
     content: str | None = None
@@ -338,5 +341,4 @@ RMRB_THEME_TAG_PRESETS = [
     "生态文明",
     "依法治国",
 ]
-
 

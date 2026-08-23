@@ -258,17 +258,18 @@ def _ensure_question_columns():
 
 
 def _ensure_rmrb_article_columns():
-    """兼容旧 rmrb_articles：补主题标签 tags"""
+    """兼容旧 rmrb_articles：补主题标签与原文链接。"""
     from sqlalchemy import inspect, text
 
     insp = inspect(engine)
     if not insp.has_table("rmrb_articles"):
         return
     cols = {c["name"] for c in insp.get_columns("rmrb_articles")}
-    if "tags" in cols:
-        return
     with engine.begin() as conn:
-        conn.execute(text("ALTER TABLE rmrb_articles ADD COLUMN tags TEXT DEFAULT '[]'"))
+        if "tags" not in cols:
+            conn.execute(text("ALTER TABLE rmrb_articles ADD COLUMN tags TEXT DEFAULT '[]'"))
+        if "source_url" not in cols:
+            conn.execute(text("ALTER TABLE rmrb_articles ADD COLUMN source_url VARCHAR(512) DEFAULT ''"))
 
 
 def _ensure_ziliao_formula_plain_column():

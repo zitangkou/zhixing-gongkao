@@ -4,6 +4,7 @@ export interface RmrbArticle {
   id: string
   title: string
   source: string
+  sourceUrl: string
   publishDate: string
   summary: string
   content: string
@@ -75,6 +76,7 @@ export function fetchRmrbArticles(tag?: string) {
 export function createRmrbArticle(data: {
   title: string
   source?: string
+  sourceUrl?: string
   publishDate?: string
   summary?: string
   content?: string

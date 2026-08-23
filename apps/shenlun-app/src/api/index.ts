@@ -57,6 +57,7 @@ export interface RmrbArticle {
   id: string
   title: string
   source: string
+  sourceUrl: string
   publishDate: string
   summary: string
   content: string
