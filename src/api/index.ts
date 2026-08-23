@@ -6,15 +6,27 @@ import { apiLearning } from './domains/learning'
 import { apiManualWrong } from './domains/manualWrong'
 import { apiPersonal } from './domains/personal'
 import { apiPlan } from './domains/plan'
+import { apiProduct } from './domains/product'
 import { apiRmrb } from './domains/rmrb'
 import { apiZiliao } from './domains/ziliao'
 export { isMock, initUserFromMock } from './_shared'
-export type { AuthResult, ProductPublicConfig, ProductTabConfig, UserMeData } from './_shared'
+export type {
+  AuthResult,
+  DailyLearningTask,
+  DailyTaskEvent,
+  DailyTaskList,
+  DailyTaskProgress,
+  DailyTaskState,
+  ProductPublicConfig,
+  ProductTabConfig,
+  UserMeData,
+} from './_shared'
 
 export const api = {
   ...apiAuth,
   ...apiLearning,
   ...apiPlan,
+  ...apiProduct,
   ...apiKnowledge,
   ...apiManualWrong,
   ...apiExam,

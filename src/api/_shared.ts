@@ -171,6 +171,53 @@ export interface ProductPublicConfig {
   tabs: ProductTabConfig[]
 }
 
+export type DailyTaskState =
+  | 'not_started'
+  | 'in_progress'
+  | 'submitted'
+  | 'reviewed'
+  | 'completed'
+
+export type DailyTaskEvent = 'start' | 'save' | 'submit' | 'review' | 'complete'
+
+export interface DailyTaskProgress {
+  state: DailyTaskState
+  currentStep: number
+  totalSteps: number
+  draft: Record<string, unknown>
+  startedAt?: string
+  submittedAt?: string
+  reviewedAt?: string
+  completedAt?: string
+  updatedAt?: string
+}
+
+export interface DailyLearningTask {
+  id: string
+  productKey: string
+  taskDate: string
+  taskType: string
+  title: string
+  description: string
+  contentType: string
+  contentId: string
+  estimatedMinutes: number
+  totalSteps: number
+  sortOrder: number
+  metadata: Record<string, unknown>
+  progress: DailyTaskProgress
+}
+
+export interface DailyTaskList {
+  date: string
+  productKey: string
+  completion: number
+  completedCount: number
+  totalCount: number
+  estimatedMinutes: number
+  tasks: DailyLearningTask[]
+}
+
 export async function request<T>(
   url: string,
   options?: { method?: string; data?: unknown; auth?: boolean },

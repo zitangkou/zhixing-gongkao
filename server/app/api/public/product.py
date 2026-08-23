@@ -1,0 +1,39 @@
+"""多产品通用学习任务接口。"""
+
+from fastapi import APIRouter, Depends, Query
+from sqlalchemy.orm import Session
+
+from app.api.deps import get_app_user
+from app.core.response import ApiResponse
+from app.database import get_db
+from app.models import AppUser
+from app.product import ProductContext, get_product_context
+from app.schemas import DailyTaskProgressBody
+from app.services.daily_task_service import list_daily_tasks, update_task_progress
+
+router = APIRouter()
+
+
+@router.get("/product/daily-tasks")
+def daily_tasks(
+    date: str | None = Query(default=None, pattern=r"^\d{4}-\d{2}-\d{2}$"),
+    user: AppUser = Depends(get_app_user),
+    product: ProductContext = Depends(get_product_context),
+    db: Session = Depends(get_db),
+):
+    return ApiResponse.ok(list_daily_tasks(db, user, product, date).model_dump())
+
+
+@router.post("/product/daily-tasks/{task_id}/progress")
+def daily_task_progress(
+    task_id: str,
+    body: DailyTaskProgressBody,
+    user: AppUser = Depends(get_app_user),
+    product: ProductContext = Depends(get_product_context),
+    db: Session = Depends(get_db),
+):
+    try:
+        out = update_task_progress(db, user, product, task_id, body)
+    except ValueError as exc:
+        return ApiResponse.fail(str(exc), code=400)
+    return ApiResponse.ok(out.model_dump())

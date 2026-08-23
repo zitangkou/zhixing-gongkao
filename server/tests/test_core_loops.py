@@ -27,12 +27,14 @@ get_settings.cache_clear()
 from fastapi.testclient import TestClient  # noqa: E402
 
 from app.core.security import hash_password  # noqa: E402
-from app.database import SessionLocal  # noqa: E402
+from app.database import SessionLocal, engine  # noqa: E402
 from app.main import app  # noqa: E402
 from app.models import (  # noqa: E402
     AdminUser,
     AppUser,
     Article,
+    Base,
+    DailyLearningTask,
     ExamPaper,
     ExamQuestion,
     Question,
@@ -40,6 +42,10 @@ from app.models import (  # noqa: E402
     WrongAnswer,
 )
 from app.timezone import now  # noqa: E402
+
+# 本文件会在进入 TestClient 生命周期前直接写入测试数据，先显式建表，
+# 保证单独运行该测试文件时不依赖其他测试留下的数据库结构。
+Base.metadata.create_all(bind=engine)
 
 
 def _ok(res):
@@ -377,9 +383,142 @@ def test_ziliao_drill_submit_and_stats():
         assert overview["todayCorrect"] >= total - 1
 
 
+def test_daily_task_state_machine_and_product_isolation():
+    """今日任务：按产品隔离，草稿可恢复，状态只能顺序推进。"""
+    task_date = "2026-08-23"
+    with TestClient(app) as client:
+        user = _register(client)
+        shenlun_headers = {**user["headers"], "X-Product-Key": "shenlun"}
+        theory_headers = {**user["headers"], "X-Product-Key": "theory"}
+
+        with SessionLocal() as db:
+            db.add_all(
+                [
+                    DailyLearningTask(
+                        id="dlt-shenlun-loop",
+                        product_key="shenlun",
+                        task_date=task_date,
+                        task_type="daily_training",
+                        title="今日三刀训练",
+                        description="精读并完成概括",
+                        content_type="rmrb_article",
+                        content_id="rmrb-test",
+                        estimated_minutes=15,
+                        total_steps=5,
+                        status="published",
+                    ),
+                    DailyLearningTask(
+                        id="dlt-theory-loop",
+                        product_key="theory",
+                        task_date=task_date,
+                        task_type="daily_pack",
+                        title="今日政治理论",
+                        estimated_minutes=12,
+                        total_steps=4,
+                        status="published",
+                    ),
+                ]
+            )
+            db.commit()
+
+        shenlun = _ok(
+            client.get(
+                "/api/product/daily-tasks",
+                params={"date": task_date},
+                headers=shenlun_headers,
+            )
+        )
+        assert shenlun["productKey"] == "shenlun"
+        assert [task["id"] for task in shenlun["tasks"]] == ["dlt-shenlun-loop"]
+        assert shenlun["tasks"][0]["progress"]["state"] == "not_started"
+
+        theory = _ok(
+            client.get(
+                "/api/product/daily-tasks",
+                params={"date": task_date},
+                headers=theory_headers,
+            )
+        )
+        assert [task["id"] for task in theory["tasks"]] == ["dlt-theory-loop"]
+
+        started = _ok(
+            client.post(
+                "/api/product/daily-tasks/dlt-shenlun-loop/progress",
+                headers=shenlun_headers,
+                json={"event": "start"},
+            )
+        )
+        assert started["progress"]["state"] == "in_progress"
+
+        saved = _ok(
+            client.post(
+                "/api/product/daily-tasks/dlt-shenlun-loop/progress",
+                headers=shenlun_headers,
+                json={
+                    "event": "save",
+                    "currentStep": 2,
+                    "draft": {"answer": "基层协同机制仍需完善"},
+                },
+            )
+        )
+        assert saved["progress"]["currentStep"] == 2
+
+        restored = _ok(
+            client.get(
+                "/api/product/daily-tasks",
+                params={"date": task_date},
+                headers=shenlun_headers,
+            )
+        )
+        progress = restored["tasks"][0]["progress"]
+        assert progress["state"] == "in_progress"
+        assert progress["draft"]["answer"] == "基层协同机制仍需完善"
+
+        invalid = client.post(
+            "/api/product/daily-tasks/dlt-shenlun-loop/progress",
+            headers=shenlun_headers,
+            json={"event": "complete"},
+        )
+        assert invalid.status_code == 200
+        assert invalid.json()["code"] == 400
+
+        for event, expected in (
+            ("submit", "submitted"),
+            ("review", "reviewed"),
+            ("complete", "completed"),
+        ):
+            updated = _ok(
+                client.post(
+                    "/api/product/daily-tasks/dlt-shenlun-loop/progress",
+                    headers=shenlun_headers,
+                    json={"event": event},
+                )
+            )
+            assert updated["progress"]["state"] == expected
+
+        completed = _ok(
+            client.get(
+                "/api/product/daily-tasks",
+                params={"date": task_date},
+                headers=shenlun_headers,
+            )
+        )
+        assert completed["completion"] == 100
+        assert completed["completedCount"] == 1
+
+        cross_product = client.post(
+            "/api/product/daily-tasks/dlt-shenlun-loop/progress",
+            headers=theory_headers,
+            json={"event": "start"},
+        )
+        assert cross_product.status_code == 200
+        assert cross_product.json()["code"] == 400
+
+
 def teardown_module(_mod=None):
-    if _DB.exists():
+    engine.dispose()
+    for path in (_DB, Path(f"{_DB}-shm"), Path(f"{_DB}-wal")):
         try:
-            _DB.unlink()
+            path.unlink(missing_ok=True)
         except OSError:
             pass
