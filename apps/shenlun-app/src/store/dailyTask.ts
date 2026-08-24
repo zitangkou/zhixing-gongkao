@@ -10,6 +10,7 @@ export const useDailyTaskStore = defineStore('shenlun-daily-task', {
     message: '',
   }),
   getters: {
+    tasks: (state) => state.task ? [state.task] : [],
     progressPercent: (state) => {
       if (!state.task) return 0
       if (state.task.progress.state === 'completed') return 100
@@ -54,6 +55,44 @@ export const useDailyTaskStore = defineStore('shenlun-daily-task', {
       }
       this.task = response.data
       return true
+    },
+    async saveDraft(
+      taskId: string,
+      draft: Record<string, unknown>,
+      currentStep?: number,
+      _totalSteps?: number,
+    ) {
+      if (!this.task || this.task.id !== taskId) throw new Error('今日任务不存在')
+      const response = await api.updateDailyTask(taskId, { event: 'save', draft, currentStep })
+      if (response.code !== 0 || !response.data) {
+        this.message = response.message || '任务进度保存失败'
+        throw new Error(this.message)
+      }
+      this.task = response.data
+      return response.data
+    },
+    async submit(taskId: string, draft?: Record<string, unknown>) {
+      return this.applyEvent(taskId, 'submit', draft)
+    },
+    async markReviewed(taskId: string) {
+      return this.applyEvent(taskId, 'review')
+    },
+    async complete(taskId: string) {
+      return this.applyEvent(taskId, 'complete')
+    },
+    async applyEvent(
+      taskId: string,
+      event: 'submit' | 'review' | 'complete',
+      draft?: Record<string, unknown>,
+    ) {
+      if (!this.task || this.task.id !== taskId) throw new Error('今日任务不存在')
+      const response = await api.updateDailyTask(taskId, { event, draft })
+      if (response.code !== 0 || !response.data) {
+        this.message = response.message || '任务状态同步失败'
+        throw new Error(this.message)
+      }
+      this.task = response.data
+      return response.data
     },
   },
 })

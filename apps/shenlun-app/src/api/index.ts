@@ -1,5 +1,17 @@
 import Taro from '@tarojs/taro'
 import { getToken } from '@/utils/auth'
+import type {
+  ShenlunArgumentSkeleton,
+  ShenlunMeta,
+  ShenlunMineLog,
+  ShenlunMineTermItem,
+  ShenlunQuoteItem,
+  ShenlunSkeletonStructure,
+  ShenlunSkeletonTemplate,
+  ShenlunTemplateItem,
+  ShenlunTermCategory,
+  ShenlunVerbItem,
+} from '@/types'
 
 export interface ApiResponse<T> {
   code: number
@@ -104,7 +116,7 @@ export interface ShenlunDrill {
 interface AuthResult { access_token: string; token_type: string; user: UserMe }
 
 interface RequestOptions {
-  method?: 'GET' | 'POST'
+  method?: 'GET' | 'POST' | 'PUT' | 'DELETE'
   data?: unknown
   auth?: boolean
 }
@@ -161,6 +173,75 @@ export const api = {
   },
   getStats() {
     return request<ShenlunStats>('/api/rmrb/stats')
+  },
+  getRmrbMeta() { return request<ShenlunMeta>('/api/rmrb/meta') },
+  createRmrbSkeletonTemplate(data: {
+    name: string
+    description?: string
+    mode?: string
+    structure?: ShenlunSkeletonStructure
+    sortOrder?: number
+    isEnabled?: boolean
+  }) {
+    return request<ShenlunSkeletonTemplate>('/api/rmrb/skeleton-templates', { method: 'POST', data })
+  },
+  createRmrbTermCategory(data: {
+    name: string
+    kind?: 'term' | 'verb' | string
+    sortOrder?: number
+    isEnabled?: boolean
+  }) {
+    return request<ShenlunTermCategory>('/api/rmrb/term-categories', { method: 'POST', data })
+  },
+  getRmrbMine(id: string) { return request<ShenlunMineLog>(`/api/rmrb/mines/${id}`) },
+  getRmrbMineByDate(date: string) {
+    return request<ShenlunMineLog>(`/api/rmrb/mines/by-date/${encodeURIComponent(date)}`)
+  },
+  upsertRmrbMine(data: {
+    mineDate?: string
+    articleId?: string | null
+    articleTitle?: string
+    sourceExcerpt?: string
+    argumentChain?: string
+    templateSentence?: string
+    terms?: Array<ShenlunMineTermItem | string>
+    quotes?: ShenlunQuoteItem[]
+    verbs?: ShenlunVerbItem[]
+    argument?: ShenlunArgumentSkeleton
+    templates?: ShenlunTemplateItem[]
+  }) {
+    return request<ShenlunMineLog>('/api/rmrb/mines', { method: 'POST', data })
+  },
+  updateRmrbMine(id: string, data: Partial<{
+    articleId: string | null
+    articleTitle: string
+    sourceExcerpt: string
+    argumentChain: string
+    templateSentence: string
+    terms: Array<ShenlunMineTermItem | string>
+    quotes: ShenlunQuoteItem[]
+    verbs: ShenlunVerbItem[]
+    argument: ShenlunArgumentSkeleton
+    templates: ShenlunTemplateItem[]
+  }>) {
+    return request<ShenlunMineLog>(`/api/rmrb/mines/${id}`, { method: 'PUT', data })
+  },
+  deleteRmrbMine(id: string) {
+    return request<{ ok: boolean }>(`/api/rmrb/mines/${id}`, { method: 'DELETE' })
+  },
+  addRmrbTerm(data: {
+    term: string
+    category?: string
+    usageNote?: string
+    sourceTitle?: string
+    exampleSentence?: string
+    articleId?: string | null
+  }) {
+    return request<{
+      id: string
+      term: string
+      category: string
+    }>('/api/rmrb/terms', { method: 'POST', data })
   },
   listArticles() { return request<RmrbArticle[]>('/api/rmrb/articles') },
   getArticle(id: string) { return request<RmrbArticle>(`/api/rmrb/articles/${id}`) },

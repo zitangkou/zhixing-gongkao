@@ -1,1 +1,1 @@
-export default definePageConfig({ navigationBarTitleText: '三刀拆解' })
+export default definePageConfig({ navigationBarTitleText: '三刀解剖' })
