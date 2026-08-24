@@ -5,7 +5,9 @@ import type {
   ShenlunMeta,
   ShenlunMineLog,
   ShenlunMineTermItem,
+  ShenlunNormTerm,
   ShenlunQuoteItem,
+  ShenlunDrillLog,
   ShenlunSkeletonStructure,
   ShenlunSkeletonTemplate,
   ShenlunTemplateItem,
@@ -174,6 +176,9 @@ export const api = {
   getStats() {
     return request<ShenlunStats>('/api/rmrb/stats')
   },
+  getRmrbStats() {
+    return request<ShenlunStats>('/api/rmrb/stats')
+  },
   getRmrbMeta() { return request<ShenlunMeta>('/api/rmrb/meta') },
   createRmrbSkeletonTemplate(data: {
     name: string
@@ -229,6 +234,16 @@ export const api = {
   deleteRmrbMine(id: string) {
     return request<{ ok: boolean }>(`/api/rmrb/mines/${id}`, { method: 'DELETE' })
   },
+  listRmrbMines() {
+    return request<ShenlunMineLog[]>('/api/rmrb/mines')
+  },
+  listRmrbTerms(status?: 'learning' | 'mastered', category?: string) {
+    const query = [
+      status ? `status=${encodeURIComponent(status)}` : '',
+      category ? `category=${encodeURIComponent(category)}` : '',
+    ].filter(Boolean).join('&')
+    return request<ShenlunNormTerm[]>(`/api/rmrb/terms${query ? `?${query}` : ''}`)
+  },
   addRmrbTerm(data: {
     term: string
     category?: string
@@ -237,11 +252,33 @@ export const api = {
     exampleSentence?: string
     articleId?: string | null
   }) {
-    return request<{
-      id: string
-      term: string
-      category: string
-    }>('/api/rmrb/terms', { method: 'POST', data })
+    return request<ShenlunNormTerm>('/api/rmrb/terms', { method: 'POST', data })
+  },
+  updateRmrbTerm(id: string, data: Partial<{
+    category: string
+    usageNote: string
+    exampleSentence: string
+    familiarity: number
+    mastered: boolean
+    sourceTitle: string
+  }>) {
+    return request<ShenlunNormTerm>(`/api/rmrb/terms/${id}`, { method: 'PUT', data })
+  },
+  deleteRmrbTerm(id: string) {
+    return request<{ ok: boolean }>(`/api/rmrb/terms/${id}`, { method: 'DELETE' })
+  },
+  listRmrbDrills(drillType?: 'sentence' | 'imitate' | 'oral') {
+    const query = drillType ? `?drill_type=${encodeURIComponent(drillType)}` : ''
+    return request<ShenlunDrillLog[]>(`/api/rmrb/drills${query}`)
+  },
+  addRmrbDrill(data: {
+    drillType: 'sentence' | 'imitate' | 'oral'
+    content: string
+    prompt?: string
+    refMineId?: string | null
+    refTermIds?: string[]
+  }) {
+    return request<ShenlunDrillLog>('/api/rmrb/drills', { method: 'POST', data })
   },
   listArticles() { return request<RmrbArticle[]>('/api/rmrb/articles') },
   getArticle(id: string) { return request<RmrbArticle>(`/api/rmrb/articles/${id}`) },

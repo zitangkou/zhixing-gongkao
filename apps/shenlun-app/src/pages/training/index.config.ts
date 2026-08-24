@@ -1,1 +1,1 @@
-export default definePageConfig({ navigationBarTitleText: '训练' })
+export default definePageConfig({ navigationBarTitleText: '阶梯训练' })
