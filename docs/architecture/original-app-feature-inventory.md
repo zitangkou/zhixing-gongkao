@@ -26,8 +26,8 @@
 | `pages/auth/register` | 注册开关、三字段校验、注册并登录、阻断回跳 | 双端共性 | 部分 | 部分 |
 | `pages/today/index` | 今日驾驶舱、任务状态、恢复入口、复习提醒 | 参考骨架 | 学科化重做 | 学科化重做 |
 | `pages/index/index` | 学习入口、推荐内容、复习提醒、积分入口 | 参考骨架 | 学科化重做 | 学科化重做 |
-| `pages/article/detail` | 分节阅读、目录/翻页、已读进度、知识框架、复制、语料采集 | 政治理论 | 不适用 | 缺失大部 |
-| `pages/article/mindmap` | 全屏知识框架 | 政治理论 | 不适用 | 缺失 |
+| `pages/article/detail` | 分节阅读、目录/翻页、已读进度、知识框架、复制、语料采集 | 政治理论 | 不适用 | 已迁移 |
+| `pages/article/mindmap` | 全屏知识框架 | 政治理论 | 不适用 | 已迁移 |
 | `pages/question/index` | 练习模式、按文章、错题、复习和套卷入口 | 政治理论 | 题型化替代 | 静态占位 |
 | `pages/question/taking` | 逐题作答、即时解析、上下题、退出/重开确认、结果统计 | 政治理论 | 题型化替代 | 简化实现 |
 | `pages/question/article-pick` | 按文章选择题组 | 政治理论 | 不适用 | 缺失 |
@@ -47,7 +47,7 @@
 | `pages/user/feedback` | 500 字反馈、采纳积分 | 双端共性 | 缺失 | 缺失 |
 | `pages/user/data` | 核心学习数据导出、校验和导入恢复 | 双端共性 | 缺失 | 缺失 |
 | `pages/corpus/index` | 语料列表、筛选、状态流转 | 双端按领域 | 缺失 | 缺失 |
-| `pages/corpus/edit` | 来源、标签、知识点、改写、仿写、晋升规范词 | 双端按领域 | 已迁移 | 缺失 |
+| `pages/corpus/edit` | 来源、标签、知识点、改写、仿写、晋升规范词 | 双端按领域 | 已迁移 | 已迁移 |
 | `pages/plan/today` | 今日任务完成/跳过、备注、临时任务 | 双端共性 | 缺失 | 缺失 |
 | `pages/plan/review` | 今日完成度、弱项、明日重点、心情 | 双端共性 | 缺失 | 缺失 |
 | `pages/plan/week` | 周任务总览 | 双端共性 | 缺失 | 缺失 |

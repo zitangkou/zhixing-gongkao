@@ -1,5 +1,6 @@
 import Taro from '@tarojs/taro'
 import { getToken } from '@/utils/auth'
+import type { CorpusItem, CorpusStats, KnowledgeTree, MindMapNode } from '@/types'
 
 export interface ApiResponse<T> {
   code: number
@@ -73,6 +74,7 @@ export interface Article {
   content: string
   sections: ArticleSection[]
   tags: string[]
+  mindMap: MindMapNode
 }
 
 export interface Question {
@@ -95,7 +97,7 @@ export interface AnswerResult {
 
 interface AuthResult { access_token: string; token_type: string; user: UserMe }
 
-async function request<T>(path: string, options: { method?: 'GET' | 'POST'; data?: unknown; auth?: boolean } = {}): Promise<ApiResponse<T>> {
+async function request<T>(path: string, options: { method?: 'GET' | 'POST' | 'PUT' | 'DELETE'; data?: unknown; auth?: boolean } = {}): Promise<ApiResponse<T>> {
   const token = options.auth === false ? '' : getToken()
   try {
     const response = await Taro.request<ApiResponse<T>>({
@@ -148,5 +150,50 @@ export const api = {
   },
   submitAnswer(questionId: string, answer: string | string[]) {
     return request<AnswerResult>('/api/answer', { method: 'POST', data: { questionId, answer } })
+  },
+  getSectionReads() {
+    return request<Record<string, string[]>>('/api/study/section-reads')
+  },
+  markSectionRead(articleId: string, sectionId: string) {
+    return request<null>('/api/study/sections/read', { method: 'POST', data: { articleId, sectionId } })
+  },
+  getCorpusStats() { return request<CorpusStats>('/api/corpus/stats') },
+  getCorpusItem(id: string) { return request<CorpusItem>(`/api/corpus/items/${id}`) },
+  createCorpusItem(data: {
+    original: string
+    kind?: string
+    sourceType?: string
+    sourceTitle?: string
+    tags?: string[]
+    plainNote?: string
+    rewrite?: string
+    practice?: string
+    knowledgeNodeId?: string | null
+    knowledgeTreeKey?: string
+    knowledgePath?: string
+  }) { return request<CorpusItem>('/api/corpus/items', { method: 'POST', data }) },
+  updateCorpusItem(id: string, data: Partial<{
+    original: string
+    kind: string
+    sourceType: string
+    sourceTitle: string
+    tags: string[]
+    plainNote: string
+    rewrite: string
+    practice: string
+    markUsed: boolean
+    knowledgeNodeId: string | null
+    knowledgeTreeKey: string
+    knowledgePath: string
+  }>) { return request<CorpusItem>(`/api/corpus/items/${id}`, { method: 'PUT', data }) },
+  deleteCorpusItem(id: string) {
+    return request<{ ok: boolean }>(`/api/corpus/items/${id}`, { method: 'DELETE' })
+  },
+  promoteCorpusToTerm(id: string) {
+    return request<CorpusItem>(`/api/corpus/items/${id}/promote-term`, { method: 'POST' })
+  },
+  getKnowledgeTrees() { return request<KnowledgeTree[]>('/api/knowledge/trees') },
+  getKnowledgeTree(treeKey: string) {
+    return request<KnowledgeTree>(`/api/knowledge/tree/${encodeURIComponent(treeKey)}`)
   },
 }

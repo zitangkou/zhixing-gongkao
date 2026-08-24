@@ -116,7 +116,7 @@ async function startReading() {
       task.value.totalSteps,
     )
     const query = `id=${encodeURIComponent(task.value.contentId)}&taskId=${encodeURIComponent(task.value.id)}`
-    Taro.redirectTo({ url: `/pages/learning/index?${query}` })
+    Taro.redirectTo({ url: `/pages/article/detail?${query}` })
   } catch (error) {
     showToast(error instanceof Error ? error.message : '读前判断保存失败', 'error')
   } finally {
