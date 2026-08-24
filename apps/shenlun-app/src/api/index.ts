@@ -1,6 +1,9 @@
 import Taro from '@tarojs/taro'
 import { getToken } from '@/utils/auth'
 import type {
+  CorpusItem,
+  CorpusStats,
+  KnowledgeTree,
   ShenlunArgumentSkeleton,
   ShenlunMeta,
   ShenlunMineLog,
@@ -279,6 +282,55 @@ export const api = {
     refTermIds?: string[]
   }) {
     return request<ShenlunDrillLog>('/api/rmrb/drills', { method: 'POST', data })
+  },
+  getCorpusStats() {
+    return request<CorpusStats>('/api/corpus/stats')
+  },
+  getCorpusItem(id: string) {
+    return request<CorpusItem>(`/api/corpus/items/${id}`)
+  },
+  createCorpusItem(data: {
+    original: string
+    kind?: string
+    sourceType?: string
+    sourceTitle?: string
+    tags?: string[]
+    plainNote?: string
+    rewrite?: string
+    practice?: string
+    knowledgeNodeId?: string | null
+    knowledgeTreeKey?: string
+    knowledgePath?: string
+  }) {
+    return request<CorpusItem>('/api/corpus/items', { method: 'POST', data })
+  },
+  updateCorpusItem(id: string, data: Partial<{
+    original: string
+    kind: string
+    sourceType: string
+    sourceTitle: string
+    tags: string[]
+    plainNote: string
+    rewrite: string
+    practice: string
+    markUsed: boolean
+    knowledgeNodeId: string | null
+    knowledgeTreeKey: string
+    knowledgePath: string
+  }>) {
+    return request<CorpusItem>(`/api/corpus/items/${id}`, { method: 'PUT', data })
+  },
+  deleteCorpusItem(id: string) {
+    return request<{ ok: boolean }>(`/api/corpus/items/${id}`, { method: 'DELETE' })
+  },
+  promoteCorpusToTerm(id: string) {
+    return request<CorpusItem>(`/api/corpus/items/${id}/promote-term`, { method: 'POST' })
+  },
+  getKnowledgeTrees() {
+    return request<KnowledgeTree[]>('/api/knowledge/trees')
+  },
+  getKnowledgeTree(treeKey: string) {
+    return request<KnowledgeTree>(`/api/knowledge/tree/${encodeURIComponent(treeKey)}`)
   },
   listArticles() { return request<RmrbArticle[]>('/api/rmrb/articles') },
   getArticle(id: string) { return request<RmrbArticle>(`/api/rmrb/articles/${id}`) },

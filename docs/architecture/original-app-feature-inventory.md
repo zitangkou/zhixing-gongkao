@@ -47,7 +47,7 @@
 | `pages/user/feedback` | 500 字反馈、采纳积分 | 双端共性 | 缺失 | 缺失 |
 | `pages/user/data` | 核心学习数据导出、校验和导入恢复 | 双端共性 | 缺失 | 缺失 |
 | `pages/corpus/index` | 语料列表、筛选、状态流转 | 双端按领域 | 缺失 | 缺失 |
-| `pages/corpus/edit` | 来源、标签、知识点、改写、仿写、晋升规范词 | 双端按领域 | 缺失 | 缺失 |
+| `pages/corpus/edit` | 来源、标签、知识点、改写、仿写、晋升规范词 | 双端按领域 | 已迁移 | 缺失 |
 | `pages/plan/today` | 今日任务完成/跳过、备注、临时任务 | 双端共性 | 缺失 | 缺失 |
 | `pages/plan/review` | 今日完成度、弱项、明日重点、心情 | 双端共性 | 缺失 | 缺失 |
 | `pages/plan/week` | 周任务总览 | 双端共性 | 缺失 | 缺失 |
@@ -70,7 +70,7 @@
 | `pages/ziliao/result` | 得分、正确率、解析和重做 | 后续题型 | 不迁移 | 不迁移 |
 | `pages/rmrb/index` | 申论概览、周开采、规范词和入口 | 申论 | 今日页部分替代 | 不适用 |
 | `pages/rmrb/article-list` | 时评列表、标签和文章入口 | 申论 | 基础列表 | 不适用 |
-| `pages/rmrb/article-detail` | 可选正文、复制全文、语料采集、三刀入口、阅读进度 | 申论 | 缺失大部 | 不适用 |
+| `pages/rmrb/article-detail` | 可选正文、复制全文、语料采集、三刀入口、阅读进度 | 申论 | 已迁移 | 不适用 |
 | `pages/rmrb/mines` | 开采记录、结构化资产展示和继续编辑 | 申论 | 已迁移 | 不适用 |
 | `pages/rmrb/mine-edit` | 完整三刀解剖编辑 | 申论 | 核心已迁移 | 不适用 |
 | `pages/rmrb/terms` | 规范词分类、学习/掌握、例句和管理 | 申论 | 已迁移 | 不适用 |

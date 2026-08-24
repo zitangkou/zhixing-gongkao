@@ -39,3 +39,19 @@ export async function promptText(
   const result: any = await Taro.showModal(modalOptions)
   return result.confirm ? String(result.content || '') : null
 }
+
+export async function copyText(text: string, successTip = '已复制'): Promise<boolean> {
+  const value = (text || '').trim()
+  if (!value) {
+    showToast('没有可复制内容')
+    return false
+  }
+  try {
+    await Taro.setClipboardData({ data: value })
+    if (getPlatform() === 'h5') showToast(successTip, 'success')
+    return true
+  } catch {
+    showToast('复制失败', 'error')
+    return false
+  }
+}
