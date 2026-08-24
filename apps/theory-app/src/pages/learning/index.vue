@@ -133,8 +133,20 @@ async function submitCurrent() {
   results.value[question.id] = { ...response.data, userAnswer: answer }
   selection.value = []
   if (quizIndex.value + 1 < questions.value.length) { quizIndex.value++; return }
-  const ok = await store.transition('submit', 3, { ...store.task?.progress.draft, pretestAnswers: pretestAnswers.value, readCompleted: true, quizResults: results.value, quizCorrect: correctCount.value, quizTotal: questions.value.length })
-  if (ok) stage.value = 'review'
+  const wrongQuestionIds = Object.entries(results.value)
+    .filter(([, result]) => !result.correct)
+    .map(([questionId]) => questionId)
+  const ok = await store.transition('submit', 3, {
+    ...store.task?.progress.draft,
+    pretestAnswers: pretestAnswers.value,
+    readCompleted: true,
+    quizResults: results.value,
+    quizAnswers: results.value,
+    wrongQuestionIds,
+    quizCorrect: correctCount.value,
+    quizTotal: questions.value.length,
+  })
+  if (ok) Taro.redirectTo({ url: `/pages/learning/review?taskId=${encodeURIComponent(store.task?.id || '')}` })
 }
 function resultFor(id: string) { return results.value[id] }
 function toText(value: string | string[] | undefined) { return Array.isArray(value) ? value.join('、') : value || '未作答' }
@@ -155,6 +167,10 @@ async function load() {
   if (questionResponse.code === 0 && questionResponse.data) questions.value = questionResponse.data
   message.value = articleResponse.message || questionResponse.message
   restoreStage()
+  if (store.task.progress.state === 'submitted' || store.task.progress.state === 'reviewed') {
+    Taro.redirectTo({ url: `/pages/learning/review?taskId=${encodeURIComponent(store.task.id)}` })
+    return
+  }
   loading.value = false
 }
 onMounted(load)

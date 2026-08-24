@@ -46,7 +46,7 @@ const actionText = computed(() => {
 function openTopics() { Taro.switchTab({ url: '/pages/topics/index' }) }
 async function startTask() {
   if (store.starting || store.task?.progress.state === 'completed') return
-  if (await store.start()) Taro.navigateTo({ url: '/pages/learning/index' })
+  if (await store.start()) Taro.navigateTo({ url: `/pages/learning/pack?taskId=${encodeURIComponent(store.task?.id || '')}` })
   else showToast(store.message || '暂时无法开始')
 }
 function load() {
