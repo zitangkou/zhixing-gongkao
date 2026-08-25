@@ -32,7 +32,7 @@
 | `pages/question/taking` | 逐题作答、即时解析、上下题、退出/重开确认、结果统计 | 政治理论 | 题型化替代 | 已迁移 |
 | `pages/question/article-pick` | 按文章选择题组 | 政治理论 | 不适用 | 已迁移 |
 | `pages/question/review` | 到期复习答题流 | 双端按题型 | 缺失 | 缺失 |
-| `pages/question/wrong` | 错题列表、重做、移除、SRS | 双端按题型 | 缺失 | 缺失 |
+| `pages/question/wrong` | 错题列表、重做、移除、SRS | 双端按题型 | 缺失 | 已迁移 |
 | `pages/question/manual-list` | 行测手工错题列表与筛选 | 后续题型 | 不迁移 | 不迁移 |
 | `pages/question/manual-quiz` | 行测错题重做 | 后续题型 | 不迁移 | 不迁移 |
 | `pages/question/manual-edit` | 手工错题编辑、图片、知识点和掌握状态 | 后续题型 | 不迁移 | 不迁移 |

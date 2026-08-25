@@ -52,6 +52,26 @@ $shadow-float: 0 12px 28px rgba(139, 0, 0, 0.17);
   box-sizing: border-box;
 }
 
+@mixin list-act {
+  @include hit-target(44px);
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: $primary-color;
+  box-sizing: border-box;
+  &.danger { color: $text-muted; }
+  &.good { color: $primary-color; }
+  &.muted { color: $text-muted; }
+}
+
+@mixin filter-tab {
+  @include hit-target(44px);
+  padding: 0 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
 @mixin brand-gradient {
   background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
 }

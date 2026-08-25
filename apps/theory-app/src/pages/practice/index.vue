@@ -39,7 +39,7 @@
         <view class="card-title">文章错题本</view>
         <view class="card-desc">按间隔计划回收错误表述</view>
       </view>
-      <view class="tag">下一批迁移</view>
+      <view class="tag">进入 ›</view>
     </view>
   </view>
 </template>
@@ -48,7 +48,6 @@
 import { onMounted } from 'vue'
 import Taro, { useDidShow } from '@tarojs/taro'
 import { useQuestionStore } from '@/store/question'
-import { showToast } from '@/utils/platform'
 
 const questionStore = useQuestionStore()
 
@@ -61,7 +60,7 @@ function pickArticle() {
 }
 
 function openWrong() {
-  showToast('错题列表将在下一里程碑按原版迁移')
+  Taro.navigateTo({ url: '/pages/question/wrong' })
 }
 
 async function load() {
