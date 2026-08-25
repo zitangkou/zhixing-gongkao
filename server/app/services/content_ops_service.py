@@ -201,11 +201,19 @@ def generate_package_from_article(db: Session, body: ContentPackageGenerateFromA
         raise ValueError("运营模板不存在或未启用")
     if template.product_key not in (body.productKey, "general"):
         raise ValueError("模板与产品不匹配")
-    duplicate = db.query(ContentPublishPackage).filter(
+    # Daily production can legitimately reuse an approved teaching asset on a
+    # later day.  The campaign key identifies that daily run, so only block an
+    # exact same-source, same-template, same-campaign retry.
+    duplicate_query = db.query(ContentPublishPackage).filter(
         ContentPublishPackage.source_id == article.id,
         ContentPublishPackage.template_id == template.id,
         ContentPublishPackage.status != "rejected",
-    ).first()
+    )
+    if body.campaignKey:
+        duplicate_query = duplicate_query.filter(ContentPublishPackage.campaign_key == body.campaignKey)
+    else:
+        duplicate_query = duplicate_query.filter(ContentPublishPackage.campaign_key == "")
+    duplicate = duplicate_query.first()
     if duplicate:
         raise ValueError("该文章已用此模板生成发布包，请直接编辑已有草稿")
     slots = _article_slot_values(article, _loads(template.slots_json, []))

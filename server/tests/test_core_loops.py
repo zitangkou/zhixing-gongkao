@@ -326,6 +326,7 @@ def test_admin_rbac():
                 "productKey": "theory",
                 "templateId": theory_template["id"],
                 "articleId": published_article["id"],
+                "campaignKey": "theory-auto-20260823",
             },
         )
         assert duplicate_generation.json()["code"] == 400
