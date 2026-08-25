@@ -28,9 +28,9 @@
 | `pages/index/index` | 学习入口、推荐内容、复习提醒、积分入口 | 参考骨架 | 学科化重做 | 学科化重做 |
 | `pages/article/detail` | 分节阅读、目录/翻页、已读进度、知识框架、复制、语料采集 | 政治理论 | 不适用 | 已迁移 |
 | `pages/article/mindmap` | 全屏知识框架 | 政治理论 | 不适用 | 已迁移 |
-| `pages/question/index` | 练习模式、按文章、错题、复习和套卷入口 | 政治理论 | 题型化替代 | 静态占位 |
-| `pages/question/taking` | 逐题作答、即时解析、上下题、退出/重开确认、结果统计 | 政治理论 | 题型化替代 | 简化实现 |
-| `pages/question/article-pick` | 按文章选择题组 | 政治理论 | 不适用 | 缺失 |
+| `pages/question/index` | 练习模式、按文章、错题、复习和套卷入口 | 政治理论 | 题型化替代 | 核心入口已迁移；错题/复习/套卷待迁移 |
+| `pages/question/taking` | 逐题作答、即时解析、上下题、退出/重开确认、结果统计 | 政治理论 | 题型化替代 | 已迁移 |
+| `pages/question/article-pick` | 按文章选择题组 | 政治理论 | 不适用 | 已迁移 |
 | `pages/question/review` | 到期复习答题流 | 双端按题型 | 缺失 | 缺失 |
 | `pages/question/wrong` | 错题列表、重做、移除、SRS | 双端按题型 | 缺失 | 缺失 |
 | `pages/question/manual-list` | 行测手工错题列表与筛选 | 后续题型 | 不迁移 | 不迁移 |

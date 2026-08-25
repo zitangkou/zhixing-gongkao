@@ -303,7 +303,7 @@ function goQuiz() {
     return
   }
   const taskQuery = taskId.value ? `&taskId=${encodeURIComponent(taskId.value)}` : ''
-  Taro.navigateTo({ url: `/pages/learning/index?id=${article.value.id}${taskQuery}` })
+  Taro.navigateTo({ url: `/pages/question/taking?articleId=${article.value.id}${taskQuery}` })
 }
 
 async function onCopyArticle() {

@@ -1,6 +1,13 @@
 import Taro from '@tarojs/taro'
 import { getToken } from '@/utils/auth'
-import type { CorpusItem, CorpusStats, KnowledgeTree, MindMapNode } from '@/types'
+import type {
+  CorpusItem,
+  CorpusStats,
+  KnowledgeTree,
+  MindMapNode,
+  QuizCompleteResult,
+  WrongQuestionRecord,
+} from '@/types'
 
 export interface ApiResponse<T> {
   code: number
@@ -142,6 +149,13 @@ export const api = {
     return request<DailyLearningTask>(`/api/product/daily-tasks/${taskId}/progress`, { method: 'POST', data: payload })
   },
   getArticle(articleId: string) { return request<Article>(`/api/articles/${articleId}`) },
+  getDailyArticles() { return request<Article[]>('/api/articles/daily', { auth: false }) },
+  getRecommendedArticles(offset = 0, limit = 20) {
+    return request<{ items: Article[]; total: number; hasMore: boolean }>(
+      `/api/articles/recommended?offset=${offset}&limit=${limit}`,
+      { auth: false },
+    )
+  },
   getQuestions(articleId: string) {
     return request<Question[]>(`/api/questions?articleId=${encodeURIComponent(articleId)}`)
   },
@@ -150,6 +164,24 @@ export const api = {
   },
   submitAnswer(questionId: string, answer: string | string[]) {
     return request<AnswerResult>('/api/answer', { method: 'POST', data: { questionId, answer } })
+  },
+  getQuizByMode(mode: string, count = 10) {
+    return request<Question[]>(`/api/quiz?mode=${encodeURIComponent(mode)}&count=${count}`)
+  },
+  getWrongQuestions(status: 'review' | 'waiting' | 'all' = 'review') {
+    return request<WrongQuestionRecord[]>(`/api/wrong?status=${encodeURIComponent(status)}`)
+  },
+  redoWrongQuestion(questionId: string, answer: string | string[]) {
+    return request<AnswerResult>('/api/wrong/redo', {
+      method: 'POST',
+      data: { questionId, answer },
+    })
+  },
+  removeWrongQuestion(questionId: string) {
+    return request<null>(`/api/wrong/${encodeURIComponent(questionId)}`, { method: 'DELETE' })
+  },
+  completeQuiz(data: { articleId?: string; mode: string; total: number; correct: number }) {
+    return request<QuizCompleteResult>('/api/quiz/complete', { method: 'POST', data })
   },
   getSectionReads() {
     return request<Record<string, string[]>>('/api/study/section-reads')

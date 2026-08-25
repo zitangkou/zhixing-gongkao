@@ -77,3 +77,41 @@ export interface CorpusStats {
   sourceTypes: string[]
   tagPresets: string[]
 }
+
+export type QuizMode = 'daily' | 'article' | 'random' | 'timeline' | 'key' | 'wrong'
+
+export interface Question {
+  id: string
+  articleId: string
+  type: 'single' | 'multiple' | 'judge'
+  stem: string
+  options?: string[]
+  correctAnswer: string | string[]
+  analysis: string
+  sourceSentence: string
+}
+
+export interface QuizAnswerRecord {
+  correct: boolean
+  analysis: string
+  userAnswer: string | string[]
+}
+
+export interface WrongQuestionRecord {
+  question: Question
+  wrongCount: number
+  lastWrongAt: string
+  userAnswer?: string | string[]
+  articleTitle: string
+  tag: string
+  reviewStage?: number
+  nextReviewAt?: string | null
+  due?: boolean
+}
+
+export interface QuizCompleteResult {
+  rank: number
+  totalParticipants: number
+  accuracy: number
+  bestAccuracy?: number
+}

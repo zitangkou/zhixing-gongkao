@@ -17,6 +17,8 @@ $success-color: #228b5e;
 $success-light: rgba(34, 139, 94, 0.1);
 $success: #228b5e;
 $accent-green: #228b5e;
+$accent-blue: #2f6fed;
+$accent-amber: #c47a00;
 $danger: #ee0a24;
 $border-color: rgba(138, 143, 152, 0.24);
 $radius-md: 14px;
@@ -52,4 +54,15 @@ $shadow-float: 0 12px 28px rgba(139, 0, 0, 0.17);
 
 @mixin brand-gradient {
   background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+}
+
+@mixin page-state-box {
+  padding: 32px 20px;
+  text-align: center;
+  border-radius: $radius-md;
+  background: $card-bg;
+  color: $text-muted;
+  .state-title { display: block; color: $text-primary; font-size: 16px; font-weight: 700; }
+  .state-desc { display: block; margin-top: 6px; font-size: 12px; line-height: 1.5; }
+  .state-btn { display: inline-block; margin-top: 14px; color: $primary-color; font-size: 13px; }
 }

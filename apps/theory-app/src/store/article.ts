@@ -6,10 +6,27 @@ import { normalizeArticle } from '@/utils/articleContent'
 export const useArticleStore = defineStore('theory-article', {
   state: () => ({
     currentArticle: null as Article | null,
+    dailyArticles: [] as Article[],
+    recommendedList: [] as Article[],
     articleHistory: [] as string[],
     sectionReadMap: {} as Record<string, string[]>,
   }),
   actions: {
+    async fetchDailyArticles() {
+      const response = await api.getDailyArticles()
+      if (response.code === 0 && response.data) {
+        this.dailyArticles = response.data.map((item) => normalizeArticle(item as Article))
+      }
+      return this.dailyArticles
+    },
+    async fetchRecommendedArticles(reset = false) {
+      const response = await api.getRecommendedArticles(0, 20)
+      if (response.code === 0 && response.data) {
+        const items = response.data.items.map((item) => normalizeArticle(item as Article))
+        this.recommendedList = reset ? items : [...this.recommendedList, ...items]
+      }
+      return this.recommendedList
+    },
     async syncSectionReads() {
       const response = await api.getSectionReads()
       if (response.code === 0 && response.data) this.sectionReadMap = response.data
