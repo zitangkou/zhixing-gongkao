@@ -1,13 +1,15 @@
 import { defineStore } from 'pinia'
 import Taro from '@tarojs/taro'
 import { api } from '@/api'
-import type { Question, WrongQuestionRecord } from '@/types'
+import type { Question, ReviewTask, WrongQuestionRecord } from '@/types'
 import { showToast } from '@/utils/platform'
 
 export const useQuestionStore = defineStore('theory-question', {
   state: () => ({
     currentQuestions: [] as Question[],
     wrongQuestions: [] as WrongQuestionRecord[],
+    reviewTasks: [] as ReviewTask[],
+    reviewLoadError: '',
     wrongLoading: false,
     answeredToday: 0,
     dailyWrongReviewDone: false,
@@ -53,6 +55,26 @@ export const useQuestionStore = defineStore('theory-question', {
       } finally {
         this.wrongLoading = false
       }
+    },
+    async fetchReviewTasks() {
+      const response = await api.getReviewTasks()
+      if (response.code !== 0 || !response.data) {
+        this.reviewLoadError = response.message || '加载复习任务失败'
+        this.reviewTasks = []
+        return false
+      }
+      this.reviewLoadError = ''
+      this.reviewTasks = response.data
+      return true
+    },
+    async completeReviewTask(articleId: string) {
+      const response = await api.completeReview(articleId)
+      if (response.code !== 0) {
+        showToast(response.message || '完成复习失败', 'error')
+        return false
+      }
+      await this.fetchReviewTasks()
+      return true
     },
     async redoWrongQuestion(questionId: string, answer: string | string[]) {
       const response = await api.redoWrongQuestion(questionId, answer)

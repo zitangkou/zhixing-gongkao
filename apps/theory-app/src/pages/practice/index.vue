@@ -41,6 +41,13 @@
       </view>
       <view class="tag">进入 ›</view>
     </view>
+    <view class="card row" @tap="openReview">
+      <view>
+        <view class="card-title">到期文章复习</view>
+        <view class="card-desc">按 1、2、4、7、15、30 天回看原文并重做题组</view>
+      </view>
+      <view class="tag">{{ questionStore.reviewTasks.length }} 项 ›</view>
+    </view>
   </view>
 </template>
 
@@ -63,8 +70,15 @@ function openWrong() {
   Taro.navigateTo({ url: '/pages/question/wrong' })
 }
 
+function openReview() {
+  Taro.navigateTo({ url: '/pages/question/review' })
+}
+
 async function load() {
-  await questionStore.loadWrongQuestions('all')
+  await Promise.all([
+    questionStore.loadWrongQuestions('all'),
+    questionStore.fetchReviewTasks(),
+  ])
 }
 
 onMounted(load)

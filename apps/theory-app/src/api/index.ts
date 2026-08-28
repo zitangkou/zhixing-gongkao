@@ -6,6 +6,8 @@ import type {
   KnowledgeTree,
   MindMapNode,
   QuizCompleteResult,
+  ReviewTask,
+  StudyRecord,
   WrongQuestionRecord,
 } from '@/types'
 
@@ -185,6 +187,11 @@ export const api = {
   },
   getSectionReads() {
     return request<Record<string, string[]>>('/api/study/section-reads')
+  },
+  getStudyRecords() { return request<StudyRecord[]>('/api/study/records') },
+  getReviewTasks() { return request<ReviewTask[]>('/api/review') },
+  completeReview(articleId: string) {
+    return request<null>('/api/review/complete', { method: 'POST', data: { articleId } })
   },
   markSectionRead(articleId: string, sectionId: string) {
     return request<null>('/api/study/sections/read', { method: 'POST', data: { articleId, sectionId } })

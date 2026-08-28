@@ -91,6 +91,25 @@ export interface Question {
   sourceSentence: string
 }
 
+export interface StudyRecord {
+  articleId: string
+  studyDate: string
+  reviewCount: number
+  lastReviewDate?: string
+  mastered: boolean
+  updatedAt?: string
+}
+
+export interface ReviewTask {
+  id: string
+  articleId: string
+  articleTitle: string
+  reviewIndex: number
+  dueDate: string
+  urgency: number
+  type: 'article' | 'question'
+}
+
 export interface QuizAnswerRecord {
   correct: boolean
   analysis: string

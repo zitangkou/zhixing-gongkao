@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { api } from '@/api'
-import type { Article } from '@/types'
+import type { Article, StudyRecord } from '@/types'
 import { normalizeArticle } from '@/utils/articleContent'
 
 export const useArticleStore = defineStore('theory-article', {
@@ -9,9 +9,18 @@ export const useArticleStore = defineStore('theory-article', {
     dailyArticles: [] as Article[],
     recommendedList: [] as Article[],
     articleHistory: [] as string[],
+    studyRecords: [] as StudyRecord[],
     sectionReadMap: {} as Record<string, string[]>,
   }),
   actions: {
+    async syncStudyData() {
+      const response = await api.getStudyRecords()
+      if (response.code === 0 && response.data) {
+        this.studyRecords = response.data
+        this.articleHistory = response.data.map((item) => item.articleId)
+      }
+      return this.studyRecords
+    },
     async fetchDailyArticles() {
       const response = await api.getDailyArticles()
       if (response.code === 0 && response.data) {
