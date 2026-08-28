@@ -19,6 +19,7 @@ class ContentPublishPackageCreate(BaseModel):
 class ContentPublishStatusBody(BaseModel):
     status: Literal["draft", "teaching_review", "ops_review", "ready", "published", "rejected"]
     reviewNote: str = ""
+    checklist: dict[str, bool] = Field(default_factory=dict)
 
 
 class ContentPublishPackageUpdate(BaseModel):

@@ -21,4 +21,4 @@ from app.models.corpus import CorpusItem
 from app.models.ziliao import ZiliaoFormula, ZiliaoPracticeLog, ZiliaoQuestionType, ZiliaoTrick
 from app.models.misc import ActivityEvent, ExamCountdown
 from app.models.product import DailyLearningTask, UserDailyTaskProgress
-from app.models.content_ops import ContentOperationTemplate, ContentPublishPackage
+from app.models.content_ops import ContentOperationTemplate, ContentPublishPackage, ContentReviewRecord

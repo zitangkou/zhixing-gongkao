@@ -5,8 +5,9 @@ import argparse
 import json
 from datetime import datetime
 
-from app.database import SessionLocal
-from app.models import ContentOperationTemplate
+from app.database import SessionLocal, engine
+from app.db_compat import run_compat_migrations
+from app.models import Base, ContentOperationTemplate
 from app.schemas import ContentPackageGenerateFromArticle
 from app.services.content_ops_service import ensure_content_ops_defaults, generate_package_from_article
 from app.services.shenlun_daily_service import ensure_shenlun_daily_task
@@ -32,6 +33,8 @@ PRODUCTS = {
 
 def generate(date: str, selected: set[str]) -> list[dict]:
     results: list[dict] = []
+    Base.metadata.create_all(bind=engine)
+    run_compat_migrations()
     with SessionLocal() as db:
         ensure_content_ops_defaults(db)
         for product, config in PRODUCTS.items():

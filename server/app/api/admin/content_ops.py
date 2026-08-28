@@ -5,9 +5,20 @@ from app.core.response import ApiResponse
 from app.database import get_db
 from app.models import ContentOperationTemplate, ContentPublishPackage
 from app.schemas import ContentPackageGenerateFromArticle, ContentPublishPackageCreate, ContentPublishPackageUpdate, ContentPublishStatusBody
-from app.services.content_ops_service import content_ops_overview, create_package, export_package, generate_package_from_article, package_out, template_out, transition_package, update_package
+from app.services.content_ops_service import content_ops_overview, content_reference_library, content_review_config, create_package, export_package, generate_package_from_article, package_out, template_out, transition_package, update_package
 
 router = APIRouter()
+
+
+@router.get("/content-ops/review-config")
+def review_config(_admin=Depends(require_permission("content_ops:read"))):
+    return ApiResponse.ok(content_review_config())
+
+
+@router.get("/content-ops/reference-library")
+def reference_library(_admin=Depends(require_permission("content_ops:read"))):
+    try: return ApiResponse.ok(content_reference_library())
+    except ValueError as exc: return ApiResponse.fail(str(exc), code=500)
 
 
 @router.get("/content-ops/overview")
@@ -48,7 +59,7 @@ def package_generate_from_article(body: ContentPackageGenerateFromArticle, _admi
 
 @router.post("/content-ops/packages/{package_id}/status")
 def package_status(package_id: str, body: ContentPublishStatusBody, _admin=Depends(require_permission("content_ops:write")), db: Session = Depends(get_db)):
-    try: return ApiResponse.ok(transition_package(db, package_id, body.status, body.reviewNote))
+    try: return ApiResponse.ok(transition_package(db, package_id, body.status, body.reviewNote, body.checklist, _admin))
     except ValueError as exc: return ApiResponse.fail(str(exc), code=400)
 
 

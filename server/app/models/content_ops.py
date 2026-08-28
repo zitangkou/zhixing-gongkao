@@ -1,6 +1,6 @@
-"""账号内容运营模板与发布包。"""
+"""账号内容运营模板、发布包与双审核记录。"""
 from datetime import datetime
-from app.models.base import Base, DateTime, ForeignKey, Integer, Mapped, String, Text, gen_id, mapped_column, utcnow
+from app.models.base import Base, DateTime, ForeignKey, Integer, Mapped, String, Text, gen_id, mapped_column, relationship, utcnow
 
 
 class ContentOperationTemplate(Base):
@@ -36,3 +36,27 @@ class ContentPublishPackage(Base):
     published_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
+
+    review_records: Mapped[list["ContentReviewRecord"]] = relationship(
+        back_populates="package",
+        cascade="all, delete-orphan",
+        order_by="ContentReviewRecord.created_at",
+    )
+
+
+class ContentReviewRecord(Base):
+    """教研/运营审核的不可覆盖留痕。"""
+
+    __tablename__ = "content_review_records"
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=lambda: gen_id("crr"))
+    package_id: Mapped[str] = mapped_column(ForeignKey("content_publish_packages.id"), index=True)
+    stage: Mapped[str] = mapped_column(String(24), index=True)  # teaching | operations
+    decision: Mapped[str] = mapped_column(String(16), index=True)  # approved | rejected
+    checklist_json: Mapped[str] = mapped_column(Text, default="{}")
+    note: Mapped[str] = mapped_column(Text, default="")
+    reviewer_id: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    reviewer_username: Mapped[str] = mapped_column(String(64), default="")
+    reviewer_name: Mapped[str] = mapped_column(String(64), default="")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+    package: Mapped[ContentPublishPackage] = relationship(back_populates="review_records")

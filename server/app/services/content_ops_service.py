@@ -2,13 +2,15 @@
 import json
 import re
 from datetime import timedelta
+from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from sqlalchemy.orm import Session
-from app.models import Article, ContentOperationTemplate, ContentPublishPackage, RmrbArticle, gen_id
+from app.models import Article, ContentOperationTemplate, ContentPublishPackage, ContentReviewRecord, RmrbArticle, gen_id
 from app.schemas import ContentPackageGenerateFromArticle, ContentPublishPackageCreate, ContentPublishPackageUpdate
 from app.timezone import now
 
 CHANNELS = ["xiaohongshu", "douyin", "bilibili", "wechat"]
+REFERENCE_LIBRARY_PATH = Path(__file__).resolve().parents[2] / "data" / "content_ops" / "people_daily_library.json"
 DEFAULT_TEMPLATES = [
     ("shenlun_three_cut", "shenlun", "三刀拆解", ["标题", "原文", "骨架", "规范表达", "迁移练习"]),
     ("shenlun_expression", "shenlun", "规范表达", ["普通说法", "规范表达", "适用场景", "例句"]),
@@ -30,6 +32,37 @@ TRANSITIONS = {
     "rejected": {"draft"},
     "published": set(),
 }
+
+REVIEW_CHECKLISTS = {
+    "teaching": [
+        {"key": "facts_accurate", "label": "事实、原文、答案、解析和方法准确"},
+        {"key": "qualifiers_complete", "label": "主体、范围、程度和条件无遗漏"},
+        {"key": "exercise_assessable", "label": "练习具有明确评价标准"},
+    ],
+    "operations": [
+        {"key": "opening_clear", "label": "开头清楚且无夸张承诺"},
+        {"key": "platform_fit", "label": "信息密度和节奏适合目标平台"},
+        {"key": "visuals_ready", "label": "封面、卡片或镜头素材需求齐全"},
+        {"key": "cta_verified", "label": "每个渠道只有一个 CTA 且深链可核验"},
+        {"key": "compliance_checked", "label": "敏感、侵权和夸张表达已检查"},
+    ],
+}
+
+
+def content_review_config() -> dict:
+    return {
+        "stages": [
+            {"key": "teaching", "label": "教研审核", "checklist": REVIEW_CHECKLISTS["teaching"]},
+            {"key": "operations", "label": "运营审核", "checklist": REVIEW_CHECKLISTS["operations"]},
+        ]
+    }
+
+
+def content_reference_library() -> dict:
+    try:
+        return json.loads(REFERENCE_LIBRARY_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(f"人民日报运营参考库不可用: {exc}") from exc
 
 
 def _loads(raw: str, fallback):
@@ -58,12 +91,27 @@ def template_out(row: ContentOperationTemplate) -> dict:
             "channels": _loads(row.channels_json, []), "sortOrder": row.sort_order, "status": row.status}
 
 
+def review_record_out(row: ContentReviewRecord) -> dict:
+    return {
+        "id": row.id,
+        "stage": row.stage,
+        "decision": row.decision,
+        "checklist": _loads(row.checklist_json, {}),
+        "note": row.note,
+        "reviewerId": row.reviewer_id,
+        "reviewerUsername": row.reviewer_username,
+        "reviewerName": row.reviewer_name,
+        "createdAt": row.created_at,
+    }
+
+
 def package_out(row: ContentPublishPackage) -> dict:
     return {"id": row.id, "productKey": row.product_key, "templateId": row.template_id,
             "sourceType": row.source_type, "sourceId": row.source_id, "sourceTitle": row.source_title,
             "campaignKey": row.campaign_key, "deepLink": row.deep_link,
             "slotValues": _loads(row.slot_values_json, {}),
-            "variants": _loads(row.variants_json, {}), "reviewNote": row.review_note, "status": row.status,
+            "variants": _loads(row.variants_json, {}), "reviewNote": row.review_note,
+            "reviewHistory": [review_record_out(item) for item in row.review_records], "status": row.status,
             "plannedAt": row.planned_at, "publishedAt": row.published_at,
             "createdAt": row.created_at, "updatedAt": row.updated_at}
 
@@ -232,7 +280,25 @@ def generate_package_from_article(db: Session, body: ContentPackageGenerateFromA
     ))
 
 
-def transition_package(db: Session, package_id: str, target: str, note: str = "") -> dict:
+def _validate_review_checklist(stage: str, checklist: dict[str, bool]) -> None:
+    required = {item["key"] for item in REVIEW_CHECKLISTS[stage]}
+    missing = sorted(key for key in required if checklist.get(key) is not True)
+    if missing:
+        labels = {item["key"]: item["label"] for item in REVIEW_CHECKLISTS[stage]}
+        raise ValueError(f"请完成{('教研' if stage == 'teaching' else '运营')}审核清单: {', '.join(labels[key] for key in missing)}")
+
+
+def _record_review(db: Session, row: ContentPublishPackage, stage: str, decision: str, checklist: dict[str, bool], note: str, reviewer) -> None:
+    db.add(ContentReviewRecord(
+        id=gen_id("crr"), package_id=row.id, stage=stage, decision=decision,
+        checklist_json=json.dumps(checklist, ensure_ascii=False), note=note,
+        reviewer_id=getattr(reviewer, "id", None),
+        reviewer_username=getattr(reviewer, "username", ""),
+        reviewer_name=getattr(reviewer, "nickname", "") or getattr(reviewer, "username", ""),
+    ))
+
+
+def transition_package(db: Session, package_id: str, target: str, note: str = "", checklist: dict[str, bool] | None = None, reviewer=None) -> dict:
     row = db.get(ContentPublishPackage, package_id)
     if not row:
         raise ValueError("发布包不存在")
@@ -244,7 +310,24 @@ def transition_package(db: Session, package_id: str, target: str, note: str = ""
         missing = [slot for slot in _loads(template.slots_json, []) if not str(values.get(slot, "")).strip()]
         if missing:
             raise ValueError(f"请先补齐模板槽位: {', '.join(missing)}")
-    row.status = target; row.review_note = note.strip()
+    checklist = checklist or {}
+    clean_note = note.strip()
+    if row.status == "teaching_review" and target == "ops_review":
+        if not clean_note:
+            raise ValueError("教研审核意见不能为空")
+        _validate_review_checklist("teaching", checklist)
+        _record_review(db, row, "teaching", "approved", checklist, clean_note, reviewer)
+    elif row.status == "ops_review" and target == "ready":
+        if not clean_note:
+            raise ValueError("运营审核意见不能为空")
+        _validate_review_checklist("operations", checklist)
+        _record_review(db, row, "operations", "approved", checklist, clean_note, reviewer)
+    elif target == "rejected":
+        if not clean_note:
+            raise ValueError("驳回原因不能为空")
+        stage = "teaching" if row.status == "teaching_review" else "operations"
+        _record_review(db, row, stage, "rejected", checklist, clean_note, reviewer)
+    row.status = target; row.review_note = clean_note
     if target == "published": row.published_at = now()
     db.commit(); db.refresh(row)
     return package_out(row)

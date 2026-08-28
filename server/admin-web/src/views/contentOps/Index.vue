@@ -33,6 +33,25 @@
         </div>
         <ListState :loading="loading" :error="loadError" :has-data="packages.length > 0" empty-text="暂无发布包" @retry="loadPackages">
           <el-table :data="packages" row-key="id">
+            <el-table-column type="expand" width="44">
+              <template #default="{ row }">
+                <div class="review-history">
+                  <div class="review-history-title">双审核记录</div>
+                  <el-empty v-if="!row.reviewHistory?.length" description="尚无审核决定" :image-size="48" />
+                  <el-timeline v-else>
+                    <el-timeline-item v-for="record in row.reviewHistory" :key="record.id" :timestamp="formatTime(record.createdAt)" placement="top">
+                      <div class="review-record-head">
+                        <el-tag :type="record.decision === 'approved' ? 'success' : 'danger'" size="small">
+                          {{ reviewStageLabel(record.stage) }}{{ record.decision === 'approved' ? '通过' : '驳回' }}
+                        </el-tag>
+                        <span>{{ record.reviewerName || record.reviewerUsername || '未知审核人' }}</span>
+                      </div>
+                      <div class="review-record-note">{{ record.note }}</div>
+                    </el-timeline-item>
+                  </el-timeline>
+                </div>
+              </template>
+            </el-table-column>
             <el-table-column label="母资产" min-width="220">
               <template #default="{ row }">
                 <div class="strong">{{ row.sourceTitle || row.sourceId }}</div>
@@ -82,6 +101,43 @@
             <p>{{ item.description }}</p>
             <div class="slot-row"><span v-for="slot in item.slots" :key="slot">{{ slot }}</span></div>
             <div class="channel-row">{{ item.channels.map(channelLabel).join(' / ') }}</div>
+          </el-card>
+        </div>
+      </el-tab-pane>
+
+      <el-tab-pane label="人民日报参考库" name="references">
+        <el-alert
+          v-if="referenceLibrary"
+          :title="`资料版本 ${referenceLibrary.updatedAt}：公众号来自知识库原生模板与成稿；小红书按仓库运营规范整理。`"
+          type="info"
+          :closable="false"
+          class="reference-alert"
+        />
+        <div class="reference-sources" v-if="referenceLibrary">
+          <el-tag v-for="source in referenceLibrary.sources" :key="source.path" effect="plain">
+            {{ source.label }} · {{ source.path }}
+          </el-tag>
+        </div>
+        <div class="template-grid">
+          <el-card v-for="platform in referenceLibrary?.platforms || []" :key="platform.key" shadow="never" class="reference-card">
+            <div class="template-head">
+              <div>
+                <div class="template-name">{{ platform.name }}</div>
+                <div class="muted">{{ platform.format }}</div>
+              </div>
+              <el-tag :type="platform.sourceStatus === 'knowledge_base_verified' ? 'success' : 'warning'" size="small">
+                {{ platform.sourceStatusLabel }}
+              </el-tag>
+            </div>
+            <h4>固定结构</h4>
+            <ol><li v-for="item in platform.structure" :key="item">{{ item }}</li></ol>
+            <h4>交付物</h4>
+            <ul><li v-for="item in platform.deliverables" :key="item">{{ item }}</li></ul>
+            <div class="reference-example">
+              <div class="strong">示例：{{ platform.example.title }}</div>
+              <p>{{ platform.example.hook }}</p>
+              <div v-for="item in platform.example.sections" :key="item" class="example-line">{{ item }}</div>
+            </div>
           </el-card>
         </div>
       </el-tab-pane>
@@ -195,6 +251,26 @@
         <el-button type="primary" :loading="saving" @click="savePackage">保存草稿</el-button>
       </template>
     </el-dialog>
+
+    <el-dialog v-model="reviewVisible" :title="`${currentReviewConfig?.label || ''}确认`" width="620px" destroy-on-close>
+      <el-alert
+        :title="reviewStage === 'teaching' ? '教研通过后结构化事实字段将锁定；如需修改必须驳回草稿。' : '运营审核只调整渠道表达，不得改变教研已确认的事实。'"
+        type="warning"
+        :closable="false"
+        class="review-tip"
+      />
+      <div class="review-target">{{ reviewRow?.sourceTitle }}</div>
+      <el-checkbox-group v-model="reviewChecked" class="review-checklist">
+        <el-checkbox v-for="item in currentReviewConfig?.checklist || []" :key="item.key" :value="item.key">
+          {{ item.label }}
+        </el-checkbox>
+      </el-checkbox-group>
+      <el-input v-model="reviewNote" type="textarea" :rows="4" placeholder="填写具名审核意见（必填）" />
+      <template #footer>
+        <el-button @click="reviewVisible = false">取消</el-button>
+        <el-button type="primary" :loading="reviewSubmitting" @click="submitReview">确认通过</el-button>
+      </template>
+    </el-dialog>
   </PageShell>
 </template>
 
@@ -208,8 +284,8 @@ import { useAuthStore } from '@/stores/auth'
 import { fetchArticles } from '@/api/articles'
 import type { Article } from '@/types'
 import {
-  createContentPackage, exportContentPackage, fetchContentOpsOverview, fetchContentPackages, fetchContentTemplates, generateContentPackageFromArticle, updateContentPackage,
-  updateContentPackageStatus, type ContentOpsOverview, type ContentOpsStatus, type ContentOpsTemplate, type ContentPackage,
+  createContentPackage, exportContentPackage, fetchContentOpsOverview, fetchContentPackages, fetchContentReferenceLibrary, fetchContentReviewConfig, fetchContentTemplates, generateContentPackageFromArticle, updateContentPackage,
+  updateContentPackageStatus, type ContentOpsOverview, type ContentOpsStatus, type ContentOpsTemplate, type ContentPackage, type ContentReferenceLibrary, type ReviewStage, type ReviewStageConfig,
 } from '@/api/contentOps'
 
 const auth = useAuthStore()
@@ -219,17 +295,25 @@ const activeTab = ref('packages')
 const templates = ref<ContentOpsTemplate[]>([])
 const packages = ref<ContentPackage[]>([])
 const overview = ref<ContentOpsOverview | null>(null)
+const referenceLibrary = ref<ContentReferenceLibrary | null>(null)
 const filters = reactive({ productKey: '', status: '' })
 const dialogVisible = ref(false)
 const generateVisible = ref(false)
+const reviewVisible = ref(false)
 const saving = ref(false)
 const generating = ref(false)
+const reviewSubmitting = ref(false)
 const calendarMonth = ref(new Date())
 const editingId = ref('')
 const selectedChannels = ref<string[]>([])
 const variantForms = reactive<Record<string, { title: string; body: string }>>({})
 const slotForms = reactive<Record<string, string>>({})
 const publishedArticles = ref<Article[]>([])
+const reviewStages = ref<ReviewStageConfig[]>([])
+const reviewRow = ref<ContentPackage | null>(null)
+const reviewStage = ref<ReviewStage>('teaching')
+const reviewChecked = ref<string[]>([])
+const reviewNote = ref('')
 const form = reactive({ productKey: 'shenlun', templateId: '', sourceType: 'daily_task', sourceId: '', sourceTitle: '', campaignKey: '', deepLink: '', plannedAt: '' })
 const generateForm = reactive({ productKey: 'shenlun', templateId: '', articleId: '', campaignKey: '', deepLink: '', plannedAt: '' })
 const statusOptions = [
@@ -239,11 +323,13 @@ const statusOptions = [
 const availableTemplates = computed(() => templates.value.filter((item) => item.productKey === form.productKey || item.productKey === 'general'))
 const currentTemplate = computed(() => templates.value.find((item) => item.id === form.templateId))
 const generateTemplates = computed(() => templates.value.filter((item) => item.productKey === generateForm.productKey || item.productKey === 'general'))
+const currentReviewConfig = computed(() => reviewStages.value.find((item) => item.key === reviewStage.value))
 
 const productLabel = (key: string) => ({ shenlun: '申论', theory: '政治理论', general: '通用' }[key] || key)
 const channelLabel = (key: string) => ({ xiaohongshu: '小红书', douyin: '抖音', bilibili: 'B站', wechat: '公众号' }[key] || key)
 const statusLabel = (key: string) => statusOptions.find((item) => item.value === key)?.label || key
 const statusType = (status: string) => status === 'published' ? 'success' : status === 'rejected' ? 'danger' : status === 'ready' ? 'warning' : 'info'
+const reviewStageLabel = (stage: ReviewStage) => reviewStages.value.find((item) => item.key === stage)?.label || stage
 const templateName = (id: string) => templates.value.find((item) => item.id === id)?.name || id
 const formatTime = (value?: string) => value ? new Date(value).toLocaleString('zh-CN', { hour12: false }) : '未排期'
 const nextStatusMap: Record<ContentOpsStatus, ContentOpsStatus | null> = { draft: 'teaching_review', teaching_review: 'ops_review', ops_review: 'ready', ready: 'published', rejected: 'draft', published: null }
@@ -264,9 +350,11 @@ const packagesForDay = (day: string) => scheduledPackages.value.filter((item) =>
 const plannedTime = (value?: string) => value ? new Date(value).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit', hour12: false }) : ''
 
 async function loadTemplates() { templates.value = await fetchContentTemplates() }
+async function loadReviewConfig() { reviewStages.value = (await fetchContentReviewConfig()).stages }
+async function loadReferenceLibrary() { referenceLibrary.value = await fetchContentReferenceLibrary() }
 async function loadPackages() { await runLoad(async () => { packages.value = await fetchContentPackages({ productKey: filters.productKey || undefined, status: filters.status || undefined }) }) }
 async function loadOverview() { overview.value = await fetchContentOpsOverview() }
-async function loadAll() { await Promise.all([loadTemplates(), loadPackages(), loadOverview()]) }
+async function loadAll() { await Promise.all([loadTemplates(), loadReviewConfig(), loadReferenceLibrary(), loadPackages(), loadOverview()]) }
 async function refreshOperations() { await Promise.all([loadPackages(), loadOverview()]) }
 
 function initVariant(channel: string, value?: { title?: string; body?: string }) {
@@ -333,10 +421,33 @@ async function generateFromArticle() {
 }
 async function advance(row: ContentPackage) {
   const target = nextStatus(row.status); if (!target) return
+  if (target === 'ops_review' || target === 'ready') {
+    reviewRow.value = row
+    reviewStage.value = target === 'ops_review' ? 'teaching' : 'operations'
+    reviewChecked.value = []
+    reviewNote.value = ''
+    reviewVisible.value = true
+    return
+  }
   try {
     if (target === 'published') await ElMessageBox.confirm('确认已人工发布到对应平台？', '确认发布', { type: 'warning' })
     await updateContentPackageStatus(row.id, target); await refreshOperations(); ElMessage.success(nextAction(row.status))
   } catch (error) { if (error !== 'cancel' && error !== 'close') ElMessage.error(error instanceof Error ? error.message : '操作失败') }
+}
+async function submitReview() {
+  if (!reviewRow.value || !currentReviewConfig.value) return
+  const required = currentReviewConfig.value.checklist.map((item) => item.key)
+  if (required.some((key) => !reviewChecked.value.includes(key))) { ElMessage.warning('请逐项完成审核清单'); return }
+  if (!reviewNote.value.trim()) { ElMessage.warning('请填写审核意见'); return }
+  const target: ContentOpsStatus = reviewStage.value === 'teaching' ? 'ops_review' : 'ready'
+  const checklist = Object.fromEntries(required.map((key) => [key, true]))
+  reviewSubmitting.value = true
+  try {
+    await updateContentPackageStatus(reviewRow.value.id, target, reviewNote.value.trim(), checklist)
+    reviewVisible.value = false
+    await refreshOperations()
+    ElMessage.success(`${currentReviewConfig.value.label}已通过并留痕`)
+  } catch (error) { ElMessage.error(error instanceof Error ? error.message : '审核失败') } finally { reviewSubmitting.value = false }
 }
 async function reject(row: ContentPackage) {
   try {
@@ -369,6 +480,20 @@ onMounted(loadAll)
 .metric-note { margin-top: 5px; color: #909399; font-size: 12px; }
 .inventory-alerts { display: grid; gap: 8px; margin-bottom: 12px; }
 .generate-tip { margin-bottom: 18px; }
+.review-tip { margin-bottom: 16px; }
+.review-target { margin-bottom: 12px; color: #303133; font-weight: 650; }
+.review-checklist { display: grid; gap: 10px; margin-bottom: 18px; }
+.review-history { padding: 8px 28px 4px 54px; }
+.review-history-title { margin-bottom: 14px; color: #303133; font-weight: 650; }
+.review-record-head { display: flex; align-items: center; gap: 8px; color: #606266; font-size: 13px; }
+.review-record-note { margin-top: 7px; color: #606266; line-height: 1.6; }
+.reference-alert { margin-bottom: 12px; }
+.reference-sources { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.reference-card h4 { margin: 16px 0 8px; color: #303133; }
+.reference-card ol, .reference-card ul { margin: 0; padding-left: 22px; color: #606266; font-size: 13px; line-height: 1.8; }
+.reference-example { margin-top: 16px; padding: 12px; border-radius: 8px; background: #f7f8fa; }
+.reference-example p { min-height: 0; margin: 8px 0; }
+.example-line { color: #606266; font-size: 12px; line-height: 1.7; }
 .option-meta { float: right; margin-left: 16px; color: #909399; font-size: 12px; }
 .strong { font-weight: 600; line-height: 1.5; }
 .muted { color: #909399; font-size: 12px; margin-top: 3px; }

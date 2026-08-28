@@ -294,6 +294,14 @@ def test_admin_rbac():
 
         templates = _ok(client.get("/admin/content-ops/templates", headers=admin_headers))
         assert len(templates) == 10
+        review_config = _ok(client.get("/admin/content-ops/review-config", headers=admin_headers))
+        assert [stage["key"] for stage in review_config["stages"]] == ["teaching", "operations"]
+        assert len(review_config["stages"][0]["checklist"]) == 3
+        assert len(review_config["stages"][1]["checklist"]) == 5
+        reference_library = _ok(client.get("/admin/content-ops/reference-library", headers=admin_headers))
+        assert [platform["key"] for platform in reference_library["platforms"]] == ["wechat", "xiaohongshu"]
+        assert reference_library["platforms"][0]["sourceStatus"] == "knowledge_base_verified"
+        assert reference_library["platforms"][1]["sourceStatus"] == "derived_from_repository_plan"
         theory_template = next(item for item in templates if item["code"] == "theory_current")
         published_article = next(item for item in articles["items"] if item["status"] == "published")
         generated_package = _ok(
@@ -439,14 +447,39 @@ def test_admin_rbac():
             headers=admin_headers,
         )
         assert locked_export.json()["code"] == 400
+        incomplete_teaching_review = client.post(
+            f"/admin/content-ops/packages/{package['id']}/status",
+            headers=admin_headers,
+            json={"status": "ops_review", "reviewNote": "遗漏审核清单"},
+        )
+        assert incomplete_teaching_review.json()["code"] == 400
+        review_checklists = {
+            "ops_review": {
+                "facts_accurate": True,
+                "qualifiers_complete": True,
+                "exercise_assessable": True,
+            },
+            "ready": {
+                "opening_clear": True,
+                "platform_fit": True,
+                "visuals_ready": True,
+                "cta_verified": True,
+                "compliance_checked": True,
+            },
+        }
         for status in ("ops_review", "ready", "published"):
             package = _ok(
                 client.post(
                     f"/admin/content-ops/packages/{package['id']}/status",
                     headers=admin_headers,
-                    json={"status": status, "reviewNote": f"{status} ok"},
+                    json={"status": status, "reviewNote": f"{status} ok", "checklist": review_checklists.get(status, {})},
                 )
             )
+            if status == "ops_review":
+                assert package["reviewHistory"][-1]["stage"] == "teaching"
+                assert package["reviewHistory"][-1]["reviewerUsername"] == "admin"
+            if status == "ready":
+                assert [item["stage"] for item in package["reviewHistory"]] == ["teaching", "operations"]
             if status == "ready":
                 publish_bundle = _ok(
                     client.get(
