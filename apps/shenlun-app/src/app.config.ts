@@ -2,7 +2,7 @@ export default defineAppConfig({
   pages: ['pages/today/index', 'pages/reading/index', 'pages/reading/detail', 'pages/reading/mines', 'pages/reading/terms', 'pages/training/index', 'pages/training/analyze', 'pages/training/answer', 'pages/corpus/edit', 'pages/profile/index', 'pages/auth/login', 'pages/auth/register'],
   window: {
     navigationBarBackgroundColor: '#D0021B',
-    navigationBarTitleText: '知行申论',
+    navigationBarTitleText: '知行策论',
     navigationBarTextStyle: 'white',
     backgroundColor: '#F4F5F7',
   },

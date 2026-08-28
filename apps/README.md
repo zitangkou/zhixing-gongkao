@@ -33,8 +33,8 @@ cd apps/theory-app && npm run dev:h5
 垂直 H5 构建时必须设置对应 `TARO_APP_PUBLIC_PATH`；独立域名部署时可保持 `/`。`TARO_APP_API_URL` 留空表示请求当前域名的 `/api`，跨域部署时填写完整 HTTPS API 域名。
 
 ```bash
-TARO_APP_API_URL=https://api.example.com TARO_APP_PUBLIC_PATH=/ npm run build:h5
-TARO_APP_API_URL=https://api.example.com npm run build:weapp
+TARO_APP_API_URL=https://zhixinggk.ltd TARO_APP_PUBLIC_PATH=/ npm run build:h5
+TARO_APP_API_URL=https://zhixinggk.ltd npm run build:weapp
 ```
 
 小程序正式包不能使用仓库中的 `touristappid`。发布人员需在两个项目各自的 `project.config.json` 中填写独立 AppID，并在微信公众平台配置 HTTPS request 合法域名；该 AppID 配置属于发布环境信息，不共用、不互相切换。

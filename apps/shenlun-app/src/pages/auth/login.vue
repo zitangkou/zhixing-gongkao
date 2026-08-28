@@ -1,6 +1,6 @@
 <template>
   <view class="auth-page">
-    <view class="auth-mark">知行申论</view><view class="auth-title">读得深，写得出</view><view class="auth-desc">登录后同步今日精读、三刀拆解和训练沉淀</view>
+    <view class="auth-mark">知行策论</view><view class="auth-title">读得深，写得出</view><view class="auth-desc">登录后同步今日精读、三刀拆解和训练沉淀</view>
     <view class="auth-card">
       <view class="auth-field"><view class="auth-label">账号</view><input v-model="username" class="auth-input" placeholder-class="auth-placeholder" placeholder="请输入用户名" confirm-type="next" /></view>
       <view class="auth-field"><view class="auth-label">密码</view><input v-model="password" class="auth-input" placeholder-class="auth-placeholder" password placeholder="请输入密码" confirm-type="done" @confirm="submit" /></view>

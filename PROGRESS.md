@@ -1,7 +1,7 @@
 # 知行公考 · 项目进度
 
-> 更新：2026-08-23
-> 定位：纯公考备考应用（时政阅读、资料分析、申论、真题套卷、错题闭环），Taro 4 + Vue 3 + FastAPI + SQLite
+> 更新：2026-08-28
+> 定位：纯公考备考应用矩阵（综合母应用 + 申论/政治理论垂直应用 + 内容运营 + 真题库），Taro 4 + Vue 3 + FastAPI + SQLite
 
 ## 1. 阶段进度
 
@@ -17,7 +17,7 @@
 | P1 | 残留清理：空壳注释 / 爬虫删除 / Obsidian 配置化 / 计划模板公考化 | ✅ |
 | P2 | 按域拆分：路由 / schema / model / api / mock + 后台分包 + 迁移收拢 | ✅ |
 | 部署 | 一键部署 `deploy.sh` + 宿主机 Nginx 网关 + 整包备份 | ✅ 2026-08-16 |
-| 真题资产 | 2025 国考行测省级/市地/行政执法三卷题面与媒体已入库；答案、解析、细题型和应用适配待补 | 🟡 2026-08-22 |
+| 真题资产 | 2025 国考三卷题面与媒体已入库（答案/解析/细题型待补）；2024 省级 135 题已入库、市地/执法卷已组装（差异精确替换待完善），见 `xingce-structured-data/DATA_STATUS.md` | 🟡 2026-08-23 |
 | 双产品 Sprint 0 | 申论/政治理论 PRD、共享底座设计、`product_key` 后端上下文、公开配置、前端请求/上传注入和产品 Store | 🟡 2026-08-23 第一批完成 |
 | 双产品 Sprint 0 | 通用今日任务、五态学习状态机、服务端草稿与跨端断点恢复、产品隔离、前端任务 Store | ✅ 2026-08-23 第二批完成 |
 | 申论 Sprint 1 | 垂直今日首页、审核文章自动编排、单主任务入口、阅读/三刀进度回写、Mock 演示数据 | ✅ 2026-08-23 第一批完成 |
@@ -30,6 +30,12 @@
 | 内容运营 Sprint 1 | 发布包结构化栏目槽位、模板字段校验、缺项阻断送审、旧库自动补列 | ✅ 2026-08-23 第四批完成 |
 | 内容运营 Sprint 1 | 已发布文章一键生成结构化母稿与四平台草稿、渠道深链归因、缺项人工补齐与重复生成保护 | ✅ 2026-08-23 第五批完成 |
 | 内容运营 Sprint 1 | 未来7天内容库存、双科配比、审核积压、待发布与未排期提醒，状态变更实时刷新 | ✅ 2026-08-23 第六批完成 |
+| 垂类应用独立化 | 申论/政治理论拆为 `apps/` 独立 Taro 工程（端口 10088/10089），独立认证与账号、红色 Tab 导航、每日训练/学习闭环、反馈与训练历史 | ✅ 2026-08-23~24 |
+| 部署升级 | 单 Docker 镜像编译三套 H5（综合 `/` + 申论 `/shenlun/` + 理论 `/theory/`），共用一个 FastAPI；compose 绑定可配（默认 127.0.0.1）+ healthcheck | ✅ 2026-08-24 |
+| 内容运营·日常 | 每日多渠道运营启动（`content/daily/`）；发布包按 campaign 隔离去重修复 | ✅ 2026-08-24~25 |
+| 原应用流程回填 | 定义迁移基线（`docs/architecture/original-app-feature-inventory.md`）；申论三刀法/资产复盘/文章采集、理论读前定向与复习/结构化精读/证据测验已回填；错题闭环回填中 | 🟡 2026-08-24~26 |
+| 内容运营·双审核留痕 | `ContentReviewRecord` 审核留痕表 + 流转 checklist + review-config/reference-library API + 后台 UI（**未提交**） | 🟡 进行中 |
+| 理论错题复习 | theory-app `StudyRecord`/`ReviewTask` 复习模型 + 新页 `question/review.vue`（**未提交**） | 🟡 进行中 |
 
 ## 2. 当前质量基线（2026-08-23 实测）
 
@@ -64,6 +70,8 @@
 
 | 优先级 | 事项 |
 |---|---|
+| 高 | **小程序发布**（知行策论/知行日知）：✅ 双 AppID 已填、产品名定稿、域名 `zhixinggk.ltd`（备案终审中）、weapp 生产构建完成（各 1.0MB）；**剩余**：备案通过 → `certbot --nginx -d zhixinggk.ltd` 上 HTTPS → 微信后台配 request 合法域名 + 隐私保护指引 → 上传提审 |
+| 高 | 收尾未提交改动：content-ops 双审核留痕、theory 错题复习（测试 24 passed，待提交） |
 | 高 | 行为事件统计页（M4：上岸卡片 / 能力雷达 / 里程碑） |
 | 高 | 修正 FastAPI `/docs` 的旧品牌元信息，并清理/约束 lint warning |
 | 中 | 足迹 Admin 入口 |
@@ -74,23 +82,28 @@
 ## 5. 最近提交
 
 ```text
+6ea7b20 feat(theory): restore original wrong-question loop
+effc281 feat(theory): restore original evidence quiz flow
+906fbb0 fix(content-ops): scope duplicate packages by campaign
+17d824b feat(theory): migrate original structured reading
+e3f4c2e feat(theory): restore original orientation and review flow
+c2d374b feat(shenlun): migrate article capture workflow
+53898e0 feat(shenlun): migrate original asset review loop
+dab8bab feat(shenlun): restore original three-knife workflow
+d3ad94c docs(architecture): define original app migration baseline
+6534591 fix(auth): refine vertical app form layout
+bf7b56b feat(content): start daily multi-channel operations
+2e8d2c0 feat(deploy): publish vertical h5 apps
+4c60892 feat(shenlun): add feedback and training history
+2c535f2 feat(theory): complete daily learning loop
+b508b2a feat(shenlun): complete standalone daily training flow
+f0f60fd feat(shenlun): add standalone reading flow
+242ba43 feat: complete standalone account basics
+aa1fc79 feat: add standalone app authentication
+c78b359 feat: unify standalone apps with red tab navigation
+f01b602 feat: split shenlun and theory into standalone apps
+d4fa99a feat: add content inventory dashboard
 5220a11 feat: generate channel drafts from reviewed articles
-2d57b25 feat: enforce structured content template slots
-bc42b3b feat: add content schedule and publish export
-463b82b feat: add content operations admin workspace
-32a66c4 feat: add reviewed content operations pipeline
-695837e feat: complete theory evidence-learning loop
-38dc74d feat: launch theory daily learning home
-b94a7ef feat: complete shenlun first-training loop
-755b9ce feat: launch shenlun daily training home
-f305b86 feat: add resumable daily task workflow
-0f88d16 feat: bootstrap shenlun and theory product foundation
-c8df137 feat(deploy): 一键部署云服务器脚本 + 部署文档与项目进度维护
-9e0edb3 chore: 管理后台清理 + 文档/待优化清单同步
-0d89ffc refactor(src): 按域拆分 api/mock + 多品牌主题小程序端跟随 + 数据导出/导入前端
-222b040 refactor(server): 按域拆分 api/models/schemas + 清理爬虫/权限残留 + 数据导出/导入后端 + CI 与核心测试
-73e6183 chore: 删除 admin-web 误生成的垃圾文件
-7591219 feat: 多品牌色主题切换（5 套，默认中国红）
 ```
 
 ## 6. 相关文档
