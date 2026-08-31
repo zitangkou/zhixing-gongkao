@@ -50,7 +50,7 @@
 - 修改：两个 app 的 `app.config.ts` 注册路由；`auth/login.vue` 与 `auth/register.vue` 加同意勾选与未同意拦截（书名号 `.stop` 跳转，不误触勾选）；`profile/index.vue` 加「关于」分区协议入口；`app.scss` 补 `.auth-agree*` 样式，勾选框用 `hit-target` mixin 保证热区。
 - 验证：两个 weapp 均构建通过（5.6s）。解码产物确认路由已注册、登录与注册都有拦截、协议正文含各自应用名与两份文档、`政考/zhengkao` 全局零命中、token 键名已切到 `zhixing_token`。
 
-**⚠️ 提审前必须关闭的 3 处待填**（都在 `constants/legal.ts` 顶部）：`LEGAL_CONTACT.developer`（开发者署名）、`LEGAL_CONTACT.email` / `.wechat`（能收信的邮箱 + 公众号名）、`LEGAL_EFFECTIVE_DATE`（生效日期，建议与提交日一致）。填完后同步微信后台「用户隐私保护指引」，勾选映射表见 `outputs/协议与隐私政策-草稿.md` 第三节——**手机号、邮箱、麦克风、相册、位置一律不勾**。
+**⚠️ 提审前必须关闭的 3 处待填**（都在 `constants/legal.ts` 顶部）：`LEGAL_CONTACT.developer`（开发者署名）、`LEGAL_CONTACT.email` / `.wechat`（能收信的邮箱 + 公众号名）、`LEGAL_EFFECTIVE_DATE`（生效日期，建议与提交日一致）。填完后同步微信后台「用户隐私保护指引」，勾选映射表见 `docs/brand/legal-draft.md` 第三节——**手机号、邮箱、麦克风、相册、位置一律不勾**。
 
 ### A2 死入口与「规划中」文案 —— ✅ 已完成 2026-08-30
 
