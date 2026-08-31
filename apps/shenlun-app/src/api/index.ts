@@ -163,6 +163,9 @@ export const api = {
     })
   },
   getMe() { return request<UserMe>('/api/user/me') },
+  submitFeedback(content: string) {
+    return request<{ id: string; status: string; adopted: boolean }>('/api/feedback', { method: 'POST', data: { content } })
+  },
   getDailyTasks(date?: string) {
     const query = date ? `?date=${encodeURIComponent(date)}` : ''
     return request<DailyTaskList>(`/api/product/daily-tasks${query}`)

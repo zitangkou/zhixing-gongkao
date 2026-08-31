@@ -1,6 +1,6 @@
 import Taro from '@tarojs/taro'
 
-const TOKEN_KEY = 'zhengkao_token'
+const TOKEN_KEY = 'zhixing_token'
 
 export function getToken(): string {
   return Taro.getStorageSync(TOKEN_KEY) || ''

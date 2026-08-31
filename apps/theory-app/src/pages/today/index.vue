@@ -7,11 +7,11 @@
       <view class="hero-desc">{{ store.task.description }}</view><view class="progress-track"><view class="progress-fill" :style="{ width: `${store.progressPercent}%` }" /></view>
       <view class="hero-action" @tap="startTask">{{ actionText }}</view>
     </view>
-    <view v-else class="hero"><view class="hero-kicker">权威内容 · 真题化学习</view><view class="hero-title">从一个高频主题开始</view><view class="hero-desc">{{ store.message || '学习包需经过教研审核并带原文依据，先去专题建立知识框架。' }}</view><view class="hero-action" @tap="openTopics">进入专题</view></view>
+    <view v-else class="hero"><view class="hero-kicker">权威内容 · 仿真练习</view><view class="hero-title">从一个高频主题开始</view><view class="hero-desc">{{ store.message || '学习包需经过教研审核并带原文依据，先去专题建立知识框架。' }}</view><view class="hero-action" @tap="openTopics">进入专题</view></view>
     <view class="section-head"><view class="section-title">今日路径</view><view class="section-meta">{{ progressLabel }}</view></view>
     <view v-for="(stepItem, index) in steps" :key="stepItem.key" class="card row"><view class="step">{{ index + 1 }}</view><view><view class="card-title">{{ stepItem.title }}</view><view class="card-desc">{{ stepItem.description }}</view></view><view v-if="index < currentStep" class="tag">已完成</view><view v-else-if="index === currentStep && store.task" class="tag">当前</view></view>
     <view class="section-head"><view class="section-title">内容门槛</view><view class="section-meta">可信 · 可考 · 可溯源</view></view>
-    <view class="card"><view class="card-title">每道题都能回到原文依据</view><view class="card-desc">学习包只使用已审核文章和证据完整的真题化题目，不用碎片化记忆替代理解。</view></view>
+    <view class="card"><view class="card-title">每道题都能回到原文依据</view><view class="card-desc">学习包只使用已审核文章和证据完整的仿真练习，不用碎片化记忆替代理解。</view></view>
   </view>
 </template>
 
