@@ -36,3 +36,24 @@ def admin_me(admin: AdminUser = Depends(get_current_admin)):
             permissions=perms,
         ).model_dump()
     )
+
+
+@router.put("/auth/password")
+def admin_change_password(
+    body: AdminPasswordChange,
+    admin: AdminUser = Depends(get_current_admin),
+    db: Session = Depends(get_db),
+):
+    """管理员自助改密。
+
+    播种逻辑只在 `admin_users` 为空时创建管理员（app/seed.py），因此已部署环境
+    改 `.env` 的 ADMIN_PASSWORD 不会生效，必须走本接口。
+    注意：令牌以用户名为载荷且无吊销机制，改密后旧令牌在有效期内仍可用，建议改完重新登录。
+    """
+    if not verify_password(body.oldPassword, admin.password_hash):
+        return ApiResponse.fail("原密码不正确", code=401)
+    if body.oldPassword == body.newPassword:
+        return ApiResponse.fail("新密码不能与原密码相同", code=400)
+    admin.password_hash = hash_password(body.newPassword)
+    db.commit()
+    return ApiResponse.ok(None)

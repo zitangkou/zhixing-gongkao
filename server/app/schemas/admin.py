@@ -5,10 +5,22 @@
 from datetime import datetime
 from typing import Any
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 class AdminLogin(BaseModel):
     username: str
     password: str
+
+
+class AdminPasswordChange(BaseModel):
+    oldPassword: str
+    newPassword: str = Field(min_length=8, max_length=64)
+
+    @field_validator("newPassword")
+    @classmethod
+    def _strong_enough(cls, v: str) -> str:
+        if not (any(c.isalpha() for c in v) and any(c.isdigit() for c in v)):
+            raise ValueError("新密码需同时包含字母和数字")
+        return v
 
 
 class AdminToken(BaseModel):

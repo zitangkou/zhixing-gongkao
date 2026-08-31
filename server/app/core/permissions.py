@@ -27,6 +27,8 @@ PERMISSIONS = {
     "events:write": "管理时事事件",
     "content_ops:read": "查看账号运营内容",
     "content_ops:write": "管理账号运营内容",
+    "feedback:read": "查看学员反馈",
+    "feedback:write": "处理学员反馈",
 }
 
 ROLE_PERMISSIONS: dict[str, list[str]] = {
@@ -53,6 +55,8 @@ ROLE_PERMISSIONS: dict[str, list[str]] = {
         "events:write",
         "content_ops:read",
         "content_ops:write",
+        "feedback:read",
+        "feedback:write",
     ],
     "viewer": [
         "article:read",
@@ -67,6 +71,7 @@ ROLE_PERMISSIONS: dict[str, list[str]] = {
         "corpus:read",
         "events:read",
         "content_ops:read",
+        "feedback:read",
     ],
 }
 

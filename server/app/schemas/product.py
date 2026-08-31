@@ -52,3 +52,14 @@ class DailyTaskProgressBody(BaseModel):
     currentStep: int | None = Field(default=None, ge=0)
     totalSteps: int | None = Field(default=None, ge=1)
     draft: dict[str, Any] | None = None
+
+
+class TopicItem(BaseModel):
+    no: str = Field(default="", max_length=2)
+    title: str = Field(min_length=1, max_length=64)
+    desc: str = Field(default="", max_length=128)
+
+
+class TopicListOut(BaseModel):
+    productKey: str
+    items: list[TopicItem]

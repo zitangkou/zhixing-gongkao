@@ -8,9 +8,9 @@ from app.schemas.content import (
     QuestionCreate, QuestionOut, QuestionUpdate,
 )
 from app.schemas.quiz import AnswerResult, AnswerSubmit, PointsLogOut, QuizCompleteBody, QuizCompleteResult, QuizRankItemOut, QuizStatsOut, RankItemOut
-from app.schemas.user import AppAuthToken, AppLoginBody, AppRegisterBody, AppUserPasswordChange, AppUserProfileUpdate, UserMeOut
+from app.schemas.user import AppAuthToken, AppLoginBody, AppRegisterBody, AppUserPasswordChange, AppUserProfileUpdate, FeedbackHandleBody, FeedbackOut, UserMeOut
 from app.schemas.study import ReviewCompleteBody, SectionReadBody, StudyRecordOut, WrongRedoBody
-from app.schemas.admin import AdminLogin, AdminToken, AdminUserOut, AppUserOut, AppUserUpdate, RoleOut, SettingOut, SettingUpdate
+from app.schemas.admin import AdminLogin, AdminPasswordChange, AdminToken, AdminUserOut, AppUserOut, AppUserUpdate, RoleOut, SettingOut, SettingUpdate
 from app.schemas.plan import DailyReviewOut, DailyReviewUpsert, DayPlanOut, PlanTaskCreate, PlanTaskOut, PlanTaskUpdate, PlanTemplateCreate, PlanTemplateOut, PlanTemplateUpdate
 from app.schemas.knowledge import KnowledgeNodeCreate, KnowledgeNodeOut, KnowledgeNodeUpdate, KnowledgeReviewAnswerBody, KnowledgeReviewAnswerOut, KnowledgeReviewCardOut, KnowledgeReviewDueOut, KnowledgeReviewSessionBody, KnowledgeReviewSessionOut, KnowledgeTreeOut
 from app.schemas.review import ManualWrongCreate, ManualWrongOut, ManualWrongUpdate, ReviewHubOut
@@ -47,5 +47,5 @@ from app.schemas.ziliao import (
 )
 from app.schemas.countdown import ExamCountdownOut, ExamCountdownUpsert
 from app.schemas.data import DataImportIn
-from app.schemas.product import DailyTaskListOut, DailyTaskProgressBody, DailyTaskProgressOut, DailyLearningTaskOut
+from app.schemas.product import DailyTaskListOut, DailyTaskProgressBody, DailyTaskProgressOut, DailyLearningTaskOut, TopicItem, TopicListOut
 from app.schemas.content_ops import ContentPackageGenerateFromArticle, ContentPublishPackageCreate, ContentPublishPackageUpdate, ContentPublishStatusBody

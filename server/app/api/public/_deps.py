@@ -182,4 +182,4 @@ from app.services.wrong_service import (
 
 
 class FeedbackBody(BaseModel):
-    text: str = ""
+    content: str = ""

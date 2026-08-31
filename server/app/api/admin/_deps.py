@@ -8,12 +8,13 @@ from sqlalchemy.orm import Session
 from app.api.deps import get_current_admin, require_permission
 from app.core.permissions import PERMISSIONS, ROLE_PERMISSIONS
 from app.core.response import ApiResponse
-from app.core.security import create_access_token, verify_password
+from app.core.security import create_access_token, hash_password, verify_password
 from app.database import get_db
 from app.models import AdminUser, AppUser, Article, Category, Question, Role, SystemSetting, gen_id
 from app.models import CorpusItem, EventImpression
 from app.schemas import (
     AdminLogin,
+    AdminPasswordChange,
     AdminToken,
     AdminUserOut,
     AppUserOut,

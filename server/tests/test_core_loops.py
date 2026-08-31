@@ -874,6 +874,167 @@ def test_theory_home_only_provisions_evidence_backed_pack():
         assert len(general_questions) == 4
 
 
+def test_product_topics_served_and_switchable():
+    """专题下发：默认只给方法类专题，管理端改设置即可切换，无需发版。"""
+    with TestClient(app) as client:
+        user = _register(client)
+        theory_headers = {**user["headers"], "X-Product-Key": "theory"}
+        shenlun_headers = {**user["headers"], "X-Product-Key": "shenlun"}
+
+        theory = _ok(client.get("/api/product/topics", headers=theory_headers))
+        assert theory["productKey"] == "theory"
+        titles = [t["title"] for t in theory["items"]]
+        assert titles == ["理论文章怎么读", "易混表述辨析", "规范表述积累"]
+
+        # 提审期红线：默认专题不得出现政治专题名与「时政」字样
+        blob = json.dumps(theory, ensure_ascii=False)
+        for word in ("习近平", "马克思主义", "党和国家", "时政"):
+            assert word not in blob
+
+        # 按产品隔离：申论拿到自己的方法专题
+        shenlun = _ok(client.get("/api/product/topics", headers=shenlun_headers))
+        assert shenlun["items"][0]["title"] == "材料怎么拆"
+
+        # 管理端改设置 → 立即切换，不需要发版或重启
+        admin_login = _ok(
+            client.post(
+                "/admin/auth/login",
+                json={"username": "admin", "password": "admin123"},
+            )
+        )
+        admin_headers = {"Authorization": f"Bearer {admin_login['access_token']}"}
+        switched_value = json.dumps(
+            [{"no": "新", "title": "新时代中国特色社会主义思想", "desc": "体系化学习核心要义"}],
+            ensure_ascii=False,
+        )
+        _ok(
+            client.put(
+                "/admin/settings/topics.theory",
+                headers=admin_headers,
+                json={"value": switched_value},
+            )
+        )
+        switched = _ok(client.get("/api/product/topics", headers=theory_headers))
+        assert [t["title"] for t in switched["items"]] == ["新时代中国特色社会主义思想"]
+
+        # 配置写坏时回落默认，保证前端不出现空页
+        _ok(
+            client.put(
+                "/admin/settings/topics.theory",
+                headers=admin_headers,
+                json={"value": "not-json"},
+            )
+        )
+        fallback = _ok(client.get("/api/product/topics", headers=theory_headers))
+        assert [t["title"] for t in fallback["items"]] == titles
+
+
+def test_feedback_persisted_and_handled_by_admin():
+    """反馈：学员提交真实落库，管理端查看并显式采纳加分（不再随机判定）。"""
+    with TestClient(app) as client:
+        user = _register(client)
+        theory_headers = {**user["headers"], "X-Product-Key": "theory"}
+
+        submitted = _ok(
+            client.post("/api/feedback", headers=theory_headers, json={"content": "第 3 题答案应为 B"})
+        )
+        assert submitted["status"] == "new"
+        assert submitted["adopted"] is False  # 提交时不再随机送分
+
+        empty = client.post("/api/feedback", headers=theory_headers, json={"content": "   "})
+        assert empty.json().get("code") != 0
+
+        admin_login = _ok(
+            client.post(
+                "/admin/auth/login",
+                json={"username": "admin", "password": "admin123"},
+            )
+        )
+        admin_headers = {"Authorization": f"Bearer {admin_login['access_token']}"}
+
+        listing = _ok(
+            client.get("/admin/feedbacks", params={"productKey": "theory"}, headers=admin_headers)
+        )
+        assert listing["total"] >= 1
+        assert listing["items"][0]["content"] == "第 3 题答案应为 B"
+        assert listing["items"][0]["productKey"] == "theory"
+
+        before = _ok(client.get("/api/user/me", headers=user["headers"]))
+        handled = _ok(
+            client.post(
+                f"/admin/feedbacks/{submitted['id']}/handle",
+                headers=admin_headers,
+                json={"action": "adopted", "note": "已修正", "points": 10},
+            )
+        )
+        assert handled["status"] == "adopted"
+        after = _ok(client.get("/api/user/me", headers=user["headers"]))
+        assert after["points"] == before["points"] + 10
+
+        again = client.post(
+            f"/admin/feedbacks/{submitted['id']}/handle",
+            headers=admin_headers,
+            json={"action": "rejected"},
+        )
+        assert again.status_code == 400
+
+
+def test_admin_password_change():
+    """管理员自助改密：强度校验 + 旧密码验证 + 改后旧口令失效。
+
+    测试库为模块共享，结束前把口令改回默认值，避免影响其他用例。
+    """
+    new_password = "N3wStrongPwd"
+    with TestClient(app) as client:
+        login = _ok(
+            client.post("/admin/auth/login", json={"username": "admin", "password": "admin123"})
+        )
+        headers = {"Authorization": f"Bearer {login['access_token']}"}
+
+        wrong_old = client.put(
+            "/admin/auth/password",
+            headers=headers,
+            json={"oldPassword": "nope", "newPassword": new_password},
+        )
+        assert wrong_old.json().get("code") == 401
+
+        weak = client.put(
+            "/admin/auth/password",
+            headers=headers,
+            json={"oldPassword": "admin123", "newPassword": "abcdefgh"},
+        )
+        assert weak.status_code == 422  # 无数字，强度校验不通过
+
+        same = client.put(
+            "/admin/auth/password",
+            headers=headers,
+            json={"oldPassword": "admin123", "newPassword": "admin123"},
+        )
+        assert same.json().get("code") == 400
+
+        changed = client.put(
+            "/admin/auth/password",
+            headers=headers,
+            json={"oldPassword": "admin123", "newPassword": new_password},
+        )
+        assert changed.json().get("code") == 0
+
+        stale = client.post("/admin/auth/login", json={"username": "admin", "password": "admin123"})
+        assert stale.json().get("code") == 401
+
+        relogin = _ok(
+            client.post("/admin/auth/login", json={"username": "admin", "password": new_password})
+        )
+        assert relogin["role"] == "super_admin"
+
+        restore = client.put(
+            "/admin/auth/password",
+            headers={"Authorization": f"Bearer {relogin['access_token']}"},
+            json={"oldPassword": new_password, "newPassword": "admin123"},
+        )
+        assert restore.json().get("code") == 0
+
+
 def teardown_module(_mod=None):
     engine.dispose()
     for path in (_DB, Path(f"{_DB}-shm"), Path(f"{_DB}-wal")):

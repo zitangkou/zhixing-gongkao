@@ -44,3 +44,18 @@ class ActivityEvent(Base):
     payload_json: Mapped[str] = mapped_column(Text, default="{}")  # JSON
     event_date: Mapped[str] = mapped_column(String(10), index=True)  # YYYY-MM-DD
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class Feedback(Base):
+    """学员反馈 · 纠错与建议，供管理端查看与处理（反馈采纳后人工加分）"""
+
+    __tablename__ = "feedbacks"
+
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=lambda: gen_id("fb"))
+    user_id: Mapped[str] = mapped_column(ForeignKey("app_users.id"), index=True)
+    product_key: Mapped[str] = mapped_column(String(32), default="", index=True)
+    content: Mapped[str] = mapped_column(Text)
+    status: Mapped[str] = mapped_column(String(16), default="new", index=True)  # new|adopted|rejected
+    note: Mapped[str] = mapped_column(String(256), default="")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    handled_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)

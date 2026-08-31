@@ -1,4 +1,5 @@
 from app.api.public._deps import *  # noqa: F401,F403
+from app.models import Feedback
 from app.product import ProductContext
 
 router = APIRouter()
@@ -350,14 +351,21 @@ def rank_list(
 
 
 @router.post("/feedback")
-def feedback(body: FeedbackBody, user: AppUser = Depends(get_app_user), db: Session = Depends(get_db)):
-    import random
-
-    adopted = random.random() > 0.5
-    if adopted:
-        add_points_log(db, user, 10, "反馈", "纠错反馈被采纳")
-    db.refresh(user)
-    return ApiResponse.ok({"adopted": adopted})
+def feedback(
+    body: FeedbackBody,
+    user: AppUser = Depends(get_app_user),
+    product: ProductContext = Depends(get_product_context),
+    db: Session = Depends(get_db),
+):
+    """学员反馈：真实落库，采纳与加分由管理端人工处理（不再随机判定）。"""
+    content = (body.content or "").strip()
+    if not content:
+        return ApiResponse.fail("反馈内容不能为空", code=400)
+    row = Feedback(user_id=user.id, product_key=product.key, content=content[:500])
+    db.add(row)
+    db.commit()
+    db.refresh(row)
+    return ApiResponse.ok({"id": row.id, "status": row.status, "adopted": False})
 
 
 @router.get("/review")

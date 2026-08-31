@@ -48,3 +48,21 @@ class AppAuthToken(BaseModel):
     user: UserMeOut
 
 
+class FeedbackOut(BaseModel):
+    id: str
+    userId: str
+    username: str = ""
+    productKey: str = ""
+    content: str
+    status: str
+    note: str = ""
+    createdAt: datetime | None = None
+    handledAt: datetime | None = None
+
+
+class FeedbackHandleBody(BaseModel):
+    action: str = Field(pattern="^(adopted|rejected)$")
+    note: str = Field(default="", max_length=256)
+    points: int = Field(default=0, ge=0, le=100)
+
+
