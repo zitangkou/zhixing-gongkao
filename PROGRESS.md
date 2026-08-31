@@ -1,6 +1,6 @@
 # 知行公考 · 项目进度
 
-> 更新：2026-08-28
+> 更新：2026-08-30
 > 定位：纯公考备考应用矩阵（综合母应用 + 申论/政治理论垂直应用 + 内容运营 + 真题库），Taro 4 + Vue 3 + FastAPI + SQLite
 
 ## 1. 阶段进度
@@ -34,8 +34,9 @@
 | 部署升级 | 单 Docker 镜像编译三套 H5（综合 `/` + 申论 `/shenlun/` + 理论 `/theory/`），共用一个 FastAPI；compose 绑定可配（默认 127.0.0.1）+ healthcheck | ✅ 2026-08-24 |
 | 内容运营·日常 | 每日多渠道运营启动（`content/daily/`）；发布包按 campaign 隔离去重修复 | ✅ 2026-08-24~25 |
 | 原应用流程回填 | 定义迁移基线（`docs/architecture/original-app-feature-inventory.md`）；申论三刀法/资产复盘/文章采集、理论读前定向与复习/结构化精读/证据测验已回填；错题闭环回填中 | 🟡 2026-08-24~26 |
-| 内容运营·双审核留痕 | `ContentReviewRecord` 审核留痕表 + 流转 checklist + review-config/reference-library API + 后台 UI（**未提交**） | 🟡 进行中 |
-| 理论错题复习 | theory-app `StudyRecord`/`ReviewTask` 复习模型 + 新页 `question/review.vue`（**未提交**） | 🟡 进行中 |
+| 内容运营·双审核留痕 | `ContentReviewRecord` 审核留痕表 + 流转 checklist + review-config/reference-library API + 后台 UI | ✅ 2026-08-28（`04e6f46`） |
+| 理论错题复习 | theory-app `StudyRecord`/`ReviewTask` 复习模型 + 新页 `question/review.vue` | ✅ 2026-08-28（`a1047d3`） |
+| 小程序发布 | 双 AppID + 定稿名 + weapp 生产构建（产物含 `https://zhixinggk.ltd`）+ 印章头像产出 | 🟡 2026-08-30 阻断在 ICP 备案，详见 `docs/release/wechat-miniapp-launch-checklist.md` |
 
 ## 2. 当前质量基线（2026-08-23 实测）
 
@@ -70,10 +71,10 @@
 
 | 优先级 | 事项 |
 |---|---|
-| 高 | **小程序发布**（知行策论/知行日知）：✅ 双 AppID 已填、产品名定稿、域名 `zhixinggk.ltd`（备案终审中）、weapp 生产构建完成（各 1.0MB）；**剩余**：备案通过 → `certbot --nginx -d zhixinggk.ltd` 上 HTTPS → 微信后台配 request 合法域名 + 隐私保护指引 → 上传提审 |
-| 高 | 收尾未提交改动：content-ops 双审核留痕、theory 错题复习（测试 24 passed，待提交） |
+| 高 | **小程序发布**（知行策论/知行日知）：✅ 双 AppID 已填、产品名定稿、weapp 生产构建产物已确认含 `https://zhixinggk.ltd`、印章头像已产出、profile 死入口与「规划中」文案已清、隐私政策与用户协议原生页面已落地；**阻断**：ICP 备案未通过（域名与 `/api` 实测被阿里云 403 拦截）→ certbot 上 HTTPS → 微信后台 request 合法域名 + 用户隐私保护指引；**代码级待补**：生产 `.env` 密钥与 `ALLOW_REGISTER`。完整清单见 `docs/release/wechat-miniapp-launch-checklist.md` |
+| 高 | 发布前代码级合规：✅ A2 profile 死入口与「规划中」文案、✅ A3 旧品牌昵称/API 元信息/token 键名、✅ A1 隐私政策与用户协议原生页面 + 登录注册勾选 + 我的页入口、✅ 应用内文案去禁词（真题化→仿真练习、去「公考」；禁词按**子串**匹配，「仿真题目」也含「真题」）、✅ A7 专题页政治内容改为后端下发（`GET /api/product/topics` + `system_settings` 不发版切换）、✅ A4 反馈链路修复（`FeedbackBody` 字段名不匹配致反馈从未提交成功、内容被丢弃、随机判采纳送分 → 新增 `Feedback` 表 + 管理端查看/处理接口 + 两 app 反馈页）、✅ A5 nginx 收口 `/docs` 与 `.env.example` 重写、✅ 管理员自助改密 `PUT /admin/auth/password`（强度校验 + 旧密码验证，补上「改 .env 对已部署环境无效」的缺口）（2026-08-30，后端 27 passed，两 app 已重建 weapp 产物）；**剩余**：`constants/legal.ts` 三处待填（署名/邮箱/生效日期）、服务器侧生产 `.env` 与管理员口令、体验账号与提审材料。排期见 `docs/release/wechat-miniapp-launch-plan.md` |
 | 高 | 行为事件统计页（M4：上岸卡片 / 能力雷达 / 里程碑） |
-| 高 | 修正 FastAPI `/docs` 的旧品牌元信息，并清理/约束 lint warning |
+| 中 | 清理/约束前端 lint warning（85 条）与后端 `python-jose` 的 `utcnow` 弃用告警；~~FastAPI `/docs` 旧品牌元信息~~ 已随 A3 修正 |
 | 中 | 足迹 Admin 入口 |
 | 中 | AI 出题、云端语音识别按需开启 |
 | 中 | element-plus 按需引入 |
@@ -120,3 +121,5 @@ d4fa99a feat: add content inventory dashboard
 - 申论开发 PRD → [`docs/products/shenlun-prd.md`](./docs/products/shenlun-prd.md)
 - 政治理论开发 PRD → [`docs/products/theory-prd.md`](./docs/products/theory-prd.md)
 - 多题型共享底座 → [`docs/architecture/product-foundation.md`](./docs/architecture/product-foundation.md)
+- 小程序发布前待办清单 → [`docs/release/wechat-miniapp-launch-checklist.md`](./docs/release/wechat-miniapp-launch-checklist.md)
+- 小程序发布执行计划（排期与做法）→ [`docs/release/wechat-miniapp-launch-plan.md`](./docs/release/wechat-miniapp-launch-plan.md)
