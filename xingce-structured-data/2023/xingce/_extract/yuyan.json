@@ -7,444 +7,1444 @@
   "note": "选词填空 21-40（含双空/三空），片段阅读 41-58（含标题选择/语句填空/接语/例证），语句排序 51-52，语句填空 53/60。材料阅读 31-35 在言语差异册，本文件不含（差异册提取时补全）。",
   "questions": [
     {
-      "number": 21, "section": "言语理解与表达", "type": "选词填空",
+      "number": 21,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "构建新发展格局的关键在于经济循环的______，就像人们讲的要调理好统摄全身阴阳气血的任督二脉，经济活动需要各种生产要素的组合在生产、分配、流通、消费各环节有机衔接，从而实现循环流转。填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "井然有序", "B": "畅通无阻", "C": "行之有效", "D": "环环相扣"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 6}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "井然有序",
+        "B": "畅通无阻",
+        "C": "行之有效",
+        "D": "环环相扣"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 6
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 22, "section": "言语理解与表达", "type": "选词填空",
+      "number": 22,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "“报得准”是气象监测预报预警的生命力。天气预报准确率高，防灾减灾才能______，为有关部门正确决策提供科学客观的支撑，应急处置才能有力有效。填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "全力以赴", "B": "万无一失", "C": "有的放矢", "D": "有条不紊"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 6}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "全力以赴",
+        "B": "万无一失",
+        "C": "有的放矢",
+        "D": "有条不紊"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 6
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 23, "section": "言语理解与表达", "type": "选词填空",
+      "number": 23,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "红树林的地下部分长期处于厌氧环境，减缓了根系和凋落物的分解速率，加速了碳埋藏速率。此外，红树林大多分布于沉积型海岸河口，由上游河流和海洋潮汐共同作用带来的大量外源性碳，被它们固定并快速沉积下来。这“______”的组合拳使得红树林成为海岸带蓝碳碳汇的主要贡献者。填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "取长补短", "B": "标本兼治", "C": "开源节流", "D": "一举两得"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 6}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "取长补短",
+        "B": "标本兼治",
+        "C": "开源节流",
+        "D": "一举两得"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 6
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 24, "section": "言语理解与表达", "type": "选词填空",
+      "number": 24,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "我国十四亿多人口整体迈进现代化社会，规模超过现有发达国家人口的总和。艰巨性和复杂性______，发展途径和推进方式也必然具有自己的特点。我们始终从国情出发想问题、作决策、办事情，既不好高骛远，也不因循守旧。保持历史______，坚持稳中求进、循序渐进、持续推进。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "无以复加 自信", "B": "异乎寻常 主动", "C": "前所未有 耐心", "D": "无与伦比 清醒"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 6}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "无以复加 自信",
+        "B": "异乎寻常 主动",
+        "C": "前所未有 耐心",
+        "D": "无与伦比 清醒"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 6
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 25, "section": "言语理解与表达", "type": "选词填空",
+      "number": 25,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "相比于其他全球卫星导航系统采取单一轨道星座构型，北斗系统______，坚定选择了混合星座的特色发展之路，并首创短文通报模式，开创了通信导航一体化的独特服务模式，信息发送能力从一次120个汉字提升到一次1200个汉字，遇到突发情况时无须______，足以将情节一次性说清楚。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "与众不同 言简意赅", "B": "独树一帜 字斟句酌", "C": "遥遥领先 删繁就简", "D": "迎难而上 惜墨如金"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 7}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "与众不同 言简意赅",
+        "B": "独树一帜 字斟句酌",
+        "C": "遥遥领先 删繁就简",
+        "D": "迎难而上 惜墨如金"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 7
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 26, "section": "言语理解与表达", "type": "选词填空",
+      "number": 26,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "地方政府要以民众利益、公共利益、国家利益为重，不能只追求短期利益，只追求政绩，而做出______的事情来。对官员的政绩考核、对政府的绩效评估，更要注重民生，注重社会长远发展，这样才能从根本上避免破坏可持续发展大局、损害民众利益等“______”现象的继续发生。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "扬汤止沸 移花接木", "B": "竭泽而渔 杀鸡取卵", "C": "本末倒置 抱薪救火", "D": "饮鸩止渴 掩耳盗铃"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 7}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "扬汤止沸 移花接木",
+        "B": "竭泽而渔 杀鸡取卵",
+        "C": "本末倒置 抱薪救火",
+        "D": "饮鸩止渴 掩耳盗铃"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 7
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 27, "section": "言语理解与表达", "type": "选词填空",
+      "number": 27,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "翻开古代农书，几千年间古人对于土地的保养，几乎与当代耕作学关注的措施______，其中历代农书涉及最多的是施肥。在中国古人的摸索中，施肥成为一种讲究，何时、何地施肥，施何种肥，怎样施肥，形成了一个______的体系，在每个年度的农业生产进程中，精心安排在各个时节。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "一脉相承 科学", "B": "如出一辙 固定", "C": "别无二致 完整", "D": "不谋而合 复杂"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 7}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "一脉相承 科学",
+        "B": "如出一辙 固定",
+        "C": "别无二致 完整",
+        "D": "不谋而合 复杂"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 7
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 28, "section": "言语理解与表达", "type": "选词填空",
+      "number": 28,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "要加强国际传播的理论研究，掌握国际传播的规律，构建对外话语体系，提高传播艺术。要采用______不同区域、不同国家、不同群体受众的精准传播方式，推进中国故事和中国声音的全球化表达、区域化表达、分众化表达，增强国际传播的______和实效性。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "贴近 亲和力", "B": "细分 说服力", "C": "满足 影响力", "D": "融合 感染力"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 7}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "贴近 亲和力",
+        "B": "细分 说服力",
+        "C": "满足 影响力",
+        "D": "融合 感染力"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 7
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 29, "section": "言语理解与表达", "type": "选词填空",
+      "number": 29,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "对于新业态新模式冲击本地的传统产业，是包容审慎，还是______? 对于非本地人才就业创业、非本地企业项目立项推广，能否______，甚至千方百计降门槛、清路障以留人留项目? 纵观先进制造业集群所在地，无一不是当地政府部门怀着“开放之心”，营造出良好的创新生态。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "如芒在背 一视同仁", "B": "退避三舍 不偏不倚", "C": "拒之门外 开诚布公", "D": "推三阻四 海纳百川"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 8}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "如芒在背 一视同仁",
+        "B": "退避三舍 不偏不倚",
+        "C": "拒之门外 开诚布公",
+        "D": "推三阻四 海纳百川"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 8
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 30, "section": "言语理解与表达", "type": "选词填空",
+      "number": 30,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "法律惩罚的正当性一定程度上源于公众朴素的道德期待。在具体执法时，不能仅仅______地依赖客观后果，进行简单归责和惩戒，而应全面考察当事人的主观认知、动机目的等情节，并综合______其社会危害性，由此来审慎决定是否启动惩罚机制。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "机械 评估", "B": "单纯 辨别", "C": "盲目 分析", "D": "草率 判断"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 8}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "机械 评估",
+        "B": "单纯 辨别",
+        "C": "盲目 分析",
+        "D": "草率 判断"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 8
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 31, "section": "言语理解与表达", "type": "选词填空",
+      "number": 31,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "在过去百年中，地球升温约 1 摄氏度。考虑到人类在大气中排放的温室气体的积累，这种变暖实际上与基础物理学的预期是______的。那么，问题其实并不在于是否在变暖，而在于变暖速度有多快。但科学家在利用现有模型预测未来变暖时仍然存在______，尤其是，类似极端降水这样的关键变量将如何变化，仍有很大的不确定性。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "一致 分歧", "B": "同步 短板", "C": "吻合 瑕疵", "D": "相符 漏洞"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 8}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "一致 分歧",
+        "B": "同步 短板",
+        "C": "吻合 瑕疵",
+        "D": "相符 漏洞"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 8
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 32, "section": "言语理解与表达", "type": "选词填空",
+      "number": 32,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "长期以来，城管执法部门对职责内的执法事项通常是______“用力”，对所有的执法对象“一碗水端平”，以体现执法的公平性、公正性。但对于超大城市而言，由于城管执法事项繁多，涉及市场主体庞杂，而城管执法力量是有限的，实践中很难做到______，进而可能会影响执法效果和执行力。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "精准 滴水不漏", "B": "均衡 百无一失", "C": "精确 精益求精", "D": "平均 面面俱全"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 8}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "精准 滴水不漏",
+        "B": "均衡 百无一失",
+        "C": "精确 精益求精",
+        "D": "平均 面面俱全"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 8
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 33, "section": "言语理解与表达", "type": "选词填空",
-      "stem": "（题干为关于国家公园建设与土地资源管理的双空选词填空）依次填入画横线部分最恰当的一项是：",
+      "number": 33,
+      "section": "言语理解与表达",
+      "type": "选词填空",
+      "stem": "设立国家公园有助于权责统一，改变过去九龙治水的情况，大幅度______国土资源的管理效能。尤其是国家公园内有相当多的偏远、人居密度较低的区域，被划入国家公园后也可明确国土归属产权，将其机制化地管理起来，避免出现生态环境恶化却______的情况。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "提升 无人问津", "B": "改善 爱莫能助", "C": "增强 听之任之", "D": "发挥 鞭长莫及"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 9}},
-      "flags": ["answer_missing", "stem_abbreviated"]
+      "options": {
+        "A": "提升 无人问津",
+        "B": "改善 爱莫能助",
+        "C": "增强 听之任之",
+        "D": "发挥 鞭长莫及"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 9
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 34, "section": "言语理解与表达", "type": "选词填空",
-      "stem": "（题干为关于民众法律认知与柔性执法的双空选词填空）依次填入画横线部分最恰当的一项是：",
+      "number": 34,
+      "section": "言语理解与表达",
+      "type": "选词填空",
+      "stem": "在普通人看来，法律都是______的，自己一辈子都不会和法律打交道。但在瞬息万变的社会里，人们随时可能触及法律的红线。很多人平时法律观念和意识不强，柔性执法不仅可以起到______作用，而且有利于提高群众的学法懂法意识。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "高高在上 教育", "B": "高深莫测 预防", "C": "遥不可及 警戒", "D": "事不关己 提醒"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 9}},
-      "flags": ["answer_missing", "stem_abbreviated"]
+      "options": {
+        "A": "高高在上 教育",
+        "B": "高深莫测 预防",
+        "C": "遥不可及 警戒",
+        "D": "事不关己 提醒"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 9
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 35, "section": "言语理解与表达", "type": "选词填空",
-      "stem": "（题干为关于注册制改革与上市公司责任的三空选词填空）依次填入画横线部分最恰当的一项是：",
+      "number": 35,
+      "section": "言语理解与表达",
+      "type": "选词填空",
+      "stem": "注册制改革越包容，市场主体越要______。随着注册制全面推进，新股上市数量势必增多，上市公司“______”的时代一去不复返。将自身相关信息说完整、说清楚，既是上市公司的法定责任，也是逐浪资本市场的立身之本。因此，企业应提升______和竞争意识，高度负责、抱诚守真地“自我介绍”。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "自律 待价而沽 紧迫感", "B": "自重 滥竽充数 使命感", "C": "自觉 奇货可居 危机感", "D": "自强 一枝独秀 责任感"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 9}},
-      "flags": ["answer_missing", "stem_abbreviated"]
+      "options": {
+        "A": "自律 待价而沽 紧迫感",
+        "B": "自重 滥竽充数 使命感",
+        "C": "自觉 奇货可居 危机感",
+        "D": "自强 一枝独秀 责任感"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 9
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 36, "section": "言语理解与表达", "type": "选词填空",
-      "stem": "（题干为关于数字博物馆“沉浸式”“交互式”文化教育功能的三空选词填空）依次填入画横线部分最恰当的一项是：",
+      "number": 36,
+      "section": "言语理解与表达",
+      "type": "选词填空",
+      "stem": "随着技术发展，以数字手段为支撑的“沉浸式”“交互式”网上博物馆日益增多，提高了展览的______。但随着智能终端的普及，人们难免会对数字博物馆产生______。博物馆在利用数字技术的基础上，也不能忽视实物展览内涵的提升，使之兼备文化和教育功能，突出______的特点。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "科技性 排斥 润物无声", "B": "便捷性 厌倦 触手可及", "C": "趣味性 疲劳 寓教于乐", "D": "交融性 失望 与时俱进"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 10}},
-      "flags": ["answer_missing", "stem_abbreviated"]
+      "options": {
+        "A": "科技性 排斥 润物无声",
+        "B": "便捷性 厌倦 触手可及",
+        "C": "趣味性 疲劳 寓教于乐",
+        "D": "交融性 失望 与时俱进"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 10
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 37, "section": "言语理解与表达", "type": "选词填空",
+      "number": 37,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "环境整治关键要不留死角、不存盲点，光靠人为监管恐怕会______。目前，“互联网+”数字技术已成为环境监测的利器，为生态环境监测布下“天罗地网”。这张网使任何“______”都能充分暴露在数据“阳光”之下，让环境监测和污染防治变得更加______、更加具象。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "捉襟见肘 一举一动 有效", "B": "力不从心 风吹草动 精细", "C": "顾此失彼 小打小闹 动态", "D": "收效甚微 蛛丝马迹 直观"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 10}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "捉襟见肘 一举一动 有效",
+        "B": "力不从心 风吹草动 精细",
+        "C": "顾此失彼 小打小闹 动态",
+        "D": "收效甚微 蛛丝马迹 直观"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 10
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 38, "section": "言语理解与表达", "type": "选词填空",
+      "number": 38,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "培育强大的创新实力，中小企业要有“十年磨一剑”的______和志气。要克服融资难、原料贵、订单少等重重困难，持续投入、迎难而上，才能在______中迈上发展新台阶。当前，一家家优质中小企业在自主创新的道路上______、勇毅前行，成长为能打硬仗的科技尖兵、稳链强链的有生力量。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "决心 卧薪尝胆 稳扎稳打", "B": "耐性 筚路蓝缕 兢兢业业", "C": "定力 厚积薄发 自强不息", "D": "智慧 山重水复 步步为营"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 10}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "决心 卧薪尝胆 稳扎稳打",
+        "B": "耐性 筚路蓝缕 兢兢业业",
+        "C": "定力 厚积薄发 自强不息",
+        "D": "智慧 山重水复 步步为营"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 10
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 39, "section": "言语理解与表达", "type": "选词填空",
+      "number": 39,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "开展未成年人网络环境整治，势在必行且______。网络上可能存在的色情、暴力、过度娱乐等有害信息，会对普遍拥有智能设备、全面触网的未成年人产生潜移默化的不良影响。只有______清朗洁净的网络空间，才能让青少年健康成长。实现这一愿景，需要发挥多主体多领域联动优势，______合力，撑起清朗网络蓝天。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "蓄势待发 创设 形成", "B": "刻不容缓 营造 凝聚", "C": "迫在眉睫 构筑 集成", "D": "任重道远 共建 汇聚"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 10}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "蓄势待发 创设 形成",
+        "B": "刻不容缓 营造 凝聚",
+        "C": "迫在眉睫 构筑 集成",
+        "D": "任重道远 共建 汇聚"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 10
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 40, "section": "言语理解与表达", "type": "选词填空",
+      "number": 40,
+      "section": "言语理解与表达",
+      "type": "选词填空",
       "stem": "竞争与创新总是______。平台反垄断最终要在抑制垄断与鼓励创新之间达到平衡。一方面，要加快健全市场准入制度、公平竞争审查机制，预防和______滥用行政权力限制竞争，充分______市场竞争机制的强大动能；另一方面，要引导和激励平台企业把更多精力用在创新上。唯有如此，平台经济方能为全社会注入持久的创新活力。依次填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "如影随形 约束 调控", "B": "互为表里 杜绝 挖掘", "C": "相辅相成 打击 激发", "D": "息息相关 制止 释放"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 11}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "如影随形 约束 调控",
+        "B": "互为表里 杜绝 挖掘",
+        "C": "相辅相成 打击 激发",
+        "D": "息息相关 制止 释放"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 11
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 41, "section": "言语理解与表达", "type": "语句填空",
+      "number": 41,
+      "section": "言语理解与表达",
+      "type": "语句填空",
       "stem": "构建人类命运共同体是世界各国人民前途所在。________。我们应该携带合作共赢的时代强音，践行全球发展倡议、全球安全倡议，推动建设持久和平、普遍安全、共同繁荣、开放包容、清洁美丽的世界。填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "河海不择细流，故能就其深", "B": "大道之行也，天下为公", "C": "芳林新叶催陈叶，流水前波让后波", "D": "万物并育而不相害，道并行而不相悖"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 11}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "河海不择细流，故能就其深",
+        "B": "大道之行也，天下为公",
+        "C": "芳林新叶催陈叶，流水前波让后波",
+        "D": "万物并育而不相害，道并行而不相悖"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 11
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 42, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 42,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "农业是个生态产业，农村是生态系统的重要一环。要推动乡村生态振兴，就要统筹推进草原、森林、湖泊、湿地等生态治理，科学开展大规模国土绿化行动，加强生物多样性保护，统筹实施长江十年禁渔和黄河流域生态保护与高质量发展，大力发展节水农业，打好农业面源污染防治攻坚战。这段文字意在说明：",
       "items": null,
-      "options": {"A": "农业生态建设要做好科学规划", "B": "农业与农村生态文明建设任重道远", "C": "农业发展与生态治理需做好统筹", "D": "生态文明建设要找准着力点"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 11}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "农业生态建设要做好科学规划",
+        "B": "农业与农村生态文明建设任重道远",
+        "C": "农业发展与生态治理需做好统筹",
+        "D": "生态文明建设要找准着力点"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 11
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 43, "section": "言语理解与表达", "type": "标题选择",
+      "number": 43,
+      "section": "言语理解与表达",
+      "type": "标题选择",
       "stem": "当前，社会治理形势复杂，仅靠职能部门、专业力量远远不够，迫切需要人民群众和社会界的积极支持与参与，共同创造公共价值。众包是公众和外包的组合，指一个机构把过去由员工执行的工作任务，以自由自愿的形式外包给非特定的社会公众群组解决的经营模式。政府众包展示了比传统政府外包更为开放的社会治理图景。最适合做这段文字标题的是：",
       "items": null,
-      "options": {"A": "众包：共享经济下的新型用工模式", "B": "政府众包：公众参与社会治理新方式", "C": "公众参与：开放式合作的新形式", "D": "“互联网+”：公共管理新范式"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 11}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "众包：共享经济下的新型用工模式",
+        "B": "政府众包：公众参与社会治理新方式",
+        "C": "公众参与：开放式合作的新形式",
+        "D": "“互联网+”：公共管理新范式"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 11
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 44, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 44,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "火山灰是火山喷发过程中经爆炸式喷发形成的、粒径小于 2 毫米的碎屑物质。它在气流和风的作用下可被输送到很远的地方，甚至环绕地球，并对全球气候产生影响。火山灰年代学是利用火山灰碎片层进行定年和对比的高精度绝对年代学方法，可以解决火山喷发、气候变迁和人类演化等科学问题。这段文字主要介绍了：",
       "items": null,
-      "options": {"A": "火山灰的形成过程与主要特点", "B": "火山灰年代学的研究思路和价值", "C": "火山灰在自然环境中的分布状态", "D": "火山喷发对环境和人类的影响"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 12}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "火山灰的形成过程与主要特点",
+        "B": "火山灰年代学的研究思路和价值",
+        "C": "火山灰在自然环境中的分布状态",
+        "D": "火山喷发对环境和人类的影响"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 12
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 45, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 45,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "银河系是研究星系形成与演化的关键实验室，恒星则是记录其形成与演化历史的“化石”——恒星表面化学成分和运动特征，携带着银河系诞生与演化的关键信息。要读懂银河系的历史，关键在于获取大样本、有代表性的恒星数据，包括位置、运动、年龄、化学组成等信息。这段文字接下来最可能讨论的是：",
       "items": null,
-      "options": {"A": "星系考古学的前沿研究领域", "B": "恒星对宇宙起源研究的意义", "C": "获取恒星信息的方法和途径", "D": "关于银河系诞生原因的假说"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 12}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "星系考古学的前沿研究领域",
+        "B": "恒星对宇宙起源研究的意义",
+        "C": "获取恒星信息的方法和途径",
+        "D": "关于银河系诞生原因的假说"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 12
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 46, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 46,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "我国在改革开放后逐渐认识到保护民间文学艺术作品的重要性，并在1990年著作权法规定保护办法另行规定。此后，学界围绕民间文学艺术作品的法律保护展开讨论，但因对其概念界定、权利属性等核心问题分歧较大，国家版权局起草的相关条例至今未能出台。作者可能赞同下列哪一观点？",
       "items": null,
-      "options": {"A": "通过公法保护民间文学艺术作品是最可行的路径", "B": "围绕民间文学艺术作品法律保护的争议流于表面", "C": "国家版权局应就民间文学保护倾听多方面意见", "D": "民间文学作品法律保护缺位状态亟须改变"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 13}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "通过公法保护民间文学艺术作品是最可行的路径",
+        "B": "围绕民间文学艺术作品法律保护的争议流于表面",
+        "C": "国家版权局应就民间文学保护倾听多方面意见",
+        "D": "民间文学作品法律保护缺位状态亟须改变"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 13
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 47, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 47,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "生物质炭由生物质在缺氧条件下经过高温转化而成，是一种富含碳素的多孔固体颗粒物质。在农业领域，它可作为土壤改良剂，改善土壤结构、保水保肥；在工业领域，它是优质的冶炼还原剂；在环境领域，它可用于吸附水体污染物。下列哪一选项无法从原文中得到支持？",
       "items": null,
-      "options": {"A": "工业中使用生物质炭作为原料由来已久", "B": "自然界中生物质炭一般以固体形式存在", "C": "生物质炭可以由有机废弃物产生", "D": "利用生物质炭可以有效改良土壤"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 13}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "工业中使用生物质炭作为原料由来已久",
+        "B": "自然界中生物质炭一般以固体形式存在",
+        "C": "生物质炭可以由有机废弃物产生",
+        "D": "利用生物质炭可以有效改良土壤"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 13
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 48, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 48,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "步兵融入联合作战，是指在联合作战体系架构下，以指挥信息系统为平台，按照统一的作战企图和计划，在各军兵种力量协同配合下，步兵与其他作战力量共同遂行作战任务的作战形式。它强调步兵不再是传统意义上的“陆军老大哥”单打独斗，而是融入体系、依托体系、支撑体系，利用自身轻便灵活、适应性强的特点，实现歼灭据守之敌、驱逐进犯之敌、围捕空降之敌等目标。这段文字主要分析联合作战中：",
       "items": null,
-      "options": {"A": "步兵的独特优势", "B": "步兵的主要任务", "C": "歼灭敌方的重要手段", "D": "步兵武器装备的特点"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 13}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "步兵的独特优势",
+        "B": "步兵的主要任务",
+        "C": "歼灭敌方的重要手段",
+        "D": "步兵武器装备的特点"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 13
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 49, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 49,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "肺鱼是一类可用“肺”呼吸的肉鳍鱼，它们的“肺”是特化的鱼鳔，能吸收空气。这一特殊技能使其可以摆脱水的束缚，在河水干涸时潜入洞穴，躲在分泌物形成的茧中，等待雨季到来。此外，肺鱼还是能“啃硬骨头”的鱼，它们咬合力强大，一些带壳的无脊椎动物也是其捕食对象，这种能吃带壳动物的能力，被称为食壳性或甲食性。泥盆纪早期的奇异鱼被认为是最原始的肺鱼，已经具有典型的肺鱼食壳性特征，比如有发达的齿板与短而粗壮的下颌。而杨氏鱼的系统发育位置较奇异鱼更为原始，是研究肺鱼类食壳性起源的关键。这段文字接下来最可能介绍：",
       "items": null,
-      "options": {"A": "关于杨氏鱼的最新研究成果", "B": "动物食壳性特征的产生原因", "C": "肺鱼在生物演化史上的重要意义", "D": "杨氏鱼与其他泥盆纪物种的区别"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 14}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "关于杨氏鱼的最新研究成果",
+        "B": "动物食壳性特征的产生原因",
+        "C": "肺鱼在生物演化史上的重要意义",
+        "D": "杨氏鱼与其他泥盆纪物种的区别"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 14
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 50, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 50,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "《新青年》创刊时名为《青年杂志》，因与《上海青年》杂志的名称部分雷同，从第二卷第一号开始，正式更名为《新青年》。这次更名本是被迫与无奈之举，但在陈独秀的巧妙处理下，却成为促进刊物发展的绝佳机遇。在更名后第一期杂志的篇首，刊登了陈独秀的文章，重新定义了“新青年”这一概念，提出要以“生理心理”的标准，而非“年龄”来区分新旧青年。这一期杂志还刊登了一则通告，告知读者杂志更名事宜。变被动为主动，赋予“新青年”三个字鲜明的时代意义与先锋的思想价值，也让《新青年》有了更加精准的办刊定位。这段文字中的“巧妙处理”指的是：",
       "items": null,
-      "options": {"A": "精准定位受众，激发情感共鸣", "B": "采取差异策略，力求独树一帜", "C": "明晰用户心理，精准投放内容", "D": "借助事件传播，创造全新概念"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 14}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "精准定位受众，激发情感共鸣",
+        "B": "采取差异策略，力求独树一帜",
+        "C": "明晰用户心理，精准投放内容",
+        "D": "借助事件传播，创造全新概念"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 14
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 51, "section": "言语理解与表达", "type": "语句排序",
+      "number": 51,
+      "section": "言语理解与表达",
+      "type": "语句排序",
       "stem": "将以下 6 个句子重新排列，语序正确的是：①这会使病情恶化，并最终导致相关的关节功能障碍；②大量临床及基础研究显示，软骨病理性钙化是导致骨关节病软骨退变的关键致病机制之一；③软骨病理性钙化通过诱导软骨细胞表型改变，最终呈现出一种病理状态；④关节软骨渐进性退变是骨关节病最主要的病理改变；⑤这些病态的软骨细胞通过有丝分裂增加自身数量，并通过分泌炎症因子、降解软骨基质引发组织炎症，最终发生凋亡；⑥凋亡小体在吸收钙离子后，又会成为新的病理性矿化结晶，循环往复，致使软骨退变加重、剥脱。",
       "items": null,
-      "options": {"A": "④②③⑤⑥①", "B": "④③①②⑥", "C": "②③⑥④①", "D": "②⑤③①⑥"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 14}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "④②③⑤⑥①",
+        "B": "④③①②⑥",
+        "C": "②③⑥④①",
+        "D": "②⑤③①⑥"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 14
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 52, "section": "言语理解与表达", "type": "语句排序",
+      "number": 52,
+      "section": "言语理解与表达",
+      "type": "语句排序",
       "stem": "将以下 6 个句子重新排列，语序正确的是：①例如位于我国四川的深地核天体物理实验室，其上覆盖的垂直岩石厚达 2400 米；②因此，旨在直接探测暗物质的实验室通常会建于极深的地下或山里，尽最大可能屏蔽掉这些干扰；③直接探测暗物质的方式类似于守株待兔；④当然，这种能量波动极其微弱，而且宇宙中的各种射线同样也有机会与这个原子核来一场亲密的邂逅，从而对实验结果产生干扰；⑤专家解释说，我们生活在一团暗物质云中，每秒钟可能有几百万甚至上千万的暗物质粒子穿过我们的身体；⑥直接探测暗物质的方法之一，就是利用精密的仪器密切观察大量的原子核，如果足够幸运，某一时刻暗物质碰撞到某个原子核，会在原子核上留下残余能量。",
       "items": null,
-      "options": {"A": "⑥②①⑤③④", "B": "⑥④⑤②③①", "C": "③⑤⑥④②①", "D": "③⑥②⑤①④"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 15}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "⑥②①⑤③④",
+        "B": "⑥④⑤②③①",
+        "C": "③⑤⑥④②①",
+        "D": "③⑥②⑤①④"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 15
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 53, "section": "言语理解与表达", "type": "语句填空",
+      "number": 53,
+      "section": "言语理解与表达",
+      "type": "语句填空",
       "stem": "事实推定是指法官在确证基础事实之上，借助经验法则推定待证事实的一种司法认知方法，这实际上是法官价值判断的过程，受个人经验、情感、家庭背景等因素的影响，法官进行价值判断时可能具有个体特征，价值判断联通了基础事实与推定事实，对各类事实所作的价值判断不同，得出的判决结论也将不同。因此，____________。填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "对事实推定价值判断的说理可提升判决的可接受性", "B": "需要对事实推定中的价值判断进行规范", "C": "程序正义有助于减少法官个体差异对判决的影响", "D": "价值判断不仅要符合形式合理性也要及时回应社会关切"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 15}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "对事实推定价值判断的说理可提升判决的可接受性",
+        "B": "需要对事实推定中的价值判断进行规范",
+        "C": "程序正义有助于减少法官个体差异对判决的影响",
+        "D": "价值判断不仅要符合形式合理性也要及时回应社会关切"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 15
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 54, "section": "言语理解与表达", "type": "标题选择",
+      "number": 54,
+      "section": "言语理解与表达",
+      "type": "标题选择",
       "stem": "数十亿年前的一次巨大撞击，可能熔化了月球内部的岩石，将稀土元素和放射性生热元素（钍、钾、磷）带到月幔，形成了富含克里普岩（KREEP）的岩浆洋，并在月球正面形成大面积火山平原——这解释了月球“两面”差异的成因：正面平坦多平原，背面崎岖多撞击坑。最适合做这段文字标题的是：",
       "items": null,
-      "options": {"A": "盆地与平原：两副面孔，两种材质", "B": "月球上的熔岩流：亟待开发的宝藏", "C": "双面月球：一次撞击，两种结局", "D": "放射性生热元素：月球的化妆师"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 16}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "盆地与平原：两副面孔，两种材质",
+        "B": "月球上的熔岩流：亟待开发的宝藏",
+        "C": "双面月球：一次撞击，两种结局",
+        "D": "放射性生热元素：月球的化妆师"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 16
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 55, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 55,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "老旧小区适老化改造中，入户改造常遇居民意愿不统一的难题。要提升社会认知度，实现居家适老化改造的“心理无障碍”，需要多渠道宣传适老化改造的意义，并通过养老服务中心建设示范住房，让居民实地感受改造成效。这段文字强调要：",
       "items": null,
-      "options": {"A": "平衡主体利益，因地制宜推动适老化改造", "B": "统筹各方资源，激活适老化改造的多元力量", "C": "补位标准规范，提升适老化改造的品质与效率", "D": "加强宣传引导，做到适老化改造“心理无障碍”"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 16}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "平衡主体利益，因地制宜推动适老化改造",
+        "B": "统筹各方资源，激活适老化改造的多元力量",
+        "C": "补位标准规范，提升适老化改造的品质与效率",
+        "D": "加强宣传引导，做到适老化改造“心理无障碍”"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 16
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 56, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 56,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "蛋白质是生命活动的主要承担者，其功能的发挥依赖于特定的三维结构。然而，观测和分析蛋白质结构困难、成本高、进展有限：核磁共振、X 射线晶体学、冷冻电镜等传统方法，都需要经年累月的摸索和昂贵的设备，现有的实验手段还不足以揭示一些重要的蛋白质结构。借助更多计算生物学手段，用计算机来计算蛋白质结构，运算量惊人，连超级计算机也难以承受。为此，蛋白质结构预测成为结构生物学的重要分支。未来将通过人工智能算法，根据氨基酸序列预测其空间结构。这段文字没有解释：",
       "items": null,
-      "options": {"A": "传统蛋白质结构观测方法存在哪些弊端", "B": "现有技术为何无法满足对蛋白质结构的探索", "C": "蛋白质结构预测为何成为结构生物学的分支", "D": "人工智能算法预测蛋白质结构有何优势"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 17}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "传统蛋白质结构观测方法存在哪些弊端",
+        "B": "现有技术为何无法满足对蛋白质结构的探索",
+        "C": "蛋白质结构预测为何成为结构生物学的分支",
+        "D": "人工智能算法预测蛋白质结构有何优势"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 17
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 57, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 57,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "生态修复请求分为生态修复的行为请求和费用请求，前者是为了防止生态环境权益损害的发生或扩大，请求责任人停止污染破坏行为；当被破坏的生态环境无法恢复时，请求责任人进行人工修复。如果责任人不具有修复能力或意愿，可请求责任人承担修复费用。因此，修复行为请求应作为首要诉求，在责任人不能或不愿进行修复时，才能提出修复费用请求。在司法实践中，很多公益诉讼人却往往将修复费用请求作为首要诉求，但由于诉求和判决的修复费用数额不易确定，责任主体短期内难以承担修复费用，生态修复工作很难有效开展。这段文字意在说明：",
       "items": null,
-      "options": {"A": "应该制定生态修复费用的分级标准", "B": "修复费用请求往往很难得到有效落实", "C": "应根据责任人的能力确定生态修复诉求", "D": "生态修复诉讼应当首先提出修复行为请求"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 17}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "应该制定生态修复费用的分级标准",
+        "B": "修复费用请求往往很难得到有效落实",
+        "C": "应根据责任人的能力确定生态修复诉求",
+        "D": "生态修复诉讼应当首先提出修复行为请求"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 17
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 58, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 58,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "早在 1938 年，毛泽东同志就说过：“我们这个民族有数千年的历史，有它的特点，有它的许多珍品。对于这些，我们还是小学生。今天的中国是历史的中国的一个发展；我们是马克思主义的历史主义者，我们不应当割断历史。从孔夫子到孙中山，我们应当给以总结，承继这一份珍贵的遗产。这对于指导当前的伟大的运动，是有重要的帮助的。”这段文字最适合做下列哪一观点的例证？",
       "items": null,
-      "options": {"A": "我们党历来用历史唯物主义的立场观点方法看待中华民族历史，继承和弘扬中华优秀传统文化", "B": "拥有马克思主义科学理论指导是我们党坚定信仰信念、把握历史主动的根本所在", "C": "中华文明源远流长、博大精深，是中华民族独特的精神标识，是当代中国文化的根基", "D": "我们党的每一段革命历史，都是一部理想信念的生动教材"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 17}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "我们党历来用历史唯物主义的立场观点方法看待中华民族历史，继承和弘扬中华优秀传统文化",
+        "B": "拥有马克思主义科学理论指导是我们党坚定信仰信念、把握历史主动的根本所在",
+        "C": "中华文明源远流长、博大精深，是中华民族独特的精神标识，是当代中国文化的根基",
+        "D": "我们党的每一段革命历史，都是一部理想信念的生动教材"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 17
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 59, "section": "言语理解与表达", "type": "片段阅读",
+      "number": 59,
+      "section": "言语理解与表达",
+      "type": "片段阅读",
       "stem": "我国在经济快速发展的同时，培育和形成了全球少有的超大规模内需市场。超大规模经济体在全球经济运行中通常发挥着“锚”的作用。改革开放以来，我国之所以能够成功应对亚洲金融危机、国际金融危机、中美经贸摩擦以及世纪疫情等的冲击，一定程度上就得益于超大规模市场所内含的经济稳定优势。另一方面，超大规模市场的多样性意味着更强的内部稳定性。产业发展、区域发展的差异性可以一定程度上起到减少冲击影响的效果，局部的内部冲击不易在全国形成共振效应；部分行业、部分区域发展面临困境，并不会对宏观经济总体稳定产生巨大冲击。这段文字意在说明：",
       "items": null,
-      "options": {"A": "我国既是经济全球化的受益者也是贡献者", "B": "多措并举对保障内需市场稳定有重大意义", "C": "超大规模经济体助力全球经济平稳运行", "D": "超大规模市场有助于我国经济保持稳定"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 18}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "我国既是经济全球化的受益者也是贡献者",
+        "B": "多措并举对保障内需市场稳定有重大意义",
+        "C": "超大规模经济体助力全球经济平稳运行",
+        "D": "超大规模市场有助于我国经济保持稳定"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 18
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     },
     {
-      "number": 60, "section": "言语理解与表达", "type": "语句填空",
+      "number": 60,
+      "section": "言语理解与表达",
+      "type": "语句填空",
       "stem": "__________。我们要结合我国发展需要和可能，做好我国数字经济发展顶层设计和体制机制建设。要加强形势研判，抓住机遇，赢得主动。各级领导干部要提高数字经济思维能力和专业素质，增强发展数字经济本领，强化安全意识，推动数字经济更好服务和融入新发展格局。要提高全民全社会数字素养和技能，夯实我国数字经济发展社会基础。填入画横线部分最恰当的一项是：",
       "items": null,
-      "options": {"A": "要把发展数字经济自主权牢牢掌握在自己手中", "B": "数字经济影响程度之深前所未有", "C": "数字经济事关国家发展大局", "D": "数字经济有利于推动各级资源要素快速流动"},
-      "options_in_media": false, "topic": null, "tag": null,
-      "answer": null, "answer_source": null, "explanation": null,
-      "media": [], "formulas": [], "material_ids": [],
-      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 18}},
-      "flags": ["answer_missing"]
+      "options": {
+        "A": "要把发展数字经济自主权牢牢掌握在自己手中",
+        "B": "数字经济影响程度之深前所未有",
+        "C": "数字经济事关国家发展大局",
+        "D": "数字经济有利于推动各级资源要素快速流动"
+      },
+      "options_in_media": false,
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20230124.pdf",
+          "page": 18
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
     }
   ]
 }
