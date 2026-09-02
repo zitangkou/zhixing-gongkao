@@ -7,7 +7,49 @@
     "shengji": {
       "paper_type": "省级",
       "total_questions": 135,
-      "file": "papers/shengji.json"
+      "file": "papers/shengji.json",
+      "modules": [
+        {
+          "name": "常识判断",
+          "number_range": [
+            1,
+            20
+          ],
+          "question_count": 20
+        },
+        {
+          "name": "言语理解与表达",
+          "number_range": [
+            21,
+            60
+          ],
+          "question_count": 40
+        },
+        {
+          "name": "数量关系",
+          "number_range": [
+            61,
+            75
+          ],
+          "question_count": 15
+        },
+        {
+          "name": "判断推理",
+          "number_range": [
+            76,
+            115
+          ],
+          "question_count": 40
+        },
+        {
+          "name": "资料分析",
+          "number_range": [
+            116,
+            135
+          ],
+          "question_count": 20
+        }
+      ]
     },
     "shidi": {
       "paper_type": "市地级",
@@ -20,13 +62,19 @@
       "file": "papers/xingzhengzhifa.json"
     }
   },
-  "source_files": [],
+  "source_files": [
+    "20230124.pdf",
+    "20232548.pdf",
+    "20234972.pdf",
+    "20237377.pdf"
+  ],
   "media": {
     "pages_dir": "media/pages",
     "figures_dir": "media/figures",
     "formulas_dir": "media/formulas",
     "index": "media/media_index.json"
   },
-  "status": "empty",
-  "updated": ""
+  "status": "extracting",
+  "updated": "2026-09-02",
+  "notes": "2023 结构与 2024 同代：常识 20（含政治）/ 言语 40 / 数量 15(省)或10 / 判断 40 / 资料 20；无独立政治理论模块。执法差异册第 73 页含判断推理差异注。"
 }

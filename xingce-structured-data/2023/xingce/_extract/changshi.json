@@ -1,0 +1,391 @@
+{
+  "module": "常识判断",
+  "year": 2023,
+  "range": "1-20",
+  "source_pages": "20230124.pdf p1-p5",
+  "status": "done",
+  "questions": [
+    {
+      "number": 1,
+      "section": "常识判断",
+      "stem": "党的二十大报告指出，全面建成社会主义现代化强国，总的战略安排是分两步走。关于到二〇三五年我国发展的总体目标，下列表述正确的有几项？",
+      "items": [
+        "经济实力、科技实力、综合国力大幅跃升，人均国内生产总值迈上新的大台阶，达到中等发达国家水平",
+        "实现高水平科技自立自强，力争进入创新型国家行列",
+        "建成现代化经济体系，形成新发展格局，基本实现新型工业化、信息化、城镇化、农业现代化",
+        "广泛形成绿色生产生活方式，基本实现“碳中和”目标，生态环境根本好转，美丽中国目标全面实现",
+        "把我国建设成为综合国力和国际影响力领先的社会主义现代化强国"
+      ],
+      "options": {"A": "2项", "B": "3项", "C": "4项", "D": "5项"},
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 1}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 2,
+      "section": "常识判断",
+      "stem": "党的二十大报告指出，要发展全过程人民民主，保障人民当家作主。关于人民民主，下列表述正确的有：",
+      "items": [
+        "人民民主是社会主义的生命，是全面建设社会主义现代化国家的应有之义",
+        "全过程人民民主是社会主义民主政治的本质属性，是最广泛、最真实、最管用的民主",
+        "协商民主是实践全过程人民民主的重要形式",
+        "党内民主是全过程人民民主的重要体现"
+      ],
+      "options": {"A": "①③", "B": "①②④", "C": "①②③", "D": "②③④"},
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 1}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 3,
+      "section": "常识判断",
+      "stem": "党的二十大报告指出，新时代十年来“党和国家事业取得历史性成就、发生历史性变革”。关于新时代十年来取得的历史性成就，下列表述错误的是：",
+      "items": null,
+      "options": {
+        "A": "谷物总产量稳居世界首位",
+        "B": "制造业规模、外汇储备稳居世界第一",
+        "C": "全社会研发经费支出跃居世界第一",
+        "D": "建成世界最大的高速铁路网"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 2}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 4,
+      "section": "常识判断",
+      "stem": "习近平经济思想是习近平新时代中国特色社会主义思想的重要组成部分。关于习近平经济思想，下列表述正确的有几项？",
+      "items": [
+        "进入新发展阶段是我国经济发展的历史方位",
+        "推动高质量发展是我国经济发展的鲜明主题",
+        "坚持新发展理念是我国经济发展的指导原则",
+        "坚持对外开放是我国经济发展的第一动力",
+        "大力发展制造业和实体经济是我国经济发展的主要着力点"
+      ],
+      "options": {"A": "2 项", "B": "3 项", "C": "4 项", "D": "5 项"},
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 2}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 5,
+      "section": "常识判断",
+      "stem": "习近平总书记指出，共同富裕是社会主义的本质要求，是中国式现代化的重要特征。下列对共同富裕的理解，正确的有几项？",
+      "items": [
+        "共同富裕是全体人民共同富裕，是人民群众物质生活和精神生活都富裕，不是少数人的富裕，也不是整齐划一的平均主义",
+        "鼓励各地因地制宜探索有效途径，按照城市、农村以及东部、中部、西部，确立各自指标，分阶段促进共同富裕",
+        "要正确处理效率和公平的关系，构建初次分配、再分配、三次分配协调配套的基础性制度安排",
+        "实现共同富裕的目标，首先要通过全国人民共同奋斗把“蛋糕”做大做好，然后通过合理的制度安排正确处理增长和分配关系，把“蛋糕”切好分好"
+      ],
+      "options": {"A": "4 项", "B": "3 项", "C": "2 项", "D": "1 项"},
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 2}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 6,
+      "section": "常识判断",
+      "stem": "《“十四五”全国农业绿色发展规划》是我国首部农业绿色发展专项规划，对“十四五”农业绿色发展工作做出了系统部署和具体安排。下列与之相关的说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "在长江中下游、西南地区等南方粮食主产区集中示范耕作压盐技术模式",
+        "B": "到 2035 年，农村生态环境根本好转，绿色生产生活方式广泛形成",
+        "C": "以果菜茶优势区为重点推动粪肥还田利用，减少化肥用量",
+        "D": "在西北地区支持一批用膜大县整县推进农膜回收"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 2}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 7,
+      "section": "常识判断",
+      "stem": "下列与金融活动相关的说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "有价证券的债务人可以请求债权人支付相应对价",
+        "B": "开展储蓄业务有助于实现货币购买力和商品供应的平衡",
+        "C": "分红型商业保险的收益与保险公司的经营状况有关",
+        "D": "办理国家助学贷款的学生不需要办理贷款担保或抵押"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 3}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 8,
+      "section": "常识判断",
+      "stem": "根据《中华人民共和国退役军人保障法》，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "参战退役军人的随迁子女入学可以得到优先保障",
+        "B": "退役的军士和义务兵可以逐月领取退役金",
+        "C": "已被大学录取的现役军人可以在退伍后四年内入学",
+        "D": "退役军人创办企业可以享受免税、贷款免息等优惠政策"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 3}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 9,
+      "section": "常识判断",
+      "stem": "根据《中华人民共和国生物安全法》，下列说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "境外组织不得在我国从事中、高风险的生物技术研究、开发活动",
+        "B": "任何单位和个人未经批准，不得擅自引进、释放或者丢弃外来物种",
+        "C": "对高致病性的病原微生物，一律不得从事相关实验活动",
+        "D": "国家对我国人类遗传资源和生物资源享有主权"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 3}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 10,
+      "section": "常识判断",
+      "stem": "下列与交通安全有关的说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "机动车载运放射性危险物品应当经公安机关批准后按指定的时间、路线、速度行驶",
+        "B": "在允许拖拉机通行的道路上，拖拉机可以从事货运，但不得用于载人",
+        "C": "行人故意碰撞机动车造成交通事故的，机动车一方承担次要责任",
+        "D": "前车为执行紧急任务的救护车、工程救险车的，后车不得超车"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 3}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 11,
+      "section": "常识判断",
+      "stem": "关于电信诈骗，下列说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "非法使用“伪基站”实施电信诈骗的以非法侵入计算机信息系统罪追究刑事责任",
+        "B": "实施电信诈骗最高可被判处无期徒刑",
+        "C": "电信诈骗受害人可以通过诉讼程序要求服务存在缺陷的电信运营商承担相应责任",
+        "D": "负责招募他人实施电信网络诈骗犯罪活动的，以共同犯罪论处"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 3}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 12,
+      "section": "常识判断",
+      "stem": "根据《中华人民共和国职业教育法》，关于企业开展职业教育，下列说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "企业设立产教融合实训基地的，在公用事业费上享受高于职业学校的优惠政策",
+        "B": "企业应当按照职工工资总额的一定比例提取使用职工教育经费",
+        "C": "用于一线职工职业教育的经费应当达到国家规定比例",
+        "D": "企业安排职工到职业学校接受职业教育的，应支付职业教育期间工资"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 4}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 13,
+      "section": "常识判断",
+      "stem": "习近平主席在二〇二二年新年贺词中提到了“祝融”探火、“羲和”逐日、“天和”遨游星辰。下列与之相关的说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "“祝融号”火星车使用的是核动力电池",
+        "B": "“羲和号”是我国首颗太阳探测科学技术试验卫星",
+        "C": "聂海胜等三名航天员搭乘“神舟十四号”前往天和核心舱",
+        "D": "“祝融”“羲和”“天和”都是古代神话中的人物"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 4}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 14,
+      "section": "常识判断",
+      "stem": "“亲人送水来解渴，军民鱼水一家人。横断山，路难行。……乌江天险重飞渡，兵临贵阳逼昆明。敌人弃甲丢烟枪，我军乘胜赶路程。调虎离山袭金沙……”这是歌曲《四渡赤水出奇兵》中的一段歌词，下列与之相关的说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "“调虎离山袭金沙”是由毛泽东同志指挥的",
+        "B": "李白《蜀道难》描写的正是此地“路难行”的状况",
+        "C": "“军民鱼水”之情表现了沿途人民群众对新四军的支持",
+        "D": "“乌江天险”正是楚汉战争时项羽兵败自刎的地方"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 4}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 15,
+      "section": "常识判断",
+      "stem": "近年来，我国不断推进水生态修复保护工作。生态塘是包含水生动植物和微生物的一种水生态修复方式。下列与之相关的说法，错误的是：",
+      "items": null,
+      "options": {
+        "A": "狐尾藻可用于富营养化水体的生态修复是因其可吸收氮磷",
+        "B": "可以用生石灰对生态塘沿岸土壤进行消毒处理",
+        "C": "池塘中的水体出现黑臭时可通过种植芦苇等植物进行改善",
+        "D": "生态塘中的青鱼等肉食性鱼类主要在池塘上层水体活动"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 4}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 16,
+      "section": "常识判断",
+      "stem": "关于人体的生理现象，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "人体在流汗时汗腺内的盐分浓度会降低",
+        "B": "蚊虫叮咬造成的皮肤发痒属于过敏反应",
+        "C": "打嗝声是由胃部痉挛和声带闭合造成的",
+        "D": "皮肤受伤流血处的血管会先扩张后收缩"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 4}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 17,
+      "section": "常识判断",
+      "stem": "关于自然节律变化，下列说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "惊蛰后华北地区可能会出现“万里雪飘”的现象",
+        "B": "2月北回归线附近会出现“儿童急走追黄蝶，飞入菜花无处寻”的现象",
+        "C": "冬至时，在广东汕头竖直立杆会出现“立竿无影”的现象",
+        "D": "谷雨前后江浙地区可能会出现“一把青秧趁手青，轻烟漠漠雨冥冥”的现象"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 5}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 18,
+      "section": "常识判断",
+      "stem": "下列关于化石的说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "三叶虫化石是侏罗纪地层中的典型化石",
+        "B": "硅化木是树木埋入地下后形成的化石",
+        "C": "琥珀的硬度比和田玉大",
+        "D": "大多数化石是在侵入岩中被发现的"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 5}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 19,
+      "section": "常识判断",
+      "stem": "关于我国重要的资源调配工程，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "西气东输工程贯穿了新疆、甘肃、安徽等省区",
+        "B": "南水北调中线工程的起点是小浪底水库",
+        "C": "西电东送中部通道的电力主要来源于火力发电",
+        "D": "北煤南运的主要通道包括兰新线和陇海线"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 5}},
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 20,
+      "section": "常识判断",
+      "stem": "关于生活常识，下列说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "腹部核磁共振时憋气可让脏器显影更充分",
+        "B": "可以通过虫子取食痕迹判断蘑菇是否有毒",
+        "C": "食用蜡可以用于防止微生物对果实的侵害",
+        "D": "马铃薯切开后浸泡于清水中可以防止氧化"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null, "tag": null,
+      "answer": null, "answer_source": null, "explanation": null,
+      "media": [], "formulas": [], "material_ids": [],
+      "provenance": {"role": "main", "from_paper": null, "from_number": null, "diff_label": null, "raw_note": null, "source_ref": {"file": "20230124.pdf", "page": 5}},
+      "flags": ["answer_missing"]
+    }
+  ]
+}
