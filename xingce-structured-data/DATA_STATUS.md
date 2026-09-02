@@ -1,6 +1,6 @@
 # 数据入库状态
 
-最后更新：2026-08-21
+最后更新：2026-09-02（实测核对，非沿用旧表）
 
 ---
 
@@ -8,12 +8,38 @@
 
 | 年份 | 科目 | 状态 | 省级 | 市地 | 行政执法 | 媒体 |
 |------|------|------|------|------|----------|------|
-| 2025 | xingce | **ready** | 135 | 130 | 130 | pages≈31，figures≈32 |
-| 2024 | xingce | **papers_assembled** | 135 | ~125 | ~125 | 三卷已组，差异精确替换待完善 |
-| 2023 | xingce | empty | — | — | — | 空目录 |
-| 2022 | xingce | empty | — | — | — | 空目录 |
+| 2025 | xingce | **ready** | 135 | 130 | 130 | pages 31，figures 32 |
+| 2024 | xingce | **papers_assembled** | 135 | 125 | 125 | **0（全部待裁）** |
+| 2023 | xingce | empty | — | — | — | 源 PDF 已备 4 份 |
+| 2022 | xingce | empty | — | — | — | 源 PDF 已备 4 份 |
+| 2021 | — | 未初始化 | — | — | — | 源 PDF 已备 3 份，仓库无年份目录 |
+| 2020 | — | 未初始化 | — | — | — | 源 PDF 已备 3 份，仓库无年份目录 |
 
-机器可读索引：`catalog.json`。
+机器可读索引：`catalog.json`。数据格式规范：`_schema/conventions.md`（**当前 schema v2**）。
+
+**全库共性缺口**：780 题全部 `answer_missing` —— 答案与解析尚未入库（解析册 PDF 中已有，待扫描接入，见 `ANSWER_INGESTION_PLAN.md`）。v2 已为每题预留 `answer` / `explanation` / `answer_source` 字段与题号区间 `modules[].number_range`。
+
+**schema v2 迁移暴露的真实缺陷**（均已用 flag 登记，详见 conventions §3.6）：
+
+| 缺陷 | 范围 | flag |
+|---|---|---|
+| 判断推理末尾 5 题内容错配（实为言语/数量题） | 2025 三卷各 5 题 | `section_type_mismatch` |
+| 卷内重复题（数量#68≡判断#100、#71≡#101） | 2025 执法卷 2 组 | `duplicate_in_paper` |
+| 语句排序题的前置材料漏提取（引用 `m106_110` 悬空） | 2025 三卷 | `material_ref_dangling` |
+| 省级资料分析全部借市地材料，无原生题 | 2025 省级 20 题 | `material_borrowed` |
+| 媒体引用指向不存在的文件 | 2024 三卷 37 条 | `media_file_absent` |
+
+**命令**：
+
+```bash
+python3 scripts/xingce/normalize_papers.py --dry-run --merged   # 预览迁移
+python3 scripts/xingce/validate_papers.py                       # 校验（0 错误为通过）
+python3 scripts/xingce/sync_status.py                           # 重新生成 EXTRACT_STATUS + 回填 meta.modules
+```
+
+> `source/EXTRACT_STATUS.json` 现为**每年标准产物**（由 `sync_status.py` 生成，勿手工编辑），含各卷题量、答案与标签覆盖率、`open_flags` 聚合与待办清单。2024 `meta.json` 缺失的 `modules` 已回填，跨年结构现已一致。
+
+> 源 PDF 位置：本机 `~/真题文档/{年份}/*.pdf`，合计约 714MB，不入库。
 
 ---
 
@@ -21,19 +47,16 @@
 
 ### 路径
 
-正式：
+均在 `xingce-structured-data/2025/xingce/` 下：
 
-- `gongkao/2025/xingce/papers/shengji.json`
-- `gongkao/2025/xingce/papers/shidi.json`
-- `gongkao/2025/xingce/papers/xingzhengzhifa.json`
-- `gongkao/2025/xingce/papers/all_merged.json`（跨卷合并分析池）
-- `gongkao/2025/xingce/media/`
-- `gongkao/2025/xingce/meta.json`
+- `papers/shengji.json`
+- `papers/shidi.json`
+- `papers/xingzhengzhifa.json`
+- `papers/all_merged.json`（跨卷合并分析池，不作为「唯一真题」）
+- `media/`（pages 31 + figures 32 + `media_index.json`）
+- `meta.json`
 
-兼容旧路径（内容同源/硬链接，勿只改一侧）：
-
-- `gongkao_2025/2025_xingce_*.json`
-- `gongkao_2025/pages/`、`figures/`、`media_index.json`
+> 历史文档提到的 `gongkao/` 与 `gongkao_2025/` 双路径（内容同源、需两边同改）**当前仓库中不存在**，只有一份数据，无需双写。
 
 ### 题号与模块
 
@@ -97,7 +120,50 @@
 
 ---
 
-## 2024 / 2023 / 2022
+## 2024 详细说明
 
-- 仅完成目录初始化与空 `meta.json`。
-- `papers/` 为空，待按 `WORKFLOW.md` 入库。
+### 路径
+
+`xingce-structured-data/2024/xingce/`：`papers/{shengji,shidi,xingzhengzhifa}.json`、`_extract/`（7 个分模块中间文件）、`source/EXTRACT_STATUS.json`、`meta.json`。**`media/` 为空。**
+
+### 结构差异（与 2025 不同，勿套用题号模板）
+
+| 模块 | 省级 | 市地 / 行政执法 |
+|------|------|----------------|
+| 常识判断 | 20（1–20） | 20 |
+| 言语理解与表达 | 40（21–60） | 35 |
+| 数量关系 | 15（61–75） | 10 |
+| 判断推理 | 40（76–115） | 40 |
+| 资料分析 | 20（116–135） | 20 |
+| **合计** | **135** | **125（当前组装值，官方应为 130）** |
+
+**2024 没有独立的「政治理论」模块**，政治类内容并入常识判断（20 题）。
+
+### 中间产物
+
+`_extract/` 已落盘：`changshi.json`、`yuyan.json`、`shuliang.json`、`panduan.json`、`ziliao.json`、`xzzf_diffs.json`（判断 12 + 资料 5）、`yuyan_diffs.json`。
+
+### 缺口（按优先级）
+
+1. **市地 / 行政执法各缺 5 题**：以省级为底组装，差异题已提取但**未做精确槽位替换**，题量停在 125 而非 130。
+2. **图形媒体全缺**：`media/` 0 个文件。2024 判断推理含图形推理、资料分析含统计表图，这些题目前题干指向不存在的图，**展示端实际不可用**。
+3. **源 PDF 缺主卷一份**：`meta.source_files` 登记了 4 份（`20240124` / `20242548` / `20244972` / `20247377`），但本机 `~/真题文档/2024/` 实际只有 3 份，**缺 `20240124.pdf`**。市地言语差异（`20244972.pdf` 待精细提取）与之相关，需先确认该年源文件是否齐全。
+4. 答案与解析未收录（全库共性）。
+
+---
+
+## 2023 / 2022
+
+- 仅有 `xingce-structured-data/{2023,2022}/xingce/meta.json`，`papers/` 与 `media/` 为空，`source_files: []`。
+- ⚠️ `meta.json` 里的 135 / 130 / 130 是 `init_year.sh` 的**预设值，未经核实**；解析前须按 WORKFLOW §3 先确认当年实际模块构成。
+- 源 PDF 已备：`~/真题文档/2023/`（4 份，约 136MB）、`~/真题文档/2022/`（4 份，约 86MB）。
+
+## 2021 / 2020
+
+- **仓库内无年份目录**，未执行 `init_year.sh`。
+- 源 PDF 已备：`~/真题文档/2021/`（3 份，约 64MB）、`~/真题文档/2020/`（3 份，约 68MB）。
+- 注意：这两年的卷种设置可能与 2022+ 不同（行政执法类单列是近年才有的结构），解析前需先确认到底有几套卷。
+
+## 申论（未开工）
+
+`~/真题文档/申论/` 5 份 PDF（约 148MB）。结构与行测完全不同（题量少、给定资料长、含大作文），不能复用行测的解析流程与字段约定，需另立 schema。当前知行策论（申论）是首发垂直产品，这块的优先级值得单独评估。

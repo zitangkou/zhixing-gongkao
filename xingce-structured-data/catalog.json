@@ -1,7 +1,7 @@
 {
   "project": "国考行测真题结构化数据",
-  "root": "artifacts/gongkao",
-  "updated": "2026-08-21",
+  "root": "xingce-structured-data",
+  "updated": "2026-09-02",
   "years": [
     {
       "year": 2025,
@@ -60,7 +60,8 @@
           "total_questions": 125
         }
       ],
-      "notes": "省级完整；市地/行政执法以省级为底组装，差异题已提取，精确替换可继续"
+      "notes": "省级完整135；市地/行政执法以省级为底组装各125（官方应130，缺5题差异槽位替换）；media 为空（图形题不可用）；meta 登记4份源PDF但本机实际缺 20240124.pdf",
+      "media": { "pages": 0, "figures": 0 }
     },
     {
       "year": 2023,
@@ -68,7 +69,7 @@
       "status": "empty",
       "path": "2023/xingce",
       "papers": [],
-      "notes": "待入库"
+      "notes": "仅初始化；源PDF已备4份(~/真题文档/2023)；meta 中 135/130/130 为未验证预设"
     },
     {
       "year": 2022,
@@ -76,7 +77,39 @@
       "status": "empty",
       "path": "2022/xingce",
       "papers": [],
-      "notes": "待入库"
+      "notes": "仅初始化；源PDF已备4份(~/真题文档/2022)；meta 中 135/130/130 为未验证预设"
+    },
+    {
+      "year": 2021,
+      "subject": "xingce",
+      "status": "not_initialized",
+      "path": null,
+      "papers": [],
+      "notes": "仓库内无年份目录；源PDF已备3份(~/真题文档/2021)"
+    },
+    {
+      "year": 2020,
+      "subject": "xingce",
+      "status": "not_initialized",
+      "path": null,
+      "papers": [],
+      "notes": "仓库内无年份目录；源PDF已备3份(~/真题文档/2020)"
     }
-  ]
+  ],
+  "known_gaps": [
+    "780 题全部 answer_missing：答案与解析未入库（v2 已预留 answer/explanation/answer_source 字段），待解析册扫描接入",
+    "2025 三卷判断推理末尾各 5 题内容错配为言语/数量题，导致各缺 5 道真判断题（section_type_mismatch）",
+    "2025 行政执法卷存在 2 组卷内重复题（duplicate_in_paper）",
+    "2025 三卷判断推理引用的材料 m106_110 漏提取（material_ref_dangling）",
+    "2025 省级资料分析 20 题全部借自市地，无省级原生题（material_borrowed）",
+    "2024 三卷 media/ 为空但保留 37 条媒体引用，图形与图表题不可作答（media_file_absent）",
+    "2024 市地/行政执法各缺 5 题差异槽位（diff_pending_replace），且源 PDF 缺主卷 20240124.pdf",
+    "考点标签 topic/tag 覆盖率 0/780：无标签则无法做考点频次统计与模拟题专题去重（词表已建于 _schema/topic-vocabulary.json）"
+  ],
+  "schema_version": 2,
+  "tools": {
+    "validate": "scripts/xingce/validate_papers.py",
+    "migrate": "scripts/xingce/normalize_papers.py",
+    "status": "scripts/xingce/sync_status.py"
+  }
 }

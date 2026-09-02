@@ -15,13 +15,15 @@
 
 ## 必读顺序
 
-1. `README.md` — 目录与题量总览  
-2. `DATA_STATUS.md` — 当前哪一年可用、有何缺口  
-3. `_schema/conventions.md` — 改 JSON 时必须遵守的字段  
-4. 目标年份的 `meta.json` + `papers/*.json`
+1. `WORKFLOW.md` — 流程 + **§3 跨年结构差异**（最易踩坑：题号模板不可跨年套用）
+2. `README.md` — 目录与题量总览
+3. `DATA_STATUS.md` — 当前哪一年可用、有何缺口
+4. `_schema/conventions.md` — 改 JSON 时必须遵守的字段
+5. 目标年份的 `meta.json` + `papers/*.json`
 
-**正式数据路径：** `artifacts/gongkao/{YEAR}/xingce/`  
-**不要**把新年份数据只写到 `gongkao_2025/`（那是 2025 早期兼容路径）。
+**数据根目录：** `xingce-structured-data/{YEAR}/xingce/`（即本目录）
+
+> 历史文档提到的 `artifacts/gongkao/`、`gongkao_2025/` 双路径**当前仓库中不存在**，只有一份数据，无需双写、也不存在「别只改一侧」的问题。
 
 ---
 
@@ -56,19 +58,21 @@
 ## 修改数据时
 
 1. 先读对应 `papers/*.json` **全文结构**，再改。
-2. 改完后核对：`actual_question_count` 与各 section 的 `question_count`、题号连续性。
-3. 更新该年 `meta.json` 的 `updated` / `status`。
+2. 改完运行 `python3 scripts/xingce/validate_papers.py` 校验（题量、题号连续、`type` 枚举、媒体存在性、材料引用、卷内重复、列举条目完整性），不要靠肉眼核对。
+3. **状态不要手工改**：`source/EXTRACT_STATUS.json` 与 `meta.json` 的 `modules` 由 `python3 scripts/xingce/sync_status.py` 生成/回填；`updated` / `status` 也由其写入。
 4. 更新根目录 `catalog.json` 与 `DATA_STATUS.md`。
-5. 不要删除旧路径 `gongkao_2025/`，除非用户明确要求迁移删除。
+5. **考点标签只能走受控词表** `_schema/topic-vocabulary.json`：`topic` 取板块、`tag` 取该板块下的专题，成对填写；无法归类时留 `null` 并进待扩充清单，**不要生造标签**；确需新标签必须先回写词表。
+6. **引入新的已知缺陷必须同时给相关题目加 `flags`**（见 `_schema/conventions.md` §3.6）——校验器对已登记缺陷只警告，未登记会以错误退出。禁止为了过校验而删标记或改数据掩盖问题。
+7. 格式类变更走 `scripts/xingce/normalize_papers.py`（先 `--dry-run`）。⚠️ 该脚本会跳过已是 v2 的文件，**改规则后必须先 `git checkout` 回退到 v1 再重跑**，否则新规则不生效。
 
 ---
 
 ## 禁止事项
 
 - 不要发明未解析的题干充作真题正文（可用明确「待补全」占位，并在 DATA_STATUS 登记）。
-- 不要把市地题号硬套到省级卷而不做模块边界调整。
-- 不要在 `artifacts/` 下新增与 `gongkao/` 平行的第二套「国考根目录」。
-- 不要把临时解析脚本长期放在 `artifacts/`（应放临时目录）。
+- 不要把市地题号硬套到省级卷而不做模块边界调整，也不要把某一年的题号模板套给另一年（结构不同，见 `WORKFLOW.md` §3）。
+- 不要在本数据目录下另建一套平行的「国考根目录」（历史上曾出现 `gongkao/` 与 `gongkao_2025/` 双份，导致要改两处；现只允许 `xingce-structured-data/{YEAR}/xingce/`）。
+- 不要把解析脚本散落在数据目录或临时目录后丢失：可复用的渲染、裁图、校验、组装脚本应放仓库根 `scripts/`，便于跨年重跑。
 
 ---
 

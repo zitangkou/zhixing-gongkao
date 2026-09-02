@@ -7,40 +7,166 @@
     "shengji": {
       "paper_type": "省级",
       "total_questions": 135,
-      "modules": {
-        "政治理论": [1, 20],
-        "常识判断": [21, 35],
-        "言语理解与表达": [36, 65],
-        "数量关系": [66, 80],
-        "判断推理": [81, 115],
-        "资料分析": [116, 135]
-      },
+      "modules": [
+        {
+          "name": "政治理论",
+          "number_range": [
+            1,
+            20
+          ],
+          "question_count": 20
+        },
+        {
+          "name": "常识判断",
+          "number_range": [
+            21,
+            35
+          ],
+          "question_count": 15
+        },
+        {
+          "name": "言语理解与表达",
+          "number_range": [
+            36,
+            65
+          ],
+          "question_count": 30
+        },
+        {
+          "name": "数量关系",
+          "number_range": [
+            66,
+            80
+          ],
+          "question_count": 15
+        },
+        {
+          "name": "判断推理",
+          "number_range": [
+            81,
+            115
+          ],
+          "question_count": 35
+        },
+        {
+          "name": "资料分析",
+          "number_range": [
+            116,
+            135
+          ],
+          "question_count": 20
+        }
+      ],
       "file": "papers/shengji.json"
     },
     "shidi": {
       "paper_type": "市地级",
       "total_questions": 130,
-      "modules": {
-        "政治理论": [1, 20],
-        "常识判断": [21, 35],
-        "言语理解与表达": [36, 65],
-        "数量关系": [66, 75],
-        "判断推理": [76, 110],
-        "资料分析": [111, 130]
-      },
+      "modules": [
+        {
+          "name": "政治理论",
+          "number_range": [
+            1,
+            20
+          ],
+          "question_count": 20
+        },
+        {
+          "name": "常识判断",
+          "number_range": [
+            21,
+            35
+          ],
+          "question_count": 15
+        },
+        {
+          "name": "言语理解与表达",
+          "number_range": [
+            36,
+            65
+          ],
+          "question_count": 30
+        },
+        {
+          "name": "数量关系",
+          "number_range": [
+            66,
+            75
+          ],
+          "question_count": 10
+        },
+        {
+          "name": "判断推理",
+          "number_range": [
+            76,
+            110
+          ],
+          "question_count": 35
+        },
+        {
+          "name": "资料分析",
+          "number_range": [
+            111,
+            130
+          ],
+          "question_count": 20
+        }
+      ],
       "file": "papers/shidi.json"
     },
     "xingzhengzhifa": {
       "paper_type": "行政执法类",
       "total_questions": 130,
-      "modules": {
-        "政治理论": [1, 20],
-        "常识判断": [21, 35],
-        "言语理解与表达": [36, 65],
-        "数量关系": [66, 75],
-        "判断推理": [76, 110],
-        "资料分析": [111, 130]
-      },
+      "modules": [
+        {
+          "name": "政治理论",
+          "number_range": [
+            1,
+            20
+          ],
+          "question_count": 20
+        },
+        {
+          "name": "常识判断",
+          "number_range": [
+            21,
+            35
+          ],
+          "question_count": 15
+        },
+        {
+          "name": "言语理解与表达",
+          "number_range": [
+            36,
+            65
+          ],
+          "question_count": 30
+        },
+        {
+          "name": "数量关系",
+          "number_range": [
+            66,
+            75
+          ],
+          "question_count": 10
+        },
+        {
+          "name": "判断推理",
+          "number_range": [
+            76,
+            110
+          ],
+          "question_count": 35
+        },
+        {
+          "name": "资料分析",
+          "number_range": [
+            111,
+            130
+          ],
+          "question_count": 20
+        }
+      ],
       "file": "papers/xingzhengzhifa.json"
     }
   },
@@ -62,5 +188,5 @@
     "media_paths": "相对本目录 media/ 的相对路径"
   },
   "status": "ready",
-  "updated": "2026-08-21"
+  "updated": "2026-09-02"
 }
