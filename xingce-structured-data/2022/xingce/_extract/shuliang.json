@@ -1,0 +1,550 @@
+{
+  "module": "数量关系",
+  "year": 2022,
+  "range": "61-75",
+  "source_pages": "20220124.pdf p20-p22",
+  "status": "done",
+  "note": "主卷为省级卷，数量关系15题（61-75）。市地级/行政执法卷数量为10题，差异题见差异册。",
+  "questions": [
+    {
+      "number": 61,
+      "section": "数量关系",
+      "stem": "某企业职工筹款给甲村学龄儿童购买学习用具，如按100元/人的标准执行则资金剩余550元，如按120元/人的标准执行则还需筹集630元。现额外筹集2510元，且最终按80元/人的标准，正好能给甲、乙两村的学龄儿童购买学习用具。问：乙村学龄儿童有多少人？",
+      "items": null,
+      "options": {
+        "A": "50",
+        "B": "53",
+        "C": "56",
+        "D": "59"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 20
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 62,
+      "section": "数量关系",
+      "stem": "甲、乙、丙、丁、戊5名职工参加党史知识测验，每人得分均不相同。甲和乙的平均分比丙多2分，丁和戊的平均分比丁多5分，甲、乙的平均分比丙、丁、戊的平均分多3分。则丙、丁、戊三人得分的排序为：",
+      "items": null,
+      "options": {
+        "A": "丙>丁>戊",
+        "B": "丙>戊>丁",
+        "C": "丁>丙>戊",
+        "D": "戊>丙>丁"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 20
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 63,
+      "section": "数量关系",
+      "stem": "企业列出500万元设备采购预算，如用于购买x台进口设备，最后剩余20万元。经董事会研究后，决定购买质量更高的同类国产设备，单价仅为进口设备的75%。当前预算可购买(x+3)台，最后剩余5万元。问：国产设备的单价在以下哪个范围内？",
+      "items": null,
+      "options": {
+        "A": "不到30万元/台",
+        "B": "30~40万元/台",
+        "C": "40~50万元/台",
+        "D": "50万元/台以上"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 20
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 64,
+      "section": "数量关系",
+      "stem": "甲和乙两个乡村图书室共有5000本藏书，其中甲图书室的藏书比乙图书室多3x本。现从甲图书室中取出150本书放入乙图书室后，甲图书室的藏书仍比乙图书室多2x本。问：甲图书室原有图书多少本？",
+      "items": null,
+      "options": {
+        "A": "2500",
+        "B": "2750",
+        "C": "2950",
+        "D": "3500"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 20
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 65,
+      "section": "数量关系",
+      "stem": "李某骑车从甲地出发前往乙地，出发时的速度为15千米/时，此后均匀加速，骑行25%的路程后速度达到21千米/时。剩余路段保持此速度骑行，总路程前半段比后半段多用时3分钟。问：甲、乙两地之间的距离在以下哪个范围内？",
+      "items": null,
+      "options": {
+        "A": "不到23千米",
+        "B": "在23~24千米",
+        "C": "在24~25千米",
+        "D": "超过25千米"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 21
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 66,
+      "section": "数量关系",
+      "stem": "高校某专业70多名毕业生中，有96%在毕业后去西部省区支援国家建设。其中去偏远中小学支教的毕业生占该专业毕业生总数的20%，比任职大学生村官的毕业生少2人，比在西部地区参军入伍的毕业生多1人，其余的毕业生选择去国有企业西部边远岗位工作。问：去国有企业西部边远岗位工作的毕业生有多少人？",
+      "items": null,
+      "options": {
+        "A": "23",
+        "B": "26",
+        "C": "29",
+        "D": "32"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 21
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 67,
+      "section": "数量关系",
+      "stem": "某地引进新的杂交水稻品种，今年每亩稻谷产量比上年增加了20%，且由于口感改善，每斤稻谷的售价从1.5元提升到1.65元。以此计算，今年每亩稻谷的销售收入比上年高660元。问：今年的稻谷亩产是多少斤？",
+      "items": null,
+      "options": {
+        "A": "1375",
+        "B": "1650",
+        "C": "1980",
+        "D": "2200"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 21
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 68,
+      "section": "数量关系",
+      "stem": "某种商品的定价为成本的1.5倍，如果在降价30元/件的基础上再打八折，则销售5件这种商品的利润比原价销售1件时多130元。问：用以下哪种折扣销售时，1.5万元能买到的件数正好比原价销售时多4件？",
+      "items": null,
+      "options": {
+        "A": "先降价50元/件再打八折",
+        "B": "先打九折再降价50元/件",
+        "C": "降价150元/件",
+        "D": "打八五折"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 21
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 69,
+      "section": "数量关系",
+      "stem": "某县通过发展旅游业来实现乡村振兴，引进了甲、乙、丙、丁、戊和己6名专家。其中甲、乙、丙是环境保护专家，丁、戊、己是旅游行业专家，甲、丁、戊熟悉社交媒体宣传。现要将6名专家平均分成2个小组，每个小组都要有环境保护专家、旅游行业专家和熟悉社交媒体宣传的人，问：有多少种不同的分组方式？",
+      "items": null,
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "12",
+        "D": "24"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 21
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 70,
+      "section": "数量关系",
+      "stem": "某水果种植特色镇创办水果加工厂，从去年年初开始通过电商平台销售桃汁、橙汁两种产品。从去年2月开始，每个月桃汁的销量都比上个月多5000盒，橙汁的销量都比上个月多2000盒。已知去年第一季度桃汁的总销量比橙汁少4.5万盒，则去年桃汁的销量比橙汁：",
+      "items": null,
+      "options": {
+        "A": "少不到5万盒",
+        "B": "少5万盒以上",
+        "C": "多不到5万盒",
+        "D": "多5万盒以上"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 21
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 71,
+      "section": "数量关系",
+      "stem": "救灾部门紧急运送两批大米分给受灾群众。已知甲村人数是丙村的2倍，如果两批大米都给甲村，每人正好能分24斤；如果第一批大米分给乙村，每人正好能分12斤，第二批大米分给甲、乙、丙三个村，每人正好能分4斤。为尽量保障受灾群众的基本需求，现决定另运送一批面粉分给甲村，并将两批大米都分给乙、丙两村。问：乙、丙两村平均每人分到的大米重量在以下哪个范围内？",
+      "items": null,
+      "options": {
+        "A": "不到14斤",
+        "B": "14~15斤",
+        "C": "15~16斤",
+        "D": "16斤以上"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 22
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 72,
+      "section": "数量关系",
+      "stem": "一个圆柱体零件的高为1，其圆形底面上的内接正方形边长正好也为1。现将该圆柱体零件切割4次，得到棱长为1的正方体，则切去部分的总表面积为：",
+      "items": null,
+      "options": {
+        "A": "√2(π+2)",
+        "B": "(√2+1)π+2",
+        "C": "2√2(π-2)",
+        "D": "2√2π-2"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 22
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 73,
+      "section": "数量关系",
+      "stem": "为降低碳排放，企业对生产设备进行改造，改造后日产量下降了10%，但生产每件产品的能耗成本下降了50%，其他成本和出厂价不变的情况下每天的利润提高了10%。已知单件利润=出厂价-能耗成本-其他成本，且改造前产品的出厂价是单件利润的3倍，则改造前能耗成本为其他成本的：",
+      "items": null,
+      "options": {
+        "A": "不到1/4",
+        "B": "1/4~1/3",
+        "C": "1/3~1/2",
+        "D": "超过1/2"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 22
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 74,
+      "section": "数量关系",
+      "stem": "甲和乙两条效率相同的生产线从早上不同时间开始生产同一种产品，到中午12:00时分别正好生产了x件和y件。已知乙生产x件时，甲生产了54件；甲生产y件时，乙生产了1.5x件。如乙从9:00开始生产且12:00后两条生产线仍保持原有速度，问两条生产线生产的产品总量达到500件是在什么时候？",
+      "items": null,
+      "options": {
+        "A": "16:30之前",
+        "B": "16:30—17:00",
+        "C": "17:00—17:30",
+        "D": "17:30之后"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 22
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 75,
+      "section": "数量关系",
+      "stem": "甲地在丙地正西17千米，乙地在丙地正北8千米。张从甲地、李从乙地同时出发，分别向正东和正南方向匀速行走。两人速度均为整数千米/时，且1小时后两人的直线距离为13千米，又经过3小时后两人均经过了丙地且直线距离为5千米。已知李的速度是张的60%，则张经过丙地的时间比李：",
+      "items": null,
+      "options": {
+        "A": "早不到10分钟",
+        "B": "早10分钟以上",
+        "C": "晚不到10分钟",
+        "D": "晚10分钟以上"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 22
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    }
+  ]
+}

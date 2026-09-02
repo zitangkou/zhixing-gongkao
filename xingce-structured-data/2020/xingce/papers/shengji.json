@@ -1,0 +1,5120 @@
+{
+  "schema_version": 2,
+  "exam_year": 2020,
+  "exam_name": "2020年度国家公务员考试",
+  "paper_type": "省级",
+  "total_questions": 135,
+  "actual_question_count": 135,
+  "modules": [
+    {
+      "name": "常识判断",
+      "number_range": [
+        1,
+        20
+      ],
+      "question_count": 20
+    },
+    {
+      "name": "言语理解与表达",
+      "number_range": [
+        21,
+        60
+      ],
+      "question_count": 40
+    },
+    {
+      "name": "数量关系",
+      "number_range": [
+        61,
+        75
+      ],
+      "question_count": 15
+    },
+    {
+      "name": "判断推理",
+      "number_range": [
+        76,
+        115
+      ],
+      "question_count": 40
+    },
+    {
+      "name": "资料分析",
+      "number_range": [
+        116,
+        135
+      ],
+      "question_count": 20
+    }
+  ],
+  "notes": "2020 省级卷 135 题：市地共享83 + 省级独有52。",
+  "media_index": {},
+  "sections": [
+    {
+      "name": "常识判断",
+      "number_range": [
+        1,
+        20
+      ],
+      "question_count": 20,
+      "materials": [],
+      "questions": [
+        {
+          "diff_label": "①",
+          "stem": "习近平总书记为我国生态文明建设倾注了巨大心血，足迹遍布大江南北、城市乡村，对各地的生态环境情况都了然于心、深思细究，对很多地域的生态环境寄予了期望。以下“期望”与地域对应正确的是：",
+          "items": null,
+          "options": {
+            "A": "要留住“飞泉泻万仞，舞鹤双低昂”那样的风景——贵州",
+            "B": "“长烟一空，皓月千里，浮光跃金，静影沉璧”这样的乡情美景不能弄没了——湖南",
+            "C": "要确保“一江清水向东流”——重庆",
+            "D": "要保护好“洞庭波涌连天雪，长岛人歌动地诗”——江西"
+          },
+          "options_in_media": false,
+          "type": "常识判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 1,
+            "diff_label": "①",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 39
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 1,
+          "section": "常识判断"
+        },
+        {
+          "diff_label": "②",
+          "stem": "坚决打好“三大攻坚战”，是党的十九大提出的重大政治任务，是2020年决胜全面建成小康社会的迫切要求。以下哪幅漫画不适合用于“三大攻坚战”的宣传？",
+          "items": null,
+          "options": null,
+          "options_in_media": true,
+          "type": "常识判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 2,
+            "diff_label": "②",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 39
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ],
+          "number": 2,
+          "section": "常识判断"
+        },
+        {
+          "number": 3,
+          "section": "常识判断",
+          "type": "常识判断",
+          "stem": "党的十九大报告指出，发展必须是科学发展，必须坚定不移贯彻创新、协调、绿色、开放、共享的发展理念。下列与之有关的说法，正确的有几项？",
+          "items": [
+            "创新发展注重的是解决发展动力问题",
+            "协调发展注重的是解决社会公平正义问题",
+            "绿色发展注重的是解决人与自然和谐共生问题",
+            "开放发展注重的是解决发展内外联动问题",
+            "共享发展注重的是解决发展不平衡问题"
+          ],
+          "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 3,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 1
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 4,
+          "section": "常识判断",
+          "type": "常识判断",
+          "stem": "时代楷模是具有很强先进性、代表性、时代性和典型性的先进人物。下列时代楷模与事迹特点对应正确的是：",
+          "items": null,
+          "options": {
+            "A": "杜富国——践行社会主义核心价值观的优秀知识分子",
+            "B": "张富清——95岁老党员的本色人生",
+            "C": "黄文秀——用生命担当使命的新时代英雄战士",
+            "D": "黄大年——乡村教育守望者"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 4,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 1
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 5,
+          "section": "常识判断",
+          "type": "常识判断",
+          "stem": "党内监督必须把纪律挺在前面，运用监督执纪“四种形态”，经常开展批评和自我批评、约谈函询，让“红红脸、出出汗”成为常态；党纪轻处分、组织调整成为违纪处理的大多数；党纪重处分、重大职务调整的成为少数；严重违纪涉嫌违法立案审查的成为极少数。这是从中国共产党的历史和党的十八大以来管党治党实践中总结出来的，体现了惩前毖后、治病救人的一贯方针。下列党员受到处理的案例，属于“党纪重处分、重大职务调整的成为少数”这种形态的是：",
+          "items": null,
+          "options": {
+            "A": "某市农业农村局办公室主任黄某因公车私用问题，受到党内警告处分，违纪款予以收缴",
+            "B": "某镇政府公益性岗位工作人员杜某因违反工作纪律，被解除劳动关系",
+            "C": "某规划建设局局长戴某因在下属单位报销费用、私设小金库、滥发奖金等，受到留党察看两年处分",
+            "D": "某市政协原副主席杨某因涉嫌严重违纪违法问题，移送检察机关依法审查起诉"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 5,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 2
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "③",
+          "stem": "下列图片所反映的历史事件，按时间先后顺序排列正确的是：（图①红船、图②长征从于都出发、图③古田会议、图④西柏坡）",
+          "items": null,
+          "options": {
+            "A": "①③②④",
+            "B": "①②③④",
+            "C": "②③①④",
+            "D": "②①③④"
+          },
+          "options_in_media": false,
+          "type": "常识判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 6,
+            "diff_label": "③",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 40
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ],
+          "number": 6,
+          "section": "常识判断"
+        },
+        {
+          "diff_label": "④",
+          "stem": "关于陶瓷，下列说法错误的是：",
+          "items": null,
+          "options": {
+            "A": "“入窑一色，出窑万彩”是钧瓷的特点",
+            "B": "唐三彩中最具代表性的造型是虎和骆驼",
+            "C": "紫砂壶是用含铁量较高的黏土制成的",
+            "D": "景德镇在宋代时期主要烧制青白瓷"
+          },
+          "options_in_media": false,
+          "type": "常识判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 7,
+            "diff_label": "④",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 40
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 7,
+          "section": "常识判断"
+        },
+        {
+          "number": 8,
+          "section": "常识判断",
+          "type": "常识判断",
+          "stem": "关于党在新时代的强军目标，下列说法正确的是：",
+          "items": null,
+          "options": {
+            "A": "力争到本世纪中叶基本实现国防和军队现代化",
+            "B": "到2035年把人民军队全面建成世界一流军队",
+            "C": "确保到2020年全面实现机械化",
+            "D": "建设一支听党指挥、能打胜仗、作风优良的人民军队"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 8,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 2
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "⑤",
+          "stem": "关于诗句涉及的物候特征，下列对应错误的是：",
+          "items": null,
+          "options": {
+            "A": "不知近水花先发，疑是经冬雪未销——水对温度的调节作用",
+            "B": "春风疑不到天涯，二月山城未见花——海拔对植物生长的影响",
+            "C": "羌笛何须怨杨柳，春风不度玉门关——冷锋过境产生的天气变化",
+            "D": "南枝向暖北枝寒，一种春风有两般——光照对植物的影响"
+          },
+          "options_in_media": false,
+          "type": "常识判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 9,
+            "diff_label": "⑤",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 40
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 9,
+          "section": "常识判断"
+        },
+        {
+          "diff_label": "⑥",
+          "stem": "下列关于电池的说法错误的是：",
+          "items": null,
+          "options": {
+            "A": "自行放电是蓄电池不可避免的渐生故障",
+            "B": "锂电池不会产生铅、汞等有害重金属物质",
+            "C": "干电池利用液态电解液产生电流",
+            "D": "太阳能电池产生的电是直流电"
+          },
+          "options_in_media": false,
+          "type": "常识判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 10,
+            "diff_label": "⑥",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 40
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 10,
+          "section": "常识判断"
+        },
+        {
+          "diff_label": "⑦",
+          "stem": "关于能量与做功，下列说法正确的是：",
+          "items": null,
+          "options": {
+            "A": "雨点从高空中匀速下落时只有重力做功",
+            "B": "自由落体过程中物体的机械能保持不变",
+            "C": "匀速圆周运动的物体动能始终发生变化",
+            "D": "向上飞的石子重力做负功导致势能减小"
+          },
+          "options_in_media": false,
+          "type": "常识判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 11,
+            "diff_label": "⑦",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 40
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 11,
+          "section": "常识判断"
+        },
+        {
+          "number": 12,
+          "section": "常识判断",
+          "type": "常识判断",
+          "stem": "“套路贷”是假借民间借贷名义，非法占有被害人财物的违法犯罪行为，是扫黑除恶专项斗争的重点打击对象。下列关于“套路贷”的说法正确的是：",
+          "items": null,
+          "options": {
+            "A": "因“套路贷”属于非法行为，追债时一般不会采用仲裁、诉讼方式",
+            "B": "因法律规定民间借贷最高年利率为36%，故超过36%的可认定为“套路贷”",
+            "C": "“套路贷”犯罪案件可由犯罪行为发生地、结果发生地及犯罪嫌疑人居住地公安机关侦查",
+            "D": "我国刑法设置有专门针对“套路贷”的罪名"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 12,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 3
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 13,
+          "section": "常识判断",
+          "type": "常识判断",
+          "stem": "社会信用体系的建立有利于提高全社会的诚信意识和信用水平。下列关于国家加快社会信用体系建设的说法错误的是：",
+          "items": null,
+          "options": {
+            "A": "“重点突破，强化应用”是社会信用体系建设的主要原则之一",
+            "B": "推进青年信用体系建设，逐步应用到青年入学、就业、创业等领域",
+            "C": "使统一社会信用代码成为企业的唯一身份代码",
+            "D": "为惩戒失信被执行人，规定其不得以财产支付子女就读高等院校的费用"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 13,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 3
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 14,
+          "section": "常识判断",
+          "type": "常识判断",
+          "stem": "关于近五年我国天文科技成就，下列说法错误的是：",
+          "items": null,
+          "options": {
+            "A": "拥有了世界最大口径光学红外望远镜",
+            "B": "在中国首次成功实现了月球激光测距",
+            "C": "发现了新的太阳系外行星族群——热海星",
+            "D": "发现了迄今为止最高能量的宇宙伽马射线"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 14,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 4
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 15,
+          "section": "常识判断",
+          "type": "常识判断",
+          "stem": "下列言论中涉及的人才选拔制度，按出现顺序先后排列正确的是：",
+          "items": [
+            "学通行修，经中博士",
+            "宗室非有军功论，不得为属籍",
+            "九品访人，唯问中正",
+            "风吹金榜落凡世，三十三人名字香"
+          ],
+          "options": {
+            "A": "②④①③",
+            "B": "②①③④",
+            "C": "①③②④",
+            "D": "③②④①"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 15,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 4
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 16,
+          "section": "常识判断",
+          "type": "常识判断",
+          "stem": "下列与成语有关的描述错误的是：",
+          "items": null,
+          "options": {
+            "A": "“叶落归根”是因为地球表面的物体受到重力的作用",
+            "B": "“青出于蓝”描述的是传统植物染料的提取过程",
+            "C": "“沙里淘金”中的“金”属于金属单质",
+            "D": "“囊萤映雪”中“囊萤”和“映雪”包含的光学原理相同"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 16,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 4
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "⑧",
+          "stem": "白居易有诗云：“绿蚁新醅酒，红泥小火炉。晚来天欲雪，能饮一杯无？”下列与该诗相关的说法正确的是：",
+          "items": null,
+          "options": {
+            "A": "“醅酒”的过程利用了微生物的作用",
+            "B": "“绿蚁”是因为酒中添加了可食用调色剂",
+            "C": "炉火燃烧的过程是内能转化成化学能",
+            "D": "从雪到水的转化过程会释放热量"
+          },
+          "options_in_media": false,
+          "type": "常识判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 17,
+            "diff_label": "⑧",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 41
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 17,
+          "section": "常识判断"
+        },
+        {
+          "diff_label": "⑨",
+          "stem": "关于塑料大棚，下列说法正确的是：",
+          "items": null,
+          "options": {
+            "A": "塑料大棚的薄膜能够提高光照强度",
+            "B": "搭建塑料大棚能有效防御地质灾害",
+            "C": "无土栽培技术必须在塑料大棚中进行",
+            "D": "冬季在塑料大棚内熏烟有助于防御霜冻"
+          },
+          "options_in_media": false,
+          "type": "常识判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 18,
+            "diff_label": "⑨",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 41
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 18,
+          "section": "常识判断"
+        },
+        {
+          "diff_label": "⑩",
+          "stem": "下列与疫苗有关的说法正确的是：",
+          "items": null,
+          "options": {
+            "A": "疫苗通过三角肌注射才能产生作用",
+            "B": "卡介苗是典型的活疫苗",
+            "C": "免疫力弱的人不能接种疫苗",
+            "D": "疫苗的接种者必须是健康个体"
+          },
+          "options_in_media": false,
+          "type": "常识判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 19,
+            "diff_label": "⑩",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 41
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 19,
+          "section": "常识判断"
+        },
+        {
+          "number": 20,
+          "section": "常识判断",
+          "type": "常识判断",
+          "stem": "下列与现代通信科技有关的说法错误的是：",
+          "items": null,
+          "options": {
+            "A": "高密度无线网络技术是5G移动通信技术的关键之一",
+            "B": "路由器可以根据信道情况自动选择和设定路由",
+            "C": "计算机通信的基本原理是将逻辑信号转换为电信号",
+            "D": "无线局域网利用射频技术进行通信连接"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 20,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 5
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "言语理解与表达",
+      "number_range": [
+        21,
+        60
+      ],
+      "question_count": 40,
+      "materials": [
+        {
+          "id": "m_diff_guanmian",
+          "title": "冠冕文章阅读材料",
+          "kind": "text",
+          "number_range": [],
+          "content": "①1928年，洛阳金村的古墓里出土了数千件战国时期文物，其中有一面镜子，上面雕镂着一个披甲执剑、头上戴冠的武官。有趣的是，冠两侧都插着羽毛，专家认为那是一种名为“鹖”的鸟的尾羽，这种冠就叫“鹖冠”。“鹖冠”是战国到汉代时武官所戴之冠，鹖鸟生性好斗，至死不却，因此武官佩戴鹖冠，以此昭示英勇气概。\n②武官戴“鹖冠”，文官的冠则叫“进贤冠”，代表文官有举荐贤能的义务。那么“进贤冠”又有怎样的装饰呢？山东沂南汉墓出土的画像石上有一个画面：两位身穿袍服的文官，头戴“进贤冠”，耳旁像簪花一样插着一支笔，这种装饰叫作“簪笔”。“簪笔”是汉代的一种制度，文官上朝奏事时，要在奏牍上书写，写完之后笔没处放，就插在耳边，久而久之就成了服制的定规。“簪笔”制度一直沿用到北朝，只不过换了一种形式，名称也由“簪笔”变成“垂笔”。\n③在古代男子的冠中，最尊贵的是“冕”。“冕”是帝王、诸侯和卿大夫所戴的一种礼冠，专门用于重大祭祀，也叫作“冕冠”。“冕冠”每个部分的形制都有特殊意义，比如其顶盖叫作“冕板”，一般为长条形，前圆后方，后端又比前端高出三厘米左右，这是象征戴冠者的匍匐形态，表示对天地宇宙的尊崇；“冕板”的前后两端分别垂挂数串玉珠，叫作“旒”，一旒就是一串珠玉。旒的多少视身份而定，帝王专用十二旒，其余按等级递减为九旒、七旒和五旒。在“冕板”的两侧还垂有两根丝带，下端分别系着一枚丸状玉石，名曰“充耳”。“旒”与“充耳”的设计也有用意：“旒”用来“障视”，“充耳”用来“止听”，这是提醒人们在庄严神圣的祭祀场合，不看不正之物，不听不正之语。成语“视而不见”和“充耳不闻”即由此而来。\n④冠冕形制如此复杂，却还不是极限。北周有位皇帝退位后当起了太上皇，为了将自己与现任皇帝区分开来，规定太上皇的冕用二十四串垂旒。但是旒数多了，走起路来更得小心翼翼、缓步而行，其实这也是戴冠冕的用意之一，就是要让人端正行走。身形一端正，人就显得有气派，这就是所谓“冠冕堂皇”。\n⑤当然，“冠冕”不仅仅是为了“堂皇”。《礼记·冠义》中说“冠者，礼之始也”，这是古人重视冠冕的主要原因。“礼”是古代社会的典章制度和道德规范，用于定亲疏、决嫌疑、别同异、明是非，是古代帝王稳定社会的手段。礼有如此宏大的意义，作为“礼之始”的冠当然意义非凡。所以在古代，冠不是随便什么人都戴的，古书上说“二十成人，士冠，庶人巾”。可见在当时，只有贵族子弟才能戴冠，平民百姓还没有这个资格。古代贵族男子到了二十岁，就要举行隆重的加冠典礼，以示成年，而后才能被赋予贵族子弟的各种权利和义务。冠礼极其复杂，单是加冠仪式就要举行三次，每次戴的冠都不一样，依次是缁布冠、皮弁和爵弁。这三种冠分别用于平日起居、打猎征战和祭祀活动，也分别象征着“士”的日常、战争和宗教生活。\n⑥冠的象征含义既然如此之多，那么可想而知，冠是不能乱戴的，乱戴就意味着不尊礼。《左传》曾记载过一桩“失礼”之事：卫国国君请两个大臣来朝中喝酒，两个大臣早早就穿着朝服在朝中等候，国君却忘记此事，跑到园子里打猎去了，两个大臣只好到园中见他。国君听闻，戴着打猎的皮弁就出来了，惹得两位大臣十分愤怒。由此可见，依据场合戴冠才是合乎礼制的，即使君王也不能无礼。所以孔子说“君子正其衣冠”，其意不仅在于要衣冠周正，还在于要符合礼仪。正因如此，孔子的弟子子路在即将战死的时候，也要将自己被打落的冠系好，所谓“君子死，冠不免”。在死亡面前，子路还要结缨正冠，这在现代人看来未免太过迂腐，但这正是当时所崇尚的君子品格，也说明服饰制度对经国治世有着非常重要的作用。这么一想，“冠冕”确实要“堂皇”。",
+          "table_data": null,
+          "media": [],
+          "note": ""
+        },
+        {
+          "id": "m_diff_3dheart",
+          "title": "3D打印心脏文章阅读材料",
+          "kind": "text",
+          "number_range": [],
+          "content": "近日，特拉维夫大学宣布该学校实验室3D打印出了一颗“心脏”，该心脏不仅具有外形，还有细胞、血管和其他支撑结构，甚至可以像心脏一样收缩，但长度只有2.5厘米。该实验团队负责人说：“与过去相比，这项研究成果的突破点在于，这不仅是一个外观打印的心脏，而且是世界上第一个利用患者自己的细胞和生物材料3D打印出的三维血管化的工程心脏，也就是具有血管组织的三维人造心脏。”而在此之前，科学家只成功打印出没有血管的简单组织。\n负责人补充道：“打印心脏的原料是从病人身上提取而来的，我们从网膜组织中提取细胞，对其进行编辑，使之成为干细胞，再将其转化为心肌细胞和内皮细胞。另外，提取非细胞组织，转变为一种‘个人特有的凝胶’来充当打印‘墨水’，这些由糖和蛋白质构成的材料能够用于3D打印复杂的组织模型。随后利用组织工程学的原理，在支架中填充细胞，以此让细胞得以更好地再生。”他说，该实验中使用的“打印原料”和“黏合胶水”来源于患者自身，对于成功构建组织和器官至关重要，这意味着由此打印出的心脏移植进本人身体后不会产生排异反应。而目前心脏移植术后的死亡率居高不下，主要与排异反应有关。\n如此看来，若特拉维夫大学的技术手段能在未来的人体试验阶段被证明有效，并在一定程度上解决排异问题，那确实将会是一个很大的突破。\n心脏体积大、细胞种类繁多，全体心肌细胞需要几乎同时收缩，才具有功能。心脏的跳动是因为心肌细胞都被紧密地连在一起，细胞产生的电信号使大批心肌细胞共同收缩。而且为使两个心房和两个心室协同收缩，心脏本身还有一套特殊的传导系统。虽然在体外生产几千万个心肌细胞并不困难，但是即便心脏被3D打印出来了，能不能跳是一回事，到底怎么跳则是另一回事。以临床病症为例，心室纤颤就是因为心肌细胞不能同步跳动。一旦跳动不同步，心脏就会瞬间失去泵血功能，导致病人死亡。\n特拉维夫大学此次打印出的心脏，还未能使大批细胞同步跳动并产生足够的力量。该负责人对此次实验的一些遗憾也并不讳言，“受限于我们3D打印机精度的问题，目前还不能打印出心脏上的所有血管，而且该心脏也不具有泵血功能”。3D打印出的这颗心脏，距离应用于动物实验，也长路漫漫。\n那么，为何特拉维夫大学团队打印出的心脏不能整齐地跳动？3D打印一个心脏到底难在哪里？答案与地球重力有关。“3D打印的黏附力不足以支撑心脏或肾脏这种大器官，地球重力会造成细胞间的撕裂”，哈佛大学一位研究员说，“生物3D打印的核心问题就是要解决生物材料和重力对3D打印细胞的影响”。\n生物3D打印小型器官模型是可行的，一旦打印真实尺寸的器官模型，由于细胞间的支撑力和黏合力有限，可能出现两个后果：一是下层细胞因受到上层细胞越来越大的压力而垮塌；一是即便没有垮塌，在转移过程中，上层细胞也会因无法承受下层细胞的重量而产生撕裂。\n总而言之，由于重力的存在，3D打印心脏的细胞间缺乏紧密联系，这会影响心脏的跳动，该心脏也就无法具有正常的泵血功能。但是，即便重力问题解决了，心脏可以整齐跳动了，3D打印心脏仍有难题未能克服——只有血液源源不断供给，打印的器官或组织才能长时间存活。如何建立血管网络，还没有明确的答案，______。心脏本身需要全身血液的10%左右来供养，一旦离开血液，所有器官都只能在4℃低温的状态下“熬着”。如果打印细胞需要37℃体温，几乎没有时间完成打印，因为先打上的细胞在打印还没完成时就会因缺氧而死去。这一切都还有待进一步研究。",
+          "table_data": null,
+          "media": [],
+          "note": ""
+        }
+      ],
+      "questions": [
+        {
+          "diff_label": "⑪",
+          "stem": "伴随衰老，人的记忆力会发生明显衰退。最近，《自然》子刊《自然·神经科学》杂志给出了潜在的解决方案。他们的方法看起来无比______：电击大脑。这当然不是“网瘾中心”那种野蛮的电击方式，而是一项有着出色设计的______实验，揭示了脑电波变化与衰老引起的记忆衰退之间的重要关系。填入画横线部分最恰当的一项是：",
+          "items": null,
+          "options": {
+            "A": "危险 神奇",
+            "B": "简单 有趣",
+            "C": "粗暴 严谨",
+            "D": "直接 安全"
+          },
+          "options_in_media": false,
+          "type": "选词填空",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 21,
+            "diff_label": "⑪",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 41
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 21,
+          "section": "言语理解与表达"
+        },
+        {
+          "number": 22,
+          "section": "言语理解与表达",
+          "type": "选词填空",
+          "stem": "传统饱和打击战术的核心，是从不同方向、不同层次向同一目标发射超出其防御上限的导弹，以数量优势形成绝对力量优势，压迫及摧毁其防御体系，对敌重要目标进行毁灭性打击。该战术需要庞大的火力投射平台和充足的武器弹药作支撑，这让世界上大多数国家______。",
+          "items": null,
+          "options": {
+            "A": "无可奈何",
+            "B": "望而却步",
+            "C": "束手无策",
+            "D": "裹足不前"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 22,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 6
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 23,
+          "section": "言语理解与表达",
+          "type": "选词填空",
+          "stem": "中国正处于经济结构转型升级和世界新一轮技术革命的交汇时期，创新驱动高质量发展渐成共识。没有管理创新、市场创新的商业创新模式______，有真实需求场景的教育、医疗健康、信息消费、消费升级等模式创新领域，将会迸发出新的投资机会。",
+          "items": null,
+          "options": {
+            "A": "举步维艰",
+            "B": "日薄西山",
+            "C": "岌岌可危",
+            "D": "难以为继"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 23,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 6
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 24,
+          "section": "言语理解与表达",
+          "type": "选词填空",
+          "stem": "“万物各得其和以生，各得其养以成”。这方面有很多鲜活生动的事例。始建于战国时期的都江堰，距今已有2000多年历史，就是根据岷江的洪涝规律和成都平原悬江的地势特点，______建设的大型生态水利工程，不仅造福当时，而且______。",
+          "items": null,
+          "options": {
+            "A": "因势利导 泽被后世",
+            "B": "因地制宜 经久不衰",
+            "C": "顺势而为 利在千秋",
+            "D": "物尽其用 历久弥新"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 24,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 6
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "⑫",
+          "stem": "在历史研究中，实证主义强调______，认为史学家是反映历史的镜子，其职责仅限于对史料进行严格考证、挑选和排列，让史料自身去制造历史，而自己则要______。这种观点忽视了史学家的主观能动性，过于绝对和冷漠，在后续的发展中受到很大质疑。填入画横线部分最恰当的一项是：",
+          "items": null,
+          "options": {
+            "A": "客观性 置身事外",
+            "B": "真实性 不动声色",
+            "C": "公正性 秉笔直书",
+            "D": "独立性 冷眼旁观"
+          },
+          "options_in_media": false,
+          "type": "选词填空",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 25,
+            "diff_label": "⑫",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 42
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 25,
+          "section": "言语理解与表达"
+        },
+        {
+          "number": 26,
+          "section": "言语理解与表达",
+          "type": "选词填空",
+          "stem": "渔业资源恢复是一个复杂而缓慢的过程，需要______的努力，如坚决减少捕捞力量、科学发展增殖渔业和加强栖息地保护与修复等。______生态系统水平的适应性对策，强化资源管理与养护，依然是下一步渔业资源恢复的重点工作。",
+          "items": null,
+          "options": {
+            "A": "坚韧不拔 制定",
+            "B": "锲而不舍 探索",
+            "C": "坚持不懈 借鉴",
+            "D": "有条不紊 研究"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 26,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 7
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "⑬",
+          "stem": "古城区发展到一定阶段，适度的提升改造是必要的，但如果是通过“拆真”来为“建假”腾出地方，这样的开发改造必然是______。其实，提升改造与对老建筑的保护本来可以______，恰当的修缮，不但可以让历史建筑重新焕发活力，也能够提升城区的整体质量，达到提升改造的目的。填入画横线部分最恰当的一项是：",
+          "items": null,
+          "options": {
+            "A": "顾此失彼 齐头并进",
+            "B": "暴殄天物 双管齐下",
+            "C": "得不偿失 并行不悖",
+            "D": "舍本逐末 并驾齐驱"
+          },
+          "options_in_media": false,
+          "type": "选词填空",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 27,
+            "diff_label": "⑬",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 42
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 27,
+          "section": "言语理解与表达"
+        },
+        {
+          "diff_label": "⑭",
+          "stem": "测谎的基本原理：欺骗的人会紧张，以致呼吸、脉搏加快和血压升高。测谎专家因而声称，只要操作、解析得当，测谎仪能够有效发现说谎者，结果是______的。反对者则认为，一个______且擅长控制情绪的人是可以对付测谎仪的。在这个过程中，不是人与机器，而是测谎者与被测者的______。填入画横线部分最恰当的一项是：",
+          "items": null,
+          "options": {
+            "A": "合理 见多识广 博弈",
+            "B": "科学 不露声色 抗衡",
+            "C": "可靠 有备而来 较量",
+            "D": "准确 从容不迫 对决"
+          },
+          "options_in_media": false,
+          "type": "选词填空",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 28,
+            "diff_label": "⑭",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 42
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 28,
+          "section": "言语理解与表达"
+        },
+        {
+          "diff_label": "⑮",
+          "stem": "千百年来，乡村承担着对村民行为的引导、规训与教育功能，让人们______、明辨是非善恶。农事活动、节日庆典、民俗习惯、村规民约等，都是维系村落价值取向和有序运行的重要______，它们以______的形式不断强化人们的行为规范，并使之内化为人们的道德准则。填入画横线部分最恰当的一项是：",
+          "items": null,
+          "options": {
+            "A": "通情达理 载体 潜移默化",
+            "B": "循规蹈矩 途径 喜闻乐见",
+            "C": "与人为善 方式 言传身教",
+            "D": "奉公守法 手段 耳濡目染"
+          },
+          "options_in_media": false,
+          "type": "选词填空",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 29,
+            "diff_label": "⑮",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 42
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 29,
+          "section": "言语理解与表达"
+        },
+        {
+          "diff_label": "⑯",
+          "stem": "庞大的劳动力供给支撑了改革开放以来经济的快速发展，形成人口红利。不过，人口规模并不必然转化为人口红利，还需要基本的文化素质支撑。改革开放以来，我国将基础教育工作放到重要位置，制定了义务教育法等法律法规，不断增加相关领域投入，从而保证了劳动力素质的提高。近年来，随着老龄化水平的不断提升，劳动力人口出现了规模缩减的迹象。为了在新的劳动力供给条件下实现经济可持续发展，需要实施职工素质建设工程，推动建设宏大的知识型、技术型、创新型劳动者大军，促进人口红利向人才红利的转变。这段文字主要说的是：",
+          "items": null,
+          "options": {
+            "A": "当前的经济发展需要释放人口红利",
+            "B": "劳动力素质的提高需夯实基础教育",
+            "C": "当前形势对提高人口素质提出了新要求",
+            "D": "教育是当前实现经济可持续发展的关键"
+          },
+          "options_in_media": false,
+          "type": "片段阅读",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 30,
+            "diff_label": "⑯",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 43
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 30,
+          "section": "言语理解与表达"
+        },
+        {
+          "number": 31,
+          "section": "言语理解与表达",
+          "type": "选词填空",
+          "stem": "科学家网上科普，“高大上”的国家科研机构与轻松娱乐的网络文化场域相遇，不仅没有出现文化上的巨大冲突、碰撞，反倒形成了一种______、寓教于乐的可爱画风，受到很多年轻人的喜爱。这种意外，看似有很大的______，实则是一种科普方式的积极探索创新，预示了打通两个文化场域的可能性。",
+          "items": null,
+          "options": {
+            "A": "亦庄亦谐 偶然性",
+            "B": "妙趣横生 随机性",
+            "C": "别出心裁 随意性",
+            "D": "相映成趣 特殊性"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 31,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 8
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 32,
+          "section": "言语理解与表达",
+          "type": "选词填空",
+          "stem": "现在很多人对快速发展的食品科技比较陌生，对食品从农田到餐桌的全过程知之甚少，因此对错误信息的辨识能力、对谣言的抵御能力十分有限。那些______的谣言不仅影响消费信心，也给行业、产业带来直接的危害。强化食品安全科普传播______，也迫在眉睫，这已经成为全行业和全社会的共识。",
+          "items": null,
+          "options": {
+            "A": "虚张声势 至关重要",
+            "B": "铺天盖地 首当其冲",
+            "C": "耸人听闻 势在必行",
+            "D": "口耳相传 任重道远"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 32,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 8
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "⑰",
+          "stem": "①H7N9禽流感病毒在人与人之间不能持续有效传播，通过消化道传播的可能性更低\n②一种病毒只能寄生在一种（类）动物、植物或细菌真菌中，即具有特异性\n③病毒是高度专性寄生的非细胞型生物，必须在活细胞内寄生并以复制方式增殖，分为植物病毒、动物病毒和细菌病毒\n④人感染H7N9禽流感病毒主要是经呼吸道传播，也可通过密切接触感染的禽类分泌物、排泄物或直接接触病毒感染\n⑤也就是说，不会有哪种病毒可以同时感染动物和植物，因此禽流感病毒不会感染西瓜、香蕉、青菜等\n⑥目前没有见到人因为食用西瓜等水果而感染H7N9禽流感病毒的实例，也未发现该病毒具有在人群中持续传播的能力\n将以上6个句子重新排列，语序正确的是：",
+          "items": null,
+          "options": {
+            "A": "①④⑥②⑤③",
+            "B": "②⑤⑥④③①",
+            "C": "③②⑤④①⑥",
+            "D": "④⑥⑤③①②"
+          },
+          "options_in_media": false,
+          "type": "语句排序",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 33,
+            "diff_label": "⑰",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 43
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 33,
+          "section": "言语理解与表达"
+        },
+        {
+          "number": 34,
+          "section": "言语理解与表达",
+          "type": "选词填空",
+          "stem": "五四运动表现出来的爱国主义精神，与以往的爱国主义相比较，具有历史进步性和鲜明时代性。这种爱国主义不是盲目排外，而是为了维护国家独立和民族尊严；不是______，而是与民主和科学精神紧密联系，追求发展进步；不是______，而是付诸行动，以“直接行动”投入反帝运动。",
+          "items": null,
+          "options": {
+            "A": "拾人牙慧 夸夸其谈",
+            "B": "故步自封 纸上谈兵",
+            "C": "刻舟求剑 作壁上观",
+            "D": "邯郸学步 闭门造车"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 34,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 9
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 35,
+          "section": "言语理解与表达",
+          "type": "选词填空",
+          "stem": "有关部门制订银龄讲学计划，在全国招募万名优秀退休教师，下乡支援农村学校。相信白发苍苍的师者，会无私地奉献燃烧；但是要______乡村师生双双流失的困境，不能仅凭一时兴起的“输血”和情怀。唯有教育资源真正向农村______，真正提高乡村教师的待遇和吸引力，乡村振兴才会有______的新鲜血液。",
+          "items": null,
+          "options": {
+            "A": "改善 汇聚 生生不息",
+            "B": "扭转 倾斜 源源不断",
+            "C": "突破 集中 生机勃勃",
+            "D": "摆脱 开放 薪火相传"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 35,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 9
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "⑱",
+          "stem": "猫虽然平时可能对主人不理不睬，却能在众多声音中识别出主人的声音，并对其投入更多情感和注意。研究发现，猫不仅敏感于主人的声音（音频信息），还敏感于主人呼唤自己的名字（字符信息）。不只是猫，目前的研究发现，猿猴、海豚、狗甚至鹦鹉，都可以识别出自己的名字。它们识别名字的方式与人类基本一致，都是在反复经历某个特殊字符伴随自己的事件之后，才建立起这个字符与自己的关系，______。填入画横线部分最恰当的一句是：",
+          "items": null,
+          "options": {
+            "A": "这揭示了人类与动物之间的互动模式",
+            "B": "名字成为与普通字符完全不同的存在",
+            "C": "这实质上是一种条件反射的建立过程",
+            "D": "它们由此知道自己拥有一个专属代号"
+          },
+          "options_in_media": false,
+          "type": "语句填空",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 36,
+            "diff_label": "⑱",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 43
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 36,
+          "section": "言语理解与表达"
+        },
+        {
+          "number": 37,
+          "section": "言语理解与表达",
+          "type": "选词填空",
+          "stem": "秋葵原产印度，却在中国______已久，东汉的《说文解字》称其为“黄葵”，《本草纲目》也有详细记载，称其为“侧金盏花”。秋葵曾是我较为______的蔬菜，在童年记忆里，家中餐桌上并未出现过它。近些年秋葵却______走红，长居网红零食的热门榜单，也逐渐成为寻常百姓的秋日家常菜。",
+          "items": null,
+          "options": {
+            "A": "落户 不屑 莫名",
+            "B": "侨居 反感 意外",
+            "C": "扎根 陌生 迅速",
+            "D": "流浪 向往 瞬间"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 37,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 9
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "⑲",
+          "stem": "下面这段文字最适合放在文中哪一位置？\n由此可见，一种服饰的出现与流行有各种各样的缘由，但是纵观中国服饰史，就会发现这些缘由中最重要的还是政治因素。通过“冠”的形制，我们可以更好地理解这一点。",
+          "items": null,
+          "options": {
+            "A": "①和②中间",
+            "B": "②和③中间",
+            "C": "③和④中间",
+            "D": "④和⑤中间"
+          },
+          "options_in_media": false,
+          "type": "文章阅读",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_guanmian"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 38,
+            "diff_label": "⑲",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 45
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 38,
+          "section": "言语理解与表达"
+        },
+        {
+          "number": 39,
+          "section": "言语理解与表达",
+          "type": "选词填空",
+          "stem": "准确、权威的信息不及时传播，虚假、歪曲的信息就会搞乱人心；积极、正确的思想舆论不发展壮大，消极、错误的言论观点就会肆虐______。这方面，主流媒体守土有责，更要守土尽责，及时提供更多真实客观、观点鲜明的信息内容，牢牢______舆论场主动权和主导权。主流媒体要敢于引导、善于疏导，原则问题要旗帜鲜明、立场坚定，一点都不能______。",
+          "items": null,
+          "options": {
+            "A": "泛滥 掌握 含糊",
+            "B": "滋生 控制 迟疑",
+            "C": "蔓延 守护 犹豫",
+            "D": "扩散 占据 退缩"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 39,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 10
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "⑳",
+          "stem": "以下关于“鹖冠”和“进贤冠”的说法与原文相符的是：",
+          "items": null,
+          "options": {
+            "A": "“鹖冠”因其两侧插着鹖鸟尾羽装饰而得名",
+            "B": "“鹖冠”最早出现在汉代古墓出土的文物中",
+            "C": "“进贤冠”产生于魏晋南北朝时期",
+            "D": "“进贤冠”专门用于重大祭祀活动"
+          },
+          "options_in_media": false,
+          "type": "文章阅读",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_guanmian"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 40,
+            "diff_label": "⑳",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 45
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 40,
+          "section": "言语理解与表达"
+        },
+        {
+          "number": 41,
+          "section": "言语理解与表达",
+          "type": "片段阅读",
+          "stem": "民之所好好之，民之所恶恶之。环境就是民生，青山就是美丽，蓝天也是幸福。发展经济是为了民生，保护生态环境同样也是为了民生。既要创造更多的物质财富和精神财富以满足人民日益增长的美好生活需要，也要提供更多优质生态产品以满足人民日益增长的优美生态环境需要。要坚持生态惠民、生态利民、生态为民，重点解决损害群众健康的突出环境问题，加快改善生态环境质量，提供更多优质生态产品，努力实现社会公平正义，不断满足人民日益增长的优美生态环境需要。\n这段文字意在：",
+          "items": null,
+          "options": {
+            "A": "阐释人与自然和谐共存的基本观念",
+            "B": "强调良好的生态环境是民生之福祉",
+            "C": "呼吁人民群众参与到生态文明建设之中",
+            "D": "揭示绿水青山就是金山银山的发展理念"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 41,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 10
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 42,
+          "section": "言语理解与表达",
+          "type": "片段阅读",
+          "stem": "西太平洋是全球海山系统分布最为集中的海域，人类对此处海山的认识却非常有限。西太平洋的马里亚纳海沟是板块俯冲地带，海底地质运动非常活跃，海山火山岩的物质组成及成因等是海洋地质科学家感兴趣的问题；西太平洋的暖池和北赤道流等对中国气候有重要影响，是物理海洋科学家关注的重点区域；这里还有全球海洋生物多样性最高的珊瑚礁大三角区，是开展海洋生物起源与进化研究的热点区域。因此，海洋科学家可以在此开展海山的水文物理、化学及生源要素、地形地貌和地质环境及生物生态等多学科协同探测与研究。\n这段文字主要介绍了：",
+          "items": null,
+          "options": {
+            "A": "人们对西太平洋海山系统的认识",
+            "B": "西太平洋区域所蕴含的海洋资源",
+            "C": "在西太平洋开展科学研究的重要价值",
+            "D": "西太平洋对中国气候和地质的影响"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 42,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 11
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 43,
+          "section": "言语理解与表达",
+          "type": "标题选择",
+          "stem": "交流互鉴是人类社会进步的标识，是文明发展的尺度。从古老的丝绸之路、茶叶之路、香料之路上经贸交往的互通有无，到新时代“一带一路”“两廊一圈”等合作建设的开展，亚洲各国为实现互通发展，战胜挑战，克服困难和艰险。文明交融促进了亚洲国家生产力的发展，打破了民族的原始闭关状态，亚洲人民借此开阔了眼界、建立了友谊、收获了富足。在相互影响、相互交流、相互融合、相互建构的文明互动中，东方文化也与西方文化包容共进，不断迈向人类进步新阶段。“光明来自东方”这句古希腊谚语正是对东西文明交融成果生动而诗意的说明。\n最适合做这段文字标题的是：",
+          "items": null,
+          "options": {
+            "A": "交流互鉴，推动人类文明永续发展",
+            "B": "文化交融，亚洲生产力发展的动力",
+            "C": "“一带一路”，文明传播的通道",
+            "D": "包容共进，构建东西方文明互动"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 43,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 11
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 44,
+          "section": "言语理解与表达",
+          "type": "片段阅读",
+          "stem": "世界正处于大发展大变革大调整时期，和平与发展仍然是时代主题。世界多极化、经济全球化、社会信息化、文化多样化深入发展，全球治理体系和国际秩序变革加速推进，各国相互联系和依存日益加深，国际力量对比更趋平衡，和平发展大势不可逆转。同时，世界面临的不稳定性不确定性突出，世界经济增长动能不足，贫富分化日益严重，地区热点问题此起彼伏，恐怖主义、网络安全、重大传染性疾病、气候变化等非传统安全威胁持续蔓延，人类面临许多共同挑战。\n这段文字接下来讲的是：",
+          "items": null,
+          "options": {
+            "A": "为什么我们认为当前的世界正处于发展与激变的时代",
+            "B": "中国是维护世界和平、促进世界共同发展的重要力量",
+            "C": "各国人民应同心协力应对我们所面临的各种风险挑战",
+            "D": "正确认识和把握时代的主题才是各国制定政策的依据"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 44,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 12
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "㉑",
+          "stem": "据③段，下图所画“冕”的形制与原文描述相符的是：（四幅冕的形制图，标注前/后方向）",
+          "items": null,
+          "options": null,
+          "options_in_media": true,
+          "type": "文章阅读",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_guanmian"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 45,
+            "diff_label": "㉑",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 45
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ],
+          "number": 45,
+          "section": "言语理解与表达"
+        },
+        {
+          "number": 46,
+          "section": "言语理解与表达",
+          "type": "片段阅读",
+          "stem": "在战场上，人机协同被人工智能所取代，至少目前来看短时间内很难发生。人工智能能解决的问题有限，替代首先会发生在部分领域，但依然离不开人机协同。人工智能的主要实现手段是机器学习，深度学习是实现机器学习的一种方式。尽管目前深度学习在众多领域已取得非常好的效果，但涉及战场上要求创造性、无法给出明确定义和边界、缺乏数字化知识经验的任务，机器可能就无能为力。所以今后一段时间里，机器在作战领域中更多的是起辅助作用，最终的决策依然离不开人类。\n这段文字意在说明：",
+          "items": null,
+          "options": {
+            "A": "人机协同在战场上仍将扮演重要角色",
+            "B": "人工智能的学习能力有待进一步提高",
+            "C": "战场环境对机器学习提出了更高要求",
+            "D": "人工智能尚无法适应复杂的战场需求"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 46,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 12
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "㉒",
+          "stem": "根据原文，下列说法符合古代礼制的是：",
+          "items": null,
+          "options": {
+            "A": "庶人阶级的男子在二十岁时要举行隆重的冠礼",
+            "B": "贵族男子在日常生活中所戴之冠为“缁布冠”",
+            "C": "诸侯国君不必像大臣一样严格遵守服饰礼制",
+            "D": "天子在祭祀时必须戴着有二十四串垂旒的冕冠"
+          },
+          "options_in_media": false,
+          "type": "文章阅读",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_guanmian"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 47,
+            "diff_label": "㉒",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 45
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 47,
+          "section": "言语理解与表达"
+        },
+        {
+          "number": 48,
+          "section": "言语理解与表达",
+          "type": "语句排序",
+          "stem": "①中国企业若想出口稀土产品，必须向行业巨头缴纳高额的专利许可费，否则产品无法出口\n②稀土永磁材料领域的研发重点包括提高材料性能、扩大高端领域应用等；稀土发光材料领域的技术创新点集中在光电材料、反光材料等\n③经历了被人“扼住咽喉”的切肤之痛后，我国稀土企业的创新脚步愈加快速\n④然而在很长一段时间内，我国的稀土企业在国际市场处于受制于人的局面\n⑤多年来，在与世界各国的“稀土大战”中，我国凭借世界第一的稀土储量，逐步在开采、分离技术领域确立了全球领先的地位\n⑥目前，我国稀土领域的创新主要集中于产业链上游的稀土材料领域，多家企业重点发展具有超高性能的稀土永磁材料、稀土发光材料等\n将以上6个句子重新排列，语序正确的是：",
+          "items": null,
+          "options": {
+            "A": "⑤⑥②①④③",
+            "B": "⑥②⑤④①③",
+            "C": "⑥④①③⑤②",
+            "D": "⑤④①③⑥②"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 48,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 13
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 49,
+          "section": "言语理解与表达",
+          "type": "语句填空",
+          "stem": "研究发现，人格特质会对一个人能否拥有充足、良好的睡眠产生影响。例如，一个责任心水平较低的人很难自我约束，去按照既定计划完成任务。因此他们很难形成固定、良好的睡眠习惯。内向的人更难以入睡，因为他们更喜欢在独处状态下思考问题。当他们夜晚独自躺在床上，会有意识地思考问题，导致更加难以入睡。同样，研究人员也发现，习惯早起的人更有责任心，晚上不睡的夜猫子型的人更喜欢新鲜的刺激。每个人其实有着不同的适应自身的睡眠偏好，而这些习惯，______。\n填入画横线部分最恰当的一句是：",
+          "items": null,
+          "options": {
+            "A": "很难在短时间内发生根本改变",
+            "B": "实际上也反映着你的人格特质",
+            "C": "最终必然会影响你的身心健康",
+            "D": "其实也不存在绝对的评价标准"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 49,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 14
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 50,
+          "section": "言语理解与表达",
+          "type": "片段阅读",
+          "stem": "在地面装备中，锂离子电池主要应用于军用无人地面车辆、机器人、混合电动战车等。对使用油电混合驱动的地面战车来说，采用锂离子电池作为动力源不仅可以降低油耗，减少后勤负担，还可以提高战术车辆的机动力和生存能力。目前，多国军队都加大了混合电驱动战车、无人地面车辆、地面机器人的锂离子电池模块的研发力度。不过，对大型地面装备来说，锂离子电池功率偏弱是制约其进一步应用的主要因素。因此，未来还需要继续研发高比功率、低成本的锂离子电池，满足地面装备的任务需求。\n根据这段文字，锂离子电池：",
+          "items": null,
+          "options": {
+            "A": "在军事应用中具有广泛适用性",
+            "B": "在大型装备应用方面存在不足",
+            "C": "被各国作为新型电池大力发展",
+            "D": "是未来战场动力源的发展方向"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 50,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 14
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 51,
+          "section": "言语理解与表达",
+          "type": "片段阅读",
+          "stem": "食品药品安全追溯体系是依赖现代信息技术，对可能存在的食品药品安全隐患发出预警的一种制度。它之所以被一些国家广泛采用，是因为一方面能降低监管部门信息获取成本，提升监管效率；另一方面也能倒逼企业提高安全意识，主动进行风险控制。这项制度已引进我国多年，并体现在相关法律法规以及行动规划中。但在实践中，区域分割、部门分治等问题仍比较突出，没有形成高效的地方联动、部门合力，对解决食品药品安全问题缺少整体效果。\n这段文字意在强调：",
+          "items": null,
+          "options": {
+            "A": "完善的食品药品安全追溯体系有重要价值",
+            "B": "相关部门应该加强对食品药品安全的监管",
+            "C": "我国的食品药品安全追溯制度仍有待完善",
+            "D": "多方合作是解决食品药品安全问题的关键"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 51,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 14
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "㉓",
+          "stem": "最适合做这篇文章标题的是：",
+          "items": null,
+          "options": {
+            "A": "冠冕的演变史",
+            "B": "“冠冕”何以“堂皇”",
+            "C": "古人是如何戴冠的",
+            "D": "服饰制度与治国之道"
+          },
+          "options_in_media": false,
+          "type": "文章阅读",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_guanmian"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 52,
+            "diff_label": "㉓",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 46
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 52,
+          "section": "言语理解与表达"
+        },
+        {
+          "number": 53,
+          "section": "言语理解与表达",
+          "type": "片段阅读",
+          "stem": "“风筝不断线”是吴冠中20世纪80年代前后提出的艺术理念，在中国当代美术史上产生了重要的影响。看上去，这是关于“形式美”与“抽象美”之间内在联系的一种阐述，实则它强调的是：艺术创作再怎么创新，再怎么放飞自我，都不能远离现实生活。在吴冠中看来，抽象绘画就像放风筝，风筝是作品，是“从生活中来的素材和感受，被作者用减法、除法或别的法”抽象成的某一种艺术形式，而观众是天空。要让风筝飞上天空，艺术家手中“须有一线联系着作品和生活中的源头”。只有“风筝不断线”，艺术才有根基，才能保持与观众的交流。\n下列观点符合“风筝不断线”理念的是：",
+          "items": null,
+          "options": {
+            "A": "艺术来源于生活而高于生活",
+            "B": "艺术创作应该以生活为基础",
+            "C": "艺术的第一目的是再现现实",
+            "D": "艺术离开民众就失去了土壤"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 53,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 15
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "㉔",
+          "stem": "填入文中画横线部分最恰当的一项是：",
+          "items": null,
+          "options": {
+            "A": "而血循环问题几乎是3D打印实体器官的死穴",
+            "B": "但生物3D打印已经是科幻小说中常见的情节",
+            "C": "现在要解决的瓶颈之一是如何为生长中的组织提供氧气和营养",
+            "D": "而在打印心脏时，“墨水”里的心肌细胞呈现球状且互不接触"
+          },
+          "options_in_media": false,
+          "type": "文章阅读",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_3dheart"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 54,
+            "diff_label": "㉔",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 47
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 54,
+          "section": "言语理解与表达"
+        },
+        {
+          "diff_label": "㉕",
+          "stem": "关于这颗3D打印心脏，下列说法错误的是：",
+          "items": null,
+          "options": {
+            "A": "具有血管组织",
+            "B": "理论上不会产生排异反应",
+            "C": "心肌细胞和内皮细胞来源于患者",
+            "D": "“黏合胶水”由编辑成的干细胞转化而来"
+          },
+          "options_in_media": false,
+          "type": "文章阅读",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_3dheart"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 55,
+            "diff_label": "㉕",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 47
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 55,
+          "section": "言语理解与表达"
+        },
+        {
+          "diff_label": "㉖",
+          "stem": "下列哪项不属于3D打印心脏未来需要着力解决的问题？",
+          "items": null,
+          "options": {
+            "A": "心肌细胞的共同收缩",
+            "B": "打印器官的长期存活",
+            "C": "支架填充细胞的获取",
+            "D": "正常泵血功能的实现"
+          },
+          "options_in_media": false,
+          "type": "文章阅读",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_3dheart"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 56,
+            "diff_label": "㉖",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 47
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 56,
+          "section": "言语理解与表达"
+        },
+        {
+          "diff_label": "㉗",
+          "stem": "根据文章，下列说法正确的是：",
+          "items": null,
+          "options": {
+            "A": "3D打印技术无法打印小型器官模型",
+            "B": "3D打印心脏已开始应用于动物实验",
+            "C": "目前的3D打印心脏可以跳动",
+            "D": "心肌细胞难以在人体之外量产"
+          },
+          "options_in_media": false,
+          "type": "文章阅读",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_3dheart"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 57,
+            "diff_label": "㉗",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 48
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 57,
+          "section": "言语理解与表达"
+        },
+        {
+          "diff_label": "㉘",
+          "stem": "文中提到的生物3D打印技术如果最终成熟，能为患有下列哪种疾病的病人带来福音？",
+          "items": null,
+          "options": {
+            "A": "尿毒症",
+            "B": "白化病",
+            "C": "登革热",
+            "D": "红绿色盲"
+          },
+          "options_in_media": false,
+          "type": "文章阅读",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_3dheart"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 58,
+            "diff_label": "㉘",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 48
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 58,
+          "section": "言语理解与表达"
+        },
+        {
+          "number": 59,
+          "section": "言语理解与表达",
+          "type": "片段阅读",
+          "stem": "导航卫星位于2万公里的高空，在其所覆盖的范围内都可通过接收信号来导航。而在超出2万公里的深空，就需要全新的导航系统。天文学家提出了几种可能的导航系统，谈得最多的就是脉冲星导航。脉冲星是一类中子星，其磁极方向能产生射电或X射线辐射，当转动轴和磁极不重合，而转动轴扫过地球的时候，就会产生脉冲。其中一些脉冲星转动稳定性非常好，可以比拟于地球上最好的原子钟，所以这些脉冲星也被称为“宇宙间的原子钟”。如果可以接收到它们的信号并且知道它们的位置，便可以利用这些脉冲星进行星际航行。\n这段文字接下来最可能介绍的是：",
+          "items": null,
+          "options": {
+            "A": "影响脉冲星转动稳定性的因素",
+            "B": "验证脉冲星导航可行性的实验",
+            "C": "宇宙中类似脉冲星的其他原子钟",
+            "D": "目前星际航行中面临的一些困难"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 59,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 17
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 60,
+          "section": "言语理解与表达",
+          "type": "片段阅读",
+          "stem": "不论是以巴尔扎克为代表的19世纪欧洲文学，还是以鲁迅为先导的中国现代文学，多半高擎现实主义大旗开垦生活，塑造典型。新时期以来的文学创作，基本也都坚守现实主义立场，比较善于揭露、针砭生活中的负面客观真实，这是完全必要且非常宝贵的。然而，部分小说缺乏对生活中积极因素和正面形象的塑造，缺少对正面价值和情感的呼吁。其实，现实主义创作以人道主义思想为武器，不仅注重剖析社会的阴暗面，也应注重展示生活的亮点；不仅看重批判社会阴暗面的准确性和深刻性，也更看重作家对人物命运的关怀和同情。\n这段文字主要批评了新时期以来文学创作中哪个方面的问题？",
+          "items": null,
+          "options": {
+            "A": "部分小说存在消极负面的倾向",
+            "B": "典型人物的塑造过于刻板单一",
+            "C": "作家缺乏对现实生活的关注",
+            "D": "缺乏对优秀文学传统的继承"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 60,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 18
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "数量关系",
+      "number_range": [
+        61,
+        75
+      ],
+      "question_count": 15,
+      "materials": [],
+      "questions": [
+        {
+          "number": 61,
+          "section": "数量关系",
+          "type": "数量关系",
+          "stem": "环保局某科室需要对四种水样进行检测，四种水样依次有5份、3份、2份、4份，检测设备完成四种水样每一份的检测时间依次为8分钟、4分钟、6分钟、7分钟。已知该科室本日最多可使用检测设备38分钟，如今天之内要完成尽可能多数量样本的检测，有多少种不同的检测组合方式？",
+          "items": null,
+          "options": {
+            "A": "20",
+            "B": "16",
+            "C": "10",
+            "D": "6"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 61,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 19
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 62,
+          "section": "数量关系",
+          "type": "数量关系",
+          "stem": "扶贫干部某日需要走访村内6个贫困户甲、乙、丙、丁、戊和己。已知甲和乙的走访次序要相邻，丙要在丁之前走访，戊要在丙之前走访，己只能在第一个或最后一个走访。问：走访顺序有多少种不同的安排方式？",
+          "items": null,
+          "options": {
+            "A": "32",
+            "B": "48",
+            "C": "16",
+            "D": "24"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 62,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 19
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 63,
+          "section": "数量关系",
+          "type": "数量关系",
+          "stem": "某种糖果的进价为12元/千克，现购进这种糖果若干千克，每天销售10千克，且从第二天起每天都比前一天降价2元/千克。已知以6元/千克的价格销售的那天正好卖完最后10千克，且总销售额是总进货成本的2倍。问：总共进了多少千克这种糖果？",
+          "items": null,
+          "options": {
+            "A": "160",
+            "B": "170",
+            "C": "180",
+            "D": "190"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 63,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 19
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 64,
+          "section": "数量关系",
+          "type": "数量关系",
+          "stem": "一条圆形跑道长500米，甲、乙两人从不同起点同时出发，均沿顺时针方向匀速跑步。已知甲跑了600米后第一次追上乙，此后甲加速20%继续前进，又跑了1200米后第二次追上乙。问：甲出发后多少米第一次到达乙的出发点？",
+          "items": null,
+          "options": {
+            "A": "100",
+            "B": "120",
+            "C": "150",
+            "D": "180"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 64,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 19
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 65,
+          "section": "数量关系",
+          "type": "数量关系",
+          "stem": "某单位从理工大学、政法大学和财经大学总计招聘应届毕业生三百多人。其中从理工大学招聘人数是政法大学和财经大学之和的80%，从政法大学招聘的人数比财经大学多60%。问：该单位至少再多招聘多少人，就能将从这三所大学招聘的应届生平均分配到7个部门？",
+          "items": null,
+          "options": {
+            "A": "6",
+            "B": "5",
+            "C": "4",
+            "D": "3"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 65,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 20
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 66,
+          "section": "数量关系",
+          "type": "数量关系",
+          "stem": "某个项目由甲、乙两人共同投资，约定总利润10万元以内的部分甲得80%，10万元~20万元的部分甲得60%，20万元以上的部分乙得60%。最终乙分得的利润是甲的1.2倍。如果总利润减半，甲分得的利润比乙：",
+          "items": null,
+          "options": {
+            "A": "少1万元",
+            "B": "少2万元",
+            "C": "多1万元",
+            "D": "多2万元"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 66,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 20
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 67,
+          "section": "数量关系",
+          "type": "数量关系",
+          "stem": "某种产品每箱48个。小李制作这种产品，第1天制作了1个，以后每天都比前一天多制作1个，X天后总共制作了整数箱产品。问：X的最小值在以下哪个范围内？",
+          "items": null,
+          "options": {
+            "A": "不到20",
+            "B": "20~40",
+            "C": "41~60",
+            "D": "超过60"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 67,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 20
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 68,
+          "section": "数量关系",
+          "type": "数量关系",
+          "stem": "从一个装有水的水池中向外排水，规定每周二、周四、周六每天排出剩余水量的1/3，其余日期每天排出剩余水量的1/2。如此连续操作6天后，水池中尚余相当于总容量1/72的水。那么最开始时水池中的水量最多相当于总容量的：",
+          "items": null,
+          "options": {
+            "A": "1/2",
+            "B": "5/8",
+            "C": "1/4",
+            "D": "3/8"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 68,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 20
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 69,
+          "section": "数量关系",
+          "type": "数量关系",
+          "stem": "甲、乙两条生产线生产A和B两种产品。其中甲生产线生产A、B产品的效率分别是乙生产线的2倍和3倍。现有2种产品各X件的生产任务，企业安排甲和乙生产线合作尽快完成任务，最终甲总共生产了1.5X件产品。问：乙在单位时间内生产A的件数是生产B件数的多少倍？",
+          "items": null,
+          "options": {
+            "A": "4/3",
+            "B": "5/3",
+            "C": "3/4",
+            "D": "3/5"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 69,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 20
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 70,
+          "section": "数量关系",
+          "type": "数量关系",
+          "stem": "部队前哨站的雷达监测范围为100千米。某日前哨站侦测到正东偏北30°方向100千米处，一架可疑无人机正匀速向正西方向飞行。前哨站通知正南方向150千米处的部队立即向正北方向发射无人机拦截，匀速飞行一段时间后，正好在某点与可疑无人机相遇。问：我方无人机速度是可疑无人机的多少倍？",
+          "items": null,
+          "options": {
+            "A": "2√5/3",
+            "B": "4√3/3",
+            "C": "√3+1",
+            "D": "3(√3-1)"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 70,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 21
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "㉙",
+          "stem": "高架桥12:00—14:00每分钟车流量比9:00—11:00少20%，9:00—11:00、12:00—14:00、17:00—19:00三个时间段平均每分钟的车流量比9:00—11:00多10%。则17:00—19:00每分钟的车流量比9:00—11:00多：",
+          "items": null,
+          "options": {
+            "A": "20%",
+            "B": "30%",
+            "C": "40%",
+            "D": "50%"
+          },
+          "options_in_media": false,
+          "type": "数量关系",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 71,
+            "diff_label": "㉙",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 48
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 71,
+          "section": "数量关系"
+        },
+        {
+          "diff_label": "㉚",
+          "stem": "将一个圆盘形零件匀速向下浸入水中。问：以下哪个坐标图能准确反映浸入深度AO及圆盘与水面的接触部位长度CD之间的关系？",
+          "items": null,
+          "options": null,
+          "options_in_media": true,
+          "type": "数量关系",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 72,
+            "diff_label": "㉚",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 48
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ],
+          "number": 72,
+          "section": "数量关系"
+        },
+        {
+          "diff_label": "㉛",
+          "stem": "丙地为甲、乙两地之间高速公路上的一个测速点，其与甲地之间的距离是与乙地之间距离的一半，A、B两车分别从甲地和乙地同时出发匀速相向而行，第一次迎面相遇的位置距离丙地500米。两车到达对方出发地后立刻原路返回，第二次两车相遇也为迎面相遇，则第二次相遇的位置一定：",
+          "items": null,
+          "options": {
+            "A": "距离甲地1500米",
+            "B": "距离乙地1500米",
+            "C": "距离丙地1500米",
+            "D": "距离乙、丙中点1500米"
+          },
+          "options_in_media": false,
+          "type": "数量关系",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 73,
+            "diff_label": "㉛",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 48
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 73,
+          "section": "数量关系"
+        },
+        {
+          "diff_label": "㉜",
+          "stem": "销售员小刘为客户准备了A、B、C三个方案。已知客户接受方案A的概率为40%。如果接受方案A，则接受方案B的概率为60%，反之为30%。客户如果A或B方案都不接受，则接受C方案的概率为90%，反之为10%。问：将三个方案按照客户接受概率从高到低排列，以下正确的是：",
+          "items": null,
+          "options": {
+            "A": "A>B>C",
+            "B": "A>C>B",
+            "C": "B>C>A",
+            "D": "C>B>A"
+          },
+          "options_in_media": false,
+          "type": "数量关系",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 74,
+            "diff_label": "㉜",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 49
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 74,
+          "section": "数量关系"
+        },
+        {
+          "diff_label": "㉝",
+          "stem": "一个无盖长方体饮料盒如图所示，其底面为正方形，高为23厘米。若插入一根足够细的不可弯折的吸管与底部接触，已知插入饮料盒内的吸管长度最大为27厘米，则饮料盒底面边长为多少厘米？",
+          "items": null,
+          "options": {
+            "A": "5√2",
+            "B": "8",
+            "C": "10",
+            "D": "10√2"
+          },
+          "options_in_media": false,
+          "type": "数量关系",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 75,
+            "diff_label": "㉝",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 49
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ],
+          "number": 75,
+          "section": "数量关系"
+        }
+      ]
+    },
+    {
+      "name": "判断推理",
+      "number_range": [
+        76,
+        115
+      ],
+      "question_count": 40,
+      "materials": [],
+      "questions": [
+        {
+          "diff_label": "㉞",
+          "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+          "items": null,
+          "options": null,
+          "options_in_media": true,
+          "type": "图形推理",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 76,
+            "diff_label": "㉞",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 49
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ],
+          "number": 76,
+          "section": "判断推理"
+        },
+        {
+          "number": 77,
+          "section": "判断推理",
+          "type": "图形推理",
+          "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+          "items": null,
+          "options": null,
+          "options_in_media": true,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 72,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 22
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ]
+        },
+        {
+          "number": 78,
+          "section": "判断推理",
+          "type": "图形推理",
+          "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+          "items": null,
+          "options": null,
+          "options_in_media": true,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 73,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 22
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ]
+        },
+        {
+          "diff_label": "㉟",
+          "stem": "下图为给定的多面体及其外表面展开图，问字母A、B、C、D和数字1、2、3、4代表的棱的对应关系为：",
+          "items": null,
+          "options": {
+            "A": "1-D,2-A,3-C,4-B",
+            "B": "1-C,2-A,3-D,4-B",
+            "C": "1-D,2-B,3-C,4-A",
+            "D": "1-C,2-B,3-D,4-A"
+          },
+          "options_in_media": false,
+          "type": "图形推理",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 79,
+            "diff_label": "㉟",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 49
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ],
+          "number": 79,
+          "section": "判断推理"
+        },
+        {
+          "number": 80,
+          "section": "判断推理",
+          "type": "图形推理",
+          "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+          "items": null,
+          "options": null,
+          "options_in_media": true,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 75,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 23
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ]
+        },
+        {
+          "diff_label": "㊱",
+          "stem": "左图给定的是由相同正方体堆叠而成的多面体的正视图和后视图。该多面体可以由①、②和③三个多面体组合而成，则以下哪一项能填入问号处？",
+          "items": null,
+          "options": null,
+          "options_in_media": true,
+          "type": "图形推理",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 81,
+            "diff_label": "㊱",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 50
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ],
+          "number": 81,
+          "section": "判断推理"
+        },
+        {
+          "diff_label": "㊲",
+          "stem": "左图为给定的立体图形，将其从任一面剖开，以下哪个不可能是该立体图形的截面？",
+          "items": null,
+          "options": null,
+          "options_in_media": true,
+          "type": "图形推理",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 82,
+            "diff_label": "㊲",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 50
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ],
+          "number": 82,
+          "section": "判断推理"
+        },
+        {
+          "number": 83,
+          "section": "判断推理",
+          "type": "图形推理",
+          "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+          "items": null,
+          "options": {
+            "A": "①②⑥,③④⑤",
+            "B": "①③④,②⑤⑥",
+            "C": "①④⑥,②③⑤",
+            "D": "①③⑤,②④⑥"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 78,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 24
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ]
+        },
+        {
+          "number": 84,
+          "section": "判断推理",
+          "type": "图形推理",
+          "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+          "items": null,
+          "options": {
+            "A": "①③④,②⑤⑥",
+            "B": "①②⑥,③④⑤",
+            "C": "①④⑤,②③⑥",
+            "D": "①④⑥,②③⑤"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 79,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 24
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ]
+        },
+        {
+          "number": 85,
+          "section": "判断推理",
+          "type": "图形推理",
+          "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+          "items": null,
+          "options": {
+            "A": "①②③,④⑤⑥",
+            "B": "①②⑤,③④⑥",
+            "C": "①③⑤,②④⑥",
+            "D": "①③④,②⑤⑥"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 80,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20200124.pdf",
+              "page": 24
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ]
+        },
+        {
+          "number": 86,
+          "section": "判断推理",
+          "type": "定义判断",
+          "stem": "超前纠结指的是在平庸的人群中，有正确洞见的人当其观点不被接受、不被相信，对事情的发展无能为力时，所表现出的无奈、压抑和痛苦的心情。\n根据上述定义，下列最能体现超前纠结的是：",
+          "items": null,
+          "options": {
+            "A": "举世皆浊我独清，世人皆醉我独醒",
+            "B": "古来圣贤皆寂寞，惟有饮者留其名",
+            "C": "无可奈何花落去，似曾相识燕归来",
+            "D": "醉卧沙场君莫笑，古来征战几人回"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 81,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 25
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 87,
+          "section": "判断推理",
+          "type": "定义判断",
+          "stem": "社交裂变是一种利益驱动的商业模式，通过人与人之间的社交促进产品的传播与销售，本质上是通过利益驱动激励客户从而形成裂变。\n根据上述定义，下列不属于社交裂变的是：",
+          "items": null,
+          "options": {
+            "A": "某微商客户挑选好某个商品后，分享在自己的社交圈，好友帮助砍价后，客户可以低价购买，同时也宣传了该商品",
+            "B": "某电商平台的客户成功购买商品后，分享其链接，所有点击的人都能获得商家提供的随机金额的优惠券",
+            "C": "某微信用户在购买到自己喜欢的商品后，经常拍照发在朋友圈中，慢慢地大家都知道她喜欢购买高档奢侈品",
+            "D": "某咖啡店的老顾客参加“邀请好友免费喝咖啡”的活动后，可以获取一张套餐券"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 82,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 25
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 88,
+          "section": "判断推理",
+          "type": "定义判断",
+          "stem": "算术平均数描述了一组数据的平均趋势，是所有数据之和除以数据个数所得之商。在统计学中使用时应注意：出现极端数值、模糊不清的数据或者不同质的数据时，均不能计算算术平均数。\n根据上述定义，下列适于计算算术平均数的是：",
+          "items": null,
+          "options": {
+            "A": "某公司统计35岁以下青年职工的年平均收入，发现基本处于10万~12万元，其中有一人为公司高管，年收入百万元以上",
+            "B": "某社区统计该社区居民的平均年龄，其中包括10岁以下儿童204人，90岁以上老人26人",
+            "C": "某学校统计本校青少年平均身高，将该校学前部、小学部和中学部全部学生计算在内",
+            "D": "某市统计该市各区县留守儿童的平均数量，其中外出务工人员数量较多的区县无法进行准确统计，只提供了估算数据"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 83,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 25
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 89,
+          "section": "判断推理",
+          "type": "定义判断",
+          "stem": "动物辅助治疗是一种以动物为媒介，通过人与动物的接触，改善或维持残障人士的身体状况，或帮助他们加强与外部世界的互动，进而促进康复、适应社会的过程。\n根据上述定义，下列情形不属于动物辅助治疗的是：",
+          "items": null,
+          "options": {
+            "A": "英国短毛猫性格温顺且不具有攻击性，喜静且贴近主人，适合陪伴独自生活的老年人",
+            "B": "性情温和的迷你猪适合陪伴自闭症患者，减轻他们面对人群时产生的焦虑",
+            "C": "卷尾猴能够帮助体障者完成日常生活中的简单动作，如开关门、操控遥控器等",
+            "D": "鼬獾会在主人精神病发作之际，发出叫声，警示主人，让主人可以及时服药"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 84,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 26
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 90,
+          "section": "判断推理",
+          "type": "定义判断",
+          "stem": "愧疚补偿策略指的是不直接提出要求，而强调由于对方的责任导致自己处于困境，使对方产生愧疚心理，从而使对方补偿自己的一种策略。\n根据上述定义，下列反映了愧疚补偿策略的是：",
+          "items": null,
+          "options": {
+            "A": "甲向李某倾诉由于误信了他群发的信息，导致自己被骗得很惨，李某于是免息借钱给甲做生意以求得心安",
+            "B": "乙上班迟到被领导批评，回家后责怪妻子没有及时叫醒他，并要求妻子以后负责夜里带孩子，妻子答应了他",
+            "C": "丙开车邀请陈某一起郊游，途中丙不慎扭伤了脚，只得请假休养，陈某感到非常内疚，决定帮助丙接送孩子上下学",
+            "D": "丁在庄某家做保洁时不慎摔伤，庄某听家政公司说丁家庭非常困难，主动替丁支付了5000元的治疗费用"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 85,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 26
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 91,
+          "section": "判断推理",
+          "type": "定义判断",
+          "stem": "合理使用是指在法律明文规定的情形下，非商业性使用他人已经发表的作品，可以不经著作权人许可，也不必向其支付报酬。“法律明文规定的情形”主要包括：(1)为个人学习、研究或者欣赏，使用他人已经发表的作品；(2)免费表演已经发表的作品；(3)对设置或者陈列在室外公共场所的艺术作品进行临摹、绘画、摄影、录像；(4)将已经发表的以汉语言文字创作的作品翻译成少数民族语言文字作品出版发行。\n根据上述规定，下列属于合理使用的是：",
+          "items": null,
+          "options": {
+            "A": "甲在班级聚会上演唱了戊未发表的一首歌曲",
+            "B": "乙将一部英文作品翻译成蒙文作品出版发行",
+            "C": "丙公司拍摄公共广场的雕塑作品后，将其制作成图片发行",
+            "D": "丁为撰写论文，复印了庚发表在某期刊上的论文做参考"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 86,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 26
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 92,
+          "section": "判断推理",
+          "type": "定义判断",
+          "stem": "客观-价值谬误是一种错误的推理，其前提是一个事实性的描述，而结论所表述的则是一个涉及价值意义的描述，而且这种推理没有预设明显的价值判断前提。\n根据上述定义，下列属于客观-价值谬误的是：",
+          "items": null,
+          "options": {
+            "A": "人与人之间应该进行更多的交流和沟通，更多的理解和包容，世界上的民族国家将越来越少",
+            "B": "既然人人都要遵纪守法，那我们就应该对法律多一份尊重，对规则多一份敬畏",
+            "C": "世界变得越来越城市化，因此人们就不应该继续诗意地栖居在农村",
+            "D": "这个地区的绿化率在不断提高，其空气质量也将不断改善"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 87,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 27
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 93,
+          "section": "判断推理",
+          "type": "定义判断",
+          "stem": "花序是指花在花轴上不同形式的序列。其中，伞房花序的特点是花序轴下部的花梗较长，上部的花梗依次渐短，整个花序的花几乎排列在一个平面上；伞形花序的特点是在总花梗顶端集生许多花梗近等长的小花，放射状排列如伞。\n根据上述定义，下列属于伞房花序的是：",
+          "items": null,
+          "options": null,
+          "options_in_media": true,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 88,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 27
+            }
+          },
+          "flags": [
+            "answer_missing",
+            "media_missing"
+          ]
+        },
+        {
+          "number": 94,
+          "section": "判断推理",
+          "type": "定义判断",
+          "stem": "编剧式观影者是指看影视剧不介意被剧透，甚至会提前查询剧情介绍、翻遍各种影评的人。这种观影者追求掌控剧情发展的感觉，不喜欢出乎意料。\n根据上述定义，下列属于编剧式观影者的是：",
+          "items": null,
+          "options": {
+            "A": "小王看了一部好的影片后，觉得应该和女朋友一起分享，于是邀请女朋友到电影院观影，还向她介绍了电影的主要内容",
+            "B": "小杜对任何事情都讲求理性思维，对于电影，他只有在了解了权威评价、剧情内容、画面特征等情况后，才有观赏的冲动",
+            "C": "小李酷爱悬疑类影片，他喜欢陶醉在烧脑的剧情中，心情随着剧情而起伏，他经常假想自己就是一名侦探，对他人总是投出审视的目光",
+            "D": "张大爷的老伴退休后整天在家看电视剧，对很多电视剧的剧情都了如指掌，还经常将剧情讲述给张大爷"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 89,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 27
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 95,
+          "section": "判断推理",
+          "type": "定义判断",
+          "stem": "培养基是指供给微生物、植物或动物（或组织）生长繁殖的，由不同营养物质组合配制而成的营养基质，一般都含有碳水化合物、含氮物质、无机盐、维生素、水等物质。天然培养基是利用动物、植物或微生物包括其提取物制成的培养基；合成培养基是根据天然培养基的成分，用化学物质模拟合成、人工设计而配制的培养基；半组合培养基是以化学试剂配制为主，同时还加有少量天然成分的培养基。\n根据上述定义，下列属于半组合培养基的是：",
+          "items": null,
+          "options": {
+            "A": "为促进乳酸菌生长，使用小麦的麦芽汁制成的培养基",
+            "B": "为加速诱发绿萝生长，将有机成分、矿物元素、琼脂等按3:1:2的比例制成的培养基",
+            "C": "为观察产气荚膜梭菌的生成，在1000毫升新鲜牛奶中加入10毫升硫酸亚铁制成的培养基",
+            "D": "为研究鸡胚细胞的生长，在一定比例的盐水氨基酸溶液中加入少量玉米汁制成的培养基"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 90,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 28
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 96,
+          "section": "判断推理",
+          "type": "类比推理",
+          "stem": "物体:惯性",
+          "items": null,
+          "options": {
+            "A": "观察:客观性",
+            "B": "液体:流动性",
+            "C": "贵金属:磁性",
+            "D": "气体:稳定性"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 91,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 28
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 97,
+          "section": "判断推理",
+          "type": "类比推理",
+          "stem": "全身麻醉:注射麻醉",
+          "items": null,
+          "options": {
+            "A": "物理消毒:加热消毒",
+            "B": "抽样调查:问卷调查",
+            "C": "网络存储:单机存储",
+            "D": "胸式呼吸:腹式呼吸"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 92,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 28
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 98,
+          "section": "判断推理",
+          "type": "类比推理",
+          "stem": "物必先腐:而后虫生",
+          "items": null,
+          "options": {
+            "A": "古木无人径:深山何处钟",
+            "B": "水落鱼梁浅:天寒梦泽深",
+            "C": "欲投人处宿:隔水问樵夫",
+            "D": "少壮不努力:老大徒伤悲"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 93,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 28
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 99,
+          "section": "判断推理",
+          "type": "类比推理",
+          "stem": "轻车熟路:人生地疏",
+          "items": null,
+          "options": {
+            "A": "前仆后继:贪生怕死",
+            "B": "河清海晏:国泰民安",
+            "C": "廉洁奉公:卑躬屈膝",
+            "D": "任重道远:无所事事"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 94,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 29
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 100,
+          "section": "判断推理",
+          "type": "类比推理",
+          "stem": "路由器:连接:网络",
+          "items": null,
+          "options": {
+            "A": "万花筒:观察:花卉",
+            "B": "烽火台:侦察:敌情",
+            "C": "石英钟:显示:时间",
+            "D": "千斤顶:修补:轮胎"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 95,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 29
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 101,
+          "section": "判断推理",
+          "type": "类比推理",
+          "stem": "建筑材料:混凝土:水泥",
+          "items": null,
+          "options": {
+            "A": "医疗用具:注射器:药物",
+            "B": "监控:监视器:画面",
+            "C": "交通设施:减速带:警示牌",
+            "D": "饮料:汽水:二氧化碳"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 96,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 29
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 102,
+          "section": "判断推理",
+          "type": "类比推理",
+          "stem": "本能行为:学习行为:乌贼喷墨",
+          "items": null,
+          "options": {
+            "A": "合法行为:合理行为:盗窃财物",
+            "B": "生产管理:销售管理:退货处理",
+            "C": "物理变化:化学变化:树木折断",
+            "D": "社会现象:自然现象:四季变换"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 97,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 29
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 103,
+          "section": "判断推理",
+          "type": "类比推理",
+          "stem": "税前收入:税后收入:税金",
+          "items": null,
+          "options": {
+            "A": "测量高度:真实高度:误差",
+            "B": "法律规定:道德规范:规则",
+            "C": "高原地区:平原地区:纬度",
+            "D": "生产成本:出厂价格:销售价"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 98,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 29
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 104,
+          "section": "判断推理",
+          "type": "类比推理",
+          "stem": "薄荷 对于（ ）相当于（ ）对于 计时器",
+          "items": null,
+          "options": {
+            "A": "茯苓 倒计时",
+            "B": "药用植物 沙漏",
+            "C": "川芎 水钟",
+            "D": "清凉 精准"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 99,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 29
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 105,
+          "section": "判断推理",
+          "type": "类比推理",
+          "stem": "玻璃瓶 对于（ ）相当于（ ）对于 秋播作物",
+          "items": null,
+          "options": {
+            "A": "石英砂 农作物",
+            "B": "塑料瓶 水生植物",
+            "C": "广口瓶 大棚作物",
+            "D": "饮料瓶 春播作物"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 100,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 29
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 106,
+          "section": "判断推理",
+          "type": "逻辑判断",
+          "stem": "随着气温上升，热带雨林遭受闪电雷击并引发大火的概率也会上升。然而，目前的监测表明，美洲热带雨林虽然更频繁地受到闪电雷击，却没有引发更多的森林大火。研究者认为这可能与近年来雨林中藤蔓植物大量增加有关。\n以下哪项如果为真，最能支持上述结论？",
+          "items": null,
+          "options": {
+            "A": "藤蔓茎干相对树枝电阻更小，能像建筑物上的避雷针那样传导闪电，让大部分电流从自己的茎干传导",
+            "B": "闪电雷击常常引起温带森林大火，但热带雨林因为湿度较大，并不会产生较大火灾",
+            "C": "雷击这样大规模、速度极快的放电，先摧毁了外部的藤蔓植物，中间的树木得到了保护",
+            "D": "1968年热带雨林中藤蔓植物的覆盖率是32%，当前其覆盖率已经高达60%，有的地区甚至超过75%"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 101,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 30
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 107,
+          "section": "判断推理",
+          "type": "逻辑判断",
+          "stem": "一切生命有机体都需要新陈代谢，否则生命就会停止。文明也是一样，如果长期自我封闭，必将走向衰落。交流互鉴是文明发展的本质要求。只有同其他文明交流互鉴、取长补短，才能保持旺盛生命活力。\n由此可以推出：",
+          "items": null,
+          "options": {
+            "A": "一种文明如果没有长期自我封闭，就不会走向衰落",
+            "B": "一种文明如果没有同其他文明交流互鉴，就不能保持旺盛生命活力",
+            "C": "一种文明如果同其他文明交流互鉴、取长补短，就能保持旺盛生命活力",
+            "D": "一种文明如果没有保持旺盛生命活力，它就没有同其他文明取长补短"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 102,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 30
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 108,
+          "section": "判断推理",
+          "type": "逻辑判断",
+          "stem": "澳大利亚箱形水母是世界上毒性最强的动物之一，蜇人后其毒素会使人皮肤坏死并伴随剧痛，还会侵入人的心脏，使人在短时间内因心脏停搏而死亡。一只箱形水母体内携带的毒液足以致60人死亡，目前还没有针对其毒液的特效药物。近日，研究人员通过全基因组筛查的方法发现，人体细胞内一种名为ATP2B1的蛋白质是箱形水母毒液发挥毒性的必要条件，研究人员据此认为，通过靶向治疗方法降低胆固醇可以对抗箱形水母的毒液。\n以下哪项可以作为上述论证的前提？",
+          "items": null,
+          "options": {
+            "A": "靶向治疗方法是一种安全可靠的方法",
+            "B": "降低胆固醇后不会对人体产生副作用",
+            "C": "已研制出降低胆固醇的靶向治疗药物",
+            "D": "ATP2B1蛋白质发挥作用需要胆固醇"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 103,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 30
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 109,
+          "section": "判断推理",
+          "type": "逻辑判断",
+          "stem": "2014年以来，某州已发生了超过230次3级及以上地震，而在2008年之前这一数字是年均1次。频繁的地震活动引发了人们的疑问，一些研究者发现2014年以来，全州为了避免石油开采中钻井和水力压裂过程中产生的有毒废水污染地表水，开始将这些废水注入地下岩石的不透水层之间，这一行为很可能就是引发地震的关键原因。\n以下哪项如果为真，最能支持上述推测？",
+          "items": null,
+          "options": {
+            "A": "该州自2008年以来勘探出更多的石油储备，石油开采活动大幅增加",
+            "B": "废水灌入岩石水层中会降低断层之间的摩擦力，使之更易滑动，从而诱发地震",
+            "C": "该州2008年之前的地震次数少但震级大，2014年以来地震次数多但震级小",
+            "D": "大多数连续地震是一次强震后发生的一系列余震，但该州地震并不属于这种情况"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 104,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 31
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 110,
+          "section": "判断推理",
+          "type": "逻辑判断",
+          "stem": "一般来说，动物的蛋会通过土壤中微生物和堆肥分解有机物时产生的热量来孵化，但这些微生物（包括细菌）也会穿透蛋壳、感染胚胎，自然情况下这一比例高于20%。然而，在澳洲有一种名为丛冢雉的鸟类，其蛋发生感染的概率仅为9%，研究者发现其蛋壳中含有溶酶酵素，研究者据此认为这种物质很可能就是抵御细菌侵扰的关键因素。\n以下哪项如果为真，没有削弱上述结论？",
+          "items": null,
+          "options": {
+            "A": "丛冢雉的蛋壳中所含的溶酶酵素量，与其他动物相比，含量大抵相当",
+            "B": "丛冢雉的蛋壳被一层纳米级的碳酸钙层包裹，拥有了更强的防水性和抗细菌入侵能力",
+            "C": "与其他动物的蛋壳相比，丛冢雉的蛋壳要薄三分之一，更易受到微生物的入侵",
+            "D": "丛冢雉蛋散发一种特殊气味，会使附着在其蛋壳上的细菌数减少"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 105,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 31
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "㊳",
+          "stem": "斑头雁在飞行中有一个特点，就是它们经常以某种队形来飞，通常是后面的鸟飞在前一只鸟的侧后方，因此就有了常见的“人”字形队形。一些研究者认为这一队形可减少空气阻力、降低飞行能耗，然而反对者认为如果是为了减少阻力，鸟更应该选择直线的队形，因为一个紧跟一个飞行能最大限度地减少跟随者需要克服的空气阻力。以下哪项如果为真，最能质疑反对者的结论？",
+          "items": null,
+          "options": {
+            "A": "飞行过程中，领头雁会不时地与后方同伴换位，否则它们很容易筋疲力尽",
+            "B": "斑头雁在飞行时会有确定方向的需求，所以并不会一直排成“人”字形飞行",
+            "C": "速滑比赛中，运动员常以“人”字形前进，一名运动员在前，另外三名紧随其后，后三名队员因阻力变小而受益",
+            "D": "斑头雁飞行时偏移于前面的同伴，虽不能最大限度减少空气阻力，但能极大地减少上升时所需的体能消耗"
+          },
+          "options_in_media": false,
+          "type": "逻辑判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 111,
+            "diff_label": "㊳",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 50
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 111,
+          "section": "判断推理"
+        },
+        {
+          "diff_label": "㊴",
+          "stem": "小张这个夏天如果去新疆，就要游吐鲁番和喀纳斯，否则就不去；只有与小李同游，小张才会游吐鲁番或天池；如果与小李同游，小张一定要与小李做约定；如果小张与小李做约定，则小李这个夏天一定要有时间。遗憾的是，这个夏天小李单位来了一项紧急任务，相关人员一律不得请假，小李也不例外。由此可以推出：",
+          "items": null,
+          "options": {
+            "A": "小张这个夏天去游天池",
+            "B": "小张这个夏天去游吐鲁番",
+            "C": "小张这个夏天未去新疆",
+            "D": "小张这个夏天去游喀纳斯"
+          },
+          "options_in_media": false,
+          "type": "逻辑判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 112,
+            "diff_label": "㊴",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 50
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 112,
+          "section": "判断推理"
+        },
+        {
+          "diff_label": "㊵",
+          "stem": "甲、乙、丙、丁、戊五人乘坐高铁出差，他们正好坐在同一排的A、B、C、D、F五个座位。已知：（1）若甲或者乙中的一人坐在C座，则丙坐在B座。（2）若戊坐在C座，则丁坐在F座。如果丁坐在B座，那么可以确定的是：",
+          "items": null,
+          "options": {
+            "A": "甲坐在A座",
+            "B": "乙坐在D座",
+            "C": "丙坐在C座",
+            "D": "戊坐在F座"
+          },
+          "options_in_media": false,
+          "type": "逻辑判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 113,
+            "diff_label": "㊵",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 51
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 113,
+          "section": "判断推理"
+        },
+        {
+          "diff_label": "㊶",
+          "stem": "一项研究中，研究者观察了近300名2~4年级儿童在一个学年中的课堂参与度。参与度是根据上课过程中的专心行为和分心行为衡量的，前者指的是回答问题、举手发言或参与讨论等，后者指闲聊等行为。实验中，一半学生站立在高课桌前听课，另一半则坐着听课。结果发现：站立听课的学生比坐着的学生更加专注。以下哪项如果为真，最能支持上述结论？",
+          "items": null,
+          "options": {
+            "A": "长时间坐着听课会增加身体对脊柱的压力，不利于学生的身体健康",
+            "B": "即使是站立听课，也有个别学生会来回走动，影响课堂秩序，让他人分心",
+            "C": "许多性格活泼的学生更喜欢站立听课，觉得这样专注力更高，而内向的学生则愿意坐着听课，觉得更利于提高注意力",
+            "D": "站立需要大脑平衡身体、控制轻微肌肉收缩，这些适度的压力会使人的注意力更加集中"
+          },
+          "options_in_media": false,
+          "type": "逻辑判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 114,
+            "diff_label": "㊶",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 51
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 114,
+          "section": "判断推理"
+        },
+        {
+          "diff_label": "㊷",
+          "stem": "近日，研究人员发现发烧可以促进淋巴细胞向感染部位转移，他们解释说，这是由于发烧会增加热休克蛋白90（Hsp90）在T淋巴细胞中的表达，这种蛋白质与整合素结合，促进T淋巴细胞黏附到血管上，最终加快迁移到感染的位置。以下除哪项外，均能支持上述结论？",
+          "items": null,
+          "options": {
+            "A": "不仅仅是发烧，其他压力也能诱导Hsp90在T淋巴细胞中的表达",
+            "B": "整合素是一种细胞黏附分子，在发烧时可以控制T淋巴细胞的转运",
+            "C": "发烧能够诱导Hsp90与整合素的尾部结合，并可激活整合素",
+            "D": "Hsp90与整合素结合后，可激活促进T淋巴细胞迁移的信号通路"
+          },
+          "options_in_media": false,
+          "type": "逻辑判断",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 115,
+            "diff_label": "㊷",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 51
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 115,
+          "section": "判断推理"
+        }
+      ]
+    },
+    {
+      "name": "资料分析",
+      "number_range": [
+        116,
+        135
+      ],
+      "question_count": 20,
+      "materials": [
+        {
+          "id": "m111_115",
+          "title": "【图1 2010—2018年我国海洋主题公园年末数量及全年游客规模】",
+          "kind": "text",
+          "number_range": [],
+          "content": "【图1 2010—2018年我国海洋主题公园年末数量及全年游客规模】\n数量（家）：2010年34、2011年38、2012年40、2013年41、2014年48、2015年51、2016年59、2017年63、2018年72\n游客规模（万人次）：2010年3100、2011年3650、2012年3950、2013年4355、2014年5288、2015年5804、2016年6277、2017年6845、2018年8109\n【图2 2010—2018年我国海洋主题公园收入构成（单位：亿元）】\n门票收入：2010年22.30、2011年25.20、2012年26.68、2013年27.64、2014年32.89、2015年35.86、2016年38.02、2017年42.09、2018年50.60\n非门票收入：2010年8.20、2011年9.46、2012年10.32、2013年10.86、2014年13.05、2015年14.58、2016年15.61、2017年17.45、2018年21.18",
+          "table_data": null,
+          "media": [],
+          "note": ""
+        },
+        {
+          "id": "m116_120",
+          "title": "【2013—2018年中国集成电路进出口状况】",
+          "kind": "text",
+          "number_range": [],
+          "content": "【2013—2018年中国集成电路进出口状况】\n2013年：进口数量2663.1亿块、进口金额2313.4亿美元、出口数量1426.7亿块、出口金额877.0亿美元\n2014年：进口2856.5亿块、2176.2亿美元；出口1535.2亿块、608.6亿美元\n2015年：进口3140.0亿块、2300.0亿美元；出口1827.7亿块、693.2亿美元\n2016年：进口3425.5亿块、2270.7亿美元；出口1810.1亿块、613.8亿美元\n2017年：进口3770.1亿块、2601.4亿美元；出口2043.5亿块、668.8亿美元\n2018年：进口4175.7亿块、3120.6亿美元；出口2171.0亿块、846.4亿美元\n【2013—2018年中国集成电路产业销售额及增速】\n销售额（亿元）：2013年2508.5、2014年3015.4、2015年3609.8、2016年4335.5、2017年5411.3、2018年6532.0\n增速（%）：2013年16.2、2014年20.2、2015年19.7、2016年20.1、2017年24.8、2018年20.7",
+          "table_data": null,
+          "media": [],
+          "note": ""
+        },
+        {
+          "id": "m_diff_tea",
+          "title": "2007-2018年全国茶园面积及茶叶产量 + 2018年全国产茶省份茶园面积及茶叶产量",
+          "kind": "text",
+          "number_range": [],
+          "content": "图1：2007—2018年全国茶园面积及茶叶产量\n茶园面积（万公顷）：2007年143.0，2008年171.6，2009年183.0，2010年193.2，2011年205.6，2012年220.1，2013年236.7，2014年252.6，2015年264.1，2016年272.3，2017年284.9，2018年293.1\n茶叶产量（万吨）：2007年101.0，2008年125.5，2009年135.1，2010年146.3，2011年160.8，2012年176.2，2013年188.7，2014年204.9，2015年227.7，2016年231.3，2017年246.0，2018年261.6\n\n表1：2018年全国产茶省份茶园面积及茶叶产量（单位：万公顷、万吨）\n江苏：面积3.37，产量1.46\n浙江：面积19.92，产量18.60\n安徽：面积16.97，产量13.49\n福建：面积20.72，产量40.16\n江西：面积11.42，产量7.09\n山东：面积2.20，产量2.88\n河南：面积11.63，产量7.40\n湖北：面积29.93，产量31.45\n湖南：面积16.89，产量21.36\n广东：面积6.20，产量9.65\n广西：面积7.71，产量7.30\n海南：面积0.24，产量0.06\n重庆：面积4.49，产量3.96\n四川：面积36.34，产量29.50\n贵州：面积45.62，产量19.93\n云南：面积44.45，产量39.81\n陕西：面积13.80，产量7.35\n甘肃：面积1.15，产量0.14",
+          "table_data": null,
+          "media": [],
+          "note": ""
+        },
+        {
+          "id": "m_diff_logistics",
+          "title": "2018年前三季度S省社会物流情况",
+          "kind": "text",
+          "number_range": [],
+          "content": "2018年前三季度，S省社会物流总额35357.26亿元，同比增长6.4%，增速比上半年放缓0.7个百分点。其中，工业品物流总额16636.15亿元，同比增长0.2%，增速比上半年放缓2.1个百分点；外部流入（含进口）货物物流总额17357.31亿元，同比增长12.1%，增速比上半年加快0.8个百分点；农产品物流总额875.06亿元，同比增长11.6%，增速比上半年加快0.5个百分点；单位与居民物品物流总额457.86亿元，同比增长40.7%，增速比上半年放缓3个百分点；再生资源物流总额30.88亿元，同比下降7.0%，降幅比上半年扩大4.3个百分点。\n\n2018年前三季度，S省物流相关行业实现总收入1912.8亿元，同比增长6.6%。其中：运输环节收入1321.9亿元，同比增长6.0%；保管环节收入226.2亿元，同比增长6.4%；邮政业收入82.8亿元，同比增长16.7%；配送、加工、包装业收入98.8亿元，同比增长6.4%。\n\n2018年前三季度，S省社会物流总费用2682.1亿元，同比增长6.3%，比上半年放缓0.9个百分点，其中：物流运输环节总费用1854.6亿元，同比增长6.3%；保管环节总费用612.4亿元，同比增长6.4%；管理环节总费用214.9亿元，同比增长6.4%。",
+          "table_data": null,
+          "media": [],
+          "note": ""
+        }
+      ],
+      "questions": [
+        {
+          "number": 116,
+          "section": "资料分析",
+          "type": "资料分析",
+          "stem": "2018年我国平均每家海洋主题公园全年游客规模比2010年：",
+          "items": null,
+          "options": {
+            "A": "减少了30万人次以内",
+            "B": "减少了30万人次以上",
+            "C": "增加了30万人次以内",
+            "D": "增加了30万人次以上"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m111_115"
+          ],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 111,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 33
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 117,
+          "section": "资料分析",
+          "type": "资料分析",
+          "stem": "已知2011年年初—2018年年末我国所有开业的海洋主题公园都持续营业，则该期间我国平均约多长时间新开一家海洋主题公园？",
+          "items": null,
+          "options": {
+            "A": "三个月",
+            "B": "三个半月",
+            "C": "两个月",
+            "D": "两个半月"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m111_115"
+          ],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 112,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 34
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 118,
+          "section": "资料分析",
+          "type": "资料分析",
+          "stem": "2016年我国海洋主题公园平均每名游客创造的门票收入比非门票收入约多多少元？",
+          "items": null,
+          "options": {
+            "A": "30",
+            "B": "36",
+            "C": "42",
+            "D": "48"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m111_115"
+          ],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 113,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 34
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 119,
+          "section": "资料分析",
+          "type": "资料分析",
+          "stem": "2011—2018年，我国海洋主题公园非门票收入同比增速超过10%的年份有几个？",
+          "items": null,
+          "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m111_115"
+          ],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 114,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 34
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 120,
+          "section": "资料分析",
+          "type": "资料分析",
+          "stem": "关于我国海洋主题公园状况，能够从上述资料中推出的是：",
+          "items": null,
+          "options": {
+            "A": "2013年平均每家海洋主题公园的门票收入高于上年水平",
+            "B": "2013—2017年累计游客规模超3亿人次",
+            "C": "2011—2018年，年末公园数量同比增量和游客规模同比增量最大的年份不是同一个",
+            "D": "2014年海洋主题公园总收入比上年增长了8亿多元"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m111_115"
+          ],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 115,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 34
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 121,
+          "section": "资料分析",
+          "type": "资料分析",
+          "stem": "2018年中国进出口贸易总额为4.62万亿美元，其中集成电路进出口贸易总额占比：",
+          "items": null,
+          "options": {
+            "A": "在5~10个百分点",
+            "B": "超过10个百分点",
+            "C": "不到1个百分点",
+            "D": "在1~5个百分点"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m116_120"
+          ],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 116,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 35
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 122,
+          "section": "资料分析",
+          "type": "资料分析",
+          "stem": "2012—2015年，中国集成电路产业累计销售额在以下哪个范围内？",
+          "items": null,
+          "options": {
+            "A": "1万亿~1.1万亿元",
+            "B": "不到1万亿元",
+            "C": "超过1.2万亿元",
+            "D": "1.1万亿~1.2万亿元"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m116_120"
+          ],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 117,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 35
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 123,
+          "section": "资料分析",
+          "type": "资料分析",
+          "stem": "2018年中国平均每块集成电路出口单价比上年：",
+          "items": null,
+          "options": {
+            "A": "上升了30%以内",
+            "B": "上升了30%以上",
+            "C": "下降了30%以内",
+            "D": "下降了30%以上"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m116_120"
+          ],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 118,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 35
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 124,
+          "section": "资料分析",
+          "type": "资料分析",
+          "stem": "2013—2018年中国集成电路产业销售额增速最高的年份，当年集成电路进口金额同比约增加：",
+          "items": null,
+          "options": {
+            "A": "5%",
+            "B": "10%",
+            "C": "15%",
+            "D": "20%"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m116_120"
+          ],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 119,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 35
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "number": 125,
+          "section": "资料分析",
+          "type": "资料分析",
+          "stem": "关于中国集成电路产业销售及进出口状况，能够从上述资料中推出的是：",
+          "items": null,
+          "options": {
+            "A": "2016年销售额同比增量低于上年水平",
+            "B": "2016—2017年，月均进出口总量超过450亿块",
+            "C": "2015—2018年，进口量和进口额均逐年上升",
+            "D": "2014—2018年，出口总量超过1万亿块"
+          },
+          "options_in_media": false,
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m116_120"
+          ],
+          "provenance": {
+            "role": "shared",
+            "from_paper": "shidi",
+            "from_number": 120,
+            "diff_label": null,
+            "raw_note": "省级与市地共享",
+            "source_ref": {
+              "file": "20202548.pdf",
+              "page": 35
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ]
+        },
+        {
+          "diff_label": "㊸",
+          "stem": "2016—2018年，全国茶叶产量之和比2013—2015年产量之和增加了：",
+          "items": null,
+          "options": {
+            "A": "不到100万吨",
+            "B": "100万~150万吨",
+            "C": "150万~200万吨",
+            "D": "超过200万吨"
+          },
+          "options_in_media": false,
+          "type": "资料分析",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_tea"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 126,
+            "diff_label": "㊸",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 52
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 126,
+          "section": "资料分析"
+        },
+        {
+          "diff_label": "㊹",
+          "stem": "2007—2018年，全国茶园面积首次超过200万公顷的年份，当年茶园单位面积茶叶产量比上年：",
+          "items": null,
+          "options": {
+            "A": "增加了不到10%",
+            "B": "增加了10%以上",
+            "C": "下降了不到10%",
+            "D": "下降了10%以上"
+          },
+          "options_in_media": false,
+          "type": "资料分析",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_tea"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 127,
+            "diff_label": "㊹",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 52
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 127,
+          "section": "资料分析"
+        },
+        {
+          "diff_label": "㊺",
+          "stem": "2018年全国产茶省份中，有几个省份的茶园单位面积茶叶产量高于1吨/公顷？",
+          "items": null,
+          "options": {
+            "A": "4",
+            "B": "5",
+            "C": "6",
+            "D": "7"
+          },
+          "options_in_media": false,
+          "type": "资料分析",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_tea"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 128,
+            "diff_label": "㊺",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 53
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 128,
+          "section": "资料分析"
+        },
+        {
+          "diff_label": "㊻",
+          "stem": "2018年茶园面积最大的4个省份中，茶叶产量也是全国前4名的省份有几个？",
+          "items": null,
+          "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+          },
+          "options_in_media": false,
+          "type": "资料分析",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_tea"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 129,
+            "diff_label": "㊻",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 53
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 129,
+          "section": "资料分析"
+        },
+        {
+          "diff_label": "㊼",
+          "stem": "能够从上述资料中推出的是：",
+          "items": null,
+          "options": {
+            "A": "2008—2010年，全国茶园面积同比增速逐年持续下降",
+            "B": "2018年全国茶叶产量比9年前翻了一番",
+            "C": "2018年全国茶园面积最小的产茶省份，单位面积产量也最低",
+            "D": "2018年湖南、湖北的茶园面积占全国茶园总面积的两成以上"
+          },
+          "options_in_media": false,
+          "type": "资料分析",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_tea"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 130,
+            "diff_label": "㊼",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 53
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 130,
+          "section": "资料分析"
+        },
+        {
+          "diff_label": "㊽",
+          "stem": "2018年前三季度，S省工业品物流总额同比增量约为同期社会物流总额同比增量的：",
+          "items": null,
+          "options": {
+            "A": "不到5%",
+            "B": "5%~10%",
+            "C": "10%~30%",
+            "D": "超过30%"
+          },
+          "options_in_media": false,
+          "type": "资料分析",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_logistics"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 131,
+            "diff_label": "㊽",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 53
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 131,
+          "section": "资料分析"
+        },
+        {
+          "diff_label": "㊾",
+          "stem": "在工业品物流、外部流入（含进口）货物物流、农产品物流、单位与居民物品物流和再生资源物流中，2018年前三季度物流总额占社会物流总额的比重高于上年水平的有几类？",
+          "items": null,
+          "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+          },
+          "options_in_media": false,
+          "type": "资料分析",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_logistics"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 132,
+            "diff_label": "㊾",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 54
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 132,
+          "section": "资料分析"
+        },
+        {
+          "diff_label": "㊿",
+          "stem": "2018年前三季度，平均每万元社会物流总额产生的物流费用比上年同期：",
+          "items": null,
+          "options": {
+            "A": "下降了不到1%",
+            "B": "下降了1%以上",
+            "C": "上升了不到1%",
+            "D": "上升了1%以上"
+          },
+          "options_in_media": false,
+          "type": "资料分析",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_logistics"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 133,
+            "diff_label": "㊿",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 54
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 133,
+          "section": "资料分析"
+        },
+        {
+          "diff_label": "51",
+          "stem": "将2018年前三季度S省物流相关行业不同类型的收入按照同比增量从高到低排列，以下正确的是：",
+          "items": null,
+          "options": {
+            "A": "运输收入>配送、加工、包装业收入>邮政业收入>保管收入",
+            "B": "运输收入>保管收入>配送、加工、包装业收入>邮政业收入",
+            "C": "运输收入>邮政业收入>配送、加工、包装业收入>保管收入",
+            "D": "运输收入>保管收入>邮政业收入>配送、加工、包装业收入"
+          },
+          "options_in_media": false,
+          "type": "资料分析",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_logistics"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 134,
+            "diff_label": "51",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 54
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 134,
+          "section": "资料分析"
+        },
+        {
+          "diff_label": "52",
+          "stem": "关于2018年前三季度S省物流情况，能够从上述资料中推出的是：",
+          "items": null,
+          "options": {
+            "A": "农产品物流总额同比增长了100多亿元",
+            "B": "配送、加工、包装业收入占物流相关行业总收入的比重超过5%",
+            "C": "物流运输环节收入同比增量高于该环节费用同比增量",
+            "D": "外部流入（含进口）货物物流总额占社会物流总额的一半以上"
+          },
+          "options_in_media": false,
+          "type": "资料分析",
+          "topic": null,
+          "tag": null,
+          "answer": null,
+          "answer_source": null,
+          "explanation": null,
+          "media": [],
+          "formulas": [],
+          "material_ids": [
+            "m_diff_logistics"
+          ],
+          "provenance": {
+            "role": "province_only",
+            "from_paper": "shengji",
+            "from_number": 135,
+            "diff_label": "52",
+            "raw_note": "省级独有",
+            "source_ref": {
+              "file": "20204954.pdf",
+              "page": 54
+            }
+          },
+          "flags": [
+            "answer_missing"
+          ],
+          "number": 135,
+          "section": "资料分析"
+        }
+      ]
+    }
+  ]
+}

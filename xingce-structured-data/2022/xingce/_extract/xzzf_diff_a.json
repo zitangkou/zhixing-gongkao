@@ -1,0 +1,660 @@
+{
+  "module": "常识判断+言语理解与表达",
+  "role": "xzzf_diff",
+  "year": 2022,
+  "source_note": "行政执法差异册 20224970.pdf 第60-65页 + 20226369.pdf 第63页（补页）。执法常识20题 = 省级共享8题(2~3,8,11~12,17,19~20) + 市地共享5题(②④⑥⑦⑨) + 本文件68~74共7题独有。执法言语40题 = 省级共享12题 + 市地共享17题(⑩~⑮,⑰,⑳~㉔,㉚,㉛~㉞) + 本文件75~85共11题独有。",
+  "questions": [
+    {
+      "diff_label": "68",
+      "module": "常识判断",
+      "stem": "习近平总书记在全国脱贫攻坚总结表彰大会上的讲话指出：\"贫困是人类社会的顽疾。反贫困始终是古今中外治国安邦的一件大事。一部中国史，就是一部中华民族同贫困作斗争的历史。从 ① '长太息以掩涕兮，哀民生之多艰'的感慨，到杜甫' ② '的憧憬，再到 ③ '家给人足，四海之内无一夫不获其所'的夙愿，都反映了中华民族对摆脱贫困、丰衣足食的深深渴望。\"\n文中①②③处应分别填入：",
+      "items": [
+        "屈原/司马迁",
+        "安得广厦千万间，大庇天下寒士俱欢颜 / 岂辞云水三千里，犹济疮痍十万民",
+        "严复/孙中山"
+      ],
+      "options": {
+        "A": "司马迁；安得广厦千万间，大庇天下寒士俱欢颜；严复",
+        "B": "屈原；安得广厦千万间，大庇天下寒士俱欢颜；孙中山",
+        "C": "司马迁；岂辞云水三千里，犹济疮痍十万民；孙中山",
+        "D": "屈原；岂辞云水三千里，犹济疮痍十万民；严复"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "68",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 60
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "69",
+      "module": "常识判断",
+      "stem": "新修正的《中华人民共和国安全生产法》自2021年9月1日起施行。依据该法，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "应急管理部门对安全生产进行监督管理，其他行业主管部门无监管职责",
+        "B": "生产经营单位分管生产的负责人是本单位安全生产第一责任人",
+        "C": "安全生产违法行为导致重大事故损害公益的，人民检察院及有关公益组织可提起公益诉讼",
+        "D": "生产安全事故情节特别严重、影响特别恶劣的，罚款额最高可达一亿元"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "69",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 60
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "70",
+      "module": "常识判断",
+      "stem": "下列甲乙丙丁的行为构成利用影响力受贿罪的是：",
+      "items": null,
+      "options": {
+        "A": "甲为某生态环境局副局长，某项目经理王某为减轻环境行政罚款向其行贿五万元，后甲向下属监察大队负责人打招呼撤销罚款决定",
+        "B": "乙为某市场监督管理局局长，某项目经理张某为减轻国土资源行政罚款向其行贿五万元，后乙向自然资源局领导打招呼撤销罚款决定",
+        "C": "丙为某税务局公务员，其夫为教育局局长，丙收受李某五万元并通过其夫职权解决李某小孩跨区入学问题，其夫不知情",
+        "D": "丁为某教育局局长，其妻为私企员工，私下收受刘某五万元并通过其夫职权解决刘某小孩跨区入学问题，丁知情后未反对"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "70",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 60
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "71",
+      "module": "常识判断",
+      "stem": "甲乙丙丁4人发起设立某商贸股份有限公司，并租赁了1处办公场所。在公司设立过程中，甲由于疏忽忘关水龙头致办公场所被淹，给办公场所业主戊造成五万元损失。公司设立后，业主戊向公司索赔。下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "因公司已设立，五万元损失由公司承担即可",
+        "B": "因系发起人责任，五万元损失由发起人共同承担",
+        "C": "因在公司设立过程中产生损失，五万元由公司和发起人共同承担",
+        "D": "公司可以先行向业主戊赔偿，再向甲追偿"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "71",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 61
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "72",
+      "module": "常识判断",
+      "stem": "下列做法符合《中华人民共和国乡村振兴促进法》的是：",
+      "items": null,
+      "options": {
+        "A": "某县政府为培育良种，划定一块永久基本农田作为重要农产品生产保护区",
+        "B": "某省政府严控农用地转为建设用地，不限制耕地转为林地",
+        "C": "某市政府为了方便规模经营，对农用地未分类而进行统一管理",
+        "D": "某乡政府遵守法定程序撤并村庄，要求涉及的农民无条件配合"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "72",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 61
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "73",
+      "module": "常识判断",
+      "stem": "下列经济现象或做法符合经济学常理的是：",
+      "items": null,
+      "options": {
+        "A": "中央银行增加外汇储备引起货币供应量减少",
+        "B": "通货紧缩时期政府减少在社会福利方面的支出",
+        "C": "政府通过降低税率，减少税收，抑制通货膨胀",
+        "D": "流动性过剩时中央银行在金融市场上出售国债"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "73",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 61
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "74",
+      "module": "常识判断",
+      "stem": "关于我国航天事业，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "所有发射任务都是长征系列火箭承担的",
+        "B": "我国第一颗地球同步轨道卫星是在文昌发射的",
+        "C": "航天员搭乘\"神舟十二号\"首次进入我国自己的空间站",
+        "D": "\"实践十三号\"是用于监测国土资源的卫星"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "74",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 61
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "75",
+      "module": "言语理解与表达",
+      "stem": "安装监控补光灯的目的在于更好地识别车辆信息，从而提高执法效率，存留违法车辆的有效证据。然而，交通执法的根本目的在于维护道路交通安全，如果执法手段本身对交通安全构成了隐患，甚至不幸导致事故，那么无疑是______。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "本末倒置",
+        "B": "得不偿失",
+        "C": "背道而驰",
+        "D": "因小失大"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "75",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 62
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "76",
+      "module": "言语理解与表达",
+      "stem": "在宇宙过去130多亿年里，暗物质扮演了十分重要的角色。由于在物质的质量比例上占据______地位，暗物质决定了宇宙物质在大尺度上的分布——宇宙大尺度结构。现代超级计算机模拟更是向我们揭示，宇宙中暗物质的空间分布可以再现观测到的星系分布，暗示了星系和暗物质之间______的关系。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "关键 盘根错节",
+        "B": "核心 唇齿相依",
+        "C": "主导 千丝万缕",
+        "D": "优势 如影随形"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "76",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 62
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "77",
+      "module": "言语理解与表达",
+      "stem": "当下，传播媒介的______为文化传播不断创造着新符号。其中，短视频平台跨越专业内容生产门槛，______海量用户，进行日常生活的自我呈现，体现了传播的视觉转向和影像化特点。而虚拟现实、增强现实、混合现实则在视觉、听觉、触觉等多模态符号中______了人类感官，建构受众的认知和体验。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "创新 吸引 挑战",
+        "B": "更迭 聚集 延伸",
+        "C": "涌现 引导 丰富",
+        "D": "升级 融合 重塑"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "77",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 62
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "78",
+      "module": "言语理解与表达",
+      "stem": "早期的电影多是全景式的\"纪录视角\"，这是由于摄影机无法移动，只能______传统戏剧我演你看的观演关系。随着各种摄影新技术和剪辑新手法的出现，电影依靠独特的镜头语言，逐渐脱离戏剧的束缚，______。完全依据戏剧思维，使用单一固定的场景所打造的电影虽有佳作，但______。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "照搬 自立门户 屈指可数",
+        "B": "保持 另起炉灶 凤毛麟角",
+        "C": "沿袭 独当一面 差强人意",
+        "D": "复制 革故鼎新 寥寥无几"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "78",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 62
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "79",
+      "module": "言语理解与表达",
+      "stem": "如果历史观错误，不仅达不到学习教育的目的，反倒会______、走入误区。现在，一些错误倾向要引起警惕：有的______党史上的失误和曲折，肆意抹黑歪曲党的历史、攻击党的领导；有的将党史事件同现实问题刻意勾连、恶意炒作；有的不信正史信野史，将党史庸俗化、娱乐化，热衷传播八卦轶闻，对非法境外出版物______，等等。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "轻重倒置 渲染 青睐有加",
+        "B": "南辕北辙 夸大 津津乐道",
+        "C": "缘木求鱼 聚焦 趋之若鹜",
+        "D": "断章取义 曲解 如数家珍"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "79",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20226369.pdf",
+          "page": 63
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "80",
+      "module": "言语理解与表达",
+      "stem": "近年来出现的《我在故宫修文物》等以国宝为题材的纪录片，提供了认识历史的新______。这些纪录片以具体的文物为线索，又不______于文物，而是描绘物品所处时代的精神世界，以此引导当代观众与传统文化发生碰撞，引导情感参与，开拓历史视野。这些节目如同荧屏上的博物馆，让观众______。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "方向 受制 大开眼界",
+        "B": "视角 拘泥 流连忘返",
+        "C": "境界 局限 身临其境",
+        "D": "途径 止步 叹为观止"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "80",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20226369.pdf",
+          "page": 63
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "81",
+      "module": "言语理解与表达",
+      "stem": "法律和道德都是具有一定约束性的社会规范，都能发挥规范人们行为的功能。法律更注重以国家的外在强制力保障规则实施，主要是一种他律。道德虽然也通过社会评价等方式产生外部约束作用，但更强调自律，通过人们内心的价值认同来感染人心、凝聚共识，实现个体对于道德规范的自愿遵从。现代法治强调良法善治，实现这一目标离不开道德作用的发挥。道德为法律创制提供伦理基础，为法律的正当性提供评判标准，也为法律实施提供道义支持，对于法治体系的建立和运行具有重要支撑作用。\n这段文字意在说明：",
+      "items": null,
+      "options": {
+        "A": "良法善治的实现需要道德\"保驾护航\"",
+        "B": "道德规范是现代法治精神的重要来源",
+        "C": "法律和道德发挥作用的机制不同",
+        "D": "法治和德治互为表里、不可偏废"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "81",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20226369.pdf",
+          "page": 63
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "82",
+      "module": "言语理解与表达",
+      "stem": "①强调严格执法，让违法者敬法畏法，但绝不是暴力执法、过激执法，要让执法既有力度又有温度\n②要推进严格规范公正文明执法，提高司法公信力\n③同时，一些地方运动式、\"一刀切\"执法问题仍时有发生，执法不作为问题突出\n④近年来，我们整治执法不规范、乱作为等问题，取得很大成效\n⑤要加强省市县乡四级全覆盖的行政执法协调监督工作体系建设，强化全方位、全流程监督，提高执法质量\n⑥行政执法工作面广量大，一头连着政府，一头连着群众，直接关系群众对党和政府的信任、对法治的信心\n将以上6个句子重新排列，语序正确的一项是：",
+      "items": null,
+      "options": {
+        "A": "①⑥③②④⑤",
+        "B": "⑥②④③①⑤",
+        "C": "④③②⑤⑥①",
+        "D": "②③⑥⑤④①"
+      },
+      "options_in_media": false,
+      "type": "语句排序",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "82",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 64
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "83",
+      "module": "言语理解与表达",
+      "stem": "回顾法律史，从法的完善来看，\"由习惯到习惯法再到成文法\"是法演进的一般规律；从整个法体系看，民、商事立法最早进行了习惯考量。我国民事立法也有考量习惯的传统，《大清民律草案》等均开宗明义地阐明了习惯要素的地位；新中国成立后，民事立法中的制度和政策要素不断增强，习惯要素逐渐式微；当下，伴随依法治国的深入推进，在《民法典》编纂过程中，直接源于生活并反映生活的社会习惯要素得以强调，如在规定处理民事纠纷的依据时，就直接说明\"法律没有规定的，可以适用习惯\"，并将习惯的内涵从《合同法》中的\"交易习惯\"拓展到\"民事习惯\"范畴。\n这段文字主要介绍：",
+      "items": null,
+      "options": {
+        "A": "我国民事立法中对习惯要素的重视与考量",
+        "B": "习惯要素在我国《民法典》中的具体体现",
+        "C": "我国民事立法发展与演进的一般规律",
+        "D": "习惯要素作为中西方立法来源的传统"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "83",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 64
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "84",
+      "module": "言语理解与表达",
+      "stem": "对于生活在浅海的硬骨鱼类来说，鱼鳔非常重要，可以帮助其调整浮力，实现上浮或下潜。但是对于深海鱼来说，充满气的鱼鳔像是脆弱的气球，在外部巨大水压的挤压下，会炸成碎片。因此，很多深海鱼在进化过程中\"舍弃\"了鱼鳔这个\"危险\"的部件，转而依靠某些脂类提供浮力。相比于浅海中的鱼，深海鱼的骨骼和肌肉含量都比较少，脂质和胶质相对较多。此外，深海鱼骨骼中软骨的比例也远高于浅海鱼。对于深海鱼来说，这些都是为了适应深海生活所做出的必要的\"妥协\"。毕竟相比于骨骼和肌肉，脂质和胶质能更好地帮助鱼类对抗巨大的压力。\n最适合做这段文字标题的是：",
+      "items": null,
+      "options": {
+        "A": "抗压，从鱼鳔的\"断舍离\"开始",
+        "B": "深海鱼竟是\"软骨头\"",
+        "C": "精通以柔克刚的深海鱼",
+        "D": "深海压力，无法承受之痛"
+      },
+      "options_in_media": false,
+      "type": "标题选择",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "84",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 64
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "85",
+      "module": "言语理解与表达",
+      "stem": "科学家发现，人类基因组里除了与编码蛋白质有关的特异性DNA序列之外，还有相当一部分重复DNA序列。基因测序结果表明，在同一人类个体的基因组中，这些序列有的重复几次，有的重复成千上万次；其中既有长达20万个碱基对的片段重复，也包括短的简单序列；重复的基本单位有时只有一个碱基，有时包含几个碱基。它们加起来甚至超过了人类基因组的一半。在过去，研究者认为这些重复序列不过是DNA复制过程中的副产物，然而随着认识的深入，他们开始意识到那些曾被认为是毫无用处的重复DNA序列，对基因表达和决定生物性状至关重要。\n这段文字接下来最可能介绍：",
+      "items": null,
+      "options": {
+        "A": "不同物种的重复DNA序列有何差异",
+        "B": "重复DNA序列如何影响生物基因表达",
+        "C": "DNA序列在重复的过程中遵循哪些规律",
+        "D": "特异性DNA序列在基因表达中所占的比例"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xingzhengzhifa",
+        "from_number": null,
+        "diff_label": "85",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 65
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    }
+  ]
+}

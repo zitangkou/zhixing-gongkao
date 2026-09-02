@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "year": 2022,
+  "updated": "2026-09-02",
+  "generated_by": "scripts/xingce/sync_status.py（请勿手工编辑，重跑脚本即可）",
+  "papers": {
+    "shengji": {
+      "file": "papers/shengji.json",
+      "questions": 135,
+      "official_total": null,
+      "status": "unknown_total",
+      "answer_coverage": "0/135",
+      "tag_coverage": "0/135",
+      "open_flags": {
+        "answer_missing": 135,
+        "stem_missing": 1,
+        "options_missing": 1,
+        "media_missing": 12
+      }
+    },
+    "shidi": {
+      "file": "papers/shidi.json",
+      "questions": 130,
+      "official_total": null,
+      "status": "unknown_total",
+      "answer_coverage": "0/130",
+      "tag_coverage": "0/130",
+      "open_flags": {
+        "answer_missing": 130,
+        "media_missing": 10,
+        "options_partial_media": 1
+      }
+    },
+    "xingzhengzhifa": {
+      "file": "papers/xingzhengzhifa.json",
+      "questions": 130,
+      "official_total": null,
+      "status": "unknown_total",
+      "answer_coverage": "0/130",
+      "tag_coverage": "0/130",
+      "open_flags": {
+        "answer_missing": 130,
+        "media_missing": 9,
+        "options_partial_media": 1
+      }
+    }
+  },
+  "module_question_totals": {
+    "常识判断": 60,
+    "言语理解与表达": 120,
+    "数量关系": 35,
+    "判断推理": 120,
+    "资料分析": 60
+  },
+  "pending": [],
+  "source_files_present": []
+}

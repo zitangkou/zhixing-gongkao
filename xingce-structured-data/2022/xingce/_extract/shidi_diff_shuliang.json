@@ -1,0 +1,152 @@
+{
+  "module": "数量关系",
+  "role": "shidi_diff",
+  "year": 2022,
+  "source_note": "市地级差异册 20224970.pdf 第51-52页（圈号㉟-㊳）。市地数量10题 = 省级共享6题(63,66~67,69~70,72) + 本文件4题独有。执法数量10题 = 省级共享6题(65,68,70,72~73,75) + 本文件4题共享。",
+  "questions": [
+    {
+      "diff_label": "㉟",
+      "module": "数量关系",
+      "stem": "某办事大厅设有5个办事窗口，某日开1个窗口，30分钟后大厅内已有排队人员；再开2个窗口，15分钟后大厅内人员全部办完；若开5个窗口，需要多少分钟可将大厅内人员全部办完？（假设每分钟新增办事人员相同，每个窗口办事效率相同）",
+      "items": null,
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉟",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 52
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊱",
+      "module": "数量关系",
+      "stem": "某社区工作者小王负责A、B两个小区的居民信息登记工作。A小区有居民320户，B小区有居民280户。小王每天可登记A小区20户或B小区15户。现要求在20天内完成两个小区的登记工作，且每天只登记一个小区，问至少有多少天登记A小区？",
+      "items": null,
+      "options": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "11"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊱",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 52
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊲",
+      "module": "数量关系",
+      "stem": "某单位将一批电脑捐赠给甲、乙两所学校。甲校得到的电脑数量比乙校多12台。如果从甲校调6台给乙校，则甲校剩下的电脑数量是乙校的2倍。问这批电脑共有多少台？",
+      "items": null,
+      "options": {
+        "A": "48",
+        "B": "54",
+        "C": "60",
+        "D": "66"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊲",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 52
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊳",
+      "module": "数量关系",
+      "stem": "甲、乙、丙、丁四人进行乒乓球单打比赛，每两人之间都要比赛一场。已知甲胜了丁，且甲、乙、丙三人胜的场数相同。问丁胜了几场？",
+      "items": null,
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊳",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 52
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    }
+  ]
+}

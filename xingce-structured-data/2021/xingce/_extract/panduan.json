@@ -1,0 +1,1323 @@
+{
+  "module": "判断推理",
+  "year": 2021,
+  "range": "71-110",
+  "source_pages": "20210124.pdf p23-p24, 20212548.pdf p25-p33",
+  "status": "done",
+  "note": "市地级底版判断推理40题。图形推理10题(71-80)全部选项在图中；Q89决策树图示选项在图中；Q106-110为共享材料分析推理题，材料存m106_110。",
+  "materials": {
+    "m106_110": "某单位的人事、科研、教育、财务、宣传、后勤和工会7个部门各由王、卫和丁3位副主任中的1人分管，已知：\n(1)教育和财务由同一人分管。\n(2)宣传和后勤由同一人分管。\n(3)丁分管的部门比卫多。\n(4)教育、工会中的一个部门由王分管。\n(5)工会、后勤中的一个部门由卫分管。"
+  },
+  "questions": [
+    {
+      "number": 71,
+      "section": "判断推理",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 23
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 72,
+      "section": "判断推理",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 23
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 73,
+      "section": "判断推理",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 23
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 74,
+      "section": "判断推理",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 24
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 75,
+      "section": "判断推理",
+      "stem": "左图给定的是正方体纸盒，下面哪项可能是其正确的外表面展开图？",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 24
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 76,
+      "section": "判断推理",
+      "stem": "左图为给定的多面体，从任一角度观看，下面哪项可能是该多面体的视图？",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 24
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 77,
+      "section": "判断推理",
+      "stem": "左图给定的是由相同正方体堆叠而成的多面体的正视图和后视图。该多面体可以由①、②和③三个多面体组合而成，问：以下哪一项能填入问号处？",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 24
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 78,
+      "section": "判断推理",
+      "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 25
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 79,
+      "section": "判断推理",
+      "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 25
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 80,
+      "section": "判断推理",
+      "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 25
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 81,
+      "section": "判断推理",
+      "stem": "析数是指在一定的语境中，利用数学上相加或相乘等关系，把一个数有目的地进行拆分的一种修辞手法。\n根据上述定义，下列没有使用析数的是：",
+      "items": null,
+      "options": {
+        "A": "故国三千里，深宫二十年。一声何满子，双泪落君前",
+        "B": "蛾眉蔽珠栊，玉钩隔琐窗。三五二八时，千里与君同",
+        "C": "读尽文章一百担，老来方得一青衫。媒人却问余年纪，四十年前三十三",
+        "D": "江陵去扬州，三千三百里。已行一千三，所有二千在"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 26
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 82,
+      "section": "判断推理",
+      "stem": "互益素是一种生物释放的、能引起他种接受生物产生对释放者和接受者都有益的反应的信息化学物质。\n根据上述定义，下列涉及互益素的是：",
+      "items": null,
+      "options": {
+        "A": "苹果实蝇在植物果实上产卵后会留下一种标记信息素，以避免自己再次到这里产卵",
+        "B": "楝科植物印楝的种子、树叶和树皮中含有的印楝素，对几乎所有害虫都有驱杀效果",
+        "C": "亚洲玉米螟雌蛾释放的性信息素能够吸引雄蛾，使雄蛾能够准确找到雌蛾的方位",
+        "D": "小麦在遭受麦长管蚜攻击后会释放出水杨酸甲酯，可吸引麦长管蚜的天敌异色瓢虫"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 26
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 83,
+      "section": "判断推理",
+      "stem": "统计数据分为定性数据与定量数据。定性数据包括分类数据和顺序数据。分类数据是指只能归于某一类别的非数字型数据，它是对事物进行分类的结果，用文字表述；顺序数据是指归于某一有序类别的非数字型数据。定量数据是指表现为具体数字观测值的数据。\n①按城市规模可将城市分为特大城市、大城市、中等城市和小城市。\n②婚姻状况：1-未婚，2-已婚，3-离异，4-丧偶。\n③A地到B地的距离为200千米，到C地为320千米，到D地为100千米。\n④某医院建筑面积37.5万平方米，开放床位3182个，临床医生687人。\n根据上述定义，关于以上4组数据的说法正确的是：",
+      "items": [
+        "按城市规模可将城市分为特大城市、大城市、中等城市和小城市。",
+        "婚姻状况：1-未婚，2-已婚，3-离异，4-丧偶。",
+        "A地到B地的距离为200千米，到C地为320千米，到D地为100千米。",
+        "某医院建筑面积37.5万平方米，开放床位3182个，临床医生687人。"
+      ],
+      "options": {
+        "A": "②④都是分类数据",
+        "B": "②③④都是定量数据",
+        "C": "①②都是顺序数据",
+        "D": "仅②是分类数据"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 26
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 84,
+      "section": "判断推理",
+      "stem": "拮抗作用是一种常见的感觉变化现象，是指因一种呈味物质的存在，而使另一种呈味物质的呈味特性减弱的现象。\n根据上述定义，下列没有体现拮抗作用的是：",
+      "items": null,
+      "options": {
+        "A": "在橘子汁中添加少量柠檬酸会感觉甜味减弱，如再加砂糖，又会感到酸味减弱",
+        "B": "糖精带有苦味，在糖精中添加少量的谷氨酸钠，苦味可明显缓和",
+        "C": "同时服用氯化钠和奎宁后，再饮用清水会有微甜的感觉",
+        "D": "在食用过酸涩的西非山榄后，再吃酸味食品，会尝不到酸味"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 27
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 85,
+      "section": "判断推理",
+      "stem": "通过提供产品及服务使顾客产生愉悦等积极情感，从而使顾客觉得从产品及服务中获得了超过使用价值的新价值，以此为手段进行情感营销的过程，称为情感价值链。\n根据上述定义，下列没有凸显情感价值链的是：",
+      "items": null,
+      "options": {
+        "A": "小张从事美容工作多年，她总是专注而耐心地倾听客户说话，让客户在享受按摩的同时心情舒畅",
+        "B": "智能音箱“小美”深受孩子们喜爱，因为它不仅能播放儿歌和故事，还能跟小朋友“对话、握手和点头”",
+        "C": "电视上，一对年轻夫妻为“该谁扫地了”而犯愁，之后扫地机器人登场，并闪现广告语“有了它，更幸福”",
+        "D": "洗碗机广告中，一位女士愁眉苦脸刷着油腻的碗盘，看着自己粗糙的双手，广告词是“你要做这样的女人吗？”"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 27
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 86,
+      "section": "判断推理",
+      "stem": "一般来说，科学实验中主要涉及三种变量：自变量、因变量和控制变量。自变量是指在实验中由实验者操作的变量。因变量是指随着自变量的变化而变化的变量。控制变量是指实验中除自变量以外的影响实验变化和结果的潜在因素或条件。\n根据上述定义，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "研究小麦供给量受当地采购价格的影响，小麦供给量是控制变量，采购价格是因变量",
+        "B": "研究不同税率对稀土出口量的影响，稀土出口量是自变量，税率是因变量",
+        "C": "研究气候条件对棉花产量的影响，气候条件是因变量，害虫影响是控制变量",
+        "D": "研究制糖厂营业额受糖产量的影响，糖的单价是控制变量，糖产量是自变量"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 27
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 87,
+      "section": "判断推理",
+      "stem": "对立互补命题指的是先后叙述的两个结构基本相同的句式中含有两对或者两对以上相互对立的概念，但是其阐发的意思是一致的或者是相互补充的。\n根据上述定义，下列不属于对立互补命题的是：",
+      "items": null,
+      "options": {
+        "A": "君子坦荡荡，小人长戚戚",
+        "B": "先天下之忧而忧，后天下之乐而乐",
+        "C": "仓廪实而知礼节，衣食足而知荣辱",
+        "D": "穷在闹市无人问，富在深山有远亲"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 28
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 88,
+      "section": "判断推理",
+      "stem": "预测干预是指人们受预测信息的影响而采取了某种行为，造成原本有多种可能性的结果真的朝着预测所指示的方向发展。\n根据上述定义，下列属于预测干预的是：",
+      "items": null,
+      "options": {
+        "A": "某财经访谈栏目中一名专家预测H股票将大涨，结果很多收看该节目的观众争相购买该股票，导致该股票涨停",
+        "B": "某福利彩票代销点宣称他们卖出的彩票多次中奖，结果到该代销点购买彩票的人经常排起长队",
+        "C": "某国首脑在新年致辞中对该国经济形势进行了展望，因而该国老百姓对未来经济好转充满了信心",
+        "D": "甲国大选前，与其敌对的乙国的媒体大肆渲染，认为M党总统候选人将当选，结果甲国很多选民转而支持N党总统候选人"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 28
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 89,
+      "section": "判断推理",
+      "stem": "决策树是由决策点、方案枝、状态节点和概率枝构成的图解法。决策树是以决策点为出发点，引出若干方案枝，每条方案枝代表一个方案。每条方案枝的末端有一个状态节点，从状态节点引出若干概率枝，每条概率枝代表一种自然状态。概率枝上标明每种自然状态之上的概率收益值。这样层层展开，形如树状，故此得名。\n根据上述定义，下列图示正确展示了决策树的是：",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 29
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 90,
+      "section": "判断推理",
+      "stem": "人们常常系统地高估自己对事件的控制程度或影响力，而低估机会、运气等不可控制因素在事件发展过程及其结果中所扮演的角色，这一现象被称为控制错觉。\n根据上述定义，下列没有体现控制错觉的是：",
+      "items": null,
+      "options": {
+        "A": "人们想用骰子掷出“双6”时会在心中默念，用力揉捏骰子，相信这样做就会如愿",
+        "B": "一些股民往往借助几个简单的因素预测大盘指数，结果常常是谬以千里",
+        "C": "某企业经理认为今年当地举办的运动会对企业发展非常有利，预测今年营业额会有所上涨",
+        "D": "景区某摆渡车驾驶员常年走山路，认为自己路况熟、技术好，所以在山路上开得非常快"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 29
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 91,
+      "section": "判断推理",
+      "stem": "易拉罐：拉环",
+      "items": null,
+      "options": {
+        "A": "金库：黄金",
+        "B": "燃气灶：点火器",
+        "C": "台历：农历",
+        "D": "拦水坝：河流"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 29
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 92,
+      "section": "判断推理",
+      "stem": "船舶抛锚：请求救援",
+      "items": null,
+      "options": {
+        "A": "安全着陆：平稳飞行",
+        "B": "行政复议：获得赔偿",
+        "C": "卖出高粱：买入白酒",
+        "D": "违规销售：停业整顿"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 29
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 93,
+      "section": "判断推理",
+      "stem": "立体化战争：数字化战争",
+      "items": null,
+      "options": {
+        "A": "民主型管理：专制型管理",
+        "B": "防风林：观赏树木",
+        "C": "有氧运动：医疗瘦身",
+        "D": "绩效奖励：物质奖励"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 30
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 94,
+      "section": "判断推理",
+      "stem": "春山暖日和风：阑干楼阁帘栊",
+      "items": null,
+      "options": {
+        "A": "绿蚁新醅酒：红泥小火炉",
+        "B": "鸡声茅店月：人迹板桥霜",
+        "C": "江碧鸟逾白：山青花欲燃",
+        "D": "柴门闻犬吠：风雪夜归人"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 30
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 95,
+      "section": "判断推理",
+      "stem": "中央预算：年度预算：地方预算",
+      "items": null,
+      "options": {
+        "A": "户外广告：文字广告：电视广告",
+        "B": "知识创新：技术创新：管理创新",
+        "C": "历史题材：军事题材：现实题材",
+        "D": "人身权利：生命权利：财产权利"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 30
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 96,
+      "section": "判断推理",
+      "stem": "檀香：麝香：香料",
+      "items": null,
+      "options": {
+        "A": "木材：钢筋：建材",
+        "B": "薯条：粉条：食物",
+        "C": "日光：月光：光明",
+        "D": "鲸鱼：鲍鱼：海鱼"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 30
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 97,
+      "section": "判断推理",
+      "stem": "风筝：篾刀：竹条",
+      "items": null,
+      "options": {
+        "A": "泥塑：黏土：颜料",
+        "B": "糖人：蔗糖：竹签",
+        "C": "绣品：绣针：绣线",
+        "D": "漆器：描金：涂料"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 30
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 98,
+      "section": "判断推理",
+      "stem": "健康监测：体检：疾病筛查",
+      "items": null,
+      "options": {
+        "A": "发掘遗迹：考古：考证年代",
+        "B": "解决争议：审判：强制执行",
+        "C": "太空飞行：航天：地质分析",
+        "D": "为国聚财：税收：调节分配"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 30
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 99,
+      "section": "判断推理",
+      "stem": "杠杆 对于 ( ) 相当于 ( ) 对于 成语",
+      "items": null,
+      "options": {
+        "A": "滑轮 固定短语",
+        "B": "力臂 水滴石穿",
+        "C": "省力杠杆 春夏秋冬",
+        "D": "简单机械 四字成语"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 30
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 100,
+      "section": "判断推理",
+      "stem": "( ) 对于 口罩 相当于 竹子 对于 ( )",
+      "items": null,
+      "options": {
+        "A": "耳挂 竹炭",
+        "B": "无纺布 斗笠",
+        "C": "卫生用品 竹叶",
+        "D": "医用口罩 箭竹"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 30
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 101,
+      "section": "判断推理",
+      "stem": "有研究人员认为，胶原蛋白保持皮肤年轻的说法并不科学，他们认为，皮肤得以保持年轻，应归功于表皮干细胞。哺乳动物的表皮细胞会持续更新，新细胞来源于表皮干细胞，这些干细胞会通过一种特定分化的多蛋白结构——半桥粒附着在基膜上。表皮干细胞会不断复制、分化，产生新细胞，取代受损的老细胞，这一更新有利于维持皮肤的年轻。因此，表皮干细胞的更新才是保持皮肤年轻的原因。\n以下哪项如果为真，最能削弱上述结论？",
+      "items": null,
+      "options": {
+        "A": "表皮干细胞的更新还需要其他化合物的促进",
+        "B": "胶原蛋白对促进表皮干细胞的更新至关重要",
+        "C": "表皮干细胞的再生能力会随着年龄的增长而衰退",
+        "D": "胶原蛋白的表达在不同干细胞之间存在很大差异"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 31
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 102,
+      "section": "判断推理",
+      "stem": "地质学家在澳大利亚中部距地表3千米的地下发现了两处直径超过200千米的神秘自然景观，景观所含有的石英砂中有着一簇簇的细线，这些细线大部分是互相平行的直线。地质学家认为，这些景观很可能是巨大陨石撞击形成的陨石坑，而石英砂的结构就是造成断裂的证据。\n以下哪项是上述论证成立的必要前提？",
+      "items": null,
+      "options": {
+        "A": "只有经历高速的陨石撞击，地层中的石英砂才会显示出含有平行直线的断裂结构",
+        "B": "石英砂普遍存在于地球表面，由于坚硬、耐磨、化学性能稳定而很少发生变化",
+        "C": "该景观的直径之大，并不同于其他的陨石坑，很可能不是一次形成的",
+        "D": "该景观周围的岩石是3亿年到4.2亿年之前形成的，那么撞击也应发生在那一时期"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 31
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 103,
+      "section": "判断推理",
+      "stem": "羟苯甲酮是一种常见的紫外线吸收剂，多用于防晒护肤品中，全球3500种品牌的防晒霜中均含有该物质。研究表明，即使是极低浓度的羟苯甲酮也会给珊瑚带来致命的伤害。有专家指出，为了保护珊瑚，在海滨浴场应该禁止使用防晒霜。\n以下哪项如果为真，最能支持上述观点？",
+      "items": null,
+      "options": {
+        "A": "一些远离海岸的大洋中部水域已检测到羟苯甲酮，但浓度较低",
+        "B": "羟苯甲酮易引起皮肤过敏，长期使用会影响人体免疫力和生殖能力",
+        "C": "羟苯甲酮会破坏、改变珊瑚的DNA，降低幼年珊瑚正常发育的概率",
+        "D": "人们在很多场合都使用防晒霜，仅在海滨浴场限制使用效果有限"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 32
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 104,
+      "section": "判断推理",
+      "stem": "近日，有研究团队通过对44个反刍动物物种的基因组测序研究，创建了一个反刍动物的系统进化树，从而解析大量反刍动物的演化史。结果揭示，在近10万年前，反刍动物种群大幅衰减，而这些种群数的减少与人类向非洲之外迁徙的时间相符。有人据此认为，这佐证了早期人类活动造成了反刍动物种群的衰减。\n以下哪项如果为真，最能质疑上述结论？",
+      "items": null,
+      "options": {
+        "A": "反刍动物种群衰减后，植被愈加茂盛，为人类提供了更多食物",
+        "B": "反刍动物通常有角，在遇到人类攻击时能发挥一定的防御作用",
+        "C": "同一时期的马、驴等奇蹄目动物的种群也出现大幅衰减的现象",
+        "D": "同一时期大型猫科动物繁盛，它们大规模捕杀反刍动物"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 32
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 105,
+      "section": "判断推理",
+      "stem": "近年来，国家从药品生产、流通和销售各环节发力，频频出台降低药价的相关政策。但是，让不少患者感到疑惑的是，一方面是国家降低药价的政策不断出台，另一方面却是诸多常用药价格不断上涨。\n以下哪项如果为真，最能解释上述现象？",
+      "items": null,
+      "options": {
+        "A": "价格下降的药品占大多数，价格上涨的药品占少数，因此从整体上来说，药品价格仍然是下降了",
+        "B": "常用进口药的需求增多，相关政策无法控制此类药品的价格上涨",
+        "C": "国家虽然出台了降低药价的政策，但是其影响要经过一段时间才能显现出来",
+        "D": "降低药价的政策可以有效控制药品市场中因制药原料涨价而导致的药价上涨"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 32
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 106,
+      "section": "判断推理",
+      "stem": "关于分管情况，下列哪项是可能的？",
+      "items": null,
+      "options": {
+        "A": "王：人事、工会\n卫：宣传、后勤\n丁：科研、教育、财务",
+        "B": "王：工会、科研\n卫：人事、教育、财务\n丁：宣传、后勤",
+        "C": "王：教育、财务\n卫：人事、后勤\n丁：科研、宣传、工会",
+        "D": "王：宣传、后勤\n卫：人事、工会\n丁：科研、教育、财务"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": ["m106_110"],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 33
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 107,
+      "section": "判断推理",
+      "stem": "如果王分管的部门多于丁，下列哪项可能为真？",
+      "items": null,
+      "options": {
+        "A": "人事由卫分管",
+        "B": "科研由卫分管",
+        "C": "后勤由丁分管",
+        "D": "教育由丁分管"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": ["m106_110"],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 33
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 108,
+      "section": "判断推理",
+      "stem": "下列哪项是不可能的？",
+      "items": null,
+      "options": {
+        "A": "科研和宣传由丁分管",
+        "B": "教育和宣传由王分管",
+        "C": "人事和宣传由王分管",
+        "D": "人事和宣传由丁分管"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": ["m106_110"],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 33
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 109,
+      "section": "判断推理",
+      "stem": "财务和以下哪个部门不可能由同一人分管？",
+      "items": null,
+      "options": {
+        "A": "工会",
+        "B": "科研",
+        "C": "宣传",
+        "D": "人事"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": ["m106_110"],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 33
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 110,
+      "section": "判断推理",
+      "stem": "如果科研和宣传由同一人分管，那么下列哪项是可能的？",
+      "items": null,
+      "options": {
+        "A": "人事由卫分管",
+        "B": "科研由王分管",
+        "C": "教育由丁分管",
+        "D": "宣传由卫分管"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": ["m106_110"],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20212548.pdf",
+          "page": 33
+        }
+      },
+      "flags": ["answer_missing"]
+    }
+  ]
+}

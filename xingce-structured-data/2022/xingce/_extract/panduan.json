@@ -1,0 +1,1429 @@
+{
+  "module": "判断推理",
+  "year": 2022,
+  "range": "76-115",
+  "source_pages": "20220124.pdf p23-p24, 20222548.pdf p25-p34",
+  "status": "done",
+  "note": "主卷为省级卷，判断推理40题（76-115）。图形推理Q76-82选项在图中（media_missing），Q83-85选项为文字组合；定义判断Q93选项为表格（media_missing）。",
+  "questions": [
+    {
+      "number": 76,
+      "section": "判断推理",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 23
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "number": 77,
+      "section": "判断推理",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 23
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "number": 78,
+      "section": "判断推理",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 23
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "number": 79,
+      "section": "判断推理",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 24
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "number": 80,
+      "section": "判断推理",
+      "stem": "左图是给定纸盒的外表面，下面哪项能由它折叠而成？",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 24
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "number": 81,
+      "section": "判断推理",
+      "stem": "左图是给定的空心立体图形，将其从任一面剖开，以下哪项可能是该立体图形的截面？",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 24
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "number": 82,
+      "section": "判断推理",
+      "stem": "左图给定的是由相同正方体堆叠而成的多面体。该多面体可以由①、②和③三个多面体组合而成，以下哪项能填入问号处？",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 24
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "number": 83,
+      "section": "判断推理",
+      "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+      "items": null,
+      "options": {
+        "A": "①②③，④⑤⑥",
+        "B": "①④⑤，②③⑥",
+        "C": "①②④，③⑤⑥",
+        "D": "①③⑥，②④⑤"
+      },
+      "options_in_media": false,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 25
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 84,
+      "section": "判断推理",
+      "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+      "items": null,
+      "options": {
+        "A": "①②⑤，③④⑥",
+        "B": "①③④，②⑤⑥",
+        "C": "①⑤⑥，②③④",
+        "D": "①②④，③⑤⑥"
+      },
+      "options_in_media": false,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 25
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 85,
+      "section": "判断推理",
+      "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+      "items": null,
+      "options": {
+        "A": "①②⑤，③④⑥",
+        "B": "①②③，④⑤⑥",
+        "C": "①③⑥，②④⑤",
+        "D": "①④⑤，②③⑥"
+      },
+      "options_in_media": false,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 25
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 86,
+      "section": "判断推理",
+      "stem": "归因不变性原则是指人们会寻找某一特定结果与特定原因之间的不变联系，如果某种特定原因在许多情境下总是与某种结果相伴，人们就会把特定结果归结于那一原因。归因折扣原则是指人们不完全相信某一现象的形成确是由于某种原因，即某一特定原因在产生特定结果中的作用，如果存在其他似是而非的原因，应该\"打折扣\"。\n根据上述定义，两类归因原则均没有体现的是：",
+      "items": null,
+      "options": {
+        "A": "电视广告中明星推销洗发水时，观众觉得她的一头秀发不完全是因为洗发水才有的",
+        "B": "创业失败总会使创业者背负债务，创业者小罗这几年债台高筑，朋友认为他一定是创业失败了",
+        "C": "在代理了诸多离婚案件后，律师小林统计发现离婚诉讼中大多数争议与财产纠纷有关",
+        "D": "对一系列盗窃案的分析显示，现场都出现过同一个男人，人们容易假定该男人就是犯罪嫌疑人"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 26
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 87,
+      "section": "判断推理",
+      "stem": "按调查范围来看，可将调查分为全面调查和非全面调查。全面调查指的是一定范围内的情况普查；非全面调查是指从总体中抽取一部分对象进行情况调查，又可分为：根据随机原则选择样本的抽样调查和有意识选取若干样本进行的典型调查。\n根据上述定义，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "对某市幼儿园所有儿童进行口腔卫生检查，这属于非全面调查",
+        "B": "对省内1~3年级的全体学生进行体育活动时间的调查，这属于非全面调查",
+        "C": "规模较大的前30所医学院校进行学生就业情况调查，这属于典型调查",
+        "D": "对某市中考数学成绩最好的几所学校进行调查，总结相关经验，这属于抽样调查"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 26
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 88,
+      "section": "判断推理",
+      "stem": "对于特定论域中的任意两个对象a、b而言，当对象a与对象b之间具有关系R时，对象b与对象a之间是否也具有关系R？基于此，对称性关系命题可分为正对称关系、反对称关系和半对称关系。（1）正对称关系：若对象a与b之间具有关系R，则对象b与a之间也具有关系R。（2）反对称关系：若对象a与b之间具有关系R，则对象b与a之间一定不具有关系R。（3）半对称关系：若对象a与b之间具有关系R，则对象b与a之间不一定具有关系R。\n根据上述定义，下列关系属于半对称关系的是：",
+      "items": null,
+      "options": {
+        "A": "学生之间的同学关系",
+        "B": "两个分数之间的小于关系",
+        "C": "人与人之间的帮助关系",
+        "D": "城市与城市之间的相邻关系"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 26
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 89,
+      "section": "判断推理",
+      "stem": "司法物理鉴定是运用物理学原理和方法，即通过检验确定物质的颜色、硬度、结构、比重、熔点、沸点、浓度、导电导热系数等物理属性，或显现肉眼看不见的痕迹特征，对与案件有关的痕迹、物品进行鉴认、识别的一种技术手段。\n根据上述定义，下列仅使用了司法物理鉴定手段的是：",
+      "items": null,
+      "options": {
+        "A": "选用试剂对被害人胃内容物进行分离、提纯，明确其中毒类型",
+        "B": "通过技术手段复原受害人被删除的手机信息，排查案件嫌疑人",
+        "C": "使用天平称量案件中伪造文件的重量，并采用试剂染色法检验纸浆的种类",
+        "D": "利用不同波长光对受害者衣物进行照射，通过观察颜色、透射率来辨别色料种类"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 27
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 90,
+      "section": "判断推理",
+      "stem": "由于人类建设活动的破坏和干扰，生物群体原来连续成片的生活环境被割裂，形成分散的岛状甚至碎片状的生境。生境廊道是指连接破碎化生境并适宜生物生活、移动或扩散的通道，便于实现物种基因、能量、物质的流动。\n根据上述定义，下列不属于生境廊道的是：",
+      "items": null,
+      "options": {
+        "A": "国家公园内，两棵参天古树跨过公路上方枝叶相连，金丝猴借助古树跨越公路。不同区域的金丝猴群可以保持接触",
+        "B": "为了让野生象群在两个自然保护区之间迁移，管理者设计建成了迁移通道，避开村寨，并保证该区域范围内有丰富的水和食物资源",
+        "C": "某地将过去严重污染的河道改造为河滨公园，架设了多座拱桥，美化了环境，方便了交通，还吸引了大量鸟类来此栖息",
+        "D": "为避免青藏铁路隔断藏羚羊迁徙路线，动物学家设计了桥梁下方、隧道上方及路基缓坡3种形式的野生动物通路"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 27
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 91,
+      "section": "判断推理",
+      "stem": "领主属宾句是汉语中的一种句式，句子主干由主语、动词和宾语三个部分组成。这种句子的主语和宾语之间具有比较稳定的\"领有—隶属\"关系：主语是\"领有\"的一方，宾语是\"隶属\"的一方；句子的动词和主语没有直接的语义关系。\n根据上述定义，下列属于领主属宾句的是：",
+      "items": null,
+      "options": {
+        "A": "他的脸上长了一点肉",
+        "B": "从远处走来一个挑夫",
+        "C": "去年他烂了一车苹果",
+        "D": "他头顶上飞过一只鸟"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 27
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 92,
+      "section": "判断推理",
+      "stem": "基因污染指原生物种基因库非预期或不受控制的基因流动，即外源基因通过转基因作物、外来入侵物种、家养动物等扩散到其他栽培作物或自然野生物种并成为后者基因的一部分。\n根据上述定义，下列没有体现出基因污染的是：",
+      "items": null,
+      "options": {
+        "A": "某农场生产的大豆发现了转基因成分Bt基因，这些成分是附近地区种植的基因工程Bt大豆通过交叉授粉传播过来的",
+        "B": "黑足猫是一种体型娇小但捕猎能力超强的野生猫，跑到野外的家猫和黑足猫交配后，生出血统不纯正的黑足猫，真正的黑足猫几近灭绝",
+        "C": "转基因SL玉米获批做动物饲料，SL玉米只占某国玉米总产量的1%，但一年后该国22%的玉米样本被认定含有SL玉米基因",
+        "D": "某国开发出耐除草剂的转基因油菜，油菜出油率提高，但这种油菜种子能在土壤中休眠数年，因此成为其他作物中的\"杂草\""
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 28
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 93,
+      "section": "判断推理",
+      "stem": "总量指标动态数列是将反映某种社会经济现象的一系列总量指标按时间先后顺序排列形成的数列，可分为两类：（1）时期数列：每个指标都表示社会经济现象在一定时期内发展过程的总量，各指标值可以相加，指标数值的大小与时期长短有直接关系；（2）时点数列：每个指标都表示社会经济现象在某一时点（时刻）上的数量，各指标值不能相加，指标数值大小和\"时点间隔\"长短没有直接关系，每个指标通常都是定期（间断）登记取得的。\n根据上述定义，下列属于时点数列的是：",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 28
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "number": 94,
+      "section": "判断推理",
+      "stem": "在卫生经济学评价中，直接成本是指与疾病有关的预防、诊断、治疗和康复等所支出的费用，包括直接医疗成本和直接非医疗成本。直接医疗成本是指与医疗服务的提供直接相关的医疗成本，包括一切必要的医学检验和检查的成本，以及卫生服务管理成本和所有后续治疗成本；直接非医疗成本是指与医疗服务的提供直接相关的非医疗成本。\n根据上述定义，下列没有体现上述成本的是：",
+      "items": null,
+      "options": {
+        "A": "患者李某前往医院看夜间急诊的出租车费",
+        "B": "患者赵某因右臂受伤停工造成的工资损失",
+        "C": "在口腔科拔取智齿前，患者于某支付的血常规化验费",
+        "D": "在陪同女儿去外地做手术期间，何某住宾馆支付的住宿费"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 29
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 95,
+      "section": "判断推理",
+      "stem": "地球物理勘探是通过研究和观测各种地球物理场的变化来探测地层岩性、地质构造等地质条件的过程。由于组成地壳的不同岩层介质往往在密度、弹性、导电性等方面存在差异，这些差异将引起相应的地球物理场的局部变化，通过测量这些物理场的分布和变化特征，结合已知地质资料进行分析研究，就可以达到推断地质性状的目的。\n根据上述定义，下列不属于地球物理勘探的是：",
+      "items": null,
+      "options": {
+        "A": "根据岩石和矿石导电性、电磁感应特性等来记录地层界面的深度和形态",
+        "B": "利用人工激发的地震波在弹性不同地层内的传播规律，了解水文地质的分布情况",
+        "C": "采集岩石样品，分析岩石内的微量元素，通过发现与矿化有关的原生异常来寻找矿床",
+        "D": "通过观测不同岩石引起的重力差异，判断地下地层的岩性及状态，确定沉积盆地范围"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 29
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 96,
+      "section": "判断推理",
+      "stem": "珍珠：珍珠婚",
+      "items": null,
+      "options": {
+        "A": "面包：面包树",
+        "B": "槐花：槐花蜜",
+        "C": "蘑菇：蘑菇云",
+        "D": "母亲：母亲河"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 29
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 97,
+      "section": "判断推理",
+      "stem": "呼吸系统：生殖系统",
+      "items": null,
+      "options": {
+        "A": "生产计划：年度计划",
+        "B": "观赏花卉：药用花卉",
+        "C": "水面舰艇：巡洋舰艇",
+        "D": "简牍公文：纸质公文"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 29
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 98,
+      "section": "判断推理",
+      "stem": "载歌：载舞",
+      "items": null,
+      "options": {
+        "A": "人云：亦云",
+        "B": "且战：且退",
+        "C": "自作：自受",
+        "D": "全心：全意"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 30
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 99,
+      "section": "判断推理",
+      "stem": "边防检查：走私",
+      "items": null,
+      "options": {
+        "A": "科普宣传：迷信",
+        "B": "农药喷洒：除害",
+        "C": "个税申报：偷税",
+        "D": "手术治疗：患病"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 30
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 100,
+      "section": "判断推理",
+      "stem": "独幕剧：歌剧：话剧",
+      "items": null,
+      "options": {
+        "A": "流行歌曲：通俗歌曲：现代歌曲",
+        "B": "自由体操：竞技体操：艺术体操",
+        "C": "远程面试：单独面试：小组面试",
+        "D": "顺序作业：流水作业：平行作业"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 30
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 101,
+      "section": "判断推理",
+      "stem": "剪发：烫发剂：烫发",
+      "items": null,
+      "options": {
+        "A": "催熟：防腐剂：防腐",
+        "B": "伐树：植树节：植树",
+        "C": "风蚀：碳酸钙：溶蚀",
+        "D": "镇痛：止痛药：止痛"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 30
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 102,
+      "section": "判断推理",
+      "stem": "提起公诉：宣告判决：收押罪犯",
+      "items": null,
+      "options": {
+        "A": "撰写教案：课堂教学：解答疑问",
+        "B": "手机点餐：外卖送餐：五星好评",
+        "C": "违章行驶：交警处罚：行人受伤",
+        "D": "方案设计：建筑施工：竣工验收"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 30
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 103,
+      "section": "判断推理",
+      "stem": "二线城市：港口城市：商业城市",
+      "items": null,
+      "options": {
+        "A": "海上战争：常规战争：空中战争",
+        "B": "科技期刊：电子期刊：纸本期刊",
+        "C": "自助旅游：国内旅游：探亲旅游",
+        "D": "街心公园：森林公园：湿地公园"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 30
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 104,
+      "section": "判断推理",
+      "stem": "纪录片 对于 （  ） 相当于 （  ） 对于 客观题",
+      "items": null,
+      "options": {
+        "A": "电影 主观题",
+        "B": "国产片 选择题",
+        "C": "动画片 考试题",
+        "D": "译制片 必答题"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 30
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 105,
+      "section": "判断推理",
+      "stem": "自然声源 对于 （  ） 相当于 （  ） 对于 煤炭",
+      "items": null,
+      "options": {
+        "A": "人工声源 植物遗骸",
+        "B": "燕语莺声 矿石燃料",
+        "C": "传播介质 社区供暖",
+        "D": "物体振动 地质危害"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 30
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 106,
+      "section": "判断推理",
+      "stem": "最近，主打白噪音的助眠产品引起很多人的兴趣。有人认为，白噪音可以掩盖环境中干扰性的刺激，有助于促进睡眠、改善睡眠质量。但研究者对此持怀疑态度，认为白噪音可改善睡眠的研究证据不足，持续白噪音甚至会对睡眠造成影响。\n以下哪项如果为真，不能支持研究者的观点？",
+      "items": null,
+      "options": {
+        "A": "持续暴露在白噪音下，听觉系统会不断将声音信号转换成神经信号，上传大脑，大脑会持续保持活跃，无法充分休息",
+        "B": "持续的白噪音会引起听力的损害，甚至会导致认知功能障碍，严重者还会导致失眠或嗜睡",
+        "C": "白噪音会使健康志愿者睡眠期间脑电波的循环交替模式显著改变，这意味着健康人睡眠结构受到干扰",
+        "D": "白噪音掩盖环境中干扰性的刺激，也会掩盖环境中有意义的声音，可能对人的生活甚至对生命造成威胁"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 31
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 107,
+      "section": "判断推理",
+      "stem": "聚苯乙烯泡沫塑料广泛用于制造一次性咖啡杯等用品，但其原料来自石油等不可再生能源，生成的聚苯乙烯高温条件下可能产生对人体有害组分，且无法自然降解，燃烧时还会造成环境污染。研究人员开发出一种源自特定植物的环保材料，这种环保材料质量较轻，可支撑自身重量200倍的物体而不变形，还可自然降解，燃烧不会产生污染性烟尘。研究人员认为，这种环保材料有望成为制造一次性咖啡杯等用品的重要材料。\n以下哪项如果为真，最能削弱上述结论？",
+      "items": null,
+      "options": {
+        "A": "这种环保材料不具有一次性咖啡杯所需的良好隔热性能，盛装液体后也很难具有聚苯乙烯泡沫塑料的耐久性",
+        "B": "这种环保材料大规模投入生产后，会挤垮生产聚苯乙烯泡沫塑料的厂家，减少市场上一次性咖啡杯等用品的供应量",
+        "C": "对该植物有过敏反应的人群使用这种环保材料会产生过敏反应，该环保材料不适用于这类过敏人群",
+        "D": "这种环保材料还不能完全替代聚苯乙烯泡沫材料，还有很多用品仍然需要使用聚苯乙烯泡沫材料生产"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 32
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 108,
+      "section": "判断推理",
+      "stem": "一颗恒星足够大且经过超新星爆发，才会坍缩为一颗中子星并伴随磁场增强。在这些中子星中，只有拥有强大磁场和高自转速度才能成为磁星。一般认为，磁星的磁场是在恒星变成中子星的首十秒透过炽热内核物质的对流所产生的，只有在对流现象发生期间拥有高自转速度（周期约10毫秒左右），产生的电流才会传遍整颗天体。\n由此可以推出：",
+      "items": null,
+      "options": {
+        "A": "能演变成磁星的星体一定是中子星",
+        "B": "拥有高自转速度的中子星会产生强大磁场",
+        "C": "如果不经历超新星爆发，大质量恒星是不会成为中子星的",
+        "D": "只要中子星的内核物质产生强烈对流，就会在整个星体内出现电流"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 32
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 109,
+      "section": "判断推理",
+      "stem": "小陈、小李、小刘3人从学校脱颖而出，到市里参加竞赛。5人预测：\n小陈、小李都获奖；\n小陈、小李至多有1人获奖；\n小陈获奖，小李未获奖；\n小陈未获奖，小李获奖；\n若小陈获奖，则小刘也获奖。\n结果发现，只有1人预测正确。\n由此可以推出：",
+      "items": [
+        "小陈、小李都获奖",
+        "小陈、小李至多有1人获奖",
+        "小陈获奖，小李未获奖",
+        "小陈未获奖，小李获奖",
+        "若小陈获奖，则小刘也获奖"
+      ],
+      "options": {
+        "A": "小陈、小李都未获奖",
+        "B": "小陈、小刘都获奖",
+        "C": "小李、小刘都未获奖",
+        "D": "小陈、小李都获奖"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 32
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 110,
+      "section": "判断推理",
+      "stem": "不同的读者在阅读时，会对文章进行不同的加工编码，一种是浏览，从文章中收集观点和信息，使知识作为独立的单元输入大脑，称为线性策略；一种是做笔记，在阅读时会构建一个层次清晰的架构，就像用信息积木搭建了一个\"金字塔\"，称为结构策略。做笔记能够对文章的主要内容进行标注，因此与单纯的浏览相比，做笔记能够取得更优的阅读效果。\n要使上述论证成立，还需基于以下哪一前提？",
+      "items": null,
+      "options": {
+        "A": "用浏览的方式进行阅读属于知识加工的线性策略",
+        "B": "阅读效果的好坏取决于能否在阅读时抓住要点",
+        "C": "做笔记涉及更加复杂的认知加工过程",
+        "D": "与线性策略相比，结构策略能够让学习提升速度"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 32
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 111,
+      "section": "判断推理",
+      "stem": "地理老师在五个柜子里放入了五种矿物，每个柜子只放一种矿物：赤铁矿、黑云母、绿泥石、黄铜矿、方铅矿。已知：（1）如果一号柜放赤铁矿，那么二号柜不放黑云母；（2）或者三号柜放赤铁矿，或者一号柜放赤铁矿；（3）如果二号柜不放黑云母，那么四号柜不放绿泥石；（4）若五号柜放方铅矿，则四号柜放绿泥石。\n以下哪项如果为真，可以得出\"三号柜放赤铁矿\"的结论？",
+      "items": null,
+      "options": {
+        "A": "二号柜不放黑云母",
+        "B": "一号柜不放黄铜矿",
+        "C": "五号柜放的是方铅矿",
+        "D": "四号柜不放绿泥石"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 33
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 112,
+      "section": "判断推理",
+      "stem": "熊蜂是一类多食性昆虫，与蜜蜂相比，熊蜂体型更大且多毛，颜色各异，大多有着经典的黄黑条纹，黑身红尾。人们发现，由于密集管理型农业系统的推广，熊蜂在这些地区开始衰落，有的种类已近灭绝。相对而言，普通蜜蜂的数量并没有明显减小。因此相比普通蜜蜂，农田利用方式的改变对熊蜂的生存威胁更大。\n以下哪项如果为真，最能支持上述结论？",
+      "items": null,
+      "options": {
+        "A": "蜜蜂采食会派出\"侦察员\"，回来后通过一种\"摆动舞\"告知蜂群食源在哪里，而熊蜂不会舞蹈，因此大多独自采食",
+        "B": "蜜蜂会在蜂巢内贮藏大量食物，熊蜂的蜂巢储存食物量极少，一旦出现食物短缺，熊蜂就会处于劣势",
+        "C": "蜜蜂属于大型化社群，而熊蜂属于小型化社群，这会导致基因分异度降低，更易受到寄生虫感染而大量死亡",
+        "D": "密集型农田往往种植单一植物，如果植物不是处于花期，熊蜂就会因无法如蜜蜂般进行远距离飞行而岌岌可危"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 33
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 113,
+      "section": "判断推理",
+      "stem": "在我国北方的春天，树木花粉是一种主要的过敏原，它们通过空气传播，不可避免地被吸入体内，使过敏体质人群产生或轻或重的炎症反应。与此同时，作为树木种子的杨柳飞絮同样使过敏人群感到不适。有研究人员认为，杨柳飞絮虽然会使呼吸道产生不适，但它不是过敏原，许多声称杨柳飞絮过敏的人实际上是花粉过敏。\n以下哪项如果为真，不能支持研究人员的论证？",
+      "items": null,
+      "options": {
+        "A": "杨柳飞絮容易进入人的呼吸道，并黏附其上产生刺激作用，出现类似过敏的症状",
+        "B": "杨柳飞絮漫天飞舞之时，正值很多种树开花之际。二者在时间上存在着重叠",
+        "C": "杨柳飞絮含有油质和多糖类物质，作用在皮肤上可通过一系列反应变成一种过敏原",
+        "D": "由于被杨柳飞絮包裹携带，风媒花粉更容易进入呼吸道引起过敏反应"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 34
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 114,
+      "section": "判断推理",
+      "stem": "由于集合了榨汁机、豆浆机、料理机、研磨机等产品功能，破壁机近年来一直备受消费者青睐。某公司生产了R型和W型两款功能相同的破壁机，相比而言R型清洗更方便，W型噪音更小。上市三年后的数据显示，R型销量更好，所以公司认为消费者更喜欢易于清洗的破壁机产品。\n以下哪项如果为真，最能削弱上述观点？",
+      "items": null,
+      "options": {
+        "A": "相比W型产品，R型网上促销力度更大，价格更具优势",
+        "B": "W型产品的外观设计更美观，许多白领上班族都更倾向于买W型",
+        "C": "和其他生产破壁机产品的公司相比，该公司具有更高的市场占有率",
+        "D": "R型和W型产品在全国的销售渠道一致，主要投放在超市、购物中心"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 34
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 115,
+      "section": "判断推理",
+      "stem": "为满足乘客用餐多样化的需要，某地区推出了旅客列车的互联网订餐服务。该服务上线一年以来，通过线上渠道（官网、订票App等）进行了大量的宣传，但订单量除了刚推出的前三个月有小幅增长外，其他月份并未增长，甚至下降。由此可见，该地区出行的旅客对列车提供的网上订餐服务需求量不高。\n以下能够削弱上述结论的有几项？\n①接受旅客列车网络订餐的餐厅数量较少，食物品种相对单一\n②即使推出了互联网订餐，大部分乘客还是愿意去空间较大的餐车用餐\n③该地区的短程列车数量较多，相比短程列车，长程列车的网上订餐量更大\n④线上宣传缺少对用户的精准定位，许多订票用户并未注意到列车有网上订餐服务",
+      "items": [
+        "接受旅客列车网络订餐的餐厅数量较少，食物品种相对单一",
+        "即使推出了互联网订餐，大部分乘客还是愿意去空间较大的餐车用餐",
+        "该地区的短程列车数量较多，相比短程列车，长程列车的网上订餐量更大",
+        "线上宣传缺少对用户的精准定位，许多订票用户并未注意到列车有网上订餐服务"
+      ],
+      "options": {
+        "A": "1项",
+        "B": "2项",
+        "C": "3项",
+        "D": "4项"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 34
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    }
+  ]
+}

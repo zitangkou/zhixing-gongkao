@@ -1,0 +1,1384 @@
+{
+  "module": "言语理解与表达",
+  "year": 2021,
+  "range": "21-60",
+  "source_pages": "20210124.pdf p7-p19",
+  "status": "done",
+  "note": "市地级底版言语理解与表达40题。选词填空20题(21-40)，片段阅读/语句排序/标题选择/语句填空20题(41-60)。",
+  "questions": [
+    {
+      "number": 21,
+      "section": "言语理解与表达",
+      "stem": "发展扶贫产业不能眉毛胡子一把抓，必须立足当地自然禀赋，挖掘地方特色资源，按照“宜种则种、宜养则养”的原则，注重发展山地农业、生态农业、观光农业等特色产业，学会“靠山吃山唱山歌，靠海吃海念海经”，谨防产业“______”，应该看到，适合的才是最好的。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "削足适履",
+        "B": "千篇一律",
+        "C": "急功近利",
+        "D": "水土不服"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 7
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 22,
+      "section": "言语理解与表达",
+      "stem": "“人民城市人民建”。搭建民意“直通车”、公众“议事厅”，有事好商量，大家来出力，很多工作就能做到______。比如上海能在短短一年内迅速形成垃圾分类的新风尚，靠的就是人民群众的主动性、积极性与创造性。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "立竿见影",
+        "B": "万无一失",
+        "C": "事半功倍",
+        "D": "尽善尽美"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 7
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 23,
+      "section": "言语理解与表达",
+      "stem": "在芯片、操作系统等很多方面，我们需要下定决心，攻坚克难，自力更生。因为一旦核心技术受制于人，就有被人“______”的威胁。所以，我们要有“宝剑锋从磨砺出，梅花香自苦寒来”的定力，逐渐形成一批拥有自主知识产权的核心技术和产业，把发展的主动权牢牢掌握在自己手中。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "釜底抽薪",
+        "B": "落井下石",
+        "C": "一网打尽",
+        "D": "过河拆桥"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 7
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 24,
+      "section": "言语理解与表达",
+      "stem": "中国道路的成功开创不仅创造了中国奇迹，而且创造了中国经验。中国经验无疑是中国智慧的结晶，具有鲜明的______。但是，中国经验作为中国道路的积极成果，也是在遵循历史发展和现代化发展规律、吸收世界发展经验教训的基础上形成的，它是对人类文明发展进行探索的重要产物，反映了人类文明进步的规律，因而又具有一定的______。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "地域性 国际性",
+        "B": "先进性 创新性",
+        "C": "实践性 理论性",
+        "D": "特殊性 普遍性"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 8
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 25,
+      "section": "言语理解与表达",
+      "stem": "“为调研而调研”等现象的出现，很大程度上就在于调研不深入、不具体。现实中，有人了解情况习惯于大而化之、______；有人调研习惯于走设计“路线”，______。这些心中不揣问题、脚下不沾泥土的错误做法，导致调研不深、不实、不细、不准，最终也会无效。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "粗枝大叶 按部就班",
+        "B": "走马观花 表里不一",
+        "C": "轻描淡写 循规蹈矩",
+        "D": "避重就轻 按图索骥"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 8
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 26,
+      "section": "言语理解与表达",
+      "stem": "探索和形成一个好的制度不容易，关键是毫不动摇地坚持和巩固、与时俱进地完善和发展、______地遵守和执行。这要求我们要把制度像种子一样种在头脑里，如红线一般______于工作中。这样才能推动中国特色社会主义制度更加成熟、更加定型，将制度优势转化为强大的治理效能，通达“中国之治”的新天地。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "坚定不移 渗透",
+        "B": "一丝不苟 应用",
+        "C": "不折不扣 贯穿",
+        "D": "矢志不渝 根植"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 8
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 27,
+      "section": "言语理解与表达",
+      "stem": "一根网线、一部手机，把偏远的贫困地区链接进了广阔的大市场。电商扶贫，不是______地把农产品搬到网上，更是在深层次地倒逼农业产业转型升级，进而扩展到其他相关领域，创建出中国式扶贫的新______。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "简单 范本",
+        "B": "盲目 方向",
+        "C": "机械 蓝图",
+        "D": "被动 模式"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 8
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 28,
+      "section": "言语理解与表达",
+      "stem": "在实际应用中，专网通常服务于政府、军队、公安、能源、消防、轨道交通等部门或领域，大部分情况下被用来进行应急通信、调度指挥。性能可靠、低成本、定制化的特点，使其在行业应用中具备______的优势。即便5G时代呼啸而来，专网依旧能够找到______。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "独具一格 立足之地",
+        "B": "众所周知 一席之地",
+        "C": "不可替代 用武之地",
+        "D": "显而易见 立锥之地"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 8
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 29,
+      "section": "言语理解与表达",
+      "stem": "信息匮乏的年代，决策水平与信息量成正相关，但当信息从匮乏走向过载甚至“爆炸”时，决策质量与信息量间的函数曲线便开始下滑，利用繁杂信息形成______判断变得难上加难。此时，智能化就可以大显身手。计算智能未必能在逻辑能力上逾越人类，但其强大的处理速度却恰好使信息过载带来的决策困境______。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "理性 烟消云散",
+        "B": "准确 迎刃而解",
+        "C": "科学 不复存在",
+        "D": "有效 无影无踪"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 9
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 30,
+      "section": "言语理解与表达",
+      "stem": "一些国家在实现自身现代化过程中选错了参照系，将发达国家有什么、做什么作为实现自身现代化的______，导致在向市场经济转型过程中经济停滞、崩溃、危机不断。而中国能够根据自己的要素禀赋条件，发挥政府在市场经济中______的作用，把自己能做好的产业做大做强，将比较优势变成竞争优势，从而推动经济长期稳定快速发展。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "目标 因势利导",
+        "B": "原则 总揽全局",
+        "C": "模本 穿针引线",
+        "D": "途径 保驾护航"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 9
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 31,
+      "section": "言语理解与表达",
+      "stem": "每个民族都有自己独特的民俗文化，然而，一些人分不清具体的民族文化和民俗文化，加之有人为了短时间内推出本民族民俗文化，盲目迎合当下的流行需要，反而使自己的民俗文化变得______，出现雷同化传播现象，使大众对不同区域的特色民俗文化认知较为______，影响大众对民俗文化的了解和兴趣，甚至影响了少数民族地区的经济发展。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "支离破碎 肤浅",
+        "B": "不伦不类 模糊",
+        "C": "名存实亡 混乱",
+        "D": "面目全非 狭隘"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 9
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 32,
+      "section": "言语理解与表达",
+      "stem": "近代以来，怎样处理中国传统文化与西方文化的关系，成为很多学者关注的重要问题。有人主张全盘西化，也有人主张全面恢复传统。这些______的观点当然受到了当时历史环境的影响，但也暴露出一些人在思维模式上的局限，即用______的思维来看待复杂的文化现象。这种思维模式在今天的研究中依然不同程度地存在。\n依次填入画横线部分最恰当的一项的：",
+      "items": null,
+      "options": {
+        "A": "荒谬 泾渭分明",
+        "B": "偏颇 非此即彼",
+        "C": "片面 针锋相对",
+        "D": "极端 水火不容"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 9
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 33,
+      "section": "言语理解与表达",
+      "stem": "从生态学角度来讲，人工种群和野外种群是完全不同的概念。大型哺乳动物行为复杂，其生活技巧人类难以传授，又难以“无师自通”。如果______将其放归野外，结局很有可能是死亡。就算可以放归野外，也必须为它们找到______的栖息地。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "贸然 合适",
+        "B": "直接 天然",
+        "C": "草率 理想",
+        "D": "随意 安全"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 10
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 34,
+      "section": "言语理解与表达",
+      "stem": "噬菌体是一种侵袭细菌的病毒，虽然它们很早就被发现，但由于一次只能攻击一种特定的细菌而未受关注。然而，曾经不那么受欢迎的______，如今却成了它们最大的吸引力。由于过度使用抗生素，人类无意中______了目前最强大、最具耐药性的超级细菌，而噬菌体无疑是对付它们的潜在有效武器。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "敏感性 培育",
+        "B": "特异性 催生",
+        "C": "单一性 激活",
+        "D": "局限性 发现"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 10
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 35,
+      "section": "言语理解与表达",
+      "stem": "现代社会获取盐分轻而易举，以至于人们认为吃盐是______的事情。而事实上，由于盐在地理上的分布不均以及交通不畅等原因，其在古代一直都属于______之物。在人类历史上的绝大部分时间里，人们都在寻找盐，甚至令盐业成了历史上第一个由国家垄断的产业。可以说，盐贯穿着整个人类历史，并在人类文明的发展中起到了______的作用。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "稀松平常 必需 举足轻重",
+        "B": "理所当然 稀缺 至关重要",
+        "C": "天经地义 关键 承上启下",
+        "D": "手到擒来 珍贵 一以贯之"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 10
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 36,
+      "section": "言语理解与表达",
+      "stem": "亲近百姓、接近生活是曲艺这门艺术的生命力所在。当然，任何人都不可能______生活的全部，所以创作者才有了“采风”一说。采风从来不是去______生活，而是深入其中，体会其中的乐与悲。然而，现在许多曲艺工作者没有耐心去深入百姓生活，于是只能写自己熟悉的生活，创作能力无疑也受到了______。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "描摹 评判 质疑",
+        "B": "洞察 记录 束缚",
+        "C": "掌握 体验 削弱",
+        "D": "了解 审视 限制"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 10
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 37,
+      "section": "言语理解与表达",
+      "stem": "二十世纪八十年代初，SCI作为一种______的、相对公平的量化指标被引进中国，这是建立科学、公平、公正的高校科研评价体系的初步尝试，在当时是一种进步。但如果启用先进的考核举措而长期______，甚至演变成“至上”的法宝和单一的指挥棒，最终都会______，弊大于利。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "详细 奉为圭臬 画地为牢",
+        "B": "稳定 唯命是从 作茧自缚",
+        "C": "客观 一成不变 物极必反",
+        "D": "中立 墨守成规 贻笑大方"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 11
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 38,
+      "section": "言语理解与表达",
+      "stem": "医生和患者在沟通时最容易出现的______其实是，患者不同意或没听懂医生的建议，又因为不想被说教或觉得尴尬而没有如实反馈意见，而医生也大多没有意识到这一点。这显然会大大影响临床诊疗的______。此外，患者还会由于不想被说教而不承认一些不良生活行为。越是健康状况差的患者，越是容易______一些信息，而他们恰恰是最需要高质量医疗服务的人。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "难点 结果 遗漏",
+        "B": "盲区 效率 隐瞒",
+        "C": "障碍 判断 虚构",
+        "D": "瓶颈 目的 回避"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 11
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 39,
+      "section": "言语理解与表达",
+      "stem": "内太阳系的岩石行星与外太阳系的气态行星最初的物质构成______。科学家此前认为，由于木星质量大、引力强，可以在一些物质到达内太阳系之前将其______，阻止了内外太阳系物质的混合。但研究表明，木星的成长速度不足以阻止外太阳系物质源源不断流入内太阳系，这意味着内外太阳系行星将拥有______的成分。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "大同小异 阻拦 共同",
+        "B": "相去甚远 消灭 全新",
+        "C": "千姿百态 捕获 独特",
+        "D": "大相径庭 吞噬 类似"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 11
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 40,
+      "section": "言语理解与表达",
+      "stem": "随着各种侦察手段的不断演进，可视侦察、红外侦察、雷达侦察等“______”，现代坦克在战场上越来越难以藏身。对此，现代坦克当然不会“______”。在讲求“发现即摧毁”的现代战场上，坦克必须实现对侦察手段的“免疫”，见招拆招，______，让对手对自己庞大的身躯“视若无睹”。\n依次填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "齐头并进 束手就擒 对症下药",
+        "B": "大显身手 自暴自弃 见机行事",
+        "C": "虎视眈眈 坐以待毙 有的放矢",
+        "D": "明察秋毫 知难而退 多管齐下"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 11
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 41,
+      "section": "言语理解与表达",
+      "stem": "“藏粮于地、藏粮于技”是习近平总书记对粮食安全的战略部署，“软硬件”同时发力将助力提升农业生产率和土地产出率。随着现代科技手段的注入，农业科技创新既帮助农民不断克服疫情带来的影响，又让农业生产更加精准高效。袁隆平的超级杂交水稻、李登海的紧凑型杂交玉米……一批又一批领先国际的粮食品种不断被培育出来。从地瘠“斗笠田”到丰产“吨粮田”，从“汗滴禾下土”到“无接触式春耕”，从“灾殃难测”到“高科技防灾”，现代科技为我国农耕注入了“硬核生产力”。这就意味着粮食丰收，库存充裕，藏粮于民，才会国泰民安。\n最适合做这段文字标题的是：",
+      "items": null,
+      "options": {
+        "A": "民为国基，谷为民命",
+        "B": "粮食生产“稳”字当头",
+        "C": "藏粮于民，才能国泰民安",
+        "D": "提升科技水平，保障粮食安全"
+      },
+      "options_in_media": false,
+      "type": "标题选择",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 12
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 42,
+      "section": "言语理解与表达",
+      "stem": "一般而言，城市群之间的交通干线分布着许多城市，聚集着大量产业和人口，从而构成经济带。加强经济带规划和经济带上城市建设，是建设现代化区域发展体系和促进区域协调发展的重要方面。为此，应依托重要交通干线聚集经济要素，形成纵向或横向的经济发展轴，充分发挥其对统筹区域协调发展的作用。比如，沿海经济带、长江经济带、陇海兰新经济带和京广京哈经济带等已经集聚了大量人口、产业，城市分布也比较密集，形成了比较明显的经济发展轴，已成为承东启西、连南贯北的经济主骨架。\n这段文字意在说明：",
+      "items": null,
+      "options": {
+        "A": "经济带建设对区域协调发展具有重要意义",
+        "B": "我国区域经济发展应以城市群建设为依托",
+        "C": "交通干线承担着聚集经济要素的重大使命",
+        "D": "形成经济发展轴是城市群建设的长远目标"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 12
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 43,
+      "section": "言语理解与表达",
+      "stem": "在现代化进程中，城的比重上升，乡的比重下降，是客观规律，但在我国拥有近14亿人口的国情下，不管工业化、城镇化进展到哪一步，农业都要发展，乡村都不会消亡，城乡将长期共生并存，这也是客观规律。即便我国城镇化率达到70%，农村仍将有4亿多人口。如果在现代化进程中把农村4亿多人落下，到头来“一边是繁荣的城市、一边是凋敝的农村”，这不符合我们党的执政宗旨，也不符合社会主义的本质要求。这样的现代化是不可能取得成功的！40年前，我们通过农村改革拉开了改革开放大幕。40年后的今天，我们应该通过振兴乡村，开启城乡融合发展和现代化建设新局面。\n这段文字主要谈的是：",
+      "items": null,
+      "options": {
+        "A": "城镇化建设",
+        "B": "全面建成小康社会",
+        "C": "乡村振兴战略",
+        "D": "脱贫攻坚"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 12
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 44,
+      "section": "言语理解与表达",
+      "stem": "目前的全球治理体系是现代文明的产物，是经过长时间博弈和磨合后逐渐形成的。当前的全球治理体系存在两方面问题：一是这一体系仍存在许多合理性，对人类和平与发展有十分重要的作用，但随着时代的发展，这一治理体系及其体制机制未能适应新情况，出现了许多问题，亟需进行改革；二是现代化先发国家在这一体系中仍占据主导地位，长期把控国际外交话语权，将以资本为中心的逻辑贯穿于全球治理体系和治理体制机制。因此，要将构建人类命运共同体理念融入既有的全球治理体系及其相应体制机制，就必须正视上述两方面。\n这段文字接下来最可能讲的是：",
+      "items": null,
+      "options": {
+        "A": "我国参与全球治理体系改革的路径",
+        "B": "人类命运共同体理念的形成与发展",
+        "C": "全球治理体系所面临的机遇与挑战",
+        "D": "当前全球治理体系存在的制度缺陷"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 13
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 45,
+      "section": "言语理解与表达",
+      "stem": "早在先秦时期，我国就逐渐形成了以炎黄华夏为凝聚核心、“五方之民”共天下的交融格局。秦国“书同文，车同轨，量同衡，行同伦”，开启了中国统一的多民族国家发展的历程。此后，无论哪个民族入主中原，都以统一天下为己任，都以中华文化的正统自居。分立如南北朝，都自诩中华正统；对峙如宋辽夏金，都被称为“桃花石”；统一如秦汉、隋唐、元明清，更是“六合同风，九州共贯”。秦汉雄风、大唐气象、康乾盛世，都是各民族共同铸就的历史。今天，我们实现中国梦，就要紧紧依靠各族人民的力量。\n这段文字意在说明：",
+      "items": null,
+      "options": {
+        "A": "我们悠久的历史是各民族共同书写的",
+        "B": "我们辽阔的疆域是各民族共同开拓的",
+        "C": "我们灿烂的文化是各民族共同创造的",
+        "D": "我们伟大的精神是各民族共同培育的"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 13
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 46,
+      "section": "言语理解与表达",
+      "stem": "《汉书·平帝纪》记载，元始二年，“民疾疫者，舍空邸第，为置医药”，提出了“隔离”是防疫的重要举措。明代中期我国就出现了预防天花的“人痘”接种术。18世纪末，英国科学家爱德华·琴纳发明了接种牛痘预防天花的方法，经过几代科学家不懈努力，最终研制出灭活天花病毒的疫苗。随着现代医学科技发展和公共卫生基础设施不断完善，霍乱、鼠疫、流感等曾经对人类造成巨大危害的传染病逐渐得到了有效控制。近些年来，在抗击严重急性呼吸综合征(SARS)、中东呼吸综合征(MERS)、甲型H1N1流感、埃博拉病毒等多次重大传染病中，科学技术都发挥了重要作用。新中国成立以来，我国通过传染病重大科技专项研发部署，在传染病防治领域的科研水平、技术能力、平台建设、人才队伍等方面都有了明显的提升。\n这段文字主要说的是：",
+      "items": null,
+      "options": {
+        "A": "中西方在疫情防治理念方面存在诸多共性",
+        "B": "借鉴历史经验对于防控疫情具有重要意义",
+        "C": "疫情防控离不开国家自上而下的科学部署",
+        "D": "科学发展和技术创新有助于人类战胜疫情"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 14
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 47,
+      "section": "言语理解与表达",
+      "stem": "虽然物质生产是社会生活的基础，但上层建筑也可以反作用于经济基础，生产力和生产关系、经济基础和上层建筑之间有着十分复杂的关系，有着作用和反作用的现实过程，并不是单线式的简单决定和被决定逻辑。世界上的事物总是有着这样那样的联系，不能孤立地静止地看待事物发展，______。正所谓“有无相生，难易相成，长短相形，高下相倾，音声相和，前后相随”。在观察社会发展时，一定要注意这种决定和被决定、作用和反作用的有机联系。对生产力标准必须全面准确理解，不能绝对化，不能撇开生产关系、上层建筑来理解生产力标准。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "广袤的自然界是如此，丰富的精神世界也是如此",
+        "B": "每一个事物各部分、要素之间都存在联系",
+        "C": "否则往往会出现盲人摸象、以偏概全的问题",
+        "D": "任何事物都与周围的其他事物相互联系着"
+      },
+      "options_in_media": false,
+      "type": "语句填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 14
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 48,
+      "section": "言语理解与表达",
+      "stem": "早在战争年代，毛泽东同志就强调，各级指挥员必须首先是军事技术专家。二十多年前，钱学森同志在展望21世纪时大声疾呼：未来在挑战，军人比任何时候都需要科学，我们要有紧迫感。然而，由于受传统的“重道轻器”等思想的影响，部分指挥员“智谋”有余、“技谋”不足。我们应该清醒认识到，科技是问鼎世界一流军队的“强大引擎”，技术决定战术是制胜铁律，各级指挥员不重视“技谋”就无法有效形成实战能力。唯有那些科技知识的博学者、科学技术的领跑者，才能在未来战场上运筹帷幄、决胜千里。\n最适合做这段文字标题的是：",
+      "items": null,
+      "options": {
+        "A": "“重道轻器”可休矣",
+        "B": "现代战场“技谋”不可弱",
+        "C": "英雄当以“谋”为先",
+        "D": "指挥员的“制胜密码”"
+      },
+      "options_in_media": false,
+      "type": "标题选择",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 14
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 49,
+      "section": "言语理解与表达",
+      "stem": "港珠澳大桥的沉管隧道是世界岛隧工程历史上首个真正意义上的外海深水安装沉管隧道，具有划时代的意义。大桥主体结构的设计使用寿命长达120年，这意味着在一个多世纪的时间里，桥体的核心结构，尤其是6.7公里长的沉管隧道不能出现丝毫的质量问题。大桥的隧道由33节沉管连接而成，每节标准沉管相当于一艘满载的“辽宁号”航母。如此巨大的沉管，还要保证0.5毫米以下这一苛刻的误差限度，这使得它的运输过程不允许出现丝毫差池——不能远距离运输，更不可能在陆地上建好再辗转进入海中。因此，工程师们在距离大桥不远的桂山牛头岛，专门建设了一座沉管管节预制工厂，并采用最先进的流水线进行生产。\n关于港珠澳大桥，这段文字主要介绍的是：",
+      "items": null,
+      "options": {
+        "A": "主体结构的设计标准",
+        "B": "施工中对质量的严格把控",
+        "C": "保证核心结构质量的措施",
+        "D": "在世界桥梁史上的标志意义"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 15
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 50,
+      "section": "言语理解与表达",
+      "stem": "戴口罩等遮挡条件下的人脸识别其实是一项“老”技术，此前研究人员在解决军事刑侦和视频监控问题时就曾长期研究过该技术，并发展出诸多成熟应用。因此，______。但是以往的技术基础并没有完全打消人们对戴口罩人脸识别“先天不足”的顾虑。相较于以往，口罩遮挡住面部，使得人脸识别系统收集到的面部信息大量减少。不过研究表明，人脸识别的关键信息集中于眉毛和眼睛，只要模型训练得当，戴口罩人脸识别的准确率并不会大幅下降。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "提高识别精准度才是这一技术的难点所在",
+        "B": "该技术的稳定性和准确率是有一定基础的",
+        "C": "人脸识别技术已经被广泛应用于各个领域",
+        "D": "人脸识别并不需要对全脸进行整体识别"
+      },
+      "options_in_media": false,
+      "type": "语句填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 15
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 51,
+      "section": "言语理解与表达",
+      "stem": "将以上6个句子重新排序，语序正确的一项是：",
+      "items": [
+        "世界上人居环境最好的部分发达国家及其城市，都是很早就实行垃圾分类、分类类别十分精细的地区",
+        "道理人人都懂，但长期以来生活垃圾分类投放在我国难以真正落实，相关工作的推进一直无从入手",
+        "往大处说，推进垃圾分类制度，实现垃圾减量化、资源化、无害化处理，关系到我国能否建成环境友好型、资源节约型社会",
+        "垃圾分类是城市发展水平和社会文明水平的一个重要体现",
+        "从小处看，推进垃圾分类工作关系广大人民群众的生活环境和城市的清洁美丽宜居程度",
+        "事实上，垃圾分类看起来不起眼，却是城市生活方式和治理模式的一次革命，是践行生态与资源循环理念的关键举措"
+      ],
+      "options": {
+        "A": "①⑥④③⑤②",
+        "B": "⑥③⑤④②①",
+        "C": "④①⑤③②⑥",
+        "D": "④⑤⑥①②③"
+      },
+      "options_in_media": false,
+      "type": "语句排序",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 16
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 52,
+      "section": "言语理解与表达",
+      "stem": "将以上6个句子重新排列，语序正确的一项是：",
+      "items": [
+        "原因就在于原子核内部的质子和中子数量越多，其状态也就越不稳定，越容易发生放射性的衰变",
+        "当越来越多的质子和中子聚集在一起，带正电荷的质子之间的斥力就越来越大",
+        "人们可以在实验室里通过人工方式合成自然界中不存在的元素，但却不能合成无限多的原子核",
+        "在原子核内部，质子和中子等粒子通过强相互作用结合在一起，这几乎是宇宙中最强的相互作用",
+        "中子之间也会有一些排斥，强相互作用越来越难以束缚，不足以维持原子核的稳定",
+        "在人类已经发现或是制造出的3000多种原子核中，只有288种是稳定的"
+      ],
+      "options": {
+        "A": "④⑤⑥①②③",
+        "B": "⑥②③①④⑤",
+        "C": "②④⑤⑥③①",
+        "D": "③①④②⑤⑥"
+      },
+      "options_in_media": false,
+      "type": "语句排序",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 16
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 53,
+      "section": "言语理解与表达",
+      "stem": "与线下教学相比，由于时空差异，线上教学更加依赖于教师的指导和帮助，对资源的需求更大。然而，在知识经济时代，教师早已不再是知识垄断者，网络社会中的个体都有可能成为兼具知识消费者和生产者的双重角色。因此，推动社会力量参与在线教育资源供给，需要改变学校“单打独斗”的传统教育格局，以开放的态度接纳企业在线教育服务。例如，学校可适当采取外包的形式，向那些通过资质审核的教育机构、企业购买网络课程服务，提供“智能+真人”的双引擎驱动教学服务。此外，双方还可在资源支持、学情监测、评价反馈等方面加强协同创新，促进在线教育的健康发展。\n这段文字意在说明：",
+      "items": null,
+      "options": {
+        "A": "在线教育的健康发展需要引入社会力量",
+        "B": "“智能+真人”是教育服务的发展趋势",
+        "C": "教育资源供给来源不再局限于学校内部",
+        "D": "共享经济时代在线教育将成为一种常态"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 16
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 54,
+      "section": "言语理解与表达",
+      "stem": "人们在评判手机拍照功能时，总是直观地认为手机像素越高，拍照效果越好。事实真的是这样吗？从成像原理来看，像素值的大小对生成的图像会产生一定的影响。当手机的图像传感面积一定的时候，像素值越高，单位像素面积就越小，而单位像素面积又直接影响到进光量，单位像素面积越小，图像传感器上进光量就越少，拍摄出的照片就会变得灰暗模糊；像素值越低，单位像素感光面积大，感光性能更好，因此在成像的高感光画质以及画面层次等方面都有更好的表现。\n这段文字接下来最有可能：",
+      "items": null,
+      "options": {
+        "A": "阐述像素的定义及其提升途径",
+        "B": "介绍提高手机拍照效果的技巧",
+        "C": "指出影响手机成像效果的因素",
+        "D": "揭示进光量与像素值间的关系"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 17
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 55,
+      "section": "言语理解与表达",
+      "stem": "水田不单单是水稻的种植区，也可以是稻香水美、鱼肥虾壮的养殖场。传统矮秆水稻因为追求最大产量，都采用密植栽种，加上植株株秆矮小，水田中空间狭窄，导致空气流通不好，水中有效含氧量降低，不利于开展水田综合种养结合生产。而高秆水稻株型高大、叶茂且冠层高，植株间距较为稀疏，可为蛙、鱼和泥鳅等稻田养殖动物提供良好的栖息环境，具有适宜种养结合的优势，较好地解决了植株过密导致的水田上方空气对流不充分、空间不足的问题。与现在常见的稻田综合种养模式相比，该模式的经济效益显著提升，将极大地提升农民种植的积极性。\n根据这段文字，高秆水稻种植：",
+      "items": null,
+      "options": {
+        "A": "为稻田养殖动物提供了良好的栖息地",
+        "B": "克服了传统矮秆水稻种植模式的弊端",
+        "C": "催生了种养结合的新型种植模式",
+        "D": "将成为未来水稻种植业的发展方向"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 17
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 56,
+      "section": "言语理解与表达",
+      "stem": "过去近20年间，地球深部生命研究取得的重要进展之一便是发现了海底洋壳生物圈。洋壳的体积庞大，是全球海洋沉积物总体积的5倍左右，栖息于此的微生物规模巨大，不可忽视，它们对全球生物地球化学元素循环和海底地貌风化都具有重要的潜在影响。然而，受采样技术和条件的限制，目前对洋壳岩石生物圈的研究和认识还十分有限。此前，有限的研究几乎全部集中于洋壳表层的玄武岩中，而对占洋壳体积近三分之二的下洋壳，尽管认为其也是深部微生物的可栖息环境之一，但尚缺少直接的证据，对栖息于此的微生物及其对极端环境的应对策略研究还是空白。\n这是一篇文章的开头，这篇文章最可能介绍：",
+      "items": null,
+      "options": {
+        "A": "全球海洋沉积物在海底的分布特征",
+        "B": "海底洋壳生物圈的发现过程和重要意义",
+        "C": "海洋下洋壳中的深部微生物及其生存策略",
+        "D": "海底地貌风化对微生物生存的影响"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 18
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 57,
+      "section": "言语理解与表达",
+      "stem": "大数据、人工智能脱胎于网络，而又与网络的侧重点不同。网络强调的是设备和主体之间的连接，是信息社会的基础设施。大数据是因网络的连接和对世界的数字化而形成的数据资源，人工智能则是在大数据的基础上通过反复训练进化而成的处理数据的智慧体系。就当前的发展形势而言，中国拥有世界上最大的网民群体和网络基础设施体系，世界上最大的移动互联网群体、电子商务客户群体、电子金融和社交媒体用户群体等，这使得中国成为世界上大数据规模最大的国家，并由此产生了丰富的应用实践和人工智能衍生产品。\n这段文字主要介绍：",
+      "items": null,
+      "options": {
+        "A": "网络、大数据和人工智能之间的关系",
+        "B": "中国互联网用户群体的构成情况",
+        "C": "中国发展大数据、人工智能的优势",
+        "D": "人工智能衍生产品的发展基础"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 18
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 58,
+      "section": "言语理解与表达",
+      "stem": "近年来，3D打印技术开始应用于食品、建筑、医疗卫生、航空航天等多个领域。随着3D打印技术在金属零部件制造上取得较大进展，各国开始探讨其在武器装备制造与维修中的应用。研究表明，3D打印对军用武器及设施维修效果显著，能直接在战场上把需要的零部件“打印”出来，及时、精准完成受损装备的维修，快速恢复其作战能力。然而，这种方式制造的军用设备有着不可避免的缺陷，对装备材料要求极高的军用设备来说，除了尺寸受限，其强度和质量也令人担忧。受技术、成本的限制，3D打印技术难以取代大规模流水线生产。\n这段文字主要介绍了3D打印技术：",
+      "items": null,
+      "options": {
+        "A": "取得的最新进展",
+        "B": "与大规模流水线生产的区别",
+        "C": "广阔的应用前景",
+        "D": "在军事领域的应用情况"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 18
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 59,
+      "section": "言语理解与表达",
+      "stem": "登陆火星并不是一件容易的事。地球和火星最近时，也有5600万千米的距离，是地球和月亮距离的140倍，想要靠火箭的动力突破这一距离，目前是不可能的。因此，需借助地球的公转把探测器“甩”到火星，不过，需要合适的时机，这就是“发射窗口”。当火星探测器到达远日点，与火星轨道相切时，火星也正好运行到那里，探测器才能与火星交会。在这个时间窗口发射火星探测器，不仅是最省能量的，探测器的有效载荷也会相应增多。这种特定的时机和位置每隔26个月才出现一次。\n这段文字主要：",
+      "items": null,
+      "options": {
+        "A": "强调探测器登陆火星的技术难点",
+        "B": "解释要抓住窗口期发射火星探测器的原因",
+        "C": "说明探测器“发射窗口”稍纵即逝的特点",
+        "D": "描述火星探测器的理想运行轨迹"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 19
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 60,
+      "section": "言语理解与表达",
+      "stem": "有学者认为，技术文本和政治文献的机器翻译替代人工翻译在未来几年就可能实现，机器翻译译文总体质量超过职业译者也是必然的，甚至文学翻译也同样如此。机器翻译发展到今天已到了第三代，即神经机器翻译，其根本原理就是根据语境化原则建立海量的分门别类的语料库来处理。通过让机器反复学习和训练，语料库文本不断完善，翻译的准确率不断提高，且翻译内容越专业、场景或任务越固定、标准越统一，翻译准确率越高。\n上述文字主要用来反驳以下哪个观点？",
+      "items": null,
+      "options": {
+        "A": "机器翻译不可能取代人工翻译",
+        "B": "文学翻译的难度远大于技术文本翻译",
+        "C": "机器翻译难以做到准确性与流畅性的统一",
+        "D": "机器翻译离不开人工翻译和优化的辅助"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 19
+        }
+      },
+      "flags": ["answer_missing"]
+    }
+  ]
+}

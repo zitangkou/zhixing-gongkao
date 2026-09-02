@@ -1,0 +1,764 @@
+{
+  "module": "资料分析",
+  "year": 2022,
+  "range": "116-135",
+  "source_pages": "20222548.pdf p35-p40",
+  "status": "done",
+  "note": "主卷为省级卷，资料分析20题（116-135），4组材料。Q120/Q134/Q135选项为图表（media_missing）。材料数据已从图表中提取为文本。",
+  "materials": {
+    "m116_120": "2021年1—2月，J省发电量为167亿千瓦时，其中风力发电量为17.4亿千瓦时。\n图1 2020年2—12月J省累计发电量及同比增速（单位：亿千瓦时、%）\n1—2月：发电量155.4，增速2.5\n1—3月：发电量228.6，增速0.2\n1—4月：发电量299.8，增速0.7\n1—5月：发电量376.8，增速2.8\n1—6月：发电量450.8，增速3.1\n1—7月：发电量534.1，增速3.8\n1—8月：发电量612，增速3.6\n1—9月：发电量690.9，增速5.3\n1—10月：发电量765.8，增速5.5\n1—11月：发电量852.8，增速6.2\n1—12月：发电量944.7，增速5.9\n图2 2020年2—12月J省累计风力发电量及同比增速（单位：亿千瓦时、%）\n1—2月：风力发电量13.4，增速-4.6\n1—3月：风力发电量24.2，增速3.4\n1—4月：风力发电量34.7，增速4.9\n1—5月：风力发电量43.6，增速-2.2\n1—6月：风力发电量50.2，增速-0.9\n1—7月：风力发电量54，增速-0.6\n1—8月：风力发电量57.8，增速0.6\n1—9月：风力发电量64.8，增速2.5\n1—10月：风力发电量73.9，增速-0.3\n1—11月：风力发电量88.1，增速6.4\n1—12月：风力发电量97.5，增速6.7",
+    "m121_125": "2020年H省秋粮平均生产成本及同比增速（单位：元/亩、%）\n【秋粮】生产成本：成本440.6，增速-2.1\n其中：物质费用：成本203.9，增速-0.3\n其中：种子：成本51.3，增速0.4\n化肥：成本125.3，增速-2.2\n农药：成本26.9，增速8.6\n生产服务支出：成本130.3，增速-3.5\n其中：机耕：成本22.1，增速0.3\n机播：成本21.7，增速-1.1\n机收：成本62.3，增速-2.0\n排灌：成本24.3，增速-12.0\n人工成本：成本106.5，增速-3.5\n【玉米】生产成本：成本430.5，增速-1.9\n其中：物质费用：成本205.4，增速-0.3\n其中：种子：成本48.5，增速-0.1\n化肥：成本131.0，增速-2.6\n农药：成本25.6，增速14.0\n生产服务支出：成本120.7，增速-5.8\n其中：机耕：成本15.4，增速-3.1\n机播：成本21.2，增速-6.4\n机收：成本61.0，增速-1.2\n排灌：成本23.1，增速-17.2\n人工成本：成本104.4，增速-0.4\n【稻谷】生产成本：成本525.7，增速-4.0\n其中：物质费用：成本210.6，增速0.4\n其中：种子：成本68.4，增速1.8\n化肥：成本107.7，增速-0.3\n农药：成本34.3，增速-1.2\n生产服务支出：成本194.4，增速4.3\n其中：机耕：成本61.8，增速3.0\n机播：成本24.0，增速37.4\n机收：成本78.4，增速-0.7\n排灌：成本30.2，增速0.7\n人工成本：成本120.7，增速-20.3\n2020年，H省秋粮玉米和稻谷的市场平均交易价格分别为2.34元/公斤和2.74元/公斤，分别比上年上涨28.6%和8.7%。按此价格测算，2020年全省农户种植玉米、稻谷扣除成本前的产值分别为957.1元/亩、1520.7元/亩，分别比上年增长33.4%、8.9%。",
+    "m126_130": "2020年1—6月，全国电池制造业主要产品中，锂离子电池产量71.5亿只，同比增长1.3%；铅酸蓄电池产量9635.6万千伏安时，同比增长6.1%；原电池及原电池组（非扣式）产量178.2亿只，同比下降0.7%。\n图1 2020年下半年各月全国锂离子电池产量及同比增速（单位：亿只、%）\n7月：产量16.2，增速11.1\n8月：产量17.9，增速23.3\n9月：产量19.9，增速26.6\n10月：产量19.7，增速29.8\n11月：产量19.9，增速29.2\n12月：产量21.7，增速26.4\n图2 2020年下半年各月全国铅酸蓄电池产量及同比增速（单位：万千伏安时、%）\n7月：产量2141.4，增速26.2\n8月：产量2078.2，增速19.3\n9月：产量2260.2，增速25.2\n10月：产量2124.2，增速19.3\n11月：产量2120.3，增速11.7\n12月：产量2490.1，增速20.9\n图3 2020年下半年各月全国原电池及原电池组（非扣式）产量及同比增速（单位：亿只、%）\n7月：产量38.8，增速7.9\n8月：产量37.5，增速5.9\n9月：产量38.6，增速7.8\n10月：产量37.3，增速3.0\n11月：产量37.5，增速4.5\n12月：产量41.7，增速9.0",
+    "m131_135": "2020年12月，C市天然气用量为9.67亿立方米，同比增长11.668%。从供应结构看：中石油供应7.22亿立方米，同比增长7.44%；中石化供应2.45亿立方米，同比增长26.29%。从用气结构看：民用气为3.98亿立方米，同比增长16.72%；CNG用气0.64亿立方米，同比下降7.25%；工业用气5.05亿立方米，同比增长10.75%。\n2020年，C市天然气用量为107.47亿立方米，同比增长3.83%。其中，中石油供应73.96亿立方米，同比增长1.72%；中石化供应33.51亿立方米，同比增长8.8%。从用气结构看：民用气为33.75亿立方米，同比增长5.4%；CNG用气6.99亿立方米，同比下降13.92%；工业用气66.73亿立方米，同比增长5.3%。\n2021年2月，C市天然气用量为9.31亿立方米，同比增长21.38%。从供应结构看：中石油供应6.7亿立方米，同比增长25.23%；中石化供应2.61亿立方米，同比增长12.5%。从用气结构看：民用气为3.56亿立方米，同比增长16.34%；CNG用气0.52亿立方米，同比增长205.88%；工业用气5.23亿立方米，同比增长17.79%。\n2021年1—2月，C市天然气用量为19.21亿立方米，同比增长12.8%。其中，中石油供应14.23亿立方米，同比增长18.88%；中石化供应4.98亿立方米，同比下降1.58%。从用气结构看：民用气为7.78亿立方米，同比增长12.75%；CNG用气1.14亿立方米，同比增长44.3%；工业用气10.29亿立方米，同比增长10.17%。"
+  },
+  "questions": [
+    {
+      "number": 116,
+      "section": "资料分析",
+      "stem": "2020年第二季度，J省除风力发电之外的发电量在以下哪个范围内？",
+      "items": null,
+      "options": {
+        "A": "不到200亿千瓦时",
+        "B": "在200亿~215亿千瓦时",
+        "C": "在215亿~230亿千瓦时",
+        "D": "超过230亿千瓦时"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m116_120"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 35
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 117,
+      "section": "资料分析",
+      "stem": "2021年1—2月J省累计发电量同比增速比同期风力发电量同比增速：",
+      "items": null,
+      "options": {
+        "A": "高不到10个百分点",
+        "B": "低不到10个百分点",
+        "C": "高10个百分点以上",
+        "D": "低10个百分点以上"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m116_120"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 36
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 118,
+      "section": "资料分析",
+      "stem": "2020年3—12月，J省当月发电量同比增速快于当月累计发电量同比增速的月份有几个？",
+      "items": null,
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m116_120"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 36
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 119,
+      "section": "资料分析",
+      "stem": "将2020年四个季度按J省风力发电量由高到低的顺序排列，以下正确的是：",
+      "items": null,
+      "options": {
+        "A": "第三季度、第一季度、第二季度、第四季度",
+        "B": "第四季度、第二季度、第一季度、第三季度",
+        "C": "第四季度、第三季度、第一季度、第二季度",
+        "D": "第三季度、第一季度、第四季度、第二季度"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m116_120"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 36
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 120,
+      "section": "资料分析",
+      "stem": "以下折线图反映了2020年哪个时间段内J省单月发电量的变化趋势？",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m116_120"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 36
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "number": 121,
+      "section": "资料分析",
+      "stem": "2019年，H省秋粮稻谷的平均生产成本约为多少元/亩？",
+      "items": null,
+      "options": {
+        "A": "548",
+        "B": "533",
+        "C": "439",
+        "D": "450"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m121_125"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 37
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 122,
+      "section": "资料分析",
+      "stem": "将2020年H省秋粮机耕、机播、机收、排灌成本按同比增量从高到低的顺序排列，以下正确的是：",
+      "items": null,
+      "options": {
+        "A": "机耕、机播、机收、排灌",
+        "B": "机收、排灌、机耕、机播",
+        "C": "机耕、机播、排灌、机收",
+        "D": "机收、排灌、机播、机耕"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m121_125"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 37
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 123,
+      "section": "资料分析",
+      "stem": "2020年，H省秋粮玉米和稻谷的亩产与上年相比：",
+      "items": null,
+      "options": {
+        "A": "仅稻谷亩产高于上年水平",
+        "B": "仅玉米亩产高于上年水平",
+        "C": "两者亩产均低于上年水平",
+        "D": "两者亩产均高于上年水平"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m121_125"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 37
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 124,
+      "section": "资料分析",
+      "stem": "如种植收益=产值-生产成本，则2020年H省秋粮稻谷平均每亩的种植收益约是玉米的多少倍？",
+      "items": null,
+      "options": {
+        "A": "0.5",
+        "B": "0.7",
+        "C": "1.6",
+        "D": "1.9"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m121_125"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 37
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 125,
+      "section": "资料分析",
+      "stem": "2020年，H省农民老王在承包地中种植秋粮玉米，按全省平均生产成本估算，他在种子和农药上需要花费2000元，如亦按全省平均生产成本估算，他需要花费的人工成本在以下哪个范围内？",
+      "items": null,
+      "options": {
+        "A": "不到2000元",
+        "B": "2000~2500元",
+        "C": "2500~3000元",
+        "D": "超过3000元"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m121_125"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 37
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 126,
+      "section": "资料分析",
+      "stem": "2019年上半年，全国铅酸蓄电池月均产量约为多少亿千伏安时？",
+      "items": null,
+      "options": {
+        "A": "0.13",
+        "B": "0.14",
+        "C": "0.15",
+        "D": "0.16"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m126_130"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 38
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 127,
+      "section": "资料分析",
+      "stem": "2020年四季度，全国锂离子电池产量约比三季度增长了多少亿只？",
+      "items": null,
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "9",
+        "D": "11"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m126_130"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 39
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 128,
+      "section": "资料分析",
+      "stem": "2020年下半年，全国原电池及原电池组（非扣式）产量占全年产量的比重在以下哪个范围内？",
+      "items": null,
+      "options": {
+        "A": "不到55%",
+        "B": "55%~60%",
+        "C": "60%~65%",
+        "D": "超过65%"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m126_130"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 39
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 129,
+      "section": "资料分析",
+      "stem": "2020年下半年，全国锂离子电池产量同比增速快于铅酸蓄电池产量同比增速的月份有几个？",
+      "items": null,
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m126_130"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 39
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 130,
+      "section": "资料分析",
+      "stem": "能够从上述资料中推出的是：",
+      "items": null,
+      "options": {
+        "A": "2020年上半年，全国锂离子电池产量同比增长了不到1亿只",
+        "B": "2020年下半年，全国锂离子电池产量和原电池及原电池组（非扣式）产量最低的月份在同一个季度",
+        "C": "2020年10月，全国铅酸蓄电池当年累计产量首次超过2亿千伏安时",
+        "D": "2020年12月，全国锂离子电池产量环比增速快于同期铅酸蓄电池产量环比增速"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m126_130"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 39
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 131,
+      "section": "资料分析",
+      "stem": "2021年1月，C市天然气用量比上月：",
+      "items": null,
+      "options": {
+        "A": "增加了0.2亿立方米以上",
+        "B": "减少了不到0.2亿立方米",
+        "C": "减少了0.2亿立方米以上",
+        "D": "增加了不到0.2亿立方米"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m131_135"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 40
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 132,
+      "section": "资料分析",
+      "stem": "2020年，中石化供气量占C市天然气用量的比重比上年：",
+      "items": null,
+      "options": {
+        "A": "减少了不到3个百分点",
+        "B": "增加了不到3个百分点",
+        "C": "减少了3个百分点以上",
+        "D": "增加了3个百分点以上"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m131_135"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 40
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 133,
+      "section": "资料分析",
+      "stem": "2019—2020年，C市CNG用气总量约为多少亿立方米？",
+      "items": null,
+      "options": {
+        "A": "15",
+        "B": "17",
+        "C": "11",
+        "D": "13"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m131_135"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 40
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 134,
+      "section": "资料分析",
+      "stem": "以下哪个饼图最能准确反映2021年1—2月C市天然气用量中，民用气（白色）、CNG用气（黑色）和工业用气（斜线）的占比关系？",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m131_135"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 40
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "number": 135,
+      "section": "资料分析",
+      "stem": "以下柱状图反映了C市天然气2020年12月—2021年2月哪一数值的变化趋势？",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m131_135"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 40
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    }
+  ]
+}

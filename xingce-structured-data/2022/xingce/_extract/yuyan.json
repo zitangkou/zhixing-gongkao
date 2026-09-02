@@ -1,0 +1,1481 @@
+{
+  "module": "言语理解与表达",
+  "year": 2022,
+  "range": "21-60",
+  "source_pages": "20220124.pdf p6-p19",
+  "status": "done",
+  "note": "选词填空21-35（单空2题/双空10题/三空3题），语句填空36/38/45，片段阅读37/39/42/43/44/46/47/48/50，语句排序40-41，标题选择49，文章阅读51-55（人类进化材料m51_55）+56-60（弓形虫材料m56_60）。",
+  "materials": {
+    "m51_55": "①几百万年前，气候变化导致森林退化，人类祖先被迫走出森林，到草原上生活。这被认为是人类与其生活在森林里的类人猿亲戚们分化的关键时刻。传统观点认为，在草原上，猿人们很快过上了狩猎者的生活。作为灵长类生物，他们并不具备强健的肌肉和锋利的牙齿，仅凭体力很难成功捕获猎物，不得不依靠精细的社会分工进行合作，并通过发明各种工具和武器捕猎求生。捕猎所获肉食，使得他们获得了丰富的蛋白质，对大脑发育也有某种助益。总之，狩猎的生活方式最终塑造了我们目前熟悉的人类。\n②然而，这个观点也并非没有漏洞。在原始人类究竟是否为狩猎者这个问题上，学界始终有不同意见。唐娜·哈特与罗伯特·W.苏斯曼就在他们所著的《被狩猎的人类：灵长类、捕食者和人类的演化》中提出了\"人类猎物假说\"。他们认为猿人不是猎人，而是各种食肉动物的猎物。这个假说有不少证据支持，其中最有力的证据是原始人类遗留的骨骼中经常包含明显的被啃咬的痕迹。1929年在北京周口店发现的北京猿人头骨底部有巨大破口，研究者曾一直认为这个现象证明了北京猿人有\"人吃人\"的习惯。实际上，这一损伤更可能是鬣狗啃噬造成的。在远古时代，有些种类的鬣狗体型巨大，完全有能力咬碎猿人的头骨。\n③那么，\"原始人类是各种食肉动物的猎物\"这个假说对于解释人类的进化又有什么意义呢？哈特和苏斯曼提出了一些有趣的观点，比如，他们认为语言可能起源于声音警报，在此声音信号系统上继续发展，便慢慢奠定了语言形成的基础。支持\"人类猎物假说\"的学者认为，人类形成复杂的大脑功能并不是为了更好地协调狩猎行为，而是为了挫败食肉动物的攻击。具有一定智慧的复杂大脑可以使原始人类更好地互相协调，及时制订躲避乃至反制策略。\n④除了上述\"人类猎物假说\"，还有另外一种假说，即\"人类长跑者假说\"，该观点认为原始人类很可能属于一种本着\"机会主义\"生存原则的食腐动物，需要长时间在非洲草原四处游走，寻找新鲜的动物尸体食用，这个假说可以解释现代人类为何具有较强的耐力，虽然人类的冲刺能力不如很多食肉或食草动物，但是如果在炎热的非洲草原上进行万米长跑比赛，大部分哺乳动物会输给人类。与其他灵长类动物相比，人类的骨骼与韧带结构更适合长距离奔跑。人类还可以高效利用分布于全身的汗腺来控制体温，防止在炎热环境下长距离奔跑导致的躯体过热。此外，直立行走的姿态和人类的胸腔结构，使人类能在奔跑时更好地调节呼吸。\n⑤实际上，在上百万年的进化过程中，人类的生态位并非一成不变，上述假说也许都不全面。真正的人类故事很可能是古老的猿类从猎物和食腐动物向猎人演变的过程，他们作为\"猎物\"\"食腐者\"所进化出的一些特征，比如为防止被捕猎而形成的复杂社会网络、为了适应食腐生活而逐渐形成的适合长跑的身体结构等，很可能也为后来人类成为\"猎人\"打下了基础。当人类祖先真正成为合格的猎人之后，智人也就登上了历史舞台，改变了其他各种生物的命运，也让整个地球生态发生了翻天覆地的变化。",
+    "m56_60": "①老鼠生性胆小机警，我们常用\"胆小如鼠\"形容一个人懦弱怕事，老鼠怕猫更被认为是天经地义的事情。这对冤家也常被搬上屏幕，例如《猫和老鼠》和《黑猫警长》。\n②那么，老鼠有没有不怕猫的时候呢？\n③答案是肯定的，比如当老鼠感染一种名叫刚地弓形虫的寄生虫的时候。1908年，细菌学家查尔斯·尼科尔在突尼斯的刚地疏趾鼠体内发现了这种只有几微米大小的细胞内寄生原虫。随着研究深入，人们发现，弓形虫只在家猫和虎、狮等猫科动物体内进行有性生殖，其无性繁殖则可以发生在几乎所有温血动物（包括老鼠）的有核细胞中。\n④值得一提的是，弓形虫的感染通常比较温和。在免疫力正常的动物体内，弓形虫以一种叫作组织包囊的形式存在于动物大脑或肌肉中，呈慢性感染。只有当动物免疫力低下时，弓形虫感染才会引起严重的临床后果，比如脑炎、视网膜脉络膜炎等。\n⑤慢性感染并不表示弓形虫对动物没有影响，何况感染的部位是大脑，早在2014年，分子与细胞生物学教授迈克·艾森团队就发现，慢性感染弓形虫的小鼠对猫尿液的畏惧程度降低了。研究人员将小鼠体内的弓形虫完全清除后，这种变化并没有发生反转。通俗地讲，老鼠胆子变大了，不再害怕猫留下的痕迹和气味，而且\"一时感染，终生受用\"。\n⑥2020年1月，日内瓦大学医学院多米尼克·索达提——法威尔教授团队发表论文称，慢性感染弓形虫的小鼠，不只是针对猫的胆子变大，面对其他捕食者时胆子也会变大。\n⑦\"我们发现感染弓形虫的小鼠的恐惧感丧失不仅仅是针对猫的，\"科研人员表示，\"这些小鼠思维活跃，四处游走探索\"。在该研究中，科研人员建立了弓形虫慢性感染的小鼠模型，惊奇地发现，在慢性感染状态下，小鼠的焦虑水平降低了，更喜欢探索未知的东西。\n⑧难道小鼠的胆子真的变大了？研究人员检测了小鼠对不同动物尿液的恐惧程度，发现弓形虫慢性感染的小鼠对猫尿液的恐惧程度明显降低，也不惧怕狐狸和豚鼠的尿液。就算附近放置的是处于麻醉状态的活的大鼠，小鼠依然来去自如。这和未感染组小鼠的小心翼翼形成鲜明对比。\n⑨研究人员进而发现，弓形虫感染的小鼠，其行为变化程度与其脑组织中的包囊数量呈一定的相关性，弓形虫感染量越大，小鼠的探索性行为就越明显。通过转录组学分析，研究人员发现弓形虫慢性感染的小鼠，脑组织中炎性因子的转录水平发生了明显变化，并且与脑组织中包囊的数量和行为的变化程度具有相关性。科研人员推测，弓形虫慢性感染会引起动物脑组织持续性的炎症反应，炎性因子的释放会影响神经细胞的功能，最终导致动物的\"勇敢\"行为。\n⑩安徽医科大学一位病原生物学教授说，弓形虫感染引起动物行为的变化可以拉近猎物和捕食者之间的空间距离，有利于虫体的扩散传播；老鼠不怕猫则更有助于弓形虫在猫体内的有性生殖，促进弓形虫的进化以及对环境的适应。动物实验研究有助于揭示人体\"慢性无症状感染\"相关神经精神障碍性疾病的发病机制。"
+  },
+  "questions": [
+    {
+      "number": 21,
+      "section": "言语理解与表达",
+      "stem": "思政课教师要有正确的党史观和过硬的党史知识，只有自己观点正确、史料丰富，才能准确无误地给学生指引方向、有力有理有据地反驳错误观点、______地选择恰当的教学方式，推动党史教育入脑入心、开花结果。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "信手拈来",
+        "B": "游刃有余",
+        "C": "轻而易举",
+        "D": "随心所欲"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 6
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 22,
+      "section": "言语理解与表达",
+      "stem": "卫星定位系统是通过获得卫星和用户接收机之间的距离来计算用户位置的，而距离等于传播时间乘以光速，因此，精确的距离测量实际上就是精确的时间测量。没有高精度的时频，卫星定位系统就不可能实现高精度的定位。所谓失之毫\"秒\"谬以千里，这正是原子钟______的地方。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "大显身手",
+        "B": "牛刀小试",
+        "C": "脱颖而出",
+        "D": "无往不利"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 6
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 23,
+      "section": "言语理解与表达",
+      "stem": "在未来战争中，掌握算法优势的一方，能快速准确______战场态势，创新最优作战方法，实现\"未战而先胜\"的战争目的。同时，智能科技将______到战争全要素全过程，物联网、智联网与脑联网成为战争的基础，从而使得战争全息透明，呈现战争控制\"有人\"、战场交锋\"无人\"的状态。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "预测 渗透",
+        "B": "主导 贯穿",
+        "C": "判断 投射",
+        "D": "反映 覆盖"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 6
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 24,
+      "section": "言语理解与表达",
+      "stem": "实施传统胸外按压心肺复苏，常会发生肋骨或胸骨骨折，导致肺、胸膜及心脏损伤，影响心肺复苏的成功率，急救专家由此探索出\"胸路不通走腹路\"的新路径，腹部提压心肺复苏技术及提压心肺复苏技术______。与传统心肺复苏技术相比，该技术______，利用腹部提压心肺复苏仪达到起腹心动、起腹呼吸的目的。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "异军突起 推陈出新",
+        "B": "横空出世 一举两得",
+        "C": "应运而生 另辟蹊径",
+        "D": "粉墨登场 扬长避短"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 7
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 25,
+      "section": "言语理解与表达",
+      "stem": "建筑工程投入巨大，一旦建成再做拆改可谓______。对此，需要完善设计规范和管理制度，从方案设计一开始就强化监管审核，确保建筑物在形体、色彩、体量、高度和空间环境等方面符合城市设计要求，避免陷入\"______\"的窘境，最大程度地维护公共利益。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "徒劳无功 覆水难收",
+        "B": "劳民伤财 木已成舟",
+        "C": "得不偿失 尾大不掉",
+        "D": "血本无归 闭门造车"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 7
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 26,
+      "section": "言语理解与表达",
+      "stem": "当前，我国发展面临着前所未有的风险挑战，既有国内的也有国际的，既有政治、经济、文化、社会等领域的也有来自自然界的，既有传统的也有非传统的，\"黑天鹅\"\"灰犀牛\"还会______。要更好应对前进道路上各种可以预见和难以预见的风险挑战，我们必须从历史中获得启迪，从历史经验中提炼出______的法宝。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "不期而至 克敌制胜",
+        "B": "有机可乘 攻无不克",
+        "C": "纷至沓来 所向披靡",
+        "D": "不请自来 攻坚克难"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 7
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 27,
+      "section": "言语理解与表达",
+      "stem": "解剖是认识动物体内形态特征的重要方式，但对于罕见或稀有物种而言，解剖无疑会破坏珍贵的样本，其损失______。近年来，无损检测已开始应用于文物鉴定等多个领域，______相关技术的应用经验，研发出一套专门针对珍稀动物样本无损检测的方法，必将大有可为。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "难以估量 拓展",
+        "B": "触目惊心 参考",
+        "C": "毋庸置疑 模仿",
+        "D": "不言而喻 借鉴"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 7
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 28,
+      "section": "言语理解与表达",
+      "stem": "当今世界正经历百年未有之大变局，新一轮科技革命和产业变革深入发展，国际力量对比深刻______，和平与发展仍然是时代主题，人类命运共同体理念______，同时，国际环境日趋复杂，不稳定性不确定性明显增加，新冠疫情影响广泛深远，经济全球化遭遇逆流，世界进入动荡变革期。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "调整 深入人心",
+        "B": "扭转 经久不衰",
+        "C": "变化 源远流长",
+        "D": "变换 牢不可破"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 8
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 29,
+      "section": "言语理解与表达",
+      "stem": "人体肠道内生物的多样性令人惊讶，除细菌外，还______着数十万种被称为噬菌体的病毒，这些噬菌体可以感染细菌。众所周知，肠道微生物组不平衡会引发各种疾病，如炎症性肠病、过敏和肥胖，但我们对肠道细菌及噬菌体在人类健康和疾病方面起何种作用却______。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "潜伏 知之甚少",
+        "B": "分布 浑然不觉",
+        "C": "活跃 束手无策",
+        "D": "充斥 一知半解"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 8
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 30,
+      "section": "言语理解与表达",
+      "stem": "稳就业之\"稳\"，既要着眼于______存量，让大家把\"饭碗\"端稳，更要着眼于扩大增量，拓宽就业空间。一方面需要不断优化营商环境，让新增市场主体成为解决就业的______；另一方面还要充分利用新技术衍生的新业态，引导人们转变观念，实现更宽更广的就业。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "维持 星星之火",
+        "B": "夯实 不二法门",
+        "C": "强化 中流砥柱",
+        "D": "巩固 源头活水"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 8
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 31,
+      "section": "言语理解与表达",
+      "stem": "系统观念是做好\"十四五\"时期各项工作必须坚持的重要原则。各级税务机关要加强______思考，立足当前、放眼长远，加强税收领域前沿问题研究，增强做好税收工作的主动性和预见性。要进行______谋划，自觉把税收工作融入党和国家事业发展大局中去思考和谋划，加强\"十四五\"税收改革发展的顶层设计。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "针对性 战略性",
+        "B": "系统性 长期性",
+        "C": "前瞻性 全局性",
+        "D": "独立性 统一性"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 8
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 32,
+      "section": "言语理解与表达",
+      "stem": "病毒变异每时每刻都在发生，随机性极大，突变率高，变异速度快，这意味着它们更有机会形成适应环境的______。然而，并非每种变异都能让病毒存活并发展下去。同一时期，病毒的变异株可能有很多种，但\"______\"，只有那些能更有效______免疫系统侦测且传播能力强的毒株才能最终成为优势株。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "特质 优胜劣汰 突破",
+        "B": "机能 胜者为王 迷惑",
+        "C": "性状 适者生存 躲避",
+        "D": "表征 此消彼长 逃脱"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 8
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 33,
+      "section": "言语理解与表达",
+      "stem": "我国各地情况千差万别，要______推进城市空间布局形态多元化。东部等人口密集地区，要______城市群内部空间结构，合理控制大城市规模，不能盲目\"摊大饼\"。要推动城市组团式发展，形成多中心、多层级、多节点的网络型城市群结构。城市之间既要加强互联互通，也要有必要的生态和安全______。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "因地制宜 优化 屏障",
+        "B": "持之以恒 修正 措施",
+        "C": "不遗余力 重组 壁垒",
+        "D": "循序渐进 改善 系统"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 9
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 34,
+      "section": "言语理解与表达",
+      "stem": "长期以来，由于政府同社会智库之间的智库成果报送渠道不畅，从而导致智库成果\"体内循环多、成果转化少\"等问题。为此，要给社会智库与官方智库______的待遇，建立畅通的智库成果快速报送渠道，______、广谋良策，充分发挥各级各类智库的\"______\"作用。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "公平 从善如流 军师",
+        "B": "一致 群策群力 向导",
+        "C": "相同 集思广益 顾问",
+        "D": "平等 广开言路 参谋"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 9
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 35,
+      "section": "言语理解与表达",
+      "stem": "发达国家一两百年出现的环境问题，在我国30多年来的快速发展中集中显现，呈现明显的结构型、压缩型、复合型特点，老的环境问题尚未解决，新的环境问题______。走老路，去无节制消耗资源，去不计代价污染环境，______！要正确处理经济发展同生态环境保护之间的关系，更加______地推动绿色发展、循环发展、低碳发展，决不以牺牲环境、浪费资源为代价换取一时的经济增长。\n填入横线部分最恰当的一组是：",
+      "items": null,
+      "options": {
+        "A": "层出不穷 如履薄冰 迅速",
+        "B": "数不胜数 肆无忌惮 努力",
+        "C": "接踵而至 难以为继 自觉",
+        "D": "突如其来 积重难返 积极"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 9
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 36,
+      "section": "言语理解与表达",
+      "stem": "______？这是党史观的重大问题。一个马克思主义政党对自己的错误所抱的态度，是衡量这个党是否真正履行对人民群众所负责任的一个最重要最可靠的尺度。我们党对自己包括领袖人物的失误和错误历来采取郑重的态度，一是敢于承认，二是正确分析，三是坚决纠正，从而使失误和错误连同党的成功经验一起成为宝贵的历史教材。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "如何对待逆耳忠言",
+        "B": "如何看待曲折、失误",
+        "C": "是否始终坚持实事求是",
+        "D": "犯了错误后能否正确应对"
+      },
+      "options_in_media": false,
+      "type": "语句填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 9
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 37,
+      "section": "言语理解与表达",
+      "stem": "在传统基层治理中，缺乏社会组织、市场等各主体的共同参与、质询和监督，必然导致政府公共服务能力下降、权力垄断和滥用等问题，容易弱化公众信任程度，引发社会信任危机。区块链技术基于去中介信任机制、共识机制、协调共享机制，适用于多环节、多方协同参与且互不信任的场景。而信任是多元主体进行基层协同治理和互信规则建构的合作基础，区块链的算法信任机制与基层社会治理\"公共性+信任\"的价值追求相契合。借助区块链技术可以促进治理生态中双边信任向多边信任及社会公信的转变，突破传统国家治理体系所形成的认知固化和思维僵化。\n这段文字意在强调：",
+      "items": null,
+      "options": {
+        "A": "健全信任机制是基层协同治理的条件",
+        "B": "区块链技术有助于推进基层治理改革",
+        "C": "区块链技术的应用能够提升政府公信力",
+        "D": "治理生态离不开多元社会主体间的协作"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 10
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 38,
+      "section": "言语理解与表达",
+      "stem": "______，最能代表一个时代的风貌，最能引领一个时代的风气。\"文变染乎世情，兴废系乎时序。\"在欧洲文艺复兴运动中，但丁、彼特拉克、薄伽丘、达·芬奇、拉斐尔、米开朗琪罗、蒙田、塞万提斯、莎士比亚等文艺巨人，发出了新时代的啼声，开启了人们的心灵。在谈到文艺复兴运动时，恩格斯说，这\"是一个需要巨人而且产生了巨人——在思维能力、热情和性格方面，在多才多艺和学识渊博方面的巨人的时代\"。在我国发展史上，包括文艺在内的文化发展同样与中华民族发展紧紧联系在一起。先秦时期，我国出现了百家争鸣的兴盛局面，开创了我国古代文化的一个鼎盛期。20世纪初，在五四新文化运动中，发端于文艺领域的创新风潮对社会变革产生了重大影响，成为全民族思想解放运动的重要引擎。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "文艺是铸造灵魂的工程",
+        "B": "文艺是时代前进的号角",
+        "C": "文化是民族生存和发展的重要力量",
+        "D": "文艺创新是与时代脉搏同频共振的"
+      },
+      "options_in_media": false,
+      "type": "语句填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 10
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 39,
+      "section": "言语理解与表达",
+      "stem": "约25亿年前的\"大氧化事件\"是指大气中的游离氧含量突然增加。这一事件的具体原因迄今尚不得而知，但有若干种假说能加以解释，其中主流说法认为，当时破坏氧气的甲烷细菌所依赖的镍元素急剧减少，而海藻类植物通过光合作用使得地球上的氧气迅速增加，大气中的含氧量不断提升。正是这一事件使地球上矿物的成分发生了变化，也使动物在地球上有了生存可能。而在\"大氧化事件\"之前，地球表面虽然已出现了海洋和陆地，但是空气中依旧氧气稀薄，因此当时的地球是光秃秃的，毫无绿意。\n关于\"大氧化事件\"，文中没有提及：",
+      "items": null,
+      "options": {
+        "A": "对发生原因的主流解释",
+        "B": "对地球生态系统的影响",
+        "C": "事件发生前的地球面貌",
+        "D": "能提供佐证的岩石样本"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 11
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 40,
+      "section": "言语理解与表达",
+      "stem": "①即使是有文字记载以后的文明史，也需要通过考古工作来参考、印证、丰富、完善\n②百万年的人类起源史和上万年的人类史前文明史，主要依靠考古成果来建构\n③保护好、传承好历史文化遗产是对历史负责、对人民负责\n④考古学是一门十分重要的学科\n⑤历史文化遗产不仅生动述说着过去，也深刻影响着当下和未来；不仅属于我们，也属于子孙后代\n⑥我们要加强考古工作和历史研究，让收藏在博物馆里的文物、陈列在广阔大地上的遗产、书写在古籍里的文字都活起来，丰富全社会历史文化滋养\n将以上6个句子重新排列，语序正确的一项是：",
+      "items": null,
+      "options": {
+        "A": "③⑤④②①⑥",
+        "B": "②⑤⑥④①③",
+        "C": "⑥①②④⑤③",
+        "D": "④②①⑤③⑥"
+      },
+      "options_in_media": false,
+      "type": "语句排序",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 11
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 41,
+      "section": "言语理解与表达",
+      "stem": "①海绵是一种最原始的多细胞动物，化石记录最早可追溯到寒武纪时期，至今已发展到一万多种\n②阿糖腺苷成为首个从海洋天然产物衍生并成功上市的抗病毒药物\n③目前，从海绵提取物中分离得到的天然产物往往具有独特的结构骨架或显著的生理功能，可用于开发药物和作为有机合成或半合成化学中间体，具有作为药物先导物的巨大潜力\n④日本化学家从日本黑海绵中提取了软海绵素，将其衍生成抗肿瘤药物，用于治疗转移性乳腺癌等癌症\n⑤作为一种营固着生长的生物体，海绵极易被其他生物猎食，却能在残酷的海洋环境中生存，可能依赖于独特的化学防御策略\n⑥美国化学家从海绵中分离得到抗病毒药阿糖腺苷和抗癌药物阿糖胞苷的先导化合物\n将以上6个句子重新排列，语序正确的一项是：",
+      "items": null,
+      "options": {
+        "A": "①⑤③⑥②④",
+        "B": "①③④②⑥⑤",
+        "C": "⑤①④⑥②③",
+        "D": "⑤③①④②⑥"
+      },
+      "options_in_media": false,
+      "type": "语句排序",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 12
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 42,
+      "section": "言语理解与表达",
+      "stem": "改革开放以来，我国人才流动都是由中小城市向中心城市不断聚集，城市的\"聚集效应\"要大于\"扩散效应\"，包括人才在内的各种资源源源不断地向城市特别是大城市涌入。不过，如今人才向一线城市聚集的趋势正在悄然改变，人才逐渐\"下沉\"的迹象日益明显。如果说过去人才向一线城市聚集是为追求更高收入、更好发展前景，那么现在二、三线城市在这些方面与一线城市的差距正在逐渐缩小，相应的人才流动多元化也开始出现。\n这段文字接下来最可能讲的是：",
+      "items": null,
+      "options": {
+        "A": "人才\"下沉\"出现的具体原因",
+        "B": "城市\"扩散效应\"引发的连锁反应",
+        "C": "一线城市避免人才流出的举措",
+        "D": "城市\"聚集效应\"出现的背景条件"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 12
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 43,
+      "section": "言语理解与表达",
+      "stem": "福厦高铁是我国第一条真正意义上的海洋环境下运行的高速铁路。湄洲湾跨海大桥是其中最长的海域施工区段，也是全线的重点控制性工程，其主桥设计为预应力混凝土连续刚构矮塔斜拉桥。索鞍是斜拉桥施工中的关键环节，施工精度高，控制难度大。湄洲湾跨海大桥位于曲线段上，海域风大浪急，斜拉桥主塔索鞍定位困难。为达到主跨通航要求，主墩承台均需埋入河床面以下，这给围堰施工作业增加了难度。施工人员克服海上恶劣天气的影响，采取预埋劲性骨架、增加控制点位等手段实现了索鞍精确定位，有效地解决了索鞍定位控制难题。\n这段文字主要介绍了湄洲湾跨海大桥：",
+      "items": null,
+      "options": {
+        "A": "对福厦高铁贯通的重要意义",
+        "B": "围堰施工中面临的复杂环境",
+        "C": "索鞍定位的难点及解决措施",
+        "D": "使用矮塔斜拉索结构的原因"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 12
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 44,
+      "section": "言语理解与表达",
+      "stem": "隔扇是我国古代的一种门，用于分隔室内外或室内空间。隔扇门既可联通内外，又能分隔空间，还可透光、通风，因而兼具门、窗、墙的功能。据记载，隔扇门在唐代已经出现，宋代以后大量采用，多置于朝向内院的房屋，用于分隔内部空间。隔扇主要由抹头（横向的木条）、上部的隔芯和下部的裙板组成，其中隔芯在隔扇中占用的比例最大。隔芯部分的纹饰稀疏有致，为糊纸或裱绢提供支点，同时起到通风、采光的作用。由于隔芯会采取不同形式的纹饰，因而这部分是最能体现隔扇艺术特色的部分，是装饰的重点所在。\n关于隔扇，这段文字未提及：",
+      "items": null,
+      "options": {
+        "A": "制作流程",
+        "B": "出现时间",
+        "C": "基本功能",
+        "D": "主要材质"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 13
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 45,
+      "section": "言语理解与表达",
+      "stem": "______。党的历次集中教育活动，都以思想教育打头，着力解决学习不深入、思想不统一、行动跟不上的问题，既绵绵用力又集中发力，推动全党思想上统一、政治上团结、行动上一致。要把学习贯彻党的创新理论作为思想武装的重中之重，同学习马克思主义基本原理贯通起来，同学习党史、新中国史、改革开放史、社会主义发展史结合起来，同新时代我们进行伟大斗争、建设伟大工程、推进伟大事业、实现伟大梦想的丰富实践联系起来，在学懂弄通做实上下苦功夫，在解放思想中统一思想，在深化认识中提高认识，切实增强贯彻落实的思想自觉和行动自觉。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "实践证明，只有马克思主义才能发展中国",
+        "B": "坚持思想建党，是我们党的一大政治优势",
+        "C": "理论创新每前进一步，理论武装就要跟进一步",
+        "D": "一个民族要走在时代前列，一刻不能没有思想指引"
+      },
+      "options_in_media": false,
+      "type": "语句填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 13
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 46,
+      "section": "言语理解与表达",
+      "stem": "改革开放40多年来，尽管我国农业劳动力的绝对数量不断下降，占全部劳动力的比例不断降低，但农产品产量持续增加，农业产业结构不断优化升级，土地适度规模经营不断推进，土地制度变革和创新的绩效十分明显。在我国，实现土地适度规模经营主要有两种方式：一种是土地经营权流转形成的土地适度规模经营，由农户拥有的承包权派生出租、转包、互换、入股等多种方式，让第三方分享其经营权；另一种是土地经营权不流转，农户将重要的田间作业环节托转给新的服务主体，即实践中的土地经营全托、半托形式，形成服务的适度规模经营。这两种方式都形成了新条件下土地农户承包经营权的共享，在人多地少的情况下，为小农与现代农业有机衔接找到了切实可行的路径。\n这段文字意在说明：",
+      "items": null,
+      "options": {
+        "A": "土地经营权的制度创新促进了农业发展",
+        "B": "土地经营权的流转要把握好尺度和范围",
+        "C": "经营权共享是土地适度规模经营的核心特征",
+        "D": "农业专业化发展离不开土地权属的制度创新"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 14
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 47,
+      "section": "言语理解与表达",
+      "stem": "当技术的进步逐渐拨开传统\"战争迷雾\"之时，网络和电磁等虚拟空间因素也给侦察情报带来了相应的挑战。一方面，网络空间的开放互联、庞大的用户群体、被动的防御特性、未知的安全漏洞，使得网络攻击的隐蔽性不断增强、难以防范。同时，情报的处理、分发离不开安全稳定的网络支撑。另一方面，战场上的无人化侦察装备种类繁多，特别是重点区域和要害目标附近，用频装备数量庞大，导致局部电磁拥挤，容易出现频率自扰现象。而且交战双方极易互相实施电磁干扰和压制，使得无人化侦察装备的稳定运行遭受严峻考验。\n这段文字主要介绍了：",
+      "items": null,
+      "options": {
+        "A": "新形势下驱散传统\"战争迷雾\"的关键",
+        "B": "无人化侦察装备升级引发的连锁反应",
+        "C": "虚拟空间因素对侦察情报工作的影响",
+        "D": "侦察情报技术信息化进程中遭遇的困境"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 14
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 48,
+      "section": "言语理解与表达",
+      "stem": "行政处罚不是为罚而罚，行政处罚法是为了规范行政处罚的设定和实施。依据处罚与教育相结合、过罚相当等基本原则，对于故意扰乱交通秩序、严重违法的行为，确实应该给予严厉处罚。但对于轻微、对社会没什么危害性的违法行为，若事事都处罚，会加大交通运输从业人员负担，反而不符合规范市场秩序、更好地促进社会稳定等执法理念的要求。同时，也会降低违法行为人受到行政处罚后的耻辱感，达不到处罚与教育相结合的目的。\n这段文字讨论的问题是：",
+      "items": null,
+      "options": {
+        "A": "如何让违法行为人感受到执法的温度",
+        "B": "如何科学认定轻微违法行为",
+        "C": "是否应对所有违法行为进行处罚",
+        "D": "处罚标准是否应作出调整"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 14
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 49,
+      "section": "言语理解与表达",
+      "stem": "目前，我国自主选育品种播种面积占95%以上，良种对粮食增产贡献率已超过45%，为粮食连年丰收和重要农产品稳产保供提供了关键支撑。然而，我国种业自主创新水平与发达国家还有差距，一些品种、领域和环节会影响农业发展速度、质量和效益。这就要求我们加强农业种质资源保护利用，加快推进关键核心技术攻关，缩小玉米、大豆等品种和国际先进水平的差距，确保重要农产品种源自主可控。同时，打通种子生产、加工、销售、技术服务等环节，逐步完善产学研用深度融合的创新链条，加快提升种业产业化水平，让一粒粒好种子长成农民的致富希望。\n最适合做这段文字标题的是：",
+      "items": null,
+      "options": {
+        "A": "打造种子这枚农业\"芯片\"",
+        "B": "要让创新为中国农业赋能",
+        "C": "种出农民致富的新希望",
+        "D": "种业产业化发展的启示"
+      },
+      "options_in_media": false,
+      "type": "标题选择",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 15
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 50,
+      "section": "言语理解与表达",
+      "stem": "对于山区河流开发保护研究来说，传统采沙方法依靠人力取水，采样时间间隔长，获取数据效率低。坐底仿生水沙观测系统的投放，标志着我国山区河流水沙监测进入了高时间分辨率全过程监测的新阶段。所谓仿生，就是指系统形状像一条鱼，能匍匐在水流很急的水底，这种系统和技术可以搭载水温、浊度及压力传感器等多种观测设备，以此实现对河流水文特征及动力条件的分钟级连续观测。目前，该技术已经应用于对青藏高原河流沉积物来源、组成及从搬运动力过程开展超高时间分辨率定量化研究中。\n根据这段文字，坐底仿生水沙观测系统：",
+      "items": null,
+      "options": {
+        "A": "是我国第一套监测山区河流水沙的系统",
+        "B": "探测结果可以为灾害预警提供数据支撑",
+        "C": "可以自行漂浮在水中对全流域进行监测",
+        "D": "实现了对河流水沙沉积过程的连续监测"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 15
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 51,
+      "section": "言语理解与表达",
+      "stem": "下面这段文字最适合放在文章的哪个位置？\n在这种食腐生活模式下，人类进化成了一种需要花大量精力进行\"战略思考\"的生物。比如，原始人类可能具有一定的计划能力和交流能力，以便在不同个体之间交换动物尸体位置的信息。这些也许对人类大脑的进化起到了推动作用。",
+      "items": null,
+      "options": {
+        "A": "①和②之间",
+        "B": "②和③之间",
+        "C": "③和④之间",
+        "D": "④和⑤之间"
+      },
+      "options_in_media": false,
+      "type": "文章阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m51_55"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 16
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 52,
+      "section": "言语理解与表达",
+      "stem": "作者举北京猿人的例子，意在说明：",
+      "items": null,
+      "options": {
+        "A": "远古人类的骨骼尚未进化完善",
+        "B": "远古时期存在\"人吃人\"的现象",
+        "C": "远古时期猛兽对人类形成严重威胁",
+        "D": "远古人类可能是食肉动物的猎物"
+      },
+      "options_in_media": false,
+      "type": "文章阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m51_55"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 16
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 53,
+      "section": "言语理解与表达",
+      "stem": "关于支持\"人类长跑者假说\"的人体特征和能力，文中未涉及：\n①骨骼结构  ②发音器官  ③图像分辨能力  ④听觉神经  ⑤体温调控功能  ⑥直立形态",
+      "items": [
+        "骨骼结构",
+        "发音器官",
+        "图像分辨能力",
+        "听觉神经",
+        "体温调控功能",
+        "直立形态"
+      ],
+      "options": {
+        "A": "①⑤⑥",
+        "B": "②③④",
+        "C": "③④⑤",
+        "D": "④⑤⑥"
+      },
+      "options_in_media": false,
+      "type": "文章阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m51_55"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 17
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 54,
+      "section": "言语理解与表达",
+      "stem": "下列哪一说法能在这篇文章中得到印证？",
+      "items": null,
+      "options": {
+        "A": "研究者在远古人类获得生存优势的原因方面已达成共识",
+        "B": "人类语言的复杂性得益于原始人类作为猎人的分工协作",
+        "C": "具有复杂功能的大脑极大地帮助人类获得了生存优势",
+        "D": "长期居于稳定的生态位是从猿人进化到智人的关键"
+      },
+      "options_in_media": false,
+      "type": "文章阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m51_55"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 17
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 55,
+      "section": "言语理解与表达",
+      "stem": "最适合做这篇文章标题的是：",
+      "items": null,
+      "options": {
+        "A": "人类的祖先是猎人还是猎物",
+        "B": "你从哪里来？化石知道答案",
+        "C": "人类的攻击性来自远古狩猎生活",
+        "D": "智慧大脑帮助人类走出非洲草原"
+      },
+      "options_in_media": false,
+      "type": "文章阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m51_55"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 17
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 56,
+      "section": "言语理解与表达",
+      "stem": "下面这段文字最适合放在文章的哪个位置？\n有人不禁要问，既然老鼠感染弓形虫后连猫都不怕，那么它对其他捕食者或威胁的恐惧感有没有变化呢？",
+      "items": null,
+      "options": {
+        "A": "②和③之间",
+        "B": "③和④之间",
+        "C": "⑤和⑥之间",
+        "D": "⑦和⑧之间"
+      },
+      "options_in_media": false,
+      "type": "文章阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m56_60"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 18
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 57,
+      "section": "言语理解与表达",
+      "stem": "关于弓形虫感染，下列说法与原文相符的是：",
+      "items": null,
+      "options": {
+        "A": "主动诱发弓形虫慢性感染有可能治疗人类的焦虑症",
+        "B": "免疫力低下的小鼠感染弓形虫时不会出现行为改变",
+        "C": "受弓形虫感染的小鼠会完全丧失对危险因素的恐惧感",
+        "D": "小鼠受弓形虫慢性感染引发的恐惧感减弱是不可逆的"
+      },
+      "options_in_media": false,
+      "type": "文章阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m56_60"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 19
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 58,
+      "section": "言语理解与表达",
+      "stem": "根据这篇文章，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "尼科尔发现弓形虫对老鼠的感染比较温和",
+        "B": "老鼠只有被弓形虫感染了才不会怕猫",
+        "C": "刚地弓形虫可以在老鼠体内进行有性生殖",
+        "D": "动物行为的改变可能是脑组织持续性炎症的后果"
+      },
+      "options_in_media": false,
+      "type": "文章阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m56_60"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 19
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 59,
+      "section": "言语理解与表达",
+      "stem": "实验人员在复现文中所讲的实验时，不小心打翻鼠笼，导致两组小鼠混淆。以下最有可能已经受到弓形虫感染的是：",
+      "items": null,
+      "options": {
+        "A": "一只凑到研究人员面前嗅来嗅去的小鼠",
+        "B": "一只在墙边不停嗅着自己尿液气味的小鼠",
+        "C": "一只不停撕咬其他几只同伴的小鼠",
+        "D": "一只移动速度明显快于其他同伴的小鼠"
+      },
+      "options_in_media": false,
+      "type": "文章阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m56_60"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 19
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "number": 60,
+      "section": "言语理解与表达",
+      "stem": "最适合做这篇文章标题的是：",
+      "items": null,
+      "options": {
+        "A": "是什么让老鼠不怕猫",
+        "B": "刚地弓形虫的生存秘籍",
+        "C": "焦虑症研究的新突破",
+        "D": "动物行为学家看\"勇敢\""
+      },
+      "options_in_media": false,
+      "type": "文章阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m56_60"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20220124.pdf",
+          "page": 19
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    }
+  ]
+}

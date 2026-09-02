@@ -1,0 +1,349 @@
+{
+  "module": "常识判断",
+  "role": "shidi_diff",
+  "year": 2022,
+  "source_note": "市地级差异册 20222548.pdf 第41-43页（圈号①-⑨）。市地常识20题 = 省级共享11题(6~7,9,11~13,15,17~20) + 本文件9题独有。",
+  "shared_from_shidi": null,
+  "questions": [
+    {
+      "diff_label": "①",
+      "module": "常识判断",
+      "stem": "习近平总书记在庆祝中国共产党成立100周年大会上的讲话指出，坚持党指挥枪、建设自己的人民军队，是党在血与火的斗争中得出的颠扑不破的真理。下列关于党对军队绝对领导的根本原则和制度的表述正确的有几项？\n①南昌起义，标志着党独立领导革命战争、创建人民军队和武装夺取政权的开端\n②三湾改编，从组织上确立了党对军队的领导\n③古田会议，确立了马克思主义建党建军原则，确立了军队政治工作的方针、原则、制度\n④党的十八大，把坚持党对人民军队绝对领导上升为新时代坚持和发展中国特色社会主义的基本方略\n⑤党的十九大，把\"中央军事委员会实行主席负责制\"写入党章",
+      "items": [
+        "南昌起义，标志着党独立领导革命战争、创建人民军队和武装夺取政权的开端",
+        "三湾改编，从组织上确立了党对军队的领导",
+        "古田会议，确立了马克思主义建党建军原则，确立了军队政治工作的方针、原则、制度",
+        "党的十八大，把坚持党对人民军队绝对领导上升为新时代坚持和发展中国特色社会主义的基本方略",
+        "党的十九大，把\"中央军事委员会实行主席负责制\"写入党章"
+      ],
+      "options": {
+        "A": "2项",
+        "B": "3项",
+        "C": "4项",
+        "D": "5项"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "①",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 41
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "②",
+      "module": "常识判断",
+      "stem": "习近平总书记指出，要根据我国经济发展实际情况，建立起扩大内需的有效制度，释放内需潜力，加快培育完整内需体系，加强需求侧管理，扩大居民消费，提升消费层次，使建设超大规模的国内市场成为一个可持续的历史过程。下列举措不属于需求侧改革的是：",
+      "items": null,
+      "options": {
+        "A": "剥离企业办社会职能",
+        "B": "完善收入分配制度",
+        "C": "严格落实\"房住不炒\"",
+        "D": "构建\"智能+\"消费生态体系"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "②",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 41
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "③",
+      "module": "常识判断",
+      "stem": "2020年11月，习近平总书记在中央全面依法治国工作会议上发表重要讲话，要求坚定不移走中国特色社会主义法治道路，在法治轨道上推进国家治理体系和治理能力现代化，为全面建设社会主义现代化国家、实现中华民族伟大复兴的中国梦提供有力法治保障。以下对全面依法治国理解正确的是：\n①党的领导是推进全面依法治国的根本保证\n②依法保障人民权益是推进全面依法治国的根本目的\n③法治社会建设是推进全面依法治国的重点任务和主体工程\n④领导干部具体行使党的执政权和国家立法权、行政权、监察权、司法权，是全面依法治国的关键",
+      "items": [
+        "党的领导是推进全面依法治国的根本保证",
+        "依法保障人民权益是推进全面依法治国的根本目的",
+        "法治社会建设是推进全面依法治国的重点任务和主体工程",
+        "领导干部具体行使党的执政权和国家立法权、行政权、监察权、司法权，是全面依法治国的关键"
+      ],
+      "options": {
+        "A": "①②④",
+        "B": "①②③",
+        "C": "①③④",
+        "D": "②③④"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "③",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 42
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "④",
+      "module": "常识判断",
+      "stem": "关于中国共产党成立百年的宝贵经验，下列说法不准确的是：",
+      "items": null,
+      "options": {
+        "A": "勇于自我革命是中国共产党区别于其他政党的显著标志",
+        "B": "马克思主义是我们立党立国的根本指导思想",
+        "C": "爱国统一战线是实现中华民族伟大复兴的战略支撑",
+        "D": "中国特色社会主义是实现中华民族伟大复兴的正确道路"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "④",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 42
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑤",
+      "module": "常识判断",
+      "stem": "下列中国共产党全国代表大会的重大成果成就，按时间先后排序正确的是：\n①提出我国社会主要矛盾已经转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾\n②为夺取全面建设小康社会新胜利做出了战略部署\n③系统、完整地提出了党在社会主义初级阶段的基本纲领\n④明确了夺取中国特色社会主义新胜利必须牢牢把握的基本要求",
+      "items": [
+        "提出我国社会主要矛盾已经转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾",
+        "为夺取全面建设小康社会新胜利做出了战略部署",
+        "系统、完整地提出了党在社会主义初级阶段的基本纲领",
+        "明确了夺取中国特色社会主义新胜利必须牢牢把握的基本要求"
+      ],
+      "options": {
+        "A": "③①④②",
+        "B": "②④③①",
+        "C": "③②④①",
+        "D": "②①③④"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑤",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 42
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑥",
+      "module": "常识判断",
+      "stem": "《中华人民共和国数据安全法》自2021年9月1日起施行。依据该法，下列说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "国家工业和信息化主管部门负责国家数据安全工作的决策和议事协调",
+        "B": "省级以上人民政府应当将数字经济发展纳入本级国民经济和社会发展规划",
+        "C": "国家建立数据分类分级保护制度，对数据实行分类分级保护",
+        "D": "从事数据交易中介服务的机构提供服务，应当要求数据提供方说明数据来源"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑥",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 42
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑦",
+      "module": "常识判断",
+      "stem": "新修订的《中华人民共和国行政处罚法》自2021年7月15日起施行。依据该法，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "行政机关拟做出降低资质等级的处罚之前，应当组织听证",
+        "B": "法律、行政法规对违法行为未做出行政处罚规定的，地方性法规可补充设定",
+        "C": "行政机关可以在其法定权限内书面委托其他组织或个人实施行政处罚",
+        "D": "对当事人依法给予一百元以上罚款的，执法人员不得当场收缴"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑦",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 43
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑧",
+      "module": "常识判断",
+      "stem": "财政是国家治理的基础和重要支柱，科学的财税体制是优化资源配置、维护市场统一、促进社会公平、实现国家长治久安的制度保障。下列关于我国财税制度变迁的表述错误的是：",
+      "items": null,
+      "options": {
+        "A": "国税地税机构合并后，实行以国家税务总局直接领导的管理体制",
+        "B": "《中华苏维埃共和国宪法大纲》宣布取消一切反革命统治时代的苛捐杂税",
+        "C": "《中国人民政治协商会议共同纲领》明确规定\"简化税制\"",
+        "D": "营业税改征增值税可减少重复征税，有利于降低企业税负"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑧",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 43
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑨",
+      "module": "常识判断",
+      "stem": "我国一直致力于改善生态环境，在长期不懈的治理之下，陕西榆林以北的毛乌素沙漠正在消失。关于毛乌素沙漠，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "治理之前毛乌素沙漠是我国最大的沙漠",
+        "B": "毛乌素沙漠地区属于温带大陆性气候",
+        "C": "治理毛乌素沙漠适合种植耐酸性植物",
+        "D": "毛乌素沙漠在\"三北\"防护林体系范围之外"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑨",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 43
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "exam_year": 2022,
-  "exam_name": "2022年度国家公务员考试",
+  "exam_year": 2020,
+  "exam_name": "2020年度国家公务员考试",
   "subject": "行政职业能力测验",
   "subject_code": "xingce",
   "papers": {
@@ -97,60 +97,12 @@
           "question_count": 20
         }
       ]
-    },
-    "xingzhengzhifa": {
-      "paper_type": "行政执法类",
-      "total_questions": 130,
-      "file": "papers/xingzhengzhifa.json",
-      "modules": [
-        {
-          "name": "常识判断",
-          "number_range": [
-            1,
-            20
-          ],
-          "question_count": 20
-        },
-        {
-          "name": "言语理解与表达",
-          "number_range": [
-            21,
-            60
-          ],
-          "question_count": 40
-        },
-        {
-          "name": "数量关系",
-          "number_range": [
-            61,
-            70
-          ],
-          "question_count": 10
-        },
-        {
-          "name": "判断推理",
-          "number_range": [
-            71,
-            110
-          ],
-          "question_count": 40
-        },
-        {
-          "name": "资料分析",
-          "number_range": [
-            111,
-            130
-          ],
-          "question_count": 20
-        }
-      ]
     }
   },
   "source_files": [
-    "20220124.pdf",
-    "20222548.pdf",
-    "20224970.pdf",
-    "20226369.pdf"
+    "20200124.pdf",
+    "20202548.pdf",
+    "20204954.pdf"
   ],
   "media": {
     "pages_dir": "media/pages",
@@ -159,6 +111,5 @@
     "index": "media/media_index.json"
   },
   "status": "papers_assembled",
-  "updated": "2026-09-02",
-  "notes": "主卷源图为省级卷(135题)；市地卷=省级共享63题+市地差异67题；执法卷=省级共享43题+市地共享47题+执法独有35题+数量无独有。常识第4题扫描件缺失(占位)。图形推理/图表题options在图中(media_missing)。答案/解析未填。"
+  "updated": "2026-09-02"
 }

@@ -1,0 +1,13 @@
+{
+  "module": "判断推理",
+  "role": "province_diff",
+  "year": 2020,
+  "source_note": "省级差异册 20204954.pdf 第49-50页（圈号㉞-㊲）。省级判断图形推理独有4题。注：市地级试卷中的第71、74、76~77题未在省级试卷中出现。",
+  "shared_from_shidi_note": "市地判断71-110中，71、74、76、77、106、107、108、109、110未在省级出现（共9题），其余31题共享。本文件含图形独有4题，逻辑独有4题见shengji_diff_panduan_b.json。",
+  "questions": [
+    {"diff_label": "㉞", "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。", "items": null, "options": null, "options_in_media": true, "type": "图形推理", "topic": null, "tag": null, "answer": null, "answer_source": null, "explanation": null, "media": [], "formulas": [], "material_ids": [], "provenance": {"role": "province_only", "from_paper": "shengji", "from_number": null, "diff_label": "㉞", "raw_note": "省级独有", "source_ref": {"file": "20204954.pdf", "page": 49}}, "flags": ["answer_missing", "media_missing"]},
+    {"diff_label": "㉟", "stem": "下图为给定的多面体及其外表面展开图，问字母A、B、C、D和数字1、2、3、4代表的棱的对应关系为：", "items": null, "options": {"A": "1-D,2-A,3-C,4-B", "B": "1-C,2-A,3-D,4-B", "C": "1-D,2-B,3-C,4-A", "D": "1-C,2-B,3-D,4-A"}, "options_in_media": false, "type": "图形推理", "topic": null, "tag": null, "answer": null, "answer_source": null, "explanation": null, "media": [], "formulas": [], "material_ids": [], "provenance": {"role": "province_only", "from_paper": "shengji", "from_number": null, "diff_label": "㉟", "raw_note": "省级独有", "source_ref": {"file": "20204954.pdf", "page": 49}}, "flags": ["answer_missing", "media_missing"]},
+    {"diff_label": "㊱", "stem": "左图给定的是由相同正方体堆叠而成的多面体的正视图和后视图。该多面体可以由①、②和③三个多面体组合而成，则以下哪一项能填入问号处？", "items": null, "options": null, "options_in_media": true, "type": "图形推理", "topic": null, "tag": null, "answer": null, "answer_source": null, "explanation": null, "media": [], "formulas": [], "material_ids": [], "provenance": {"role": "province_only", "from_paper": "shengji", "from_number": null, "diff_label": "㊱", "raw_note": "省级独有", "source_ref": {"file": "20204954.pdf", "page": 50}}, "flags": ["answer_missing", "media_missing"]},
+    {"diff_label": "㊲", "stem": "左图为给定的立体图形，将其从任一面剖开，以下哪个不可能是该立体图形的截面？", "items": null, "options": null, "options_in_media": true, "type": "图形推理", "topic": null, "tag": null, "answer": null, "answer_source": null, "explanation": null, "media": [], "formulas": [], "material_ids": [], "provenance": {"role": "province_only", "from_paper": "shengji", "from_number": null, "diff_label": "㊲", "raw_note": "省级独有", "source_ref": {"file": "20204954.pdf", "page": 50}}, "flags": ["answer_missing", "media_missing"]}
+  ]
+}

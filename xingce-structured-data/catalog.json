@@ -103,26 +103,83 @@
     {
       "year": 2022,
       "subject": "xingce",
-      "status": "empty",
+      "status": "papers_assembled",
       "path": "2022/xingce",
-      "papers": [],
-      "notes": "仅初始化；源PDF已备4份(~/真题文档/2022)；meta 中 135/130/130 为未验证预设"
+      "papers": [
+        {
+          "id": "shengji",
+          "paper_type": "省级",
+          "file": "2022/xingce/papers/shengji.json",
+          "total_questions": 135
+        },
+        {
+          "id": "shidi",
+          "paper_type": "市地级",
+          "file": "2022/xingce/papers/shidi.json",
+          "total_questions": 130
+        },
+        {
+          "id": "xingzhengzhifa",
+          "paper_type": "行政执法类",
+          "file": "2022/xingce/papers/xingzhengzhifa.json",
+          "total_questions": 130
+        }
+      ],
+      "notes": "主卷为省级卷(135题，数量15/判断76起/资料116起)；市地=省级共享63+市地差异67；执法=省级共享43+市地共享47+执法独有35+数量无独有。常识第4题扫描件标注\"缺\"以占位题记录。校验0错误/34警告。答案待接入。",
+      "media": {
+        "pages": 0,
+        "figures": 0
+      }
     },
     {
       "year": 2021,
       "subject": "xingce",
-      "status": "not_initialized",
-      "path": null,
-      "papers": [],
-      "notes": "仓库内无年份目录；源PDF已备3份(~/真题文档/2021)"
+      "status": "papers_assembled",
+      "path": "2021/xingce",
+      "papers": [
+        {
+          "id": "shengji",
+          "paper_type": "省级",
+          "file": "2021/xingce/papers/shengji.json",
+          "total_questions": 135
+        },
+        {
+          "id": "shidi",
+          "paper_type": "市地级",
+          "file": "2021/xingce/papers/shidi.json",
+          "total_questions": 130
+        }
+      ],
+      "notes": "主卷为市地级底版(130题)；省级=市地共享86+省级独有49(判断/资料offset+5)。无行政执法卷。校验0错误/26警告。答案待接入。",
+      "media": {
+        "pages": 0,
+        "figures": 0
+      }
     },
     {
       "year": 2020,
       "subject": "xingce",
-      "status": "not_initialized",
-      "path": null,
-      "papers": [],
-      "notes": "仓库内无年份目录；源PDF已备3份(~/真题文档/2020)"
+      "status": "papers_assembled",
+      "path": "2020/xingce",
+      "papers": [
+        {
+          "id": "shengji",
+          "paper_type": "省级",
+          "file": "2020/xingce/papers/shengji.json",
+          "total_questions": 135
+        },
+        {
+          "id": "shidi",
+          "paper_type": "市地级",
+          "file": "2020/xingce/papers/shidi.json",
+          "total_questions": 130
+        }
+      ],
+      "notes": "主卷为市地级底版(130题)；省级=市地共享83+省级独有52(判断/资料offset+5)。差异题从20202548第39页起(非仅20204954)。无行政执法卷。校验0错误/19警告。答案待接入。",
+      "media": {
+        "pages": 0,
+        "figures": 0
+      }
     }
   ],
   "known_gaps": [

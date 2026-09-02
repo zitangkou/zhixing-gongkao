@@ -1,0 +1,350 @@
+{
+  "module": "数量关系",
+  "year": 2021,
+  "range": "61-70",
+  "source_pages": "20210124.pdf p20-p22",
+  "status": "done",
+  "note": "市地级底版数量关系10题。Q69含梯形几何图，选项为分数表达式，已标media_missing。",
+  "questions": [
+    {
+      "number": 61,
+      "section": "数量关系",
+      "stem": "某商场开展“助农销售”活动，凡购买某种农产品满300元者可获得一个礼盒，其中装有6种干货中的随机3种各1小袋，以及1袋小米或红豆。问：内容不完全相同的礼盒共有多少种可能？",
+      "items": null,
+      "options": {
+        "A": "50",
+        "B": "45",
+        "C": "40",
+        "D": "30"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 20
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 62,
+      "section": "数量关系",
+      "stem": "某地10户贫困农户共申请扶贫小额信贷25万元。已知每户申请金额都是1000元的整数倍，申请金额最高的农户申请金额不超过申请金额最低农户的2倍，且任意2户农户的申请金额都不相同。问：申请金额最低的农户最少可能申请多少万元信贷？",
+      "items": null,
+      "options": {
+        "A": "1.5",
+        "B": "1.6",
+        "C": "1.7",
+        "D": "1.8"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 20
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 63,
+      "section": "数量关系",
+      "stem": "社区工作人员小张连续4天为独居老人采买生活必需品，已知前三天共采买65次，其中第二天采买次数比第一天多50%，第三天采买次数比前两天采买次数的和少15次，第四天采买次数比第一天的2倍少5次。问：这4天中，小张为独居老人采买次数最多和最少的日子，单日采买次数相差多少次？",
+      "items": null,
+      "options": {
+        "A": "9",
+        "B": "10",
+        "C": "11",
+        "D": "12"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 20
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 64,
+      "section": "数量关系",
+      "stem": "甲、乙两个单位周末分别安排60%和75%的职工下沉社区帮助困难群众，其中甲单位派出的职工比乙单位少3人。后两单位又在剩下的职工中，分别抽调40%和75%的职工，共计24人参加周末的业务培训。则甲单位职工人数比乙单位：",
+      "items": null,
+      "options": {
+        "A": "少3人",
+        "B": "少11人",
+        "C": "多3人",
+        "D": "多11人"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 20
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 65,
+      "section": "数量关系",
+      "stem": "某企业选拔170多名优秀人才平均分为7组参加培训。在选拔出的人才中，党员人数比非党员多3倍。接受培训的党员中的10%在培训结束后被随机派往甲单位等12个基层单位进一步锻炼。已知每个基层单位至少分配1人，问：甲单位分配人数多于1的概率在以下哪个范围内？",
+      "items": null,
+      "options": {
+        "A": "不到14%",
+        "B": "14%~17%",
+        "C": "17%~20%",
+        "D": "超过20%"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 21
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 66,
+      "section": "数量关系",
+      "stem": "某地调派96人分赴车站、机场、超市和学校四个人流密集的区域进行卫生安全检查，其中公共卫生专业人员有62人。已知派往机场的人员是四个区域中最多的；派往车站和超市的人员中，专业人员分别占64%和65%；派往学校的人员中，非专业人员比专业人员少30%。则派往机场的人员中，专业人员的占比在四个区域中排名：",
+      "items": null,
+      "options": {
+        "A": "第1",
+        "B": "第2",
+        "C": "第3",
+        "D": "第4"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 21
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 67,
+      "section": "数量关系",
+      "stem": "某县通过网络直播帮助本地农民销售农副产品，总共直播6次，其中第2次直播销售额比第1次高40%，比第3次低12.5%。直播3次后电视台报道了这一新闻，此后销量大幅提升。后3次直播总销售额是前3次总销售额的3倍，其中第5次直播销售额相当于6次直播总销售额的25%，且比第4次直播高10%，比第6次直播少16万元。则第6次直播的销售额比第3次直播高：",
+      "items": null,
+      "options": {
+        "A": "不到100万元",
+        "B": "100万~120万元",
+        "C": "140万元以上",
+        "D": "120万~140万元"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 21
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 68,
+      "section": "数量关系",
+      "stem": "某村居民整体进行搬迁移民，现安排载客(不含司机)20人/辆的中巴车和30人/辆的大巴车运载所有村民到搬迁地实地考察。如安排12辆中巴车，则大巴车需要18辆，且除一辆大巴车载6人以外，其他车全部载满。现本着安排车辆数最少的原则派车，问：最少要安排多少辆大巴车？",
+      "items": null,
+      "options": {
+        "A": "20",
+        "B": "22",
+        "C": "24",
+        "D": "26"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 21
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 69,
+      "section": "数量关系",
+      "stem": "在一块如下图所示的梯形土地中种植某种单位面积产量为1.2千克/平方米的作物。已知该梯形的高为100米，△ABC、△BCD和△CDE均为正三角形，且∠BAF和∠DEG的角度都是90度，问：该土地的总产量为多少吨？",
+      "items": null,
+      "options": {
+        "A": "72/√3",
+        "B": "84/√3",
+        "C": "108/√6",
+        "D": "126/√6"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 21
+        }
+      },
+      "flags": ["answer_missing", "media_missing"]
+    },
+    {
+      "number": 70,
+      "section": "数量关系",
+      "stem": "某工厂在做好防疫工作的前提下全面复工复产，复工后第1天的产能即恢复到停工前日产能的60%。复工后每生产4天，日产能都会比前4天的水平提高1000件/日。已知复工80天后，总产量相当于停工前88天的总产量。问：复工后的总产量达到100万件是在复工后的第几天？",
+      "items": null,
+      "options": {
+        "A": "56",
+        "B": "54",
+        "C": "60",
+        "D": "58"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 22
+        }
+      },
+      "flags": ["answer_missing"]
+    }
+  ]
+}

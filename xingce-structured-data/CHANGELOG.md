@@ -1,5 +1,40 @@
 # 变更记录
 
+## 2026-09-02（七）
+
+### 2022 三卷组装完成（papers_assembled）
+
+- 新增 `scripts/xingce/assemble_2022.py`：**主卷为省级卷**（数量15/判断76起/资料116起），按"省级=主卷直接、市地=省级共享+市地差异、执法=省级共享+市地共享+执法独有"组装三卷。
+- 产出 `2022/xingce/papers/{shengji,shidi,xingzhengzhifa,all_merged}.json` 与 `_extract/diff_map.json`。
+- 题量：省级 135 / 市地 130 / 执法 130。市地=省级共享63+市地差异67；执法=省级共享43+市地共享47+执法独有35+数量无独有。
+- 执法差异题用普通数字编号（常识68-74/言语75-85/判断86-92/资料93-102），非圈号。`20226369.pdf` 两页为执法差异补页。
+- 校验 `validate_papers.py --year 2022`：**0 错误 / 34 警告**（图形题media类）。
+- 已知缺口：常识第4题扫描件标注"缺"以占位题记录；执法判断/言语市地共享圈号OCR残缺按题量推算（记入note待核）；图形/图表题media_missing（省级12/市地10/执法9）。
+- `meta.json` / `catalog.json` / `DATA_STATUS.md` 同步为 `papers_assembled`。
+
+## 2026-09-02（六）
+
+### 2021 两卷组装完成（papers_assembled）
+
+- 新增 `scripts/xingce/assemble_2021.py`：主卷为市地级底版（130题），省级=市地共享86+省级独有49（判断/资料offset+5）。无行政执法卷。
+- 产出 `2021/xingce/papers/{shengji,shidi,all_merged}.json` 与 `_extract/diff_map.json`。
+- 题量：省级 135 / 市地 130。省级共享分布：常识13/言语25/数量9/判断29/资料10。
+- 校验 `validate_papers.py --year 2021`：**0 错误 / 26 警告**（图形题media类）。
+- 已知缺口：media_missing（市地13/省级11）；答案与解析待接入。
+- `meta.json` / `catalog.json` / `DATA_STATUS.md` 同步为 `papers_assembled`。
+
+## 2026-09-02（五）
+
+### 2020 两卷组装完成（papers_assembled）
+
+- 新增 `scripts/xingce/assemble_2020.py`：主卷为市地级底版（130题），省级=市地共享83+省级独有52（判断/资料offset+5）。无行政执法卷。
+- 产出 `2020/xingce/papers/{shengji,shidi,all_merged}.json` 与 `_extract/diff_map.json`。
+- 题量：省级 135 / 市地 130。省级共享分布：常识10/言语22/数量10(全部)/判断31/资料10。
+- 差异题从 `20202548.pdf` 第39页开始（非仅 `20204954.pdf`）。
+- 校验 `validate_papers.py --year 2020`：**0 错误 / 19 警告**（图形题media类）。
+- 已知缺口：media_missing（省级16/市地13）；答案与解析待接入。
+- `meta.json` / `catalog.json` / `DATA_STATUS.md` 同步为 `papers_assembled`。
+
 ## 2026-09-02（四）
 
 ### 2025 三卷答案+解析全部入库（answers_ingested）

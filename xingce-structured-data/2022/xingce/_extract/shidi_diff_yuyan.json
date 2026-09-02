@@ -1,0 +1,908 @@
+{
+  "module": "言语理解与表达",
+  "role": "shidi_diff",
+  "year": 2022,
+  "source_note": "市地级差异册 20222548.pdf 第43-48页 + 20224970.pdf 第49-51页（圈号⑩-㉞）。市地言语40题 = 省级共享15题(21~22,24~25,31~35,37,41~42,46~47,50) + 本文件25题独有。",
+  "questions": [
+    {
+      "diff_label": "⑩",
+      "module": "言语理解与表达",
+      "stem": "文创产品能否经受检验、笑到最后，关键在于是否蕴含了深厚的文化价值与审美价值，在专注其实用价值的同时，更要看到它们所承载的文化意涵、所具有的文化表达功能。如果对传统文化______，盲目引入商业化流程，反而会贬损传统文化的价值。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "敬而远之",
+        "B": "不求甚解",
+        "C": "不以为然",
+        "D": "浅尝辄止"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑩",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 43
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑪",
+      "module": "言语理解与表达",
+      "stem": "近400年来，人类在探索宇宙方面取得了长足的进步。我们知道了地球上再壮观的烟火表演与超新星爆发相比，都______；一颗方糖大小的中子星就有数亿吨重；宇宙中充满着______的物质，包括难以捉摸的黑洞、暗物质、引力波等。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "相形见绌 林林总总",
+        "B": "不值一提 莫名其妙",
+        "C": "大相径庭 千奇百怪",
+        "D": "黯然失色 不可思议"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑪",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 44
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑫",
+      "module": "言语理解与表达",
+      "stem": "透光摄影、多光谱成像、三维病害模型……这些听起来更像是医疗或化工业的技术，如今在文物修复圈成为______的\"神器\"。正是这些现代科技手段对文物的\"问诊\"与\"体检\"，弥补了用肉眼无法看到、用手无法摸到\"病情\"的缺陷，从而使修复人员可以\"______\"。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "举足轻重 有的放矢",
+        "B": "必不可少 对症下药",
+        "C": "崭露头角 药到病除",
+        "D": "交口称赞 妙手回春"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑫",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 44
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑬",
+      "module": "言语理解与表达",
+      "stem": "太阳能、风能是产生电力的主要可再生新能源，但都具有随机性、______、波动性等特点。太阳能光板在晴天、白天时能发电，阴天、夜晚时就\"罢工\"了，风能发电也跟风力和天气息息相关。因此，目前迫切需要大规模储能装置，将富余的电能储存起来，在发电不足的时间用，以保证电力的______供给。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "地域性 持续",
+        "B": "阶段性 弹性",
+        "C": "间歇性 平稳",
+        "D": "周期性 高效"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑬",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 44
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑭",
+      "module": "言语理解与表达",
+      "stem": "商标是产品跨入市场的敲门砖，在行业竞争激烈的市场上，市场主体为了在竞争者中______，往往倾向于选择能够彰显个性、标新立异的标识作为商标。然而，如果一味追求个性、博公众眼球，效果可能______。一旦触碰公共秩序和良善风俗底线，就会遭遇商标注册申请被驳回的尴尬境遇。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "一马当先 大打折扣",
+        "B": "一鸣惊人 事与愿违",
+        "C": "拔得头筹 过犹不及",
+        "D": "独树一帜 适得其反"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑭",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 44
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑮",
+      "module": "言语理解与表达",
+      "stem": "基层是国家治理体系的末梢，但这末梢并非______的边角毫末，而是治理现代化总体方略的关键词，也是人民群众日常生活获得感的中转站。基层治理要满足群众的殷切期望，因此，需要______重心下移的治理体系，增添治理资源、激发治理活力，如此基层才能\"发声呐喊\"。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "无足轻重 构建",
+        "B": "可有可无 规范",
+        "C": "默默无闻 打造",
+        "D": "微乎其微 补充"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑮",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 45
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑯",
+      "module": "言语理解与表达",
+      "stem": "新闻工作一方面不能抱残守缺，不思改革，对于各种呼声______；另一方面又不能______，不加辨别地跟着各种思潮跑，没有一个界限。不然，就会乱套。对当前的各种社会思潮，我们要冷静地通过自己的头脑去思考，不能受随意性的支配。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "敷衍了事 随波逐流",
+        "B": "不以为意 拾人牙慧",
+        "C": "莫衷一是 避重就轻",
+        "D": "置若罔闻 人云亦云"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑯",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 45
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑰",
+      "module": "言语理解与表达",
+      "stem": "如今，网络文艺评论受到大众欢迎，但在花样繁多的内容背后经常______着商业目的，无论是无端批评，还是一味吹捧，都会对观众造成误导，给影视创作带来伤害，互联网的普及让我们既为网络文艺评论生态的蓬勃生长感到惊喜，也为其______的状况感到忧虑。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "夹杂 乌烟瘴气",
+        "B": "潜藏 泥沙俱下",
+        "C": "渗透 鱼龙混杂",
+        "D": "裹挟 杂乱无章"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑰",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 45
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑱",
+      "module": "言语理解与表达",
+      "stem": "研究基层政府治理体系，有利于从操作层面反观整个政府治理体系，用\"______\"方式自下而上逐级剖析政府治理体系建设的逻辑，并通过\"以小见大\"的方法______政府治理体系的全貌。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "抽丝剥茧 呈现",
+        "B": "管中窥豹 探求",
+        "C": "按图索骥 推知",
+        "D": "顺藤摸瓜 还原"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑱",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 45
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑲",
+      "module": "言语理解与表达",
+      "stem": "作为对农村生产、生活和生态日常的记录，\"三农\"视频给人的感觉往往淳朴可亲。这不仅体现在内容上的______，也表现在美学风格上的\"原生态\"——拍摄是生活实拍，影像生产方式______\"零添加\"。这种真实的生活场景、粗粝的视频画面让观众仿佛回到童年，从而______了一种独特的美学风格。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "喜闻乐见 类似 开创",
+        "B": "返璞归真 趋向 成就",
+        "C": "朴实无华 追求 蕴含",
+        "D": "民淳俗厚 达到 代表"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑲",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 46
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "⑳",
+      "module": "言语理解与表达",
+      "stem": "对武器装备来说，没有永远的\"明星\"，只有彼此的\"克星\"，站在对手的角度，选准新装备的\"克星\"，才能让我们进一步______，抢在对手之前探寻更先进武器装备的制胜机理，打造出______未来战场的坚甲利器。从这个意义上说，一个强劲的对手，既是改进武器的\"______\"，也是研发武器的\"催化剂\"。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "知己知彼 适应 磨刀石",
+        "B": "攻其不备 颠覆 指向标",
+        "C": "以逸待劳 引领 助推器",
+        "D": "战无不胜 胜任 源动力"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "⑳",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 46
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉑",
+      "module": "言语理解与表达",
+      "stem": "依托数字文化资源进行新文旅业态和产品的开发，是文物古迹焕发新活力、增强吸引力的重要手段。但科技应用应有边界，即______。一旦两者有冲突，理应遵循保护优先原则。打造沉浸式场景，要借助声电光影，将静态的、单一的遗产地场景，转化为多维、立体、丰富的体验场景，其目的无可非议。但沉浸式场景的构建多会涉及器材、设施、设备的导入和搭建，即使只存在小概率风险，也须慎重。鉴于此，文化遗产地的沉浸式游览，可考虑在遗产地保护范围之外，打造不依托文物本体的沉浸式体验项目。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "需坚持适度开发和可持续性发展策略",
+        "B": "要把握好真实性和娱乐性之间的尺度",
+        "C": "不能过度强调沉浸式体验而忽略文化内涵",
+        "D": "不能对资源本身及其价值造成破坏或产生不良影响"
+      },
+      "options_in_media": false,
+      "type": "语句填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉑",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 46
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉒",
+      "module": "言语理解与表达",
+      "stem": "长期以来，人民调解员队伍以兼职为主。兼职人民调解员的优势是容易发挥基层社会各行各业的力量，国家投入人力成本和财政成本比较低。但同时，由于兼职调解员在时间精力、专业素质等方面受限，制约了调解工作的有效开展。在现阶段，一方面，矛盾纠纷主体更加多元、类型更加多样，调解难度不断加大；另一方面，人民群众的权利意识、法治意识不断增强，对矛盾纠纷化解质效提出了更高要求。这些都需要人民调解员投入更多的时间和精力，具备较高的政策水平、法律素养和专业知识。\n这段文字接下来最可能说的是：",
+      "items": null,
+      "options": {
+        "A": "兼职人民调解员的局限性",
+        "B": "人民调解制度的发展过程",
+        "C": "人民调解员应当具备的专业素养",
+        "D": "建立人民调解员专职队伍的举措"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉒",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 46
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉓",
+      "module": "言语理解与表达",
+      "stem": "\"______。\"要加快完善中国特色社会主义法律体系，使之更加科学完备、统一权威。党的十八大以来，全国人大及其常委会通过宪法修正案，制定法律48件，修改法律203件次，作出法律解释9件，通过有关法律问题和重大问题的决定79件次。截至目前，现行有效法律282件，行政法规608件，地方性法规12000余件。民法典为其他领域立法法典化提供了很好的范例，要总结编纂民法典的经验，适时推动条件成熟的立法领域法典编纂工作。要研究丰富立法形式，可以搞一些\"大块头\"，也要搞一些\"小快灵\"，增强立法的针对性、适用性、可操作性。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "法者，天下之准绳也",
+        "B": "国皆有法，而无使法必行之法",
+        "C": "立善防恶谓之礼，禁非立是谓之法",
+        "D": "治国无其法则乱，守法而不变则衰"
+      },
+      "options_in_media": false,
+      "type": "语句填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉓",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 47
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉔",
+      "module": "言语理解与表达",
+      "stem": "①除萤科于白垩纪缅甸琥珀及一些新生代地层中有化石记录外，其他类群化石此前尚未被报道过\n②能够生物发光的叩甲总科物种大部分归属于萤类，包括萤科、光萤科、雄光萤科及华光叩甲科\n③日前，科研人员在缅甸琥珀中发现了叩甲总科的新科——白垩光萤科\n④在陆生动物中，能进行生物发光的物种大都属于鞘翅目昆虫，其中叩甲总科最多见\n⑤萤类分支中除华光叩甲科，其他物种身体均较为柔软，部分类群的雌性还具有幼态持续现象，也正因此其物种很难被保存为化石\n⑥这一新类群的发现，对于研究叩甲总科中生物发光的起源与演化具有重要意义\n将以上6个句子重新排列，语序正确的一项是：",
+      "items": null,
+      "options": {
+        "A": "③⑥④⑤②①",
+        "B": "③⑤④①⑥②",
+        "C": "④②⑤①③⑥",
+        "D": "④⑤①②⑥③"
+      },
+      "options_in_media": false,
+      "type": "语句排序",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉔",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 47
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉕",
+      "module": "言语理解与表达",
+      "stem": "①发展是硬道理，而水则是硬约束\n②自古以来，我国基本水情一直是夏汛冬枯、北缺南丰，水资源时空分布极不均衡\n③以黄河为例，黄河水资源总量不到长江的7%，黄河流域人均水资源占有量仅为全国平均水平的27%\n④水资源格局，影响和决定着经济社会发展格局\n⑤党和国家实施南水北调工程建设，就是要对水资源进行科学调剂，促进南北方均衡发展、可持续发展\n⑥在京津所在的海河流域，由于经济社会快速发展和人口不断增加，华北地区地下水长期超采，形成世界上最大、最深的\"漏斗区\"\n将以上6个句子重新排列，语序正确的一项是：",
+      "items": null,
+      "options": {
+        "A": "①⑤⑥③②④",
+        "B": "②③④⑤⑥①",
+        "C": "④②③⑥①⑤",
+        "D": "⑤④①②③⑥"
+      },
+      "options_in_media": false,
+      "type": "语句排序",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉕",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 48
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉖",
+      "module": "言语理解与表达",
+      "stem": "研究发现，人体存在一种细胞清洁过程，被称为分子伴侣介导的自噬（CMA）。CMA和阿尔茨海默病之间存在动态的相互作用。CMA的效率会随着人类年龄的增长而下降，导致人体内有害蛋白质积累成不溶性团块，形成有毒蛋白质聚集体，从而损害细胞，导致阿尔茨海默病症状的出现。而早期的阿尔茨海默病也会损害CMA，使CMA活性显著降低。为此，研究人员开发出了一种新药，该药物通过提高CMA关键成分的受体水平来重振CMA效率，从而改善小鼠记忆力，显示出治疗阿尔茨海默病的潜力。\n根据这段文字，以下说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "新药物能够减缓阿尔茨海默病的发展",
+        "B": "阿尔茨海默病抑制了CMA的发生",
+        "C": "抑制有害蛋白质积累能够提高记忆力",
+        "D": "新药物的功效是通过提高CMA效率来实现的"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉖",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20222548.pdf",
+          "page": 48
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉗",
+      "module": "言语理解与表达",
+      "stem": "从学理的角度来说，知识产权诉前行为保全是指为及时制止正在实施或即将实施的侵害权利人知识产权或有侵害之虞的行为，而在当事人起诉前根据其申请，由法院签发的一种禁止行为人为一定行为或不为一定行为的强制性命令。它属于知识产权侵权救济的一种暂时性措施，有着维权\"及时雨\"的功能。有别于传统财产权侵权，知识产权客体的易复制性与极易扩散性，使得知识产权人改变了过去倚重事后救济来保护权利的习惯。在当前国家加大知识产权保护力度、建立知识产权侵权惩罚性赔偿制度的背景下，及时有效地制止侵权比等到切实的损害结果发生后的救济更加有效。\n这段文字主要介绍了知识产权诉前行为保全的：",
+      "items": null,
+      "options": {
+        "A": "救济原则与法律依据",
+        "B": "研究背景与实施过程",
+        "C": "法律效力与赔偿策略",
+        "D": "法理概念与司法功能"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉗",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 49
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉘",
+      "module": "言语理解与表达",
+      "stem": "紫禁城文华殿区域的北侧，有一座二层楼的皇家书库，名为文渊阁。文渊阁建于清乾隆四十一年，是藏储《四库全书》的场所。乾隆帝对防火极其重视，下令模仿从未遭受火患的宁波范氏天一阁来建造文渊阁，并特地选址在文华殿区域的内金水河北岸。这种建筑布局有利于防火：文渊阁北部为开阔空间，南部与文华殿隔着内金水河。如若文华殿区域发生火患，由于内金水河的阻隔，火势将无法向北蔓延，从而有效保证了文渊阁的安全。不仅如此，内金水河还提供了丰富的水源，一旦文渊阁遭受火患，救火人员可以就近取水。\n最适合做这段文字标题的是：",
+      "items": null,
+      "options": {
+        "A": "皇家书库的防火之道",
+        "B": "从天一阁到文渊阁",
+        "C": "紫禁城的建筑布局与防火",
+        "D": "我国古代建筑选址的智慧"
+      },
+      "options_in_media": false,
+      "type": "标题选择",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉘",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 49
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉙",
+      "module": "言语理解与表达",
+      "stem": "按照通常的定义，1天有86400秒，但是地球自转一周所用的时间并不等于这个数字。从20世纪70年代有记录以来，地球的自转都偏慢，导致每一天的时间会略长于86400秒。虽然我们在日常生活中觉察不到这种毫秒级的变化，而且地球自转偏慢积累的效应可能需要几百年的时间才会变得明显，但对于现代卫星通信和导航系统而言，其运行的稳定却严格地依赖于与太阳时保持一致。因此，当科学家发现地球自转偏慢带来的影响后，他们就需要每隔一段时间对时钟进行调整，以保持这种协调关系。\n这段文字接下来最可能讲的是：",
+      "items": null,
+      "options": {
+        "A": "地球自转偏慢现象会带来什么影响",
+        "B": "科学家选用什么工具进行时间校准",
+        "C": "地球自转速度的变化是否存在规律",
+        "D": "目前国际上通用的时间标准有哪些"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉙",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 49
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉚",
+      "module": "言语理解与表达",
+      "stem": "都察院是明代设立的重要监察机构，为风宪耳目之官，总负正风肃纪之责。明代对其所属监察御史的选用要求，明显不同于一般的官吏。除了普遍性的清正廉洁这一操守要求外，还十分看重其\"介直\"\"骨鲠\"的个性。在任职资格上，明英宗正统年间，开始打破了新仕进士不得除授御史之职的规定。明中叶后，监察御史选用\"多不得人\"，管理御史的\"宪规\"\"条约\"成为空文，御史不断参与到朝廷的政争之中，使明代官僚体系的有效监督、净化能力不断削弱，这是明代政治日趋腐朽、不断走向衰败的重要原因。\n这是一篇论文的摘要，论文中最不可能论述哪项内容？",
+      "items": null,
+      "options": {
+        "A": "监察御史选用资历的演化",
+        "B": "明代监察法规在后世的延续及价值分析",
+        "C": "监察成效对明代政治走向的影响",
+        "D": "都察院的设置及监察御史品秩的演化"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉚",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 50
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉛",
+      "module": "言语理解与表达",
+      "stem": "在急剧的社会转型中，各种社会问题难免会对民众的社会心态造成负面影响，使得民众在社会态度、社会认知、社会情绪方面出现消极的变化。这也说明了\"培育人民自尊自信、理性平和、积极向上的社会心态\"对当今社会治理的重要性和迫切性。同时，它也提示了社会心理服务体系建设的具体方向和策略，即社会心态培育主要通过心理疏导和干预、个体心态和群体心态的培育等方式，提升人民的公平感、信任水平，降低人民的焦虑感，同时引导人们的价值观，最终维护社会的和谐与稳定。\n这段文字意在说明：",
+      "items": null,
+      "options": {
+        "A": "推进社会心理服务体系建设有重要意义",
+        "B": "社会转型期要注重健康社会心态的培育",
+        "C": "民众的社会心态容易受社会问题的影响",
+        "D": "社会心态的培育离不开心理疏导和干预"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉛",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 50
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉜",
+      "module": "言语理解与表达",
+      "stem": "锂离子电池已在便携式电子设备和新能源汽车中占据主导地位。然而，锂丰度低，资源分布不均，约70%集中在南美洲，我国80%的锂资源依赖进口。另外，锂离子电池由于安全隐患，难以满足大规模储能的需求，鉴于对原材料储量以及电池安全性、稳定性的担忧，人们努力寻找能够替代锂离子电池、可大规模应用且环境友好的下一代电化学储能技术。钠与锂位于同一主族，具有很多相似的物理化学性质，且钠资源丰富，分布广泛、成本低廉，钠离子电池快速充放电时负极不易析钠，安全性高。因此，______。\n填入画横线部分最恰当的一项是：",
+      "items": null,
+      "options": {
+        "A": "物美价廉的钠离子电池或将成为中国能源超车新赛道",
+        "B": "钠离子电池被认为是极具潜力的下一代电化学储能技术",
+        "C": "新能源汽车的电池相关研究有望迈上一个新的台阶",
+        "D": "我们要积极应对电化学储能技术领域的巨大挑战与机遇"
+      },
+      "options_in_media": false,
+      "type": "语句填空",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉜",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 50
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉝",
+      "module": "言语理解与表达",
+      "stem": "兵法中说\"必胜之术，合变之形，妙在于乘\"，强调作战中乘敌之隙的重要性，战场上激烈角逐中，战机从来不是无缘无故就有的，敌之隙不可能轻而易举地得到，它是双方指挥员进行谋略博弈的结果，离不开指挥员发挥主观能动性去创造，离不开指挥员运用各种手段去促成。信息化战争中，要充分运用谋略、善用战术技术手段，灵活运用隐真示假、声东击西等方法，诱惑敌人产生错觉，产生部署失误、行动失当等\"隙\"，使有准备之敌变成无准备之敌、使集中之敌成为分散之敌、使占地利之敌变成运动之敌、使士气旺盛之敌变成士气低落之敌、使难打之敌变成好打之敌，并伺机击敌，达成作战胜利。\n最适合做这段文字标题的是：",
+      "items": null,
+      "options": {
+        "A": "科学预见，敢于乘敌之隙",
+        "B": "沉着冷静，精于辨敌之隙",
+        "C": "运用谋略，善于察敌之隙",
+        "D": "主动作为，工于造敌之隙"
+      },
+      "options_in_media": false,
+      "type": "标题选择",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉝",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 51
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㉞",
+      "module": "言语理解与表达",
+      "stem": "客观而言，在脱贫攻坚战中，虽然一些地方探索出了农民入股合作社当股东分红的经营模式，但由于农民是个体分散入股，在合作社中也只是小股东，各类决策经营权都由合作社说了算，农民的主体地位和作用发挥不明显，积极性也不是很高。改变这种状况，需要集体经济组织出面，整合各类资源要素，比如各类\"三农\"资金、土地资源以及其他闲置资源等，以集体经济组织的名义加入专业的合作社，从而增加农民的话语权和经营决策权，更有效地维护农民的利益。\n这段文字意在说明：",
+      "items": null,
+      "options": {
+        "A": "农民在合作社中积极性不高的原因",
+        "B": "当前巩固脱贫攻坚成果的主要途径",
+        "C": "在合作社中引入集体经济组织的意义",
+        "D": "专业合作社在整合资源要素中的作用"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㉞",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 51
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    }
+  ]
+}

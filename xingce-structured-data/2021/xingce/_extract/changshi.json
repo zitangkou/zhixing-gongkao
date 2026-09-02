@@ -1,0 +1,717 @@
+{
+  "module": "常识判断",
+  "year": 2021,
+  "range": "1-20",
+  "source_pages": "20210124.pdf p1-p6",
+  "status": "done",
+  "note": "市地级底版常识判断20题。Q17含路由器参数表格，已在题干中以文本描述。",
+  "questions": [
+    {
+      "number": 1,
+      "section": "常识判断",
+      "stem": "党的十九届四中全会审议通过了《中共中央关于坚持和完善中国特色社会主义制度 推进国家治理体系和治理能力现代化若干重大问题的决定》。下列对该决定的理解不准确的是：",
+      "items": null,
+      "options": {
+        "A": "首次用一次中央全会专门研究我国国家制度和国家治理问题并做出决定",
+        "B": "首次提出国家治理体系和治理能力现代化的命题",
+        "C": "明确党的领导制度在我国国家制度和国家治理体系中的统领地位",
+        "D": "对社会主义基本经济制度内涵做出重要拓展和深化"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 1
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 2,
+      "section": "常识判断",
+      "stem": "习近平总书记指出，要强化对市场主体的金融支持，发展普惠金融，有效缓解企业特别是中小微企业融资难融资贵问题。下列哪个措施最有助于新增融资重点流向中小微企业？",
+      "items": null,
+      "options": {
+        "A": "深化市场报价利率改革，引导贷款利率继续下行",
+        "B": "银行业金融机构优先、快速为在中国人民银行征信报告中无贷款记录的企业提供贷款",
+        "C": "探索优化教育、养老领域中长期融资的配套政策和运作模式",
+        "D": "综合运用清收、核销、重组、证券化、债转股等多种处置手段，大力化解不良资产风险"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 1
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 3,
+      "section": "常识判断",
+      "stem": "党的十九大报告提出，要建设高素质专业化干部队伍，把好干部标准落到实处。关于好干部标准，下列理解正确的有几项？",
+      "items": [
+        "把专业素质放在第一位，要做到勇于作为、善于谋事",
+        "突出政治标准，要做到信念坚定、为民服务",
+        "力戒空谈，要做到勤政务实、敢于担当",
+        "把纪律作为底线，要做到清正廉洁"
+      ],
+      "options": {
+        "A": "1项",
+        "B": "2项",
+        "C": "3项",
+        "D": "4项"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 1
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 4,
+      "section": "常识判断",
+      "stem": "2020年3月9日，中共中央办公厅发布《党委(党组)落实全面从严治党主体责任规定》。根据该规定，党组(党委)应当加强对本单位(本系统)全面从严治党各项工作的领导。在加强党的建设方面，下列理解不准确的是：",
+      "items": null,
+      "options": {
+        "A": "把党的思想建设摆在首位，坚定政治信仰，强化政治领导，提高政治能力，净化政治生态",
+        "B": "持续整治“四风”特别是形式主义、官僚主义，反对特权思想和特权现象",
+        "C": "支持纪检监察机关履行监督责任，一体推进不敢腐、不能腐、不想腐",
+        "D": "党组(党委)带头遵守党内法规制度，严格落实党内法规执行责任制"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 2
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 5,
+      "section": "常识判断",
+      "stem": "根据2020年1月21日中共中央办公厅发布的《纪检监察机关处理检举控告工作规则》，下列表述错误的是：",
+      "items": null,
+      "options": {
+        "A": "对匿名检举控告材料，确有需要的，可以直接核查检举控告人的笔迹、网际协议地址(IP地址)等信息",
+        "B": "纪检监察机关提倡、鼓励实名检举控告，对实名检举控告优先办理、优先处置、给予答复",
+        "C": "承办的监督检查、审查调查部门应当将实名检举控告的处理结果在办结之日起15个工作日内向检举控告人反馈",
+        "D": "纪检监察机关信访举报部门可以通过面谈方式核实是否属于实名检举控告"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 2
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 6,
+      "section": "常识判断",
+      "stem": "下列先烈的书信，按时间先后排序正确的是：",
+      "items": [
+        "“看最近之情况，敌人或要再来碰一下钉子，只要敌来犯，兄即到河东与弟等共同去牺牲。……更相信，只要我等能本此决心，我们的国家及我五千年历史之民族，决不致亡于区区三岛倭奴之手。”",
+        "“志兰！亲爱的，别时容易见时难，分离二十一个月了，何日相聚？愿在党的整顿之风下各自努力，力求进步吧！以进步来安慰自己，以进步来酬报别后衷情。”",
+        "“母亲因为坚决地做了反满抗日的斗争，今天已经到了牺牲的前夕了……母亲不用千言万语来教育你，就用实际行动来教育你。在你长大成人之后，希望不要忘记你的母亲是为国而牺牲的！”",
+        "“山东交涉及北京学界之举动，迪纯兄归，当知原委。……现每日有游行演讲，有救国日刊，各举动积极进行，但取不越轨范以外，以稳健二字为宗旨。”"
+      ],
+      "options": {
+        "A": "③④②①",
+        "B": "④②①③",
+        "C": "③④①②",
+        "D": "④③①②"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 2
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 7,
+      "section": "常识判断",
+      "stem": "根据2020年7月1日起实施的《中华人民共和国公职人员政务处分法》，下列说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "政务处分的对象不仅包括公务员，也包括国有企业管理人员",
+        "B": "政务处分不同于党纪处分",
+        "C": "政务处分决定由监察机关依法做出，也可以由公职人员任免机关、单位做出",
+        "D": "对公职人员的同一违法行为，监察机关和公职人员任免机关、单位不得重复给予政务处分和处分"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 3
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 8,
+      "section": "常识判断",
+      "stem": "长征是宣言书，长征是宣传队，长征是播种机。下列《长征组歌》中的诗句，按所反映事件发生的先后顺序排列正确的是：",
+      "items": [
+        "六盘山上红旗展，势如破竹扫敌骑",
+        "昼夜兼程二百四，猛打穷追夺泸定",
+        "雪山低头迎远客，草毯泥毡扎营盘",
+        "战士双脚走天下，四渡赤水出奇兵"
+      ],
+      "options": {
+        "A": "③①④②",
+        "B": "③④②①",
+        "C": "④③①②",
+        "D": "④②③①"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 3
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 9,
+      "section": "常识判断",
+      "stem": "根据《中国共产党纪律处分条例》，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "某区委原书记吕某，大搞迷信活动，找风水先生破解风水、卜问前程，主要违反党的生活纪律",
+        "B": "某国有公司原党委委员、执行董事赵某，利用企业信誉和地位大搞权钱交易，牟取个人私利，主要违反党的廉洁纪律",
+        "C": "某县委向中央环保督察组提供10份编造的县委常委会会议纪要，弄虚作假，应对督察，主要违反党的工作纪律",
+        "D": "某市畜牧兽医局原党组书记、局长郭某，自2003年3月起兼任该市某饲料有限公司(畜牧类企业)法定代表人、董事长，主要违反党的组织纪律"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 3
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 10,
+      "section": "常识判断",
+      "stem": "中共中央、国务院于2019年12月4日印发了《关于营造更好发展环境支持民营企业改革发展的意见》，下列说法与之不符的是：",
+      "items": null,
+      "options": {
+        "A": "招投标时不得设置与业务能力无关的企业规模门槛",
+        "B": "在人才引进支持政策方面对民营企业一视同仁，支持民营企业引进海外高层次人才",
+        "C": "鼓励民营企业积极参与社会公益、慈善事业",
+        "D": "电力、电信、铁路、石油等行业和领域，向民营企业全面开放"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 3
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 11,
+      "section": "常识判断",
+      "stem": "《中共中央 国务院关于抓好“三农”领域重点工作确保如期实现全面小康的意见》(2020年中央一号文件)未提及以下哪一内容？",
+      "items": null,
+      "options": {
+        "A": "全面加强基层司法所建设",
+        "B": "强化粮食安全省长责任制考核",
+        "C": "坚持和发展新时代“枫桥经验”",
+        "D": "有计划安排县城学校教师到乡村支教"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 4
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 12,
+      "section": "常识判断",
+      "stem": "中共中央、国务院于2019年11月印发了《国家积极应对人口老龄化中长期规划》，其中提及的积极应对人口老龄化的战略目标包括：",
+      "items": [
+        "制度基础持续巩固",
+        "财富储备日益充沛",
+        "人力资本不断提升",
+        "科技支撑更加有力",
+        "城乡区域协调发展"
+      ],
+      "options": {
+        "A": "①③④⑤",
+        "B": "①②③④",
+        "C": "①②④⑤",
+        "D": "②③④⑤"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 4
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 13,
+      "section": "常识判断",
+      "stem": "下列我国科技成就，按照时间先后排序正确的是：",
+      "items": [
+        "屠呦呦获诺贝尔生理学或医学奖",
+        "汉字激光照相排版系统研制成功",
+        "袁隆平成功培育出籼型杂交水稻",
+        "超级计算机“天河一号”研制成功",
+        "“北斗三号”全球卫星导航系统正式开通"
+      ],
+      "options": {
+        "A": "③②④①⑤",
+        "B": "②③⑤④①",
+        "C": "③⑤②④①",
+        "D": "②④③①⑤"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 4
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 14,
+      "section": "常识判断",
+      "stem": "某市开展交通整治活动，扣押了一批乱停放的货运机动车。主管部门与某民营停车场签订租赁协议，停放扣押车辆。下列情形属于行政法调整范围的是：",
+      "items": null,
+      "options": {
+        "A": "车主甲对该主管部门的扣押决定不服，产生争议",
+        "B": "车主乙因车辆被扣押而与托运人产生承运合同纠纷",
+        "C": "车主丙在车辆被扣押过程中暴力抗法且情节严重",
+        "D": "民营停车场与该主管部门产生租赁费纠纷"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 4
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 15,
+      "section": "常识判断",
+      "stem": "下列与贷款有关的说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "若采用等额本息的还款方式，每月还款额相同",
+        "B": "以公益为目的的非营利法人对外提供的贷款担保是有效的",
+        "C": "贷款市场报价利率(LPR)是基于央行公开市场操作利率形成的一种市场化利率",
+        "D": "学生在校期间的国家助学贷款利息由财政全额补贴"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 5
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 16,
+      "section": "常识判断",
+      "stem": "很多伟大科学家的墓志铭简练而富有诗意，是了解其一生成就的窗口。下列墓志铭与科学家对应错误的是：",
+      "items": null,
+      "options": {
+        "A": "他把世界翻了一个个儿，虽然并不完全——达尔文",
+        "B": "他从苍天处取得闪电，从暴君处取得民权——富兰克林",
+        "C": "我曾测量天空，现在测量幽冥。灵魂飞向天国，肉体安息土中——爱因斯坦",
+        "D": "他失明了，因为自然界已经没有剩下什么他没有看见过的东西了——伽利略"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 5
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 17,
+      "section": "常识判断",
+      "stem": "下面是一款无线路由器的参数规格说明，对此描述错误的是：\n【参数表】主频：1 GHz；内存：128 MB；主接口：1个10/100/1000 M自适应WAN口，3个10/100/1000 M自适应LAN口；无线速率：1167 Mbps；无线频段：2.4 GHz/5 GHz；外形尺寸：320 mm * 208 mm * 26.5 mm",
+      "items": null,
+      "options": {
+        "A": "路由器的LAN口可以用来连接外网",
+        "B": "主频是路由器中央处理器的时钟频率",
+        "C": "此款无线路由器属于千兆无线路由器",
+        "D": "5 GHz频段比2.4 GHz频段传输距离短"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 5
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 18,
+      "section": "常识判断",
+      "stem": "下列与口罩相关的说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "纱布口罩可达到防雾霾的效果",
+        "B": "活性炭口罩可吸附过滤空气中的甲醛",
+        "C": "医用外科口罩是医用口罩中防护等级最高的一类",
+        "D": "在成分不明的毒气污染环境中应佩戴过滤式防毒口罩"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 5
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 19,
+      "section": "常识判断",
+      "stem": "下列与生物灾害有关的说法错误的是：",
+      "items": null,
+      "options": {
+        "A": "中国蝗灾最严重的地区是两湖地区",
+        "B": "稻飞虱的天敌有蜘蛛、青蛙",
+        "C": "松毛虫在高温干旱环境下更易繁殖",
+        "D": "鼠类会啃食庄稼的茎、叶、根和种子"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 6
+        }
+      },
+      "flags": ["answer_missing"]
+    },
+    {
+      "number": 20,
+      "section": "常识判断",
+      "stem": "干热岩是埋深数千米的高温岩体，属于一种新兴的地热能源。下列有关说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "注入低温水回收高温水的干热岩利用过程发生了能量转化",
+        "B": "干热岩发电技术已在世界多个国家的工业生产中普遍应用",
+        "C": "干热岩的开发利用过程中容易产生导致酸雨的污染气体",
+        "D": "我国在青藏高原首次发现大规模可利用的干热岩资源"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": null,
+        "source_ref": {
+          "file": "20210124.pdf",
+          "page": 6
+        }
+      },
+      "flags": ["answer_missing"]
+    }
+  ]
+}

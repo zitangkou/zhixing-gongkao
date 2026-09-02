@@ -1,0 +1,648 @@
+{
+  "module": "判断推理+资料分析",
+  "role": "xzzf_diff",
+  "year": 2022,
+  "source_note": "行政执法差异册 20224970.pdf 第65-70页 + 20226369.pdf 第69页（补页）。执法判断40题 = 省级共享17题(76,82,84~86,90,93~94,97~98,100,102,104~105,110,113~114) + 市地共享16题(待确认) + 本文件7题独有。执法数量10题 = 省级共享6题 + 市地共享4题，无独有。执法资料20题 = 市地共享10题(58~67) + 本文件10题独有。",
+  "questions": [
+    {
+      "diff_label": "㊱",
+      "module": "判断推理",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊱",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 65
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "diff_label": "㊲",
+      "module": "判断推理",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊲",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 66
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "diff_label": "㊳",
+      "module": "判断推理",
+      "stem": "左图是给定的空心立体图形，将其从任一面剖开，以下哪项可能是该立体图形的截面？",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊳",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 66
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "diff_label": "㊴",
+      "module": "判断推理",
+      "stem": "同种数罪是指行为人实施数个行为，符合数个性质相同的基本犯罪构成，触犯数个罪名相同的数罪。\n根据上述定义，下列情形属于同种数罪的是：",
+      "items": null,
+      "options": {
+        "A": "甲为了自杀，在水中投入剧毒农药，其幼女误饮后身亡，甲见状也饮水身亡",
+        "B": "乙为了阻止警察抓捕其子，采用暴力手段妨害警察的执法行为，挥刀将警察砍成重伤",
+        "C": "丙因缺钱，先是对某单位实施了盗窃，而后又使用暴力手段抢劫了素不相识的赵某",
+        "D": "丁故意杀死了与其分手的女友张某，而后又杀死了在生意上与其竞争的李某"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊴",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 66
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊵",
+      "module": "判断推理",
+      "stem": "除草剂生化选择性是指利用除草剂在植物体内生物化学反应的差异产生的选择性。\n根据上述定义，下列利用了除草剂生化选择性的是：",
+      "items": null,
+      "options": {
+        "A": "小麦和杂草对某种除草剂的吸收能力不同，小麦吸收少而杂草吸收多",
+        "B": "某种除草剂在玉米体内能被迅速分解为无毒物质，在杂草体内则不能分解",
+        "C": "某种除草剂只能通过植物的根部吸收，而杂草根系比作物根系更浅",
+        "D": "某种除草剂在土壤中移动性差，只能作用于浅层土壤中的杂草种子"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊵",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 67
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊶",
+      "module": "判断推理",
+      "stem": "老年系数是指65岁及以上人口在总人口中所占的百分比；少年儿童系数是指14岁及以下人口在总人口中所占的百分比；抚养比是指人口中非劳动年龄人口数与劳动年龄人口数之比，用百分比表示。\n根据上述定义，下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "老年系数越大，少年儿童系数越小",
+        "B": "抚养比等于老年系数与少年儿童系数之和",
+        "C": "劳动年龄人口占比越大，抚养比越小",
+        "D": "总人口中65岁及以上人口越多，老年系数越大"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊶",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 67
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊷",
+      "module": "判断推理",
+      "stem": "研究人员对人的\"奖赏回路\"进行研究发现，当人们听到自己喜欢的音乐时，大脑中的奖赏回路会被激活，释放多巴胺，使人产生愉悦感。研究人员由此认为，音乐能够通过激活大脑奖赏回路来治疗抑郁症。\n以下哪项如果为真，最能削弱上述研究人员的观点？",
+      "items": null,
+      "options": {
+        "A": "抑郁症患者大脑中的奖赏回路功能普遍受损，对音乐刺激反应迟钝",
+        "B": "听音乐时释放的多巴胺量远低于抗抑郁药物的效果",
+        "C": "部分抑郁症患者并不喜欢听音乐",
+        "D": "音乐疗法已被广泛应用于抑郁症的辅助治疗"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊷",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 67
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊳",
+      "module": "资料分析",
+      "stem": "（材料：2020年全国环保举报情况）2020年，全国环保举报受理量约为多少万件？",
+      "items": null,
+      "options": {
+        "A": "18.5",
+        "B": "20.3",
+        "C": "22.1",
+        "D": "24.0"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m93_97"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊳",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 68
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊴",
+      "module": "资料分析",
+      "stem": "（材料同上）2020年，全国环保举报中，大气污染举报占比约为：",
+      "items": null,
+      "options": {
+        "A": "35%",
+        "B": "42%",
+        "C": "49%",
+        "D": "56%"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m93_97"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊴",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20226369.pdf",
+          "page": 69
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊵",
+      "module": "资料分析",
+      "stem": "（材料同上）2020年，下列污染类型中，举报量同比下降最快的是：",
+      "items": null,
+      "options": {
+        "A": "大气污染",
+        "B": "水污染",
+        "C": "噪声污染",
+        "D": "固体废物污染"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m93_97"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊵",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20226369.pdf",
+          "page": 69
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊶",
+      "module": "资料分析",
+      "stem": "（材料同上）2020年，全国环保举报中，通过电话举报的数量约是网络举报的多少倍？",
+      "items": null,
+      "options": {
+        "A": "1.2",
+        "B": "1.8",
+        "C": "2.4",
+        "D": "3.0"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m93_97"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊶",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20226369.pdf",
+          "page": 69
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊷",
+      "module": "资料分析",
+      "stem": "（材料同上）关于2020年全国环保举报情况，能够从上述资料中推出的是：",
+      "items": null,
+      "options": {
+        "A": "举报受理量同比下降超过10%",
+        "B": "大气污染举报量超过水污染和噪声污染之和",
+        "C": "微信举报量占比超过20%",
+        "D": "第四季度举报量高于第一季度"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m93_97"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊷",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20226369.pdf",
+          "page": 69
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊸",
+      "module": "资料分析",
+      "stem": "（材料：2021年1-5月全国电信网络诈骗案件情况）2021年1-5月，全国电信网络诈骗案件立案数约为多少万起？",
+      "items": null,
+      "options": {
+        "A": "25",
+        "B": "30",
+        "C": "35",
+        "D": "40"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m98_102"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊸",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 70
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊹",
+      "module": "资料分析",
+      "stem": "（材料同上）2021年1-5月，全国电信网络诈骗案件中，损失金额在10万元以上的案件占比约为：",
+      "items": null,
+      "options": {
+        "A": "3%",
+        "B": "6%",
+        "C": "9%",
+        "D": "12%"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m98_102"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊹",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 70
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊺",
+      "module": "资料分析",
+      "stem": "（材料同上）2021年1-5月，全国电信网络诈骗案件平均每起损失金额约为多少万元？",
+      "items": null,
+      "options": {
+        "A": "0.8",
+        "B": "1.2",
+        "C": "1.6",
+        "D": "2.0"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m98_102"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊺",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 70
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊻",
+      "module": "资料分析",
+      "stem": "（材料同上）2021年1-5月，下列诈骗类型中，案件数同比增长最快的是：",
+      "items": null,
+      "options": {
+        "A": "刷单返利类",
+        "B": "虚假投资理财类",
+        "C": "冒充客服类",
+        "D": "贷款、代办信用卡类"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m98_102"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊻",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 70
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊼",
+      "module": "资料分析",
+      "stem": "（材料同上）关于2021年1-5月全国电信网络诈骗案件情况，能够从上述资料中推出的是：",
+      "items": null,
+      "options": {
+        "A": "立案数同比增长超过20%",
+        "B": "损失金额同比增长超过30%",
+        "C": "刷单返利类案件数占比超过30%",
+        "D": "平均每起案件损失金额同比上升"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m98_102"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "xzzf",
+        "from_number": null,
+        "diff_label": "㊼",
+        "raw_note": "行政执法独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 70
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    }
+  ],
+  "materials": {
+    "m93_97": {
+      "title": "2020年全国环保举报情况（93-97题共用）",
+      "content": "2020年全国环保举报受理情况：含受理量、办结量等总体数据；按污染类型分（大气污染、水污染、噪声污染、固体废物污染、辐射污染、其他）；按举报渠道分（电话、网络、微信、来信、来访）；含2019年同比数据。另有2020年各季度受理量堆叠柱状图。",
+      "source_ref": {
+        "file": "20224970.pdf",
+        "page": 68
+      },
+      "note": "含表格+柱状图，数据已转文本，具体数值见原图"
+    },
+    "m98_102": {
+      "title": "2021年1-5月全国电信网络诈骗案件情况（98-102题共用）",
+      "content": "2021年1-5月全国电信网络诈骗案件立案数、损失金额及同比增速；按诈骗类型分（刷单返利类、虚假投资理财类、冒充客服类、贷款代办信用卡类、冒充公检法类、杀猪盘类等）案件数及占比；按损失金额分段统计案件数。",
+      "source_ref": {
+        "file": "20224970.pdf",
+        "page": 70
+      },
+      "note": "文字+表格材料，数据已转文本，具体数值见原图"
+    }
+  }
+}

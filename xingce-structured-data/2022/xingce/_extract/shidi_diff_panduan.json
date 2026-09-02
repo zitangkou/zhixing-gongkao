@@ -1,0 +1,706 @@
+{
+  "module": "判断推理",
+  "role": "shidi_diff",
+  "year": 2022,
+  "source_note": "市地级差异册 20224970.pdf 第52-56页（圈号㊴-57）。市地判断40题 = 省级共享21题(77~79,81~84,86~88,90,92,95,97,99~101,105~106,110,112) + 本文件19题独有。执法判断共享本文件中㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿5152（16题，待确认）。",
+  "questions": [
+    {
+      "diff_label": "㊴",
+      "module": "判断推理",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊴",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 52
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "diff_label": "㊵",
+      "module": "判断推理",
+      "stem": "左边给定的是正方体的外表面展开图，右边哪一项能由它折叠而成？",
+      "items": null,
+      "options": null,
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊵",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 53
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "diff_label": "㊶",
+      "module": "判断推理",
+      "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+      "items": null,
+      "options": {
+        "A": "①②⑤，③④⑥",
+        "B": "①③④，②⑤⑥",
+        "C": "①⑤⑥，②③④",
+        "D": "①②④，③⑤⑥"
+      },
+      "options_in_media": true,
+      "type": "图形推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊶",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 53
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "media_missing"
+      ]
+    },
+    {
+      "diff_label": "㊷",
+      "module": "判断推理",
+      "stem": "刑事科学技术是公安、司法机关依照刑事诉讼法的规定，应用现代科学技术的成果，收集、检验和鉴定与犯罪活动有关的物证，为侦查、起诉、审判工作提供线索和证据的专门技术。\n根据上述定义，下列没有体现刑事科学技术的是：",
+      "items": null,
+      "options": {
+        "A": "通过核对公司台账、采购合同等文件资料，确定犯罪嫌疑人行贿的具体数额",
+        "B": "交通肇事伤亡案件中，根据车辆损毁情况推断车辆的接触点、行驶方向及事故成因",
+        "C": "应用声谱仪对手机录音与犯罪嫌疑人的语音进行声学特征分析，做出是否为同一人的判断",
+        "D": "对警犬识别出来的可疑物进行成分鉴定，判断嫌疑人所携带的物品是否为违禁品"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊷",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 53
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊸",
+      "module": "判断推理",
+      "stem": "量表法是运用量表形式测定被调查者对问题的态度的方法。根据不同用途，量表可分为直接量表和间接量表。直接量表中，调查者设计问题并询问被调查者，被调查者在有关量表上直接表明其态度；间接量表中，被调查者按其态度或意愿，在备选问题或语句中选择出合适的语句代表其态度。\n根据上述定义，下列属于间接量表的是：",
+      "items": null,
+      "options": {
+        "A": "请给以下四部电影打分，要求其分数总和为100分：《电影甲》____《电影乙》____《电影丙》____《电影丁》____",
+        "B": "请您按照个人喜欢的程度对下列品牌的洗衣粉进行编号，最喜欢者为1号，以此类推：品牌甲□ 品牌乙□ 品牌丙□ 品牌丁□ 品牌戊□ 品牌己□",
+        "C": "请阅读下列语句，并在合适的一项上画\"√\"：",
+        "D": "请对电视剧《XX》中王小明的人物形象进行评价：____"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊸",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 54
+        }
+      },
+      "flags": [
+        "answer_missing",
+        "options_partial_media"
+      ]
+    },
+    {
+      "diff_label": "㊹",
+      "module": "判断推理",
+      "stem": "回指是在语法描写中用来指一个语言单位（回指语）从先前某个已表达的单位或意义（先行语）得出自身释义的过程或结果。回指可分为直接回指和间接回指。直接回指是指回指语与先行语存在明显共指关系，回指语是对先行语的重复。间接回指是指回指语与先行语之间没有明显共指关系，但可以通过话语语境进行联想。\n根据上述定义，下列选项涉及间接回指的是：",
+      "items": null,
+      "options": {
+        "A": "后来又来到拱桥上的地方，那是多年以前的\"凯旋\"。他所拥有的汽车要陷进泥里去，\"福斯\"就陷进泥里去了",
+        "B": "姑娘们紧跟着来拜观音，她们都穿着新衣服，闹嚷嚷地经过小林的面前",
+        "C": "你说的这个领导干部贪污受贿的罪行必须检举，这是我们作为公民的责任",
+        "D": "它离敌人越近，越觉得子弹打起来是分外的美丽，它是在为这些子弹的到来而欢呼"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊹",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 54
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊺",
+      "module": "判断推理",
+      "stem": "体外实验是指从生物体内取出组织或细胞，在体外模拟体内生理环境，在无菌、适当温度和一定营养条件下，对其进行培养和研究的方法。\n根据上述定义，下列属于体外实验的是：",
+      "items": null,
+      "options": {
+        "A": "将药物涂抹在人体皮肤表面，观察皮肤对药物的吸收情况",
+        "B": "将小白鼠置于不同温度环境中，观察其体温调节机制",
+        "C": "从实验动物体内取出肝脏组织，在培养皿中加入药物观察细胞变化",
+        "D": "通过静脉注射将药物注入实验动物体内，观察药物在各器官的分布"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊺",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 54
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊻",
+      "module": "判断推理",
+      "stem": "贸易摩擦：出口下滑",
+      "items": null,
+      "options": {
+        "A": "商业垄断：市场失灵",
+        "B": "醉酒驾驶：例行检查",
+        "C": "行政处罚：违规生产",
+        "D": "职务犯罪：谋取私利"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊻",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 54
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊼",
+      "module": "判断推理",
+      "stem": "微型无人机：旋翼无人机",
+      "items": null,
+      "options": {
+        "A": "热带植物：香料植物",
+        "B": "集体决策：个人决策",
+        "C": "形象思维：抽象思维",
+        "D": "开环系统：闭环系统"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊼",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 55
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊽",
+      "module": "判断推理",
+      "stem": "青铜器物：商朝礼器：文化遗产",
+      "items": null,
+      "options": {
+        "A": "科幻小说：微型小说：文学作品",
+        "B": "中式建筑：苏州园林：特色建筑",
+        "C": "仰韶文化：半坡遗址：华夏文明",
+        "D": "进口食品：速冻海鲜：冷冻食品"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊽",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 55
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊾",
+      "module": "判断推理",
+      "stem": "城市公园：公共设施：休闲娱乐",
+      "items": null,
+      "options": {
+        "A": "国宾礼炮：电子礼炮：国事庆祝",
+        "B": "医用口罩：卫生用品：过滤空气",
+        "C": "升降舞台：露天剧场：演出空间",
+        "D": "云服务器：虚拟技术：信息备份"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊾",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 55
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "㊿",
+      "module": "判断推理",
+      "stem": "国色天香 对于（ ）相当于（ ）对于 玉树临风",
+      "items": null,
+      "options": {
+        "A": "面如冠玉；螓首蛾眉",
+        "B": "倾国倾城；明眸皓齿",
+        "C": "一表人才；仪表堂堂",
+        "D": "才高八斗；亭亭玉立"
+      },
+      "options_in_media": false,
+      "type": "类比推理",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "㊿",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 55
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "51",
+      "module": "判断推理",
+      "stem": "动物实验发现，和处于寒冷环境的同等大小的小鼠相比，温暖环境中小鼠的骨骼强度明显增强，其原因是温暖环境促进了小鼠肠道菌群的某些变化。研究者由此认为，对于人类来说，多喝热水同样可以增强骨骼强度。\n以下哪项如果为真，最能支持上述研究者的观点？",
+      "items": null,
+      "options": {
+        "A": "相比温热的水，冷水会使人体肠道血管收缩，影响肠道菌群的正常代谢",
+        "B": "人体骨骼强度的变化与肠道菌群的变化之间存在密切关联",
+        "C": "温暖环境中生活的人群，其骨骼强度普遍高于寒冷环境中生活的人群",
+        "D": "热水可以促进人体血液循环，加快新陈代谢，从而增强骨骼强度"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "51",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 55
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "52",
+      "module": "判断推理",
+      "stem": "某物业公司规定，只有按时缴纳物业费的业主，才能在小区公共停车位免费停车。小李没有按时缴纳物业费，但他经常在小区公共停车位免费停车。\n如果上述断定为真，以下哪项一定为真？",
+      "items": null,
+      "options": {
+        "A": "物业公司的规定没有得到严格执行",
+        "B": "小李不是该小区的业主",
+        "C": "小区公共停车位不收费",
+        "D": "物业公司对小李有特殊照顾"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "52",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 56
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "53",
+      "module": "判断推理",
+      "stem": "某超市从前到后整齐排列着7排货架，放置着文具、零食、调料、日用品、酒、粮油和饮料7类商品，每类商品占据一排。已知：\n（1）酒类排在调料类之前；\n（2）文具类和调料类中间隔着3排；\n（3）粮油类在零食类之后，中间隔着2排；\n（4）日用品类紧挨在文具类前一排或者后一排。\n下列各项中，哪一类商品不可能排在第一排？",
+      "items": null,
+      "options": {
+        "A": "文具类",
+        "B": "粮油类",
+        "C": "酒类",
+        "D": "日用品类"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m53_57"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "53",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 56
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "54",
+      "module": "判断推理",
+      "stem": "（材料同上）按照从前到后，下列哪项排列是可能的？",
+      "items": null,
+      "options": {
+        "A": "文具类、零食类、日用品类、调料类、粮油类、饮料类、酒类",
+        "B": "零食类、文具类、日用品类、酒类、调料类、粮油类、饮料类",
+        "C": "日用品类、文具类、零食类、酒类、粮油类、调料类、饮料类",
+        "D": "日用品类、文具类、饮料类、零食类、酒类、调料类、粮油类"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m53_57"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "54",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 56
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "55",
+      "module": "判断推理",
+      "stem": "（材料同上）如果零食类排在第1排，那么下列哪项中的两类商品不可能是相邻的两排？",
+      "items": null,
+      "options": {
+        "A": "文具类和粮油类",
+        "B": "零食类和文具类",
+        "C": "日用品类和酒类",
+        "D": "零食类和日用品类"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m53_57"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "55",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 56
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "56",
+      "module": "判断推理",
+      "stem": "（材料同上）如果饮料类排在第1排，则以下哪项是可能的？",
+      "items": null,
+      "options": {
+        "A": "零食类排在文具类前一排",
+        "B": "粮油类排在调料类前一排",
+        "C": "日用品类排在文具类前一排",
+        "D": "酒类排在文具类前一排"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m53_57"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "56",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 56
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    },
+    {
+      "diff_label": "57",
+      "module": "判断推理",
+      "stem": "（材料同上）如果文具类排在第2排，则日用品类可能的排法有几种？",
+      "items": null,
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": null,
+      "answer_source": null,
+      "explanation": null,
+      "media": [],
+      "formulas": [],
+      "material_ids": [
+        "m53_57"
+      ],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "shidi",
+        "from_number": null,
+        "diff_label": "57",
+        "raw_note": "市地级独有",
+        "source_ref": {
+          "file": "20224970.pdf",
+          "page": 56
+        }
+      },
+      "flags": [
+        "answer_missing"
+      ]
+    }
+  ],
+  "materials": {
+    "m53_57": {
+      "title": "超市货架排列（53-57题共用）",
+      "content": "某超市从前到后整齐排列着7排货架，放置着文具、零食、调料、日用品、酒、粮油和饮料7类商品，每类商品占据一排。已知：（1）酒类排在调料类之前；（2）文具类和调料类中间隔着3排；（3）粮油类在零食类之后，中间隔着2排；（4）日用品类紧挨在文具类前一排或者后一排。",
+      "source_ref": {
+        "file": "20224970.pdf",
+        "page": 56
+      }
+    }
+  }
+}
