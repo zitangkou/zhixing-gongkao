@@ -54,12 +54,96 @@
     "shidi": {
       "paper_type": "市地级",
       "total_questions": 130,
-      "file": "papers/shidi.json"
+      "file": "papers/shidi.json",
+      "modules": [
+        {
+          "name": "常识判断",
+          "number_range": [
+            1,
+            20
+          ],
+          "question_count": 20
+        },
+        {
+          "name": "言语理解与表达",
+          "number_range": [
+            21,
+            60
+          ],
+          "question_count": 40
+        },
+        {
+          "name": "数量关系",
+          "number_range": [
+            61,
+            70
+          ],
+          "question_count": 10
+        },
+        {
+          "name": "判断推理",
+          "number_range": [
+            71,
+            110
+          ],
+          "question_count": 40
+        },
+        {
+          "name": "资料分析",
+          "number_range": [
+            111,
+            130
+          ],
+          "question_count": 20
+        }
+      ]
     },
     "xingzhengzhifa": {
       "paper_type": "行政执法类",
       "total_questions": 130,
-      "file": "papers/xingzhengzhifa.json"
+      "file": "papers/xingzhengzhifa.json",
+      "modules": [
+        {
+          "name": "常识判断",
+          "number_range": [
+            1,
+            20
+          ],
+          "question_count": 20
+        },
+        {
+          "name": "言语理解与表达",
+          "number_range": [
+            21,
+            60
+          ],
+          "question_count": 40
+        },
+        {
+          "name": "数量关系",
+          "number_range": [
+            61,
+            70
+          ],
+          "question_count": 10
+        },
+        {
+          "name": "判断推理",
+          "number_range": [
+            71,
+            110
+          ],
+          "question_count": 40
+        },
+        {
+          "name": "资料分析",
+          "number_range": [
+            111,
+            130
+          ],
+          "question_count": 20
+        }
+      ]
     }
   },
   "source_files": [
@@ -74,7 +158,7 @@
     "formulas_dir": "media/formulas",
     "index": "media/media_index.json"
   },
-  "status": "extracting",
+  "status": "papers_assembled",
   "updated": "2026-09-02",
-  "notes": "2023 结构与 2024 同代：常识 20（含政治）/ 言语 40 / 数量 15(省)或10 / 判断 40 / 资料 20；无独立政治理论模块。执法差异册第 73 页含判断推理差异注。"
+  "notes": "2023 三卷组装完成：省级135（市地共享49+省级独有86）/ 市地130 / 执法130（市地共享+省级共享+执法独有）。执法数量省级共享4题按推断取41-44待核。答案待接入。"
 }

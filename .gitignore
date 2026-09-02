@@ -23,3 +23,7 @@ cal.md
 # 会话期临时产物（定稿资产见 docs/brand/）
 /outputs/
 /vibe_images/
+
+# python cache
+__pycache__/
+*.pyc
