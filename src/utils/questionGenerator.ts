@@ -1,6 +1,8 @@
 import { POLITICAL_KEYWORDS } from '@/constants'
 import type { Article, ArticleSection, Question } from '@/types'
-import { flattenSections, getArticleFullContent } from '@/utils/articleContent'
+import { flattenSections } from '@/utils/articleContent'
+// R3 停用挖空后 getArticleFullContent 暂未使用，保留 import 以便回溯
+// import { flattenSections, getArticleFullContent } from '@/utils/articleContent'
 
 const DISTRACTORS: Record<string, string[]> = {
   两个确立: ['两个维护', '四个意识', '四个自信', '四个全面'],
@@ -103,12 +105,16 @@ function findKeywordInText(text: string): string | null {
   return null
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- R3 已停用，保留函数体以便回溯
 function createHighlightBlankQuestion(
   article: Article,
   text: string,
   index: number,
   context: string,
 ): Question | null {
+  // R3: 挖空模板生成器已停用，见 xingce-data-roadmap R3
+  // 保留函数体以便回溯，但任何调用都会立即抛出。
+  throw new Error('挖空模板生成器已停用，见 xingce-data-roadmap R3')
   const keyword = findKeywordInText(text)
   if (!keyword) return null
   const stem = text.replace(keyword, '______')
@@ -228,18 +234,18 @@ export function generateQuestionsFromArticle(article: Article): Question[] {
   const bulletPool = allBulletPool(sources)
   const parallelPool = unique(sources.flatMap((s) => s.parallelItems))
 
-  // 1. highlight 挖空（政治术语）
-  for (const source of sources) {
-    if (!source.highlight) continue
-    push(
-      createHighlightBlankQuestion(
-        article,
-        source.highlight,
-        questions.length,
-        `出自「${source.sectionTitle}」要点。`,
-      ),
-    )
-  }
+  // 1. highlight 挖空（政治术语）—— R3 已停用，见 xingce-data-roadmap R3
+  // for (const source of sources) {
+  //   if (!source.highlight) continue
+  //   push(
+  //     createHighlightBlankQuestion(
+  //       article,
+  //       source.highlight,
+  //       questions.length,
+  //       `出自「${source.sectionTitle}」要点。`,
+  //     ),
+  //   )
+  // }
 
   // 2. —— 条目选择题（六项原则等）
   for (const source of sources) {
@@ -265,16 +271,16 @@ export function generateQuestionsFromArticle(article: Article): Question[] {
     if (questions.length >= maxTotal) break
   }
 
-  // 5. 兜底：全文关键词挖空
-  if (questions.length < maxTotal) {
-    const fullContent = getArticleFullContent(article)
-    const sentences = fullContent.split(/[。！？\n]+/).filter((s) => s.trim().length > 15)
-    for (const sentence of sentences) {
-      const text = sentence.trim() + '。'
-      push(createHighlightBlankQuestion(article, text, questions.length, '出自原文关键表述。'))
-      if (questions.length >= maxTotal) break
-    }
-  }
+  // 5. 兜底：全文关键词挖空 —— R3 已停用，见 xingce-data-roadmap R3
+  // if (questions.length < maxTotal) {
+  //   const fullContent = getArticleFullContent(article)
+  //   const sentences = fullContent.split(/[。！？\n]+/).filter((s) => s.trim().length > 15)
+  //   for (const sentence of sentences) {
+  //     const text = sentence.trim() + '。'
+  //     push(createHighlightBlankQuestion(article, text, questions.length, '出自原文关键表述。'))
+  //     if (questions.length >= maxTotal) break
+  //   }
+  // }
 
   return questions.slice(0, maxTotal)
 }
