@@ -1,0 +1,27 @@
+{
+  "shengji": [
+    {
+      "number": 112,
+      "role": "diff_book",
+      "stem_head": "随着通货膨胀的蔓延H国电子企业主要产品的原材料价格大幅上涨该",
+      "best_shidi": 0.09523809523809523,
+      "best_diff": 0.1
+    },
+    {
+      "number": 115,
+      "role": "diff_book",
+      "stem_head": "甲乙丙丁戊己庚7人报名参加象棋比赛对于比赛结果大家预测如下1",
+      "best_shidi": 0.08333333333333333,
+      "best_diff": 0.1
+    }
+  ],
+  "xingzhengzhifa": [
+    {
+      "number": 100,
+      "role": "main",
+      "stem_head": "小张每周一到周四夜跑周五到周日休息已知某年2月他夜跑17次3",
+      "best_shidi": 0.044444444444444446,
+      "best_diff": 0.1
+    }
+  ]
+}

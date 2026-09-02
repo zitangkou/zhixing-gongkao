@@ -57,7 +57,8 @@
           "question_count": 20
         }
       ],
-      "file": "papers/shengji.json"
+      "file": "papers/shengji.json",
+      "notes": "答案+解析已入库 (answer_book_2026-09), 覆盖率100%"
     },
     "shidi": {
       "paper_type": "市地级",
@@ -112,7 +113,8 @@
           "question_count": 20
         }
       ],
-      "file": "papers/shidi.json"
+      "file": "papers/shidi.json",
+      "notes": "答案+解析已入库 (answer_book_2026-09), 覆盖率100%"
     },
     "xingzhengzhifa": {
       "paper_type": "行政执法类",
@@ -167,7 +169,8 @@
           "question_count": 20
         }
       ],
-      "file": "papers/xingzhengzhifa.json"
+      "file": "papers/xingzhengzhifa.json",
+      "notes": "答案+解析已入库 (answer_book_2026-09), 覆盖率100%"
     }
   },
   "source_files": [
@@ -188,5 +191,6 @@
     "media_paths": "相对本目录 media/ 的相对路径"
   },
   "status": "ready",
-  "updated": "2026-09-02"
+  "updated": "2026-09-02",
+  "notes": "2026-09-02: 三卷答案+解析全部入库（answer_source=answer_book_2026-09），覆盖率100%。234题标记anchor_pending（解析册不直接引用题干原文，非答案错误）。校验器0错误。"
 }

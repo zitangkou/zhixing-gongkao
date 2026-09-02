@@ -1,0 +1,1907 @@
+{
+  "year": "2025",
+  "dry_run": false,
+  "papers": {
+    "shidi": {
+      "paper": "shidi",
+      "total": 130,
+      "answered": 130,
+      "pending": 77,
+      "rejected": 0,
+      "coverage": "130/130 (100.0%)"
+    },
+    "shengji": {
+      "paper": "shengji",
+      "total": 135,
+      "answered": 135,
+      "pending": 81,
+      "rejected": 0,
+      "coverage": "135/135 (100.0%)"
+    },
+    "xingzhengzhifa": {
+      "paper": "xingzhengzhifa",
+      "total": 130,
+      "answered": 130,
+      "pending": 76,
+      "rejected": 0,
+      "coverage": "130/130 (100.0%)"
+    }
+  },
+  "total_questions": 395,
+  "total_answered": 395,
+  "total_coverage": "395/395 (100.0%)",
+  "pending_review": [
+    {
+      "number": 2,
+      "reason": "anchor mismatch: best similarity=0.15 below threshold",
+      "answer": "C",
+      "paper_stem_head": "习近平总书记指出问题是事物矛盾的表现形式我们强调增",
+      "anchor_head": "矛盾的普遍性是指矛盾存在于一切事物中",
+      "paper": "shidi"
+    },
+    {
+      "number": 3,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "关于马克思主义政治经济学下列说法正确的是",
+      "anchor_head": "决定商品价值量的不是生产商品的个别劳动时间",
+      "paper": "shidi"
+    },
+    {
+      "number": 4,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "习近平总书记指出中国共产党人的理想信念建立在马克思",
+      "anchor_head": "真理尺度与价值尺度是紧密联系不可分割的辩证统一关系",
+      "paper": "shidi"
+    },
+    {
+      "number": 8,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "党的十八大以来在推进全面从严治党的伟大实践中我们党",
+      "anchor_head": "2024年1月8日至10日中国共产党第二十届中央纪",
+      "paper": "shidi"
+    },
+    {
+      "number": 9,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "习近平总书记指出要加强科技基础能力建设深化科技体制",
+      "anchor_head": "2024年7月18日中国共产党第二十届中央委员会第",
+      "paper": "shidi"
+    },
+    {
+      "number": 15,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "党的二十届三中全会提出健全绿色低碳发展机制实施支持",
+      "anchor_head": "中共中央关于进一步全面深化改革推进中国式现代化的决",
+      "paper": "shidi"
+    },
+    {
+      "number": 18,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "习近平总书记强调加强党风廉政建设一体推进不敢腐不能",
+      "anchor_head": "中国共产党纪律处分条例2024年第六章“对违反政治",
+      "paper": "shidi"
+    },
+    {
+      "number": 20,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "西部地区在全国改革发展稳定大局中举足轻重要一以贯之",
+      "anchor_head": "2024年4月23日习近平总书记在重庆主持召开新时",
+      "paper": "shidi"
+    },
+    {
+      "number": 21,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "国家主席习近平在二〇二四年新年贺词中指出“良渚二里",
+      "anchor_head": "良渚文化是环钱塘江分布的以黑陶和磨光玉器为代表的新",
+      "paper": "shidi"
+    },
+    {
+      "number": 26,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "纪录片何以中国讲述了多元一体中华民族的形成和中华文",
+      "anchor_head": "该项描写了秦始皇统一六国后的巡游路线",
+      "paper": "shidi"
+    },
+    {
+      "number": 27,
+      "reason": "anchor mismatch: best similarity=0.30 below threshold",
+      "answer": "A",
+      "paper_stem_head": "下列物理学家与其提出的著名观点对应错误的是",
+      "anchor_head": "德国物理学家普朗克提出能量子假说",
+      "paper": "shidi"
+    },
+    {
+      "number": 28,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "下列人物所说的话与经济有关其中说法正确的是",
+      "anchor_head": "M₁指的是狭义货币供应量包括流通中货币M₀单位活期",
+      "paper": "shidi"
+    },
+    {
+      "number": 29,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "在关于真菌的科普文章中下列表述存在错误的是",
+      "anchor_head": "酵母菌是一种单细胞真菌可用于发酵制作果酒面包等",
+      "paper": "shidi"
+    },
+    {
+      "number": 30,
+      "reason": "anchor mismatch: best similarity=0.29 below threshold",
+      "answer": "D",
+      "paper_stem_head": "关于盆地地形下列说法错误的是",
+      "anchor_head": "盆地容易汇聚周边地区的水流和沉积物将大量的生物遗体",
+      "paper": "shidi"
+    },
+    {
+      "number": 31,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "某博物馆想办一期关于中国自然与人文的地理展览开设几",
+      "anchor_head": "长江是中国第一大河发源于青藏高原的唐古拉山脉",
+      "paper": "shidi"
+    },
+    {
+      "number": 33,
+      "reason": "anchor mismatch: best similarity=0.25 below threshold",
+      "answer": "B",
+      "paper_stem_head": "下列与纤维材料有关的说法错误的是",
+      "anchor_head": "玻璃纤维是一种性能优异的无机非金属材料",
+      "paper": "shidi"
+    },
+    {
+      "number": 34,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "D",
+      "paper_stem_head": "下列三国演义中的回目按照先后顺序排列正确的是",
+      "anchor_head": "①出自三国演义第四十八回讲述的是赤壁之战前",
+      "paper": "shidi"
+    },
+    {
+      "number": 35,
+      "reason": "anchor mismatch: best similarity=0.19 below threshold",
+      "answer": "A",
+      "paper_stem_head": "下列与船只行驶有关的说法错误的是",
+      "anchor_head": "皮筏从高处顺流而下的过程中重力势能随高度降低而减少",
+      "paper": "shidi"
+    },
+    {
+      "number": 37,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "营造法式刊行之后两浙一带的建筑技术借助官方的推广完",
+      "anchor_head": "完全融入了中国古典木构建筑技术的主流",
+      "paper": "shidi"
+    },
+    {
+      "number": 38,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "兔和羚羊等食草动物获取食物时动作敏捷牛类有瘤胃可以",
+      "anchor_head": "选择了其他动物不吃的食物种类",
+      "paper": "shidi"
+    },
+    {
+      "number": 39,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "人才培养是循序渐进的过程需认识尊重人才成长规律坚持",
+      "anchor_head": "本题可从第二空入手由句意及“”可知所填词语应与“如",
+      "paper": "shidi"
+    },
+    {
+      "number": 43,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "推进中国式现代化是一个探索性事业还有许多未知领域需",
+      "anchor_head": "由“需要决不能”可知前后文构成相反相对关系",
+      "paper": "shidi"
+    },
+    {
+      "number": 45,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "当前改革发展任务繁重需要各级各部门和广大干部高质高",
+      "anchor_head": "需要各级各部门和广大干部高质高效地完成各项任务",
+      "paper": "shidi"
+    },
+    {
+      "number": 46,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "面对企业干部洁身自好只是最低要求担当作为才是责任所",
+      "anchor_head": "民营企业所遇到的困难和问题仍不少",
+      "paper": "shidi"
+    },
+    {
+      "number": 47,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "刺沙蓬也叫风滚草一株可以携带约20万粒种子在随风滚",
+      "anchor_head": "本题可从第二空入手刺沙蓬随风散落种子种子成长为新的",
+      "paper": "shidi"
+    },
+    {
+      "number": 48,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "借鉴各地耕保的好经验好做法可以少走弯路但不可将借鉴",
+      "anchor_head": "本题可从第三空入手由句意及“”可知所填词语应表达盲",
+      "paper": "shidi"
+    },
+    {
+      "number": 50,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "改进文风就要多写“短实新”的好文章“实”就是讲符合",
+      "anchor_head": "由“讲不讲”可知前后文构成相反相对关系",
+      "paper": "shidi"
+    },
+    {
+      "number": 52,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "在青藏高原高寒草甸的多年冻土区地下水或土壤水分迁移",
+      "anchor_head": "分析文段论述结构由“引起草地破碎化和地表裸露区增加",
+      "paper": "shidi"
+    },
+    {
+      "number": 53,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "相对于狭义的农业即种植业而言大农业是指广义的农业不",
+      "anchor_head": "空缺处位于文段中间所填句子应起到承上启下的作用",
+      "paper": "shidi"
+    },
+    {
+      "number": 54,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "将以下6个句子重新排列语序正确的一项是数字生命AI",
+      "anchor_head": "观察可知选项首句分别为②和⑤",
+      "paper": "shidi"
+    },
+    {
+      "number": 55,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "将以下6个句子重新排列语序正确的一项是严格执法与公",
+      "anchor_head": "观察选项首句分别为①和⑤",
+      "paper": "shidi"
+    },
+    {
+      "number": 56,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "相较于地球月球上氦3储量极为丰富据估算全月氦3换算",
+      "anchor_head": "A项文段仅提到“全月氦3换算储量高达110万吨”",
+      "paper": "shidi"
+    },
+    {
+      "number": 57,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "“微利惠民”是老年助餐行业的重要特点才能进一步扩大",
+      "anchor_head": "文段首句提出老年助餐机构经营困难的问题",
+      "paper": "shidi"
+    },
+    {
+      "number": 59,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "B",
+      "paper_stem_head": "如果一味沉湎于琐碎的日常事务缺乏大局观念和政治远见",
+      "anchor_head": "文段首句从反面论证提出要避免陷入事务主义",
+      "paper": "shidi"
+    },
+    {
+      "number": 60,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "A",
+      "paper_stem_head": "在一些科幻影片中大质量黑洞周身的光环令人印象深刻而",
+      "anchor_head": "文段首句引出黑洞周身光环的话题",
+      "paper": "shidi"
+    },
+    {
+      "number": 65,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "经济是肌体金融是血脉两者共生共荣唯有实体经济规模扩",
+      "anchor_head": "文段首先指出经济和金融共生共荣",
+      "paper": "shidi"
+    },
+    {
+      "number": 66,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "张某800开车从A地出发在AB两地之间往返行驶83",
+      "anchor_head": "设张某出发时的速度为v加速30后的速度为13v",
+      "paper": "shidi"
+    },
+    {
+      "number": 67,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "甲乙丙丁4个部门共有210名员工且甲部门员工数比丁",
+      "anchor_head": "乙部门员工全部分给丙丁部门后",
+      "paper": "shidi"
+    },
+    {
+      "number": 68,
+      "reason": "anchor mismatch: best similarity=0.15 below threshold",
+      "answer": "A",
+      "paper_stem_head": "化工商店出售200千克某种试剂前60千克打两折出售",
+      "anchor_head": "这批试剂分三部分销售",
+      "paper": "shidi"
+    },
+    {
+      "number": 69,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "某单位65名职工中拥有甲乙丙三项认证中至少一项的职",
+      "anchor_head": "拥有甲乙丙三项认证中至少一项",
+      "paper": "shidi"
+    },
+    {
+      "number": 70,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "某竞赛由5道次序固定的判断题组成参赛者起始为0分每",
+      "anchor_head": "要求答完每道题时当前的得分都不低于1分",
+      "paper": "shidi"
+    },
+    {
+      "number": 71,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "C",
+      "paper_stem_head": "某种机械由3个A模块和2个B模块组成甲车间每天可生",
+      "anchor_head": "生产40台机械需要40×3120个A模块",
+      "paper": "shidi"
+    },
+    {
+      "number": 73,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "甲船在A港正东n海里乙船在A港正南√3n海里两船相",
+      "anchor_head": "B点为甲船位置C点为乙船位置",
+      "paper": "shidi"
+    },
+    {
+      "number": 74,
+      "reason": "anchor mismatch: best similarity=0.15 below threshold",
+      "answer": "D",
+      "paper_stem_head": "小王计划在7天假期自学甲乙两门在线课程每门课程需要",
+      "anchor_head": "甲乙两门课程均需连学2整天",
+      "paper": "shidi"
+    },
+    {
+      "number": 76,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "从所给的四个选项中选择最合适的一个填入问号处使之呈",
+      "anchor_head": "题干图形均含有多个封闭区域",
+      "paper": "shidi"
+    },
+    {
+      "number": 77,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "从所给的四个选项中选择最合适的一个填入问号处使之呈",
+      "anchor_head": "题干图形的组成元素相同仅内部小图形",
+      "paper": "shidi"
+    },
+    {
+      "number": 78,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "从所给的四个选项中选择最合适的一个填入问号处使之呈",
+      "anchor_head": "题干图形组成元素相同仅部分小方块的颜色",
+      "paper": "shidi"
+    },
+    {
+      "number": 79,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "从所给的四个选项中选择最合适的一个填入问号处使之呈",
+      "anchor_head": "题干图形均是由3条线段组成的两个图形",
+      "paper": "shidi"
+    },
+    {
+      "number": 80,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "左边为给定的多面体现用经PQR三点的平面对其进行切",
+      "anchor_head": "经PQR三点的平面如下图所示",
+      "paper": "shidi"
+    },
+    {
+      "number": 81,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "下图为由4个黑色8个白色正方体粘接成的长方体问哪一",
+      "anchor_head": "题干长方体展开后相邻面中以公共边相接",
+      "paper": "shidi"
+    },
+    {
+      "number": 82,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "左边为由15个白色和3个灰色正方体组合而成的多面体",
+      "anchor_head": "将①和②分别进行翻转和旋转",
+      "paper": "shidi"
+    },
+    {
+      "number": 83,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "把下面的六个图形分为两类使每一类图形都有各自的共同",
+      "anchor_head": "题干图形均由黑白圆组成",
+      "paper": "shidi"
+    },
+    {
+      "number": 84,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "把下面的六个图形分为两类使每一类图形都有各自的共同",
+      "anchor_head": "题干图形均含有若干线条和一个黑色阴影",
+      "paper": "shidi"
+    },
+    {
+      "number": 85,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "把下面的六个图形分为两类使每一类图形都有各自的共同",
+      "anchor_head": "题干图形均由直线构成且图形③⑤的笔画数",
+      "paper": "shidi"
+    },
+    {
+      "number": 90,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "A",
+      "paper_stem_head": "形象史学是指把形与象作为主要材料用以研究历史的一门",
+      "anchor_head": "形象史学的定义要点",
+      "paper": "shidi"
+    },
+    {
+      "number": 94,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "企业薪酬策略主要包括两个方面一是体现企业支付标准的",
+      "anchor_head": "薪酬水平策略定义的关键信息",
+      "paper": "shidi"
+    },
+    {
+      "number": 95,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "断取是修辞格的一种引用词语时只截取其中部分字眼的意",
+      "anchor_head": "断取定义的关键信息",
+      "paper": "shidi"
+    },
+    {
+      "number": 97,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "将以上6个句子重新排列语序正确的一项是绝缘材料发展",
+      "anchor_head": "逐客令和挡箭牌均是根据功能命名",
+      "paper": "shidi"
+    },
+    {
+      "number": 98,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "由于缺乏现代的科学技术手段古代的城市排水系统将依托",
+      "anchor_head": "网络直播具有直观性和即时性的特点",
+      "paper": "shidi"
+    },
+    {
+      "number": 99,
+      "reason": "anchor mismatch: best similarity=0.06 below threshold",
+      "answer": "C",
+      "paper_stem_head": "织纹螺这段文字没有解释下列哪一问题",
+      "anchor_head": "首先群众来访接着窗口接访最后调查督办",
+      "paper": "shidi"
+    },
+    {
+      "number": 100,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "D",
+      "paper_stem_head": "小张每周一到周四夜跑周五到周日休息已知某年2月他夜",
+      "anchor_head": "稀树草原可能具有物种多样性的特点",
+      "paper": "shidi"
+    },
+    {
+      "number": 101,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "一个长方体零件最大面的面积是最小面的3倍次大面的面",
+      "anchor_head": "研究者的观点提高团队业绩的最佳途径是减少团队人数",
+      "paper": "shidi"
+    },
+    {
+      "number": 102,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "考古人员发现了近300枚16亿年前的丝状体生物化石",
+      "anchor_head": "这些丝状体很可能属于真核生物",
+      "paper": "shidi"
+    },
+    {
+      "number": 103,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "某企业对于如何进行产教融合形成如下两种方案一是“做",
+      "anchor_head": "做浅在学校设立冠名班和订单班",
+      "paper": "shidi"
+    },
+    {
+      "number": 104,
+      "reason": "anchor mismatch: best similarity=0.25 below threshold",
+      "answer": "C",
+      "paper_stem_head": "我军军语惯于将数字12790变读为幺两拐勾洞这些数",
+      "anchor_head": "在军语中将12790这些数字变读",
+      "paper": "shidi"
+    },
+    {
+      "number": 105,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "都国鄙邑四个词在古汉语中表示不同的概念下列图示对上",
+      "anchor_head": "相对孤立的海山存在独特的生物群落",
+      "paper": "shidi"
+    },
+    {
+      "number": 106,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "细胞化学是研究细胞的化学成分及其在细胞活动中的变化",
+      "anchor_head": "根据条件1可知丁一定在第二季度",
+      "paper": "shidi"
+    },
+    {
+      "number": 107,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "收集罪证提取指纹透明胶",
+      "anchor_head": "如果第二季度只安排2次会议",
+      "paper": "shidi"
+    },
+    {
+      "number": 108,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "D",
+      "paper_stem_head": "行政文书对于相当于对于汇编语言",
+      "anchor_head": "丙戊安排在第四季度",
+      "paper": "shidi"
+    },
+    {
+      "number": 109,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "A",
+      "paper_stem_head": "某桃园5月份对其种植的蟠桃进行套袋6月份桃果出现异",
+      "anchor_head": "如果每个季度至少安排1次会议",
+      "paper": "shidi"
+    },
+    {
+      "number": 115,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "以下饼状图中最能准确反映20192023年五批次公",
+      "anchor_head": "20192023年五批次公示的专精特新小巨人上市企",
+      "paper": "shidi"
+    },
+    {
+      "number": 120,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "D",
+      "paper_stem_head": "以下柱状图反映了2021年2022年和2023年Z",
+      "anchor_head": "增长量现期值基期值观察柱状图可知",
+      "paper": "shidi"
+    },
+    {
+      "number": 122,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "以下城市中2023年12月平均每场电影观众人次数最",
+      "anchor_head": "2023年12月武汉平均每场电影观众人次为",
+      "paper": "shidi"
+    },
+    {
+      "number": 124,
+      "reason": "anchor mismatch: best similarity=0.25 below threshold",
+      "answer": "A",
+      "paper_stem_head": "如某月北京的电影总放映场次和平均每场座位数与202",
+      "anchor_head": "上座率观众人次座位数×100",
+      "paper": "shidi"
+    },
+    {
+      "number": 125,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "关于资料中城市2023年12月电影票房状况能够从上",
+      "anchor_head": "2023年12月总观众人次最多的三个城市是北京",
+      "paper": "shidi"
+    },
+    {
+      "number": 126,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "以下饼状图中最能准确反映2023年第一季度我国外贸",
+      "anchor_head": "2023年第一季度我国外贸进出口总额为989万亿元",
+      "paper": "shidi"
+    },
+    {
+      "number": 130,
+      "reason": "anchor mismatch: best similarity=0.15 below threshold",
+      "answer": "B",
+      "paper_stem_head": "关于我国外贸进出口状况能够从上述资料中推出的是",
+      "anchor_head": "第二段中只给出2023年3月东部地区高技术产品出口",
+      "paper": "shidi"
+    },
+    {
+      "number": 2,
+      "reason": "anchor mismatch: best similarity=0.15 below threshold",
+      "answer": "C",
+      "paper_stem_head": "习近平总书记指出问题是事物矛盾的表现形式我们强调增",
+      "anchor_head": "矛盾的普遍性是指矛盾存在于一切事物中",
+      "paper": "shengji"
+    },
+    {
+      "number": 3,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "关于马克思主义政治经济学下列说法正确的是",
+      "anchor_head": "决定商品价值量的不是生产商品的个别劳动时间",
+      "paper": "shengji"
+    },
+    {
+      "number": 4,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "习近平总书记指出中国共产党人的理想信念建立在马克思",
+      "anchor_head": "真理尺度与价值尺度是紧密联系不可分割的辩证统一关系",
+      "paper": "shengji"
+    },
+    {
+      "number": 8,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "党的十八大以来在推进全面从严治党的伟大实践中我们党",
+      "anchor_head": "2024年1月8日至10日中国共产党第二十届中央纪",
+      "paper": "shengji"
+    },
+    {
+      "number": 9,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "习近平总书记指出要加强科技基础能力建设深化科技体制",
+      "anchor_head": "2024年7月18日中国共产党第二十届中央委员会第",
+      "paper": "shengji"
+    },
+    {
+      "number": 15,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "党的二十届三中全会提出健全绿色低碳发展机制实施支持",
+      "anchor_head": "中共中央关于进一步全面深化改革推进中国式现代化的决",
+      "paper": "shengji"
+    },
+    {
+      "number": 18,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "习近平总书记强调加强党风廉政建设一体推进不敢腐不能",
+      "anchor_head": "中国共产党纪律处分条例2024年第六章“对违反政治",
+      "paper": "shengji"
+    },
+    {
+      "number": 20,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "西部地区在全国改革发展稳定大局中举足轻重要一以贯之",
+      "anchor_head": "2024年4月23日习近平总书记在重庆主持召开新时",
+      "paper": "shengji"
+    },
+    {
+      "number": 21,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "国家主席习近平在二〇二四年新年贺词中指出“良渚二里",
+      "anchor_head": "良渚文化是环钱塘江分布的以黑陶和磨光玉器为代表的新",
+      "paper": "shengji"
+    },
+    {
+      "number": 26,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "纪录片何以中国讲述了多元一体中华民族的形成和中华文",
+      "anchor_head": "该项描写了秦始皇统一六国后的巡游路线",
+      "paper": "shengji"
+    },
+    {
+      "number": 27,
+      "reason": "anchor mismatch: best similarity=0.30 below threshold",
+      "answer": "A",
+      "paper_stem_head": "下列物理学家与其提出的著名观点对应错误的是",
+      "anchor_head": "德国物理学家普朗克提出能量子假说",
+      "paper": "shengji"
+    },
+    {
+      "number": 28,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "下列人物所说的话与经济有关其中说法正确的是",
+      "anchor_head": "M₁指的是狭义货币供应量包括流通中货币M₀单位活期",
+      "paper": "shengji"
+    },
+    {
+      "number": 29,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "在关于真菌的科普文章中下列表述存在错误的是",
+      "anchor_head": "酵母菌是一种单细胞真菌可用于发酵制作果酒面包等",
+      "paper": "shengji"
+    },
+    {
+      "number": 30,
+      "reason": "anchor mismatch: best similarity=0.29 below threshold",
+      "answer": "D",
+      "paper_stem_head": "关于盆地地形下列说法错误的是",
+      "anchor_head": "盆地容易汇聚周边地区的水流和沉积物将大量的生物遗体",
+      "paper": "shengji"
+    },
+    {
+      "number": 31,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "某博物馆想办一期关于中国自然与人文的地理展览开设几",
+      "anchor_head": "长江是中国第一大河发源于青藏高原的唐古拉山脉",
+      "paper": "shengji"
+    },
+    {
+      "number": 33,
+      "reason": "anchor mismatch: best similarity=0.25 below threshold",
+      "answer": "B",
+      "paper_stem_head": "下列与纤维材料有关的说法错误的是",
+      "anchor_head": "玻璃纤维是一种性能优异的无机非金属材料",
+      "paper": "shengji"
+    },
+    {
+      "number": 34,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "D",
+      "paper_stem_head": "下列三国演义中的回目按照先后顺序排列正确的是",
+      "anchor_head": "①出自三国演义第四十八回讲述的是赤壁之战前",
+      "paper": "shengji"
+    },
+    {
+      "number": 35,
+      "reason": "anchor mismatch: best similarity=0.19 below threshold",
+      "answer": "A",
+      "paper_stem_head": "下列与船只行驶有关的说法错误的是",
+      "anchor_head": "皮筏从高处顺流而下的过程中重力势能随高度降低而减少",
+      "paper": "shengji"
+    },
+    {
+      "number": 37,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "营造法式刊行之后两浙一带的建筑技术借助官方的推广完",
+      "anchor_head": "完全融入了中国古典木构建筑技术的主流",
+      "paper": "shengji"
+    },
+    {
+      "number": 38,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "兔和羚羊等食草动物获取食物时动作敏捷牛类有瘤胃可以",
+      "anchor_head": "选择了其他动物不吃的食物种类",
+      "paper": "shengji"
+    },
+    {
+      "number": 39,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "人才培养是循序渐进的过程需认识尊重人才成长规律坚持",
+      "anchor_head": "本题可从第二空入手由句意及“”可知所填词语应与“如",
+      "paper": "shengji"
+    },
+    {
+      "number": 43,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "推进中国式现代化是一个探索性事业还有许多未知领域需",
+      "anchor_head": "由“需要决不能”可知前后文构成相反相对关系",
+      "paper": "shengji"
+    },
+    {
+      "number": 45,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "当前改革发展任务繁重需要各级各部门和广大干部高质高",
+      "anchor_head": "需要各级各部门和广大干部高质高效地完成各项任务",
+      "paper": "shengji"
+    },
+    {
+      "number": 46,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "面对企业干部洁身自好只是最低要求担当作为才是责任所",
+      "anchor_head": "民营企业所遇到的困难和问题仍不少",
+      "paper": "shengji"
+    },
+    {
+      "number": 47,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "刺沙蓬也叫风滚草一株可以携带约20万粒种子在随风滚",
+      "anchor_head": "本题可从第二空入手刺沙蓬随风散落种子种子成长为新的",
+      "paper": "shengji"
+    },
+    {
+      "number": 48,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "借鉴各地耕保的好经验好做法可以少走弯路但不可将借鉴",
+      "anchor_head": "本题可从第三空入手由句意及“”可知所填词语应表达盲",
+      "paper": "shengji"
+    },
+    {
+      "number": 50,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "改进文风就要多写“短实新”的好文章“实”就是讲符合",
+      "anchor_head": "由“讲不讲”可知前后文构成相反相对关系",
+      "paper": "shengji"
+    },
+    {
+      "number": 52,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "在青藏高原高寒草甸的多年冻土区地下水或土壤水分迁移",
+      "anchor_head": "分析文段论述结构由“引起草地破碎化和地表裸露区增加",
+      "paper": "shengji"
+    },
+    {
+      "number": 53,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "相对于狭义的农业即种植业而言大农业是指广义的农业不",
+      "anchor_head": "空缺处位于文段中间所填句子应起到承上启下的作用",
+      "paper": "shengji"
+    },
+    {
+      "number": 54,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "将以下6个句子重新排列语序正确的一项是数字生命AI",
+      "anchor_head": "观察可知选项首句分别为②和⑤",
+      "paper": "shengji"
+    },
+    {
+      "number": 55,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "将以下6个句子重新排列语序正确的一项是严格执法与公",
+      "anchor_head": "观察选项首句分别为①和⑤",
+      "paper": "shengji"
+    },
+    {
+      "number": 56,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "相较于地球月球上氦3储量极为丰富据估算全月氦3换算",
+      "anchor_head": "A项文段仅提到“全月氦3换算储量高达110万吨”",
+      "paper": "shengji"
+    },
+    {
+      "number": 57,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "“微利惠民”是老年助餐行业的重要特点才能进一步扩大",
+      "anchor_head": "文段首句提出老年助餐机构经营困难的问题",
+      "paper": "shengji"
+    },
+    {
+      "number": 59,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "B",
+      "paper_stem_head": "如果一味沉湎于琐碎的日常事务缺乏大局观念和政治远见",
+      "anchor_head": "文段首句从反面论证提出要避免陷入事务主义",
+      "paper": "shengji"
+    },
+    {
+      "number": 60,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "A",
+      "paper_stem_head": "在一些科幻影片中大质量黑洞周身的光环令人印象深刻而",
+      "anchor_head": "文段首句引出黑洞周身光环的话题",
+      "paper": "shengji"
+    },
+    {
+      "number": 65,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "经济是肌体金融是血脉两者共生共荣唯有实体经济规模扩",
+      "anchor_head": "文段首先指出经济和金融共生共荣",
+      "paper": "shengji"
+    },
+    {
+      "number": 66,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "运送一批货物第一趟派出10辆大车第二趟又增派15辆",
+      "anchor_head": "设张某出发时的速度为v加速30后的速度为13v",
+      "paper": "shengji"
+    },
+    {
+      "number": 67,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "某企业今年3月节电量是1月的12倍2月的15倍已知",
+      "anchor_head": "乙部门员工全部分给丙丁部门后",
+      "paper": "shengji"
+    },
+    {
+      "number": 68,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "甲和乙从环形跑道的同一点出发向相反方向匀速慢跑乙的",
+      "anchor_head": "这批试剂分三部分销售",
+      "paper": "shengji"
+    },
+    {
+      "number": 69,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "A",
+      "paper_stem_head": "某研发小组员工中60的人参与了A项目45的人参与了",
+      "anchor_head": "拥有甲乙丙三项认证中至少一项",
+      "paper": "shengji"
+    },
+    {
+      "number": 70,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "2024年甲乙丙3人的年龄之和与2034年甲的年龄",
+      "anchor_head": "要求答完每道题时当前的得分都不低于1分",
+      "paper": "shengji"
+    },
+    {
+      "number": 71,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "甲乙丙3台收割机每小时均能收割2亩小麦3台机器上午",
+      "anchor_head": "生产40台机械需要40×3120个A模块",
+      "paper": "shengji"
+    },
+    {
+      "number": 72,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "某门店星期一至星期五的日营业额均为1万元星期六和星",
+      "anchor_head": "设王的年龄为x岁则张的年龄为",
+      "paper": "shengji"
+    },
+    {
+      "number": 73,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "A",
+      "paper_stem_head": "某种商品在定价基础上打八折销售打折之前每天卖40件",
+      "anchor_head": "B点为甲船位置C点为乙船位置",
+      "paper": "shengji"
+    },
+    {
+      "number": 74,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "将甲乙两种设备各5件全部分配给ABC三个车间要求每",
+      "anchor_head": "甲乙两门课程均需连学2整天",
+      "paper": "shengji"
+    },
+    {
+      "number": 75,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "D",
+      "paper_stem_head": "某厂区如图所示其中ABCD为矩形ABEF为直角梯形",
+      "anchor_head": "容器的截面图如下注水1分钟后液面高度",
+      "paper": "shengji"
+    },
+    {
+      "number": 76,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "某竞赛由5道次序固定的判断题组成参赛者起始为0分每",
+      "anchor_head": "要求答完每道题时当前的得分都不低于1分",
+      "paper": "shengji"
+    },
+    {
+      "number": 77,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "C",
+      "paper_stem_head": "某种机械由3个A模块和2个B模块组成甲车间每天可生",
+      "anchor_head": "生产40台机械需要40×3120个A模块",
+      "paper": "shengji"
+    },
+    {
+      "number": 78,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "甲船在A港正东n海里乙船在A港正南√3n海里两船相",
+      "anchor_head": "B点为甲船位置C点为乙船位置",
+      "paper": "shengji"
+    },
+    {
+      "number": 79,
+      "reason": "anchor mismatch: best similarity=0.15 below threshold",
+      "answer": "D",
+      "paper_stem_head": "小王计划在7天假期自学甲乙两门在线课程每门课程需要",
+      "anchor_head": "甲乙两门课程均需连学2整天",
+      "paper": "shengji"
+    },
+    {
+      "number": 81,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "从所给的四个选项中选择最合适的一个填入问号处使之呈",
+      "anchor_head": "题干图形均含有多个封闭区域",
+      "paper": "shengji"
+    },
+    {
+      "number": 82,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "左边为给定的多面体现用经PQR三点的平面对其进行切",
+      "anchor_head": "经PQR三点的平面如下图所示",
+      "paper": "shengji"
+    },
+    {
+      "number": 83,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "下图为由4个黑色8个白色正方体粘接成的长方体问哪一",
+      "anchor_head": "题干长方体展开后相邻面中以公共边相接",
+      "paper": "shengji"
+    },
+    {
+      "number": 84,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "左边为由15个白色和3个灰色正方体组合而成的多面体",
+      "anchor_head": "将①和②分别进行翻转和旋转",
+      "paper": "shengji"
+    },
+    {
+      "number": 85,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "把下面的六个图形分为两类使每一类图形都有各自的共同",
+      "anchor_head": "题干图形均由黑白圆组成",
+      "paper": "shengji"
+    },
+    {
+      "number": 90,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "A",
+      "paper_stem_head": "形象史学是指把形与象作为主要材料用以研究历史的一门",
+      "anchor_head": "形象史学的定义要点",
+      "paper": "shengji"
+    },
+    {
+      "number": 94,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "企业薪酬策略主要包括两个方面一是体现企业支付标准的",
+      "anchor_head": "薪酬水平策略定义的关键信息",
+      "paper": "shengji"
+    },
+    {
+      "number": 95,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "断取是修辞格的一种引用词语时只截取其中部分字眼的意",
+      "anchor_head": "断取定义的关键信息",
+      "paper": "shengji"
+    },
+    {
+      "number": 97,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "考古人员发现了近300枚16亿年前的丝状体生物化石",
+      "anchor_head": "这些丝状体很可能属于真核生物",
+      "paper": "shengji"
+    },
+    {
+      "number": 98,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "某企业对于如何进行产教融合形成如下两种方案一是“做",
+      "anchor_head": "做浅在学校设立冠名班和订单班",
+      "paper": "shengji"
+    },
+    {
+      "number": 99,
+      "reason": "anchor mismatch: best similarity=0.25 below threshold",
+      "answer": "C",
+      "paper_stem_head": "我军军语惯于将数字12790变读为幺两拐勾洞这些数",
+      "anchor_head": "在军语中将12790这些数字变读",
+      "paper": "shengji"
+    },
+    {
+      "number": 100,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "都国鄙邑四个词在古汉语中表示不同的概念下列图示对上",
+      "anchor_head": "相对孤立的海山存在独特的生物群落",
+      "paper": "shengji"
+    },
+    {
+      "number": 101,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "细胞化学是研究细胞的化学成分及其在细胞活动中的变化",
+      "anchor_head": "根据条件1可知丁一定在第二季度",
+      "paper": "shengji"
+    },
+    {
+      "number": 102,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "收集罪证提取指纹透明胶",
+      "anchor_head": "如果第二季度只安排2次会议",
+      "paper": "shengji"
+    },
+    {
+      "number": 103,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "D",
+      "paper_stem_head": "行政文书对于相当于对于汇编语言",
+      "anchor_head": "丙戊安排在第四季度",
+      "paper": "shengji"
+    },
+    {
+      "number": 104,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "A",
+      "paper_stem_head": "某桃园5月份对其种植的蟠桃进行套袋6月份桃果出现异",
+      "anchor_head": "如果每个季度至少安排1次会议",
+      "paper": "shengji"
+    },
+    {
+      "number": 106,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "将以上6个句子重新排列语序正确的一项是绝缘材料发展",
+      "anchor_head": "逐客令和挡箭牌均是根据功能命名",
+      "paper": "shengji"
+    },
+    {
+      "number": 107,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "由于缺乏现代的科学技术手段古代的城市排水系统将依托",
+      "anchor_head": "网络直播具有直观性和即时性的特点",
+      "paper": "shengji"
+    },
+    {
+      "number": 108,
+      "reason": "anchor mismatch: best similarity=0.06 below threshold",
+      "answer": "C",
+      "paper_stem_head": "织纹螺这段文字没有解释下列哪一问题",
+      "anchor_head": "首先群众来访接着窗口接访最后调查督办",
+      "paper": "shengji"
+    },
+    {
+      "number": 109,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "D",
+      "paper_stem_head": "小张每周一到周四夜跑周五到周日休息已知某年2月他夜",
+      "anchor_head": "稀树草原可能具有物种多样性的特点",
+      "paper": "shengji"
+    },
+    {
+      "number": 110,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "一个长方体零件最大面的面积是最小面的3倍次大面的面",
+      "anchor_head": "研究者的观点提高团队业绩的最佳途径是减少团队人数",
+      "paper": "shengji"
+    },
+    {
+      "number": 112,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "随着通货膨胀的蔓延H国电子企业主要产品的原材料价格",
+      "anchor_head": "题干结论H国电子企业原材料价格居高不下将",
+      "paper": "shengji"
+    },
+    {
+      "number": 114,
+      "reason": "anchor mismatch: best similarity=0.15 below threshold",
+      "answer": "A",
+      "paper_stem_head": "红霉素是一种抗生素最早从放线菌糖多孢红霉菌的分泌物",
+      "anchor_head": "研究者的推测文蛤合成红霉素的能力应当源于",
+      "paper": "shengji"
+    },
+    {
+      "number": 115,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "D",
+      "paper_stem_head": "甲乙丙丁戊己庚7人报名参加象棋比赛对于比赛结果大家",
+      "anchor_head": "题干中三个条件均涉及戊和己可由此入手",
+      "paper": "shengji"
+    },
+    {
+      "number": 120,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "以下饼状图中最能准确反映20192023年五批次公",
+      "anchor_head": "20192023年五批次公示的专精特新小巨人上市企",
+      "paper": "shengji"
+    },
+    {
+      "number": 125,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "D",
+      "paper_stem_head": "以下柱状图反映了2021年2022年和2023年Z",
+      "anchor_head": "增长量现期值基期值观察柱状图可知",
+      "paper": "shengji"
+    },
+    {
+      "number": 127,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "以下城市中2023年12月平均每场电影观众人次数最",
+      "anchor_head": "2023年12月武汉平均每场电影观众人次为",
+      "paper": "shengji"
+    },
+    {
+      "number": 129,
+      "reason": "anchor mismatch: best similarity=0.25 below threshold",
+      "answer": "A",
+      "paper_stem_head": "如某月北京的电影总放映场次和平均每场座位数与202",
+      "anchor_head": "上座率观众人次座位数×100",
+      "paper": "shengji"
+    },
+    {
+      "number": 130,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "关于资料中城市2023年12月电影票房状况能够从上",
+      "anchor_head": "2023年12月总观众人次最多的三个城市是北京",
+      "paper": "shengji"
+    },
+    {
+      "number": 131,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "以下饼状图中最能准确反映2023年第一季度我国外贸",
+      "anchor_head": "2023年第一季度我国外贸进出口总额为989万亿元",
+      "paper": "shengji"
+    },
+    {
+      "number": 135,
+      "reason": "anchor mismatch: best similarity=0.15 below threshold",
+      "answer": "B",
+      "paper_stem_head": "关于我国外贸进出口状况能够从上述资料中推出的是",
+      "anchor_head": "第二段中只给出2023年3月东部地区高技术产品出口",
+      "paper": "shengji"
+    },
+    {
+      "number": 2,
+      "reason": "anchor mismatch: best similarity=0.15 below threshold",
+      "answer": "C",
+      "paper_stem_head": "习近平总书记指出问题是事物矛盾的表现形式我们强调增",
+      "anchor_head": "矛盾的普遍性是指矛盾存在于一切事物中",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 3,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "关于马克思主义政治经济学下列说法正确的是",
+      "anchor_head": "决定商品价值量的不是生产商品的个别劳动时间",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 4,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "习近平总书记指出中国共产党人的理想信念建立在马克思",
+      "anchor_head": "真理尺度与价值尺度是紧密联系不可分割的辩证统一关系",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 8,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "党的十八大以来在推进全面从严治党的伟大实践中我们党",
+      "anchor_head": "2024年1月8日至10日中国共产党第二十届中央纪",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 9,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "习近平总书记指出要加强科技基础能力建设深化科技体制",
+      "anchor_head": "2024年7月18日中国共产党第二十届中央委员会第",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 15,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "党的二十届三中全会提出健全绿色低碳发展机制实施支持",
+      "anchor_head": "中共中央关于进一步全面深化改革推进中国式现代化的决",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 18,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "习近平总书记强调加强党风廉政建设一体推进不敢腐不能",
+      "anchor_head": "中国共产党纪律处分条例2024年第六章“对违反政治",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 20,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "西部地区在全国改革发展稳定大局中举足轻重要一以贯之",
+      "anchor_head": "2024年4月23日习近平总书记在重庆主持召开新时",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 21,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "国家主席习近平在二〇二四年新年贺词中指出“良渚二里",
+      "anchor_head": "良渚文化是环钱塘江分布的以黑陶和磨光玉器为代表的新",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 26,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "纪录片何以中国讲述了多元一体中华民族的形成和中华文",
+      "anchor_head": "该项描写了秦始皇统一六国后的巡游路线",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 27,
+      "reason": "anchor mismatch: best similarity=0.30 below threshold",
+      "answer": "A",
+      "paper_stem_head": "下列物理学家与其提出的著名观点对应错误的是",
+      "anchor_head": "德国物理学家普朗克提出能量子假说",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 28,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "下列人物所说的话与经济有关其中说法正确的是",
+      "anchor_head": "M₁指的是狭义货币供应量包括流通中货币M₀单位活期",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 29,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "在关于真菌的科普文章中下列表述存在错误的是",
+      "anchor_head": "酵母菌是一种单细胞真菌可用于发酵制作果酒面包等",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 30,
+      "reason": "anchor mismatch: best similarity=0.29 below threshold",
+      "answer": "D",
+      "paper_stem_head": "关于盆地地形下列说法错误的是",
+      "anchor_head": "盆地容易汇聚周边地区的水流和沉积物将大量的生物遗体",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 31,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "某博物馆想办一期关于中国自然与人文的地理展览开设几",
+      "anchor_head": "长江是中国第一大河发源于青藏高原的唐古拉山脉",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 33,
+      "reason": "anchor mismatch: best similarity=0.25 below threshold",
+      "answer": "B",
+      "paper_stem_head": "下列与纤维材料有关的说法错误的是",
+      "anchor_head": "玻璃纤维是一种性能优异的无机非金属材料",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 34,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "D",
+      "paper_stem_head": "下列三国演义中的回目按照先后顺序排列正确的是",
+      "anchor_head": "①出自三国演义第四十八回讲述的是赤壁之战前",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 35,
+      "reason": "anchor mismatch: best similarity=0.19 below threshold",
+      "answer": "A",
+      "paper_stem_head": "下列与船只行驶有关的说法错误的是",
+      "anchor_head": "皮筏从高处顺流而下的过程中重力势能随高度降低而减少",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 37,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "营造法式刊行之后两浙一带的建筑技术借助官方的推广完",
+      "anchor_head": "完全融入了中国古典木构建筑技术的主流",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 38,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "兔和羚羊等食草动物获取食物时动作敏捷牛类有瘤胃可以",
+      "anchor_head": "选择了其他动物不吃的食物种类",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 39,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "人才培养是循序渐进的过程需认识尊重人才成长规律坚持",
+      "anchor_head": "本题可从第二空入手由句意及“”可知所填词语应与“如",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 43,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "推进中国式现代化是一个探索性事业还有许多未知领域需",
+      "anchor_head": "由“需要决不能”可知前后文构成相反相对关系",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 45,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "当前改革发展任务繁重需要各级各部门和广大干部高质高",
+      "anchor_head": "需要各级各部门和广大干部高质高效地完成各项任务",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 46,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "面对企业干部洁身自好只是最低要求担当作为才是责任所",
+      "anchor_head": "民营企业所遇到的困难和问题仍不少",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 47,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "刺沙蓬也叫风滚草一株可以携带约20万粒种子在随风滚",
+      "anchor_head": "本题可从第二空入手刺沙蓬随风散落种子种子成长为新的",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 48,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "借鉴各地耕保的好经验好做法可以少走弯路但不可将借鉴",
+      "anchor_head": "本题可从第三空入手由句意及“”可知所填词语应表达盲",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 50,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "改进文风就要多写“短实新”的好文章“实”就是讲符合",
+      "anchor_head": "由“讲不讲”可知前后文构成相反相对关系",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 52,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "在青藏高原高寒草甸的多年冻土区地下水或土壤水分迁移",
+      "anchor_head": "分析文段论述结构由“引起草地破碎化和地表裸露区增加",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 53,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "相对于狭义的农业即种植业而言大农业是指广义的农业不",
+      "anchor_head": "空缺处位于文段中间所填句子应起到承上启下的作用",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 54,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "将以下6个句子重新排列语序正确的一项是数字生命AI",
+      "anchor_head": "观察可知选项首句分别为②和⑤",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 55,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "将以下6个句子重新排列语序正确的一项是严格执法与公",
+      "anchor_head": "观察选项首句分别为①和⑤",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 56,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "相较于地球月球上氦3储量极为丰富据估算全月氦3换算",
+      "anchor_head": "A项文段仅提到“全月氦3换算储量高达110万吨”",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 57,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "“微利惠民”是老年助餐行业的重要特点才能进一步扩大",
+      "anchor_head": "文段首句提出老年助餐机构经营困难的问题",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 59,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "B",
+      "paper_stem_head": "如果一味沉湎于琐碎的日常事务缺乏大局观念和政治远见",
+      "anchor_head": "文段首句从反面论证提出要避免陷入事务主义",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 60,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "A",
+      "paper_stem_head": "在一些科幻影片中大质量黑洞周身的光环令人印象深刻而",
+      "anchor_head": "文段首句引出黑洞周身光环的话题",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 65,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "经济是肌体金融是血脉两者共生共荣唯有实体经济规模扩",
+      "anchor_head": "文段首先指出经济和金融共生共荣",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 66,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "张某800开车从A地出发在AB两地之间往返行驶83",
+      "anchor_head": "设张某出发时的速度为v加速30后的速度为13v",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 67,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "甲乙丙丁4个部门共有210名员工且甲部门员工数比丁",
+      "anchor_head": "乙部门员工全部分给丙丁部门后",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 68,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "D",
+      "paper_stem_head": "小张每周一到周四夜跑周五到周日休息已知某年2月他夜",
+      "anchor_head": "稀树草原可能具有物种多样性的特点",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 69,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "某单位65名职工中拥有甲乙丙三项认证中至少一项的职",
+      "anchor_head": "拥有甲乙丙三项认证中至少一项",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 70,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "某竞赛由5道次序固定的判断题组成参赛者起始为0分每",
+      "anchor_head": "要求答完每道题时当前的得分都不低于1分",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 71,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "一个长方体零件最大面的面积是最小面的3倍次大面的面",
+      "anchor_head": "研究者的观点提高团队业绩的最佳途径是减少团队人数",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 73,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "甲船在A港正东n海里乙船在A港正南√3n海里两船相",
+      "anchor_head": "B点为甲船位置C点为乙船位置",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 74,
+      "reason": "anchor mismatch: best similarity=0.15 below threshold",
+      "answer": "D",
+      "paper_stem_head": "小王计划在7天假期自学甲乙两门在线课程每门课程需要",
+      "anchor_head": "甲乙两门课程均需连学2整天",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 76,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "从所给的四个选项中选择最合适的一个填入问号处使之呈",
+      "anchor_head": "题干图形均含有多个封闭区域",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 77,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "从所给的四个选项中选择最合适的一个填入问号处使之呈",
+      "anchor_head": "题干图形的组成元素相同仅内部小图形",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 78,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "从所给的四个选项中选择最合适的一个填入问号处使之呈",
+      "anchor_head": "题干图形组成元素相同仅部分小方块的颜色",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 79,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "从所给的四个选项中选择最合适的一个填入问号处使之呈",
+      "anchor_head": "题干图形均是由3条线段组成的两个图形",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 80,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "左边为给定的多面体现用经PQR三点的平面对其进行切",
+      "anchor_head": "经PQR三点的平面如下图所示",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 81,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "下图为由4个黑色8个白色正方体粘接成的长方体问哪一",
+      "anchor_head": "题干长方体展开后相邻面中以公共边相接",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 82,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "左边为由15个白色和3个灰色正方体组合而成的多面体",
+      "anchor_head": "将①和②分别进行翻转和旋转",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 83,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "把下面的六个图形分为两类使每一类图形都有各自的共同",
+      "anchor_head": "题干图形均由黑白圆组成",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 84,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "把下面的六个图形分为两类使每一类图形都有各自的共同",
+      "anchor_head": "题干图形均含有若干线条和一个黑色阴影",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 85,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "把下面的六个图形分为两类使每一类图形都有各自的共同",
+      "anchor_head": "题干图形均由直线构成且图形③⑤的笔画数",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 90,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "A",
+      "paper_stem_head": "形象史学是指把形与象作为主要材料用以研究历史的一门",
+      "anchor_head": "形象史学的定义要点",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 94,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "企业薪酬策略主要包括两个方面一是体现企业支付标准的",
+      "anchor_head": "薪酬水平策略定义的关键信息",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 95,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "D",
+      "paper_stem_head": "断取是修辞格的一种引用词语时只截取其中部分字眼的意",
+      "anchor_head": "断取定义的关键信息",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 97,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "将以上6个句子重新排列语序正确的一项是绝缘材料发展",
+      "anchor_head": "逐客令和挡箭牌均是根据功能命名",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 98,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "由于缺乏现代的科学技术手段古代的城市排水系统将依托",
+      "anchor_head": "网络直播具有直观性和即时性的特点",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 99,
+      "reason": "anchor mismatch: best similarity=0.06 below threshold",
+      "answer": "C",
+      "paper_stem_head": "织纹螺这段文字没有解释下列哪一问题",
+      "anchor_head": "首先群众来访接着窗口接访最后调查督办",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 100,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "小张每周一到周四夜跑周五到周日休息已知某年2月他夜",
+      "anchor_head": "假设为平年则2月和3月共有283159",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 102,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "考古人员发现了近300枚16亿年前的丝状体生物化石",
+      "anchor_head": "这些丝状体很可能属于真核生物",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 103,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "B",
+      "paper_stem_head": "某企业对于如何进行产教融合形成如下两种方案一是“做",
+      "anchor_head": "做浅在学校设立冠名班和订单班",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 104,
+      "reason": "anchor mismatch: best similarity=0.25 below threshold",
+      "answer": "C",
+      "paper_stem_head": "我军军语惯于将数字12790变读为幺两拐勾洞这些数",
+      "anchor_head": "在军语中将12790这些数字变读",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 105,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "C",
+      "paper_stem_head": "都国鄙邑四个词在古汉语中表示不同的概念下列图示对上",
+      "anchor_head": "相对孤立的海山存在独特的生物群落",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 106,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "D",
+      "paper_stem_head": "细胞化学是研究细胞的化学成分及其在细胞活动中的变化",
+      "anchor_head": "根据条件1可知丁一定在第二季度",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 107,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "B",
+      "paper_stem_head": "收集罪证提取指纹透明胶",
+      "anchor_head": "如果第二季度只安排2次会议",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 108,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "D",
+      "paper_stem_head": "行政文书对于相当于对于汇编语言",
+      "anchor_head": "丙戊安排在第四季度",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 109,
+      "reason": "anchor mismatch: best similarity=0.00 below threshold",
+      "answer": "A",
+      "paper_stem_head": "某桃园5月份对其种植的蟠桃进行套袋6月份桃果出现异",
+      "anchor_head": "如果每个季度至少安排1次会议",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 115,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "B",
+      "paper_stem_head": "以下饼状图中最能准确反映20192023年五批次公",
+      "anchor_head": "20192023年五批次公示的专精特新小巨人上市企",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 120,
+      "reason": "anchor mismatch: best similarity=0.20 below threshold",
+      "answer": "D",
+      "paper_stem_head": "以下柱状图反映了2021年2022年和2023年Z",
+      "anchor_head": "增长量现期值基期值观察柱状图可知",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 122,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "A",
+      "paper_stem_head": "以下城市中2023年12月平均每场电影观众人次数最",
+      "anchor_head": "2023年12月武汉平均每场电影观众人次为",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 124,
+      "reason": "anchor mismatch: best similarity=0.25 below threshold",
+      "answer": "A",
+      "paper_stem_head": "如某月北京的电影总放映场次和平均每场座位数与202",
+      "anchor_head": "上座率观众人次座位数×100",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 125,
+      "reason": "anchor mismatch: best similarity=0.10 below threshold",
+      "answer": "C",
+      "paper_stem_head": "关于资料中城市2023年12月电影票房状况能够从上",
+      "anchor_head": "2023年12月总观众人次最多的三个城市是北京",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 126,
+      "reason": "anchor mismatch: best similarity=0.05 below threshold",
+      "answer": "A",
+      "paper_stem_head": "以下饼状图中最能准确反映2023年第一季度我国外贸",
+      "anchor_head": "2023年第一季度我国外贸进出口总额为989万亿元",
+      "paper": "xingzhengzhifa"
+    },
+    {
+      "number": 130,
+      "reason": "anchor mismatch: best similarity=0.15 below threshold",
+      "answer": "B",
+      "paper_stem_head": "关于我国外贸进出口状况能够从上述资料中推出的是",
+      "anchor_head": "第二段中只给出2023年3月东部地区高技术产品出口",
+      "paper": "xingzhengzhifa"
+    }
+  ]
+}

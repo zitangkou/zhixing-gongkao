@@ -6,7 +6,7 @@
     {
       "year": 2025,
       "subject": "xingce",
-      "status": "ready",
+      "status": "answers_ingested",
       "path": "2025/xingce",
       "papers": [
         {
@@ -33,7 +33,9 @@
         "figures": "2025/xingce/media/figures",
         "index": "2025/xingce/media/media_index.json"
       },
-      "notes": "以省级为全量主卷；市地/行政执法由共享题+差异题补全"
+      "notes": "2026-09-02 三卷答案+解析全部入库；234题anchor_pending（解析册格式限制，非答案错误）；校验器0错误",
+      "answer_coverage": "395/395 (100%)",
+      "answer_source": "answer_book_2026-09"
     },
     {
       "year": 2024,
@@ -61,15 +63,42 @@
         }
       ],
       "notes": "省级完整135；市地/行政执法以省级为底组装各125（官方应130，缺5题差异槽位替换）；media 为空（图形题不可用）；meta 登记4份源PDF但本机实际缺 20240124.pdf",
-      "media": { "pages": 0, "figures": 0 }
+      "media": {
+        "pages": 0,
+        "figures": 0
+      }
     },
     {
       "year": 2023,
       "subject": "xingce",
-      "status": "empty",
+      "status": "papers_assembled",
       "path": "2023/xingce",
-      "papers": [],
-      "notes": "仅初始化；源PDF已备4份(~/真题文档/2023)；meta 中 135/130/130 为未验证预设"
+      "papers": [
+        {
+          "id": "shengji",
+          "paper_type": "省级",
+          "file": "2023/xingce/papers/shengji.json",
+          "total_questions": 135
+        },
+        {
+          "id": "shidi",
+          "paper_type": "市地级",
+          "file": "2023/xingce/papers/shidi.json",
+          "total_questions": 130
+        },
+        {
+          "id": "xingzhengzhifa",
+          "paper_type": "行政执法类",
+          "file": "2023/xingce/papers/xingzhengzhifa.json",
+          "total_questions": 130
+        }
+      ],
+      "notes": "以市地级为主卷底版；省级/执法由共享+差异题补全；答案待接入",
+      "media": {
+        "pages": "2023/xingce/media/pages",
+        "figures": "2023/xingce/media/figures",
+        "index": "2023/xingce/media/media_index.json"
+      }
     },
     {
       "year": 2022,
