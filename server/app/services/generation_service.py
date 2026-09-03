@@ -25,6 +25,24 @@ _BATCH_FILES: list[dict[str, str]] = [
         "file": "qa_quantity_v1.json",
         "label": "数量关系 v1（工程/行程 10 题）",
     },
+    {
+        "batch_id": "batch-qa-verbal-v2",
+        "engine_type": "qa_verbal",
+        "file": "qa_verbal_v2.json",
+        "label": "言语理解 v2（选词/排序/标题 40 题）",
+    },
+    {
+        "batch_id": "batch-qa-judgment-v1",
+        "engine_type": "qa_judgment",
+        "file": "qa_judgment_v1.json",
+        "label": "判断推理 v1（定义/翻译/图形/论证/类比 35 题）",
+    },
+    {
+        "batch_id": "batch-qa-theory-v1",
+        "engine_type": "qa_theory",
+        "file": "qa_theory_v1.json",
+        "label": "常识/政治理论 v1（常识10+政治理论10 题）",
+    },
 ]
 
 # 模板元数据（从引擎脚本中提取的模板信息）
@@ -210,11 +228,16 @@ def _question_passed(q: dict[str, Any]) -> bool:
 
 
 def _validate_question(q: dict[str, Any]) -> dict[str, Any]:
-    """对单题执行自动校验，返回各项校验结果。"""
+    """对单题执行自动校验，返回各项校验结果。
+
+    引擎专属校验（双求解/计算树/干扰项）仅在对应字段存在时检查，
+    避免对言语/判断/常识等无此字段的引擎误判。
+    """
     checks: dict[str, bool] = {}
-    # 1. 双求解一致
-    dual = q.get("dual_solve", {})
-    checks["dual_solve_match"] = bool(dual.get("match", False))
+    # 1. 双求解一致（仅当有 dual_solve 字段时检查；兼容 match/passed 两种字段）
+    dual = q.get("dual_solve")
+    if dual is not None:
+        checks["dual_solve_match"] = bool(dual.get("match", False)) or bool(dual.get("passed", False))
     # 2. 选项互不相同
     options = q.get("options", {})
     values = [str(v).strip() for v in options.values()]
@@ -222,12 +245,22 @@ def _validate_question(q: dict[str, Any]) -> dict[str, Any]:
     # 3. 答案唯一且在选项中
     answer = q.get("answer", "")
     checks["answer_unique"] = bool(answer) and answer in options
-    # 4. 数据一致性（答案对应选项值与计算结果可对应）
-    checks["data_consistent"] = _check_data_consistent(q)
-    # 5. 干扰项可追溯（每个非正确选项都有 distractor 记录）
-    distractors = q.get("distractors", {})
-    non_correct = [k for k in options if k != answer]
-    checks["distractors_traced"] = all(k in distractors for k in non_correct)
+    # 4. 数据一致性（仅当有 dual_solve 或 calc_tree 时检查）
+    if dual is not None or q.get("calc_tree"):
+        checks["data_consistent"] = _check_data_consistent(q)
+    # 5. 干扰项可追溯（仅当有 distractors 字段时检查）
+    distractors = q.get("distractors")
+    if distractors is not None:
+        non_correct = [k for k in options if k != answer]
+        checks["distractors_traced"] = all(k in distractors for k in non_correct)
+    # 6. 引擎自带校验（judgment/theory 的 validation 字段）
+    engine_validation = q.get("validation")
+    if isinstance(engine_validation, dict):
+        issues = engine_validation.get("issues", [])
+        checks["engine_validation_passed"] = len(issues) == 0
+    # 7. 缺解析警告（不阻断，仅记录）
+    has_explanation = bool(q.get("explanation", ""))
+    checks["has_explanation"] = has_explanation
 
     failed = [name for name, ok in checks.items() if not ok]
     return {
@@ -246,9 +279,9 @@ def _check_data_consistent(q: dict[str, Any]) -> bool:
     options = q.get("options", {})
     if answer not in options:
         return False
-    # 双求解有结果且 match 为 true 即视为一致
+    # 双求解有结果且 match/passed 为 true 即视为一致
     dual = q.get("dual_solve", {})
-    if dual.get("match") is True:
+    if dual.get("match") is True or dual.get("passed") is True:
         return True
     # 有计算树且最后一步有 result
     calc = q.get("calc_tree", [])
@@ -276,8 +309,8 @@ def _question_summary(q: dict[str, Any]) -> dict[str, Any]:
 
 
 def _question_detail(q: dict[str, Any], meta: dict[str, str], batch_data: dict[str, Any]) -> dict[str, Any]:
-    """构造题目完整详情。"""
-    return {
+    """构造题目完整详情（含引擎专属字段）。"""
+    detail = {
         "question_id": q.get("question_id", ""),
         "batch_id": meta["batch_id"],
         "engine_type": meta["engine_type"],
@@ -301,3 +334,10 @@ def _question_detail(q: dict[str, Any], meta: dict[str, str], batch_data: dict[s
         },
         "validation": _validate_question(q),
     }
+    # 引擎专属字段（言语/判断/常识）
+    for key in ("passage", "target_word", "pos", "logic_signal", "context_constraints",
+                "definition", "key_elements", "options_detail", "knowledge_point_id",
+                "items", "media", "formulas", "topic", "tag", "review_status"):
+        if key in q and q[key] is not None:
+            detail[key] = q[key]
+    return detail
