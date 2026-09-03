@@ -356,7 +356,7 @@ def admin_generation_question_review(
     if item:
         rr.question_item_id = item.id
         if body.action == "approve":
-            item.lifecycle_status = "active"
+            item.lifecycle_status = "approved"
         elif body.action == "reject":
             item.lifecycle_status = "disputed"
 
@@ -397,7 +397,7 @@ def admin_generation_batch_review(
         item = _find_question_item(db, qid)
         if item:
             rr.question_item_id = item.id
-            item.lifecycle_status = "active" if body.action == "approve" else "disputed"
+            item.lifecycle_status = "approved" if body.action == "approve" else "disputed"
         results.append({"question_id": qid, "action": body.action})
 
     db.commit()

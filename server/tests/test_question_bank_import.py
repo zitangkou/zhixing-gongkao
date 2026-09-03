@@ -85,7 +85,7 @@ class TestIdempotency:
         assert total == 395, f"重跑后题位总数应为 395，实际 {total}"
 
     def test_total_entities_unchanged_after_rerun(self, db_session, first_import, second_import):
-        entities = db_session.query(QuestionItem).count()
+        entities = db_session.query(QuestionItem).filter(QuestionItem.origin_type == "real").count()
         assert entities == first_import.new_questions, "重跑后题目实体数不应变化"
 
     def test_no_errors(self, first_import, second_import):
@@ -123,7 +123,7 @@ class TestSharedQuestions:
         """每个政治理论实体的 3 个题位分别属于 3 份不同试卷。"""
         entities = (
             db_session.query(QuestionItem)
-            .filter(QuestionItem.module == "政治理论")
+            .filter(QuestionItem.module == "政治理论", QuestionItem.origin_type == "real")
             .all()
         )
         for e in entities[:5]:  # 抽样检查前 5 个

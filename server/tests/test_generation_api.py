@@ -81,8 +81,8 @@ def _ok(res):
 class TestStats:
     def test_stats_returns_summary(self, auth_headers):
         data = _ok(client.get("/admin/generation/stats", headers=auth_headers))
-        assert data["total_generated"] == 42  # 32 + 10
-        assert data["batch_count"] == 2
+        assert data["total_generated"] == 137  # 32+10+40+35+20
+        assert data["batch_count"] == 5
         assert "auto_pass_rate" in data
         assert "pending_review" in data
         assert "by_engine" in data
@@ -97,8 +97,8 @@ class TestStats:
 class TestBatches:
     def test_batch_list(self, auth_headers):
         data = _ok(client.get("/admin/generation/batches", headers=auth_headers))
-        assert data["total"] == 2
-        assert len(data["items"]) == 2
+        assert data["total"] == 5
+        assert len(data["items"]) == 5
         b = data["items"][0]
         assert "batch_id" in b
         assert "engine_type" in b
@@ -230,7 +230,7 @@ class TestQuestionDetail:
 class TestReview:
     def test_review_tasks_initial_pending(self, auth_headers):
         data = _ok(client.get("/admin/generation/review-tasks", headers=auth_headers))
-        assert data["stats"]["total"] == 42
+        assert data["stats"]["total"] == 137
 
     def test_review_tasks_filter_pending(self, auth_headers):
         data = _ok(client.get("/admin/generation/review-tasks?status=pending", headers=auth_headers))

@@ -142,8 +142,10 @@ def admin_qb_questions(
     # review_status 映射到 lifecycle_status
     if review_status:
         if review_status == "pending":
-            query = query.filter(QuestionItem.lifecycle_status == "disputed")
+            query = query.filter(QuestionItem.lifecycle_status.in_(["pending_review", "disputed"]))
         elif review_status == "approved":
+            query = query.filter(QuestionItem.lifecycle_status == "approved")
+        elif review_status == "active":
             query = query.filter(QuestionItem.lifecycle_status == "active")
         elif review_status == "retired":
             query = query.filter(QuestionItem.lifecycle_status == "retired")
@@ -666,9 +668,11 @@ def admin_qb_publish_question(
             code=400,
         )
 
-    # 门禁3：未审核（disputed 状态）
-    if item.lifecycle_status == "disputed":
-        return ApiResponse.fail("发布失败：题目处于争议状态，未审核通过，无法发布", code=400)
+    # 门禁3：未审核（pending_review / disputed 状态）
+    if item.lifecycle_status in ("pending_review", "disputed"):
+        return ApiResponse.fail(
+            f"发布失败：题目处于 {item.lifecycle_status} 状态，未审核通过，无法发布", code=400
+        )
 
     # 警告：缺解析
     if not version or not version.explanation:
