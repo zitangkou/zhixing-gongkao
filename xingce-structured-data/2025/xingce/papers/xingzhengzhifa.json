@@ -2997,18 +2997,11 @@
           "explanation": "完整解析：题干图形均含有多个封闭区域,但数量方面并不存在规律,可考虑封闭区域的形状、面积等规律。观察发现,题干图形中面积最大的封闭区域均为轴对称图形,只有D项符合。故本题选D。",
           "media": [
             {
-              "path": "media/figures/q076.jpg",
-              "label": "图形推理76题干+选项",
-              "kind": "figure",
-              "width": 1631,
-              "height": 560
-            },
-            {
-              "path": "media/figures/q076_lines.jpg",
-              "label": "折线图选项A-D题76",
-              "kind": "figure",
-              "width": 1323,
-              "height": 678
+              "type": "figure",
+              "path": "media/figures/xingzhengzhifa_q076.png",
+              "label": "图形推理-规律类",
+              "width": 2493,
+              "height": 856
             }
           ],
           "formulas": [],
@@ -3045,11 +3038,11 @@
           "explanation": "完整解析：题干图形的组成元素相同,仅内部小图形的位置不同,考虑位置规律。观察发现,前一个图形内部的圆形沿外围边框顺时针移动3个位置(外部正方形边长的一半为1个位置),方块沿外围边框逆时针移动3个位置,得到下一个图形。故本题选D。",
           "media": [
             {
-              "path": "media/figures/q077.jpg",
-              "label": "图形推理77题干+选项",
-              "kind": "figure",
-              "width": 1631,
-              "height": 560
+              "type": "figure",
+              "path": "media/figures/xingzhengzhifa_q077.png",
+              "label": "图形推理-规律类",
+              "width": 2493,
+              "height": 856
             }
           ],
           "formulas": [],
@@ -3086,11 +3079,11 @@
           "explanation": "完整解析：题干图形组成元素相同,仅部分小方块的颜色不同,可由此入手寻找规律。第一个图形中,第一行的灰白方块颜色互换,其他行保持不变,得到第二个图形;第二个图形中,第二行的灰白方块颜色互换,其他行保持不变,得到第三个图形。以此类推,问号处图形应该由第五个图形的第五行灰白方块颜色互换,其他行保持不变得到,只有C项符合。故本题选C。",
           "media": [
             {
-              "path": "media/figures/q078.jpg",
-              "label": "图形推理78题干+选项",
-              "kind": "figure",
-              "width": 1631,
-              "height": 895
+              "type": "figure",
+              "path": "media/figures/xingzhengzhifa_q078.png",
+              "label": "图形推理-规律类",
+              "width": 2493,
+              "height": 1369
             }
           ],
           "formulas": [],
@@ -3127,11 +3120,11 @@
           "explanation": "完整解析：题干图形均是由3条线段组成的两个图形相交而成,且相交线段所处的位置有所不同,可由此入手寻找规律。观察发现,第一组图形均是位于边缘的两条线段相交,第二组前两个图形均是位于中间的两条线段相交,符合的只有D。故本题选D。",
           "media": [
             {
-              "path": "media/figures/q079.jpg",
-              "label": "图形推理79",
-              "kind": "figure",
-              "width": 1630,
-              "height": 472
+              "type": "figure",
+              "path": "media/figures/xingzhengzhifa_q079.png",
+              "label": "图形推理-规律类",
+              "width": 2492,
+              "height": 723
             }
           ],
           "formulas": [],
@@ -3168,11 +3161,11 @@
           "explanation": "完整解析：经P、Q、R三点的平面如下图所示,其切割出来的切面形状应如A项所示。故本题选A。",
           "media": [
             {
-              "path": "media/figures/q080.jpg",
-              "label": "立体切面80",
-              "kind": "figure",
-              "width": 1630,
-              "height": 667
+              "type": "figure",
+              "path": "media/figures/xingzhengzhifa_q080.png",
+              "label": "图形推理-立体切面",
+              "width": 2492,
+              "height": 1020
             }
           ],
           "formulas": [],
@@ -3209,11 +3202,11 @@
           "explanation": "完整解析：题干长方体展开后,相邻面中以公共边相接的小正方形颜色应相同,可据此排除错误选项。如下图所示,A、B、C三项中,线条标注出的公共边两侧的小正方形颜色均存在不同,均不是题干长方体正确的外表面展开图。故本题选D。",
           "media": [
             {
-              "path": "media/figures/q081.jpg",
-              "label": "展开图81",
-              "kind": "figure",
-              "width": 1630,
-              "height": 611
+              "type": "figure",
+              "path": "media/figures/xingzhengzhifa_q081.png",
+              "label": "图形推理-展开图",
+              "width": 2492,
+              "height": 935
             }
           ],
           "formulas": [],
@@ -3250,11 +3243,11 @@
           "explanation": "完整解析：将①和②分别进行翻转和旋转,与旋转并翻转后的B项进行拼合可得到题干所给的多面体,如下图所示:\n故本题选B。",
           "media": [
             {
-              "path": "media/figures/q082.jpg",
-              "label": "组合多面体82",
-              "kind": "figure",
-              "width": 1630,
-              "height": 667
+              "type": "figure",
+              "path": "media/figures/xingzhengzhifa_q082.png",
+              "label": "图形推理-组合多面体",
+              "width": 2492,
+              "height": 1021
             }
           ],
           "formulas": [],
@@ -3296,11 +3289,11 @@
           "explanation": "完整解析：题干图形均由黑白圆组成,数量方面并不存在规律,但黑圆组成的图形均较为规整,考虑对称性。观察发现,图形①②④中黑圆组成的图形的对称轴经过4个黑圆,图形③⑤⑥中黑圆组成的图形的对称轴经过2个黑圆。故本题选B。",
           "media": [
             {
-              "path": "media/figures/q083.jpg",
-              "label": "图形分类83",
-              "kind": "figure",
-              "width": 1648,
-              "height": 678
+              "type": "figure",
+              "path": "media/figures/xingzhengzhifa_q083.png",
+              "label": "图形推理-分类题",
+              "width": 2521,
+              "height": 1038
             }
           ],
           "formulas": [],
@@ -3342,11 +3335,11 @@
           "explanation": "完整解析：题干图形均含有若干线条和一个黑色阴影,且黑色阴影与线条的连接方式不同,可由此入手寻找规律。观察发现,图形①②⑥中阴影区域均与图形外框有公共边,图形③④⑤中阴影区域均与图形外框没有公共边。故本题选A。",
           "media": [
             {
-              "path": "media/figures/q084.jpg",
-              "label": "图形分类84",
-              "kind": "figure",
-              "width": 1648,
-              "height": 622
+              "type": "figure",
+              "path": "media/figures/xingzhengzhifa_q084.png",
+              "label": "图形推理-分类题",
+              "width": 2521,
+              "height": 951
             }
           ],
           "formulas": [],
@@ -3388,11 +3381,11 @@
           "explanation": "完整解析：题干图形均由直线构成,且图形③⑤的笔画数特征非常明显,优先考虑笔画数。观察发现,图形①③④均可一笔画出,图形②⑤⑥均可两笔画出。故本题选B。",
           "media": [
             {
-              "path": "media/figures/q085.jpg",
-              "label": "图形分类85",
-              "kind": "figure",
-              "width": 1648,
-              "height": 678
+              "type": "figure",
+              "path": "media/figures/xingzhengzhifa_q085.png",
+              "label": "图形推理-分类题",
+              "width": 2521,
+              "height": 1038
             }
           ],
           "formulas": [],

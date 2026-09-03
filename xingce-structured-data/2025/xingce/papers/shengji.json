@@ -3159,18 +3159,11 @@
           "explanation": "完整解析：题干图形均含有多个封闭区域,但数量方面并不存在规律,可考虑封闭区域的形状、面积等规律。观察发现,题干图形中面积最大的封闭区域均为轴对称图形,只有D项符合。故本题选D。",
           "media": [
             {
-              "path": "media/figures/q076.jpg",
-              "label": "图形推理76题干+选项",
-              "kind": "figure",
-              "width": 1631,
-              "height": 560
-            },
-            {
-              "path": "media/figures/q076_lines.jpg",
-              "label": "折线图选项A-D题76",
-              "kind": "figure",
-              "width": 1323,
-              "height": 678
+              "type": "figure",
+              "path": "media/figures/shengji_q081.png",
+              "label": "图形推理-规律类",
+              "width": 2534,
+              "height": 995
             }
           ],
           "formulas": [],
@@ -3207,11 +3200,11 @@
           "explanation": "完整解析：经P、Q、R三点的平面如下图所示,其切割出来的切面形状应如A项所示。故本题选A。",
           "media": [
             {
-              "path": "media/figures/q080.jpg",
-              "label": "立体切面80",
-              "kind": "figure",
-              "width": 1630,
-              "height": 667
+              "type": "figure",
+              "path": "media/figures/shengji_q082.png",
+              "label": "图形推理-立体切面",
+              "width": 2535,
+              "height": 1045
             }
           ],
           "formulas": [],
@@ -3248,11 +3241,11 @@
           "explanation": "完整解析：题干长方体展开后,相邻面中以公共边相接的小正方形颜色应相同,可据此排除错误选项。如下图所示,A、B、C三项中,线条标注出的公共边两侧的小正方形颜色均存在不同,均不是题干长方体正确的外表面展开图。故本题选D。",
           "media": [
             {
-              "path": "media/figures/q081.jpg",
-              "label": "展开图81",
-              "kind": "figure",
-              "width": 1630,
-              "height": 611
+              "type": "figure",
+              "path": "media/figures/shengji_q083.png",
+              "label": "图形推理-展开图",
+              "width": 2535,
+              "height": 1088
             }
           ],
           "formulas": [],
@@ -3289,11 +3282,11 @@
           "explanation": "完整解析：将①和②分别进行翻转和旋转,与旋转并翻转后的B项进行拼合可得到题干所给的多面体,如下图所示:\n故本题选B。",
           "media": [
             {
-              "path": "media/figures/q082.jpg",
-              "label": "组合多面体82",
-              "kind": "figure",
-              "width": 1630,
-              "height": 667
+              "type": "figure",
+              "path": "media/figures/shengji_q084.png",
+              "label": "图形推理-组合多面体",
+              "width": 2535,
+              "height": 957
             }
           ],
           "formulas": [],
@@ -3335,11 +3328,11 @@
           "explanation": "完整解析：题干图形均由黑白圆组成,数量方面并不存在规律,但黑圆组成的图形均较为规整,考虑对称性。观察发现,图形①②④中黑圆组成的图形的对称轴经过4个黑圆,图形③⑤⑥中黑圆组成的图形的对称轴经过2个黑圆。故本题选B。",
           "media": [
             {
-              "path": "media/figures/q083.jpg",
-              "label": "图形分类83",
-              "kind": "figure",
-              "width": 1648,
-              "height": 678
+              "type": "figure",
+              "path": "media/figures/shengji_q085.png",
+              "label": "图形推理-分类题",
+              "width": 2535,
+              "height": 783
             }
           ],
           "formulas": [],

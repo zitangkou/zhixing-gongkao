@@ -698,6 +698,231 @@
       "height": 1705,
       "bytes": 492299,
       "path": "media/figures/q121_charts.jpg"
+    },
+    {
+      "path": "media/figures/shidi_q076.png",
+      "question_number": 76,
+      "paper": "shidi",
+      "width": 2493,
+      "height": 856,
+      "bytes": 1838520,
+      "description": "图形推理-规律类"
+    },
+    {
+      "path": "media/figures/shidi_q077.png",
+      "question_number": 77,
+      "paper": "shidi",
+      "width": 2493,
+      "height": 856,
+      "bytes": 1956575,
+      "description": "图形推理-规律类"
+    },
+    {
+      "path": "media/figures/shidi_q078.png",
+      "question_number": 78,
+      "paper": "shidi",
+      "width": 2493,
+      "height": 1369,
+      "bytes": 2845604,
+      "description": "图形推理-规律类"
+    },
+    {
+      "path": "media/figures/shidi_q079.png",
+      "question_number": 79,
+      "paper": "shidi",
+      "width": 2492,
+      "height": 723,
+      "bytes": 1473394,
+      "description": "图形推理-规律类"
+    },
+    {
+      "path": "media/figures/shidi_q080.png",
+      "question_number": 80,
+      "paper": "shidi",
+      "width": 2492,
+      "height": 1020,
+      "bytes": 2407291,
+      "description": "图形推理-立体切面"
+    },
+    {
+      "path": "media/figures/shidi_q081.png",
+      "question_number": 81,
+      "paper": "shidi",
+      "width": 2492,
+      "height": 935,
+      "bytes": 2477628,
+      "description": "图形推理-展开图"
+    },
+    {
+      "path": "media/figures/shidi_q082.png",
+      "question_number": 82,
+      "paper": "shidi",
+      "width": 2492,
+      "height": 1021,
+      "bytes": 1620222,
+      "description": "图形推理-组合多面体"
+    },
+    {
+      "path": "media/figures/shidi_q083.png",
+      "question_number": 83,
+      "paper": "shidi",
+      "width": 2521,
+      "height": 1038,
+      "bytes": 2431350,
+      "description": "图形推理-分类题"
+    },
+    {
+      "path": "media/figures/shidi_q084.png",
+      "question_number": 84,
+      "paper": "shidi",
+      "width": 2521,
+      "height": 951,
+      "bytes": 2382876,
+      "description": "图形推理-分类题"
+    },
+    {
+      "path": "media/figures/shidi_q085.png",
+      "question_number": 85,
+      "paper": "shidi",
+      "width": 2521,
+      "height": 1038,
+      "bytes": 2656167,
+      "description": "图形推理-分类题"
+    },
+    {
+      "path": "media/figures/shengji_q081.png",
+      "question_number": 81,
+      "paper": "shengji",
+      "width": 2534,
+      "height": 995,
+      "bytes": 2101639,
+      "description": "图形推理-规律类"
+    },
+    {
+      "path": "media/figures/shengji_q082.png",
+      "question_number": 82,
+      "paper": "shengji",
+      "width": 2535,
+      "height": 1045,
+      "bytes": 2393300,
+      "description": "图形推理-立体切面"
+    },
+    {
+      "path": "media/figures/shengji_q083.png",
+      "question_number": 83,
+      "paper": "shengji",
+      "width": 2535,
+      "height": 1088,
+      "bytes": 2550684,
+      "description": "图形推理-展开图"
+    },
+    {
+      "path": "media/figures/shengji_q084.png",
+      "question_number": 84,
+      "paper": "shengji",
+      "width": 2535,
+      "height": 957,
+      "bytes": 2362644,
+      "description": "图形推理-组合多面体"
+    },
+    {
+      "path": "media/figures/shengji_q085.png",
+      "question_number": 85,
+      "paper": "shengji",
+      "width": 2535,
+      "height": 783,
+      "bytes": 1307708,
+      "description": "图形推理-分类题"
+    },
+    {
+      "path": "media/figures/xingzhengzhifa_q076.png",
+      "question_number": 76,
+      "paper": "xingzhengzhifa",
+      "width": 2493,
+      "height": 856,
+      "bytes": 1838520,
+      "description": "图形推理-规律类"
+    },
+    {
+      "path": "media/figures/xingzhengzhifa_q077.png",
+      "question_number": 77,
+      "paper": "xingzhengzhifa",
+      "width": 2493,
+      "height": 856,
+      "bytes": 1956575,
+      "description": "图形推理-规律类"
+    },
+    {
+      "path": "media/figures/xingzhengzhifa_q078.png",
+      "question_number": 78,
+      "paper": "xingzhengzhifa",
+      "width": 2493,
+      "height": 1369,
+      "bytes": 2845604,
+      "description": "图形推理-规律类"
+    },
+    {
+      "path": "media/figures/xingzhengzhifa_q079.png",
+      "question_number": 79,
+      "paper": "xingzhengzhifa",
+      "width": 2492,
+      "height": 723,
+      "bytes": 1473394,
+      "description": "图形推理-规律类"
+    },
+    {
+      "path": "media/figures/xingzhengzhifa_q080.png",
+      "question_number": 80,
+      "paper": "xingzhengzhifa",
+      "width": 2492,
+      "height": 1020,
+      "bytes": 2407291,
+      "description": "图形推理-立体切面"
+    },
+    {
+      "path": "media/figures/xingzhengzhifa_q081.png",
+      "question_number": 81,
+      "paper": "xingzhengzhifa",
+      "width": 2492,
+      "height": 935,
+      "bytes": 2477628,
+      "description": "图形推理-展开图"
+    },
+    {
+      "path": "media/figures/xingzhengzhifa_q082.png",
+      "question_number": 82,
+      "paper": "xingzhengzhifa",
+      "width": 2492,
+      "height": 1021,
+      "bytes": 1620222,
+      "description": "图形推理-组合多面体"
+    },
+    {
+      "path": "media/figures/xingzhengzhifa_q083.png",
+      "question_number": 83,
+      "paper": "xingzhengzhifa",
+      "width": 2521,
+      "height": 1038,
+      "bytes": 2431350,
+      "description": "图形推理-分类题"
+    },
+    {
+      "path": "media/figures/xingzhengzhifa_q084.png",
+      "question_number": 84,
+      "paper": "xingzhengzhifa",
+      "width": 2521,
+      "height": 951,
+      "bytes": 2382876,
+      "description": "图形推理-分类题"
+    },
+    {
+      "path": "media/figures/xingzhengzhifa_q085.png",
+      "question_number": 85,
+      "paper": "xingzhengzhifa",
+      "width": 2521,
+      "height": 1038,
+      "bytes": 2656167,
+      "description": "图形推理-分类题"
     }
   ]
 }
