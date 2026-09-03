@@ -95,6 +95,24 @@ const router = createRouter({
           meta: { title: '试卷详情', permissions: ['exam:read'] },
         },
         {
+          path: 'generation',
+          name: 'generation-index',
+          component: () => import('@/views/generation/Index.vue'),
+          meta: { title: '生成工作台', permissions: ['exam:read'] },
+        },
+        {
+          path: 'generation/batches/:id',
+          name: 'generation-batch-detail',
+          component: () => import('@/views/generation/BatchDetail.vue'),
+          meta: { title: '批次详情', permissions: ['exam:read'] },
+        },
+        {
+          path: 'generation/review',
+          name: 'generation-review',
+          component: () => import('@/views/generation/Review.vue'),
+          meta: { title: '教研审核', permissions: ['exam:read'] },
+        },
+        {
           path: 'ziliao',
           name: 'ziliao',
           component: () => import('@/views/ziliao/List.vue'),

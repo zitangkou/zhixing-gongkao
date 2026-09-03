@@ -900,3 +900,77 @@ JSON 导入包
 - 前端使用 CSS 变量（`--admin-*`），无硬编码颜色
 - 后端按域拆分路由文件，在 `routes.py` 聚合
 - 所有 API 复用现有 `require_permission("exam:read"/"exam:write")` JWT 认证机制
+
+---
+
+## 14. P2 执行日志（生成工作台）
+
+### 14.1 实施范围
+
+- 后端：新增 `generation` 域模型（`server/app/models/generation.py`：`GenerationBatch`、`ReviewRecord`），新增 `/admin/generation/` 域路由（`server/app/api/admin/generation.py`），新增生成题数据读取服务（`server/app/services/generation_service.py`）
+- 前端：新增 API 层（`src/api/generation.ts`）和 3 个页面（生成工作台首页/批次详情/教研审核）+ 1 个题目详情展开面板组件
+- 生成题源数据为只读 JSON（`xingce-structured-data/generated/`），不修改 Q2/Q4 引擎和产出文件
+- 审核结论持久化到 `review_records` 表，若题已导入 `question_items` 则同步更新 `lifecycle_status`
+
+### 14.2 新增 API 端点
+
+| 方法 | 路径 | 说明 |
+|---|---|---|
+| GET | `/admin/generation/stats` | 工作台统计（总题数/通过率/待审核/已通过/已驳回/已发布/按引擎分组） |
+| GET | `/admin/generation/batches` | 生成批次列表（分页，支持 engine_type 筛选） |
+| GET | `/admin/generation/batches/{batch_id}` | 批次详情（元信息+题目列表+每题审核状态） |
+| POST | `/admin/generation/batches/run` | 触发生成（创建 pending 批次记录，参数 engine_type/skill/count/seed） |
+| GET | `/admin/generation/templates` | 模板列表（template_id/engine_type/version/param_schema） |
+| GET | `/admin/generation/templates/{id}/history` | 模板版本历史 |
+| GET | `/admin/generation/batches/{batch_id}/validation` | 自动校验报告（每题 5 项校验+通过率+失败原因分布） |
+| GET | `/admin/generation/review-tasks` | 审核任务列表（支持 status/engine_type/module/subtype/difficulty 筛选+统计） |
+| GET | `/admin/generation/questions/{id}` | 生成题详情（题干/选项/计算树/干扰项错误路径/双求解结果/生成元信息/校验/审核记录） |
+| POST | `/admin/generation/questions/{id}/review` | 提交审核结果（approve/reject + comment + reviewer） |
+| POST | `/admin/generation/questions/batch-review` | 批量审核（多选题目批量通过/驳回） |
+
+### 14.3 自动校验规则（5 项）
+
+1. **dual_solve_match**：双求解器结果一致（`dual_solve.match == true`）
+2. **options_distinct**：选项文本互不相同且 ≥2 个
+3. **answer_unique**：答案唯一且在选项键中
+4. **data_consistent**：答案与计算树/双求解结果一致（宽松校验）
+5. **distractors_traced**：每个非正确选项都有 `distractors` 记录（错误类型+错误公式+计算值）
+
+### 14.4 新增前端页面
+
+| 路由 | 页面 | 说明 |
+|---|---|---|
+| `/manage/generation` | 生成工作台首页 | 4 统计卡片+批次列表表格+触发生成弹窗+审核入口 |
+| `/manage/generation/batches/:id` | 批次详情 | 元信息卡片+校验汇总+校验报告折叠+题目列表（展开查看计算树/干扰项/双求解） |
+| `/manage/generation/review` | 教研审核 | 审核统计+多维度筛选+题目列表（多选）+逐题审核弹窗（题面+生成元信息+通过/驳回+评论）+批量审核 |
+
+### 14.5 审核流程状态机
+
+```
+pending（待审核）
+  ├─ approve → review_records.action=approve
+  │            └─ 若题已导入 question_items → lifecycle_status=active
+  └─ reject  → review_records.action=reject
+               └─ 若题已导入 question_items → lifecycle_status=disputed
+```
+
+- 审核通过的题才能进入 P1 发布流程（与发布门禁衔接：`lifecycle_status=disputed` 禁止发布）
+- 生成题 `origin_type=generated`，与真题 `origin_type=real` 明确区分
+
+### 14.6 验证结果
+
+- 前端 build：通过（vue-tsc 类型检查 + vite build，2.66s）
+- 后端测试：108 passed（含新增 25 个 generation API 测试，未破坏已有 83 个测试）
+- 批次展示验证：Q2 资料分析 32 题 + Q4 数量关系 10 题，批次元信息/校验/题目列表正确返回
+- 审核流程验证：通过/驳回正确写入 `review_records`，审核状态在列表/详情中正确回显
+- API 路由注册：11/11 端点正确挂载到 `/admin/generation/`
+
+### 14.7 约束遵守
+
+- 未修改 Q2/Q4 生成引擎（`scripts/xingce/gen_*.py`）和题目产出文件（只读 JSON）
+- 未修改 P0/P1 已有模型结构（`question_bank.py` 无变更），仅新增 `generation.py`
+- 前端使用 CSS 变量（`--admin-*` / `--el-color-*`），无硬编码颜色
+- 生成题 `origin_type=generated`，与真题明确区分
+- 审核通过的题才能进入发布流程（与 P1 发布门禁衔接）
+- 后端按域拆分路由文件，在 `routes.py` 聚合
+- 所有 API 复用现有 `require_permission("exam:read")` JWT 认证机制
