@@ -1,0 +1,1137 @@
+{
+  "version": "v1",
+  "total": 20,
+  "generated_at": "2026-09-03T13:14:04.427854",
+  "template_version": "theory_v1",
+  "seed": 42,
+  "sub_engines": {
+    "common_sense": 10,
+    "political_theory": 10
+  },
+  "knowledge_base": "xingce-structured-data/_schema/theory_knowledge_base.json",
+  "questions": [
+    {
+      "question_id": "CS-LAW-001",
+      "origin_type": "generated",
+      "module": "常识判断",
+      "subtype": "法律法规",
+      "difficulty": 1,
+      "knowledge_point_id": "CS-LAW-001",
+      "stem": "根据我国宪法规定，下列关于公民基本权利的说法正确的是：",
+      "options": {
+        "A": "任何公民非经人民检察院批准或者决定，不受逮捕。",
+        "B": "中华人民共和国公民在法律面前一律平等，国家尊重和保障人权。",
+        "C": "劳动和受教育仅是公民的权利，不是公民的义务。",
+        "D": "公民在行使自由和权利时，可以不受任何限制。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "任何公民非经人民检察院批准或者决定，不受逮捕。",
+          "is_correct": false,
+          "error_type": "以偏概全",
+          "error_reason": "宪法第三十七条规定非经人民检察院批准或者决定或者人民法院决定，并由公安机关执行，不受逮捕，遗漏了人民法院决定和公安机关执行的条件"
+        },
+        "B": {
+          "content": "中华人民共和国公民在法律面前一律平等，国家尊重和保障人权。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "C": {
+          "content": "劳动和受教育仅是公民的权利，不是公民的义务。",
+          "is_correct": false,
+          "error_type": "概念混淆",
+          "error_reason": "宪法第四十二条、第四十六条规定劳动和受教育既是公民的权利也是公民的义务"
+        },
+        "D": {
+          "content": "公民在行使自由和权利时，可以不受任何限制。",
+          "is_correct": false,
+          "error_type": "绝对化",
+          "error_reason": "宪法第五十一条规定公民行使自由和权利不得损害国家、社会、集体利益和其他公民合法自由和权利，并非不受任何限制"
+        }
+      },
+      "answer": "B",
+      "explanation": "【知识点】法律法规（来源：CS-LAW-001）\n\n【正确项】B：中华人民共和国公民在法律面前一律平等，国家尊重和保障人权。\n\n【干扰项分析】\n  A项（以偏概全）：宪法第三十七条规定非经人民检察院批准或者决定或者人民法院决定，并由公安机关执行，不受逮捕，遗漏了人民法院决定和公安机关执行的条件\n  C项（概念混淆）：宪法第四十二条、第四十六条规定劳动和受教育既是公民的权利也是公民的义务\n  D项（绝对化）：宪法第五十一条规定公民行使自由和权利不得损害国家、社会、集体利益和其他公民合法自由和权利，并非不受任何限制\n\n故本题选B。",
+      "validation": {
+        "fact_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427537",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "CS-LAW-002",
+      "origin_type": "generated",
+      "module": "常识判断",
+      "subtype": "法律法规",
+      "difficulty": 2,
+      "knowledge_point_id": "CS-LAW-002",
+      "stem": "甲将其借用朋友乙的笔记本电脑，以合理价格卖给不知情的丙并已交付。关于本案，下列说法正确的是：",
+      "options": {
+        "A": "如果丙受让时为善意且以合理价格受让、电脑已交付，则丙取得该电脑的所有权。",
+        "B": "甲作为借用人有权处分该电脑，丙当然取得所有权，无需考虑善意与否。",
+        "C": "无论丙是否善意，乙作为所有权人都有权随时从丙处追回电脑。",
+        "D": "丙只要支付了价款，无论电脑是否交付，均取得所有权。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "如果丙受让时为善意且以合理价格受让、电脑已交付，则丙取得该电脑的所有权。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "B": {
+          "content": "甲作为借用人有权处分该电脑，丙当然取得所有权，无需考虑善意与否。",
+          "is_correct": false,
+          "error_type": "概念混淆",
+          "error_reason": "甲是借用人并非所有权人，属于无权处分，丙能否取得所有权取决于是否符合善意取得条件"
+        },
+        "C": {
+          "content": "无论丙是否善意，乙作为所有权人都有权随时从丙处追回电脑。",
+          "is_correct": false,
+          "error_type": "绝对化",
+          "error_reason": "根据民法典第三百一十一条，符合善意取得条件的受让人取得所有权，原所有权人无权追回"
+        },
+        "D": {
+          "content": "丙只要支付了价款，无论电脑是否交付，均取得所有权。",
+          "is_correct": false,
+          "error_type": "以偏概全",
+          "error_reason": "善意取得要求动产已经交付，仅支付价款未交付不满足善意取得的全部要件"
+        }
+      },
+      "answer": "A",
+      "explanation": "【知识点】法律法规（来源：CS-LAW-002）\n\n【正确项】A：如果丙受让时为善意且以合理价格受让、电脑已交付，则丙取得该电脑的所有权。\n\n【干扰项分析】\n  B项（概念混淆）：甲是借用人并非所有权人，属于无权处分，丙能否取得所有权取决于是否符合善意取得条件\n  C项（绝对化）：根据民法典第三百一十一条，符合善意取得条件的受让人取得所有权，原所有权人无权追回\n  D项（以偏概全）：善意取得要求动产已经交付，仅支付价款未交付不满足善意取得的全部要件\n\n故本题选A。",
+      "validation": {
+        "fact_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427565",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "CS-LAW-003",
+      "origin_type": "generated",
+      "module": "常识判断",
+      "subtype": "法律法规",
+      "difficulty": 2,
+      "knowledge_point_id": "CS-LAW-003",
+      "stem": "根据《中华人民共和国行政处罚法》，下列属于行政处罚种类的是：",
+      "options": {
+        "A": "查封场所、设施或者财物属于行政处罚法规定的行政处罚种类。",
+        "B": "代履行属于行政处罚法规定的行政处罚种类。",
+        "C": "加处罚款或者滞纳金属于行政处罚法规定的行政处罚种类。",
+        "D": "责令停产停业属于行政处罚法规定的行政处罚种类。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "查封场所、设施或者财物属于行政处罚法规定的行政处罚种类。",
+          "is_correct": false,
+          "error_type": "概念混淆",
+          "error_reason": "查封属于行政强制措施（行政强制法第九条），不属于行政处罚种类"
+        },
+        "B": {
+          "content": "代履行属于行政处罚法规定的行政处罚种类。",
+          "is_correct": false,
+          "error_type": "无中生有",
+          "error_reason": "代履行属于行政强制执行方式，行政处罚法第九条规定的种类中不包含代履行"
+        },
+        "C": {
+          "content": "加处罚款或者滞纳金属于行政处罚法规定的行政处罚种类。",
+          "is_correct": false,
+          "error_type": "概念混淆",
+          "error_reason": "加处罚款或滞纳金属于行政强制执行方式（行政强制法第十二条），不属于行政处罚种类"
+        },
+        "D": {
+          "content": "责令停产停业属于行政处罚法规定的行政处罚种类。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【知识点】法律法规（来源：CS-LAW-003）\n\n【正确项】D：责令停产停业属于行政处罚法规定的行政处罚种类。\n\n【干扰项分析】\n  A项（概念混淆）：查封属于行政强制措施（行政强制法第九条），不属于行政处罚种类\n  B项（无中生有）：代履行属于行政强制执行方式，行政处罚法第九条规定的种类中不包含代履行\n  C项（概念混淆）：加处罚款或滞纳金属于行政强制执行方式（行政强制法第十二条），不属于行政处罚种类\n\n故本题选D。",
+      "validation": {
+        "fact_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427584",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "CS-LAW-004",
+      "origin_type": "generated",
+      "module": "常识判断",
+      "subtype": "法律法规",
+      "difficulty": 2,
+      "knowledge_point_id": "CS-LAW-004",
+      "stem": "下列情形中，不属于行政复议范围的是：",
+      "options": {
+        "A": "王某对税务机关作出的征税决定不服。",
+        "B": "公务员张某对所在机关给予其记过处分不服。",
+        "C": "李某对公安机关作出的行政拘留处罚决定不服。",
+        "D": "某公司对市场监管部门作出的吊销营业执照决定不服。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "王某对税务机关作出的征税决定不服。",
+          "is_correct": false,
+          "error_type": "张冠李戴",
+          "error_reason": "征税决定属于具体行政行为，属于行政复议范围（且部分征税行为需复议前置）"
+        },
+        "B": {
+          "content": "公务员张某对所在机关给予其记过处分不服。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "C": {
+          "content": "李某对公安机关作出的行政拘留处罚决定不服。",
+          "is_correct": false,
+          "error_type": "张冠李戴",
+          "error_reason": "行政拘留属于行政处罚，是具体行政行为，属于行政复议范围"
+        },
+        "D": {
+          "content": "某公司对市场监管部门作出的吊销营业执照决定不服。",
+          "is_correct": false,
+          "error_type": "张冠李戴",
+          "error_reason": "吊销营业执照属于行政处罚，是具体行政行为，属于行政复议范围"
+        }
+      },
+      "answer": "B",
+      "explanation": "【知识点】法律法规（来源：CS-LAW-004）\n\n【正确项】B：公务员张某对所在机关给予其记过处分不服。\n\n【干扰项分析】\n  A项（张冠李戴）：征税决定属于具体行政行为，属于行政复议范围（且部分征税行为需复议前置）\n  C项（张冠李戴）：行政拘留属于行政处罚，是具体行政行为，属于行政复议范围\n  D项（张冠李戴）：吊销营业执照属于行政处罚，是具体行政行为，属于行政复议范围\n\n故本题选B。",
+      "validation": {
+        "fact_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427599",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "CS-HIST-001",
+      "origin_type": "generated",
+      "module": "常识判断",
+      "subtype": "人文历史",
+      "difficulty": 2,
+      "knowledge_point_id": "CS-HIST-001",
+      "stem": "关于中国古代科举制度，下列说法正确的是：",
+      "options": {
+        "A": "科举制度始于汉朝的察举制，由地方长官向中央推荐人才。",
+        "B": "科举制度在唐朝被废除，改为九品中正制。",
+        "C": "隋炀帝大业年间始置进士科，标志着科举制度正式确立。",
+        "D": "明清时期的科举考试以诗赋为主要内容，不考经义。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "科举制度始于汉朝的察举制，由地方长官向中央推荐人才。",
+          "is_correct": false,
+          "error_type": "概念混淆",
+          "error_reason": "察举制是汉朝的选官制度，以推荐为主，与以考试为核心的科举制不同；科举制始于隋朝"
+        },
+        "B": {
+          "content": "科举制度在唐朝被废除，改为九品中正制。",
+          "is_correct": false,
+          "error_type": "张冠李戴",
+          "error_reason": "九品中正制是魏晋南北朝时期的选官制度，隋朝已被科举制取代；科举制1905年才被废除"
+        },
+        "C": {
+          "content": "隋炀帝大业年间始置进士科，标志着科举制度正式确立。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "D": {
+          "content": "明清时期的科举考试以诗赋为主要内容，不考经义。",
+          "is_correct": false,
+          "error_type": "以偏概全",
+          "error_reason": "明清科举实行八股取士，考试内容以四书五经经义为主，并非以诗赋为主要内容"
+        }
+      },
+      "answer": "C",
+      "explanation": "【知识点】人文历史（来源：CS-HIST-001）\n\n【正确项】C：隋炀帝大业年间始置进士科，标志着科举制度正式确立。\n\n【干扰项分析】\n  A项（概念混淆）：察举制是汉朝的选官制度，以推荐为主，与以考试为核心的科举制不同；科举制始于隋朝\n  B项（张冠李戴）：九品中正制是魏晋南北朝时期的选官制度，隋朝已被科举制取代；科举制1905年才被废除\n  D项（以偏概全）：明清科举实行八股取士，考试内容以四书五经经义为主，并非以诗赋为主要内容\n\n故本题选C。",
+      "validation": {
+        "fact_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427614",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "CS-HIST-002",
+      "origin_type": "generated",
+      "module": "常识判断",
+      "subtype": "人文历史",
+      "difficulty": 1,
+      "knowledge_point_id": "CS-HIST-002",
+      "stem": "下列人物中，全部属于'唐宋八大家'的是：",
+      "options": {
+        "A": "韩愈、柳宗元、欧阳修、辛弃疾。",
+        "B": "韩愈、柳宗元、欧阳修、苏轼。",
+        "C": "苏洵、苏轼、苏辙、范仲淹。",
+        "D": "李白、杜甫、白居易、王维。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "韩愈、柳宗元、欧阳修、辛弃疾。",
+          "is_correct": false,
+          "error_type": "张冠李戴",
+          "error_reason": "辛弃疾是南宋著名词人，不属于唐宋八大家；八大家中的宋代成员为欧阳修、苏洵、苏轼、苏辙、王安石、曾巩"
+        },
+        "B": {
+          "content": "韩愈、柳宗元、欧阳修、苏轼。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "C": {
+          "content": "苏洵、苏轼、苏辙、范仲淹。",
+          "is_correct": false,
+          "error_type": "以偏概全",
+          "error_reason": "三苏属于八大家，但范仲淹不属于唐宋八大家"
+        },
+        "D": {
+          "content": "李白、杜甫、白居易、王维。",
+          "is_correct": false,
+          "error_type": "概念混淆",
+          "error_reason": "李白、杜甫、白居易、王维是唐代著名诗人，但不属于唐宋八大家（八大家以散文著称）"
+        }
+      },
+      "answer": "B",
+      "explanation": "【知识点】人文历史（来源：CS-HIST-002）\n\n【正确项】B：韩愈、柳宗元、欧阳修、苏轼。\n\n【干扰项分析】\n  A项（张冠李戴）：辛弃疾是南宋著名词人，不属于唐宋八大家；八大家中的宋代成员为欧阳修、苏洵、苏轼、苏辙、王安石、曾巩\n  C项（以偏概全）：三苏属于八大家，但范仲淹不属于唐宋八大家\n  D项（概念混淆）：李白、杜甫、白居易、王维是唐代著名诗人，但不属于唐宋八大家（八大家以散文著称）\n\n故本题选B。",
+      "validation": {
+        "fact_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427627",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "CS-GEO-001",
+      "origin_type": "generated",
+      "module": "常识判断",
+      "subtype": "地理环境",
+      "difficulty": 2,
+      "knowledge_point_id": "CS-GEO-001",
+      "stem": "关于我国地势三级阶梯，下列说法正确的是：",
+      "options": {
+        "A": "第一级阶梯与第二级阶梯的分界线是昆仑山—祁连山—横断山脉。",
+        "B": "第二、三级阶梯的分界线是秦岭—淮河一线。",
+        "C": "我国地势东高西低，呈三级阶梯分布。",
+        "D": "第二级阶梯以平原和丘陵为主，平均海拔在500米以下。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "第一级阶梯与第二级阶梯的分界线是昆仑山—祁连山—横断山脉。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "B": {
+          "content": "第二、三级阶梯的分界线是秦岭—淮河一线。",
+          "is_correct": false,
+          "error_type": "张冠李戴",
+          "error_reason": "秦岭—淮河是我国南北方地理分界线；第二、三级阶梯分界线是大兴安岭—太行山—巫山—雪峰山"
+        },
+        "C": {
+          "content": "我国地势东高西低，呈三级阶梯分布。",
+          "is_correct": false,
+          "error_type": "绝对化",
+          "error_reason": "我国地势是西高东低，而非东高西低"
+        },
+        "D": {
+          "content": "第二级阶梯以平原和丘陵为主，平均海拔在500米以下。",
+          "is_correct": false,
+          "error_type": "概念混淆",
+          "error_reason": "以平原和丘陵为主、海拔500米以下的是第三级阶梯；第二级阶梯以高原和盆地为主，海拔1000-2000米"
+        }
+      },
+      "answer": "A",
+      "explanation": "【知识点】地理环境（来源：CS-GEO-001）\n\n【正确项】A：第一级阶梯与第二级阶梯的分界线是昆仑山—祁连山—横断山脉。\n\n【干扰项分析】\n  B项（张冠李戴）：秦岭—淮河是我国南北方地理分界线；第二、三级阶梯分界线是大兴安岭—太行山—巫山—雪峰山\n  C项（绝对化）：我国地势是西高东低，而非东高西低\n  D项（概念混淆）：以平原和丘陵为主、海拔500米以下的是第三级阶梯；第二级阶梯以高原和盆地为主，海拔1000-2000米\n\n故本题选A。",
+      "validation": {
+        "fact_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427641",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "CS-GEO-002",
+      "origin_type": "generated",
+      "module": "常识判断",
+      "subtype": "地理环境",
+      "difficulty": 1,
+      "knowledge_point_id": "CS-GEO-002",
+      "stem": "关于我国东部季风气候的特征，下列说法正确的是：",
+      "options": {
+        "A": "夏季盛行偏北风，冬季盛行偏南风。",
+        "B": "我国东部地区全年盛行西风，降水均匀分布。",
+        "C": "季风气候的主要特征是全年高温多雨。",
+        "D": "夏季盛行来自海洋的偏南风，温暖湿润；冬季盛行来自蒙古-西伯利亚的偏北风，寒冷干燥。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "夏季盛行偏北风，冬季盛行偏南风。",
+          "is_correct": false,
+          "error_type": "概念混淆",
+          "error_reason": "季风气候夏季盛行来自海洋的偏南风，冬季盛行来自内陆的偏北风，选项将冬夏季风向颠倒"
+        },
+        "B": {
+          "content": "我国东部地区全年盛行西风，降水均匀分布。",
+          "is_correct": false,
+          "error_type": "无中生有",
+          "error_reason": "我国东部为季风气候，冬夏季风向相反，并非全年盛行西风；降水集中在夏季，并非均匀分布"
+        },
+        "C": {
+          "content": "季风气候的主要特征是全年高温多雨。",
+          "is_correct": false,
+          "error_type": "以偏概全",
+          "error_reason": "全年高温多雨是热带雨林气候特征；我国东部季风气候的主要特征是雨热同期，四季分明"
+        },
+        "D": {
+          "content": "夏季盛行来自海洋的偏南风，温暖湿润；冬季盛行来自蒙古-西伯利亚的偏北风，寒冷干燥。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【知识点】地理环境（来源：CS-GEO-002）\n\n【正确项】D：夏季盛行来自海洋的偏南风，温暖湿润；冬季盛行来自蒙古-西伯利亚的偏北风，寒冷干燥。\n\n【干扰项分析】\n  A项（概念混淆）：季风气候夏季盛行来自海洋的偏南风，冬季盛行来自内陆的偏北风，选项将冬夏季风向颠倒\n  B项（无中生有）：我国东部为季风气候，冬夏季风向相反，并非全年盛行西风；降水集中在夏季，并非均匀分布\n  C项（以偏概全）：全年高温多雨是热带雨林气候特征；我国东部季风气候的主要特征是雨热同期，四季分明\n\n故本题选D。",
+      "validation": {
+        "fact_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427654",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "CS-SCI-001",
+      "origin_type": "generated",
+      "module": "常识判断",
+      "subtype": "科技生活",
+      "difficulty": 2,
+      "knowledge_point_id": "CS-SCI-001",
+      "stem": "关于光的折射与色散，下列说法正确的是：",
+      "options": {
+        "A": "光的色散是因为三棱镜本身发出了七种颜色的光。",
+        "B": "彩虹是光的反射现象形成的，与折射无关。",
+        "C": "白光通过三棱镜后被分解为红、橙、黄、绿、蓝、靛、紫七种色光，本质是不同色光在介质中的折射率不同。",
+        "D": "光从一种介质进入另一种介质时，传播方向一定不发生改变。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "光的色散是因为三棱镜本身发出了七种颜色的光。",
+          "is_correct": false,
+          "error_type": "无中生有",
+          "error_reason": "三棱镜不发光，色散是白光中不同色光折射率不同导致偏折程度不同而被分解"
+        },
+        "B": {
+          "content": "彩虹是光的反射现象形成的，与折射无关。",
+          "is_correct": false,
+          "error_type": "概念混淆",
+          "error_reason": "彩虹是阳光射入水滴后经折射、反射、再折射形成的色散现象，折射是关键环节"
+        },
+        "C": {
+          "content": "白光通过三棱镜后被分解为红、橙、黄、绿、蓝、靛、紫七种色光，本质是不同色光在介质中的折射率不同。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "D": {
+          "content": "光从一种介质进入另一种介质时，传播方向一定不发生改变。",
+          "is_correct": false,
+          "error_type": "绝对化",
+          "error_reason": "光斜射入另一种介质时传播方向会发生偏折（折射），只有垂直入射时方向才不变"
+        }
+      },
+      "answer": "C",
+      "explanation": "【知识点】科技生活（来源：CS-SCI-001）\n\n【正确项】C：白光通过三棱镜后被分解为红、橙、黄、绿、蓝、靛、紫七种色光，本质是不同色光在介质中的折射率不同。\n\n【干扰项分析】\n  A项（无中生有）：三棱镜不发光，色散是白光中不同色光折射率不同导致偏折程度不同而被分解\n  B项（概念混淆）：彩虹是阳光射入水滴后经折射、反射、再折射形成的色散现象，折射是关键环节\n  D项（绝对化）：光斜射入另一种介质时传播方向会发生偏折（折射），只有垂直入射时方向才不变\n\n故本题选C。",
+      "validation": {
+        "fact_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427667",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "CS-SCI-002",
+      "origin_type": "generated",
+      "module": "常识判断",
+      "subtype": "科技生活",
+      "difficulty": 2,
+      "knowledge_point_id": "CS-SCI-002",
+      "stem": "关于人体血液循环，下列说法正确的是：",
+      "options": {
+        "A": "血液流经肺部毛细血管后，氧气含量减少，二氧化碳含量增加。",
+        "B": "肺循环的路径是右心室→肺动脉→肺部毛细血管→肺静脉→左心房。",
+        "C": "动脉中流动的一定是动脉血，静脉中流动的一定是静脉血。",
+        "D": "体循环的起点是右心室，终点是左心房。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "血液流经肺部毛细血管后，氧气含量减少，二氧化碳含量增加。",
+          "is_correct": false,
+          "error_type": "概念混淆",
+          "error_reason": "血液流经肺部时进行气体交换，氧气进入血液、二氧化碳排出，因此氧气含量增加、二氧化碳含量减少"
+        },
+        "B": {
+          "content": "肺循环的路径是右心室→肺动脉→肺部毛细血管→肺静脉→左心房。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "C": {
+          "content": "动脉中流动的一定是动脉血，静脉中流动的一定是静脉血。",
+          "is_correct": false,
+          "error_type": "绝对化",
+          "error_reason": "肺动脉中流动的是静脉血，肺静脉中流动的是动脉血，不能以血管名称判断血液类型"
+        },
+        "D": {
+          "content": "体循环的起点是右心室，终点是左心房。",
+          "is_correct": false,
+          "error_type": "概念混淆",
+          "error_reason": "体循环起点是左心室、终点是右心房；右心室→左心房是肺循环的路径"
+        }
+      },
+      "answer": "B",
+      "explanation": "【知识点】科技生活（来源：CS-SCI-002）\n\n【正确项】B：肺循环的路径是右心室→肺动脉→肺部毛细血管→肺静脉→左心房。\n\n【干扰项分析】\n  A项（概念混淆）：血液流经肺部时进行气体交换，氧气进入血液、二氧化碳排出，因此氧气含量增加、二氧化碳含量减少\n  C项（绝对化）：肺动脉中流动的是静脉血，肺静脉中流动的是动脉血，不能以血管名称判断血液类型\n  D项（概念混淆）：体循环起点是左心室、终点是右心房；右心室→左心房是肺循环的路径\n\n故本题选B。",
+      "validation": {
+        "fact_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427680",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "PT-XI-001",
+      "origin_type": "generated",
+      "module": "政治理论",
+      "subtype": "习近平新时代中国特色社会主义思想",
+      "difficulty": 1,
+      "knowledge_point_id": "PT-XI-001",
+      "stem": "中国特色社会主义进入新时代，我国社会主要矛盾已经转化为：",
+      "options": {
+        "A": "人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾。",
+        "B": "无产阶级和资产阶级之间的矛盾。",
+        "C": "人民日益增长的美好生活需要和不充分不平衡的发展之间的矛盾。",
+        "D": "人民日益增长的物质文化需要同落后的社会生产之间的矛盾。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "B": {
+          "content": "无产阶级和资产阶级之间的矛盾。",
+          "is_correct": false,
+          "error_type": "无中生有",
+          "error_reason": "这是新民主主义革命时期和社会主义改造时期的矛盾表述，与新时代主要矛盾无关"
+        },
+        "C": {
+          "content": "人民日益增长的美好生活需要和不充分不平衡的发展之间的矛盾。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "规范表述为'不平衡不充分'，选项将语序颠倒为'不充分不平衡'，属于对规范表述的偷换"
+        },
+        "D": {
+          "content": "人民日益增长的物质文化需要同落后的社会生产之间的矛盾。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "这是1981年党的十一届六中全会提出的社会主义初级阶段主要矛盾的表述，不是新时代的主要矛盾"
+        }
+      },
+      "answer": "A",
+      "explanation": "【知识点】习近平新时代中国特色社会主义思想（来源：PT-XI-001）\n\n【正确项】A：人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾。\n\n【干扰项分析】\n  B项（无中生有）：这是新民主主义革命时期和社会主义改造时期的矛盾表述，与新时代主要矛盾无关\n  C项（偷换概念）：规范表述为'不平衡不充分'，选项将语序颠倒为'不充分不平衡'，属于对规范表述的偷换\n  D项（偷换概念）：这是1981年党的十一届六中全会提出的社会主义初级阶段主要矛盾的表述，不是新时代的主要矛盾\n\n故本题选A。",
+      "validation": {
+        "authoritative_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427701",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "PT-XI-002",
+      "origin_type": "generated",
+      "module": "政治理论",
+      "subtype": "习近平新时代中国特色社会主义思想",
+      "difficulty": 2,
+      "knowledge_point_id": "PT-XI-002",
+      "stem": "关于新发展理念，下列说法正确的是：",
+      "options": {
+        "A": "新发展理念是指创新、统筹、绿色、开放、共享。",
+        "B": "创新是引领发展的第一动力，共享是中国特色社会主义的本质要求。",
+        "C": "绿色是引领发展的第一动力。",
+        "D": "新发展理念仅适用于经济领域，不适用于社会、文化、生态等领域。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "新发展理念是指创新、统筹、绿色、开放、共享。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "新发展理念的规范表述为'创新、协调、绿色、开放、共享'，选项将'协调'偷换为'统筹'"
+        },
+        "B": {
+          "content": "创新是引领发展的第一动力，共享是中国特色社会主义的本质要求。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "C": {
+          "content": "绿色是引领发展的第一动力。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "创新才是引领发展的第一动力，绿色是永续发展的必要条件，选项将定位词偷换"
+        },
+        "D": {
+          "content": "新发展理念仅适用于经济领域，不适用于社会、文化、生态等领域。",
+          "is_correct": false,
+          "error_type": "以偏概全",
+          "error_reason": "新发展理念是管全局、管根本、管长远的导向，贯穿经济社会发展全过程和各领域，并非仅适用于经济领域"
+        }
+      },
+      "answer": "B",
+      "explanation": "【知识点】习近平新时代中国特色社会主义思想（来源：PT-XI-002）\n\n【正确项】B：创新是引领发展的第一动力，共享是中国特色社会主义的本质要求。\n\n【干扰项分析】\n  A项（偷换概念）：新发展理念的规范表述为'创新、协调、绿色、开放、共享'，选项将'协调'偷换为'统筹'\n  C项（偷换概念）：创新才是引领发展的第一动力，绿色是永续发展的必要条件，选项将定位词偷换\n  D项（以偏概全）：新发展理念是管全局、管根本、管长远的导向，贯穿经济社会发展全过程和各领域，并非仅适用于经济领域\n\n故本题选B。",
+      "validation": {
+        "authoritative_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427718",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "PT-XI-003",
+      "origin_type": "generated",
+      "module": "政治理论",
+      "subtype": "习近平新时代中国特色社会主义思想",
+      "difficulty": 2,
+      "knowledge_point_id": "PT-XI-003",
+      "stem": "关于中国式现代化，下列表述正确的是：",
+      "options": {
+        "A": "中国式现代化是少数人富裕的现代化，物质文明优先于精神文明。",
+        "B": "中国式现代化与西方现代化完全相同，没有本质区别。",
+        "C": "中国式现代化是中国共产党领导的社会主义现代化，是走和平发展道路的现代化。",
+        "D": "中国式现代化必须通过对外扩张和殖民掠夺来实现。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "中国式现代化是少数人富裕的现代化，物质文明优先于精神文明。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "中国式现代化是全体人民共同富裕的现代化、物质文明和精神文明相协调的现代化，选项将'共同富裕'偷换为'少数人富裕'，将'相协调'偷换为'优先'"
+        },
+        "B": {
+          "content": "中国式现代化与西方现代化完全相同，没有本质区别。",
+          "is_correct": false,
+          "error_type": "绝对化",
+          "error_reason": "党的二十大报告明确指出中国式现代化既有各国现代化的共同特征，更有基于自己国情的中国特色，并非与西方现代化完全相同"
+        },
+        "C": {
+          "content": "中国式现代化是中国共产党领导的社会主义现代化，是走和平发展道路的现代化。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "D": {
+          "content": "中国式现代化必须通过对外扩张和殖民掠夺来实现。",
+          "is_correct": false,
+          "error_type": "无中生有",
+          "error_reason": "中国式现代化是走和平发展道路的现代化，不走一些国家通过战争、殖民、掠夺等方式实现现代化的老路"
+        }
+      },
+      "answer": "C",
+      "explanation": "【知识点】习近平新时代中国特色社会主义思想（来源：PT-XI-003）\n\n【正确项】C：中国式现代化是中国共产党领导的社会主义现代化，是走和平发展道路的现代化。\n\n【干扰项分析】\n  A项（偷换概念）：中国式现代化是全体人民共同富裕的现代化、物质文明和精神文明相协调的现代化，选项将'共同富裕'偷换为'少数人富裕'，将'相协调'偷换为'优先'\n  B项（绝对化）：党的二十大报告明确指出中国式现代化既有各国现代化的共同特征，更有基于自己国情的中国特色，并非与西方现代化完全相同\n  D项（无中生有）：中国式现代化是走和平发展道路的现代化，不走一些国家通过战争、殖民、掠夺等方式实现现代化的老路\n\n故本题选C。",
+      "validation": {
+        "authoritative_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427733",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "PT-MEET-001",
+      "origin_type": "generated",
+      "module": "政治理论",
+      "subtype": "党的重要会议与文件",
+      "difficulty": 1,
+      "knowledge_point_id": "PT-MEET-001",
+      "stem": "党的二十大的主题是：",
+      "options": {
+        "A": "高举中国特色社会主义伟大旗帜，以邓小平理论和'三个代表'重要思想为指导，深入贯彻落实科学发展观。",
+        "B": "全面深化改革，完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化。",
+        "C": "不忘初心，牢记使命，高举中国特色社会主义伟大旗帜，决胜全面建成小康社会，夺取新时代中国特色社会主义伟大胜利。",
+        "D": "高举中国特色社会主义伟大旗帜，全面贯彻新时代中国特色社会主义思想，弘扬伟大建党精神，自信自强、守正创新，踔厉奋发、勇毅前行，为全面建设社会主义现代化国家、全面推进中华民族伟大复兴而团结奋斗。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "高举中国特色社会主义伟大旗帜，以邓小平理论和'三个代表'重要思想为指导，深入贯彻落实科学发展观。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "这是党的十八大主题的部分表述，党的二十大全面贯彻的是新时代中国特色社会主义思想"
+        },
+        "B": {
+          "content": "全面深化改革，完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化。",
+          "is_correct": false,
+          "error_type": "无中生有",
+          "error_reason": "这是党的十八届三中全会提出的全面深化改革总目标，不是党的二十大的主题"
+        },
+        "C": {
+          "content": "不忘初心，牢记使命，高举中国特色社会主义伟大旗帜，决胜全面建成小康社会，夺取新时代中国特色社会主义伟大胜利。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "这是党的十九大的主题，不是党的二十大的主题"
+        },
+        "D": {
+          "content": "高举中国特色社会主义伟大旗帜，全面贯彻新时代中国特色社会主义思想，弘扬伟大建党精神，自信自强、守正创新，踔厉奋发、勇毅前行，为全面建设社会主义现代化国家、全面推进中华民族伟大复兴而团结奋斗。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【知识点】党的重要会议与文件（来源：PT-MEET-001）\n\n【正确项】D：高举中国特色社会主义伟大旗帜，全面贯彻新时代中国特色社会主义思想，弘扬伟大建党精神，自信自强、守正创新，踔厉奋发、勇毅前行，为全面建设社会主义现代化国家、全面推进中华民族伟大复兴而团结奋斗。\n\n【干扰项分析】\n  A项（偷换概念）：这是党的十八大主题的部分表述，党的二十大全面贯彻的是新时代中国特色社会主义思想\n  B项（无中生有）：这是党的十八届三中全会提出的全面深化改革总目标，不是党的二十大的主题\n  C项（偷换概念）：这是党的十九大的主题，不是党的二十大的主题\n\n故本题选D。",
+      "validation": {
+        "authoritative_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427747",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "PT-MEET-002",
+      "origin_type": "generated",
+      "module": "政治理论",
+      "subtype": "党的重要会议与文件",
+      "difficulty": 3,
+      "knowledge_point_id": "PT-MEET-002",
+      "stem": "关于党的二十届三中全会，下列说法正确的是：",
+      "options": {
+        "A": "全会审议通过了《中共中央关于进一步全面深化改革、推进中国式现代化的决定》。",
+        "B": "全会于2023年10月在北京召开，审议通过了'十四五'规划纲要。",
+        "C": "全会的主题是全面从严治党，审议通过了关于党的自我革命的决定。",
+        "D": "全会决定将全面深化改革的总目标修改为建立社会主义市场经济体制。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "全会审议通过了《中共中央关于进一步全面深化改革、推进中国式现代化的决定》。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "B": {
+          "content": "全会于2023年10月在北京召开，审议通过了'十四五'规划纲要。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "二十届三中全会于2024年7月召开，'十四五'规划纲要是2021年十三届全国人大四次会议审查批准的"
+        },
+        "C": {
+          "content": "全会的主题是全面从严治党，审议通过了关于党的自我革命的决定。",
+          "is_correct": false,
+          "error_type": "无中生有",
+          "error_reason": "二十届三中全会的主题是进一步全面深化改革、推进中国式现代化，并非全面从严治党"
+        },
+        "D": {
+          "content": "全会决定将全面深化改革的总目标修改为建立社会主义市场经济体制。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "全会指出进一步全面深化改革的总目标是继续完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化；建立社会主义市场经济体制是党的十四大提出的经济体制改革目标"
+        }
+      },
+      "answer": "A",
+      "explanation": "【知识点】党的重要会议与文件（来源：PT-MEET-002）\n\n【正确项】A：全会审议通过了《中共中央关于进一步全面深化改革、推进中国式现代化的决定》。\n\n【干扰项分析】\n  B项（偷换概念）：二十届三中全会于2024年7月召开，'十四五'规划纲要是2021年十三届全国人大四次会议审查批准的\n  C项（无中生有）：二十届三中全会的主题是进一步全面深化改革、推进中国式现代化，并非全面从严治党\n  D项（偷换概念）：全会指出进一步全面深化改革的总目标是继续完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化；建立社会主义市场经济体制是党的十四大提出的经济体制改革目标\n\n故本题选A。",
+      "validation": {
+        "authoritative_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427760",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "PT-MARX-001",
+      "origin_type": "generated",
+      "module": "政治理论",
+      "subtype": "马克思主义基本原理",
+      "difficulty": 2,
+      "knowledge_point_id": "PT-MARX-001",
+      "stem": "关于唯物辩证法的矛盾观，下列说法正确的是：",
+      "options": {
+        "A": "质量互变规律是唯物辩证法的实质和核心。",
+        "B": "对立统一规律是唯物辩证法的实质和核心，矛盾的普遍性是指矛盾存在于一切事物中并贯穿于每一事物发展过程的始终。",
+        "C": "矛盾的特殊性是指矛盾无处不在、无时不有。",
+        "D": "矛盾的普遍性意味着任何两个事物之间都存在着矛盾。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "质量互变规律是唯物辩证法的实质和核心。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "唯物辩证法的实质和核心是对立统一规律，不是质量互变规律"
+        },
+        "B": {
+          "content": "对立统一规律是唯物辩证法的实质和核心，矛盾的普遍性是指矛盾存在于一切事物中并贯穿于每一事物发展过程的始终。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "C": {
+          "content": "矛盾的特殊性是指矛盾无处不在、无时不有。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "'矛盾无处不在、无时不有'是矛盾普遍性的含义，矛盾的特殊性是指具体事物所包含的矛盾及每一矛盾的各个方面都有其特点"
+        },
+        "D": {
+          "content": "矛盾的普遍性意味着任何两个事物之间都存在着矛盾。",
+          "is_correct": false,
+          "error_type": "绝对化",
+          "error_reason": "矛盾的普遍性是指矛盾存在于一切事物中、贯穿事物发展始终，但并非任何两个事物之间都有矛盾，矛盾的存在是有条件的"
+        }
+      },
+      "answer": "B",
+      "explanation": "【知识点】马克思主义基本原理（来源：PT-MARX-001）\n\n【正确项】B：对立统一规律是唯物辩证法的实质和核心，矛盾的普遍性是指矛盾存在于一切事物中并贯穿于每一事物发展过程的始终。\n\n【干扰项分析】\n  A项（偷换概念）：唯物辩证法的实质和核心是对立统一规律，不是质量互变规律\n  C项（偷换概念）：'矛盾无处不在、无时不有'是矛盾普遍性的含义，矛盾的特殊性是指具体事物所包含的矛盾及每一矛盾的各个方面都有其特点\n  D项（绝对化）：矛盾的普遍性是指矛盾存在于一切事物中、贯穿事物发展始终，但并非任何两个事物之间都有矛盾，矛盾的存在是有条件的\n\n故本题选B。",
+      "validation": {
+        "authoritative_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427774",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "PT-MAO-001",
+      "origin_type": "generated",
+      "module": "政治理论",
+      "subtype": "毛泽东思想",
+      "difficulty": 2,
+      "knowledge_point_id": "PT-MAO-001",
+      "stem": "关于'实事求是'，下列说法正确的是：",
+      "options": {
+        "A": "'实事'就是客观事物的内部联系，'是'就是客观存在着的一切事物，'求'就是我们去研究。",
+        "B": "实事求是是邓小平理论的精髓，毛泽东思想的精髓是群众路线。",
+        "C": "实事求是是毛泽东思想的精髓，毛泽东在《改造我们的学习》中对其作出了科学解释。",
+        "D": "实事求是这一概念最早由毛泽东在《实践论》中提出。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "'实事'就是客观事物的内部联系，'是'就是客观存在着的一切事物，'求'就是我们去研究。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "毛泽东在《改造我们的学习》中的解释是：'实事'就是客观存在着的一切事物，'是'就是客观事物的内部联系即规律性，'求'就是我们去研究。选项将'实事'和'是'的含义颠倒"
+        },
+        "B": {
+          "content": "实事求是是邓小平理论的精髓，毛泽东思想的精髓是群众路线。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "实事求是是毛泽东思想的精髓，也是邓小平理论的精髓；群众路线是党的根本工作路线，不是毛泽东思想的精髓"
+        },
+        "C": {
+          "content": "实事求是是毛泽东思想的精髓，毛泽东在《改造我们的学习》中对其作出了科学解释。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "D": {
+          "content": "实事求是这一概念最早由毛泽东在《实践论》中提出。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "'实事求是'一词最早出自《汉书·河间献王传》，毛泽东在1941年《改造我们的学习》中对其作出马克思主义的科学解释，并非在《实践论》中首次提出"
+        }
+      },
+      "answer": "C",
+      "explanation": "【知识点】毛泽东思想（来源：PT-MAO-001）\n\n【正确项】C：实事求是是毛泽东思想的精髓，毛泽东在《改造我们的学习》中对其作出了科学解释。\n\n【干扰项分析】\n  A项（偷换概念）：毛泽东在《改造我们的学习》中的解释是：'实事'就是客观存在着的一切事物，'是'就是客观事物的内部联系即规律性，'求'就是我们去研究。选项将'实事'和'是'的含义颠倒\n  B项（偷换概念）：实事求是是毛泽东思想的精髓，也是邓小平理论的精髓；群众路线是党的根本工作路线，不是毛泽东思想的精髓\n  D项（偷换概念）：'实事求是'一词最早出自《汉书·河间献王传》，毛泽东在1941年《改造我们的学习》中对其作出马克思主义的科学解释，并非在《实践论》中首次提出\n\n故本题选C。",
+      "validation": {
+        "authoritative_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427787",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "PT-SOC-001",
+      "origin_type": "generated",
+      "module": "政治理论",
+      "subtype": "中国特色社会主义理论体系",
+      "difficulty": 2,
+      "knowledge_point_id": "PT-SOC-001",
+      "stem": "关于党在社会主义初级阶段的基本路线，下列说法正确的是：",
+      "options": {
+        "A": "基本路线是在党的十一届三中全会上正式确立的。",
+        "B": "基本路线的奋斗目标是把我国建设成为高度发达的资本主义国家。",
+        "C": "'两个基本点'是指坚持公有制为主体和坚持按劳分配为主体。",
+        "D": "基本路线的核心内容是'一个中心、两个基本点'，即以经济建设为中心，坚持四项基本原则，坚持改革开放。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "基本路线是在党的十一届三中全会上正式确立的。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "党在社会主义初级阶段的基本路线是在1987年党的十三大上正式确立的，十一届三中全会实现了伟大历史转折但尚未完整提出基本路线"
+        },
+        "B": {
+          "content": "基本路线的奋斗目标是把我国建设成为高度发达的资本主义国家。",
+          "is_correct": false,
+          "error_type": "无中生有",
+          "error_reason": "基本路线的奋斗目标是把我国建设成为富强民主文明和谐美丽的社会主义现代化强国，不是资本主义国家"
+        },
+        "C": {
+          "content": "'两个基本点'是指坚持公有制为主体和坚持按劳分配为主体。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "'两个基本点'是指坚持四项基本原则和坚持改革开放，不是公有制和按劳分配（后者是基本经济制度和分配制度的内容）"
+        },
+        "D": {
+          "content": "基本路线的核心内容是'一个中心、两个基本点'，即以经济建设为中心，坚持四项基本原则，坚持改革开放。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【知识点】中国特色社会主义理论体系（来源：PT-SOC-001）\n\n【正确项】D：基本路线的核心内容是'一个中心、两个基本点'，即以经济建设为中心，坚持四项基本原则，坚持改革开放。\n\n【干扰项分析】\n  A项（偷换概念）：党在社会主义初级阶段的基本路线是在1987年党的十三大上正式确立的，十一届三中全会实现了伟大历史转折但尚未完整提出基本路线\n  B项（无中生有）：基本路线的奋斗目标是把我国建设成为富强民主文明和谐美丽的社会主义现代化强国，不是资本主义国家\n  C项（偷换概念）：'两个基本点'是指坚持四项基本原则和坚持改革开放，不是公有制和按劳分配（后者是基本经济制度和分配制度的内容）\n\n故本题选D。",
+      "validation": {
+        "authoritative_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427800",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "PT-CUR-001",
+      "origin_type": "generated",
+      "module": "政治理论",
+      "subtype": "时事政治",
+      "difficulty": 2,
+      "knowledge_point_id": "PT-CUR-001",
+      "stem": "关于'新质生产力'，下列说法正确的是：",
+      "options": {
+        "A": "新质生产力是创新起主导作用，具有高科技、高效能、高质量特征，符合新发展理念的先进生产力质态。",
+        "B": "新质生产力的核心要素是资本投入，关键在量的增长。",
+        "C": "新质生产力就是传统生产力的简单量的扩张，不需要科技创新。",
+        "D": "新质生产力这一概念是2024年全国两会期间首次提出的。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "新质生产力是创新起主导作用，具有高科技、高效能、高质量特征，符合新发展理念的先进生产力质态。",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "B": {
+          "content": "新质生产力的核心要素是资本投入，关键在量的增长。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "新质生产力的核心要素是创新，关键在质优，本质是先进生产力，不是资本投入和量的增长"
+        },
+        "C": {
+          "content": "新质生产力就是传统生产力的简单量的扩张，不需要科技创新。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "新质生产力是摆脱传统经济增长方式、创新起主导作用的先进生产力质态，不是传统生产力的简单量的扩张"
+        },
+        "D": {
+          "content": "新质生产力这一概念是2024年全国两会期间首次提出的。",
+          "is_correct": false,
+          "error_type": "偷换概念",
+          "error_reason": "新质生产力是习近平总书记2023年9月在黑龙江考察时首次提出的，2024年全国两会期间对其作了进一步阐述"
+        }
+      },
+      "answer": "A",
+      "explanation": "【知识点】时事政治（来源：PT-CUR-001）\n\n【正确项】A：新质生产力是创新起主导作用，具有高科技、高效能、高质量特征，符合新发展理念的先进生产力质态。\n\n【干扰项分析】\n  B项（偷换概念）：新质生产力的核心要素是创新，关键在质优，本质是先进生产力，不是资本投入和量的增长\n  C项（偷换概念）：新质生产力是摆脱传统经济增长方式、创新起主导作用的先进生产力质态，不是传统生产力的简单量的扩张\n  D项（偷换概念）：新质生产力是习近平总书记2023年9月在黑龙江考察时首次提出的，2024年全国两会期间对其作了进一步阐述\n\n故本题选A。",
+      "validation": {
+        "authoritative_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427812",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "PT-CUR-002",
+      "origin_type": "generated",
+      "module": "政治理论",
+      "subtype": "时事政治",
+      "difficulty": 3,
+      "knowledge_point_id": "PT-CUR-002",
+      "stem": "建设全国统一大市场是构建新发展格局的基础支撑和内在要求。下列属于建设全国统一大市场目标的是：\n①持续推动国内市场高效畅通和规模拓展\n②加快营造稳定公平透明可预期的营商环境\n③进一步降低市场交易成本\n④全面取消地方政府对经济的管理职能",
+      "options": {
+        "A": "②③④",
+        "B": "①②③",
+        "C": "①②④",
+        "D": "①③④"
+      },
+      "options_detail": {
+        "A": {
+          "content": "②③④",
+          "is_correct": false,
+          "error_type": "以偏概全",
+          "error_reason": "包含错误项④，遗漏了正确项①'持续推动国内市场高效畅通和规模拓展'"
+        },
+        "B": {
+          "content": "①②③",
+          "is_correct": true,
+          "error_type": null,
+          "error_reason": null
+        },
+        "C": {
+          "content": "①②④",
+          "is_correct": false,
+          "error_type": "以偏概全",
+          "error_reason": "④'全面取消地方政府对经济的管理职能'表述错误，建设全国统一大市场不是取消地方政府管理职能，而是破除地方保护和市场分割"
+        },
+        "D": {
+          "content": "①③④",
+          "is_correct": false,
+          "error_type": "以偏概全",
+          "error_reason": "包含错误项④，遗漏了正确项②'加快营造稳定公平透明可预期的营商环境'"
+        }
+      },
+      "answer": "B",
+      "explanation": "【知识点】时事政治（来源：PT-CUR-002）\n\n【条目判断】\n  ① ✅ 持续推动国内市场高效畅通和规模拓展\n  ② ✅ 加快营造稳定公平透明可预期的营商环境\n  ③ ✅ 进一步降低市场交易成本\n  ④ ❌ 全面取消地方政府对经济的管理职能\n\n【正确项】B：①②③\n\n【干扰项分析】\n  A项（以偏概全）：包含错误项④，遗漏了正确项①'持续推动国内市场高效畅通和规模拓展'\n  C项（以偏概全）：④'全面取消地方政府对经济的管理职能'表述错误，建设全国统一大市场不是取消地方政府管理职能，而是破除地方保护和市场分割\n  D项（以偏概全）：包含错误项④，遗漏了正确项②'加快营造稳定公平透明可预期的营商环境'\n\n故本题选B。",
+      "validation": {
+        "authoritative_consistency_check": "passed",
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_error_type_labeled": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "theory_v1",
+        "generated_at": "2026-09-03T13:14:04.427828",
+        "param_seed": 42
+      },
+      "question_type": "组合判断",
+      "items": [
+        {
+          "index": "①",
+          "content": "持续推动国内市场高效畅通和规模拓展",
+          "is_correct": true
+        },
+        {
+          "index": "②",
+          "content": "加快营造稳定公平透明可预期的营商环境",
+          "is_correct": true
+        },
+        {
+          "index": "③",
+          "content": "进一步降低市场交易成本",
+          "is_correct": true
+        },
+        {
+          "index": "④",
+          "content": "全面取消地方政府对经济的管理职能",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}
