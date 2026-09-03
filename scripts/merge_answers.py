@@ -4,12 +4,14 @@
 用法：
     python3 scripts/merge_answers.py --year 2025
     python3 scripts/merge_answers.py --year 2025 --dry-run   # 只校验不写入
+    python3 scripts/merge_answers.py --year 2022 --answer-source answer_book_2026-09
 
-读取 _extract/answers_{shidi,shengji,xzzf}.json，逐题：
+自动检测 papers/ 目录下的卷种（shidi/shengji/xingzhengzhifa），
+读取对应 _extract/answers_{shidi,shengji,xzzf}.json，逐题：
   1. 答案格式校验（单选∈options键、多选≥2升序、判断∈{正确,错误}）
   2. 锚点校验（题干归一化后与解析模糊比对）
   3. 写入 answer/explanation/answer_source/subtype，清 answer_missing flag
-  4. 输出覆盖率报告 + pending_review 清单
+  4. 输出覆盖率报告 + pending_review 清单（dry-run 模式不写报告文件）
 """
 from __future__ import annotations
 
@@ -22,9 +24,10 @@ from collections import defaultdict
 
 REPO = Path(__file__).resolve().parents[1]
 DATA = REPO / "xingce-structured-data"
-ANSWER_SOURCE = "answer_book_2026-09"
+DEFAULT_ANSWER_SOURCE = "answer_book_2026-09"
 
-PAPER_FILES = {
+# 卷种名 → 答案文件名约定
+ANSWER_FILE_MAP = {
     "shidi": "answers_shidi.json",
     "shengji": "answers_shengji.json",
     "xingzhengzhifa": "answers_xzzf.json",
@@ -145,6 +148,7 @@ def merge_paper(
     answer_file: str,
     base: Path,
     dry_run: bool,
+    answer_source: str = DEFAULT_ANSWER_SOURCE,
 ) -> dict:
     """合并单卷答案。返回统计 dict。"""
     paper_path = base / "papers" / f"{paper_name}.json"
@@ -228,7 +232,7 @@ def merge_paper(
         # 3. 写入
         q["answer"] = ans["answer"]
         q["explanation"] = ans.get("explanation", "")
-        q["answer_source"] = ANSWER_SOURCE
+        q["answer_source"] = answer_source
         if ans.get("subtype"):
             q["subtype"] = ans["subtype"]
 
@@ -256,11 +260,29 @@ def merge_paper(
     return result
 
 
+def detect_papers(base: Path) -> dict[str, str]:
+    """自动检测 papers/ 目录下存在的卷种，返回 {paper_name: answer_file}。"""
+    papers_dir = base / "papers"
+    if not papers_dir.exists():
+        return {}
+    found = {}
+    for pname in ANSWER_FILE_MAP:
+        if (papers_dir / f"{pname}.json").exists():
+            found[pname] = ANSWER_FILE_MAP[pname]
+    return found
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="合并行测真题答案到 papers")
     parser.add_argument("--year", type=str, default="2025", help="考试年份")
     parser.add_argument(
         "--dry-run", action="store_true", help="只校验不写入文件"
+    )
+    parser.add_argument(
+        "--answer-source",
+        type=str,
+        default=DEFAULT_ANSWER_SOURCE,
+        help=f"答案来源标记（默认 {DEFAULT_ANSWER_SOURCE}）",
     )
     args = parser.parse_args()
 
@@ -269,15 +291,23 @@ def main() -> None:
         print(f"ERROR: year directory not found: {base}", file=sys.stderr)
         sys.exit(1)
 
-    print(f"{'[DRY-RUN] ' if args.dry_run else ''}合并 {args.year} 行测答案\n")
+    # 自动检测卷种（兼容 2 卷/3 卷年份）
+    paper_files = detect_papers(base)
+    if not paper_files:
+        print(f"ERROR: no paper files found in {base / 'papers'}", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"{'[DRY-RUN] ' if args.dry_run else ''}合并 {args.year} 行测答案")
+    print(f"  检测到卷种: {', '.join(paper_files.keys())}")
+    print(f"  答案来源: {args.answer_source}\n")
 
     all_pending = []
     total_q = 0
     total_ans = 0
     report = {"year": args.year, "dry_run": args.dry_run, "papers": {}}
 
-    for paper_name, answer_file in PAPER_FILES.items():
-        r = merge_paper(paper_name, answer_file, base, args.dry_run)
+    for paper_name, answer_file in paper_files.items():
+        r = merge_paper(paper_name, answer_file, base, args.dry_run, args.answer_source)
         report["papers"][paper_name] = {
             k: v for k, v in r.items() if k != "pending_list"
         }
@@ -299,17 +329,21 @@ def main() -> None:
     )
     report["pending_review"] = all_pending
 
-    # 写报告
-    report_path = base / "_extract" / "merge_report.json"
-    report_path.write_text(
-        json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-
     print(f"\n  总计覆盖率: {report['total_coverage']}")
     print(f"  待复核项: {len(all_pending)}")
     for p in all_pending:
         print(f"    [{p['paper']}] Q{p['number']}: {p['reason']}")
-    print(f"\n  报告已写入: {report_path}")
+
+    # dry-run 不写报告文件，避免污染 _extract/ 目录
+    if not args.dry_run:
+        report_path = base / "_extract" / "merge_report.json"
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        report_path.write_text(
+            json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        print(f"\n  报告已写入: {report_path}")
+    else:
+        print("\n  [DRY-RUN] 未写入报告文件")
 
 
 if __name__ == "__main__":
