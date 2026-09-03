@@ -1,0 +1,170 @@
+{
+  "version": "1.0",
+  "description": "翻译推理逻辑规则库 — 命题逻辑规则定义，用于规则引擎求解与校验",
+  "created_at": "2026-09-03",
+  "connectives": {
+    "implication": {
+      "symbol": "→",
+      "chinese": "如果…那么…",
+      "truth_table": {"00": 1, "01": 1, "10": 0, "11": 1},
+      "description": "充分条件：前件真后件假时为假，其余为真"
+    },
+    "reverse_implication": {
+      "symbol": "←",
+      "chinese": "只有…才…",
+      "truth_table": {"00": 1, "01": 0, "10": 1, "11": 1},
+      "description": "必要条件：后件真前件假时为假，等价于 B→A"
+    },
+    "biconditional": {
+      "symbol": "↔",
+      "chinese": "当且仅当",
+      "truth_table": {"00": 1, "01": 0, "10": 0, "11": 1},
+      "description": "充要条件：前后件同真同假时为真"
+    },
+    "conjunction": {
+      "symbol": "∧",
+      "chinese": "且",
+      "truth_table": {"00": 0, "01": 0, "10": 0, "11": 1},
+      "description": "联言命题：全真才真"
+    },
+    "disjunction": {
+      "symbol": "∨",
+      "chinese": "或",
+      "truth_table": {"00": 0, "01": 1, "10": 1, "11": 1},
+      "description": "选言命题（相容）：全假才假"
+    },
+    "negation": {
+      "symbol": "¬",
+      "chinese": "并非",
+      "truth_table": {"0": 1, "1": 0},
+      "description": "否定：取反"
+    }
+  },
+  "inference_rules": [
+    {
+      "id": "modus_ponens",
+      "name": "肯定前件式（假言推理）",
+      "form": "A→B, A ⊢ B",
+      "description": "如果A那么B，已知A成立，则B成立",
+      "valid": true
+    },
+    {
+      "id": "modus_tollens",
+      "name": "否定后件式（逆否推理）",
+      "form": "A→B, ¬B ⊢ ¬A",
+      "description": "如果A那么B，已知B不成立，则A不成立",
+      "valid": true
+    },
+    {
+      "id": "contrapositive",
+      "name": "逆否命题等价",
+      "form": "A→B ⊣⊢ ¬B→¬A",
+      "description": "原命题与逆否命题等价",
+      "valid": true
+    },
+    {
+      "id": "hypothetical_syllogism",
+      "name": "假言连锁推理",
+      "form": "A→B, B→C ⊢ A→C",
+      "description": "如果A那么B，如果B那么C，则如果A那么C",
+      "valid": true
+    },
+    {
+      "id": "disjunctive_syllogism",
+      "name": "选言推理（否定肯定式）",
+      "form": "A∨B, ¬A ⊢ B",
+      "description": "A或B，已知A不成立，则B成立",
+      "valid": true
+    },
+    {
+      "id": "de_morgan_and",
+      "name": "德摩根定律（且的否定）",
+      "form": "¬(A∧B) ⊣⊢ ¬A∨¬B",
+      "description": "并非(A且B)等价于(非A)或(非B)",
+      "valid": true
+    },
+    {
+      "id": "de_morgan_or",
+      "name": "德摩根定律（或的否定）",
+      "form": "¬(A∨B) ⊣⊢ ¬A∧¬B",
+      "description": "并非(A或B)等价于(非A)且(非B)",
+      "valid": true
+    },
+    {
+      "id": "conjunction_elimination",
+      "name": "联言推理分解式",
+      "form": "A∧B ⊢ A",
+      "description": "A且B成立，则A成立",
+      "valid": true
+    },
+    {
+      "id": "conjunction_introduction",
+      "name": "联言推理组合式",
+      "form": "A, B ⊢ A∧B",
+      "description": "A成立且B成立，则A且B成立",
+      "valid": true
+    },
+    {
+      "id": "biconditional_elimination_forward",
+      "name": "充要条件消去（正向）",
+      "form": "A↔B, A ⊢ B",
+      "description": "A当且仅当B，已知A则B",
+      "valid": true
+    },
+    {
+      "id": "biconditional_elimination_backward",
+      "name": "充要条件消去（反向）",
+      "form": "A↔B, B ⊢ A",
+      "description": "A当且仅当B，已知B则A",
+      "valid": true
+    }
+  ],
+  "fallacies": [
+    {
+      "id": "affirming_consequent",
+      "name": "肯定后件谬误",
+      "form": "A→B, B ⊬ A",
+      "description": "如果A那么B，已知B成立，不能推出A成立（B可能由其他原因导致）",
+      "example": "如果下雨那么地湿，地湿了，所以下雨了（可能是洒水车）"
+    },
+    {
+      "id": "denying_antecedent",
+      "name": "否定前件谬误",
+      "form": "A→B, ¬A ⊬ ¬B",
+      "description": "如果A那么B，已知A不成立，不能推出B不成立（B可能由其他原因导致）",
+      "example": "如果下雨那么地湿，没下雨，所以地不湿（可能是洒水车）"
+    },
+    {
+      "id": "confusing_sufficient_necessary",
+      "name": "混淆充分/必要条件",
+      "form": "只有A才B 被误作 如果A那么B",
+      "description": "把必要条件当作充分条件，或把充分条件当作必要条件",
+      "example": "只有努力才能成功 → 被误作：如果努力就能成功"
+    },
+    {
+      "id": "false_disjunction",
+      "name": "虚假选言（肯定否定式误用）",
+      "form": "A∨B, A ⊬ ¬B（相容选言）",
+      "description": "相容选言命题中，肯定一支不能否定另一支",
+      "example": "他是老师或作家，他是老师，所以他不是作家"
+    }
+  ],
+  "chinese_translation_patterns": {
+    "如果A，那么B": "A→B",
+    "只要A，就B": "A→B",
+    "若A，则B": "A→B",
+    "A是B的充分条件": "A→B",
+    "只有A，才B": "B→A",
+    "A是B的必要条件": "B→A",
+    "A是B的前提": "B→A",
+    "A是B的基础": "B→A",
+    "除非A，否则B": "¬A→B",
+    "A当且仅当B": "A↔B",
+    "A且B": "A∧B",
+    "A并且B": "A∧B",
+    "A或B": "A∨B",
+    "A或者B": "A∨B",
+    "并非A": "¬A",
+    "A不成立": "¬A"
+  }
+}
