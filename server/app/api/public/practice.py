@@ -2,10 +2,12 @@
 
 无需 admin JWT，原型阶段供管理后台原型页与学员端联调。
 """
-from fastapi import APIRouter, Query
+from fastapi import APIRouter, Depends, Header, Query
 from pydantic import BaseModel
+from sqlalchemy.orm import Session
 
 from app.core.response import ApiResponse
+from app.database import get_db
 from app.services import practice_service
 
 router = APIRouter(prefix="/practice")
@@ -42,12 +44,20 @@ def get_daily(
 
 
 @router.post("/{daily_id}/submit")
-def submit(daily_id: str, body: SubmitBody):
-    """提交答案，返回逐题对错判定与错因映射。"""
+def submit(
+    daily_id: str,
+    body: SubmitBody,
+    db: Session = Depends(get_db),
+    x_user_id: str = Header(default="anonymous", alias="X-User-Id"),
+):
+    """提交答案，返回逐题对错判定与错因映射。作答持久化到 practice_answers。"""
     try:
         result = practice_service.submit_answers(
             daily_id,
             [{"question_id": a.question_id, "user_answer": a.user_answer} for a in body.answers],
+            db=db,
+            user_id=x_user_id,
+            source="real",
         )
     except ValueError as e:
         return ApiResponse.fail(str(e), code=404)

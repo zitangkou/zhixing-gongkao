@@ -107,6 +107,24 @@ const router = createRouter({
           meta: { title: '练习闭环原型', permissions: ['exam:read'] },
         },
         {
+          path: 'analytics/dashboard',
+          name: 'analytics-dashboard',
+          component: () => import('@/views/analytics/Dashboard.vue'),
+          meta: { title: '学习反馈看板', permissions: ['exam:read'] },
+        },
+        {
+          path: 'analytics/questions/:id',
+          name: 'analytics-question-detail',
+          component: () => import('@/views/analytics/QuestionDetail.vue'),
+          meta: { title: '单题分析', permissions: ['exam:read'] },
+        },
+        {
+          path: 'analytics/error-paths',
+          name: 'analytics-error-paths',
+          component: () => import('@/views/analytics/ErrorPaths.vue'),
+          meta: { title: '错因归集', permissions: ['exam:read'] },
+        },
+        {
           path: 'rmrb',
           name: 'rmrb',
           component: () => import('@/views/rmrb/List.vue'),

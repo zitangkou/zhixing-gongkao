@@ -132,3 +132,23 @@ class ManualWrong(Base):
 
 # ===== 真题/题库模块 =====
 
+
+class PracticeAnswer(Base):
+    """练习作答记录（Q7 学习闭环持久化，P3 学习反馈数据源）。
+
+    user_id 可匿名（设备级/演示用户），不存储个人身份信息。
+    source 标记数据来源：real（真实用户）/ demo（演示数据）。
+    """
+    __tablename__ = "practice_answers"
+
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=lambda: gen_id("pa"))
+    user_id: Mapped[str] = mapped_column(String(64), default="anonymous", index=True)
+    question_id: Mapped[str] = mapped_column(String(64), index=True)
+    daily_id: Mapped[str] = mapped_column(String(64), default="", index=True)
+    user_answer: Mapped[str] = mapped_column(String(8), default="")
+    correct_answer: Mapped[str] = mapped_column(String(8), default="")
+    is_correct: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
+    time_spent_ms: Mapped[int] = mapped_column(Integer, default=0)
+    source: Mapped[str] = mapped_column(String(16), default="real", index=True)  # real | demo
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)
+

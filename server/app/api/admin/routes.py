@@ -16,6 +16,8 @@ from app.api.admin.ziliao import router as ziliao_router
 from app.api.admin.content_ops import router as content_ops_router
 from app.api.admin.feedbacks import router as feedbacks_router
 from app.api.admin.question_bank import router as question_bank_router
+from app.api.admin.analytics import router as analytics_router
+from app.api.admin.generation import router as generation_router
 
 router = APIRouter(prefix="/admin", tags=["管理后台"])
 router.include_router(auth_admin_router)
@@ -34,3 +36,5 @@ router.include_router(misc_router)
 router.include_router(content_ops_router)
 router.include_router(feedbacks_router)
 router.include_router(question_bank_router)
+router.include_router(analytics_router)
+router.include_router(generation_router)

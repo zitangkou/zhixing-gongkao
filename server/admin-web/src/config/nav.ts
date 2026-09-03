@@ -2,6 +2,7 @@ import type { Component } from 'vue'
 import {
   Calendar,
   Collection,
+  DataAnalysis,
   Document,
   Folder,
   Notebook,
@@ -51,6 +52,16 @@ export const NAV_GROUPS: NavGroup[] = [
       { path: '/question-bank/questions', title: '题目资产', icon: Collection, permissions: ['exam:read'] },
       { path: '/question-bank/papers', title: '真题试卷', icon: Tickets, permissions: ['exam:read'] },
       { path: '/ziliao', title: '资料分析', icon: Tickets, permissions: ['ziliao:read'] },
+      { path: '/practice/proto', title: '练习闭环原型', icon: Reading, permissions: ['exam:read'] },
+    ],
+  },
+  {
+    key: 'analytics',
+    title: '学习反馈',
+    icon: DataAnalysis,
+    children: [
+      { path: '/analytics/dashboard', title: '反馈看板', icon: TrendCharts, permissions: ['exam:read'] },
+      { path: '/analytics/error-paths', title: '错因归集', icon: DataAnalysis, permissions: ['exam:read'] },
     ],
   },
   {
@@ -92,6 +103,9 @@ export const ROUTE_TITLES: Record<string, string> = {
   '/question-bank/questions': '题目资产',
   '/question-bank/papers': '真题试卷',
   '/ziliao': '资料分析',
+  '/practice/proto': '练习闭环原型',
+  '/analytics/dashboard': '学习反馈看板',
+  '/analytics/error-paths': '错因归集',
   '/rmrb': '人民日报',
   '/corpus': '语料本',
   '/events': '时事事件',

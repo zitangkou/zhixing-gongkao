@@ -9,7 +9,10 @@ from __future__ import annotations
 import json
 import random
 from pathlib import Path
-from typing import Any
+from typing import Any, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from sqlalchemy.orm import Session
 
 # ── 题库路径 ──────────────────────────────────────────
 _REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -219,11 +222,18 @@ def _find_question_in_package(package: dict[str, Any], question_id: str) -> dict
     return None
 
 
-def submit_answers(daily_id: str, answers: list[dict[str, str]]) -> dict[str, Any]:
+def submit_answers(
+    daily_id: str,
+    answers: list[dict[str, str]],
+    db: Session | None = None,
+    user_id: str = "anonymous",
+    source: str = "real",
+) -> dict[str, Any]:
     """提交答案，返回逐题判定与错因映射。
 
     请求: [{question_id, user_answer}]
     返回: {daily_id, total, correct_count, wrong_count, results: [...]}
+    若传入 db，则将每题作答持久化到 practice_answers 表。
     """
     package = _package_cache.get(daily_id)
     if not package:
@@ -297,7 +307,37 @@ def submit_answers(daily_id: str, answers: list[dict[str, str]]) -> dict[str, An
         "results": results,
     }
     _submission_cache[daily_id] = submission
+
+    # ── 持久化作答记录（P3 学习反馈数据源）──
+    if db is not None:
+        _persist_answers(db, daily_id, user_id, source, results)
+
     return submission
+
+
+def _persist_answers(
+    db: Session,
+    daily_id: str,
+    user_id: str,
+    source: str,
+    results: list[dict[str, Any]],
+) -> None:
+    """将提交结果逐题写入 practice_answers 表。"""
+    from app.models import PracticeAnswer
+
+    for r in results:
+        record = PracticeAnswer(
+            user_id=user_id,
+            question_id=r["question_id"],
+            daily_id=daily_id,
+            user_answer=r.get("user_answer", ""),
+            correct_answer=r.get("correct_answer", ""),
+            is_correct=bool(r.get("is_correct", False)),
+            time_spent_ms=0,
+            source=source,
+        )
+        db.add(record)
+    db.commit()
 
 
 def get_review_card(daily_id: str) -> dict[str, Any]:

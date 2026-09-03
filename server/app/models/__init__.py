@@ -2,7 +2,7 @@
 from app.models.base import Base, gen_id, utcnow
 from app.models.account import AdminUser, AppUser, Role, SystemSetting
 from app.models.content import Article, Category, Question
-from app.models.practice import ManualWrong, PointsLog, QuizAttempt, SectionRead, SignRecord, StudyRecord, WrongAnswer
+from app.models.practice import ManualWrong, PointsLog, PracticeAnswer, QuizAttempt, SectionRead, SignRecord, StudyRecord, WrongAnswer
 from app.models.plan import DailyReview, PlanTask, PlanTemplate
 from app.models.knowledge import KnowledgeNode
 from app.models.exam import ExamAnswer, ExamAttempt, ExamPaper, ExamQuestion
@@ -32,3 +32,4 @@ from app.models.question_bank import (
     QuestionMaterialLink,
     QuestionVersion,
 )
+from app.models.generation import GenerationBatch, ReviewRecord
