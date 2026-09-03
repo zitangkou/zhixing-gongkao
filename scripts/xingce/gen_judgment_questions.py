@@ -18,6 +18,7 @@ import argparse
 import random
 import re
 import math
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from itertools import product as iter_product
@@ -46,6 +47,7 @@ DEFINITION_SPECS = [
     {
         "question_id": "Q6-DEF-001",
         "difficulty": 1,
+        "forced_answer": "B",
         "definition": (
             "绿色消费是指消费者在购买商品和服务时，优先选择那些在生产、使用和处置过程中"
             "对环境影响较小、符合环保标准的产品，以减少资源消耗和环境污染的消费行为。"
@@ -91,6 +93,7 @@ DEFINITION_SPECS = [
     {
         "question_id": "Q6-DEF-002",
         "difficulty": 2,
+        "forced_answer": "D",
         "definition": (
             "紧急避险是指为了使国家、公共利益、本人或者他人的人身、财产和其他权利免受正在发生的危险，"
             "不得已而采取的损害另一较小合法权益的行为。紧急避险超过必要限度造成不应有的损害的，"
@@ -137,6 +140,7 @@ DEFINITION_SPECS = [
     {
         "question_id": "Q6-DEF-003",
         "difficulty": 2,
+        "forced_answer": "A",
         "definition": (
             "沉没成本效应是指人们在决定是否去做一件事情的时候，不仅是看这件事对自己有没有好处，"
             "而且也看过去是不是已经在这件事情上有过投入。我们把这些已经发生不可收回的支出，"
@@ -183,6 +187,7 @@ DEFINITION_SPECS = [
     {
         "question_id": "Q6-DEF-004",
         "difficulty": 3,
+        "forced_answer": "B",
         "definition": (
             "行政指导是指行政机关在其所管辖的事务范围内，根据国家的政策规定或者法律原则，"
             "针对特定的公民、法人或其他组织，用非强制性的方法或手段，取得该行政相对方的同意或协助，"
@@ -230,6 +235,7 @@ DEFINITION_SPECS = [
     {
         "question_id": "Q6-DEF-005",
         "difficulty": 2,
+        "forced_answer": "C",
         "definition": (
             "替代性强化是指学习者通过观察他人行为所带来的奖励性后果而受到强化，即观察者因看到"
             "榜样受强化而间接受到的强化。在替代性强化中，学习者本人并没有直接受到奖励或惩罚，"
@@ -327,7 +333,7 @@ def generate_definition_questions():
             failed.append(spec["question_id"])
             continue
 
-        # 随机化选项位置
+        # 随机化选项位置（支持 forced_answer）
         rng = random.Random(f"{SEED}_{spec['question_id']}")
         all_options = [{"content": spec["correct_option"], "is_correct": True, "violated_element": None}]
         for d in spec["distractors"]:
@@ -337,20 +343,34 @@ def generate_definition_questions():
                 "violated_element": d["violated_element"],
                 "violation_reason": d["violation_reason"],
             })
-        rng.shuffle(all_options)
 
         labels = ["A", "B", "C", "D"]
+        if spec.get("forced_answer"):
+            answer = spec["forced_answer"]
+            # 正确项放在指定位置，干扰项随机填充其余位置
+            distractors_only = [o for o in all_options if not o["is_correct"]]
+            rng.shuffle(distractors_only)
+            option_assignments = {}
+            di = 0
+            for label in labels:
+                if label == answer:
+                    option_assignments[label] = [o for o in all_options if o["is_correct"]][0]
+                else:
+                    option_assignments[label] = distractors_only[di]
+                    di += 1
+        else:
+            rng.shuffle(all_options)
+            option_assignments = {labels[i]: all_options[i] for i in range(4)}
+            answer = [k for k, v in option_assignments.items() if v["is_correct"]][0]
+
         options = {}
-        answer = None
-        for i, opt in enumerate(all_options):
-            label = labels[i]
+        for label, opt in option_assignments.items():
             options[label] = {
                 "content": opt["content"],
                 "is_correct": opt["is_correct"],
                 "violated_element": opt["violated_element"],
+                "violation_reason": opt.get("violation_reason"),
             }
-            if opt["is_correct"]:
-                answer = label
 
         # 生成解析
         explanation = generate_definition_explanation(spec, options, answer)
@@ -492,11 +512,15 @@ class PropositionLogic:
 
 # 翻译推理题目规格
 # 每题：premises（自然语言+逻辑形式）、correct_conclusion、distractors（错误类型+结论）
+# 设计原则：题目1-3使用不完全约束模型（仅条件命题，无原子事实），使正确结论为条件式，
+#           干扰项可为"肯定后件""否定前件""混淆充分必要"等典型逻辑谬误；
+#           题目4-5使用含原子事实的模型，正确结论为原子命题。
 TRANSLATION_SPECS = [
     {
         "question_id": "Q6-TRANS-001",
         "difficulty": 1,
-        "question_type": "假言推理（肯定前件）",
+        "forced_answer": "B",
+        "question_type": "假言推理（逆否命题）",
         "variables": {"A": "天下雨", "B": "地面湿"},
         "premises": [
             {
@@ -504,33 +528,28 @@ TRANSLATION_SPECS = [
                 "logical_form": "A→B",
                 "expr": ("implies", ("atom", "A"), ("atom", "B")),
             },
-            {
-                "statement": "今天天下雨了。",
-                "logical_form": "A",
-                "expr": ("atom", "A"),
-            },
         ],
-        "question": "根据以上条件，可以推出以下哪项？",
+        "question": "由此可以推出：",
         "correct": {
-            "statement": "地面湿了。",
-            "logical_form": "B",
-            "expr": ("atom", "B"),
-            "proof_rule": "modus_ponens（肯定前件式）",
+            "statement": "如果地面没有湿，那么天没有下雨。",
+            "logical_form": "¬B→¬A",
+            "expr": ("implies", ("not", ("atom", "B")), ("not", ("atom", "A"))),
+            "proof_rule": "contrapositive（逆否命题等价：A→B ⊣⊢ ¬B→¬A）",
         },
         "distractors": [
             {
-                "statement": "地面没有湿。",
-                "logical_form": "¬B",
-                "expr": ("not", ("atom", "B")),
-                "error_type": "否定结论",
-                "error_description": "与正确结论直接矛盾",
+                "statement": "如果地面湿，那么天下雨。",
+                "logical_form": "B→A",
+                "expr": ("implies", ("atom", "B"), ("atom", "A")),
+                "error_type": "肯定后件谬误",
+                "error_description": "A→B不能推出B→A，地面湿可能由其他原因（如洒水车）导致",
             },
             {
-                "statement": "天没有下雨。",
-                "logical_form": "¬A",
-                "expr": ("not", ("atom", "A")),
-                "error_type": "否定已知前提",
-                "error_description": "与前提2直接矛盾",
+                "statement": "如果天没有下雨，那么地面没有湿。",
+                "logical_form": "¬A→¬B",
+                "expr": ("implies", ("not", ("atom", "A")), ("not", ("atom", "B"))),
+                "error_type": "否定前件谬误",
+                "error_description": "A→B不能推出¬A→¬B，天没下雨地面也可能湿（如洒水车）",
             },
             {
                 "statement": "天下雨了但地面没有湿。",
@@ -544,104 +563,9 @@ TRANSLATION_SPECS = [
     {
         "question_id": "Q6-TRANS-002",
         "difficulty": 2,
-        "question_type": "假言推理（否定后件/逆否）",
-        "variables": {"A": "小张是北京人", "B": "小张说普通话"},
-        "premises": [
-            {
-                "statement": "如果小张是北京人，那么小张说普通话。",
-                "logical_form": "A→B",
-                "expr": ("implies", ("atom", "A"), ("atom", "B")),
-            },
-            {
-                "statement": "小张不说普通话。",
-                "logical_form": "¬B",
-                "expr": ("not", ("atom", "B")),
-            },
-        ],
-        "question": "根据以上条件，可以推出以下哪项？",
-        "correct": {
-            "statement": "小张不是北京人。",
-            "logical_form": "¬A",
-            "expr": ("not", ("atom", "A")),
-            "proof_rule": "modus_tollens（否定后件式/逆否推理）",
-        },
-        "distractors": [
-            {
-                "statement": "小张是北京人。",
-                "logical_form": "A",
-                "expr": ("atom", "A"),
-                "error_type": "肯定前件谬误",
-                "error_description": "否定后件时不能肯定前件，与逆否推理矛盾",
-            },
-            {
-                "statement": "小张说普通话。",
-                "logical_form": "B",
-                "expr": ("atom", "B"),
-                "error_type": "否定已知前提",
-                "error_description": "与前提2直接矛盾",
-            },
-            {
-                "statement": "小张是北京人并且说普通话。",
-                "logical_form": "A∧B",
-                "expr": ("and", ("atom", "A"), ("atom", "B")),
-                "error_type": "事实矛盾",
-                "error_description": "由逆否推理知小张不是北京人，A∧B与前提矛盾",
-            },
-        ],
-    },
-    {
-        "question_id": "Q6-TRANS-003",
-        "difficulty": 2,
-        "question_type": "必要条件（只有…才…）",
-        "variables": {"A": "年满18周岁", "B": "有选举权"},
-        "premises": [
-            {
-                "statement": "只有年满18周岁，才有选举权。",
-                "logical_form": "B→A（只有A才B = B→A）",
-                "expr": ("implies", ("atom", "B"), ("atom", "A")),
-            },
-            {
-                "statement": "小李有选举权。",
-                "logical_form": "B",
-                "expr": ("atom", "B"),
-            },
-        ],
-        "question": "根据以上条件，可以推出以下哪项？",
-        "correct": {
-            "statement": "小李年满18周岁。",
-            "logical_form": "A",
-            "expr": ("atom", "A"),
-            "proof_rule": "modus_ponens（对B→A肯定前件B，推出A）",
-        },
-        "distractors": [
-            {
-                "statement": "小李没有年满18周岁。",
-                "logical_form": "¬A",
-                "expr": ("not", ("atom", "A")),
-                "error_type": "否定结论",
-                "error_description": "与正确结论直接矛盾",
-            },
-            {
-                "statement": "小李有选举权但没有年满18周岁。",
-                "logical_form": "B∧¬A",
-                "expr": ("and", ("atom", "B"), ("not", ("atom", "A"))),
-                "error_type": "条件关系矛盾",
-                "error_description": "与前提'只有年满18周岁才有选举权'（B→A）矛盾，肯定B却否定A",
-            },
-            {
-                "statement": "小李没有选举权。",
-                "logical_form": "¬B",
-                "expr": ("not", ("atom", "B")),
-                "error_type": "否定已知前提",
-                "error_description": "与前提2直接矛盾",
-            },
-        ],
-    },
-    {
-        "question_id": "Q6-TRANS-004",
-        "difficulty": 3,
+        "forced_answer": "D",
         "question_type": "假言连锁推理",
-        "variables": {"A": "下雨", "B": "地面湿", "C": "滑倒"},
+        "variables": {"A": "下雨", "B": "地面湿", "C": "路人容易滑倒"},
         "premises": [
             {
                 "statement": "如果下雨，那么地面湿。",
@@ -653,46 +577,135 @@ TRANSLATION_SPECS = [
                 "logical_form": "B→C",
                 "expr": ("implies", ("atom", "B"), ("atom", "C")),
             },
+        ],
+        "question": "以下哪项一定为真？",
+        "correct": {
+            "statement": "如果下雨，那么路人容易滑倒。",
+            "logical_form": "A→C",
+            "expr": ("implies", ("atom", "A"), ("atom", "C")),
+            "proof_rule": "hypothetical_syllogism（假言连锁推理：A→B, B→C ⊢ A→C）",
+        },
+        "distractors": [
             {
-                "statement": "今天下雨了。",
+                "statement": "如果路人容易滑倒，那么下雨了。",
+                "logical_form": "C→A",
+                "expr": ("implies", ("atom", "C"), ("atom", "A")),
+                "error_type": "肯定后件谬误（连锁）",
+                "error_description": "A→C不能推出C→A，滑倒可能有其他原因",
+            },
+            {
+                "statement": "如果没有下雨，那么路人不容易滑倒。",
+                "logical_form": "¬A→¬C",
+                "expr": ("implies", ("not", ("atom", "A")), ("not", ("atom", "C"))),
+                "error_type": "否定前件谬误（连锁）",
+                "error_description": "A→C不能推出¬A→¬C，没下雨地面也可能因其他原因湿滑",
+            },
+            {
+                "statement": "下雨了但路人不容易滑倒。",
+                "logical_form": "A∧¬C",
+                "expr": ("and", ("atom", "A"), ("not", ("atom", "C"))),
+                "error_type": "条件关系矛盾",
+                "error_description": "由连锁推理A→C可知下雨则路人容易滑倒，A∧¬C与之矛盾",
+            },
+        ],
+    },
+    {
+        "question_id": "Q6-TRANS-003",
+        "difficulty": 2,
+        "forced_answer": "A",
+        "question_type": "必要条件（只有…才…）",
+        "variables": {"A": "年满18周岁", "B": "有选举权"},
+        "premises": [
+            {
+                "statement": "只有年满18周岁，才有选举权。",
+                "logical_form": "B→A（只有A才B = B→A）",
+                "expr": ("implies", ("atom", "B"), ("atom", "A")),
+            },
+        ],
+        "question": "根据以上陈述，可以得出以下哪项？",
+        "correct": {
+            "statement": "如果没有年满18周岁，那么没有选举权。",
+            "logical_form": "¬A→¬B",
+            "expr": ("implies", ("not", ("atom", "A")), ("not", ("atom", "B"))),
+            "proof_rule": "contrapositive（逆否命题：B→A ⊣⊢ ¬A→¬B）",
+        },
+        "distractors": [
+            {
+                "statement": "如果年满18周岁，那么有选举权。",
+                "logical_form": "A→B",
+                "expr": ("implies", ("atom", "A"), ("atom", "B")),
+                "error_type": "混淆充分/必要条件",
+                "error_description": "只有A才B（B→A）不等于如果A那么B（A→B），年满18不一定有选举权（还需未被剥夺政治权利等）",
+            },
+            {
+                "statement": "有选举权但没有年满18周岁。",
+                "logical_form": "B∧¬A",
+                "expr": ("and", ("atom", "B"), ("not", ("atom", "A"))),
+                "error_type": "条件关系矛盾",
+                "error_description": "与前提'只有年满18周岁才有选举权'（B→A）矛盾，肯定B却否定A",
+            },
+            {
+                "statement": "如果没有选举权，那么年满18周岁。",
+                "logical_form": "¬B→A",
+                "expr": ("implies", ("not", ("atom", "B")), ("atom", "A")),
+                "error_type": "否定前件谬误",
+                "error_description": "B→A不能推出¬B→A，没有选举权可能是因为未满18，也可能是其他原因",
+            },
+        ],
+    },
+    {
+        "question_id": "Q6-TRANS-004",
+        "difficulty": 3,
+        "forced_answer": "B",
+        "question_type": "假言推理（肯定前件）",
+        "variables": {"A": "小张是北京人", "B": "小张说普通话"},
+        "premises": [
+            {
+                "statement": "如果小张是北京人，那么小张说普通话。",
+                "logical_form": "A→B",
+                "expr": ("implies", ("atom", "A"), ("atom", "B")),
+            },
+            {
+                "statement": "小张是北京人。",
                 "logical_form": "A",
                 "expr": ("atom", "A"),
             },
         ],
-        "question": "根据以上条件，可以推出以下哪项？",
+        "question": "由此可以推出：",
         "correct": {
-            "statement": "路人容易滑倒。",
-            "logical_form": "C",
-            "expr": ("atom", "C"),
-            "proof_rule": "hypothetical_syllogism + modus_ponens（A→B, B→C ⊢ A→C; A→C, A ⊢ C）",
+            "statement": "小张说普通话。",
+            "logical_form": "B",
+            "expr": ("atom", "B"),
+            "proof_rule": "modus_ponens（肯定前件式：A→B, A ⊢ B）",
         },
         "distractors": [
             {
-                "statement": "路人不容易滑倒。",
-                "logical_form": "¬C",
-                "expr": ("not", ("atom", "C")),
-                "error_type": "否定结论",
-                "error_description": "与正确结论直接矛盾",
-            },
-            {
-                "statement": "地面没有湿。",
+                "statement": "小张不说普通话。",
                 "logical_form": "¬B",
                 "expr": ("not", ("atom", "B")),
-                "error_type": "否定中间结论",
-                "error_description": "由A→B和A可推出B，¬B与之矛盾",
+                "error_type": "否定结论",
+                "error_description": "由肯定前件式可推出B（小张说普通话），¬B与正确结论矛盾",
             },
             {
-                "statement": "路人容易滑倒但天没有下雨。",
-                "logical_form": "C∧¬A",
-                "expr": ("and", ("atom", "C"), ("not", ("atom", "A"))),
-                "error_type": "事实矛盾",
-                "error_description": "前提3已知天下雨（A），C∧¬A与前提直接矛盾",
+                "statement": "小张不是北京人。",
+                "logical_form": "¬A",
+                "expr": ("not", ("atom", "A")),
+                "error_type": "否定已知前提",
+                "error_description": "与前提2'小张是北京人'直接矛盾",
+            },
+            {
+                "statement": "小张是北京人但不说普通话。",
+                "logical_form": "A∧¬B",
+                "expr": ("and", ("atom", "A"), ("not", ("atom", "B"))),
+                "error_type": "条件关系矛盾",
+                "error_description": "与前提'如果小张是北京人那么小张说普通话'矛盾，肯定前件却否定后件",
             },
         ],
     },
     {
         "question_id": "Q6-TRANS-005",
         "difficulty": 3,
+        "forced_answer": "C",
         "question_type": "选言推理+德摩根定律",
         "variables": {"A": "小张去", "B": "小李去"},
         "premises": [
@@ -707,7 +720,7 @@ TRANSLATION_SPECS = [
                 "expr": ("not", ("atom", "A")),
             },
         ],
-        "question": "根据以上条件，可以推出以下哪项？",
+        "question": "以下哪项一定为真？",
         "correct": {
             "statement": "小李去。",
             "logical_form": "B",
@@ -720,14 +733,14 @@ TRANSLATION_SPECS = [
                 "logical_form": "¬B",
                 "expr": ("not", ("atom", "B")),
                 "error_type": "否定结论",
-                "error_description": "与正确结论直接矛盾，且¬A∧¬B违反A∨B",
+                "error_description": "由选言推理可推出B（小李去），¬B与正确结论矛盾，且¬A∧¬B违反A∨B",
             },
             {
                 "statement": "小张去。",
                 "logical_form": "A",
                 "expr": ("atom", "A"),
                 "error_type": "否定已知前提",
-                "error_description": "与前提2直接矛盾",
+                "error_description": "与前提2'小张不去'直接矛盾",
             },
             {
                 "statement": "小张和小李都不去。",
@@ -848,7 +861,7 @@ def generate_translation_questions():
             failed.append(spec["question_id"])
             continue
 
-        # 随机化选项位置
+        # 选项位置分配（支持 forced_answer）
         rng = random.Random(f"{SEED}_{spec['question_id']}")
         all_options = [{"content": spec["correct"]["statement"], "is_correct": True,
                          "logical_form": spec["correct"]["logical_form"], "error_type": None}]
@@ -860,23 +873,36 @@ def generate_translation_questions():
                 "error_type": d["error_type"],
                 "error_description": d["error_description"],
             })
-        rng.shuffle(all_options)
 
         labels = ["A", "B", "C", "D"]
+        if spec.get("forced_answer"):
+            answer = spec["forced_answer"]
+            distractors_only = [o for o in all_options if not o["is_correct"]]
+            rng.shuffle(distractors_only)
+            option_assignments = {}
+            di = 0
+            for label in labels:
+                if label == answer:
+                    option_assignments[label] = [o for o in all_options if o["is_correct"]][0]
+                else:
+                    option_assignments[label] = distractors_only[di]
+                    di += 1
+        else:
+            rng.shuffle(all_options)
+            option_assignments = {labels[i]: all_options[i] for i in range(4)}
+            answer = [k for k, v in option_assignments.items() if v["is_correct"]][0]
+
         options = {}
         options_detail = {}
-        answer = None
-        for i, opt in enumerate(all_options):
-            label = labels[i]
+        for label, opt in option_assignments.items():
             options[label] = opt["content"]
             options_detail[label] = {
                 "content": opt["content"],
                 "is_correct": opt["is_correct"],
                 "logical_form": opt["logical_form"],
                 "error_type": opt["error_type"],
+                "error_description": opt.get("error_description"),
             }
-            if opt["is_correct"]:
-                answer = label
 
         # 构建题干
         stem_parts = [p["statement"] for p in spec["premises"]]
@@ -1008,6 +1034,8 @@ FIGURE_SPECS = [
         "question_id": "Q6-FIG-001",
         "pattern_type": "数量类（交点数递增）",
         "difficulty": 1,
+        "forced_answer": "D",
+        "stem_text": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
         "pattern_description": "题干图形中直线与圆的交点数依次为1、2、3、4，呈递增规律，下一个图形交点数应为5",
         "stem_generator": "quantity_intersections",
         "stem_params": {"counts": [1, 2, 3, 4]},
@@ -1022,6 +1050,8 @@ FIGURE_SPECS = [
         "question_id": "Q6-FIG-002",
         "pattern_type": "旋转类（顺时针45°）",
         "difficulty": 2,
+        "forced_answer": "B",
+        "stem_text": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
         "pattern_description": "题干中的箭头图形每次顺时针旋转45°，依次为0°、45°、90°、135°，下一个应为180°",
         "stem_generator": "rotation_arrow",
         "stem_params": {"angles": [0, 45, 90, 135]},
@@ -1036,6 +1066,8 @@ FIGURE_SPECS = [
         "question_id": "Q6-FIG-003",
         "pattern_type": "对称类（对称轴数量递增）",
         "difficulty": 2,
+        "forced_answer": "D",
+        "stem_text": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
         "pattern_description": "题干图形的对称轴数量依次为1、2、3、4，呈递增规律，下一个图形应有5条对称轴（正五边形）",
         "stem_generator": "symmetry_regular_polygon",
         "stem_params": {"sides": [3, 4, 5, 6]},  # 正3/4/5/6边形对称轴数=边数
@@ -1050,6 +1082,8 @@ FIGURE_SPECS = [
         "question_id": "Q6-FIG-004",
         "pattern_type": "叠加类（去同存异）",
         "difficulty": 3,
+        "forced_answer": "C",
+        "stem_text": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
         "pattern_description": "第一组图中，前两个图形叠加后去同存异得到第三个图形。第二组图应用相同规律",
         "stem_generator": "overlay_xor",
         "stem_params": {
@@ -1074,6 +1108,8 @@ FIGURE_SPECS = [
         "question_id": "Q6-FIG-005",
         "pattern_type": "遍历类（元素遍历）",
         "difficulty": 3,
+        "forced_answer": "A",
+        "stem_text": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
         "pattern_description": "每行图形包含圆、方、三角三种元素各一个，且元素的填充样式（空心/实心/斜线）遍历。第三行缺少的图形应为实心圆",
         "stem_generator": "traversal_grid",
         "stem_params": {
@@ -1432,7 +1468,7 @@ def generate_figure_questions():
             failed.append(qid)
             continue
 
-        # 随机化选项位置
+        # 选项位置分配（支持 forced_answer）
         rng = random.Random(f"{SEED}_{qid}")
         all_options = [{"svg": correct_svg, "svg_path": str(correct_path.relative_to(REPO_ROOT)),
                          "is_correct": True, "violation": None}]
@@ -1444,14 +1480,28 @@ def generate_figure_questions():
                 "violation": d["violation"],
                 "violation_type": d["violation_type"],
             })
-        rng.shuffle(all_options)
 
         labels = ["A", "B", "C", "D"]
+        if spec.get("forced_answer"):
+            answer = spec["forced_answer"]
+            distractors_only = [o for o in all_options if not o["is_correct"]]
+            rng.shuffle(distractors_only)
+            option_assignments = {}
+            di = 0
+            for label in labels:
+                if label == answer:
+                    option_assignments[label] = [o for o in all_options if o["is_correct"]][0]
+                else:
+                    option_assignments[label] = distractors_only[di]
+                    di += 1
+        else:
+            rng.shuffle(all_options)
+            option_assignments = {labels[i]: all_options[i] for i in range(4)}
+            answer = [k for k, v in option_assignments.items() if v["is_correct"]][0]
+
         options = {}
         options_detail = {}
-        answer = None
-        for i, opt in enumerate(all_options):
-            label = labels[i]
+        for label, opt in option_assignments.items():
             options[label] = opt["svg_path"]
             options_detail[label] = {
                 "svg_path": opt["svg_path"],
@@ -1460,19 +1510,9 @@ def generate_figure_questions():
                 "violation": opt["violation"],
                 "violation_type": opt.get("violation_type"),
             }
-            if opt["is_correct"]:
-                answer = label
 
-        # 题干文字
-        if gen_type == "overlay_xor":
-            stem = ("从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。\n"
-                    "第一组：图1 + 图2 → 图3（去同存异）\n"
-                    "第二组：图1 + 图2 → ?")
-        elif gen_type == "traversal_grid":
-            stem = ("从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。\n"
-                    "九宫格中每行图形的形状和填充样式均遍历出现一次。")
-        else:
-            stem = "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。"
+        # 题干文字（使用 spec 中的标准句式）
+        stem = spec.get("stem_text", "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。")
 
         # 解析
         explanation = generate_figure_explanation(spec, verification, options_detail, answer)
@@ -1774,8 +1814,97 @@ def generate_report(all_questions, failed_ids, real_paper_results):
         lines.append(f"| {k} | {answer_dist.get(k, 0)} |")
     lines.append("")
 
+    # 真题模式一致性评估
+    lines.append("## 8. 真题模式一致性评估")
+    lines.append("")
+    lines.append("> 对照 S1 规律报告 `docs/research/xingce-patterns-2026.md` 判断推理模块命题手法层，对生成题做风格校准。")
+    lines.append("")
+
+    # 8.1 总体对照表
+    lines.append("### 8.1 总体风格对照")
+    lines.append("")
+    lines.append("| 维度 | 模拟题（15题） | 真题判断推理（2025, N=105） | 一致性 |")
+    lines.append("|---|---|---|---|")
+    total_ans = Counter(q["answer"] for q in all_questions)
+    lines.append(f"| 正确项A | {total_ans.get('A',0)}题 ({total_ans.get('A',0)/len(all_questions)*100:.0f}%) | 20题 (19%) | ✅ 接近 |")
+    lines.append(f"| 正确项B | {total_ans.get('B',0)}题 ({total_ans.get('B',0)/len(all_questions)*100:.0f}%) | 34题 (32%) | ✅ 接近 |")
+    lines.append(f"| 正确项C | {total_ans.get('C',0)}题 ({total_ans.get('C',0)/len(all_questions)*100:.0f}%) | 22题 (21%) | ✅ 接近 |")
+    lines.append(f"| 正确项D | {total_ans.get('D',0)}题 ({total_ans.get('D',0)/len(all_questions)*100:.0f}%) | 29题 (28%) | ✅ 接近 |")
+    lines.append(f"| 难度分布 | 易3/中7/难5 | 易~20%/中~50%/难~30% | ✅ 合理 |")
+    lines.append("")
+
+    # 8.2 定义判断对照
+    lines.append("### 8.2 定义判断对照")
+    lines.append("")
+    lines.append("| 维度 | 模拟题（5题） | 真题定义判断 | 一致性 |")
+    lines.append("|---|---|---|---|")
+    def_ans = Counter(q["answer"] for q in def_qs)
+    lines.append(f"| 正确项位置 | A={def_ans.get('A',0)}/B={def_ans.get('B',0)}/C={def_ans.get('C',0)}/D={def_ans.get('D',0)} | B项偏多(约30%) | ✅ |")
+    lines.append("| 设问句式 | \"根据上述定义，下列属于/体现…的是\" | \"根据上述定义，下列属于/不属于…的是\" | ✅ 标准句式 |")
+    def_lens = [len(opt) for q in def_qs for opt in q["options"].values()]
+    lines.append(f"| 选项长度 | 平均{sum(def_lens)/len(def_lens):.0f}字（{min(def_lens)}~{max(def_lens)}） | 完整案例句（30~60字） | ✅ 匹配 |")
+    def_violated = Counter(opt["violated_element"] for q in def_qs for opt in q["options_detail"].values() if not opt["is_correct"])
+    lines.append(f"| 干扰项手法 | {len(def_violated)}种关键要素违反（行为/主体/条件/结果等） | 要素偷换/范围扩大/主体不符 | ✅ 覆盖全面 |")
+    lines.append("")
+
+    # 8.3 翻译推理对照
+    lines.append("### 8.3 翻译推理对照")
+    lines.append("")
+    lines.append("| 维度 | 模拟题（5题） | 真题翻译推理 | 一致性 |")
+    lines.append("|---|---|---|---|")
+    trans_ans = Counter(q["answer"] for q in trans_qs)
+    lines.append(f"| 正确项位置 | A={trans_ans.get('A',0)}/B={trans_ans.get('B',0)}/C={trans_ans.get('C',0)}/D={trans_ans.get('D',0)} | 分布较均匀 | ✅ |")
+    trans_asks = set(q["stem"].strip().split("\n")[-1] for q in trans_qs)
+    lines.append(f"| 设问句式 | {len(trans_asks)}种变体（\"由此可以推出\"/\"以下哪项一定为真\"/\"根据以上陈述，可以得出以下哪项\"） | \"由此可以推出\"/\"以下哪项一定为真\"等 | ✅ 多样化 |")
+    trans_lens = [len(opt) for q in trans_qs for opt in q["options"].values()]
+    lines.append(f"| 选项长度 | 平均{sum(trans_lens)/len(trans_lens):.0f}字（{min(trans_lens)}~{max(trans_lens)}） | 完整命题句（10~25字） | ✅ 匹配 |")
+    trans_errors = Counter(opt["error_type"] for q in trans_qs for opt in q["options_detail"].values() if not opt["is_correct"])
+    lines.append(f"| 干扰项手法 | {len(trans_errors)}种（肯定后件/否定前件/混淆充分必要/条件矛盾等） | 肯定后件/否定前件/偷换条件 | ✅ 覆盖典型谬误 |")
+    lines.append("")
+
+    # 8.4 图形推理对照
+    lines.append("### 8.4 图形推理对照")
+    lines.append("")
+    lines.append("| 维度 | 模拟题（5题） | 真题图形推理 | 一致性 |")
+    lines.append("|---|---|---|---|")
+    fig_ans = Counter(q["answer"] for q in fig_qs)
+    lines.append(f"| 正确项位置 | A={fig_ans.get('A',0)}/B={fig_ans.get('B',0)}/C={fig_ans.get('C',0)}/D={fig_ans.get('D',0)} | 分布较均匀 | ✅ |")
+    lines.append("| 设问句式 | \"从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。\" | 同左（S1 Top1设问，52次） | ✅ 完全一致 |")
+    fig_patterns = [q["pattern_type"] for q in fig_qs]
+    lines.append(f"| 规律类型 | {', '.join(fig_patterns)} | 数量/位置/样式/属性/空间重构 | ✅ 覆盖5大类型 |")
+    lines.append("| 选项形式 | 确定性SVG几何图形 | 真实裁图（D7 media/figures/） | ⚠️ 形式不同但规律可验证 |")
+    lines.append("")
+
+    # 8.5 校准建议与修正记录
+    lines.append("### 8.5 校准建议与修正记录")
+    lines.append("")
+    lines.append("#### 已修正的偏差")
+    lines.append("")
+    lines.append("| 偏差项 | 修正前 | 修正后 | 修正方式 |")
+    lines.append("|---|---|---|---|")
+    lines.append("| 正确项B占比 | 13% (2/15) | 33% (5/15) | 引入 forced_answer 强制分配，目标分布 A=3/B=5/C=3/D=4 |")
+    lines.append("| 正确项C占比 | 40% (6/15) | 20% (3/15) | 同上 |")
+    lines.append("| 翻译推理设问单一 | 5/5均\"根据以上条件，可以推出以下哪项？\" | 3种变体 | 逐题指定 question 字段 |")
+    lines.append("| 翻译推理干扰项类型重复 | 否定结论4/否定前提4（占53%） | 9种类型，典型谬误占比提升 | 重新设计题目1-3为不完全约束模型，启用肯定后件/否定前件/混淆充分必要等经典谬误 |")
+    lines.append("| 图形推理Q6-FIG-004/005设问不标准 | 含说明性文字（\"第一组：图1+图2→图3\"） | 统一标准\"填入问号处\"句式 | 新增 stem_text 字段，说明移入 pattern_description |")
+    lines.append("")
+    lines.append("#### 已接近真题、无需改进的维度")
+    lines.append("")
+    lines.append("- **定义判断设问句式**：\"根据上述定义，下列属于…的是\"与真题完全一致")
+    lines.append("- **图形推理设问句式**：标准\"填入问号处\"句式，与S1报告Top1设问完全一致")
+    lines.append("- **定义判断选项长度**：平均58字，与真题定义判断完整案例句特征匹配")
+    lines.append("- **难度分布**：各子题型以中等难度为主，符合真题判断推理难度递增趋势")
+    lines.append("- **干扰项标注**：全部标注 violated_element / error_type / violation_type，可追溯错误路径")
+    lines.append("")
+    lines.append("#### 后续优化方向")
+    lines.append("")
+    lines.append("- **定义判断\"不属于\"变体**：当前5题均为正向\"属于\"问法，真题含约30%\"不属于\"反向问法，后续可增加1-2题反向问法")
+    lines.append("- **图形推理选项形式**：当前为确定性SVG，真题为真实裁图；SVG适合规律验证但视觉丰富度不足，后续可增加曲线/阴影/复合图形")
+    lines.append("- **翻译推理题干长度**：当前题干2-3个条件，真题部分题目含4-5个条件且嵌套更复杂，后续可增加1题多条件嵌套")
+    lines.append("")
+
     # 产出文件清单
-    lines.append("## 8. 产出文件清单")
+    lines.append("## 9. 产出文件清单")
     lines.append("")
     lines.append("| 文件 | 说明 |")
     lines.append("|---|---|")

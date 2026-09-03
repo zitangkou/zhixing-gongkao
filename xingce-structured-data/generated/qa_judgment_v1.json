@@ -1,7 +1,7 @@
 {
   "version": "v1",
   "total": 15,
-  "generated_at": "2026-09-03T12:42:50.712174",
+  "generated_at": "2026-09-03T12:54:11.986221",
   "template_version": "judgment_v1",
   "seed": 42,
   "sub_engines": {
@@ -37,35 +37,39 @@
       ],
       "stem": "绿色消费是指消费者在购买商品和服务时，优先选择那些在生产、使用和处置过程中对环境影响较小、符合环保标准的产品，以减少资源消耗和环境污染的消费行为。\n根据上述定义，下列属于绿色消费的是：",
       "options": {
-        "A": "小李在网购时只看价格和销量，哪家便宜买哪家，从不关注产品是否环保，他认为个人消费对环境的影响微乎其微。",
-        "B": "某制造企业为了降低生产成本，在生产过程中采用了更节能的设备和工艺，减少了废气排放，被当地环保部门评为'绿色工厂'。",
-        "C": "小王在超市购物时，专门挑选带有'有机认证'和'可降解包装'标识的食品和日用品，虽然价格略高，但他认为这样可以减少化学残留和塑料污染。",
+        "A": "某制造企业为了降低生产成本，在生产过程中采用了更节能的设备和工艺，减少了废气排放，被当地环保部门评为'绿色工厂'。",
+        "B": "小王在超市购物时，专门挑选带有'有机认证'和'可降解包装'标识的食品和日用品，虽然价格略高，但他认为这样可以减少化学残留和塑料污染。",
+        "C": "小李在网购时只看价格和销量，哪家便宜买哪家，从不关注产品是否环保，他认为个人消费对环境的影响微乎其微。",
         "D": "小张喜欢收集限量版运动鞋，每次新款发售都会抢购，他认为这些鞋子做工精良、材质高级，穿起来很有面子。"
       },
       "options_detail": {
         "A": {
-          "content": "小李在网购时只看价格和销量，哪家便宜买哪家，从不关注产品是否环保，他认为个人消费对环境的影响微乎其微。",
-          "is_correct": false,
-          "violated_element": "行为"
-        },
-        "B": {
           "content": "某制造企业为了降低生产成本，在生产过程中采用了更节能的设备和工艺，减少了废气排放，被当地环保部门评为'绿色工厂'。",
           "is_correct": false,
-          "violated_element": "主体"
+          "violated_element": "主体",
+          "violation_reason": "主体是企业而非消费者，定义要求主体为消费者"
         },
-        "C": {
+        "B": {
           "content": "小王在超市购物时，专门挑选带有'有机认证'和'可降解包装'标识的食品和日用品，虽然价格略高，但他认为这样可以减少化学残留和塑料污染。",
           "is_correct": true,
-          "violated_element": null
+          "violated_element": null,
+          "violation_reason": null
+        },
+        "C": {
+          "content": "小李在网购时只看价格和销量，哪家便宜买哪家，从不关注产品是否环保，他认为个人消费对环境的影响微乎其微。",
+          "is_correct": false,
+          "violated_element": "行为",
+          "violation_reason": "没有优先选择环保产品，行为不符合定义"
         },
         "D": {
           "content": "小张喜欢收集限量版运动鞋，每次新款发售都会抢购，他认为这些鞋子做工精良、材质高级，穿起来很有面子。",
           "is_correct": false,
-          "violated_element": "条件"
+          "violated_element": "条件",
+          "violation_reason": "购买的产品未体现对环境影响较小或符合环保标准"
         }
       },
-      "answer": "C",
-      "explanation": "定义关键要素：\n  1. 主体：消费者（个人或家庭）\n  2. 行为：购买商品和服务时优先选择环保产品\n  3. 条件：产品在生产、使用和处置过程中对环境影响较小、符合环保标准\n  4. 目的：减少资源消耗和环境污染\n\n正确项（C）：满足全部关键要素。小王在超市购物时，专门挑选带有'有机认证'和'可降解包装'标识的食品和日用品，虽然价格略高，但他认为这样可以减少化学残留和塑料污染。...\n\nA项：违反「行为」要素。\nB项：违反「主体」要素。\nD项：违反「条件」要素。\n\n故本题选C。",
+      "answer": "B",
+      "explanation": "定义关键要素：\n  1. 主体：消费者（个人或家庭）\n  2. 行为：购买商品和服务时优先选择环保产品\n  3. 条件：产品在生产、使用和处置过程中对环境影响较小、符合环保标准\n  4. 目的：减少资源消耗和环境污染\n\n正确项（B）：满足全部关键要素。小王在超市购物时，专门挑选带有'有机认证'和'可降解包装'标识的食品和日用品，虽然价格略高，但他认为这样可以减少化学残留和塑料污染。...\n\nA项：违反「主体」要素。主体是企业而非消费者，定义要求主体为消费者\nC项：违反「行为」要素。没有优先选择环保产品，行为不符合定义\nD项：违反「条件」要素。购买的产品未体现对环境影响较小或符合环保标准\n\n故本题选B。",
       "validation": {
         "key_elements_count": 4,
         "distractors_violate_distinct_elements": true,
@@ -74,7 +78,7 @@
       },
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.708733",
+        "generated_at": "2026-09-03T12:54:11.982739",
         "param_seed": 42
       }
     },
@@ -105,35 +109,39 @@
       ],
       "stem": "紧急避险是指为了使国家、公共利益、本人或者他人的人身、财产和其他权利免受正在发生的危险，不得已而采取的损害另一较小合法权益的行为。紧急避险超过必要限度造成不应有的损害的，应当负刑事责任，但是应当减轻或者免除处罚。\n根据上述定义，下列属于紧急避险的是：",
       "options": {
-        "A": "刘某在森林中迷路多日，饥饿难耐，于是捕杀了一只国家一级保护动物充饥，他认为自己的生命权高于野生动物保护权益。",
-        "B": "陈某看到远处有一栋房屋着火，为了防止火势蔓延到自己家，他主动拆除了邻居家尚未着火的围墙，但实际上当时风向已经改变，火势不会蔓延到他家。",
+        "A": "陈某看到远处有一栋房屋着火，为了防止火势蔓延到自己家，他主动拆除了邻居家尚未着火的围墙，但实际上当时风向已经改变，火势不会蔓延到他家。",
+        "B": "刘某在森林中迷路多日，饥饿难耐，于是捕杀了一只国家一级保护动物充饥，他认为自己的生命权高于野生动物保护权益。",
         "C": "张某与邻居发生口角，一怒之下将邻居家的门窗砸毁，事后他辩称自己是为了发泄情绪、避免精神崩溃，属于紧急避险。",
         "D": "一艘货轮在海上遭遇特大风暴，船长为了避免船只沉没和船员遇难，下令将船上部分货物抛入海中以减轻载重，最终船只和船员安全脱险。"
       },
       "options_detail": {
         "A": {
-          "content": "刘某在森林中迷路多日，饥饿难耐，于是捕杀了一只国家一级保护动物充饥，他认为自己的生命权高于野生动物保护权益。",
-          "is_correct": false,
-          "violated_element": "限度"
-        },
-        "B": {
           "content": "陈某看到远处有一栋房屋着火，为了防止火势蔓延到自己家，他主动拆除了邻居家尚未着火的围墙，但实际上当时风向已经改变，火势不会蔓延到他家。",
           "is_correct": false,
-          "violated_element": "目的"
+          "violated_element": "目的",
+          "violation_reason": "危险并不存在（风向已改变），不是为了免受正在发生的危险"
+        },
+        "B": {
+          "content": "刘某在森林中迷路多日，饥饿难耐，于是捕杀了一只国家一级保护动物充饥，他认为自己的生命权高于野生动物保护权益。",
+          "is_correct": false,
+          "violated_element": "限度",
+          "violation_reason": "捕杀国家一级保护动物可能超过必要限度，且有其他可替代方式"
         },
         "C": {
           "content": "张某与邻居发生口角，一怒之下将邻居家的门窗砸毁，事后他辩称自己是为了发泄情绪、避免精神崩溃，属于紧急避险。",
           "is_correct": false,
-          "violated_element": "条件"
+          "violated_element": "条件",
+          "violation_reason": "不存在正在发生的危险，口角不属于现实危险"
         },
         "D": {
           "content": "一艘货轮在海上遭遇特大风暴，船长为了避免船只沉没和船员遇难，下令将船上部分货物抛入海中以减轻载重，最终船只和船员安全脱险。",
           "is_correct": true,
-          "violated_element": null
+          "violated_element": null,
+          "violation_reason": null
         }
       },
       "answer": "D",
-      "explanation": "定义关键要素：\n  1. 条件：存在正在发生的危险\n  2. 目的：保护合法权益免受危险\n  3. 行为：不得已采取损害另一较小合法权益的行为\n  4. 限度：损害的权益小于被保护的权益（未超过必要限度）\n\n正确项（D）：满足全部关键要素。一艘货轮在海上遭遇特大风暴，船长为了避免船只沉没和船员遇难，下令将船上部分货物抛入海中以减轻载重，最终船只和船员安全脱险。...\n\nA项：违反「限度」要素。\nB项：违反「目的」要素。\nC项：违反「条件」要素。\n\n故本题选D。",
+      "explanation": "定义关键要素：\n  1. 条件：存在正在发生的危险\n  2. 目的：保护合法权益免受危险\n  3. 行为：不得已采取损害另一较小合法权益的行为\n  4. 限度：损害的权益小于被保护的权益（未超过必要限度）\n\n正确项（D）：满足全部关键要素。一艘货轮在海上遭遇特大风暴，船长为了避免船只沉没和船员遇难，下令将船上部分货物抛入海中以减轻载重，最终船只和船员安全脱险。...\n\nA项：违反「目的」要素。危险并不存在（风向已改变），不是为了免受正在发生的危险\nB项：违反「限度」要素。捕杀国家一级保护动物可能超过必要限度，且有其他可替代方式\nC项：违反「条件」要素。不存在正在发生的危险，口角不属于现实危险\n\n故本题选D。",
       "validation": {
         "key_elements_count": 4,
         "distractors_violate_distinct_elements": true,
@@ -142,7 +150,7 @@
       },
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.708762",
+        "generated_at": "2026-09-03T12:54:11.982771",
         "param_seed": 42
       }
     },
@@ -169,35 +177,39 @@
       ],
       "stem": "沉没成本效应是指人们在决定是否去做一件事情的时候，不仅是看这件事对自己有没有好处，而且也看过去是不是已经在这件事情上有过投入。我们把这些已经发生不可收回的支出，如时间、金钱、精力等称为'沉没成本'。由于沉没成本的存在，人们往往会做出非理性的决策，继续投入资源去完成一项已经不再有利的事情。\n根据上述定义，下列体现沉没成本效应的是：",
       "options": {
-        "A": "小孙在评估是否继续投资一个项目时，完全基于对未来市场前景的分析和预测，过去已经投入的资金和时间不在他的考虑范围之内，他认为决策应该只看未来收益。",
-        "B": "小赵花50元买了一张电影票，看了半小时发现电影非常难看，但他觉得'钱都花了，不看完太亏'，于是硬着头皮看完了整部电影，浪费了两个小时。",
-        "C": "小李在书店翻了一本书，觉得内容很有趣，于是决定买下来回家仔细阅读，他认为这本书能帮助自己提升专业技能。",
+        "A": "小赵花50元买了一张电影票，看了半小时发现电影非常难看，但他觉得'钱都花了，不看完太亏'，于是硬着头皮看完了整部电影，浪费了两个小时。",
+        "B": "小李在书店翻了一本书，觉得内容很有趣，于是决定买下来回家仔细阅读，他认为这本书能帮助自己提升专业技能。",
+        "C": "小孙在评估是否继续投资一个项目时，完全基于对未来市场前景的分析和预测，过去已经投入的资金和时间不在他的考虑范围之内，他认为决策应该只看未来收益。",
         "D": "小钱在股市投资了10万元，经过分析发现该股票前景不佳，于是果断止损卖出，将资金转移到更有潜力的股票上，最终减少了损失。"
       },
       "options_detail": {
         "A": {
-          "content": "小孙在评估是否继续投资一个项目时，完全基于对未来市场前景的分析和预测，过去已经投入的资金和时间不在他的考虑范围之内，他认为决策应该只看未来收益。",
-          "is_correct": false,
-          "violated_element": "行为"
-        },
-        "B": {
           "content": "小赵花50元买了一张电影票，看了半小时发现电影非常难看，但他觉得'钱都花了，不看完太亏'，于是硬着头皮看完了整部电影，浪费了两个小时。",
           "is_correct": true,
-          "violated_element": null
+          "violated_element": null,
+          "violation_reason": null
         },
-        "C": {
+        "B": {
           "content": "小李在书店翻了一本书，觉得内容很有趣，于是决定买下来回家仔细阅读，他认为这本书能帮助自己提升专业技能。",
           "is_correct": false,
-          "violated_element": "前提"
+          "violated_element": "前提",
+          "violation_reason": "之前没有在这件事上有过投入，不存在沉没成本"
+        },
+        "C": {
+          "content": "小孙在评估是否继续投资一个项目时，完全基于对未来市场前景的分析和预测，过去已经投入的资金和时间不在他的考虑范围之内，他认为决策应该只看未来收益。",
+          "is_correct": false,
+          "violated_element": "行为",
+          "violation_reason": "决策时没有考虑过去的投入，不符合'看过去是不是已经有过投入'的行为特征"
         },
         "D": {
           "content": "小钱在股市投资了10万元，经过分析发现该股票前景不佳，于是果断止损卖出，将资金转移到更有潜力的股票上，最终减少了损失。",
           "is_correct": false,
-          "violated_element": "结果"
+          "violated_element": "结果",
+          "violation_reason": "做出了理性决策（止损），没有继续投入，不符合非理性结果"
         }
       },
-      "answer": "B",
-      "explanation": "定义关键要素：\n  1. 前提：已经在某件事上有过不可收回的投入（时间/金钱/精力）\n  2. 行为：决策时考虑过去的投入而非未来收益\n  3. 结果：做出非理性决策，继续投入资源完成已不再有利的事\n\n正确项（B）：满足全部关键要素。小赵花50元买了一张电影票，看了半小时发现电影非常难看，但他觉得'钱都花了，不看完太亏'，于是硬着头皮看完了整部电影，浪费了两个小时。...\n\nA项：违反「行为」要素。\nC项：违反「前提」要素。\nD项：违反「结果」要素。\n\n故本题选B。",
+      "answer": "A",
+      "explanation": "定义关键要素：\n  1. 前提：已经在某件事上有过不可收回的投入（时间/金钱/精力）\n  2. 行为：决策时考虑过去的投入而非未来收益\n  3. 结果：做出非理性决策，继续投入资源完成已不再有利的事\n\n正确项（A）：满足全部关键要素。小赵花50元买了一张电影票，看了半小时发现电影非常难看，但他觉得'钱都花了，不看完太亏'，于是硬着头皮看完了整部电影，浪费了两个小时。...\n\nB项：违反「前提」要素。之前没有在这件事上有过投入，不存在沉没成本\nC项：违反「行为」要素。决策时没有考虑过去的投入，不符合'看过去是不是已经有过投入'的行为特征\nD项：违反「结果」要素。做出了理性决策（止损），没有继续投入，不符合非理性结果\n\n故本题选A。",
       "validation": {
         "key_elements_count": 3,
         "distractors_violate_distinct_elements": true,
@@ -206,7 +218,7 @@
       },
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.708788",
+        "generated_at": "2026-09-03T12:54:11.982792",
         "param_seed": 42
       }
     },
@@ -238,34 +250,38 @@
       "stem": "行政指导是指行政机关在其所管辖的事务范围内，根据国家的政策规定或者法律原则，针对特定的公民、法人或其他组织，用非强制性的方法或手段，取得该行政相对方的同意或协助，有效地实现一定的行政目的的主动的管理行为。行政指导不具有法律上的强制力，行政相对方可以接受也可以拒绝。\n根据上述定义，下列属于行政指导的是：",
       "options": {
         "A": "某行业协会向会员企业发布行业自律公约，呼吁企业诚信经营、公平竞争，对违反公约的企业进行内部通报批评。",
-        "B": "某县政府发布通告，要求辖区内所有餐饮企业必须在一个月内安装油烟净化设备，逾期未安装的将责令停业整顿。",
+        "B": "某市农业农村局的技术人员下乡，向当地果农推荐新的种植技术和优良品种，并提供免费的技术培训，但果农可以自主决定是否采用，不采用也不会受到处罚。",
         "C": "某市市场监督管理局对一家销售过期食品的超市作出罚款2万元的行政处罚决定，超市必须在规定期限内缴纳罚款，否则将面临强制执行。",
-        "D": "某市农业农村局的技术人员下乡，向当地果农推荐新的种植技术和优良品种，并提供免费的技术培训，但果农可以自主决定是否采用，不采用也不会受到处罚。"
+        "D": "某县政府发布通告，要求辖区内所有餐饮企业必须在一个月内安装油烟净化设备，逾期未安装的将责令停业整顿。"
       },
       "options_detail": {
         "A": {
           "content": "某行业协会向会员企业发布行业自律公约，呼吁企业诚信经营、公平竞争，对违反公约的企业进行内部通报批评。",
           "is_correct": false,
-          "violated_element": "主体"
+          "violated_element": "主体",
+          "violation_reason": "主体是行业协会而非行政机关"
         },
         "B": {
-          "content": "某县政府发布通告，要求辖区内所有餐饮企业必须在一个月内安装油烟净化设备，逾期未安装的将责令停业整顿。",
-          "is_correct": false,
-          "violated_element": "性质"
+          "content": "某市农业农村局的技术人员下乡，向当地果农推荐新的种植技术和优良品种，并提供免费的技术培训，但果农可以自主决定是否采用，不采用也不会受到处罚。",
+          "is_correct": true,
+          "violated_element": null,
+          "violation_reason": null
         },
         "C": {
           "content": "某市市场监督管理局对一家销售过期食品的超市作出罚款2万元的行政处罚决定，超市必须在规定期限内缴纳罚款，否则将面临强制执行。",
           "is_correct": false,
-          "violated_element": "方式"
+          "violated_element": "方式",
+          "violation_reason": "使用了强制性手段（行政处罚），不是非强制性方法"
         },
         "D": {
-          "content": "某市农业农村局的技术人员下乡，向当地果农推荐新的种植技术和优良品种，并提供免费的技术培训，但果农可以自主决定是否采用，不采用也不会受到处罚。",
-          "is_correct": true,
-          "violated_element": null
+          "content": "某县政府发布通告，要求辖区内所有餐饮企业必须在一个月内安装油烟净化设备，逾期未安装的将责令停业整顿。",
+          "is_correct": false,
+          "violated_element": "性质",
+          "violation_reason": "具有法律强制力（责令停业整顿），相对方不能拒绝"
         }
       },
-      "answer": "D",
-      "explanation": "定义关键要素：\n  1. 主体：行政机关\n  2. 对象：特定的公民、法人或其他组织（行政相对方）\n  3. 方式：非强制性的方法或手段，取得相对方同意或协助\n  4. 性质：不具有法律强制力，相对方可以接受也可以拒绝\n\n正确项（D）：满足全部关键要素。某市农业农村局的技术人员下乡，向当地果农推荐新的种植技术和优良品种，并提供免费的技术培训，但果农可以自主决定是否采用，不采用也不会受到处罚。...\n\nA项：违反「主体」要素。\nB项：违反「性质」要素。\nC项：违反「方式」要素。\n\n故本题选D。",
+      "answer": "B",
+      "explanation": "定义关键要素：\n  1. 主体：行政机关\n  2. 对象：特定的公民、法人或其他组织（行政相对方）\n  3. 方式：非强制性的方法或手段，取得相对方同意或协助\n  4. 性质：不具有法律强制力，相对方可以接受也可以拒绝\n\n正确项（B）：满足全部关键要素。某市农业农村局的技术人员下乡，向当地果农推荐新的种植技术和优良品种，并提供免费的技术培训，但果农可以自主决定是否采用，不采用也不会受到处罚。...\n\nA项：违反「主体」要素。主体是行业协会而非行政机关\nC项：违反「方式」要素。使用了强制性手段（行政处罚），不是非强制性方法\nD项：违反「性质」要素。具有法律强制力（责令停业整顿），相对方不能拒绝\n\n故本题选B。",
       "validation": {
         "key_elements_count": 4,
         "distractors_violate_distinct_elements": true,
@@ -274,7 +290,7 @@
       },
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.708805",
+        "generated_at": "2026-09-03T12:54:11.982809",
         "param_seed": 42
       }
     },
@@ -305,35 +321,39 @@
       ],
       "stem": "替代性强化是指学习者通过观察他人行为所带来的奖励性后果而受到强化，即观察者因看到榜样受强化而间接受到的强化。在替代性强化中，学习者本人并没有直接受到奖励或惩罚，而是通过观察他人的行为及其结果来调整自己的行为倾向。\n根据上述定义，下列属于替代性强化的是：",
       "options": {
-        "A": "小刚看到有同学因为考试作弊被学校记过处分，他觉得作弊风险太大，于是决定以后考试靠自己的真实水平，不再抱有侥幸心理。",
+        "A": "小芳在电视上看到一位厨师展示精湛的烹饪技艺，她觉得很有趣，于是去书店买了一本烹饪书，打算周末在家尝试做菜。",
         "B": "小红因为考试成绩优异，获得了学校颁发的奖学金和荣誉证书，她非常开心，决定以后更加努力学习，争取下次考得更好。",
         "C": "小明看到同桌因为上课积极回答问题而受到老师的表扬和奖励，于是自己也开始主动举手回答问题，希望也能得到老师的认可。",
-        "D": "小芳在电视上看到一位厨师展示精湛的烹饪技艺，她觉得很有趣，于是去书店买了一本烹饪书，打算周末在家尝试做菜。"
+        "D": "小刚看到有同学因为考试作弊被学校记过处分，他觉得作弊风险太大，于是决定以后考试靠自己的真实水平，不再抱有侥幸心理。"
       },
       "options_detail": {
         "A": {
-          "content": "小刚看到有同学因为考试作弊被学校记过处分，他觉得作弊风险太大，于是决定以后考试靠自己的真实水平，不再抱有侥幸心理。",
+          "content": "小芳在电视上看到一位厨师展示精湛的烹饪技艺，她觉得很有趣，于是去书店买了一本烹饪书，打算周末在家尝试做菜。",
           "is_correct": false,
-          "violated_element": "途径"
+          "violated_element": "结果",
+          "violation_reason": "只是因为兴趣而模仿，没有体现因奖励性后果而受到强化"
         },
         "B": {
           "content": "小红因为考试成绩优异，获得了学校颁发的奖学金和荣誉证书，她非常开心，决定以后更加努力学习，争取下次考得更好。",
           "is_correct": false,
-          "violated_element": "特点"
+          "violated_element": "特点",
+          "violation_reason": "学习者本人直接受到了奖励（奖学金），不是间接观察他人"
         },
         "C": {
           "content": "小明看到同桌因为上课积极回答问题而受到老师的表扬和奖励，于是自己也开始主动举手回答问题，希望也能得到老师的认可。",
           "is_correct": true,
-          "violated_element": null
+          "violated_element": null,
+          "violation_reason": null
         },
         "D": {
-          "content": "小芳在电视上看到一位厨师展示精湛的烹饪技艺，她觉得很有趣，于是去书店买了一本烹饪书，打算周末在家尝试做菜。",
+          "content": "小刚看到有同学因为考试作弊被学校记过处分，他觉得作弊风险太大，于是决定以后考试靠自己的真实水平，不再抱有侥幸心理。",
           "is_correct": false,
-          "violated_element": "结果"
+          "violated_element": "途径",
+          "violation_reason": "观察到的是惩罚性后果而非奖励性后果，属于替代性惩罚"
         }
       },
       "answer": "C",
-      "explanation": "定义关键要素：\n  1. 主体：学习者（观察者）\n  2. 途径：观察他人（榜样）的行为及其带来的奖励性后果\n  3. 特点：学习者本人没有直接受到奖励或惩罚\n  4. 结果：间接受到强化，调整自己的行为倾向\n\n正确项（C）：满足全部关键要素。小明看到同桌因为上课积极回答问题而受到老师的表扬和奖励，于是自己也开始主动举手回答问题，希望也能得到老师的认可。...\n\nA项：违反「途径」要素。\nB项：违反「特点」要素。\nD项：违反「结果」要素。\n\n故本题选C。",
+      "explanation": "定义关键要素：\n  1. 主体：学习者（观察者）\n  2. 途径：观察他人（榜样）的行为及其带来的奖励性后果\n  3. 特点：学习者本人没有直接受到奖励或惩罚\n  4. 结果：间接受到强化，调整自己的行为倾向\n\n正确项（C）：满足全部关键要素。小明看到同桌因为上课积极回答问题而受到老师的表扬和奖励，于是自己也开始主动举手回答问题，希望也能得到老师的认可。...\n\nA项：违反「结果」要素。只是因为兴趣而模仿，没有体现因奖励性后果而受到强化\nB项：违反「特点」要素。学习者本人直接受到了奖励（奖学金），不是间接观察他人\nD项：违反「途径」要素。观察到的是惩罚性后果而非奖励性后果，属于替代性惩罚\n\n故本题选C。",
       "validation": {
         "key_elements_count": 4,
         "distractors_violate_distinct_elements": true,
@@ -342,7 +362,7 @@
       },
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.708820",
+        "generated_at": "2026-09-03T12:54:11.982825",
         "param_seed": 42
       }
     },
@@ -352,7 +372,7 @@
       "module": "判断推理",
       "subtype": "翻译推理",
       "difficulty": 1,
-      "question_type": "假言推理（肯定前件）",
+      "question_type": "假言推理（逆否命题）",
       "variables": {
         "A": "天下雨",
         "B": "地面湿"
@@ -361,43 +381,43 @@
         {
           "statement": "如果天下雨，那么地面湿。",
           "logical_form": "A→B"
-        },
-        {
-          "statement": "今天天下雨了。",
-          "logical_form": "A"
         }
       ],
-      "stem": "如果天下雨，那么地面湿。\n今天天下雨了。\n根据以上条件，可以推出以下哪项？",
+      "stem": "如果天下雨，那么地面湿。\n由此可以推出：",
       "options": {
-        "A": "天下雨了但地面没有湿。",
-        "B": "地面湿了。",
-        "C": "地面没有湿。",
-        "D": "天没有下雨。"
+        "A": "如果地面湿，那么天下雨。",
+        "B": "如果地面没有湿，那么天没有下雨。",
+        "C": "如果天没有下雨，那么地面没有湿。",
+        "D": "天下雨了但地面没有湿。"
       },
       "options_detail": {
         "A": {
+          "content": "如果地面湿，那么天下雨。",
+          "is_correct": false,
+          "logical_form": "B→A",
+          "error_type": "肯定后件谬误",
+          "error_description": "A→B不能推出B→A，地面湿可能由其他原因（如洒水车）导致"
+        },
+        "B": {
+          "content": "如果地面没有湿，那么天没有下雨。",
+          "is_correct": true,
+          "logical_form": "¬B→¬A",
+          "error_type": null,
+          "error_description": null
+        },
+        "C": {
+          "content": "如果天没有下雨，那么地面没有湿。",
+          "is_correct": false,
+          "logical_form": "¬A→¬B",
+          "error_type": "否定前件谬误",
+          "error_description": "A→B不能推出¬A→¬B，天没下雨地面也可能湿（如洒水车）"
+        },
+        "D": {
           "content": "天下雨了但地面没有湿。",
           "is_correct": false,
           "logical_form": "A∧¬B",
-          "error_type": "条件关系矛盾"
-        },
-        "B": {
-          "content": "地面湿了。",
-          "is_correct": true,
-          "logical_form": "B",
-          "error_type": null
-        },
-        "C": {
-          "content": "地面没有湿。",
-          "is_correct": false,
-          "logical_form": "¬B",
-          "error_type": "否定结论"
-        },
-        "D": {
-          "content": "天没有下雨。",
-          "is_correct": false,
-          "logical_form": "¬A",
-          "error_type": "否定已知前提"
+          "error_type": "条件关系矛盾",
+          "error_description": "与前提'如果天下雨那么地面湿'直接矛盾，肯定前件却否定后件"
         }
       },
       "answer": "B",
@@ -411,28 +431,20 @@
         },
         {
           "step": 2,
-          "rule": "前提引入",
-          "from": [],
-          "result": "A",
-          "natural_language": "今天天下雨了。"
-        },
-        {
-          "step": 3,
-          "rule": "modus_ponens（肯定前件式）",
+          "rule": "contrapositive（逆否命题等价：A→B ⊣⊢ ¬B→¬A）",
           "from": [
-            1,
-            2
+            1
           ],
-          "result": "B",
-          "natural_language": "地面湿了。"
+          "result": "¬B→¬A",
+          "natural_language": "如果地面没有湿，那么天没有下雨。"
         }
       ],
-      "explanation": "【逻辑翻译】\n  A = 天下雨\n  B = 地面湿\n\n【前提形式化】\n  如果天下雨，那么地面湿。 → A→B\n  今天天下雨了。 → A\n\n【推导过程】\n  步骤1: 前提引入  → A→B\n         如果天下雨，那么地面湿。\n  步骤2: 前提引入  → A\n         今天天下雨了。\n  步骤3: modus_ponens（肯定前件式） （由步骤1,2） → B\n         地面湿了。\n\n【结论】地面湿了。（B）\n\n【干扰项分析】\n  A项：条件关系矛盾。\n  C项：否定结论。\n  D项：否定已知前提。\n\n故本题选B。",
+      "explanation": "【逻辑翻译】\n  A = 天下雨\n  B = 地面湿\n\n【前提形式化】\n  如果天下雨，那么地面湿。 → A→B\n\n【推导过程】\n  步骤1: 前提引入  → A→B\n         如果天下雨，那么地面湿。\n  步骤2: contrapositive（逆否命题等价：A→B ⊣⊢ ¬B→¬A） （由步骤1） → ¬B→¬A\n         如果地面没有湿，那么天没有下雨。\n\n【结论】如果地面没有湿，那么天没有下雨。（¬B→¬A）\n\n【干扰项分析】\n  A项：肯定后件谬误。A→B不能推出B→A，地面湿可能由其他原因（如洒水车）导致\n  C项：否定前件谬误。A→B不能推出¬A→¬B，天没下雨地面也可能湿（如洒水车）\n  D项：条件关系矛盾。与前提'如果天下雨那么地面湿'直接矛盾，肯定前件却否定后件\n\n故本题选B。",
       "dual_solve": {
         "solver_a": {
           "method": "规则引擎",
           "valid": true,
-          "rule_used": "modus_ponens（肯定前件式）"
+          "rule_used": "contrapositive（逆否命题等价：A→B ⊣⊢ ¬B→¬A）"
         },
         "solver_b": {
           "method": "真值表枚举",
@@ -443,13 +455,13 @@
       },
       "distractor_validation": [
         {
-          "statement": "地面没有湿。",
+          "statement": "如果地面湿，那么天下雨。",
           "falsifiable": true,
           "is_logical_consequence": false,
           "valid_distractor": true
         },
         {
-          "statement": "天没有下雨。",
+          "statement": "如果天没有下雨，那么地面没有湿。",
           "falsifiable": true,
           "is_logical_consequence": false,
           "valid_distractor": true
@@ -463,7 +475,7 @@
       ],
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.708888",
+        "generated_at": "2026-09-03T12:54:11.982892",
         "param_seed": 42
       }
     },
@@ -473,87 +485,102 @@
       "module": "判断推理",
       "subtype": "翻译推理",
       "difficulty": 2,
-      "question_type": "假言推理（否定后件/逆否）",
+      "question_type": "假言连锁推理",
       "variables": {
-        "A": "小张是北京人",
-        "B": "小张说普通话"
+        "A": "下雨",
+        "B": "地面湿",
+        "C": "路人容易滑倒"
       },
       "premises": [
         {
-          "statement": "如果小张是北京人，那么小张说普通话。",
+          "statement": "如果下雨，那么地面湿。",
           "logical_form": "A→B"
         },
         {
-          "statement": "小张不说普通话。",
-          "logical_form": "¬B"
+          "statement": "如果地面湿，那么路人容易滑倒。",
+          "logical_form": "B→C"
         }
       ],
-      "stem": "如果小张是北京人，那么小张说普通话。\n小张不说普通话。\n根据以上条件，可以推出以下哪项？",
+      "stem": "如果下雨，那么地面湿。\n如果地面湿，那么路人容易滑倒。\n以下哪项一定为真？",
       "options": {
-        "A": "小张说普通话。",
-        "B": "小张是北京人。",
-        "C": "小张不是北京人。",
-        "D": "小张是北京人并且说普通话。"
+        "A": "如果路人容易滑倒，那么下雨了。",
+        "B": "如果没有下雨，那么路人不容易滑倒。",
+        "C": "下雨了但路人不容易滑倒。",
+        "D": "如果下雨，那么路人容易滑倒。"
       },
       "options_detail": {
         "A": {
-          "content": "小张说普通话。",
+          "content": "如果路人容易滑倒，那么下雨了。",
           "is_correct": false,
-          "logical_form": "B",
-          "error_type": "否定已知前提"
+          "logical_form": "C→A",
+          "error_type": "肯定后件谬误（连锁）",
+          "error_description": "A→C不能推出C→A，滑倒可能有其他原因"
         },
         "B": {
-          "content": "小张是北京人。",
+          "content": "如果没有下雨，那么路人不容易滑倒。",
           "is_correct": false,
-          "logical_form": "A",
-          "error_type": "肯定前件谬误"
+          "logical_form": "¬A→¬C",
+          "error_type": "否定前件谬误（连锁）",
+          "error_description": "A→C不能推出¬A→¬C，没下雨地面也可能因其他原因湿滑"
         },
         "C": {
-          "content": "小张不是北京人。",
-          "is_correct": true,
-          "logical_form": "¬A",
-          "error_type": null
+          "content": "下雨了但路人不容易滑倒。",
+          "is_correct": false,
+          "logical_form": "A∧¬C",
+          "error_type": "条件关系矛盾",
+          "error_description": "由连锁推理A→C可知下雨则路人容易滑倒，A∧¬C与之矛盾"
         },
         "D": {
-          "content": "小张是北京人并且说普通话。",
-          "is_correct": false,
-          "logical_form": "A∧B",
-          "error_type": "事实矛盾"
+          "content": "如果下雨，那么路人容易滑倒。",
+          "is_correct": true,
+          "logical_form": "A→C",
+          "error_type": null,
+          "error_description": null
         }
       },
-      "answer": "C",
+      "answer": "D",
       "proof_tree": [
         {
           "step": 1,
           "rule": "前提引入",
           "from": [],
           "result": "A→B",
-          "natural_language": "如果小张是北京人，那么小张说普通话。"
+          "natural_language": "如果下雨，那么地面湿。"
         },
         {
           "step": 2,
           "rule": "前提引入",
           "from": [],
-          "result": "¬B",
-          "natural_language": "小张不说普通话。"
+          "result": "B→C",
+          "natural_language": "如果地面湿，那么路人容易滑倒。"
         },
         {
           "step": 3,
-          "rule": "modus_tollens（否定后件式/逆否推理）",
+          "rule": "假言连锁推理（hypothetical_syllogism）",
           "from": [
             1,
             2
           ],
-          "result": "¬A",
-          "natural_language": "小张不是北京人。"
+          "result": "A→C",
+          "natural_language": "由前提1和前提2连锁：如果下雨那么路人容易滑倒"
+        },
+        {
+          "step": 4,
+          "rule": "肯定前件式（modus_ponens）",
+          "from": [
+            3,
+            3
+          ],
+          "result": "A→C",
+          "natural_language": "如果下雨，那么路人容易滑倒。"
         }
       ],
-      "explanation": "【逻辑翻译】\n  A = 小张是北京人\n  B = 小张说普通话\n\n【前提形式化】\n  如果小张是北京人，那么小张说普通话。 → A→B\n  小张不说普通话。 → ¬B\n\n【推导过程】\n  步骤1: 前提引入  → A→B\n         如果小张是北京人，那么小张说普通话。\n  步骤2: 前提引入  → ¬B\n         小张不说普通话。\n  步骤3: modus_tollens（否定后件式/逆否推理） （由步骤1,2） → ¬A\n         小张不是北京人。\n\n【结论】小张不是北京人。（¬A）\n\n【干扰项分析】\n  A项：否定已知前提。\n  B项：肯定前件谬误。\n  D项：事实矛盾。\n\n故本题选C。",
+      "explanation": "【逻辑翻译】\n  A = 下雨\n  B = 地面湿\n  C = 路人容易滑倒\n\n【前提形式化】\n  如果下雨，那么地面湿。 → A→B\n  如果地面湿，那么路人容易滑倒。 → B→C\n\n【推导过程】\n  步骤1: 前提引入  → A→B\n         如果下雨，那么地面湿。\n  步骤2: 前提引入  → B→C\n         如果地面湿，那么路人容易滑倒。\n  步骤3: 假言连锁推理（hypothetical_syllogism） （由步骤1,2） → A→C\n         由前提1和前提2连锁：如果下雨那么路人容易滑倒\n  步骤4: 肯定前件式（modus_ponens） （由步骤3,3） → A→C\n         如果下雨，那么路人容易滑倒。\n\n【结论】如果下雨，那么路人容易滑倒。（A→C）\n\n【干扰项分析】\n  A项：肯定后件谬误（连锁）。A→C不能推出C→A，滑倒可能有其他原因\n  B项：否定前件谬误（连锁）。A→C不能推出¬A→¬C，没下雨地面也可能因其他原因湿滑\n  C项：条件关系矛盾。由连锁推理A→C可知下雨则路人容易滑倒，A∧¬C与之矛盾\n\n故本题选D。",
       "dual_solve": {
         "solver_a": {
           "method": "规则引擎",
           "valid": true,
-          "rule_used": "modus_tollens（否定后件式/逆否推理）"
+          "rule_used": "hypothetical_syllogism（假言连锁推理：A→B, B→C ⊢ A→C）"
         },
         "solver_b": {
           "method": "真值表枚举",
@@ -564,19 +591,19 @@
       },
       "distractor_validation": [
         {
-          "statement": "小张是北京人。",
+          "statement": "如果路人容易滑倒，那么下雨了。",
           "falsifiable": true,
           "is_logical_consequence": false,
           "valid_distractor": true
         },
         {
-          "statement": "小张说普通话。",
+          "statement": "如果没有下雨，那么路人不容易滑倒。",
           "falsifiable": true,
           "is_logical_consequence": false,
           "valid_distractor": true
         },
         {
-          "statement": "小张是北京人并且说普通话。",
+          "statement": "下雨了但路人不容易滑倒。",
           "falsifiable": true,
           "is_logical_consequence": false,
           "valid_distractor": true
@@ -584,7 +611,7 @@
       ],
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.708928",
+        "generated_at": "2026-09-03T12:54:11.982945",
         "param_seed": 42
       }
     },
@@ -603,43 +630,43 @@
         {
           "statement": "只有年满18周岁，才有选举权。",
           "logical_form": "B→A（只有A才B = B→A）"
-        },
-        {
-          "statement": "小李有选举权。",
-          "logical_form": "B"
         }
       ],
-      "stem": "只有年满18周岁，才有选举权。\n小李有选举权。\n根据以上条件，可以推出以下哪项？",
+      "stem": "只有年满18周岁，才有选举权。\n根据以上陈述，可以得出以下哪项？",
       "options": {
-        "A": "小李年满18周岁。",
-        "B": "小李没有选举权。",
-        "C": "小李有选举权但没有年满18周岁。",
-        "D": "小李没有年满18周岁。"
+        "A": "如果没有年满18周岁，那么没有选举权。",
+        "B": "如果没有选举权，那么年满18周岁。",
+        "C": "有选举权但没有年满18周岁。",
+        "D": "如果年满18周岁，那么有选举权。"
       },
       "options_detail": {
         "A": {
-          "content": "小李年满18周岁。",
+          "content": "如果没有年满18周岁，那么没有选举权。",
           "is_correct": true,
-          "logical_form": "A",
-          "error_type": null
+          "logical_form": "¬A→¬B",
+          "error_type": null,
+          "error_description": null
         },
         "B": {
-          "content": "小李没有选举权。",
+          "content": "如果没有选举权，那么年满18周岁。",
           "is_correct": false,
-          "logical_form": "¬B",
-          "error_type": "否定已知前提"
+          "logical_form": "¬B→A",
+          "error_type": "否定前件谬误",
+          "error_description": "B→A不能推出¬B→A，没有选举权可能是因为未满18，也可能是其他原因"
         },
         "C": {
-          "content": "小李有选举权但没有年满18周岁。",
+          "content": "有选举权但没有年满18周岁。",
           "is_correct": false,
           "logical_form": "B∧¬A",
-          "error_type": "条件关系矛盾"
+          "error_type": "条件关系矛盾",
+          "error_description": "与前提'只有年满18周岁才有选举权'（B→A）矛盾，肯定B却否定A"
         },
         "D": {
-          "content": "小李没有年满18周岁。",
+          "content": "如果年满18周岁，那么有选举权。",
           "is_correct": false,
-          "logical_form": "¬A",
-          "error_type": "否定结论"
+          "logical_form": "A→B",
+          "error_type": "混淆充分/必要条件",
+          "error_description": "只有A才B（B→A）不等于如果A那么B（A→B），年满18不一定有选举权（还需未被剥夺政治权利等）"
         }
       },
       "answer": "A",
@@ -653,28 +680,20 @@
         },
         {
           "step": 2,
-          "rule": "前提引入",
-          "from": [],
-          "result": "B",
-          "natural_language": "小李有选举权。"
-        },
-        {
-          "step": 3,
-          "rule": "modus_ponens（对B→A肯定前件B，推出A）",
+          "rule": "contrapositive（逆否命题：B→A ⊣⊢ ¬A→¬B）",
           "from": [
-            1,
-            2
+            1
           ],
-          "result": "A",
-          "natural_language": "小李年满18周岁。"
+          "result": "¬A→¬B",
+          "natural_language": "如果没有年满18周岁，那么没有选举权。"
         }
       ],
-      "explanation": "【逻辑翻译】\n  A = 年满18周岁\n  B = 有选举权\n\n【前提形式化】\n  只有年满18周岁，才有选举权。 → B→A（只有A才B = B→A）\n  小李有选举权。 → B\n\n【推导过程】\n  步骤1: 前提引入  → B→A（只有A才B = B→A）\n         只有年满18周岁，才有选举权。\n  步骤2: 前提引入  → B\n         小李有选举权。\n  步骤3: modus_ponens（对B→A肯定前件B，推出A） （由步骤1,2） → A\n         小李年满18周岁。\n\n【结论】小李年满18周岁。（A）\n\n【干扰项分析】\n  B项：否定已知前提。\n  C项：条件关系矛盾。\n  D项：否定结论。\n\n故本题选A。",
+      "explanation": "【逻辑翻译】\n  A = 年满18周岁\n  B = 有选举权\n\n【前提形式化】\n  只有年满18周岁，才有选举权。 → B→A（只有A才B = B→A）\n\n【推导过程】\n  步骤1: 前提引入  → B→A（只有A才B = B→A）\n         只有年满18周岁，才有选举权。\n  步骤2: contrapositive（逆否命题：B→A ⊣⊢ ¬A→¬B） （由步骤1） → ¬A→¬B\n         如果没有年满18周岁，那么没有选举权。\n\n【结论】如果没有年满18周岁，那么没有选举权。（¬A→¬B）\n\n【干扰项分析】\n  B项：否定前件谬误。B→A不能推出¬B→A，没有选举权可能是因为未满18，也可能是其他原因\n  C项：条件关系矛盾。与前提'只有年满18周岁才有选举权'（B→A）矛盾，肯定B却否定A\n  D项：混淆充分/必要条件。只有A才B（B→A）不等于如果A那么B（A→B），年满18不一定有选举权（还需未被剥夺政治权利等）\n\n故本题选A。",
       "dual_solve": {
         "solver_a": {
           "method": "规则引擎",
           "valid": true,
-          "rule_used": "modus_ponens（对B→A肯定前件B，推出A）"
+          "rule_used": "contrapositive（逆否命题：B→A ⊣⊢ ¬A→¬B）"
         },
         "solver_b": {
           "method": "真值表枚举",
@@ -685,19 +704,19 @@
       },
       "distractor_validation": [
         {
-          "statement": "小李没有年满18周岁。",
+          "statement": "如果年满18周岁，那么有选举权。",
           "falsifiable": true,
           "is_logical_consequence": false,
           "valid_distractor": true
         },
         {
-          "statement": "小李有选举权但没有年满18周岁。",
+          "statement": "有选举权但没有年满18周岁。",
           "falsifiable": true,
           "is_logical_consequence": false,
           "valid_distractor": true
         },
         {
-          "statement": "小李没有选举权。",
+          "statement": "如果没有选举权，那么年满18周岁。",
           "falsifiable": true,
           "is_logical_consequence": false,
           "valid_distractor": true
@@ -705,7 +724,7 @@
       ],
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.708974",
+        "generated_at": "2026-09-03T12:54:11.982984",
         "param_seed": 42
       }
     },
@@ -715,109 +734,91 @@
       "module": "判断推理",
       "subtype": "翻译推理",
       "difficulty": 3,
-      "question_type": "假言连锁推理",
+      "question_type": "假言推理（肯定前件）",
       "variables": {
-        "A": "下雨",
-        "B": "地面湿",
-        "C": "滑倒"
+        "A": "小张是北京人",
+        "B": "小张说普通话"
       },
       "premises": [
         {
-          "statement": "如果下雨，那么地面湿。",
+          "statement": "如果小张是北京人，那么小张说普通话。",
           "logical_form": "A→B"
         },
         {
-          "statement": "如果地面湿，那么路人容易滑倒。",
-          "logical_form": "B→C"
-        },
-        {
-          "statement": "今天下雨了。",
+          "statement": "小张是北京人。",
           "logical_form": "A"
         }
       ],
-      "stem": "如果下雨，那么地面湿。\n如果地面湿，那么路人容易滑倒。\n今天下雨了。\n根据以上条件，可以推出以下哪项？",
+      "stem": "如果小张是北京人，那么小张说普通话。\n小张是北京人。\n由此可以推出：",
       "options": {
-        "A": "路人容易滑倒。",
-        "B": "地面没有湿。",
-        "C": "路人不容易滑倒。",
-        "D": "路人容易滑倒但天没有下雨。"
+        "A": "小张不说普通话。",
+        "B": "小张说普通话。",
+        "C": "小张是北京人但不说普通话。",
+        "D": "小张不是北京人。"
       },
       "options_detail": {
         "A": {
-          "content": "路人容易滑倒。",
-          "is_correct": true,
-          "logical_form": "C",
-          "error_type": null
-        },
-        "B": {
-          "content": "地面没有湿。",
+          "content": "小张不说普通话。",
           "is_correct": false,
           "logical_form": "¬B",
-          "error_type": "否定中间结论"
+          "error_type": "否定结论",
+          "error_description": "由肯定前件式可推出B（小张说普通话），¬B与正确结论矛盾"
+        },
+        "B": {
+          "content": "小张说普通话。",
+          "is_correct": true,
+          "logical_form": "B",
+          "error_type": null,
+          "error_description": null
         },
         "C": {
-          "content": "路人不容易滑倒。",
+          "content": "小张是北京人但不说普通话。",
           "is_correct": false,
-          "logical_form": "¬C",
-          "error_type": "否定结论"
+          "logical_form": "A∧¬B",
+          "error_type": "条件关系矛盾",
+          "error_description": "与前提'如果小张是北京人那么小张说普通话'矛盾，肯定前件却否定后件"
         },
         "D": {
-          "content": "路人容易滑倒但天没有下雨。",
+          "content": "小张不是北京人。",
           "is_correct": false,
-          "logical_form": "C∧¬A",
-          "error_type": "事实矛盾"
+          "logical_form": "¬A",
+          "error_type": "否定已知前提",
+          "error_description": "与前提2'小张是北京人'直接矛盾"
         }
       },
-      "answer": "A",
+      "answer": "B",
       "proof_tree": [
         {
           "step": 1,
           "rule": "前提引入",
           "from": [],
           "result": "A→B",
-          "natural_language": "如果下雨，那么地面湿。"
+          "natural_language": "如果小张是北京人，那么小张说普通话。"
         },
         {
           "step": 2,
           "rule": "前提引入",
           "from": [],
-          "result": "B→C",
-          "natural_language": "如果地面湿，那么路人容易滑倒。"
+          "result": "A",
+          "natural_language": "小张是北京人。"
         },
         {
           "step": 3,
-          "rule": "前提引入",
-          "from": [],
-          "result": "A",
-          "natural_language": "今天下雨了。"
-        },
-        {
-          "step": 4,
-          "rule": "假言连锁推理（hypothetical_syllogism）",
+          "rule": "modus_ponens（肯定前件式：A→B, A ⊢ B）",
           "from": [
             1,
             2
           ],
-          "result": "A→C",
-          "natural_language": "由前提1和前提2连锁：如果下雨那么路人容易滑倒"
-        },
-        {
-          "step": 5,
-          "rule": "肯定前件式（modus_ponens）",
-          "from": [
-            4,
-            3
-          ],
-          "result": "C",
-          "natural_language": "路人容易滑倒。"
+          "result": "B",
+          "natural_language": "小张说普通话。"
         }
       ],
-      "explanation": "【逻辑翻译】\n  A = 下雨\n  B = 地面湿\n  C = 滑倒\n\n【前提形式化】\n  如果下雨，那么地面湿。 → A→B\n  如果地面湿，那么路人容易滑倒。 → B→C\n  今天下雨了。 → A\n\n【推导过程】\n  步骤1: 前提引入  → A→B\n         如果下雨，那么地面湿。\n  步骤2: 前提引入  → B→C\n         如果地面湿，那么路人容易滑倒。\n  步骤3: 前提引入  → A\n         今天下雨了。\n  步骤4: 假言连锁推理（hypothetical_syllogism） （由步骤1,2） → A→C\n         由前提1和前提2连锁：如果下雨那么路人容易滑倒\n  步骤5: 肯定前件式（modus_ponens） （由步骤4,3） → C\n         路人容易滑倒。\n\n【结论】路人容易滑倒。（C）\n\n【干扰项分析】\n  B项：否定中间结论。\n  C项：否定结论。\n  D项：事实矛盾。\n\n故本题选A。",
+      "explanation": "【逻辑翻译】\n  A = 小张是北京人\n  B = 小张说普通话\n\n【前提形式化】\n  如果小张是北京人，那么小张说普通话。 → A→B\n  小张是北京人。 → A\n\n【推导过程】\n  步骤1: 前提引入  → A→B\n         如果小张是北京人，那么小张说普通话。\n  步骤2: 前提引入  → A\n         小张是北京人。\n  步骤3: modus_ponens（肯定前件式：A→B, A ⊢ B） （由步骤1,2） → B\n         小张说普通话。\n\n【结论】小张说普通话。（B）\n\n【干扰项分析】\n  A项：否定结论。由肯定前件式可推出B（小张说普通话），¬B与正确结论矛盾\n  C项：条件关系矛盾。与前提'如果小张是北京人那么小张说普通话'矛盾，肯定前件却否定后件\n  D项：否定已知前提。与前提2'小张是北京人'直接矛盾\n\n故本题选B。",
       "dual_solve": {
         "solver_a": {
           "method": "规则引擎",
           "valid": true,
-          "rule_used": "hypothetical_syllogism + modus_ponens（A→B, B→C ⊢ A→C; A→C, A ⊢ C）"
+          "rule_used": "modus_ponens（肯定前件式：A→B, A ⊢ B）"
         },
         "solver_b": {
           "method": "真值表枚举",
@@ -828,19 +829,19 @@
       },
       "distractor_validation": [
         {
-          "statement": "路人不容易滑倒。",
+          "statement": "小张不说普通话。",
           "falsifiable": true,
           "is_logical_consequence": false,
           "valid_distractor": true
         },
         {
-          "statement": "地面没有湿。",
+          "statement": "小张不是北京人。",
           "falsifiable": true,
           "is_logical_consequence": false,
           "valid_distractor": true
         },
         {
-          "statement": "路人容易滑倒但天没有下雨。",
+          "statement": "小张是北京人但不说普通话。",
           "falsifiable": true,
           "is_logical_consequence": false,
           "valid_distractor": true
@@ -848,7 +849,7 @@
       ],
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.709029",
+        "generated_at": "2026-09-03T12:54:11.983021",
         "param_seed": 42
       }
     },
@@ -873,7 +874,7 @@
           "logical_form": "¬A"
         }
       ],
-      "stem": "这次活动，小张或者小李至少有一个人去。\n小张不去。\n根据以上条件，可以推出以下哪项？",
+      "stem": "这次活动，小张或者小李至少有一个人去。\n小张不去。\n以下哪项一定为真？",
       "options": {
         "A": "小张去。",
         "B": "小张和小李都不去。",
@@ -885,25 +886,29 @@
           "content": "小张去。",
           "is_correct": false,
           "logical_form": "A",
-          "error_type": "否定已知前提"
+          "error_type": "否定已知前提",
+          "error_description": "与前提2'小张不去'直接矛盾"
         },
         "B": {
           "content": "小张和小李都不去。",
           "is_correct": false,
           "logical_form": "¬A∧¬B",
-          "error_type": "德摩根定律误用"
+          "error_type": "德摩根定律误用",
+          "error_description": "¬(A∨B)=¬A∧¬B，但前提是A∨B而非¬(A∨B)，两者矛盾"
         },
         "C": {
           "content": "小李去。",
           "is_correct": true,
           "logical_form": "B",
-          "error_type": null
+          "error_type": null,
+          "error_description": null
         },
         "D": {
           "content": "小李不去。",
           "is_correct": false,
           "logical_form": "¬B",
-          "error_type": "否定结论"
+          "error_type": "否定结论",
+          "error_description": "由选言推理可推出B（小李去），¬B与正确结论矛盾，且¬A∧¬B违反A∨B"
         }
       },
       "answer": "C",
@@ -933,7 +938,7 @@
           "natural_language": "小李去。"
         }
       ],
-      "explanation": "【逻辑翻译】\n  A = 小张去\n  B = 小李去\n\n【前提形式化】\n  这次活动，小张或者小李至少有一个人去。 → A∨B\n  小张不去。 → ¬A\n\n【推导过程】\n  步骤1: 前提引入  → A∨B\n         这次活动，小张或者小李至少有一个人去。\n  步骤2: 前提引入  → ¬A\n         小张不去。\n  步骤3: disjunctive_syllogism（否定肯定式：A∨B, ¬A ⊢ B） （由步骤1,2） → B\n         小李去。\n\n【结论】小李去。（B）\n\n【干扰项分析】\n  A项：否定已知前提。\n  B项：德摩根定律误用。\n  D项：否定结论。\n\n故本题选C。",
+      "explanation": "【逻辑翻译】\n  A = 小张去\n  B = 小李去\n\n【前提形式化】\n  这次活动，小张或者小李至少有一个人去。 → A∨B\n  小张不去。 → ¬A\n\n【推导过程】\n  步骤1: 前提引入  → A∨B\n         这次活动，小张或者小李至少有一个人去。\n  步骤2: 前提引入  → ¬A\n         小张不去。\n  步骤3: disjunctive_syllogism（否定肯定式：A∨B, ¬A ⊢ B） （由步骤1,2） → B\n         小李去。\n\n【结论】小李去。（B）\n\n【干扰项分析】\n  A项：否定已知前提。与前提2'小张不去'直接矛盾\n  B项：德摩根定律误用。¬(A∨B)=¬A∧¬B，但前提是A∨B而非¬(A∨B)，两者矛盾\n  D项：否定结论。由选言推理可推出B（小李去），¬B与正确结论矛盾，且¬A∧¬B违反A∨B\n\n故本题选C。",
       "dual_solve": {
         "solver_a": {
           "method": "规则引擎",
@@ -969,7 +974,7 @@
       ],
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.709064",
+        "generated_at": "2026-09-03T12:54:11.983055",
         "param_seed": 42
       }
     },
@@ -1046,7 +1051,7 @@
       "explanation": "【规律类型】数量类（交点数递增）\n【规律描述】题干图形中直线与圆的交点数依次为1、2、3、4，呈递增规律，下一个图形交点数应为5\n\n【规律验证】\n  pattern_valid: True\n  common_difference: 1\n  expected_next: 5\n  correct_matches: True\n\n【正确选项】D — 符合规律\n\n【干扰项分析】\n  A项：数量错误。数量错误（多1，递增步长错误）\n  B项：数量错误。数量错误（与第4个图相同，未递增）\n  C项：数量错误。数量错误（递减而非递增）\n\n故本题选D。",
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.709828",
+        "generated_at": "2026-09-03T12:54:11.983866",
         "param_seed": 42,
         "svg_generation": "deterministic_python_string"
       }
@@ -1080,9 +1085,9 @@
       ],
       "options": {
         "A": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-002_option_distractor_0.svg",
-        "B": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-002_option_distractor_2.svg",
-        "C": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-002_option_correct.svg",
-        "D": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-002_option_distractor_1.svg"
+        "B": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-002_option_correct.svg",
+        "C": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-002_option_distractor_1.svg",
+        "D": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-002_option_distractor_2.svg"
       },
       "options_detail": {
         "A": {
@@ -1093,38 +1098,38 @@
           "violation_type": "旋转角度错误"
         },
         "B": {
-          "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-002_option_distractor_2.svg",
-          "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<line x1=\"60\" y1=\"60\" x2=\"60.0\" y2=\"100.0\" stroke=\"#333333\" stroke-width=\"2\"/>\n<line x1=\"60.0\" y1=\"100.0\" x2=\"54.0\" y2=\"89.60769515458674\" stroke=\"#333333\" stroke-width=\"2\"/>\n<line x1=\"60.0\" y1=\"100.0\" x2=\"66.0\" y2=\"89.60769515458674\" stroke=\"#333333\" stroke-width=\"2\"/>\n<circle cx=\"60\" cy=\"60\" r=\"3\" fill=\"#333333\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
-          "is_correct": false,
-          "violation": "旋转方向错误（逆时针回转）",
-          "violation_type": "旋转方向错误"
-        },
-        "C": {
           "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-002_option_correct.svg",
           "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<line x1=\"60\" y1=\"60\" x2=\"20.0\" y2=\"60.00000000000001\" stroke=\"#333333\" stroke-width=\"2\"/>\n<line x1=\"20.0\" y1=\"60.00000000000001\" x2=\"30.392304845413264\" y2=\"54.00000000000001\" stroke=\"#333333\" stroke-width=\"2\"/>\n<line x1=\"20.0\" y1=\"60.00000000000001\" x2=\"30.392304845413264\" y2=\"66.0\" stroke=\"#333333\" stroke-width=\"2\"/>\n<circle cx=\"60\" cy=\"60\" r=\"3\" fill=\"#333333\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
           "is_correct": true,
           "violation": null,
           "violation_type": null
         },
-        "D": {
+        "C": {
           "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-002_option_distractor_1.svg",
           "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<line x1=\"60\" y1=\"60\" x2=\"31.71572875253809\" y2=\"31.7157287525381\" stroke=\"#333333\" stroke-width=\"2\"/>\n<line x1=\"31.71572875253809\" y1=\"31.7157287525381\" x2=\"43.30683866800691\" y2=\"34.82155729376835\" stroke=\"#333333\" stroke-width=\"2\"/>\n<line x1=\"31.71572875253809\" y1=\"31.7157287525381\" x2=\"34.821557293768336\" y2=\"43.30683866800692\" stroke=\"#333333\" stroke-width=\"2\"/>\n<circle cx=\"60\" cy=\"60\" r=\"3\" fill=\"#333333\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
           "is_correct": false,
           "violation": "旋转角度错误（多转45°）",
           "violation_type": "旋转角度错误"
+        },
+        "D": {
+          "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-002_option_distractor_2.svg",
+          "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<line x1=\"60\" y1=\"60\" x2=\"60.0\" y2=\"100.0\" stroke=\"#333333\" stroke-width=\"2\"/>\n<line x1=\"60.0\" y1=\"100.0\" x2=\"54.0\" y2=\"89.60769515458674\" stroke=\"#333333\" stroke-width=\"2\"/>\n<line x1=\"60.0\" y1=\"100.0\" x2=\"66.0\" y2=\"89.60769515458674\" stroke=\"#333333\" stroke-width=\"2\"/>\n<circle cx=\"60\" cy=\"60\" r=\"3\" fill=\"#333333\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
+          "is_correct": false,
+          "violation": "旋转方向错误（逆时针回转）",
+          "violation_type": "旋转方向错误"
         }
       },
-      "answer": "C",
+      "answer": "B",
       "verification_result": {
         "pattern_valid": true,
         "common_rotation": 45,
         "expected_next": 180,
         "correct_matches": true
       },
-      "explanation": "【规律类型】旋转类（顺时针45°）\n【规律描述】题干中的箭头图形每次顺时针旋转45°，依次为0°、45°、90°、135°，下一个应为180°\n\n【规律验证】\n  pattern_valid: True\n  common_rotation: 45\n  expected_next: 180\n  correct_matches: True\n\n【正确选项】C — 符合规律\n\n【干扰项分析】\n  A项：旋转角度错误。旋转角度错误（与第4个图相同，未继续旋转）\n  B项：旋转方向错误。旋转方向错误（逆时针回转）\n  D项：旋转角度错误。旋转角度错误（多转45°）\n\n故本题选C。",
+      "explanation": "【规律类型】旋转类（顺时针45°）\n【规律描述】题干中的箭头图形每次顺时针旋转45°，依次为0°、45°、90°、135°，下一个应为180°\n\n【规律验证】\n  pattern_valid: True\n  common_rotation: 45\n  expected_next: 180\n  correct_matches: True\n\n【正确选项】B — 符合规律\n\n【干扰项分析】\n  A项：旋转角度错误。旋转角度错误（与第4个图相同，未继续旋转）\n  C项：旋转角度错误。旋转角度错误（多转45°）\n  D项：旋转方向错误。旋转方向错误（逆时针回转）\n\n故本题选B。",
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.710371",
+        "generated_at": "2026-09-03T12:54:11.984403",
         "param_seed": 42,
         "svg_generation": "deterministic_python_string"
       }
@@ -1157,17 +1162,17 @@
         }
       ],
       "options": {
-        "A": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-003_option_distractor_0.svg",
+        "A": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-003_option_distractor_1.svg",
         "B": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-003_option_distractor_2.svg",
-        "C": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-003_option_distractor_1.svg",
+        "C": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-003_option_distractor_0.svg",
         "D": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-003_option_correct.svg"
       },
       "options_detail": {
         "A": {
-          "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-003_option_distractor_0.svg",
-          "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<polygon points=\"60.0,20.0 94.6,40.0 94.6,80.0 60.0,100.0 25.4,80.0 25.4,40.0\" fill=\"none\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
+          "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-003_option_distractor_1.svg",
+          "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<polygon points=\"60.0,20.0 88.3,31.7 100.0,60.0 88.3,88.3 60.0,100.0 31.7,88.3 20.0,60.0 31.7,31.7\" fill=\"none\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
           "is_correct": false,
-          "violation": "对称轴数量错误（与第4个图相同）",
+          "violation": "对称轴数量错误（多1）",
           "violation_type": "数量错误"
         },
         "B": {
@@ -1178,10 +1183,10 @@
           "violation_type": "数量错误"
         },
         "C": {
-          "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-003_option_distractor_1.svg",
-          "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<polygon points=\"60.0,20.0 88.3,31.7 100.0,60.0 88.3,88.3 60.0,100.0 31.7,88.3 20.0,60.0 31.7,31.7\" fill=\"none\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
+          "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-003_option_distractor_0.svg",
+          "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<polygon points=\"60.0,20.0 94.6,40.0 94.6,80.0 60.0,100.0 25.4,80.0 25.4,40.0\" fill=\"none\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
           "is_correct": false,
-          "violation": "对称轴数量错误（多1）",
+          "violation": "对称轴数量错误（与第4个图相同）",
           "violation_type": "数量错误"
         },
         "D": {
@@ -1199,10 +1204,10 @@
         "expected_next_sides": 7,
         "correct_matches": true
       },
-      "explanation": "【规律类型】对称类（对称轴数量递增）\n【规律描述】题干图形的对称轴数量依次为1、2、3、4，呈递增规律，下一个图形应有5条对称轴（正五边形）\n\n【规律验证】\n  pattern_valid: True\n  common_difference: 1\n  expected_next_sides: 7\n  correct_matches: True\n\n【正确选项】D — 符合规律\n\n【干扰项分析】\n  A项：数量错误。对称轴数量错误（与第4个图相同）\n  B项：数量错误。对称轴数量错误（递减）\n  C项：数量错误。对称轴数量错误（多1）\n\n故本题选D。",
+      "explanation": "【规律类型】对称类（对称轴数量递增）\n【规律描述】题干图形的对称轴数量依次为1、2、3、4，呈递增规律，下一个图形应有5条对称轴（正五边形）\n\n【规律验证】\n  pattern_valid: True\n  common_difference: 1\n  expected_next_sides: 7\n  correct_matches: True\n\n【正确选项】D — 符合规律\n\n【干扰项分析】\n  A项：数量错误。对称轴数量错误（多1）\n  B项：数量错误。对称轴数量错误（递减）\n  C项：数量错误。对称轴数量错误（与第4个图相同）\n\n故本题选D。",
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.710899",
+        "generated_at": "2026-09-03T12:54:11.984939",
         "param_seed": 42,
         "svg_generation": "deterministic_python_string"
       }
@@ -1215,7 +1220,7 @@
       "difficulty": 3,
       "pattern_type": "叠加类（去同存异）",
       "pattern_description": "第一组图中，前两个图形叠加后去同存异得到第三个图形。第二组图应用相同规律",
-      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。\n第一组：图1 + 图2 → 图3（去同存异）\n第二组：图1 + 图2 → ?",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
       "stem_figures": [
         {
           "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-004_stem_0.svg",
@@ -1239,24 +1244,24 @@
         }
       ],
       "options": {
-        "A": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-004_option_distractor_1.svg",
-        "B": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-004_option_distractor_0.svg",
+        "A": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-004_option_distractor_0.svg",
+        "B": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-004_option_distractor_1.svg",
         "C": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-004_option_correct.svg",
         "D": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-004_option_distractor_2.svg"
       },
       "options_detail": {
         "A": {
-          "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-004_option_distractor_1.svg",
-          "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<polygon points=\"65,34.01923788646684 42.5,72.99038105676658 87.5,72.99038105676658\" fill=\"none\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
-          "is_correct": false,
-          "violation": "叠加规则错误（去异存同而非去同存异）",
-          "violation_type": "元素类型错误"
-        },
-        "B": {
           "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-004_option_distractor_0.svg",
           "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<circle cx=\"50\" cy=\"60\" r=\"25\" fill=\"none\" stroke=\"#333333\" stroke-width=\"2\"/>\n<polygon points=\"65,34.01923788646684 42.5,72.99038105676658 87.5,72.99038105676658\" fill=\"none\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
           "is_correct": false,
           "violation": "叠加规则错误（未去同，直接叠加）",
+          "violation_type": "元素类型错误"
+        },
+        "B": {
+          "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-004_option_distractor_1.svg",
+          "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<polygon points=\"65,34.01923788646684 42.5,72.99038105676658 87.5,72.99038105676658\" fill=\"none\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
+          "is_correct": false,
+          "violation": "叠加规则错误（去异存同而非去同存异）",
           "violation_type": "元素类型错误"
         },
         "C": {
@@ -1280,10 +1285,10 @@
         "rule": "去同存异（XOR）",
         "correct_matches": true
       },
-      "explanation": "【规律类型】叠加类（去同存异）\n【规律描述】第一组图中，前两个图形叠加后去同存异得到第三个图形。第二组图应用相同规律\n\n【规律验证】\n  group1_pattern_valid: True\n  rule: 去同存异（XOR）\n  correct_matches: True\n\n【正确选项】C — 符合规律\n\n【干扰项分析】\n  A项：元素类型错误。叠加规则错误（去异存同而非去同存异）\n  B项：元素类型错误。叠加规则错误（未去同，直接叠加）\n  D项：元素类型错误。叠加规则错误（全部去掉）\n\n故本题选C。",
+      "explanation": "【规律类型】叠加类（去同存异）\n【规律描述】第一组图中，前两个图形叠加后去同存异得到第三个图形。第二组图应用相同规律\n\n【规律验证】\n  group1_pattern_valid: True\n  rule: 去同存异（XOR）\n  correct_matches: True\n\n【正确选项】C — 符合规律\n\n【干扰项分析】\n  A项：元素类型错误。叠加规则错误（未去同，直接叠加）\n  B项：元素类型错误。叠加规则错误（去异存同而非去同存异）\n  D项：元素类型错误。叠加规则错误（全部去掉）\n\n故本题选C。",
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.711458",
+        "generated_at": "2026-09-03T12:54:11.985486",
         "param_seed": 42,
         "svg_generation": "deterministic_python_string"
       }
@@ -1296,7 +1301,7 @@
       "difficulty": 3,
       "pattern_type": "遍历类（元素遍历）",
       "pattern_description": "每行图形包含圆、方、三角三种元素各一个，且元素的填充样式（空心/实心/斜线）遍历。第三行缺少的图形应为实心圆",
-      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。\n九宫格中每行图形的形状和填充样式均遍历出现一次。",
+      "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
       "stem_figures": [
         {
           "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_stem_0.svg",
@@ -1333,9 +1338,9 @@
       ],
       "options": {
         "A": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_option_correct.svg",
-        "B": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_option_distractor_1.svg",
-        "C": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_option_distractor_0.svg",
-        "D": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_option_distractor_2.svg"
+        "B": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_option_distractor_0.svg",
+        "C": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_option_distractor_2.svg",
+        "D": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_option_distractor_1.svg"
       },
       "options_detail": {
         "A": {
@@ -1346,24 +1351,24 @@
           "violation_type": null
         },
         "B": {
-          "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_option_distractor_1.svg",
-          "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<rect x=\"40\" y=\"40\" width=\"40\" height=\"40\" fill=\"#333333\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
-          "is_correct": false,
-          "violation": "填充遍历错误（填充应为hollow，solid已在第三行出现）",
-          "violation_type": "元素类型错误"
-        },
-        "C": {
           "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_option_distractor_0.svg",
           "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<circle cx=\"60\" cy=\"60\" r=\"20\" fill=\"none\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
           "is_correct": false,
           "violation": "元素遍历错误（形状应为rect，圆已在第三行出现）",
           "violation_type": "元素类型错误"
         },
-        "D": {
+        "C": {
           "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_option_distractor_2.svg",
           "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<polygon points=\"60,36.90598923241497 40.0,71.54700538379251 80.0,71.54700538379251\" fill=\"none\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
           "is_correct": false,
           "violation": "元素遍历错误（形状和填充均错误）",
+          "violation_type": "元素类型错误"
+        },
+        "D": {
+          "svg_path": "xingce-structured-data/generated/figures/q6_figure_Q6-FIG-005_option_distractor_1.svg",
+          "svg_inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\">\n<rect x=\"40\" y=\"40\" width=\"40\" height=\"40\" fill=\"#333333\" stroke=\"#333333\" stroke-width=\"2\"/>\n</svg>",
+          "is_correct": false,
+          "violation": "填充遍历错误（填充应为hollow，solid已在第三行出现）",
           "violation_type": "元素类型错误"
         }
       },
@@ -1375,10 +1380,10 @@
         "missing_fill": "hollow",
         "correct_matches": true
       },
-      "explanation": "【规律类型】遍历类（元素遍历）\n【规律描述】每行图形包含圆、方、三角三种元素各一个，且元素的填充样式（空心/实心/斜线）遍历。第三行缺少的图形应为实心圆\n\n【规律验证】\n  row1_complete: True\n  row2_complete: True\n  missing_shape: rect\n  missing_fill: hollow\n  correct_matches: True\n\n【正确选项】A — 符合规律\n\n【干扰项分析】\n  B项：元素类型错误。填充遍历错误（填充应为hollow，solid已在第三行出现）\n  C项：元素类型错误。元素遍历错误（形状应为rect，圆已在第三行出现）\n  D项：元素类型错误。元素遍历错误（形状和填充均错误）\n\n故本题选A。",
+      "explanation": "【规律类型】遍历类（元素遍历）\n【规律描述】每行图形包含圆、方、三角三种元素各一个，且元素的填充样式（空心/实心/斜线）遍历。第三行缺少的图形应为实心圆\n\n【规律验证】\n  row1_complete: True\n  row2_complete: True\n  missing_shape: rect\n  missing_fill: hollow\n  correct_matches: True\n\n【正确选项】A — 符合规律\n\n【干扰项分析】\n  B项：元素类型错误。元素遍历错误（形状应为rect，圆已在第三行出现）\n  C项：元素类型错误。元素遍历错误（形状和填充均错误）\n  D项：元素类型错误。填充遍历错误（填充应为hollow，solid已在第三行出现）\n\n故本题选A。",
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:42:50.712151",
+        "generated_at": "2026-09-03T12:54:11.986196",
         "param_seed": 42,
         "svg_generation": "deterministic_python_string"
       }
