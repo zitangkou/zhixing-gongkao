@@ -1,6 +1,6 @@
 # 数据入库状态
 
-最后更新：2026-09-02（实测核对，非沿用旧表）
+最后更新：2026-09-03（D6a 缺陷修复后实测）
 
 ---
 
@@ -25,13 +25,14 @@ v2 已为每题预留 `answer` / `explanation` / `answer_source` 字段与题号
 
 **schema v2 迁移暴露的真实缺陷**（均已用 flag 登记，详见 conventions §3.6）：
 
-| 缺陷 | 范围 | flag |
-|---|---|---|
-| 判断推理末尾 5 题内容错配（实为言语/数量题） | 2025 三卷各 5 题 | `section_type_mismatch` |
-| 卷内重复题（数量#68≡判断#100、#71≡#101） | 2025 执法卷 2 组 | `duplicate_in_paper` |
-| 语句排序题的前置材料漏提取（引用 `m106_110` 悬空） | 2025 三卷 | `material_ref_dangling` |
-| 省级资料分析全部借市地材料，无原生题 | 2025 省级 20 题 | `material_borrowed` |
-| 媒体引用指向不存在的文件 | 2024 三卷 37 条 | `media_file_absent` |
+| 缺陷 | 范围 | flag | 状态 |
+|---|---|---|---|
+| 判断推理末尾 5 题内容错配（实为言语/数量题） | 2025 三卷各 5 题 | `section_type_mismatch` | 待回源（§9.2） |
+| 执法卷 Q100/Q101 内容错配（判断推理区填入数量题，正确内容待回源） | 2025 执法卷 2 题 | `content_mismatch_needs_source` + `section_type_mismatch` | 待回源 PDF（§9.2） |
+| ~~卷内重复题（数量#68≡判断#100、#71≡#101）~~ | 2025 执法卷 2 组 | ~~`duplicate_in_paper`~~ | **D6a 已处理**：Q68/Q71 移除该 flag（确认为正确题）；Q100/Q101 保留并升级为内容错配 |
+| ~~分析推理材料 m106_110 漏提取（引用悬空）~~ | 2025 三卷 | ~~`material_ref_dangling`~~ | **D6a 已修复**：从 20252447.pdf p11-12 提取材料文本，三卷顶层新增 `materials` 字段，flag 已移除 |
+| 省级资料分析全部借市地材料，无原生题 | 2025 省级 20 题 | `material_borrowed` | 待确认（§9.2） |
+| 媒体引用指向不存在的文件 | 2024 三卷 37 条 | `media_file_absent` | 待裁图 |
 
 **命令**：
 
@@ -118,6 +119,15 @@ python3 scripts/xingce/sync_status.py                           # 重新生成 E
 - 234 题标记 `anchor_pending`：解析册解析以"完整解析："开头，通常引用题干预设结论或文献原文而非题干原句，导致脚本化锚点比对得分低；映射阶段已通过跨卷题干匹配确保答案归属正确，该 flag 不代表答案错误。
 - 中间产物：`2025/xingce/_extract/answers_{shidi,shengji,xzzf}.json`、`raw_2025*.json`、`merge_report.json`、`mapping_unmatched.json`。
 - 合并脚本：`scripts/merge_answers.py`（锚点校验+写入+覆盖率报告）；映射脚本：`scripts/map_answers_2025.py`。
+
+### D6a 可自动化缺陷修复（2026-09-03）
+
+- **执法卷内容错配标记**：Q68/Q71（数量关系区，内容正确）移除 `duplicate_in_paper` flag；Q100/Q101（判断推理区，内容被错误填入数量题）新增 `content_mismatch_needs_source` flag，stem 前加 `[内容待回源核实] ` 前缀。答案字段未改动，题量保持 130。
+- **材料 m106_110 补提取**：从 `20252447.pdf` 第 11-12 页提取判断推理区分析推理题组材料（甲乙丙丁戊己庚辛 8 次学术会议季度安排），三卷顶层新增 `materials` 字段（dict），移除对应题目的 `material_ref_dangling` flag。
+- **校验器更新**：`validate_papers.py` 新增对顶层 `materials` dict 的识别（原仅识别 section 级 list）。
+- **校验结果**：`validate_papers.py --year 2025`：**0 错误 / 15 警告**（警告全部为预存 `section_type_mismatch`，与本次修复无关）。
+- **备份**：`2025/xingce/papers.bak_d6a/`。
+- **修复脚本**：`scripts/xingce/fix_2025_defects.py`。
 
 ### 已知问题 / 后续可做
 

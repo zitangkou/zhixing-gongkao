@@ -2515,8 +2515,7 @@
             }
           },
           "flags": [
-            "anchor_pending",
-            "duplicate_in_paper"
+            "anchor_pending"
           ],
           "subtype": "类比推理"
         },
@@ -2646,8 +2645,7 @@
             }
           },
           "flags": [
-            "anchor_pending",
-            "duplicate_in_paper"
+            "anchor_pending"
           ],
           "subtype": "逻辑判断"
         },
@@ -3784,7 +3782,7 @@
         {
           "number": 100,
           "section": "判断推理",
-          "stem": "小张每周一到周四夜跑,周五到周日休息,已知某年2月他夜跑17次,3月夜跑19次,问:4月他夜跑多少次?",
+          "stem": "[内容待回源核实] 小张每周一到周四夜跑,周五到周日休息,已知某年2月他夜跑17次,3月夜跑19次,问:4月他夜跑多少次?",
           "items": null,
           "options": {
             "A": "16",
@@ -3817,14 +3815,15 @@
             "anchor_pending",
             "duplicate_in_paper",
             "section_type_mismatch",
-            "type_inferred_from_stem"
+            "type_inferred_from_stem",
+            "content_mismatch_needs_source"
           ],
           "subtype": "数量关系-星期日期问题"
         },
         {
           "number": 101,
           "section": "判断推理",
-          "stem": "一个长方体零件最大面的面积是最小面的3倍,次大面的面积是最大、最小面面积平均值的9/16。问:该零件最小面的长是其宽的多少倍?",
+          "stem": "[内容待回源核实] 一个长方体零件最大面的面积是最小面的3倍,次大面的面积是最大、最小面面积平均值的9/16。问:该零件最小面的长是其宽的多少倍?",
           "items": null,
           "options": {
             "A": "7/3",
@@ -3877,7 +3876,8 @@
           "flags": [
             "duplicate_in_paper",
             "section_type_mismatch",
-            "type_inferred_from_stem"
+            "type_inferred_from_stem",
+            "content_mismatch_needs_source"
           ],
           "subtype": "数量关系-几何问题"
         },
@@ -4214,9 +4214,7 @@
               "page": null
             }
           },
-          "flags": [
-            "material_ref_dangling"
-          ],
+          "flags": [],
           "subtype": "逻辑判断"
         }
       ]
@@ -5464,5 +5462,20 @@
         }
       ]
     }
-  ]
+  ],
+  "materials": {
+    "m106_110": {
+      "id": "m106_110",
+      "content": "某科研机构今年拟举办甲、乙、丙、丁、戊、己、庚、辛8次学术会议，每个季度最多举办3次，且各次会议举办时间不重叠。具体安排要求如下：\n(1)丁、辛安排在第二季度；\n(2)甲、戊安排在同一个季度；\n(3)丁在乙之后丙之前举办；\n(4)丙在甲之前己之后举办。",
+      "extraction_method": "pdf_text",
+      "source_ref": {
+        "file": "20252447.pdf",
+        "pages": [
+          11,
+          12
+        ],
+        "note": "判断推理区分析推理题组材料，对应Q106-110（市地/执法卷编号）"
+      }
+    }
+  }
 }

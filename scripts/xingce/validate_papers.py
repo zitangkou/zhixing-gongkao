@@ -71,6 +71,9 @@ def validate_paper(path: Path, rep: Report, stats: Counter) -> dict:
     total = 0
     all_numbers: list[int] = []
 
+    # 顶层 materials 字段（dict，key 为 material id）——D6a 新增
+    paper_material_ids = set((doc.get("materials") or {}).keys())
+
     for s in sections:
         name = s.get("name", "")
         if name not in SECTION_TYPES:
@@ -82,7 +85,9 @@ def validate_paper(path: Path, rep: Report, stats: Counter) -> dict:
             rep.err(scope, f"{name}: question_count={declared} 与实际 {len(questions)} 不符")
         total += len(questions)
 
-        material_ids = {m.get("id") for m in (s.get("materials") or [])}
+        # 模块级 materials（list of {id,...}）+ 顶层 materials dict 合并
+        section_material_ids = {m.get("id") for m in (s.get("materials") or [])}
+        material_ids = section_material_ids | paper_material_ids
         numbers = [q.get("number") for q in questions]
         all_numbers.extend(n for n in numbers if isinstance(n, int))
 

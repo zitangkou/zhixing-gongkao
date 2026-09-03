@@ -1,5 +1,19 @@
 # 变更记录
 
+## 2026-09-03
+
+### D6a：2025 三卷可自动化缺陷修复
+
+**自动化修复两类缺陷，答案/解析数据零改动，题量保持 395（135+130+130）。**
+
+- **执法卷内容错配标记**：Q68/Q71（数量关系区，内容正确）移除 `duplicate_in_paper` flag；Q100/Q101（判断推理区，被错误填入数量关系题）新增 `content_mismatch_needs_source` flag，stem 前加 `[内容待回源核实] ` 前缀。Q100/Q101 正确内容需回源 PDF 逐题核对（记入方案 §9.2 后置清单）。
+- **材料 m106_110 补提取**：从 `20252447.pdf` 第 11-12 页提取判断推理区分析推理题组材料（某科研机构 8 次学术会议季度安排逻辑题），三卷顶层新增 `materials` 字段（dict，含 `id`/`content`/`extraction_method`/`source_ref`），移除对应题目的 `material_ref_dangling` flag。
+- **校验器增强**：`scripts/xingce/validate_papers.py` 新增对顶层 `materials` dict 的识别（原仅识别 section 级 materials list），向后兼容。
+- **校验结果**：`validate_papers.py --year 2025`：**0 错误 / 15 警告**（警告均为预存 `section_type_mismatch`，较修复前 3 错误 + 15 警告下降）。
+- **备份**：`2025/xingce/papers.bak_d6a/`（修复前全量快照）。
+- **新增脚本**：`scripts/xingce/fix_2025_defects.py`（幂等，含完整性校验）。
+- **后置待办**（记入方案 §9.2）：① Q100/Q101 正确内容回源；② 省级资料分析材料确认（`material_borrowed` 20 题）；③ Q94 解析截断补全。
+
 ## 2026-09-02（七）
 
 ### 2022 三卷组装完成（papers_assembled）

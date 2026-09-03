@@ -295,6 +295,10 @@
 | U3 | 2023 解析册 | 未提供 | D2 答案接入依赖 |
 | U4 | 2024 主卷 `20240124.pdf` | 缺失 | D3 收尾依赖 |
 | U5 | 2022/2023 执法共享题圈号 OCR 残缺核验 | 待回源高清图 | 当前按题量推算，已记 note |
+| U6 | 2025 执法卷 Q100/Q101 正确内容回源 | 待回源 PDF | D6a 已标记 `content_mismatch_needs_source` + `[内容待回源核实]` 前缀；需从源 PDF 查找判断推理区 Q100/Q101 正确题干与选项，当前内容为数量关系题错填 |
+| U7 | 2025 省级资料分析材料是否正确 | 待确认 | 省级 20 题标记 `material_borrowed`，需确认省级卷资料分析材料是否应为独立材料（差异卷中有集成电路布图、厨房小家电等独立材料） |
+| U8 | 2025 省级 Q94 解析截断补全 | 待回源解析册 | 解析在页码 73 被截断，C 项未完成，需跨册合并或人工补全 |
+| U9 | 2025 三卷判断推理末尾 5 题（`section_type_mismatch`）正确内容回源 | 待回源 PDF | 三卷各 5 题内容实为言语/数量题，需查找正确判断题；与 U6 部分重叠（执法卷 Q100/Q101 即属此类） |
 
 ### 9.3 执行日志（滚动）
 
@@ -304,6 +308,7 @@
 | 2026-09-03 | 执行启动 | S1 规律报告开始 | 进行中 |
 | 2026-09-03 | D11 | catalog.json 脚本化：新增 `scripts/xingce/gen_catalog.py`，扫描 papers 自动汇总题量/答案覆盖率，支持 `--check` CI 断言；重新生成 catalog，16 试卷 2100 题题量与手工版完全一致 | `--check` 通过 |
 | 2026-09-03 | R3 | 停用挖空模板生成器：原方案标注 `serializers.py:119`，实际定位为前端 `src/utils/questionGenerator.ts` 的 `createHighlightBlankQuestion()`（`______` 挖空）。函数开头加 `throw new Error` 禁用，两处调用入口（步骤1 highlight挖空、步骤5兜底全文挖空）注释保留；后端 `validators.py` 本就拒绝 `_{3,}` 挖空题，无需改动 | 已禁用，eslint 通过 |
+| 2026-09-03 | D6a | 2025 可自动化缺陷修复：①执法卷 Q68/Q71 移除 `duplicate_in_paper`（确认为正确题），Q100/Q101 新增 `content_mismatch_needs_source` + `[内容待回源核实]` 前缀；②从 `20252447.pdf` p11-12 提取分析推理材料 m106_110，三卷顶层新增 `materials` 字段，移除 `material_ref_dangling` flag；③校验器增强支持顶层 materials dict。答案/解析零改动，题量 395 不变。备份 `papers.bak_d6a` | validate 0 错误/15 警告（修复前 3 错误/15 警告） |
 |  |  |  |  |
 
 ---
