@@ -1,0 +1,2013 @@
+{
+  "shengji": {
+    "1": {
+      "entity_id": "E2025-0001",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "2": {
+      "entity_id": "E2025-0002",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "3": {
+      "entity_id": "E2025-0003",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "4": {
+      "entity_id": "E2025-0004",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "5": {
+      "entity_id": "E2025-0005",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "6": {
+      "entity_id": "E2025-0006",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "7": {
+      "entity_id": "E2025-0007",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "8": {
+      "entity_id": "E2025-0008",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "9": {
+      "entity_id": "E2025-0009",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "10": {
+      "entity_id": "E2025-0010",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "11": {
+      "entity_id": "E2025-0011",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "12": {
+      "entity_id": "E2025-0012",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "13": {
+      "entity_id": "E2025-0013",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "14": {
+      "entity_id": "E2025-0014",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "15": {
+      "entity_id": "E2025-0015",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "16": {
+      "entity_id": "E2025-0016",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "17": {
+      "entity_id": "E2025-0017",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "18": {
+      "entity_id": "E2025-0018",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "19": {
+      "entity_id": "E2025-0019",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "20": {
+      "entity_id": "E2025-0020",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "21": {
+      "entity_id": "E2025-0021",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "22": {
+      "entity_id": "E2025-0022",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "23": {
+      "entity_id": "E2025-0023",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "24": {
+      "entity_id": "E2025-0024",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "25": {
+      "entity_id": "E2025-0025",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "26": {
+      "entity_id": "E2025-0026",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "27": {
+      "entity_id": "E2025-0027",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "28": {
+      "entity_id": "E2025-0028",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "29": {
+      "entity_id": "E2025-0029",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "30": {
+      "entity_id": "E2025-0030",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "31": {
+      "entity_id": "E2025-0031",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "32": {
+      "entity_id": "E2025-0032",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "33": {
+      "entity_id": "E2025-0033",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "34": {
+      "entity_id": "E2025-0034",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "35": {
+      "entity_id": "E2025-0035",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "36": {
+      "entity_id": "E2025-0036",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "37": {
+      "entity_id": "E2025-0037",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "38": {
+      "entity_id": "E2025-0038",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "39": {
+      "entity_id": "E2025-0039",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "40": {
+      "entity_id": "E2025-0040",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "41": {
+      "entity_id": "E2025-0041",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "42": {
+      "entity_id": "E2025-0042",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "43": {
+      "entity_id": "E2025-0043",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "44": {
+      "entity_id": "E2025-0044",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "45": {
+      "entity_id": "E2025-0045",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "46": {
+      "entity_id": "E2025-0046",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "47": {
+      "entity_id": "E2025-0047",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "48": {
+      "entity_id": "E2025-0048",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "49": {
+      "entity_id": "E2025-0049",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "50": {
+      "entity_id": "E2025-0050",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "51": {
+      "entity_id": "E2025-0051",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "52": {
+      "entity_id": "E2025-0052",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "53": {
+      "entity_id": "E2025-0053",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "54": {
+      "entity_id": "E2025-0054",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "55": {
+      "entity_id": "E2025-0055",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "56": {
+      "entity_id": "E2025-0056",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "57": {
+      "entity_id": "E2025-0057",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "58": {
+      "entity_id": "E2025-0058",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "59": {
+      "entity_id": "E2025-0059",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "60": {
+      "entity_id": "E2025-0060",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "61": {
+      "entity_id": "E2025-0061",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "62": {
+      "entity_id": "E2025-0062",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "63": {
+      "entity_id": "E2025-0063",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "64": {
+      "entity_id": "E2025-0064",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "65": {
+      "entity_id": "E2025-0065",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "66": {
+      "entity_id": "E2025-0066",
+      "section": "数量关系",
+      "role": "province_only"
+    },
+    "67": {
+      "entity_id": "E2025-0067",
+      "section": "数量关系",
+      "role": "province_only"
+    },
+    "68": {
+      "entity_id": "E2025-0068",
+      "section": "数量关系",
+      "role": "province_only"
+    },
+    "69": {
+      "entity_id": "E2025-0069",
+      "section": "数量关系",
+      "role": "province_only"
+    },
+    "70": {
+      "entity_id": "E2025-0070",
+      "section": "数量关系",
+      "role": "province_only"
+    },
+    "71": {
+      "entity_id": "E2025-0071",
+      "section": "数量关系",
+      "role": "province_only"
+    },
+    "72": {
+      "entity_id": "E2025-0072",
+      "section": "数量关系",
+      "role": "province_only"
+    },
+    "73": {
+      "entity_id": "E2025-0073",
+      "section": "数量关系",
+      "role": "province_only"
+    },
+    "74": {
+      "entity_id": "E2025-0074",
+      "section": "数量关系",
+      "role": "province_only"
+    },
+    "75": {
+      "entity_id": "E2025-0075",
+      "section": "数量关系",
+      "role": "province_only"
+    },
+    "76": {
+      "entity_id": "E2025-0076",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "77": {
+      "entity_id": "E2025-0077",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "78": {
+      "entity_id": "E2025-0078",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "79": {
+      "entity_id": "E2025-0079",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "80": {
+      "entity_id": "E2025-0080",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "81": {
+      "entity_id": "E2025-0081",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "82": {
+      "entity_id": "E2025-0082",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "83": {
+      "entity_id": "E2025-0083",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "84": {
+      "entity_id": "E2025-0084",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "85": {
+      "entity_id": "E2025-0085",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "86": {
+      "entity_id": "E2025-0086",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "87": {
+      "entity_id": "E2025-0087",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "88": {
+      "entity_id": "E2025-0088",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "89": {
+      "entity_id": "E2025-0089",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "90": {
+      "entity_id": "E2025-0090",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "91": {
+      "entity_id": "E2025-0091",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "92": {
+      "entity_id": "E2025-0092",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "93": {
+      "entity_id": "E2025-0093",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "94": {
+      "entity_id": "E2025-0094",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "95": {
+      "entity_id": "E2025-0095",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "96": {
+      "entity_id": "E2025-0096",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "97": {
+      "entity_id": "E2025-0097",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "98": {
+      "entity_id": "E2025-0098",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "99": {
+      "entity_id": "E2025-0099",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "100": {
+      "entity_id": "E2025-0100",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "101": {
+      "entity_id": "E2025-0101",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "102": {
+      "entity_id": "E2025-0102",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "103": {
+      "entity_id": "E2025-0103",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "104": {
+      "entity_id": "E2025-0104",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "105": {
+      "entity_id": "E2025-0105",
+      "section": "判断推理",
+      "role": "province_only"
+    },
+    "106": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "backfilled",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "107": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "backfilled",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "108": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "backfilled",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "109": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "backfilled",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "110": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "backfilled",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "111": {
+      "entity_id": "E2025-0106",
+      "section": "判断推理",
+      "role": "diff_book"
+    },
+    "112": {
+      "entity_id": "E2025-0107",
+      "section": "判断推理",
+      "role": "diff_book"
+    },
+    "113": {
+      "entity_id": "E2025-0108",
+      "section": "判断推理",
+      "role": "diff_book"
+    },
+    "114": {
+      "entity_id": "E2025-0109",
+      "section": "判断推理",
+      "role": "diff_book"
+    },
+    "115": {
+      "entity_id": "E2025-0110",
+      "section": "判断推理",
+      "role": "diff_book"
+    },
+    "116": {
+      "entity_id": "E2025-0111",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "117": {
+      "entity_id": "E2025-0112",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "118": {
+      "entity_id": "E2025-0113",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "119": {
+      "entity_id": "E2025-0114",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "120": {
+      "entity_id": "E2025-0115",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "121": {
+      "entity_id": "E2025-0116",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "122": {
+      "entity_id": "E2025-0117",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "123": {
+      "entity_id": "E2025-0118",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "124": {
+      "entity_id": "E2025-0119",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "125": {
+      "entity_id": "E2025-0120",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "126": {
+      "entity_id": "E2025-0121",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "127": {
+      "entity_id": "E2025-0122",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "128": {
+      "entity_id": "E2025-0123",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "129": {
+      "entity_id": "E2025-0124",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "130": {
+      "entity_id": "E2025-0125",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "131": {
+      "entity_id": "E2025-0126",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "132": {
+      "entity_id": "E2025-0127",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "133": {
+      "entity_id": "E2025-0128",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "134": {
+      "entity_id": "E2025-0129",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "135": {
+      "entity_id": "E2025-0130",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    }
+  },
+  "shidi": {
+    "1": {
+      "entity_id": "E2025-0001",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "2": {
+      "entity_id": "E2025-0002",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "3": {
+      "entity_id": "E2025-0003",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "4": {
+      "entity_id": "E2025-0004",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "5": {
+      "entity_id": "E2025-0005",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "6": {
+      "entity_id": "E2025-0006",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "7": {
+      "entity_id": "E2025-0007",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "8": {
+      "entity_id": "E2025-0008",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "9": {
+      "entity_id": "E2025-0009",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "10": {
+      "entity_id": "E2025-0010",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "11": {
+      "entity_id": "E2025-0011",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "12": {
+      "entity_id": "E2025-0012",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "13": {
+      "entity_id": "E2025-0013",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "14": {
+      "entity_id": "E2025-0014",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "15": {
+      "entity_id": "E2025-0015",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "16": {
+      "entity_id": "E2025-0016",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "17": {
+      "entity_id": "E2025-0017",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "18": {
+      "entity_id": "E2025-0018",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "19": {
+      "entity_id": "E2025-0019",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "20": {
+      "entity_id": "E2025-0020",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "21": {
+      "entity_id": "E2025-0021",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "22": {
+      "entity_id": "E2025-0022",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "23": {
+      "entity_id": "E2025-0023",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "24": {
+      "entity_id": "E2025-0024",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "25": {
+      "entity_id": "E2025-0025",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "26": {
+      "entity_id": "E2025-0026",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "27": {
+      "entity_id": "E2025-0027",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "28": {
+      "entity_id": "E2025-0028",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "29": {
+      "entity_id": "E2025-0029",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "30": {
+      "entity_id": "E2025-0030",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "31": {
+      "entity_id": "E2025-0031",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "32": {
+      "entity_id": "E2025-0032",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "33": {
+      "entity_id": "E2025-0033",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "34": {
+      "entity_id": "E2025-0034",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "35": {
+      "entity_id": "E2025-0035",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "36": {
+      "entity_id": "E2025-0036",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "37": {
+      "entity_id": "E2025-0037",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "38": {
+      "entity_id": "E2025-0038",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "39": {
+      "entity_id": "E2025-0039",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "40": {
+      "entity_id": "E2025-0040",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "41": {
+      "entity_id": "E2025-0041",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "42": {
+      "entity_id": "E2025-0042",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "43": {
+      "entity_id": "E2025-0043",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "44": {
+      "entity_id": "E2025-0044",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "45": {
+      "entity_id": "E2025-0045",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "46": {
+      "entity_id": "E2025-0046",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "47": {
+      "entity_id": "E2025-0047",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "48": {
+      "entity_id": "E2025-0048",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "49": {
+      "entity_id": "E2025-0049",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "50": {
+      "entity_id": "E2025-0050",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "51": {
+      "entity_id": "E2025-0051",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "52": {
+      "entity_id": "E2025-0052",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "53": {
+      "entity_id": "E2025-0053",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "54": {
+      "entity_id": "E2025-0054",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "55": {
+      "entity_id": "E2025-0055",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "56": {
+      "entity_id": "E2025-0056",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "57": {
+      "entity_id": "E2025-0057",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "58": {
+      "entity_id": "E2025-0058",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "59": {
+      "entity_id": "E2025-0059",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "60": {
+      "entity_id": "E2025-0060",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "61": {
+      "entity_id": "E2025-0061",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "62": {
+      "entity_id": "E2025-0062",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "63": {
+      "entity_id": "E2025-0063",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "64": {
+      "entity_id": "E2025-0064",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "65": {
+      "entity_id": "E2025-0065",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "66": {
+      "entity_id": "E2025-0131",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "67": {
+      "entity_id": "E2025-0132",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "68": {
+      "entity_id": "E2025-0133",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "69": {
+      "entity_id": "E2025-0134",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "70": {
+      "entity_id": "E2025-0076",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "71": {
+      "entity_id": "E2025-0077",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "72": {
+      "entity_id": "E2025-0135",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "73": {
+      "entity_id": "E2025-0078",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "74": {
+      "entity_id": "E2025-0079",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "75": {
+      "entity_id": "E2025-0080",
+      "section": "数量关系",
+      "role": "shared_with_shidi"
+    },
+    "76": {
+      "entity_id": "E2025-0081",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "77": {
+      "entity_id": "E2025-0136",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "78": {
+      "entity_id": "E2025-0137",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "79": {
+      "entity_id": "E2025-0138",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "80": {
+      "entity_id": "E2025-0082",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "81": {
+      "entity_id": "E2025-0083",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "82": {
+      "entity_id": "E2025-0084",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "83": {
+      "entity_id": "E2025-0085",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "84": {
+      "entity_id": "E2025-0139",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "85": {
+      "entity_id": "E2025-0140",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "86": {
+      "entity_id": "E2025-0086",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "87": {
+      "entity_id": "E2025-0087",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "88": {
+      "entity_id": "E2025-0088",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "89": {
+      "entity_id": "E2025-0089",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "90": {
+      "entity_id": "E2025-0090",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "91": {
+      "entity_id": "E2025-0091",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "92": {
+      "entity_id": "E2025-0092",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "93": {
+      "entity_id": "E2025-0093",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "94": {
+      "entity_id": "E2025-0094",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "95": {
+      "entity_id": "E2025-0095",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "96": {
+      "entity_id": "E2025-0096",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "97": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "shared_with_shidi",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "98": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "shared_with_shidi",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "99": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "shared_with_shidi",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "100": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "shared_with_shidi",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "101": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "shared_with_shidi",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "102": {
+      "entity_id": "E2025-0097",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "103": {
+      "entity_id": "E2025-0098",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "104": {
+      "entity_id": "E2025-0099",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "105": {
+      "entity_id": "E2025-0100",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "106": {
+      "entity_id": "E2025-0101",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "107": {
+      "entity_id": "E2025-0102",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "108": {
+      "entity_id": "E2025-0103",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "109": {
+      "entity_id": "E2025-0104",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "110": {
+      "entity_id": "E2025-0105",
+      "section": "判断推理",
+      "role": "shared_with_shidi"
+    },
+    "111": {
+      "entity_id": "E2025-0111",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "112": {
+      "entity_id": "E2025-0112",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "113": {
+      "entity_id": "E2025-0113",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "114": {
+      "entity_id": "E2025-0114",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "115": {
+      "entity_id": "E2025-0115",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "116": {
+      "entity_id": "E2025-0116",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "117": {
+      "entity_id": "E2025-0117",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "118": {
+      "entity_id": "E2025-0118",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "119": {
+      "entity_id": "E2025-0119",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "120": {
+      "entity_id": "E2025-0120",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "121": {
+      "entity_id": "E2025-0121",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "122": {
+      "entity_id": "E2025-0122",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "123": {
+      "entity_id": "E2025-0123",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "124": {
+      "entity_id": "E2025-0124",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "125": {
+      "entity_id": "E2025-0125",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "126": {
+      "entity_id": "E2025-0126",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "127": {
+      "entity_id": "E2025-0127",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "128": {
+      "entity_id": "E2025-0128",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "129": {
+      "entity_id": "E2025-0129",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    },
+    "130": {
+      "entity_id": "E2025-0130",
+      "section": "资料分析",
+      "role": "mapped_from_shidi"
+    }
+  },
+  "xingzhengzhifa": {
+    "1": {
+      "entity_id": "E2025-0001",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "2": {
+      "entity_id": "E2025-0002",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "3": {
+      "entity_id": "E2025-0003",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "4": {
+      "entity_id": "E2025-0004",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "5": {
+      "entity_id": "E2025-0005",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "6": {
+      "entity_id": "E2025-0006",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "7": {
+      "entity_id": "E2025-0007",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "8": {
+      "entity_id": "E2025-0008",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "9": {
+      "entity_id": "E2025-0009",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "10": {
+      "entity_id": "E2025-0010",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "11": {
+      "entity_id": "E2025-0011",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "12": {
+      "entity_id": "E2025-0012",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "13": {
+      "entity_id": "E2025-0013",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "14": {
+      "entity_id": "E2025-0014",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "15": {
+      "entity_id": "E2025-0015",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "16": {
+      "entity_id": "E2025-0016",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "17": {
+      "entity_id": "E2025-0017",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "18": {
+      "entity_id": "E2025-0018",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "19": {
+      "entity_id": "E2025-0019",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "20": {
+      "entity_id": "E2025-0020",
+      "section": "政治理论",
+      "role": "shared"
+    },
+    "21": {
+      "entity_id": "E2025-0021",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "22": {
+      "entity_id": "E2025-0022",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "23": {
+      "entity_id": "E2025-0023",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "24": {
+      "entity_id": "E2025-0024",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "25": {
+      "entity_id": "E2025-0025",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "26": {
+      "entity_id": "E2025-0026",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "27": {
+      "entity_id": "E2025-0027",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "28": {
+      "entity_id": "E2025-0028",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "29": {
+      "entity_id": "E2025-0029",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "30": {
+      "entity_id": "E2025-0030",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "31": {
+      "entity_id": "E2025-0031",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "32": {
+      "entity_id": "E2025-0032",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "33": {
+      "entity_id": "E2025-0033",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "34": {
+      "entity_id": "E2025-0034",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "35": {
+      "entity_id": "E2025-0035",
+      "section": "常识判断",
+      "role": "shared"
+    },
+    "36": {
+      "entity_id": "E2025-0036",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "37": {
+      "entity_id": "E2025-0037",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "38": {
+      "entity_id": "E2025-0038",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "39": {
+      "entity_id": "E2025-0039",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "40": {
+      "entity_id": "E2025-0040",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "41": {
+      "entity_id": "E2025-0041",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "42": {
+      "entity_id": "E2025-0042",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "43": {
+      "entity_id": "E2025-0043",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "44": {
+      "entity_id": "E2025-0044",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "45": {
+      "entity_id": "E2025-0045",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "46": {
+      "entity_id": "E2025-0046",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "47": {
+      "entity_id": "E2025-0047",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "48": {
+      "entity_id": "E2025-0048",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "49": {
+      "entity_id": "E2025-0049",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "50": {
+      "entity_id": "E2025-0050",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "51": {
+      "entity_id": "E2025-0051",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "52": {
+      "entity_id": "E2025-0052",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "53": {
+      "entity_id": "E2025-0053",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "54": {
+      "entity_id": "E2025-0054",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "55": {
+      "entity_id": "E2025-0055",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "56": {
+      "entity_id": "E2025-0056",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "57": {
+      "entity_id": "E2025-0057",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "58": {
+      "entity_id": "E2025-0058",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "59": {
+      "entity_id": "E2025-0059",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "60": {
+      "entity_id": "E2025-0060",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "61": {
+      "entity_id": "E2025-0061",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "62": {
+      "entity_id": "E2025-0062",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "63": {
+      "entity_id": "E2025-0063",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "64": {
+      "entity_id": "E2025-0064",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "65": {
+      "entity_id": "E2025-0065",
+      "section": "言语理解与表达",
+      "role": "shared"
+    },
+    "66": {
+      "entity_id": "E2025-0131",
+      "section": "数量关系",
+      "role": "shared"
+    },
+    "67": {
+      "entity_id": "E2025-0132",
+      "section": "数量关系",
+      "role": "shared"
+    },
+    "68": {
+      "entity_id": "E2025-0141",
+      "section": "数量关系",
+      "role": "diff_book"
+    },
+    "69": {
+      "entity_id": "E2025-0134",
+      "section": "数量关系",
+      "role": "shared"
+    },
+    "70": {
+      "entity_id": "E2025-0076",
+      "section": "数量关系",
+      "role": "shared"
+    },
+    "71": {
+      "entity_id": "E2025-0142",
+      "section": "数量关系",
+      "role": "diff_book"
+    },
+    "72": {
+      "entity_id": "E2025-0135",
+      "section": "数量关系",
+      "role": "shared"
+    },
+    "73": {
+      "entity_id": "E2025-0078",
+      "section": "数量关系",
+      "role": "shared"
+    },
+    "74": {
+      "entity_id": "E2025-0079",
+      "section": "数量关系",
+      "role": "shared"
+    },
+    "75": {
+      "entity_id": "E2025-0080",
+      "section": "数量关系",
+      "role": "shared"
+    },
+    "76": {
+      "entity_id": "E2025-0081",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "77": {
+      "entity_id": "E2025-0136",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "78": {
+      "entity_id": "E2025-0137",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "79": {
+      "entity_id": "E2025-0138",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "80": {
+      "entity_id": "E2025-0082",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "81": {
+      "entity_id": "E2025-0083",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "82": {
+      "entity_id": "E2025-0084",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "83": {
+      "entity_id": "E2025-0085",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "84": {
+      "entity_id": "E2025-0139",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "85": {
+      "entity_id": "E2025-0140",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "86": {
+      "entity_id": "E2025-0086",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "87": {
+      "entity_id": "E2025-0087",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "88": {
+      "entity_id": "E2025-0088",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "89": {
+      "entity_id": "E2025-0089",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "90": {
+      "entity_id": "E2025-0090",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "91": {
+      "entity_id": "E2025-0091",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "92": {
+      "entity_id": "E2025-0092",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "93": {
+      "entity_id": "E2025-0093",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "94": {
+      "entity_id": "E2025-0094",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "95": {
+      "entity_id": "E2025-0095",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "96": {
+      "entity_id": "E2025-0096",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "97": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "main",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "98": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "main",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "99": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "main",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch"
+    },
+    "100": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "main",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch,content_mismatch_needs_source"
+    },
+    "101": {
+      "entity_id": null,
+      "section": "判断推理",
+      "role": "main",
+      "excluded": true,
+      "excluded_reason": "section_type_mismatch,content_mismatch_needs_source"
+    },
+    "102": {
+      "entity_id": "E2025-0097",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "103": {
+      "entity_id": "E2025-0098",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "104": {
+      "entity_id": "E2025-0099",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "105": {
+      "entity_id": "E2025-0100",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "106": {
+      "entity_id": "E2025-0101",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "107": {
+      "entity_id": "E2025-0102",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "108": {
+      "entity_id": "E2025-0103",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "109": {
+      "entity_id": "E2025-0104",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "110": {
+      "entity_id": "E2025-0105",
+      "section": "判断推理",
+      "role": "main"
+    },
+    "111": {
+      "entity_id": "E2025-0111",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "112": {
+      "entity_id": "E2025-0112",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "113": {
+      "entity_id": "E2025-0113",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "114": {
+      "entity_id": "E2025-0114",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "115": {
+      "entity_id": "E2025-0115",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "116": {
+      "entity_id": "E2025-0116",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "117": {
+      "entity_id": "E2025-0117",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "118": {
+      "entity_id": "E2025-0118",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "119": {
+      "entity_id": "E2025-0119",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "120": {
+      "entity_id": "E2025-0120",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "121": {
+      "entity_id": "E2025-0121",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "122": {
+      "entity_id": "E2025-0122",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "123": {
+      "entity_id": "E2025-0123",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "124": {
+      "entity_id": "E2025-0124",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "125": {
+      "entity_id": "E2025-0125",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "126": {
+      "entity_id": "E2025-0126",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "127": {
+      "entity_id": "E2025-0127",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "128": {
+      "entity_id": "E2025-0128",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "129": {
+      "entity_id": "E2025-0129",
+      "section": "资料分析",
+      "role": "main"
+    },
+    "130": {
+      "entity_id": "E2025-0130",
+      "section": "资料分析",
+      "role": "main"
+    }
+  }
+}

@@ -1,0 +1,4668 @@
+{
+  "version": "v1",
+  "year": 2025,
+  "generated_at": "2026-09-03",
+  "summary": {
+    "total_unique_entities": 142,
+    "three_paper_shared": 114,
+    "shengji_shidi_shared": 1,
+    "shengji_xzzf_shared": 0,
+    "shidi_xzzf_shared": 9,
+    "paper_unique": {
+      "shengji": 15,
+      "shidi": 1,
+      "xingzhengzhifa": 2
+    },
+    "answer_conflicts": 0,
+    "excluded_count": 15
+  },
+  "entities": [
+    {
+      "entity_id": "E2025-0001",
+      "canonical_hash": "bc3b0756e436646a",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 1,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 1,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 1,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 1
+      }
+    },
+    {
+      "entity_id": "E2025-0002",
+      "canonical_hash": "464324ce43b4739d",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 2,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 2,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 2,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 2
+      }
+    },
+    {
+      "entity_id": "E2025-0003",
+      "canonical_hash": "690ea00df333a14a",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 3,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 3,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 3,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 3
+      }
+    },
+    {
+      "entity_id": "E2025-0004",
+      "canonical_hash": "071257727c5a08ea",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 4,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 4,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 4,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 4
+      }
+    },
+    {
+      "entity_id": "E2025-0005",
+      "canonical_hash": "8b8d0e10737d43dd",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 5,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 5,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 5,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 5
+      }
+    },
+    {
+      "entity_id": "E2025-0006",
+      "canonical_hash": "4d4686311567c72d",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 6,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 6,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 6,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 6
+      }
+    },
+    {
+      "entity_id": "E2025-0007",
+      "canonical_hash": "22a5db9b9cdcf690",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 7,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 7,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 7,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 7
+      }
+    },
+    {
+      "entity_id": "E2025-0008",
+      "canonical_hash": "9d7c7566b0f5b599",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 8,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 8,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 8,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 8
+      }
+    },
+    {
+      "entity_id": "E2025-0009",
+      "canonical_hash": "e2b046e95e7366f1",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 9,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 9,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 9,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 9
+      }
+    },
+    {
+      "entity_id": "E2025-0010",
+      "canonical_hash": "46f79bc8f1f5e30b",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 10,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 10,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 10,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 10
+      }
+    },
+    {
+      "entity_id": "E2025-0011",
+      "canonical_hash": "5769753b223c14fe",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 11,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 11,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 11,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 11
+      }
+    },
+    {
+      "entity_id": "E2025-0012",
+      "canonical_hash": "9f36f438f5ef4aff",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 12,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 12,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 12,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 12
+      }
+    },
+    {
+      "entity_id": "E2025-0013",
+      "canonical_hash": "40e66137b00d38fb",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 13,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 13,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 13,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 13
+      }
+    },
+    {
+      "entity_id": "E2025-0014",
+      "canonical_hash": "92cbbd5f68ce758d",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 14,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 14,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 14,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 14
+      }
+    },
+    {
+      "entity_id": "E2025-0015",
+      "canonical_hash": "00383e817ccc7279",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 15,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 15,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 15,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 15
+      }
+    },
+    {
+      "entity_id": "E2025-0016",
+      "canonical_hash": "af23805bff506027",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 16,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 16,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 16,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 16
+      }
+    },
+    {
+      "entity_id": "E2025-0017",
+      "canonical_hash": "a07c2c4f3a45869f",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 17,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 17,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 17,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 17
+      }
+    },
+    {
+      "entity_id": "E2025-0018",
+      "canonical_hash": "9769b933df72fa91",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 18,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 18,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 18,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 18
+      }
+    },
+    {
+      "entity_id": "E2025-0019",
+      "canonical_hash": "9c73bcf4ed62e951",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 19,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 19,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 19,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 19
+      }
+    },
+    {
+      "entity_id": "E2025-0020",
+      "canonical_hash": "8c535581d34ed9b9",
+      "module": "政治理论",
+      "subtype": "政治理论",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 20,
+          "section": "政治理论"
+        },
+        {
+          "paper": "shidi",
+          "number": 20,
+          "section": "政治理论"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 20,
+          "section": "政治理论"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 20
+      }
+    },
+    {
+      "entity_id": "E2025-0021",
+      "canonical_hash": "31cd9b0d933e4c90",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 21,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 21,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 21,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 21
+      }
+    },
+    {
+      "entity_id": "E2025-0022",
+      "canonical_hash": "9dfa2e89dd9c3cf9",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 22,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 22,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 22,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 22
+      }
+    },
+    {
+      "entity_id": "E2025-0023",
+      "canonical_hash": "f2c08a5633165e9e",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 23,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 23,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 23,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 23
+      }
+    },
+    {
+      "entity_id": "E2025-0024",
+      "canonical_hash": "90074ea9a584817d",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 24,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 24,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 24,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 24
+      }
+    },
+    {
+      "entity_id": "E2025-0025",
+      "canonical_hash": "3017a28d6b9e5252",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 25,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 25,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 25,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 25
+      }
+    },
+    {
+      "entity_id": "E2025-0026",
+      "canonical_hash": "24acb9051959b901",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 26,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 26,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 26,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 26
+      }
+    },
+    {
+      "entity_id": "E2025-0027",
+      "canonical_hash": "96bb30256a1d2248",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 27,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 27,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 27,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 27
+      }
+    },
+    {
+      "entity_id": "E2025-0028",
+      "canonical_hash": "0dd088645062d08b",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 28,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 28,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 28,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 28
+      }
+    },
+    {
+      "entity_id": "E2025-0029",
+      "canonical_hash": "730321d4facf2251",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 29,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 29,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 29,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 29
+      }
+    },
+    {
+      "entity_id": "E2025-0030",
+      "canonical_hash": "0837b964d59a3a04",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 30,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 30,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 30,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 30
+      }
+    },
+    {
+      "entity_id": "E2025-0031",
+      "canonical_hash": "988a62be20fd9ca7",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 31,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 31,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 31,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 31
+      }
+    },
+    {
+      "entity_id": "E2025-0032",
+      "canonical_hash": "b605268f5d396cce",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 32,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 32,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 32,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 32
+      }
+    },
+    {
+      "entity_id": "E2025-0033",
+      "canonical_hash": "121ff669f9971284",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 33,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 33,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 33,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 33
+      }
+    },
+    {
+      "entity_id": "E2025-0034",
+      "canonical_hash": "655ba457f5de178f",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 34,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 34,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 34,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 34
+      }
+    },
+    {
+      "entity_id": "E2025-0035",
+      "canonical_hash": "167734718d64771c",
+      "module": "常识判断",
+      "subtype": "常识判断",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 35,
+          "section": "常识判断"
+        },
+        {
+          "paper": "shidi",
+          "number": 35,
+          "section": "常识判断"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 35,
+          "section": "常识判断"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 35
+      }
+    },
+    {
+      "entity_id": "E2025-0036",
+      "canonical_hash": "7f64032997b697a8",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 36,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 36,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 36,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 36
+      }
+    },
+    {
+      "entity_id": "E2025-0037",
+      "canonical_hash": "ef100264dbab5365",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 37,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 37,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 37,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 37
+      }
+    },
+    {
+      "entity_id": "E2025-0038",
+      "canonical_hash": "27b59ef5b39a240c",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 38,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 38,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 38,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 38
+      }
+    },
+    {
+      "entity_id": "E2025-0039",
+      "canonical_hash": "b528b404a22c4b0f",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 39,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 39,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 39,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 39
+      }
+    },
+    {
+      "entity_id": "E2025-0040",
+      "canonical_hash": "141ff92ac1bc95b6",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 40,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 40,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 40,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 40
+      }
+    },
+    {
+      "entity_id": "E2025-0041",
+      "canonical_hash": "9ca3d3f5eb53f3df",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 41,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 41,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 41,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 41
+      }
+    },
+    {
+      "entity_id": "E2025-0042",
+      "canonical_hash": "d6ecc574046ae27c",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 42,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 42,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 42,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 42
+      }
+    },
+    {
+      "entity_id": "E2025-0043",
+      "canonical_hash": "4e7e5a7fceb20afe",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 43,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 43,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 43,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 43
+      }
+    },
+    {
+      "entity_id": "E2025-0044",
+      "canonical_hash": "9adcaadeccd249ca",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 44,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 44,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 44,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 44
+      }
+    },
+    {
+      "entity_id": "E2025-0045",
+      "canonical_hash": "467c0bbfa3a27e86",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 45,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 45,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 45,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 45
+      }
+    },
+    {
+      "entity_id": "E2025-0046",
+      "canonical_hash": "dcb2df725f15a3f9",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 46,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 46,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 46,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 46
+      }
+    },
+    {
+      "entity_id": "E2025-0047",
+      "canonical_hash": "0c7b22c930e4a48b",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 47,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 47,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 47,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 47
+      }
+    },
+    {
+      "entity_id": "E2025-0048",
+      "canonical_hash": "6523d6bf981b2b9e",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 48,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 48,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 48,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 48
+      }
+    },
+    {
+      "entity_id": "E2025-0049",
+      "canonical_hash": "71240a933a36e4e5",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 49,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 49,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 49,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 49
+      }
+    },
+    {
+      "entity_id": "E2025-0050",
+      "canonical_hash": "5ebd5a7ae9174ba7",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 50,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 50,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 50,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 50
+      }
+    },
+    {
+      "entity_id": "E2025-0051",
+      "canonical_hash": "973e41bd433c99ea",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 51,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 51,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 51,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 51
+      }
+    },
+    {
+      "entity_id": "E2025-0052",
+      "canonical_hash": "0cdd8f195169cd02",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 52,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 52,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 52,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 52
+      }
+    },
+    {
+      "entity_id": "E2025-0053",
+      "canonical_hash": "d3e7e34c195d26ea",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 53,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 53,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 53,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 53
+      }
+    },
+    {
+      "entity_id": "E2025-0054",
+      "canonical_hash": "ec31297825576074",
+      "module": "言语理解与表达",
+      "subtype": "语句排序",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 54,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 54,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 54,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 54
+      }
+    },
+    {
+      "entity_id": "E2025-0055",
+      "canonical_hash": "41261927e7e127b4",
+      "module": "言语理解与表达",
+      "subtype": "语句排序",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 55,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 55,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 55,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 55
+      }
+    },
+    {
+      "entity_id": "E2025-0056",
+      "canonical_hash": "ed5b713280cdced5",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 56,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 56,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 56,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 56
+      }
+    },
+    {
+      "entity_id": "E2025-0057",
+      "canonical_hash": "0e8370e7ec69b142",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 57,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 57,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 57,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 57
+      }
+    },
+    {
+      "entity_id": "E2025-0058",
+      "canonical_hash": "ab4b3394d14df775",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 58,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 58,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 58,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 58
+      }
+    },
+    {
+      "entity_id": "E2025-0059",
+      "canonical_hash": "ec47133159dc1a3e",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 59,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 59,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 59,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 59
+      }
+    },
+    {
+      "entity_id": "E2025-0060",
+      "canonical_hash": "21ae2d3c3dfedc41",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 60,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 60,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 60,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 60
+      }
+    },
+    {
+      "entity_id": "E2025-0061",
+      "canonical_hash": "8a66615f9f177cd5",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 61,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 61,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 61,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 61
+      }
+    },
+    {
+      "entity_id": "E2025-0062",
+      "canonical_hash": "568550cfa8a3e823",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 62,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 62,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 62,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 62
+      }
+    },
+    {
+      "entity_id": "E2025-0063",
+      "canonical_hash": "5b321ee2ee707859",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 63,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 63,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 63,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 63
+      }
+    },
+    {
+      "entity_id": "E2025-0064",
+      "canonical_hash": "a21219499ff183af",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 64,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 64,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 64,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 64
+      }
+    },
+    {
+      "entity_id": "E2025-0065",
+      "canonical_hash": "b272a2e65d35a0d9",
+      "module": "言语理解与表达",
+      "subtype": "片段阅读",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared"
+      ],
+      "provenance_note": "主卷共享; 共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 65,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "shidi",
+          "number": 65,
+          "section": "言语理解与表达"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 65,
+          "section": "言语理解与表达"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 65
+      }
+    },
+    {
+      "entity_id": "E2025-0066",
+      "canonical_hash": "d082cf4d08b42453",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "C",
+      "provenance_roles": [
+        "province_only"
+      ],
+      "provenance_note": "省级数量独有(差异卷29)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 66,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 66
+      }
+    },
+    {
+      "entity_id": "E2025-0067",
+      "canonical_hash": "35db3951485eb599",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "C",
+      "provenance_roles": [
+        "province_only"
+      ],
+      "provenance_note": "省级数量独有(差异卷30)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 67,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 67
+      }
+    },
+    {
+      "entity_id": "E2025-0068",
+      "canonical_hash": "37d840c8912ce545",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "A",
+      "provenance_roles": [
+        "province_only"
+      ],
+      "provenance_note": "省级数量独有(差异卷31)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 68,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 68
+      }
+    },
+    {
+      "entity_id": "E2025-0069",
+      "canonical_hash": "ec324b346c948642",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "A",
+      "provenance_roles": [
+        "province_only"
+      ],
+      "provenance_note": "省级数量独有(差异卷32)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 69,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 69
+      }
+    },
+    {
+      "entity_id": "E2025-0070",
+      "canonical_hash": "31ac65ae61e300b8",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "B",
+      "provenance_roles": [
+        "province_only"
+      ],
+      "provenance_note": "省级数量独有(差异卷33)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 70,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 70
+      }
+    },
+    {
+      "entity_id": "E2025-0071",
+      "canonical_hash": "e5b867d44ef6363b",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "C",
+      "provenance_roles": [
+        "province_only"
+      ],
+      "provenance_note": "省级数量独有(差异卷34)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 71,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 71
+      }
+    },
+    {
+      "entity_id": "E2025-0072",
+      "canonical_hash": "682ef9c2be446ea1",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "B",
+      "provenance_roles": [
+        "province_only"
+      ],
+      "provenance_note": "省级数量独有(差异卷35)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 72,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 72
+      }
+    },
+    {
+      "entity_id": "E2025-0073",
+      "canonical_hash": "bc6c1008f7052188",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "A",
+      "provenance_roles": [
+        "province_only"
+      ],
+      "provenance_note": "省级数量独有(差异卷36)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 73,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 73
+      }
+    },
+    {
+      "entity_id": "E2025-0074",
+      "canonical_hash": "bb7d2f138d0e48ed",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "D",
+      "provenance_roles": [
+        "province_only"
+      ],
+      "provenance_note": "省级数量独有(差异卷37)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 74,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 74
+      }
+    },
+    {
+      "entity_id": "E2025-0075",
+      "canonical_hash": "a0bba8d9caa185bf",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "D",
+      "provenance_roles": [
+        "province_only"
+      ],
+      "provenance_note": "省级数量独有(差异卷38)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 75,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 75
+      }
+    },
+    {
+      "entity_id": "E2025-0076",
+      "canonical_hash": "d4976e6de958ac7f",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "shared",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "与市地共享(市地70); 市地数量; 数量共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 76,
+          "section": "数量关系"
+        },
+        {
+          "paper": "shidi",
+          "number": 70,
+          "section": "数量关系"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 70,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 76
+      }
+    },
+    {
+      "entity_id": "E2025-0077",
+      "canonical_hash": "b09d9e030e6cabe5",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "shengji_shidi",
+      "answer": "C",
+      "provenance_roles": [
+        "shared_with_shidi"
+      ],
+      "provenance_note": "与市地共享(市地71); 市地数量",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 77,
+          "section": "数量关系"
+        },
+        {
+          "paper": "shidi",
+          "number": 71,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 77
+      }
+    },
+    {
+      "entity_id": "E2025-0078",
+      "canonical_hash": "7d6ff42fafa33440",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "shared",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "与市地共享(市地73); 市地数量; 数量共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 78,
+          "section": "数量关系"
+        },
+        {
+          "paper": "shidi",
+          "number": 73,
+          "section": "数量关系"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 73,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 78
+      }
+    },
+    {
+      "entity_id": "E2025-0079",
+      "canonical_hash": "50aa53bae533d88e",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "与市地共享(市地74); 市地数量; 数量共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 79,
+          "section": "数量关系"
+        },
+        {
+          "paper": "shidi",
+          "number": 74,
+          "section": "数量关系"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 74,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 79
+      }
+    },
+    {
+      "entity_id": "E2025-0080",
+      "canonical_hash": "7edddaab851df3b6",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "shared",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "与市地共享(市地75); 市地数量; 数量共享",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 80,
+          "section": "数量关系"
+        },
+        {
+          "paper": "shidi",
+          "number": 75,
+          "section": "数量关系"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 75,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 80
+      }
+    },
+    {
+      "entity_id": "E2025-0081",
+      "canonical_hash": "a40e33c542c88368",
+      "module": "判断推理",
+      "subtype": "图形推理",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 81,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 76,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 76,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 81
+      }
+    },
+    {
+      "entity_id": "E2025-0082",
+      "canonical_hash": "70236fe693763fde",
+      "module": "判断推理",
+      "subtype": "图形推理",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 82,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 80,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 80,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 82
+      }
+    },
+    {
+      "entity_id": "E2025-0083",
+      "canonical_hash": "8e79703d8ae01e3e",
+      "module": "判断推理",
+      "subtype": "图形推理",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 83,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 81,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 81,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 83
+      }
+    },
+    {
+      "entity_id": "E2025-0084",
+      "canonical_hash": "6d7e255c18e11e30",
+      "module": "判断推理",
+      "subtype": "图形推理",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 84,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 82,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 82,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 84
+      }
+    },
+    {
+      "entity_id": "E2025-0085",
+      "canonical_hash": "77e64e8bb2fabcc6",
+      "module": "判断推理",
+      "subtype": "图形推理",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 85,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 83,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 83,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 85
+      }
+    },
+    {
+      "entity_id": "E2025-0086",
+      "canonical_hash": "9882e00a31ff8886",
+      "module": "判断推理",
+      "subtype": "定义判断",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 86,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 86,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 86,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 86
+      }
+    },
+    {
+      "entity_id": "E2025-0087",
+      "canonical_hash": "f3b0261577a186d5",
+      "module": "判断推理",
+      "subtype": "定义判断",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 87,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 87,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 87,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 87
+      }
+    },
+    {
+      "entity_id": "E2025-0088",
+      "canonical_hash": "66ac481fb849dbd4",
+      "module": "判断推理",
+      "subtype": "定义判断",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 88,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 88,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 88,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 88
+      }
+    },
+    {
+      "entity_id": "E2025-0089",
+      "canonical_hash": "1b92197d980fa43a",
+      "module": "判断推理",
+      "subtype": "定义判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 89,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 89,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 89,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 89
+      }
+    },
+    {
+      "entity_id": "E2025-0090",
+      "canonical_hash": "f2b5d23f5662bc79",
+      "module": "判断推理",
+      "subtype": "定义判断",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 90,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 90,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 90,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 90
+      }
+    },
+    {
+      "entity_id": "E2025-0091",
+      "canonical_hash": "834a786eede44f2b",
+      "module": "判断推理",
+      "subtype": "定义判断",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 91,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 91,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 91,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 91
+      }
+    },
+    {
+      "entity_id": "E2025-0092",
+      "canonical_hash": "6d9f9c67bdd5d50f",
+      "module": "判断推理",
+      "subtype": "定义判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 92,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 92,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 92,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 92
+      }
+    },
+    {
+      "entity_id": "E2025-0093",
+      "canonical_hash": "81d592faa31b06d0",
+      "module": "判断推理",
+      "subtype": "定义判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 93,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 93,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 93,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 93
+      }
+    },
+    {
+      "entity_id": "E2025-0094",
+      "canonical_hash": "04cc19a158d708b9",
+      "module": "判断推理",
+      "subtype": "定义判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 94,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 94,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 94,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 94
+      }
+    },
+    {
+      "entity_id": "E2025-0095",
+      "canonical_hash": "369542fab22b4b9a",
+      "module": "判断推理",
+      "subtype": "定义判断",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 95,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 95,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 95,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 95
+      }
+    },
+    {
+      "entity_id": "E2025-0096",
+      "canonical_hash": "be62f01453ac8241",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 96,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 96,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 96,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 96
+      }
+    },
+    {
+      "entity_id": "E2025-0097",
+      "canonical_hash": "8e2718f60ff1bb02",
+      "module": "判断推理",
+      "subtype": "逻辑判断",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 97,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 102,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 102,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 97
+      }
+    },
+    {
+      "entity_id": "E2025-0098",
+      "canonical_hash": "572ded8184651608",
+      "module": "判断推理",
+      "subtype": "逻辑判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 98,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 103,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 103,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 98
+      }
+    },
+    {
+      "entity_id": "E2025-0099",
+      "canonical_hash": "5e79903cb5205fe6",
+      "module": "判断推理",
+      "subtype": "逻辑判断",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 99,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 104,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 104,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 99
+      }
+    },
+    {
+      "entity_id": "E2025-0100",
+      "canonical_hash": "60ee94cffcc85f2e",
+      "module": "判断推理",
+      "subtype": "图形推理",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 100,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 105,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 105,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 100
+      }
+    },
+    {
+      "entity_id": "E2025-0101",
+      "canonical_hash": "3ec38922306a43ea",
+      "module": "判断推理",
+      "subtype": "定义判断",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 101,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 106,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 106,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 101
+      }
+    },
+    {
+      "entity_id": "E2025-0102",
+      "canonical_hash": "b1414a14d8035fb4",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 102,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 107,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 107,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 102
+      }
+    },
+    {
+      "entity_id": "E2025-0103",
+      "canonical_hash": "28d5ba3c8d9f2b1f",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 103,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 108,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 108,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 103
+      }
+    },
+    {
+      "entity_id": "E2025-0104",
+      "canonical_hash": "67adfd28c5a1239b",
+      "module": "判断推理",
+      "subtype": "逻辑判断",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 104,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 109,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 109,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 104
+      }
+    },
+    {
+      "entity_id": "E2025-0105",
+      "canonical_hash": "44b1aacb66eba2fa",
+      "module": "判断推理",
+      "subtype": "逻辑判断",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "province_only",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断; 省级判断",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 105,
+          "section": "判断推理"
+        },
+        {
+          "paper": "shidi",
+          "number": 110,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 110,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 105
+      }
+    },
+    {
+      "entity_id": "E2025-0106",
+      "canonical_hash": "e5c5e9be816bc017",
+      "module": "判断推理",
+      "subtype": "逻辑判断",
+      "shared_level": "paper_unique",
+      "answer": "A",
+      "provenance_roles": [
+        "diff_book"
+      ],
+      "provenance_note": "省级判断差异题(差异卷标注57)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 111,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 111
+      }
+    },
+    {
+      "entity_id": "E2025-0107",
+      "canonical_hash": "35c566df97725e37",
+      "module": "判断推理",
+      "subtype": "逻辑判断",
+      "shared_level": "paper_unique",
+      "answer": "C",
+      "provenance_roles": [
+        "diff_book"
+      ],
+      "provenance_note": "省级判断差异题(差异卷标注58)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 112,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 112
+      }
+    },
+    {
+      "entity_id": "E2025-0108",
+      "canonical_hash": "0f435b449ce204c1",
+      "module": "判断推理",
+      "subtype": "逻辑判断",
+      "shared_level": "paper_unique",
+      "answer": "D",
+      "provenance_roles": [
+        "diff_book"
+      ],
+      "provenance_note": "省级判断差异题(差异卷标注59)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 113,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 113
+      }
+    },
+    {
+      "entity_id": "E2025-0109",
+      "canonical_hash": "95deec2e3847ac07",
+      "module": "判断推理",
+      "subtype": "逻辑判断",
+      "shared_level": "paper_unique",
+      "answer": "A",
+      "provenance_roles": [
+        "diff_book"
+      ],
+      "provenance_note": "省级判断差异题(差异卷标注60)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 114,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 114
+      }
+    },
+    {
+      "entity_id": "E2025-0110",
+      "canonical_hash": "6ff479dd358e185d",
+      "module": "判断推理",
+      "subtype": "逻辑判断",
+      "shared_level": "paper_unique",
+      "answer": "D",
+      "provenance_roles": [
+        "diff_book"
+      ],
+      "provenance_note": "省级判断差异题(差异卷标注61)",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 115,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 115
+      }
+    },
+    {
+      "entity_id": "E2025-0111",
+      "canonical_hash": "18c30121932768e5",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地111",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 116,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 111,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 111,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 116
+      }
+    },
+    {
+      "entity_id": "E2025-0112",
+      "canonical_hash": "9594bcb0a687cf3d",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地112",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 117,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 112,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 112,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 117
+      }
+    },
+    {
+      "entity_id": "E2025-0113",
+      "canonical_hash": "f617e03bc60cee9b",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地113",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 118,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 113,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 113,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 118
+      }
+    },
+    {
+      "entity_id": "E2025-0114",
+      "canonical_hash": "07680315ac288cd7",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地114",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 119,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 114,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 114,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 119
+      }
+    },
+    {
+      "entity_id": "E2025-0115",
+      "canonical_hash": "7fc9bd5ae1abeeca",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地115",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 120,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 115,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 115,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 120
+      }
+    },
+    {
+      "entity_id": "E2025-0116",
+      "canonical_hash": "e579acdb7de403bf",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地116",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 121,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 116,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 116,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 121
+      }
+    },
+    {
+      "entity_id": "E2025-0117",
+      "canonical_hash": "18787cf36f259afe",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地117",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 122,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 117,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 117,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 122
+      }
+    },
+    {
+      "entity_id": "E2025-0118",
+      "canonical_hash": "99b56b7fed1d2df3",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地118",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 123,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 118,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 118,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 123
+      }
+    },
+    {
+      "entity_id": "E2025-0119",
+      "canonical_hash": "311f7b82ec9df6b6",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地119",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 124,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 119,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 119,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 124
+      }
+    },
+    {
+      "entity_id": "E2025-0120",
+      "canonical_hash": "a20fc3d8d5399c7a",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地120",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 125,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 120,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 120,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 125
+      }
+    },
+    {
+      "entity_id": "E2025-0121",
+      "canonical_hash": "ceb34c7be54109d7",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地121",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 126,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 121,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 121,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 126
+      }
+    },
+    {
+      "entity_id": "E2025-0122",
+      "canonical_hash": "11fdeec67ee326d9",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地122",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 127,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 122,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 122,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 127
+      }
+    },
+    {
+      "entity_id": "E2025-0123",
+      "canonical_hash": "76babbe2a8b3bd93",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地123",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 128,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 123,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 123,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 128
+      }
+    },
+    {
+      "entity_id": "E2025-0124",
+      "canonical_hash": "459da7cf31c903ea",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地124",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 129,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 124,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 124,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 129
+      }
+    },
+    {
+      "entity_id": "E2025-0125",
+      "canonical_hash": "15681813c4376ca3",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地125",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 130,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 125,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 125,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 130
+      }
+    },
+    {
+      "entity_id": "E2025-0126",
+      "canonical_hash": "45135f22ee982b95",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "A",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地126",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 131,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 126,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 126,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 131
+      }
+    },
+    {
+      "entity_id": "E2025-0127",
+      "canonical_hash": "0afa239851c06c2d",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "C",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地127",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 132,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 127,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 127,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 132
+      }
+    },
+    {
+      "entity_id": "E2025-0128",
+      "canonical_hash": "014ff81a92039001",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地128",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 133,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 128,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 128,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 133
+      }
+    },
+    {
+      "entity_id": "E2025-0129",
+      "canonical_hash": "beba00df7882cdb1",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地129",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 134,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 129,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 129,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 134
+      }
+    },
+    {
+      "entity_id": "E2025-0130",
+      "canonical_hash": "e2a6cf835ecb9be8",
+      "module": "资料分析",
+      "subtype": "资料分析",
+      "shared_level": "three_paper",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "mapped_from_shidi"
+      ],
+      "provenance_note": "市地资料; 资料; 资料映射市地130",
+      "positions": [
+        {
+          "paper": "shengji",
+          "number": 135,
+          "section": "资料分析"
+        },
+        {
+          "paper": "shidi",
+          "number": 130,
+          "section": "资料分析"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 130,
+          "section": "资料分析"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shengji",
+        "canonical_number": 135
+      }
+    },
+    {
+      "entity_id": "E2025-0131",
+      "canonical_hash": "c454a1f0709a7d6e",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "shidi_xzzf",
+      "answer": "C",
+      "provenance_roles": [
+        "shared",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "市地数量; 数量共享",
+      "positions": [
+        {
+          "paper": "shidi",
+          "number": 66,
+          "section": "数量关系"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 66,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shidi",
+        "canonical_number": 66
+      }
+    },
+    {
+      "entity_id": "E2025-0132",
+      "canonical_hash": "ab8057d617571350",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "shidi_xzzf",
+      "answer": "C",
+      "provenance_roles": [
+        "shared",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "市地数量; 数量共享",
+      "positions": [
+        {
+          "paper": "shidi",
+          "number": 67,
+          "section": "数量关系"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 67,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shidi",
+        "canonical_number": 67
+      }
+    },
+    {
+      "entity_id": "E2025-0133",
+      "canonical_hash": "43ef1e61eb33f595",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "A",
+      "provenance_roles": [
+        "shared_with_shidi"
+      ],
+      "provenance_note": "市地数量",
+      "positions": [
+        {
+          "paper": "shidi",
+          "number": 68,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shidi",
+        "canonical_number": 68
+      }
+    },
+    {
+      "entity_id": "E2025-0134",
+      "canonical_hash": "d36b59b67083f327",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "shidi_xzzf",
+      "answer": "A",
+      "provenance_roles": [
+        "shared",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "市地数量; 数量共享",
+      "positions": [
+        {
+          "paper": "shidi",
+          "number": 69,
+          "section": "数量关系"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 69,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shidi",
+        "canonical_number": 69
+      }
+    },
+    {
+      "entity_id": "E2025-0135",
+      "canonical_hash": "bd9511e4f7be9c75",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "shidi_xzzf",
+      "answer": "B",
+      "provenance_roles": [
+        "shared",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "市地数量; 数量共享",
+      "positions": [
+        {
+          "paper": "shidi",
+          "number": 72,
+          "section": "数量关系"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 72,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shidi",
+        "canonical_number": 72
+      }
+    },
+    {
+      "entity_id": "E2025-0136",
+      "canonical_hash": "161d1f0d806f2314",
+      "module": "判断推理",
+      "subtype": "图形推理",
+      "shared_level": "shidi_xzzf",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断",
+      "positions": [
+        {
+          "paper": "shidi",
+          "number": 77,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 77,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shidi",
+        "canonical_number": 77
+      }
+    },
+    {
+      "entity_id": "E2025-0137",
+      "canonical_hash": "1d4d959b92caca2e",
+      "module": "判断推理",
+      "subtype": "图形推理",
+      "shared_level": "shidi_xzzf",
+      "answer": "C",
+      "provenance_roles": [
+        "main",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断",
+      "positions": [
+        {
+          "paper": "shidi",
+          "number": 78,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 78,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shidi",
+        "canonical_number": 78
+      }
+    },
+    {
+      "entity_id": "E2025-0138",
+      "canonical_hash": "5e9d256ab02a2072",
+      "module": "判断推理",
+      "subtype": "图形推理",
+      "shared_level": "shidi_xzzf",
+      "answer": "D",
+      "provenance_roles": [
+        "main",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断",
+      "positions": [
+        {
+          "paper": "shidi",
+          "number": 79,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 79,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shidi",
+        "canonical_number": 79
+      }
+    },
+    {
+      "entity_id": "E2025-0139",
+      "canonical_hash": "6a18aed07c72e2db",
+      "module": "判断推理",
+      "subtype": "图形推理",
+      "shared_level": "shidi_xzzf",
+      "answer": "A",
+      "provenance_roles": [
+        "main",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断",
+      "positions": [
+        {
+          "paper": "shidi",
+          "number": 84,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 84,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shidi",
+        "canonical_number": 84
+      }
+    },
+    {
+      "entity_id": "E2025-0140",
+      "canonical_hash": "529ee37b12ae02b3",
+      "module": "判断推理",
+      "subtype": "图形推理",
+      "shared_level": "shidi_xzzf",
+      "answer": "B",
+      "provenance_roles": [
+        "main",
+        "shared_with_shidi"
+      ],
+      "provenance_note": "判断; 市地判断",
+      "positions": [
+        {
+          "paper": "shidi",
+          "number": 85,
+          "section": "判断推理"
+        },
+        {
+          "paper": "xingzhengzhifa",
+          "number": 85,
+          "section": "判断推理"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "shidi",
+        "canonical_number": 85
+      }
+    },
+    {
+      "entity_id": "E2025-0141",
+      "canonical_hash": "fbb51d949ba78fcb",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "D",
+      "provenance_roles": [
+        "diff_book"
+      ],
+      "provenance_note": "行政执法数量差异",
+      "positions": [
+        {
+          "paper": "xingzhengzhifa",
+          "number": 68,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "xingzhengzhifa",
+        "canonical_number": 68
+      }
+    },
+    {
+      "entity_id": "E2025-0142",
+      "canonical_hash": "d7de757d8dfb065c",
+      "module": "数量关系",
+      "subtype": "数量关系",
+      "shared_level": "paper_unique",
+      "answer": "B",
+      "provenance_roles": [
+        "diff_book"
+      ],
+      "provenance_note": "行政执法数量差异",
+      "positions": [
+        {
+          "paper": "xingzhengzhifa",
+          "number": 71,
+          "section": "数量关系"
+        }
+      ],
+      "question_ref": {
+        "canonical_paper": "xingzhengzhifa",
+        "canonical_number": 71
+      }
+    }
+  ],
+  "answer_conflicts": [],
+  "excluded": [
+    {
+      "paper": "shengji",
+      "number": 106,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "backfilled"
+    },
+    {
+      "paper": "shengji",
+      "number": 107,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "backfilled"
+    },
+    {
+      "paper": "shengji",
+      "number": 108,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "backfilled"
+    },
+    {
+      "paper": "shengji",
+      "number": 109,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "backfilled"
+    },
+    {
+      "paper": "shengji",
+      "number": 110,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "backfilled"
+    },
+    {
+      "paper": "shidi",
+      "number": 97,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "shared_with_shidi"
+    },
+    {
+      "paper": "shidi",
+      "number": 98,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "shared_with_shidi"
+    },
+    {
+      "paper": "shidi",
+      "number": 99,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "shared_with_shidi"
+    },
+    {
+      "paper": "shidi",
+      "number": 100,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "shared_with_shidi"
+    },
+    {
+      "paper": "shidi",
+      "number": 101,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "shared_with_shidi"
+    },
+    {
+      "paper": "xingzhengzhifa",
+      "number": 97,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "main"
+    },
+    {
+      "paper": "xingzhengzhifa",
+      "number": 98,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "main"
+    },
+    {
+      "paper": "xingzhengzhifa",
+      "number": 99,
+      "section": "判断推理",
+      "reason": "section_type_mismatch",
+      "role": "main"
+    },
+    {
+      "paper": "xingzhengzhifa",
+      "number": 100,
+      "section": "判断推理",
+      "reason": "section_type_mismatch,content_mismatch_needs_source",
+      "role": "main"
+    },
+    {
+      "paper": "xingzhengzhifa",
+      "number": 101,
+      "section": "判断推理",
+      "reason": "section_type_mismatch,content_mismatch_needs_source",
+      "role": "main"
+    }
+  ]
+}
