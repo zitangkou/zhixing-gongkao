@@ -1,7 +1,7 @@
 {
   "version": "v1",
   "total": 10,
-  "generated_at": "2026-09-03T12:32:45.692099",
+  "generated_at": "2026-09-03T12:40:51.569274",
   "template_version": "verbal_minimal_v1",
   "seed": 42,
   "blind_review_method": "规则模拟（语境约束匹配度 / 核心句语义重叠度，3次独立作答）",
@@ -12,7 +12,7 @@
       "module": "言语理解与表达",
       "subtype": "选词填空",
       "difficulty": 2,
-      "stem": "填入文中横线处最恰当的一项是：",
+      "stem": "填入画横线部分最恰当的一项是",
       "passage": "乡村振兴不能照搬城市发展模式。由于各地资源禀赋、产业基础和文化传统差异显著，因此在制定发展策略时必须______，根据本地实际情况选择适合的产业路径和治理方式，才能真正激发乡村内生动力，实现可持续发展。",
       "target_word": "因地制宜",
       "pos": "成语",
@@ -22,31 +22,31 @@
         "根据本地实际情况选择适合的产业路径和治理方式"
       ],
       "options": {
-        "A": "一视同仁",
-        "B": "精益求精",
-        "C": "因地制宜",
-        "D": "循序渐进"
+        "A": "因地制宜",
+        "B": "循序渐进",
+        "C": "精益求精",
+        "D": "一视同仁"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": "由'由于各地资源禀赋、产业基础和文化传统差异显著'和'因此'可知，所填词语应体现'根据不同地区的实际情况制定不同策略'之意。'因地制宜'指根据各地的具体情况制定适宜的办法，符合语境。'循序渐进'强调步骤先后，未体现地域差异；'一视同仁'强调同等对待，与差异化要求相反；'精益求精'强调质量提升，而非适配选择。故本题选'因地制宜'。",
       "distractors": {
-        "A": {
-          "option_text": "一视同仁",
-          "distractor_type": "近义混淆_范围",
-          "violated_constraint": "语境强调'资源禀赋差异显著'需差异化对待，'一视同仁'强调同等对待，与差异化要求相反",
-          "error_path": "考生误解为'公平对待所有地区'，忽略了差异显著的前提"
-        },
         "B": {
+          "option_text": "循序渐进",
+          "distractor_type": "近义混淆_程度",
+          "violated_constraint": "语境强调'各地差异显著需差异化'，'循序渐进'强调步骤先后而非因地制宜，未体现地域适配",
+          "error_path": "考生只注意到'发展策略'而忽略'各地差异'约束，选择通用但不精准的词"
+        },
+        "C": {
           "option_text": "精益求精",
           "distractor_type": "近义混淆_程度",
           "violated_constraint": "语境要求'根据本地实际选择适合路径'，'精益求精'强调质量提升而非适配选择，侧重点不同",
           "error_path": "考生将'制定策略'理解为'提升质量'，选择了强调好上加好的词"
         },
         "D": {
-          "option_text": "循序渐进",
-          "distractor_type": "近义混淆_程度",
-          "violated_constraint": "语境强调'各地差异显著需差异化'，'循序渐进'强调步骤先后而非因地制宜，未体现地域适配",
-          "error_path": "考生只注意到'发展策略'而忽略'各地差异'约束，选择通用但不精准的词"
+          "option_text": "一视同仁",
+          "distractor_type": "近义混淆_范围",
+          "violated_constraint": "语境强调'资源禀赋差异显著'需差异化对待，'一视同仁'强调同等对待，与差异化要求相反",
+          "error_path": "考生误解为'公平对待所有地区'，忽略了差异显著的前提"
         }
       },
       "dual_solve": {
@@ -63,7 +63,7 @@
       "review_status": "machine_checked",
       "generation_meta": {
         "template_version": "verbal_minimal_v1",
-        "generated_at": "2026-09-03T12:32:45.688500",
+        "generated_at": "2026-09-03T12:40:51.566139",
         "source_kind": "hand_written_passage",
         "param_seed": 42
       }
@@ -74,7 +74,7 @@
       "module": "言语理解与表达",
       "subtype": "选词填空",
       "difficulty": 2,
-      "stem": "填入文中横线处最恰当的一项是：",
+      "stem": "填入画横线部分最恰当的一项是",
       "passage": "近年来，部分地区地下水超采问题日益严重，导致地面沉降、水质恶化等生态后果。为了______这一趋势，相关部门出台了严格的取水许可制度，并推动农业节水技术的广泛应用，力争在十年内使地下水采补基本平衡。",
       "target_word": "遏制",
       "pos": "动词",
@@ -125,7 +125,7 @@
       "review_status": "machine_checked",
       "generation_meta": {
         "template_version": "verbal_minimal_v1",
-        "generated_at": "2026-09-03T12:32:45.688537",
+        "generated_at": "2026-09-03T12:40:51.566175",
         "source_kind": "hand_written_passage",
         "param_seed": 42
       }
@@ -136,7 +136,7 @@
       "module": "言语理解与表达",
       "subtype": "选词填空",
       "difficulty": 1,
-      "stem": "填入文中横线处最恰当的一项是：",
+      "stem": "填入画横线部分最恰当的一项是",
       "passage": "科技创新与文化传承并非对立关系。科技为文化遗产的保护和传播提供了新手段，而文化则为科技产品注入了精神内涵和审美价值。二者______，共同推动社会的全面进步。",
       "target_word": "相辅相成",
       "pos": "成语",
@@ -188,7 +188,7 @@
       "review_status": "machine_checked",
       "generation_meta": {
         "template_version": "verbal_minimal_v1",
-        "generated_at": "2026-09-03T12:32:45.688560",
+        "generated_at": "2026-09-03T12:40:51.566200",
         "source_kind": "hand_written_passage",
         "param_seed": 42
       }
@@ -199,7 +199,7 @@
       "module": "言语理解与表达",
       "subtype": "选词填空",
       "difficulty": 2,
-      "stem": "填入文中横线处最恰当的一项是：",
+      "stem": "填入画横线部分最恰当的一项是",
       "passage": "传统手工艺不仅是一种生产方式，更是民族文化记忆的重要______。每一件手工艺品都承载着特定地域的审美趣味、技艺传承和生活智慧，是连接过去与现在的文化桥梁。",
       "target_word": "载体",
       "pos": "名词",
@@ -250,7 +250,7 @@
       "review_status": "machine_checked",
       "generation_meta": {
         "template_version": "verbal_minimal_v1",
-        "generated_at": "2026-09-03T12:32:45.688578",
+        "generated_at": "2026-09-03T12:40:51.566220",
         "source_kind": "hand_written_passage",
         "param_seed": 42
       }
@@ -261,7 +261,7 @@
       "module": "言语理解与表达",
       "subtype": "选词填空",
       "difficulty": 3,
-      "stem": "填入文中横线处最恰当的一项是：",
+      "stem": "填入画横线部分最恰当的一项是",
       "passage": "随着全球气候变暖加剧，极端天气事件频发，对农业生产和粮食安全构成严重威胁。建立健全农业气象灾害预警和应急响应机制已经______，任何拖延都可能造成不可挽回的损失。",
       "target_word": "迫在眉睫",
       "pos": "成语",
@@ -312,7 +312,7 @@
       "review_status": "machine_checked",
       "generation_meta": {
         "template_version": "verbal_minimal_v1",
-        "generated_at": "2026-09-03T12:32:45.688594",
+        "generated_at": "2026-09-03T12:40:51.566238",
         "source_kind": "hand_written_passage",
         "param_seed": 42
       }
@@ -380,7 +380,7 @@
       "review_status": "machine_checked",
       "generation_meta": {
         "template_version": "verbal_minimal_v1",
-        "generated_at": "2026-09-03T12:32:45.688625",
+        "generated_at": "2026-09-03T12:40:51.566268",
         "source_kind": "hand_written_passage",
         "param_seed": 42
       }
@@ -408,31 +408,31 @@
         "教育"
       ],
       "options": {
-        "A": "未来教师将完全从事情感教育工作",
-        "B": "AI与教师在教育中是互补而非替代关系",
-        "C": "AI在标准化教育任务中效率更高",
-        "D": "人工智能技术正在深刻改变教育面貌"
+        "A": "AI在标准化教育任务中效率更高",
+        "B": "人工智能技术正在深刻改变教育面貌",
+        "C": "未来教师将完全从事情感教育工作",
+        "D": "AI与教师在教育中是互补而非替代关系"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": "文段为'背景→两种观点→分析→结论'结构。末句'因此'引导核心结论：AI与教师不是替代关系，而是互补关系。B项是对核心结论的等义压缩，当选。A项只是论据中AI优势的一个方面，属局部信息；C项偷换主题，将'AI与教师的关系'偏移为'AI改变教育面貌'；D项'完全从事情感教育'过于绝对，属过度引申。故本题选B。",
       "distractors": {
         "A": {
-          "option_text": "未来教师将完全从事情感教育工作",
-          "distractor_type": "过度引申",
-          "violated_constraint": "文段说教师'专注于更有温度的教育环节'，该选项说'完全从事情感教育'，'完全'过于绝对，超出文段表述",
-          "error_path": "考生由'专注于有温度的教育'过度推断为'完全从事情感教育'，忽略了'完全'的绝对化问题"
-        },
-        "C": {
           "option_text": "AI在标准化教育任务中效率更高",
           "distractor_type": "局部信息",
           "violated_constraint": "文段核心在末句'AI与教师是互补关系'，该选项只是论据中AI优势的一个方面",
           "error_path": "考生将论据中的具体表现当作文段核心，忽略了'因此'后的总结句"
         },
-        "D": {
+        "B": {
           "option_text": "人工智能技术正在深刻改变教育面貌",
           "distractor_type": "偷换主题",
           "violated_constraint": "文段核心讨论的是'AI与教师的关系'，该选项偷换为'AI改变教育面貌'，主体偏移",
           "error_path": "考生将背景句'AI改变教育面貌'当作核心，忽略了文段真正讨论的是两者关系"
+        },
+        "C": {
+          "option_text": "未来教师将完全从事情感教育工作",
+          "distractor_type": "过度引申",
+          "violated_constraint": "文段说教师'专注于更有温度的教育环节'，该选项说'完全从事情感教育'，'完全'过于绝对，超出文段表述",
+          "error_path": "考生由'专注于有温度的教育'过度推断为'完全从事情感教育'，忽略了'完全'的绝对化问题"
         }
       },
       "dual_solve": {
@@ -449,7 +449,7 @@
       "review_status": "machine_checked",
       "generation_meta": {
         "template_version": "verbal_minimal_v1",
-        "generated_at": "2026-09-03T12:32:45.688647",
+        "generated_at": "2026-09-03T12:40:51.566293",
         "source_kind": "hand_written_passage",
         "param_seed": 42
       }
@@ -520,7 +520,7 @@
       "review_status": "machine_checked",
       "generation_meta": {
         "template_version": "verbal_minimal_v1",
-        "generated_at": "2026-09-03T12:32:45.688665",
+        "generated_at": "2026-09-03T12:40:51.566315",
         "source_kind": "hand_written_passage",
         "param_seed": 42
       }
@@ -549,31 +549,31 @@
         "产业化"
       ],
       "options": {
-        "A": "二维碳纳米材料的发展历程与应用前景",
-        "B": "石墨烯具有极高的载流子迁移率和导热性能",
-        "C": "石墨烯的特性、应用前景及产业化瓶颈",
-        "D": "石墨烯将在五年内全面实现商业化"
+        "A": "石墨烯的特性、应用前景及产业化瓶颈",
+        "B": "二维碳纳米材料的发展历程与应用前景",
+        "C": "石墨烯将在五年内全面实现商业化",
+        "D": "石墨烯具有极高的载流子迁移率和导热性能"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": "文段依次介绍了石墨烯的定义与特性、应用前景、商业化瓶颈及未来发展方向，是一篇科普说明性文段。A项全面概括了文段的主要内容（特性、应用前景、产业化瓶颈），当选。B项只提到石墨烯的部分特性，属局部信息；C项将'石墨烯'扩大为'二维碳纳米材料'，范围扩大；D项'全面实现商业化'过于绝对且时间表述不准确，属过度引申。故本题选A。",
       "distractors": {
-        "A": {
+        "B": {
           "option_text": "二维碳纳米材料的发展历程与应用前景",
           "distractor_type": "范围扩大",
           "violated_constraint": "文段主题词为'石墨烯'，该选项扩大为'二维碳纳米材料'，超出文段讨论范围",
           "error_path": "考生将'石墨烯'泛化为'二维碳纳米材料'，忽略了文段的具体讨论对象"
         },
-        "B": {
-          "option_text": "石墨烯具有极高的载流子迁移率和导热性能",
-          "distractor_type": "局部信息",
-          "violated_constraint": "文段介绍了石墨烯的多方面特性，该选项只提到载流子迁移率和导热性能，是特性之一而非全文主旨",
-          "error_path": "考生将文段中提到的某一项特性当作全文主旨，忽略了应用前景和瓶颈等其他内容"
-        },
-        "D": {
+        "C": {
           "option_text": "石墨烯将在五年内全面实现商业化",
           "distractor_type": "过度引申",
           "violated_constraint": "文段说'有望在未来五到十年内推动石墨烯从实验室走向产业化'，该选项说'将在五年内全面实现商业化'，'全面'过于绝对且时间表述不准确",
           "error_path": "考生由'有望走向产业化'过度推断为'全面实现商业化'，忽略了'有望'和'全面'的差异"
+        },
+        "D": {
+          "option_text": "石墨烯具有极高的载流子迁移率和导热性能",
+          "distractor_type": "局部信息",
+          "violated_constraint": "文段介绍了石墨烯的多方面特性，该选项只提到载流子迁移率和导热性能，是特性之一而非全文主旨",
+          "error_path": "考生将文段中提到的某一项特性当作全文主旨，忽略了应用前景和瓶颈等其他内容"
         }
       },
       "dual_solve": {
@@ -590,7 +590,7 @@
       "review_status": "machine_checked",
       "generation_meta": {
         "template_version": "verbal_minimal_v1",
-        "generated_at": "2026-09-03T12:32:45.688683",
+        "generated_at": "2026-09-03T12:40:51.566335",
         "source_kind": "hand_written_passage",
         "param_seed": 42
       }
@@ -659,7 +659,7 @@
       "review_status": "machine_checked",
       "generation_meta": {
         "template_version": "verbal_minimal_v1",
-        "generated_at": "2026-09-03T12:32:45.688698",
+        "generated_at": "2026-09-03T12:40:51.566352",
         "source_kind": "hand_written_passage",
         "param_seed": 42
       }
