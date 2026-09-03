@@ -1,6 +1,6 @@
 # 数据入库状态
 
-最后更新：2026-09-03（D6a 缺陷修复后实测）
+最后更新：2026-09-03（D8/D9 subtype+topic/tag 标注后实测）
 
 ---
 
@@ -45,6 +45,19 @@ python3 scripts/xingce/sync_status.py                           # 重新生成 E
 > `source/EXTRACT_STATUS.json` 现为**每年标准产物**（由 `sync_status.py` 生成，勿手工编辑），含各卷题量、答案与标签覆盖率、`open_flags` 聚合与待办清单。2024 `meta.json` 缺失的 `modules` 已回填，跨年结构现已一致。
 
 > 源 PDF 位置：本机 `~/真题文档/{年份}/*.pdf`，合计约 714MB，不入库。
+
+**D8/D9 subtype + topic/tag 标注（2026-09-03）**：
+
+- 工具：`scripts/xingce/annotate_subtype_topic.py`（规则引擎，按模块从 stem+explanation 提取关键词）
+- 词表扩展：`_schema/topic-vocabulary.json` 新增 9 个 topic（资料分析/数量关系/判断推理×4/言语理解×3）+ 79 个 tag，补全法律法规与党内法规、时事与基本常识等原有空列表
+- 覆盖率（排除 15 题高风险 `section_type_mismatch`/`content_mismatch_needs_source`）：
+  - subtype：24.2% → **100%**（380/380，其中 original 92 + rule_inferred 288）
+  - topic：0% → **100%**（380/380）
+  - tag：0% → **100%**（380/380）
+- 各模块 subtype 覆盖率：资料分析 100%、数量关系 100%、判断推理 100%、言语理解 100%、政治理论 100%、常识判断 100%
+- 基准集准确率：70 题精标 benchmark 对比 82.9%（rule_inferred 部分 89.2%；5 题差异为保留原始 generic 值如"逻辑判断/加强型"）
+- 校验：`validate_papers.py --year 2025` 0 错误 / 15 警告（均为预存高风险题 type 不匹配）
+- 备份：`papers.bak_d8d9/`；答案/解析/题干零改动
 
 ---
 
