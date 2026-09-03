@@ -845,3 +845,58 @@ JSON 导入包
 6. 最后统一作答、错题、复习和多产品发布。
 
 这样既保留了真题数据的可追溯性，也能让真题、模拟生成题和人工原创题在一个管理系统中统一检索、审核、发布和统计，同时不会把“题目”和“试卷”重新绑死。
+
+---
+
+## 13. P1 执行日志
+
+### 13.1 实施范围
+
+- 后端：新增 `/admin/question-bank/` 域路由（`server/app/api/admin/question_bank.py`），在 `routes.py` 聚合
+- 前端：新增 API 层（`src/api/questionBank.ts`）和 4 个页面（题目列表/题目详情/试卷列表/试卷详情）
+- 发布门禁：缺答案/高风险 flag/争议状态 → 400 拒绝；缺解析 → 警告但可发布
+
+### 13.2 新增 API 端点
+
+| 方法 | 路径 | 说明 |
+|---|---|---|
+| GET | `/admin/question-bank/questions` | 题目分页列表（支持 origin_type/module/subtype/exam_year/paper_type/has_answer/review_status/quality_flag 筛选） |
+| GET | `/admin/question-bank/questions/{id}` | 题目详情（当前版本完整内容+版本列表+关联题位+材料+quality flags+provenance） |
+| GET | `/admin/question-bank/papers` | 试卷列表（年份/卷种/题量/答案覆盖率/导入状态） |
+| GET | `/admin/question-bank/papers/{id}` | 试卷详情（元信息+模块列表） |
+| GET | `/admin/question-bank/papers/{id}/positions` | 题位列表（按模块分组） |
+| GET | `/admin/question-bank/papers/{id}/reconcile` | 对账报告（题位数/答案覆盖率/断号/共享题数/flags统计） |
+| POST | `/admin/question-bank/questions/{id}/publish` | 发布题目（带门禁检查） |
+| POST | `/admin/question-bank/questions/{id}/unpublish` | 下线题目 |
+
+### 13.3 新增前端页面
+
+| 路由 | 页面 | 说明 |
+|---|---|---|
+| `/manage/question-bank/questions` | 题目资产列表 | 多维度筛选+表格+分页+发布/下线操作 |
+| `/manage/question-bank/questions/:id` | 题目详情 | Tab：题面/出处/版本/质量 + 发布/下线按钮 |
+| `/manage/question-bank/papers` | 真题试卷列表 | 年份/卷种筛选+答案覆盖率进度条+对账入口 |
+| `/manage/question-bank/papers/:id` | 试卷详情 | 元信息+对账摘要卡片+按模块折叠题位+对账报告 Tab |
+
+### 13.4 发布门禁规则
+
+1. **缺答案** → 400 拒绝（`correct_answer_json` 为空）
+2. **高风险 flag** → 400 拒绝（关联题位的 `quality_flags_json` 含 content_mismatch/answer_conflict/missing_answer 等 8 种高风险标记）
+3. **未审核/争议** → 400 拒绝（`lifecycle_status=disputed`）
+4. **缺解析** → 警告但可发布（`explanation` 为空时返回 warnings）
+5. 通过后 `lifecycle_status → active`；下线 → `retired`
+
+### 13.5 验证结果
+
+- 前端 build：通过（vue-tsc 类型检查 + vite build，2.52s）
+- 后端测试：68 passed（含 P0 导入测试，未修改模型结构）
+- 发布门禁单元验证：5/5 通过（缺答案拒绝、争议拒绝、有效通过、发布状态变更、下线状态变更）
+- API 路由注册：8/8 端点正确挂载到 `/admin/question-bank/`
+
+### 13.6 约束遵守
+
+- 未修改 P0 模型结构（`question_bank.py` 表定义无变更）
+- 未修改已有题目数据（仅读取，发布/下线只改 `lifecycle_status`）
+- 前端使用 CSS 变量（`--admin-*`），无硬编码颜色
+- 后端按域拆分路由文件，在 `routes.py` 聚合
+- 所有 API 复用现有 `require_permission("exam:read"/"exam:write")` JWT 认证机制
