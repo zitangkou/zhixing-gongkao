@@ -22,3 +22,13 @@ from app.models.ziliao import ZiliaoFormula, ZiliaoPracticeLog, ZiliaoQuestionTy
 from app.models.misc import ActivityEvent, ExamCountdown, Feedback
 from app.models.product import DailyLearningTask, UserDailyTaskProgress
 from app.models.content_ops import ContentOperationTemplate, ContentPublishPackage, ContentReviewRecord
+from app.models.question_bank import (
+    ExamPaperUnified,
+    ImportBatch,
+    Material,
+    PaperQuestionPosition,
+    PaperSection,
+    QuestionItem,
+    QuestionMaterialLink,
+    QuestionVersion,
+)

@@ -49,3 +49,14 @@ from app.schemas.countdown import ExamCountdownOut, ExamCountdownUpsert
 from app.schemas.data import DataImportIn
 from app.schemas.product import DailyTaskListOut, DailyTaskProgressBody, DailyTaskProgressOut, DailyLearningTaskOut, TopicItem, TopicListOut
 from app.schemas.content_ops import ContentPackageGenerateFromArticle, ContentPublishPackageCreate, ContentPublishPackageUpdate, ContentPublishStatusBody
+from app.schemas.question_bank import (
+    ExamPaperUnifiedOut,
+    ImportBatchOut,
+    MaterialOut,
+    PaperQuestionPositionOut,
+    PaperSectionOut,
+    QuestionItemOut,
+    QuestionMaterialLinkOut,
+    QuestionVersionOut,
+    ReconciliationReport,
+)

@@ -309,6 +309,7 @@
 | 2026-09-03 | D11 | catalog.json 脚本化：新增 `scripts/xingce/gen_catalog.py`，扫描 papers 自动汇总题量/答案覆盖率，支持 `--check` CI 断言；重新生成 catalog，16 试卷 2100 题题量与手工版完全一致 | `--check` 通过 |
 | 2026-09-03 | R3 | 停用挖空模板生成器：原方案标注 `serializers.py:119`，实际定位为前端 `src/utils/questionGenerator.ts` 的 `createHighlightBlankQuestion()`（`______` 挖空）。函数开头加 `throw new Error` 禁用，两处调用入口（步骤1 highlight挖空、步骤5兜底全文挖空）注释保留；后端 `validators.py` 本就拒绝 `_{3,}` 挖空题，无需改动 | 已禁用，eslint 通过 |
 | 2026-09-03 | D6a | 2025 可自动化缺陷修复：①执法卷 Q68/Q71 移除 `duplicate_in_paper`（确认为正确题），Q100/Q101 新增 `content_mismatch_needs_source` + `[内容待回源核实]` 前缀；②从 `20252447.pdf` p11-12 提取分析推理材料 m106_110，三卷顶层新增 `materials` 字段，移除 `material_ref_dangling` flag；③校验器增强支持顶层 materials dict。答案/解析零改动，题量 395 不变。备份 `papers.bak_d6a` | validate 0 错误/15 警告（修复前 3 错误/15 警告） |
+| 2026-09-03 | P0 | 统一题库 schema + 2025 三卷幂等导入 + 395 题位对账：新增 8 表（question_items/question_versions/qb_exam_papers/qb_paper_sections/qb_paper_question_positions/qb_materials/qb_question_material_links/qb_import_batches）；编写 `scripts/import_xingce_2025.py` 幂等导入适配器（canonical_hash 含 stem+options+items+media，图形推理同模板不同图正确分离；题位按 paper_id+number upsert；材料从顶层 dict+section list 双源收集）；41 项测试全通过（幂等性/共享题/对账/重建/数据完整性）；全量 68 测试零回归 | 395 题位（省级135/市地130/执法130），政治理论 20 共享实体各 3 题位，答案覆盖率 100%，重跑 new=0/updated=0，可从 DB 重建等价试卷结构 |
 |  |  |  |  |
 
 ---
