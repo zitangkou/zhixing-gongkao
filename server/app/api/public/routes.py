@@ -11,6 +11,7 @@ from app.api.public.exam import router as exam_router
 from app.api.public.knowledge import router as knowledge_router
 from app.api.public.manual_wrong import router as manual_wrong_router
 from app.api.public.plan import router as plan_router
+from app.api.public.practice import router as practice_router
 from app.api.public.product import router as product_router
 from app.api.public.rmrb import router as rmrb_router
 from app.api.public.ziliao import router as ziliao_router
@@ -23,6 +24,7 @@ router = APIRouter(
 router.include_router(auth_user_router)
 router.include_router(article_quiz_router)
 router.include_router(plan_router)
+router.include_router(practice_router)
 router.include_router(product_router)
 router.include_router(knowledge_router)
 router.include_router(manual_wrong_router)

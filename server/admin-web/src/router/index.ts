@@ -101,6 +101,12 @@ const router = createRouter({
           meta: { title: '资料分析', permissions: ['ziliao:read'] },
         },
         {
+          path: 'practice/proto',
+          name: 'practice-proto',
+          component: () => import('@/views/practice/Proto.vue'),
+          meta: { title: '练习闭环原型', permissions: ['exam:read'] },
+        },
+        {
           path: 'rmrb',
           name: 'rmrb',
           component: () => import('@/views/rmrb/List.vue'),
