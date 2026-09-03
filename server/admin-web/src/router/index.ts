@@ -71,6 +71,30 @@ const router = createRouter({
           meta: { title: '试卷题库', permissions: ['exam:read'] },
         },
         {
+          path: 'question-bank/questions',
+          name: 'qb-questions',
+          component: () => import('@/views/questionBank/QuestionList.vue'),
+          meta: { title: '题目资产', permissions: ['exam:read'] },
+        },
+        {
+          path: 'question-bank/questions/:id',
+          name: 'qb-question-detail',
+          component: () => import('@/views/questionBank/QuestionDetail.vue'),
+          meta: { title: '题目详情', permissions: ['exam:read'] },
+        },
+        {
+          path: 'question-bank/papers',
+          name: 'qb-papers',
+          component: () => import('@/views/questionBank/PaperList.vue'),
+          meta: { title: '真题试卷', permissions: ['exam:read'] },
+        },
+        {
+          path: 'question-bank/papers/:id',
+          name: 'qb-paper-detail',
+          component: () => import('@/views/questionBank/PaperDetail.vue'),
+          meta: { title: '试卷详情', permissions: ['exam:read'] },
+        },
+        {
           path: 'ziliao',
           name: 'ziliao',
           component: () => import('@/views/ziliao/List.vue'),

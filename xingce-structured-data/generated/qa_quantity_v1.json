@@ -1,0 +1,733 @@
+{
+  "version": "v1",
+  "total": 10,
+  "generated_at": "2026-09-03T08:37:40.527982",
+  "template_version": "quantity_work_travel_v1",
+  "seed": 42,
+  "dual_solve_method": "solver_a=direct_formula, solver_b=sympy_symbolic",
+  "questions": [
+    {
+      "question_id": "Q4-QTY-WORK-001",
+      "origin_type": "generated",
+      "module": "数量关系",
+      "subtype": "工程问题-合作完成",
+      "difficulty": 1,
+      "stem": "甲工程队单独完成一项工程需要10天，乙工程队单独完成需要15天。两队合作需要多少天完成？",
+      "options": {
+        "A": "12.5天",
+        "B": "10天",
+        "C": "6天",
+        "D": "25天"
+      },
+      "answer": "C",
+      "explanation": "设总工作量为1。\n甲的工作效率为1/10，乙的工作效率为1/15。\n两队合作效率为1/10+1/15。\n合作完成时间 = 1 ÷ (1/10+1/15) = 6天。\n\n易错点：\n  · 时间直接相加：10+15=25（误将两人单独时间相加）\n  · 算术平均：(10+15)/2=12.5（误对时间取算术平均）\n  · 取较快者单独时间：min(10,15)=10（误认为快的人单独做即可）",
+      "calc_tree": [
+        {
+          "step": 1,
+          "operation": "compute",
+          "description": "甲效率 = 1/10，乙效率 = 1/15",
+          "result": "1/15"
+        },
+        {
+          "step": 2,
+          "operation": "compute",
+          "description": "合作效率 = 1/10 + 1/15 = 0.1667",
+          "result": "0.1667"
+        },
+        {
+          "step": 3,
+          "operation": "formula",
+          "description": "合作时间 = 1 / 0.1667 = 5.999999999999999",
+          "result": 5.999999999999999
+        }
+      ],
+      "distractors": {
+        "A": {
+          "type": "算术平均",
+          "error_formula": "(10+15)/2=12.5（误对时间取算术平均）",
+          "computed_value": "12.5"
+        },
+        "B": {
+          "type": "取较快者单独时间",
+          "error_formula": "min(10,15)=10（误认为快的人单独做即可）",
+          "computed_value": "10"
+        },
+        "D": {
+          "type": "时间直接相加",
+          "error_formula": "10+15=25（误将两人单独时间相加）",
+          "computed_value": "25"
+        }
+      },
+      "dual_solve": {
+        "solver_a_result": "6.0000000000",
+        "solver_b_result": "6.0000000000",
+        "match": true,
+        "solver_b_method": "sympy符号方程求解: 解方程 t×(1/10+1/15)=1 → t=6"
+      },
+      "generation_meta": {
+        "template_version": "quantity_work_travel_v1",
+        "generated_at": "2026-09-03T08:37:40.516410",
+        "param_seed": 42,
+        "params": {
+          "a_days": 10,
+          "b_days": 15
+        }
+      }
+    },
+    {
+      "question_id": "Q4-QTY-WORK-002",
+      "origin_type": "generated",
+      "module": "数量关系",
+      "subtype": "工程问题-分段工程",
+      "difficulty": 2,
+      "stem": "甲单独完成一项工程需要10天，乙单独完成需要15天。两人合作2天后甲因故离开，剩余工程由乙单独完成。问完成这项工程共需多少天？",
+      "options": {
+        "A": "15天",
+        "B": "14天",
+        "C": "10天",
+        "D": "12天"
+      },
+      "answer": "D",
+      "explanation": "设总工作量为1。\n甲效率1/10，乙效率1/15。\n合作2天完成2×(1/10+1/15)。\n剩余工作量由乙单独完成，所需时间加上合作天数即为总时间。\n总时间 = 12天。\n\n易错点：\n  · 忘记加上合作天数：只算乙单独剩余=10.00天，忘加合作2天\n  · 误认为乙单独全程：乙单独需15天（忽略合作已完成部分）\n  · 合作期间只算甲贡献：误算合作2天只完成2/10=0.20，剩余乙做12.0天，总14.0天",
+      "calc_tree": [
+        {
+          "step": 1,
+          "operation": "compute",
+          "description": "合作2天完成 = 2×(1/10+1/15) = 0.3333",
+          "result": "0.3333"
+        },
+        {
+          "step": 2,
+          "operation": "compute",
+          "description": "剩余 = 1 - 0.3333 = 0.6667",
+          "result": "0.6667"
+        },
+        {
+          "step": 3,
+          "operation": "compute",
+          "description": "乙单独完成剩余 = 0.6667 / (1/15) = 10.0",
+          "result": "10.0"
+        },
+        {
+          "step": 4,
+          "operation": "formula",
+          "description": "总时间 = 2 + 10.0 = 12.0",
+          "result": 12.0
+        }
+      ],
+      "distractors": {
+        "A": {
+          "type": "误认为乙单独全程",
+          "error_formula": "乙单独需15天（忽略合作已完成部分）",
+          "computed_value": "15"
+        },
+        "B": {
+          "type": "合作期间只算甲贡献",
+          "error_formula": "误算合作2天只完成2/10=0.20，剩余乙做12.0天，总14.0天",
+          "computed_value": "14.0"
+        },
+        "C": {
+          "type": "忘记加上合作天数",
+          "error_formula": "只算乙单独剩余=10.00天，忘加合作2天",
+          "computed_value": "10.0"
+        }
+      },
+      "dual_solve": {
+        "solver_a_result": "12.0000000000",
+        "solver_b_result": "12.0000000000",
+        "match": true,
+        "solver_b_method": "sympy符号方程求解: 解方程 2×(1/10+1/15)+(t-2)×(1/15)=1 → t=12"
+      },
+      "generation_meta": {
+        "template_version": "quantity_work_travel_v1",
+        "generated_at": "2026-09-03T08:37:40.518400",
+        "param_seed": 42,
+        "params": {
+          "a_days": 10,
+          "b_days": 15,
+          "coop_days": 2
+        }
+      }
+    },
+    {
+      "question_id": "Q4-QTY-WORK-003",
+      "origin_type": "generated",
+      "module": "数量关系",
+      "subtype": "工程问题-交替工作",
+      "difficulty": 3,
+      "stem": "甲单独完成一项工程需要8天，乙单独完成需要12天。甲先做1天，乙接着做1天，如此交替工作。完成这项工程共需多少天？",
+      "options": {
+        "A": "9.5天",
+        "B": "4.8天",
+        "C": "9天",
+        "D": "10天"
+      },
+      "answer": "A",
+      "explanation": "设总工作量为1。\n甲效率1/8，乙效率1/12。\n甲1天、乙1天为一个循环，每循环2天。\n计算完整循环数后，剩余工作量先由甲做，甲做不完再由乙做（不足1天按比例折算）。\n总时间 = 9.5天。\n\n易错点：\n  · 最后一天整天算不折算：误将最后不足1天的部分按整天算，得10天\n  · 甲做完当天就结束：误认为甲做完第9天即完成，忽略乙还需做剩余部分\n  · 混淆交替与合作：误按合作计算: 1/(1/8+1/12)=4.80天（交替比合作慢）",
+      "calc_tree": [
+        {
+          "step": 1,
+          "operation": "compute",
+          "description": "每轮(2天)完成 = 1/8+1/12 = 0.2083",
+          "result": "0.2083"
+        },
+        {
+          "step": 2,
+          "operation": "compute",
+          "description": "完整4轮(8天)完成 = 0.8333",
+          "result": "0.8333"
+        },
+        {
+          "step": 3,
+          "operation": "compute",
+          "description": "剩余 = 0.1667，甲做1天完成0.1250，剩0.0417",
+          "result": "0.1667，甲做1天完成0.1250，剩0.0417"
+        },
+        {
+          "step": 4,
+          "operation": "compute",
+          "description": "乙做需 0.0417/(1/12) = 0.5000000000000009 天",
+          "result": "0.5000000000000009 天"
+        },
+        {
+          "step": 5,
+          "operation": "formula",
+          "description": "总时间 = 8+1+0.5000000000000009 = 9.5",
+          "result": 9.5
+        }
+      ],
+      "distractors": {
+        "B": {
+          "type": "混淆交替与合作",
+          "error_formula": "误按合作计算: 1/(1/8+1/12)=4.80天（交替比合作慢）",
+          "computed_value": "4.800000000000001"
+        },
+        "C": {
+          "type": "甲做完当天就结束",
+          "error_formula": "误认为甲做完第9天即完成，忽略乙还需做剩余部分",
+          "computed_value": "9"
+        },
+        "D": {
+          "type": "最后一天整天算不折算",
+          "error_formula": "误将最后不足1天的部分按整天算，得10天",
+          "computed_value": "10"
+        }
+      },
+      "dual_solve": {
+        "solver_a_result": "9.5000000000",
+        "solver_b_result": "9.5000000000",
+        "match": true,
+        "solver_b_method": "sympy符号方程求解: 交替4轮后剩余1/6，解方程得 t=19/2"
+      },
+      "generation_meta": {
+        "template_version": "quantity_work_travel_v1",
+        "generated_at": "2026-09-03T08:37:40.520225",
+        "param_seed": 42,
+        "params": {
+          "a_days": 8,
+          "b_days": 12
+        }
+      }
+    },
+    {
+      "question_id": "Q4-QTY-WORK-004",
+      "origin_type": "generated",
+      "module": "数量关系",
+      "subtype": "工程问题-效率变化",
+      "difficulty": 2,
+      "stem": "某工人单独完成一项工作需16天。工作4天后，因改进方法，工作效率提升一倍。问完成这项工作共需多少天？",
+      "options": {
+        "A": "10天",
+        "B": "12天",
+        "C": "8天",
+        "D": "6天"
+      },
+      "answer": "A",
+      "explanation": "设总工作量为1。\n原效率为1/16。\n工作4天后剩余工作量为1-4/16。\n效率提升一倍后为2/16，计算剩余时间加上已做天数。\n总时间 = 10天。\n\n易错点：\n  · 简单减法：16-4=12（误认为效率不变，剩余需12天）\n  · 认为全程效率翻倍：16/2=8.0（误认为从一开始效率就是2倍）\n  · 只算剩余忘加已做天数：剩余需6.0天，但忘记加上已做的4天",
+      "calc_tree": [
+        {
+          "step": 1,
+          "operation": "compute",
+          "description": "原效率 = 1/16，4天完成 = 4×(1/16) = 0.2500",
+          "result": "0.2500"
+        },
+        {
+          "step": 2,
+          "operation": "compute",
+          "description": "剩余 = 1 - 0.2500 = 0.7500",
+          "result": "0.7500"
+        },
+        {
+          "step": 3,
+          "operation": "compute",
+          "description": "新效率 = 2×(1/16) = 0.1250",
+          "result": "0.1250"
+        },
+        {
+          "step": 4,
+          "operation": "compute",
+          "description": "剩余需 = 0.7500 / 0.1250 = 6.0",
+          "result": "6.0"
+        },
+        {
+          "step": 5,
+          "operation": "formula",
+          "description": "总时间 = 4 + 6.0 = 10.0",
+          "result": 10.0
+        }
+      ],
+      "distractors": {
+        "B": {
+          "type": "简单减法",
+          "error_formula": "16-4=12（误认为效率不变，剩余需12天）",
+          "computed_value": "12"
+        },
+        "C": {
+          "type": "认为全程效率翻倍",
+          "error_formula": "16/2=8.0（误认为从一开始效率就是2倍）",
+          "computed_value": "8.0"
+        },
+        "D": {
+          "type": "只算剩余忘加已做天数",
+          "error_formula": "剩余需6.0天，但忘记加上已做的4天",
+          "computed_value": "6.0"
+        }
+      },
+      "dual_solve": {
+        "solver_a_result": "10.0000000000",
+        "solver_b_result": "10.0000000000",
+        "match": true,
+        "solver_b_method": "sympy符号方程求解: 解方程 4×(1/16)+(t-4)×(2/16)=1 → t=10"
+      },
+      "generation_meta": {
+        "template_version": "quantity_work_travel_v1",
+        "generated_at": "2026-09-03T08:37:40.521993",
+        "param_seed": 42,
+        "params": {
+          "total_days": 16,
+          "worked_days": 4,
+          "efficiency_multiplier": 2
+        }
+      }
+    },
+    {
+      "question_id": "Q4-QTY-WORK-005",
+      "origin_type": "generated",
+      "module": "数量关系",
+      "subtype": "工程问题-进水排水",
+      "difficulty": 2,
+      "stem": "一个水池，单开进水管8小时可将空池注满，单开出水管12小时可将满池水放空。若两管同时打开，将空池注满需要多少小时？",
+      "options": {
+        "A": "24小时",
+        "B": "4.8小时",
+        "C": "4小时",
+        "D": "20小时"
+      },
+      "answer": "A",
+      "explanation": "设总工作量为1。\n进水效率为1/8，排水效率为1/12。\n两管同时打开时净效率为1/8-1/12。\n注满时间 = 1 ÷ 净效率 = 24小时。\n\n易错点：\n  · 进出水效率相加：误算: 1/(1/8+1/12)=4.80小时（应为相减）\n  · 时间直接相减：12-8=4（误将时间直接相减）\n  · 时间直接相加：8+12=20（误将时间直接相加）",
+      "calc_tree": [
+        {
+          "step": 1,
+          "operation": "compute",
+          "description": "进水效率 = 1/8，排水效率 = 1/12",
+          "result": "1/12"
+        },
+        {
+          "step": 2,
+          "operation": "compute",
+          "description": "净效率 = 1/8 - 1/12 = 0.0417",
+          "result": "0.0417"
+        },
+        {
+          "step": 3,
+          "operation": "formula",
+          "description": "注满时间 = 1 / 0.0417 = 23.999999999999996",
+          "result": 23.999999999999996
+        }
+      ],
+      "distractors": {
+        "B": {
+          "type": "进出水效率相加",
+          "error_formula": "误算: 1/(1/8+1/12)=4.80小时（应为相减）",
+          "computed_value": "4.800000000000001"
+        },
+        "C": {
+          "type": "时间直接相减",
+          "error_formula": "12-8=4（误将时间直接相减）",
+          "computed_value": "4"
+        },
+        "D": {
+          "type": "时间直接相加",
+          "error_formula": "8+12=20（误将时间直接相加）",
+          "computed_value": "20"
+        }
+      },
+      "dual_solve": {
+        "solver_a_result": "24.0000000000",
+        "solver_b_result": "24.0000000000",
+        "match": true,
+        "solver_b_method": "sympy符号方程求解: 解方程 t×(1/8-1/12)=1 → t=24"
+      },
+      "generation_meta": {
+        "template_version": "quantity_work_travel_v1",
+        "generated_at": "2026-09-03T08:37:40.523165",
+        "param_seed": 42,
+        "params": {
+          "inlet_hours": 8,
+          "outlet_hours": 12
+        }
+      }
+    },
+    {
+      "question_id": "Q4-QTY-TRAVEL-001",
+      "origin_type": "generated",
+      "module": "数量关系",
+      "subtype": "行程问题-相遇",
+      "difficulty": 1,
+      "stem": "甲、乙两车分别从A、B两地同时出发相向而行，A、B两地相距300千米。甲车速度为60千米/时，乙车速度为40千米/时。两车出发后多少小时相遇？",
+      "options": {
+        "A": "5小时",
+        "B": "7.5小时",
+        "C": "15小时",
+        "D": "3小时"
+      },
+      "answer": "D",
+      "explanation": "相遇问题中，两车相向而行，相对速度为速度之和。\n相遇时间 = 总路程 ÷ (速度甲+速度乙) = 300÷(60+40) = 3小时。\n\n易错点：\n  · 相遇用减（追及公式）：300/(60-40)=15.0（相遇应速度相加）\n  · 甲单独走完全程：300/60=5.0（误认为只有甲在走）\n  · 乙单独走完全程：300/40=7.5（误认为只有乙在走）",
+      "calc_tree": [
+        {
+          "step": 1,
+          "operation": "compute",
+          "description": "相遇时间 = 总路程 / (速度甲 + 速度乙)",
+          "result": "总路程 / (速度甲 + 速度乙)"
+        },
+        {
+          "step": 2,
+          "operation": "formula",
+          "description": "= 300 / (60 + 40) = 300 / 100 = 3.0",
+          "result": 3.0
+        }
+      ],
+      "distractors": {
+        "A": {
+          "type": "甲单独走完全程",
+          "error_formula": "300/60=5.0（误认为只有甲在走）",
+          "computed_value": "5.0"
+        },
+        "B": {
+          "type": "乙单独走完全程",
+          "error_formula": "300/40=7.5（误认为只有乙在走）",
+          "computed_value": "7.5"
+        },
+        "C": {
+          "type": "相遇用减（追及公式）",
+          "error_formula": "300/(60-40)=15.0（相遇应速度相加）",
+          "computed_value": "15.0"
+        }
+      },
+      "dual_solve": {
+        "solver_a_result": "3.0000000000",
+        "solver_b_result": "3.0000000000",
+        "match": true,
+        "solver_b_method": "sympy符号方程求解: 解方程 60×t + 40×t = 300 → t=3"
+      },
+      "generation_meta": {
+        "template_version": "quantity_work_travel_v1",
+        "generated_at": "2026-09-03T08:37:40.524353",
+        "param_seed": 42,
+        "params": {
+          "distance": 300,
+          "speed_a": 60,
+          "speed_b": 40
+        }
+      }
+    },
+    {
+      "question_id": "Q4-QTY-TRAVEL-002",
+      "origin_type": "generated",
+      "module": "数量关系",
+      "subtype": "行程问题-追及",
+      "difficulty": 2,
+      "stem": "甲、乙两车沿同一路线同向行驶，甲车在乙车前方60千米处。甲车速度为40千米/时，乙车速度为60千米/时。若两车同时出发，乙车经过多少小时追上甲车？",
+      "options": {
+        "A": "1.5小时",
+        "B": "0.6小时",
+        "C": "1小时",
+        "D": "3小时"
+      },
+      "answer": "D",
+      "explanation": "追及问题中，两车同向行驶，相对速度为速度之差。\n追及时间 = 距离差 ÷ (速度快-速度慢) = 60÷(60-40) = 3小时。\n\n易错点：\n  · 追及用加（相遇公式）：60/(60+40)=0.6（追及应速度相减）\n  · 用慢车速度算：60/40=1.5（应用速度差，误用慢车速度）\n  · 用快车速度算：60/60=1.0（应用速度差，误用快车速度）",
+      "calc_tree": [
+        {
+          "step": 1,
+          "operation": "compute",
+          "description": "追及时间 = 距离差 / (速度快 - 速度慢)",
+          "result": "距离差 / (速度快 - 速度慢)"
+        },
+        {
+          "step": 2,
+          "operation": "formula",
+          "description": "= 60 / (60 - 40) = 60 / 20 = 3.0",
+          "result": 3.0
+        }
+      ],
+      "distractors": {
+        "A": {
+          "type": "用慢车速度算",
+          "error_formula": "60/40=1.5（应用速度差，误用慢车速度）",
+          "computed_value": "1.5"
+        },
+        "B": {
+          "type": "追及用加（相遇公式）",
+          "error_formula": "60/(60+40)=0.6（追及应速度相减）",
+          "computed_value": "0.6"
+        },
+        "C": {
+          "type": "用快车速度算",
+          "error_formula": "60/60=1.0（应用速度差，误用快车速度）",
+          "computed_value": "1.0"
+        }
+      },
+      "dual_solve": {
+        "solver_a_result": "3.0000000000",
+        "solver_b_result": "3.0000000000",
+        "match": true,
+        "solver_b_method": "sympy符号方程求解: 解方程 60×t = 40×t + 60 → t=3"
+      },
+      "generation_meta": {
+        "template_version": "quantity_work_travel_v1",
+        "generated_at": "2026-09-03T08:37:40.525578",
+        "param_seed": 42,
+        "params": {
+          "gap": 60,
+          "speed_slow": 40,
+          "speed_fast": 60
+        }
+      }
+    },
+    {
+      "question_id": "Q4-QTY-TRAVEL-003",
+      "origin_type": "generated",
+      "module": "数量关系",
+      "subtype": "行程问题-往返平均速度",
+      "difficulty": 2,
+      "stem": "一辆汽车从甲地到乙地，去时速度为60千米/时，原路返回时速度为40千米/时。已知甲、乙两地相距120千米。求该车往返的平均速度。",
+      "options": {
+        "A": "24千米/时",
+        "B": "48千米/时",
+        "C": "50千米/时",
+        "D": "60千米/时"
+      },
+      "answer": "B",
+      "explanation": "平均速度 = 总路程 ÷ 总时间，不能直接对速度取算术平均。\n往返总路程为2×120=240千米。\n去时时间=120/60，返回时间=120/40。\n平均速度 = 48千米/时。\n\n易错点：\n  · 算术平均速度：(60+40)/2=50.0（平均速度应为总路程/总时间，非算术平均）\n  · 直接用去时速度：60千米/时（误认为平均速度就是去时速度）\n  · 忘记往返路程翻倍：120/(120/60+120/40)=24.00（总路程应为2×120）",
+      "calc_tree": [
+        {
+          "step": 1,
+          "operation": "compute",
+          "description": "总路程 = 2×120 = 240",
+          "result": "240"
+        },
+        {
+          "step": 2,
+          "operation": "compute",
+          "description": "去时时间 = 120/60 = 2.0，返回时间 = 120/40 = 3.0",
+          "result": "3.0"
+        },
+        {
+          "step": 3,
+          "operation": "compute",
+          "description": "总时间 = 2.0 + 3.0 = 5.0",
+          "result": "5.0"
+        },
+        {
+          "step": 4,
+          "operation": "formula",
+          "description": "平均速度 = 240/5.0 = 48.0",
+          "result": 48.0
+        }
+      ],
+      "distractors": {
+        "A": {
+          "type": "忘记往返路程翻倍",
+          "error_formula": "120/(120/60+120/40)=24.00（总路程应为2×120）",
+          "computed_value": "24.0"
+        },
+        "C": {
+          "type": "算术平均速度",
+          "error_formula": "(60+40)/2=50.0（平均速度应为总路程/总时间，非算术平均）",
+          "computed_value": "50.0"
+        },
+        "D": {
+          "type": "直接用去时速度",
+          "error_formula": "60千米/时（误认为平均速度就是去时速度）",
+          "computed_value": "60"
+        }
+      },
+      "dual_solve": {
+        "solver_a_result": "48.0000000000",
+        "solver_b_result": "48.0000000000",
+        "match": true,
+        "solver_b_method": "sympy符号方程求解: 解方程 2×120/(120/60+120/40)=v → v=48"
+      },
+      "generation_meta": {
+        "template_version": "quantity_work_travel_v1",
+        "generated_at": "2026-09-03T08:37:40.526765",
+        "param_seed": 42,
+        "params": {
+          "one_way": 120,
+          "speed_go": 60,
+          "speed_return": 40
+        }
+      }
+    },
+    {
+      "question_id": "Q4-QTY-TRAVEL-004",
+      "origin_type": "generated",
+      "module": "数量关系",
+      "subtype": "行程问题-分段行程",
+      "difficulty": 3,
+      "stem": "一辆汽车行驶360千米，前一半路程速度为60千米/时，后一半路程速度为90千米/时。求该车行驶全程的平均速度。",
+      "options": {
+        "A": "75千米/时",
+        "B": "72千米/时",
+        "C": "60千米/时",
+        "D": "36千米/时"
+      },
+      "answer": "B",
+      "explanation": "平均速度 = 总路程 ÷ 总时间。\n前半段路程180千米，速度60千米/时；后半段同样路程，速度90千米/时。\n分别计算两段时间后求和，再用总路程除以总时间。\n平均速度 = 72千米/时。\n\n易错点：\n  · 算术平均速度：(60+90)/2=75.0（平均速度应为总路程/总时间，非算术平均）\n  · 每段按全程算时间：360/(360/60+360/90)=36.00（每段路程应为360/2）\n  · 直接用前半段速度：60千米/时（误认为平均速度就是前段速度）",
+      "calc_tree": [
+        {
+          "step": 1,
+          "operation": "compute",
+          "description": "每段路程 = 360/2 = 180.0",
+          "result": "180.0"
+        },
+        {
+          "step": 2,
+          "operation": "compute",
+          "description": "前段时间 = 180.0/60 = 3.0，后段时间 = 180.0/90 = 2.0",
+          "result": "2.0"
+        },
+        {
+          "step": 3,
+          "operation": "compute",
+          "description": "总时间 = 3.0 + 2.0 = 5.0",
+          "result": "5.0"
+        },
+        {
+          "step": 4,
+          "operation": "formula",
+          "description": "平均速度 = 360/5.0 = 72.0",
+          "result": 72.0
+        }
+      ],
+      "distractors": {
+        "A": {
+          "type": "算术平均速度",
+          "error_formula": "(60+90)/2=75.0（平均速度应为总路程/总时间，非算术平均）",
+          "computed_value": "75.0"
+        },
+        "C": {
+          "type": "直接用前半段速度",
+          "error_formula": "60千米/时（误认为平均速度就是前段速度）",
+          "computed_value": "60"
+        },
+        "D": {
+          "type": "每段按全程算时间",
+          "error_formula": "360/(360/60+360/90)=36.00（每段路程应为360/2）",
+          "computed_value": "36.0"
+        }
+      },
+      "dual_solve": {
+        "solver_a_result": "72.0000000000",
+        "solver_b_result": "72.0000000000",
+        "match": true,
+        "solver_b_method": "sympy符号方程求解: 解方程 360/(180.0/60+180.0/90)=v → v=72"
+      },
+      "generation_meta": {
+        "template_version": "quantity_work_travel_v1",
+        "generated_at": "2026-09-03T08:37:40.527629",
+        "param_seed": 42,
+        "params": {
+          "total_distance": 360,
+          "speed_first": 60,
+          "speed_second": 90
+        }
+      }
+    },
+    {
+      "question_id": "Q4-QTY-TRAVEL-005",
+      "origin_type": "generated",
+      "module": "数量关系",
+      "subtype": "行程问题-流水行船",
+      "difficulty": 2,
+      "stem": "一艘船在静水中的速度为25千米/时，水流速度为5千米/时。该船从上游码头顺流而下行驶120千米到达下游码头，再逆流返回。求往返总时间。",
+      "options": {
+        "A": "8小时",
+        "B": "12小时",
+        "C": "9.6小时",
+        "D": "10小时"
+      },
+      "answer": "D",
+      "explanation": "流水行船中，顺流速度 = 船速 + 水速，逆流速度 = 船速 - 水速。\n顺流速度 = 25+5=30千米/时。\n逆流速度 = 25-5=20千米/时。\n分别计算顺流和逆流时间后相加。\n往返总时间 = 10小时。\n\n易错点：\n  · 忽略水流：2×120/25=9.6（应用顺流/逆流速度，忽略水流影响）\n  · 全程按顺流速度：2×120/(25+5)=8.0（返回应为逆流）\n  · 全程按逆流速度：2×120/(25-5)=12.0（去时应为顺流）",
+      "calc_tree": [
+        {
+          "step": 1,
+          "operation": "compute",
+          "description": "顺流速度 = 25+5 = 30，逆流速度 = 25-5 = 20",
+          "result": "20"
+        },
+        {
+          "step": 2,
+          "operation": "compute",
+          "description": "顺流时间 = 120/30 = 4.0",
+          "result": "4.0"
+        },
+        {
+          "step": 3,
+          "operation": "compute",
+          "description": "逆流时间 = 120/20 = 6.0",
+          "result": "6.0"
+        },
+        {
+          "step": 4,
+          "operation": "formula",
+          "description": "往返总时间 = 4.0 + 6.0 = 10.0",
+          "result": 10.0
+        }
+      ],
+      "distractors": {
+        "A": {
+          "type": "全程按顺流速度",
+          "error_formula": "2×120/(25+5)=8.0（返回应为逆流）",
+          "computed_value": "8.0"
+        },
+        "B": {
+          "type": "全程按逆流速度",
+          "error_formula": "2×120/(25-5)=12.0（去时应为顺流）",
+          "computed_value": "12.0"
+        },
+        "C": {
+          "type": "忽略水流",
+          "error_formula": "2×120/25=9.6（应用顺流/逆流速度，忽略水流影响）",
+          "computed_value": "9.6"
+        }
+      },
+      "dual_solve": {
+        "solver_a_result": "10.0000000000",
+        "solver_b_result": "10.0000000000",
+        "match": true,
+        "solver_b_method": "sympy符号方程求解: 解方程 t=120/(25+5)+120/(25-5) → t=10"
+      },
+      "generation_meta": {
+        "template_version": "quantity_work_travel_v1",
+        "generated_at": "2026-09-03T08:37:40.527930",
+        "param_seed": 42,
+        "params": {
+          "boat_speed": 25,
+          "water_speed": 5,
+          "one_way": 120
+        }
+      }
+    }
+  ]
+}
