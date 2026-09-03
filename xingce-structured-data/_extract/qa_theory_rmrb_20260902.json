@@ -1,0 +1,1616 @@
+{
+  "version": "v1",
+  "total": 20,
+  "generated_at": "2026-09-03T21:52:14.821998",
+  "template_version": "rmrb_sco_v1",
+  "seed": 42,
+  "material": "rmrb_20260902_sco_speech.md",
+  "material_title": "推动上海合作组织实现更高质量发展",
+  "material_date": "2026-09-01",
+  "material_location": "比什凯克",
+  "questions": [
+    {
+      "question_id": "RMRB-SCO-001",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "国际组织",
+      "topic": "上海合作组织",
+      "tag": "上海精神",
+      "difficulty": 1,
+      "stem": "习近平主席在上海合作组织成员国元首理事会第二十六次会议上的讲话中指出，上海合作组织25年来最宝贵的精神财富是开创性提出和始终遵循“上海精神”。“上海精神”的内涵是：",
+      "options": {
+        "A": "互信、互利、平等、协商、尊重多样文明、谋求共同发展。",
+        "B": "相互尊重、公平正义、合作共赢。",
+        "C": "开放、包容、普惠、平衡、共赢。",
+        "D": "互信、互利、平等、协商、尊重文明多样性、谋求共同发展。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "互信、互利、平等、协商、尊重多样文明、谋求共同发展。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "B": {
+          "content": "相互尊重、公平正义、合作共赢。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "这是新型国际关系的核心内涵，不是'上海精神'的内容"
+        },
+        "C": {
+          "content": "开放、包容、普惠、平衡、共赢。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "这是经济全球化的表述，与'上海精神'无关，原文中不存在此表述"
+        },
+        "D": {
+          "content": "互信、互利、平等、协商、尊重文明多样性、谋求共同发展。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将规范表述'尊重多样文明'偷换为'尊重文明多样性'，语序和措辞均与原文不符"
+        }
+      },
+      "answer": "A",
+      "explanation": "【出处】讲话第4段（25年回顾）：'最宝贵的精神财富是开创性提出和始终遵循互信、互利、平等、协商、尊重多样文明、谋求共同发展的\\“上海精神\\”'\n\n【正确项】A：互信、互利、平等、协商、尊重多样文明、谋求共同发展。\n\n【干扰项分析】\n  B项（无中生有）：这是新型国际关系的核心内涵，不是'上海精神'的内容\n  C项（无中生有）：这是经济全球化的表述，与'上海精神'无关，原文中不存在此表述\n  D项（偷换概念）：将规范表述'尊重多样文明'偷换为'尊重文明多样性'，语序和措辞均与原文不符\n\n故本题选A。",
+      "distractors": [
+        {
+          "option": "B",
+          "content": "相互尊重、公平正义、合作共赢。",
+          "type": "无中生有",
+          "error_path": "这是新型国际关系的核心内涵，不是'上海精神'的内容"
+        },
+        {
+          "option": "C",
+          "content": "开放、包容、普惠、平衡、共赢。",
+          "type": "无中生有",
+          "error_path": "这是经济全球化的表述，与'上海精神'无关，原文中不存在此表述"
+        },
+        {
+          "option": "D",
+          "content": "互信、互利、平等、协商、尊重文明多样性、谋求共同发展。",
+          "type": "偷换概念",
+          "error_path": "将规范表述'尊重多样文明'偷换为'尊重文明多样性'，语序和措辞均与原文不符"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §25年回顾",
+      "explanation_ref": "讲话第4段（25年回顾）：'最宝贵的精神财富是开创性提出和始终遵循互信、互利、平等、协商、尊重多样文明、谋求共同发展的\\“上海精神\\”'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821631",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-002",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "中国外交",
+      "topic": "上海合作组织",
+      "tag": "共处之道",
+      "difficulty": 1,
+      "stem": "习近平主席指出，上海合作组织25年来最重要的合作经验是找到正确的共处之道。这一“共处之道”是指：",
+      "options": {
+        "A": "不结盟、不对抗、不干涉内政。",
+        "B": "不结盟、不对抗、不针对第三方。",
+        "C": "不结盟、不扩张、不针对第三方。",
+        "D": "结伴而不结盟、对话而不对抗。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "不结盟、不对抗、不干涉内政。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将原文'不针对第三方'偷换为'不干涉内政'，二者含义不同"
+        },
+        "B": {
+          "content": "不结盟、不对抗、不针对第三方。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "C": {
+          "content": "不结盟、不扩张、不针对第三方。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将原文'不对抗'偷换为'不扩张'，与原文表述不符"
+        },
+        "D": {
+          "content": "结伴而不结盟、对话而不对抗。",
+          "is_correct": false,
+          "type": "以偏概全",
+          "error_path": "这是中国外交的总体表述，遗漏了'不针对第三方'这一上合组织特有的共处原则"
+        }
+      },
+      "answer": "B",
+      "explanation": "【出处】讲话第4段：'最重要的合作经验是找到不结盟、不对抗、不针对第三方的正确共处之道，推动地区国家携手建设共同家园'\n\n【正确项】B：不结盟、不对抗、不针对第三方。\n\n【干扰项分析】\n  A项（偷换概念）：将原文'不针对第三方'偷换为'不干涉内政'，二者含义不同\n  C项（偷换概念）：将原文'不对抗'偷换为'不扩张'，与原文表述不符\n  D项（以偏概全）：这是中国外交的总体表述，遗漏了'不针对第三方'这一上合组织特有的共处原则\n\n故本题选B。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "不结盟、不对抗、不干涉内政。",
+          "type": "偷换概念",
+          "error_path": "将原文'不针对第三方'偷换为'不干涉内政'，二者含义不同"
+        },
+        {
+          "option": "C",
+          "content": "不结盟、不扩张、不针对第三方。",
+          "type": "偷换概念",
+          "error_path": "将原文'不对抗'偷换为'不扩张'，与原文表述不符"
+        },
+        {
+          "option": "D",
+          "content": "结伴而不结盟、对话而不对抗。",
+          "type": "以偏概全",
+          "error_path": "这是中国外交的总体表述，遗漏了'不针对第三方'这一上合组织特有的共处原则"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §25年回顾",
+      "explanation_ref": "讲话第4段：'最重要的合作经验是找到不结盟、不对抗、不针对第三方的正确共处之道，推动地区国家携手建设共同家园'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821663",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-003",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "时政热点",
+      "topic": "上海合作组织",
+      "tag": "发展优先-科技合作",
+      "difficulty": 2,
+      "stem": "在“坚持发展优先”部分，中方宣布在未来3年同上海合作组织国家联合实施的科技合作项目数量是：",
+      "options": {
+        "A": "80个科技合作项目。",
+        "B": "50个科技合作项目。",
+        "C": "100个科技合作项目。",
+        "D": "200个科技合作项目。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "80个科技合作项目。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "原文明确为'100个'，80个为编造数字"
+        },
+        "B": {
+          "content": "50个科技合作项目。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "原文明确为'100个'，50个为编造数字"
+        },
+        "C": {
+          "content": "100个科技合作项目。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "D": {
+          "content": "200个科技合作项目。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "原文明确为'100个'，200个为编造数字，夸大一倍"
+        }
+      },
+      "answer": "C",
+      "explanation": "【出处】讲话'第一，坚持发展优先'部分：'在未来3年同上海合作组织国家联合实施100个科技合作项目'\n\n【正确项】C：100个科技合作项目。\n\n【干扰项分析】\n  A项（无中生有）：原文明确为'100个'，80个为编造数字\n  B项（无中生有）：原文明确为'100个'，50个为编造数字\n  D项（无中生有）：原文明确为'100个'，200个为编造数字，夸大一倍\n\n故本题选C。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "80个科技合作项目。",
+          "type": "无中生有",
+          "error_path": "原文明确为'100个'，80个为编造数字"
+        },
+        {
+          "option": "B",
+          "content": "50个科技合作项目。",
+          "type": "无中生有",
+          "error_path": "原文明确为'100个'，50个为编造数字"
+        },
+        {
+          "option": "D",
+          "content": "200个科技合作项目。",
+          "type": "无中生有",
+          "error_path": "原文明确为'100个'，200个为编造数字，夸大一倍"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §发展优先",
+      "explanation_ref": "讲话'第一，坚持发展优先'部分：'在未来3年同上海合作组织国家联合实施100个科技合作项目'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821682",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-004",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "时政热点",
+      "topic": "上海合作组织",
+      "tag": "发展优先-能源合作",
+      "difficulty": 2,
+      "stem": "中方宣布与上海合作组织国家继续推进新增能源项目建设，具体包括：",
+      "options": {
+        "A": "“千万千瓦水电”、“千万千瓦核电”项目。",
+        "B": "“百万千瓦光伏”、“千万千瓦风电”项目。",
+        "C": "“百万千瓦光伏”、“百万千瓦风电”项目。",
+        "D": "“千万千瓦光伏”、“千万千瓦风电”项目。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "“千万千瓦水电”、“千万千瓦核电”项目。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将原文'光伏'、'风电'偷换为'水电'、'核电'，能源类型错误"
+        },
+        "B": {
+          "content": "“百万千瓦光伏”、“千万千瓦风电”项目。",
+          "is_correct": false,
+          "type": "以偏概全",
+          "error_path": "光伏项目量级错误（百万 vs 千万），仅风电部分正确"
+        },
+        "C": {
+          "content": "“百万千瓦光伏”、“百万千瓦风电”项目。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将原文'千万千瓦'偷换为'百万千瓦'，量级缩小十倍"
+        },
+        "D": {
+          "content": "“千万千瓦光伏”、“千万千瓦风电”项目。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【出处】讲话'第一，坚持发展优先'部分：'与上海合作组织国家继续推进新增\\“千万千瓦光伏\\”、\\“千万千瓦风电\\”项目建设'\n\n【正确项】D：“千万千瓦光伏”、“千万千瓦风电”项目。\n\n【干扰项分析】\n  A项（偷换概念）：将原文'光伏'、'风电'偷换为'水电'、'核电'，能源类型错误\n  B项（以偏概全）：光伏项目量级错误（百万 vs 千万），仅风电部分正确\n  C项（偷换概念）：将原文'千万千瓦'偷换为'百万千瓦'，量级缩小十倍\n\n故本题选D。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "“千万千瓦水电”、“千万千瓦核电”项目。",
+          "type": "偷换概念",
+          "error_path": "将原文'光伏'、'风电'偷换为'水电'、'核电'，能源类型错误"
+        },
+        {
+          "option": "B",
+          "content": "“百万千瓦光伏”、“千万千瓦风电”项目。",
+          "type": "以偏概全",
+          "error_path": "光伏项目量级错误（百万 vs 千万），仅风电部分正确"
+        },
+        {
+          "option": "C",
+          "content": "“百万千瓦光伏”、“百万千瓦风电”项目。",
+          "type": "偷换概念",
+          "error_path": "将原文'千万千瓦'偷换为'百万千瓦'，量级缩小十倍"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §发展优先",
+      "explanation_ref": "讲话'第一，坚持发展优先'部分：'与上海合作组织国家继续推进新增\\“千万千瓦光伏\\”、\\“千万千瓦风电\\”项目建设'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821698",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-005",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "时政热点",
+      "topic": "上海合作组织",
+      "tag": "发展优先-口岸合作",
+      "difficulty": 2,
+      "stem": "为促进本地区贸易便利、物流畅通，中方宣布将成立的机构是：",
+      "options": {
+        "A": "中国－上海合作组织口岸经济合作中心（在天津）。",
+        "B": "中国－上海合作组织物流合作中心（在青岛）。",
+        "C": "中国－上海合作组织自由贸易区（在上海）。",
+        "D": "中国－上海合作组织口岸经济合作中心（在大连）。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "中国－上海合作组织口岸经济合作中心（在天津）。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "B": {
+          "content": "中国－上海合作组织物流合作中心（在青岛）。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "讲话中未提及物流合作中心，机构名称和地点均为编造"
+        },
+        "C": {
+          "content": "中国－上海合作组织自由贸易区（在上海）。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "讲话中未提及自由贸易区，机构名称和地点均为编造"
+        },
+        "D": {
+          "content": "中国－上海合作组织口岸经济合作中心（在大连）。",
+          "is_correct": false,
+          "type": "张冠李戴",
+          "error_path": "机构名称正确，但地点错误，原文明确为'在天津成立'，非大连"
+        }
+      },
+      "answer": "A",
+      "explanation": "【出处】讲话'第一，坚持发展优先'部分：'为促进本地区贸易便利、物流畅通，中方支持跨里海国际运输走廊提质增效，并将在天津成立中国－上海合作组织口岸经济合作中心'\n\n【正确项】A：中国－上海合作组织口岸经济合作中心（在天津）。\n\n【干扰项分析】\n  B项（无中生有）：讲话中未提及物流合作中心，机构名称和地点均为编造\n  C项（无中生有）：讲话中未提及自由贸易区，机构名称和地点均为编造\n  D项（张冠李戴）：机构名称正确，但地点错误，原文明确为'在天津成立'，非大连\n\n故本题选A。",
+      "distractors": [
+        {
+          "option": "B",
+          "content": "中国－上海合作组织物流合作中心（在青岛）。",
+          "type": "无中生有",
+          "error_path": "讲话中未提及物流合作中心，机构名称和地点均为编造"
+        },
+        {
+          "option": "C",
+          "content": "中国－上海合作组织自由贸易区（在上海）。",
+          "type": "无中生有",
+          "error_path": "讲话中未提及自由贸易区，机构名称和地点均为编造"
+        },
+        {
+          "option": "D",
+          "content": "中国－上海合作组织口岸经济合作中心（在大连）。",
+          "type": "张冠李戴",
+          "error_path": "机构名称正确，但地点错误，原文明确为'在天津成立'，非大连"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §发展优先",
+      "explanation_ref": "讲话'第一，坚持发展优先'部分：'为促进本地区贸易便利、物流畅通，中方支持跨里海国际运输走廊提质增效，并将在天津成立中国－上海合作组织口岸经济合作中心'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821713",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-006",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "时政热点",
+      "topic": "上海合作组织",
+      "tag": "安全为要-四个安全中心",
+      "difficulty": 1,
+      "stem": "在“坚持安全为要”部分，中方支持尽早启用上海合作组织的重要安全合作机制是：",
+      "options": {
+        "A": "“三个安全中心”。",
+        "B": "“四个安全中心”。",
+        "C": "“安全合作论坛”。",
+        "D": "“五个安全中心”。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "“三个安全中心”。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将原文'四个安全中心'偷换为'三个安全中心'，数量错误"
+        },
+        "B": {
+          "content": "“四个安全中心”。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "C": {
+          "content": "“安全合作论坛”。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "讲话中未提及安全合作论坛，原文为'四个安全中心'"
+        },
+        "D": {
+          "content": "“五个安全中心”。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将原文'四个安全中心'偷换为'五个安全中心'，数量错误"
+        }
+      },
+      "answer": "B",
+      "explanation": "【出处】讲话'第二，坚持安全为要'部分：'中方支持尽早启用上海合作组织\\“四个安全中心\\”，提高成员国应对安全威胁和挑战的能力'\n\n【正确项】B：“四个安全中心”。\n\n【干扰项分析】\n  A项（偷换概念）：将原文'四个安全中心'偷换为'三个安全中心'，数量错误\n  C项（无中生有）：讲话中未提及安全合作论坛，原文为'四个安全中心'\n  D项（偷换概念）：将原文'四个安全中心'偷换为'五个安全中心'，数量错误\n\n故本题选B。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "“三个安全中心”。",
+          "type": "偷换概念",
+          "error_path": "将原文'四个安全中心'偷换为'三个安全中心'，数量错误"
+        },
+        {
+          "option": "C",
+          "content": "“安全合作论坛”。",
+          "type": "无中生有",
+          "error_path": "讲话中未提及安全合作论坛，原文为'四个安全中心'"
+        },
+        {
+          "option": "D",
+          "content": "“五个安全中心”。",
+          "type": "偷换概念",
+          "error_path": "将原文'四个安全中心'偷换为'五个安全中心'，数量错误"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §安全为要",
+      "explanation_ref": "讲话'第二，坚持安全为要'部分：'中方支持尽早启用上海合作组织\\“四个安全中心\\”，提高成员国应对安全威胁和挑战的能力'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821727",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-007",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "中国外交",
+      "topic": "上海合作组织",
+      "tag": "安全为要-安全观",
+      "difficulty": 2,
+      "stem": "中方愿同各方践行的安全观，以及将上海合作组织打造成践行哪一倡议的重要平台？",
+      "options": {
+        "A": "共同、综合、合作、共赢的安全观；全球安全倡议。",
+        "B": "理性、协调、并进的安全观；全球文明倡议。",
+        "C": "共同、综合、合作、可持续的安全观；全球安全倡议。",
+        "D": "共同、综合、合作、可持续的安全观；全球发展倡议。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "共同、综合、合作、共赢的安全观；全球安全倡议。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将安全观中的'可持续'偷换为'共赢'，与原文表述不符"
+        },
+        "B": {
+          "content": "理性、协调、并进的安全观；全球文明倡议。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "'理性、协调、并进'是核安全观而非一般安全观，且全球文明倡议与安全平台定位不符"
+        },
+        "C": {
+          "content": "共同、综合、合作、可持续的安全观；全球安全倡议。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "D": {
+          "content": "共同、综合、合作、可持续的安全观；全球发展倡议。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "安全观表述正确，但将'全球安全倡议'偷换为'全球发展倡议'，倡议类型错误"
+        }
+      },
+      "answer": "C",
+      "explanation": "【出处】讲话'第二，坚持安全为要'部分：'中方愿同各方践行共同、综合、合作、可持续的安全观，将上海合作组织打造成践行全球安全倡议的重要平台'\n\n【正确项】C：共同、综合、合作、可持续的安全观；全球安全倡议。\n\n【干扰项分析】\n  A项（偷换概念）：将安全观中的'可持续'偷换为'共赢'，与原文表述不符\n  B项（偷换概念）：'理性、协调、并进'是核安全观而非一般安全观，且全球文明倡议与安全平台定位不符\n  D项（偷换概念）：安全观表述正确，但将'全球安全倡议'偷换为'全球发展倡议'，倡议类型错误\n\n故本题选C。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "共同、综合、合作、共赢的安全观；全球安全倡议。",
+          "type": "偷换概念",
+          "error_path": "将安全观中的'可持续'偷换为'共赢'，与原文表述不符"
+        },
+        {
+          "option": "B",
+          "content": "理性、协调、并进的安全观；全球文明倡议。",
+          "type": "偷换概念",
+          "error_path": "'理性、协调、并进'是核安全观而非一般安全观，且全球文明倡议与安全平台定位不符"
+        },
+        {
+          "option": "D",
+          "content": "共同、综合、合作、可持续的安全观；全球发展倡议。",
+          "type": "偷换概念",
+          "error_path": "安全观表述正确，但将'全球安全倡议'偷换为'全球发展倡议'，倡议类型错误"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §安全为要",
+      "explanation_ref": "讲话'第二，坚持安全为要'部分：'中方愿同各方践行共同、综合、合作、可持续的安全观，将上海合作组织打造成践行全球安全倡议的重要平台'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821742",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-008",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "时政热点",
+      "topic": "上海合作组织",
+      "tag": "以人为本-教育合作",
+      "difficulty": 2,
+      "stem": "在“坚持以人为本”部分，中方宣布将成立的教育合作机构是：",
+      "options": {
+        "A": "中国－上海合作组织职业教育合作中心。",
+        "B": "中国－上海合作组织高等教育合作中心。",
+        "C": "上海合作组织大学。",
+        "D": "中国－上海合作组织基础教育合作中心。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "中国－上海合作组织职业教育合作中心。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将原文'基础教育'偷换为'职业教育'，教育阶段错误"
+        },
+        "B": {
+          "content": "中国－上海合作组织高等教育合作中心。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将原文'基础教育'偷换为'高等教育'，教育阶段错误"
+        },
+        "C": {
+          "content": "上海合作组织大学。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "虽然上海合作组织大学是真实存在的项目，但本次讲话中宣布成立的是'基础教育合作中心'，非上合组织大学"
+        },
+        "D": {
+          "content": "中国－上海合作组织基础教育合作中心。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【出处】讲话'第三，坚持以人为本'部分：'中方将成立中国－上海合作组织基础教育合作中心'\n\n【正确项】D：中国－上海合作组织基础教育合作中心。\n\n【干扰项分析】\n  A项（偷换概念）：将原文'基础教育'偷换为'职业教育'，教育阶段错误\n  B项（偷换概念）：将原文'基础教育'偷换为'高等教育'，教育阶段错误\n  C项（无中生有）：虽然上海合作组织大学是真实存在的项目，但本次讲话中宣布成立的是'基础教育合作中心'，非上合组织大学\n\n故本题选D。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "中国－上海合作组织职业教育合作中心。",
+          "type": "偷换概念",
+          "error_path": "将原文'基础教育'偷换为'职业教育'，教育阶段错误"
+        },
+        {
+          "option": "B",
+          "content": "中国－上海合作组织高等教育合作中心。",
+          "type": "偷换概念",
+          "error_path": "将原文'基础教育'偷换为'高等教育'，教育阶段错误"
+        },
+        {
+          "option": "C",
+          "content": "上海合作组织大学。",
+          "type": "无中生有",
+          "error_path": "虽然上海合作组织大学是真实存在的项目，但本次讲话中宣布成立的是'基础教育合作中心'，非上合组织大学"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §以人为本",
+      "explanation_ref": "讲话'第三，坚持以人为本'部分：'中方将成立中国－上海合作组织基础教育合作中心'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821757",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-009",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "时政热点",
+      "topic": "上海合作组织",
+      "tag": "以人为本-人文交流",
+      "difficulty": 1,
+      "stem": "中方表示愿继续通过哪些项目搭建交流互鉴、民心相通的桥梁？",
+      "options": {
+        "A": "孔子学院、鲁班工坊。",
+        "B": "鲁班工坊、少林文化中心。",
+        "C": "孔子学院、中国文化中心。",
+        "D": "孔子学院、太极学堂。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "孔子学院、鲁班工坊。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "B": {
+          "content": "鲁班工坊、少林文化中心。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "'少林文化中心'不是讲话中提到的项目，原文为'孔子学院、鲁班工坊'"
+        },
+        "C": {
+          "content": "孔子学院、中国文化中心。",
+          "is_correct": false,
+          "type": "以偏概全",
+          "error_path": "中国文化中心虽然是真实存在的对外文化交流机构，但本次讲话中明确列举的是'孔子学院、鲁班工坊'，非中国文化中心"
+        },
+        "D": {
+          "content": "孔子学院、太极学堂。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "'太极学堂'不是讲话中提到的项目，原文为'孔子学院、鲁班工坊'"
+        }
+      },
+      "answer": "A",
+      "explanation": "【出处】讲话'第三，坚持以人为本'部分：'并愿继续通过孔子学院、鲁班工坊等项目搭建交流互鉴、民心相通的桥梁'\n\n【正确项】A：孔子学院、鲁班工坊。\n\n【干扰项分析】\n  B项（无中生有）：'少林文化中心'不是讲话中提到的项目，原文为'孔子学院、鲁班工坊'\n  C项（以偏概全）：中国文化中心虽然是真实存在的对外文化交流机构，但本次讲话中明确列举的是'孔子学院、鲁班工坊'，非中国文化中心\n  D项（无中生有）：'太极学堂'不是讲话中提到的项目，原文为'孔子学院、鲁班工坊'\n\n故本题选A。",
+      "distractors": [
+        {
+          "option": "B",
+          "content": "鲁班工坊、少林文化中心。",
+          "type": "无中生有",
+          "error_path": "'少林文化中心'不是讲话中提到的项目，原文为'孔子学院、鲁班工坊'"
+        },
+        {
+          "option": "C",
+          "content": "孔子学院、中国文化中心。",
+          "type": "以偏概全",
+          "error_path": "中国文化中心虽然是真实存在的对外文化交流机构，但本次讲话中明确列举的是'孔子学院、鲁班工坊'，非中国文化中心"
+        },
+        {
+          "option": "D",
+          "content": "孔子学院、太极学堂。",
+          "type": "无中生有",
+          "error_path": "'太极学堂'不是讲话中提到的项目，原文为'孔子学院、鲁班工坊'"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §以人为本",
+      "explanation_ref": "讲话'第三，坚持以人为本'部分：'并愿继续通过孔子学院、鲁班工坊等项目搭建交流互鉴、民心相通的桥梁'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821770",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-010",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "国际组织",
+      "topic": "上海合作组织",
+      "tag": "对话协商-团结倡议",
+      "difficulty": 2,
+      "stem": "讲话中提到，哪位国家领导人提出了“撒马尔罕团结倡议”？",
+      "options": {
+        "A": "夏巴兹总理（巴基斯坦）。",
+        "B": "米尔济约耶夫总统（乌兹别克斯坦）。",
+        "C": "扎帕罗夫总统（吉尔吉斯斯坦）。",
+        "D": "托卡耶夫总统（哈萨克斯坦）。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "夏巴兹总理（巴基斯坦）。",
+          "is_correct": false,
+          "type": "张冠李戴",
+          "error_path": "夏巴兹是新任上合组织轮值主席国巴基斯坦总理，不是'撒马尔罕团结倡议'的提出者"
+        },
+        "B": {
+          "content": "米尔济约耶夫总统（乌兹别克斯坦）。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "C": {
+          "content": "扎帕罗夫总统（吉尔吉斯斯坦）。",
+          "is_correct": false,
+          "type": "张冠李戴",
+          "error_path": "扎帕罗夫是吉尔吉斯斯坦总统、本次会议东道国领导人，'撒马尔罕团结倡议'由乌兹别克斯坦总统米尔济约耶夫提出"
+        },
+        "D": {
+          "content": "托卡耶夫总统（哈萨克斯坦）。",
+          "is_correct": false,
+          "type": "张冠李戴",
+          "error_path": "托卡耶夫总统提出的是'各国团结共促世界公正、和睦、发展倡议'，而非'撒马尔罕团结倡议'"
+        }
+      },
+      "answer": "B",
+      "explanation": "【出处】讲话'第四，坚持对话协商'部分：'米尔济约耶夫总统、托卡耶夫总统先后提出撒马尔罕团结倡议和各国团结共促世界公正、和睦、发展倡议，中方都表示赞赏和支持'\n\n【正确项】B：米尔济约耶夫总统（乌兹别克斯坦）。\n\n【干扰项分析】\n  A项（张冠李戴）：夏巴兹是新任上合组织轮值主席国巴基斯坦总理，不是'撒马尔罕团结倡议'的提出者\n  C项（张冠李戴）：扎帕罗夫是吉尔吉斯斯坦总统、本次会议东道国领导人，'撒马尔罕团结倡议'由乌兹别克斯坦总统米尔济约耶夫提出\n  D项（张冠李戴）：托卡耶夫总统提出的是'各国团结共促世界公正、和睦、发展倡议'，而非'撒马尔罕团结倡议'\n\n故本题选B。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "夏巴兹总理（巴基斯坦）。",
+          "type": "张冠李戴",
+          "error_path": "夏巴兹是新任上合组织轮值主席国巴基斯坦总理，不是'撒马尔罕团结倡议'的提出者"
+        },
+        {
+          "option": "C",
+          "content": "扎帕罗夫总统（吉尔吉斯斯坦）。",
+          "type": "张冠李戴",
+          "error_path": "扎帕罗夫是吉尔吉斯斯坦总统、本次会议东道国领导人，'撒马尔罕团结倡议'由乌兹别克斯坦总统米尔济约耶夫提出"
+        },
+        {
+          "option": "D",
+          "content": "托卡耶夫总统（哈萨克斯坦）。",
+          "type": "张冠李戴",
+          "error_path": "托卡耶夫总统提出的是'各国团结共促世界公正、和睦、发展倡议'，而非'撒马尔罕团结倡议'"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §对话协商",
+      "explanation_ref": "讲话'第四，坚持对话协商'部分：'米尔济约耶夫总统、托卡耶夫总统先后提出撒马尔罕团结倡议和各国团结共促世界公正、和睦、发展倡议，中方都表示赞赏和支持'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821783",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-011",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "国际组织",
+      "topic": "上海合作组织",
+      "tag": "对话协商-上合+会议",
+      "difficulty": 2,
+      "stem": "这次“上海合作组织+”会议关注的议题是：",
+      "options": {
+        "A": "打击恐怖主义、维护地区安全。",
+        "B": "加强全球治理、构建人类命运共同体。",
+        "C": "加强联合国作用、构建多极世界。",
+        "D": "应对气候变化、推动绿色发展。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "打击恐怖主义、维护地区安全。",
+          "is_correct": false,
+          "type": "以偏概全",
+          "error_path": "打击恐怖主义是'安全为要'部分的内容，不是本次'上海合作组织+'会议的议题"
+        },
+        "B": {
+          "content": "加强全球治理、构建人类命运共同体。",
+          "is_correct": false,
+          "type": "以偏概全",
+          "error_path": "构建人类命运共同体是讲话的总体目标，但不是本次'上海合作组织+'会议的具体议题"
+        },
+        "C": {
+          "content": "加强联合国作用、构建多极世界。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "D": {
+          "content": "应对气候变化、推动绿色发展。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "讲话中未提及气候变化是本次'上合+'会议的议题，属于编造"
+        }
+      },
+      "answer": "C",
+      "explanation": "【出处】讲话'第四，坚持对话协商'部分：'这次\\“上海合作组织+\\”会议关注加强联合国作用、构建多极世界议题，就是一次成功实践'\n\n【正确项】C：加强联合国作用、构建多极世界。\n\n【干扰项分析】\n  A项（以偏概全）：打击恐怖主义是'安全为要'部分的内容，不是本次'上海合作组织+'会议的议题\n  B项（以偏概全）：构建人类命运共同体是讲话的总体目标，但不是本次'上海合作组织+'会议的具体议题\n  D项（无中生有）：讲话中未提及气候变化是本次'上合+'会议的议题，属于编造\n\n故本题选C。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "打击恐怖主义、维护地区安全。",
+          "type": "以偏概全",
+          "error_path": "打击恐怖主义是'安全为要'部分的内容，不是本次'上海合作组织+'会议的议题"
+        },
+        {
+          "option": "B",
+          "content": "加强全球治理、构建人类命运共同体。",
+          "type": "以偏概全",
+          "error_path": "构建人类命运共同体是讲话的总体目标，但不是本次'上海合作组织+'会议的具体议题"
+        },
+        {
+          "option": "D",
+          "content": "应对气候变化、推动绿色发展。",
+          "type": "无中生有",
+          "error_path": "讲话中未提及气候变化是本次'上合+'会议的议题，属于编造"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §对话协商",
+      "explanation_ref": "讲话'第四，坚持对话协商'部分：'这次\\“上海合作组织+\\”会议关注加强联合国作用、构建多极世界议题，就是一次成功实践'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821796",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-012",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "国际组织",
+      "topic": "上海合作组织",
+      "tag": "轮值主席国",
+      "difficulty": 1,
+      "stem": "讲话最后祝贺谁接任上海合作组织成员国元首理事会主席？",
+      "options": {
+        "A": "扎帕罗夫总统（吉尔吉斯斯坦）。",
+        "B": "托卡耶夫总统（哈萨克斯坦）。",
+        "C": "米尔济约耶夫总统（乌兹别克斯坦）。",
+        "D": "夏巴兹总理（巴基斯坦）。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "扎帕罗夫总统（吉尔吉斯斯坦）。",
+          "is_correct": false,
+          "type": "张冠李戴",
+          "error_path": "扎帕罗夫是本次会议东道国吉尔吉斯斯坦总统，吉尔吉斯斯坦是即将卸任的主席国，不是新任主席国"
+        },
+        "B": {
+          "content": "托卡耶夫总统（哈萨克斯坦）。",
+          "is_correct": false,
+          "type": "张冠李戴",
+          "error_path": "托卡耶夫是哈萨克斯坦总统，不是新任上合组织元首理事会主席"
+        },
+        "C": {
+          "content": "米尔济约耶夫总统（乌兹别克斯坦）。",
+          "is_correct": false,
+          "type": "张冠李戴",
+          "error_path": "米尔济约耶夫是乌兹别克斯坦总统，不是新任上合组织元首理事会主席"
+        },
+        "D": {
+          "content": "夏巴兹总理（巴基斯坦）。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【出处】讲话结尾：'最后，祝贺夏巴兹总理接任元首理事会主席。中方愿同成员国一道，积极支持巴基斯坦主席国工作'\n\n【正确项】D：夏巴兹总理（巴基斯坦）。\n\n【干扰项分析】\n  A项（张冠李戴）：扎帕罗夫是本次会议东道国吉尔吉斯斯坦总统，吉尔吉斯斯坦是即将卸任的主席国，不是新任主席国\n  B项（张冠李戴）：托卡耶夫是哈萨克斯坦总统，不是新任上合组织元首理事会主席\n  C项（张冠李戴）：米尔济约耶夫是乌兹别克斯坦总统，不是新任上合组织元首理事会主席\n\n故本题选D。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "扎帕罗夫总统（吉尔吉斯斯坦）。",
+          "type": "张冠李戴",
+          "error_path": "扎帕罗夫是本次会议东道国吉尔吉斯斯坦总统，吉尔吉斯斯坦是即将卸任的主席国，不是新任主席国"
+        },
+        {
+          "option": "B",
+          "content": "托卡耶夫总统（哈萨克斯坦）。",
+          "type": "张冠李戴",
+          "error_path": "托卡耶夫是哈萨克斯坦总统，不是新任上合组织元首理事会主席"
+        },
+        {
+          "option": "C",
+          "content": "米尔济约耶夫总统（乌兹别克斯坦）。",
+          "type": "张冠李戴",
+          "error_path": "米尔济约耶夫是乌兹别克斯坦总统，不是新任上合组织元首理事会主席"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §结尾",
+      "explanation_ref": "讲话结尾：'最后，祝贺夏巴兹总理接任元首理事会主席。中方愿同成员国一道，积极支持巴基斯坦主席国工作'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821809",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-013",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "国际组织",
+      "topic": "上海合作组织",
+      "tag": "发展成就",
+      "difficulty": 2,
+      "stem": "习近平主席指出，上海合作组织25年来最重大的发展成就是：",
+      "options": {
+        "A": "一步步成为世界上幅员最广、人口最多、发展潜力巨大的新型区域合作组织。",
+        "B": "一步步成为世界上一体化程度最高、政策协调最一致的区域组织。",
+        "C": "一步步成为世界上军事同盟最紧密、安全合作最深入的区域组织。",
+        "D": "一步步成为世界上经济总量最大、贸易额最高的区域合作组织。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "一步步成为世界上幅员最广、人口最多、发展潜力巨大的新型区域合作组织。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "B": {
+          "content": "一步步成为世界上一体化程度最高、政策协调最一致的区域组织。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "上合组织不是高度一体化组织（欧盟一体化程度更高），'一体化程度最高'不符合上合组织的定位和实际"
+        },
+        "C": {
+          "content": "一步步成为世界上军事同盟最紧密、安全合作最深入的区域组织。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "上合组织奉行'不结盟'原则，不是军事同盟，将'不结盟'偷换为'军事同盟最紧密'与原文根本立场矛盾"
+        },
+        "D": {
+          "content": "一步步成为世界上经济总量最大、贸易额最高的区域合作组织。",
+          "is_correct": false,
+          "type": "绝对化",
+          "error_path": "上合组织并非世界上经济总量最大的区域合作组织（欧盟经济总量更大），'经济总量最大'表述绝对化且不符合事实"
+        }
+      },
+      "answer": "A",
+      "explanation": "【出处】讲话第4段：'最重大的发展成就是一步步成为世界上幅员最广、人口最多、发展潜力巨大的新型区域合作组织'\n\n【正确项】A：一步步成为世界上幅员最广、人口最多、发展潜力巨大的新型区域合作组织。\n\n【干扰项分析】\n  B项（偷换概念）：上合组织不是高度一体化组织（欧盟一体化程度更高），'一体化程度最高'不符合上合组织的定位和实际\n  C项（偷换概念）：上合组织奉行'不结盟'原则，不是军事同盟，将'不结盟'偷换为'军事同盟最紧密'与原文根本立场矛盾\n  D项（绝对化）：上合组织并非世界上经济总量最大的区域合作组织（欧盟经济总量更大），'经济总量最大'表述绝对化且不符合事实\n\n故本题选A。",
+      "distractors": [
+        {
+          "option": "B",
+          "content": "一步步成为世界上一体化程度最高、政策协调最一致的区域组织。",
+          "type": "偷换概念",
+          "error_path": "上合组织不是高度一体化组织（欧盟一体化程度更高），'一体化程度最高'不符合上合组织的定位和实际"
+        },
+        {
+          "option": "C",
+          "content": "一步步成为世界上军事同盟最紧密、安全合作最深入的区域组织。",
+          "type": "偷换概念",
+          "error_path": "上合组织奉行'不结盟'原则，不是军事同盟，将'不结盟'偷换为'军事同盟最紧密'与原文根本立场矛盾"
+        },
+        {
+          "option": "D",
+          "content": "一步步成为世界上经济总量最大、贸易额最高的区域合作组织。",
+          "type": "绝对化",
+          "error_path": "上合组织并非世界上经济总量最大的区域合作组织（欧盟经济总量更大），'经济总量最大'表述绝对化且不符合事实"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §25年回顾",
+      "explanation_ref": "讲话第4段：'最重大的发展成就是一步步成为世界上幅员最广、人口最多、发展潜力巨大的新型区域合作组织'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821822",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-014",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "中国外交",
+      "topic": "上海合作组织",
+      "tag": "一带一路衔接",
+      "difficulty": 2,
+      "stem": "中方将上海合作组织视为什么的优先区域？",
+      "options": {
+        "A": "践行全球发展倡议、全球文明倡议。",
+        "B": "高质量共建“一带一路”、践行全球发展倡议。",
+        "C": "高质量共建“一带一路”、构建人类命运共同体。",
+        "D": "高质量共建“一带一路”、践行全球安全倡议。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "践行全球发展倡议、全球文明倡议。",
+          "is_correct": false,
+          "type": "以偏概全",
+          "error_path": "遗漏了'高质量共建\\“一带一路\\”'这一核心定位，且全球文明倡议不是此处表述的内容"
+        },
+        "B": {
+          "content": "高质量共建“一带一路”、践行全球发展倡议。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "C": {
+          "content": "高质量共建“一带一路”、构建人类命运共同体。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "构建人类命运共同体是讲话的总体目标，不是对上海合作组织作为'优先区域'的定位表述，原文为'践行全球发展倡议'"
+        },
+        "D": {
+          "content": "高质量共建“一带一路”、践行全球安全倡议。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将'全球发展倡议'偷换为'全球安全倡议'，全球安全倡议是在'安全为要'部分提及的，此处原文为全球发展倡议"
+        }
+      },
+      "answer": "B",
+      "explanation": "【出处】讲话'第一，坚持发展优先'部分：'中方将上海合作组织视为高质量共建\\“一带一路\\”、践行全球发展倡议的优先区域'\n\n【正确项】B：高质量共建“一带一路”、践行全球发展倡议。\n\n【干扰项分析】\n  A项（以偏概全）：遗漏了'高质量共建\\“一带一路\\”'这一核心定位，且全球文明倡议不是此处表述的内容\n  C项（偷换概念）：构建人类命运共同体是讲话的总体目标，不是对上海合作组织作为'优先区域'的定位表述，原文为'践行全球发展倡议'\n  D项（偷换概念）：将'全球发展倡议'偷换为'全球安全倡议'，全球安全倡议是在'安全为要'部分提及的，此处原文为全球发展倡议\n\n故本题选B。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "践行全球发展倡议、全球文明倡议。",
+          "type": "以偏概全",
+          "error_path": "遗漏了'高质量共建\\“一带一路\\”'这一核心定位，且全球文明倡议不是此处表述的内容"
+        },
+        {
+          "option": "C",
+          "content": "高质量共建“一带一路”、构建人类命运共同体。",
+          "type": "偷换概念",
+          "error_path": "构建人类命运共同体是讲话的总体目标，不是对上海合作组织作为'优先区域'的定位表述，原文为'践行全球发展倡议'"
+        },
+        {
+          "option": "D",
+          "content": "高质量共建“一带一路”、践行全球安全倡议。",
+          "type": "偷换概念",
+          "error_path": "将'全球发展倡议'偷换为'全球安全倡议'，全球安全倡议是在'安全为要'部分提及的，此处原文为全球发展倡议"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §发展优先",
+      "explanation_ref": "讲话'第一，坚持发展优先'部分：'中方将上海合作组织视为高质量共建\\“一带一路\\”、践行全球发展倡议的优先区域'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821835",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-015",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "国际组织",
+      "topic": "上海合作组织",
+      "tag": "成立背景",
+      "difficulty": 3,
+      "stem": "习近平主席回顾上海合作组织成立的历史背景时指出，25年前面对哪些因素，齐心协力维护主权、安全、发展利益成为地区国家普遍共识？",
+      "options": {
+        "A": "霸权主义的干涉、颜色革命的威胁和各国人民对独立自主的追求。",
+        "B": "冷战的深刻教训、恐怖主义的现实威胁和各国人民对经济发展的迫切需求。",
+        "C": "冷战的深刻教训、“三股势力”的现实威胁和各国人民对和平与发展的热切期盼。",
+        "D": "经济全球化的深入发展、地区冲突的持续不断和各国人民对美好生活的向往。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "霸权主义的干涉、颜色革命的威胁和各国人民对独立自主的追求。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "这些表述在原文中不存在，属于编造的历史背景描述"
+        },
+        "B": {
+          "content": "冷战的深刻教训、恐怖主义的现实威胁和各国人民对经济发展的迫切需求。",
+          "is_correct": false,
+          "type": "以偏概全",
+          "error_path": "'三股势力'（恐怖主义、分裂主义、极端主义）范围大于'恐怖主义'，且原文为'对和平与发展的热切期盼'而非'对经济发展的迫切需求'"
+        },
+        "C": {
+          "content": "冷战的深刻教训、“三股势力”的现实威胁和各国人民对和平与发展的热切期盼。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "D": {
+          "content": "经济全球化的深入发展、地区冲突的持续不断和各国人民对美好生活的向往。",
+          "is_correct": false,
+          "type": "以偏概全",
+          "error_path": "表述与原文不符，原文明确为'冷战的深刻教训'、'三股势力的现实威胁'和'各国人民对和平与发展的热切期盼'"
+        }
+      },
+      "answer": "C",
+      "explanation": "【出处】讲话第3段：'25年前，面对冷战的深刻教训、\\“三股势力\\”的现实威胁和各国人民对和平与发展的热切期盼，齐心协力维护主权、安全、发展利益，成为地区国家普遍共识'\n\n【正确项】C：冷战的深刻教训、“三股势力”的现实威胁和各国人民对和平与发展的热切期盼。\n\n【干扰项分析】\n  A项（无中生有）：这些表述在原文中不存在，属于编造的历史背景描述\n  B项（以偏概全）：'三股势力'（恐怖主义、分裂主义、极端主义）范围大于'恐怖主义'，且原文为'对和平与发展的热切期盼'而非'对经济发展的迫切需求'\n  D项（以偏概全）：表述与原文不符，原文明确为'冷战的深刻教训'、'三股势力的现实威胁'和'各国人民对和平与发展的热切期盼'\n\n故本题选C。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "霸权主义的干涉、颜色革命的威胁和各国人民对独立自主的追求。",
+          "type": "无中生有",
+          "error_path": "这些表述在原文中不存在，属于编造的历史背景描述"
+        },
+        {
+          "option": "B",
+          "content": "冷战的深刻教训、恐怖主义的现实威胁和各国人民对经济发展的迫切需求。",
+          "type": "以偏概全",
+          "error_path": "'三股势力'（恐怖主义、分裂主义、极端主义）范围大于'恐怖主义'，且原文为'对和平与发展的热切期盼'而非'对经济发展的迫切需求'"
+        },
+        {
+          "option": "D",
+          "content": "经济全球化的深入发展、地区冲突的持续不断和各国人民对美好生活的向往。",
+          "type": "以偏概全",
+          "error_path": "表述与原文不符，原文明确为'冷战的深刻教训'、'三股势力的现实威胁'和'各国人民对和平与发展的热切期盼'"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §25周年回顾",
+      "explanation_ref": "讲话第3段：'25年前，面对冷战的深刻教训、\\“三股势力\\”的现实威胁和各国人民对和平与发展的热切期盼，齐心协力维护主权、安全、发展利益，成为地区国家普遍共识'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821848",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-016",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "中国外交",
+      "topic": "上海合作组织",
+      "tag": "对话协商-全球治理",
+      "difficulty": 2,
+      "stem": "中方支持上海合作组织就践行哪一倡议开展示范性合作？",
+      "options": {
+        "A": "全球发展倡议。",
+        "B": "全球文明倡议。",
+        "C": "全球安全倡议。",
+        "D": "全球治理倡议。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "全球发展倡议。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "全球发展倡议是在'发展优先'部分作为'优先区域'定位提及的，'示范性合作'对应的是全球治理倡议"
+        },
+        "B": {
+          "content": "全球文明倡议。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "全球文明倡议是在'以人为本'部分提及的，'示范性合作'对应的是全球治理倡议"
+        },
+        "C": {
+          "content": "全球安全倡议。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "全球安全倡议是在'安全为要'部分作为'重要平台'定位提及的，'示范性合作'对应的是全球治理倡议"
+        },
+        "D": {
+          "content": "全球治理倡议。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【出处】讲话'第四，坚持对话协商'部分：'中方支持上海合作组织就践行全球治理倡议开展示范性合作'\n\n【正确项】D：全球治理倡议。\n\n【干扰项分析】\n  A项（偷换概念）：全球发展倡议是在'发展优先'部分作为'优先区域'定位提及的，'示范性合作'对应的是全球治理倡议\n  B项（偷换概念）：全球文明倡议是在'以人为本'部分提及的，'示范性合作'对应的是全球治理倡议\n  C项（偷换概念）：全球安全倡议是在'安全为要'部分作为'重要平台'定位提及的，'示范性合作'对应的是全球治理倡议\n\n故本题选D。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "全球发展倡议。",
+          "type": "偷换概念",
+          "error_path": "全球发展倡议是在'发展优先'部分作为'优先区域'定位提及的，'示范性合作'对应的是全球治理倡议"
+        },
+        {
+          "option": "B",
+          "content": "全球文明倡议。",
+          "type": "偷换概念",
+          "error_path": "全球文明倡议是在'以人为本'部分提及的，'示范性合作'对应的是全球治理倡议"
+        },
+        {
+          "option": "C",
+          "content": "全球安全倡议。",
+          "type": "偷换概念",
+          "error_path": "全球安全倡议是在'安全为要'部分作为'重要平台'定位提及的，'示范性合作'对应的是全球治理倡议"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §对话协商",
+      "explanation_ref": "讲话'第四，坚持对话协商'部分：'中方支持上海合作组织就践行全球治理倡议开展示范性合作'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821861",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-017",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "中国外交",
+      "topic": "上海合作组织",
+      "tag": "对话协商-热点问题",
+      "difficulty": 2,
+      "stem": "在哪些国际和地区热点问题上，中方愿同各方加强沟通协调，坚持标本兼治，推动政治解决？",
+      "options": {
+        "A": "乌克兰、中东、阿富汗。",
+        "B": "乌克兰、中东、非洲之角。",
+        "C": "乌克兰、叙利亚、利比亚。",
+        "D": "中东、阿富汗、朝鲜半岛。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "乌克兰、中东、阿富汗。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "B": {
+          "content": "乌克兰、中东、非洲之角。",
+          "is_correct": false,
+          "type": "张冠李戴",
+          "error_path": "非洲之角不在讲话列举的热点问题中，原文为'乌克兰、中东、阿富汗'"
+        },
+        "C": {
+          "content": "乌克兰、叙利亚、利比亚。",
+          "is_correct": false,
+          "type": "张冠李戴",
+          "error_path": "叙利亚、利比亚不在讲话列举的热点问题中，原文为'乌克兰、中东、阿富汗'"
+        },
+        "D": {
+          "content": "中东、阿富汗、朝鲜半岛。",
+          "is_correct": false,
+          "type": "张冠李戴",
+          "error_path": "朝鲜半岛不在讲话列举的热点问题中，原文为'乌克兰、中东、阿富汗'"
+        }
+      },
+      "answer": "A",
+      "explanation": "【出处】讲话'第四，坚持对话协商'部分：'在乌克兰、中东、阿富汗等国际和地区热点问题上，中方愿同各方加强沟通和协调，坚持标本兼治，推动政治解决'\n\n【正确项】A：乌克兰、中东、阿富汗。\n\n【干扰项分析】\n  B项（张冠李戴）：非洲之角不在讲话列举的热点问题中，原文为'乌克兰、中东、阿富汗'\n  C项（张冠李戴）：叙利亚、利比亚不在讲话列举的热点问题中，原文为'乌克兰、中东、阿富汗'\n  D项（张冠李戴）：朝鲜半岛不在讲话列举的热点问题中，原文为'乌克兰、中东、阿富汗'\n\n故本题选A。",
+      "distractors": [
+        {
+          "option": "B",
+          "content": "乌克兰、中东、非洲之角。",
+          "type": "张冠李戴",
+          "error_path": "非洲之角不在讲话列举的热点问题中，原文为'乌克兰、中东、阿富汗'"
+        },
+        {
+          "option": "C",
+          "content": "乌克兰、叙利亚、利比亚。",
+          "type": "张冠李戴",
+          "error_path": "叙利亚、利比亚不在讲话列举的热点问题中，原文为'乌克兰、中东、阿富汗'"
+        },
+        {
+          "option": "D",
+          "content": "中东、阿富汗、朝鲜半岛。",
+          "type": "张冠李戴",
+          "error_path": "朝鲜半岛不在讲话列举的热点问题中，原文为'乌克兰、中东、阿富汗'"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §对话协商",
+      "explanation_ref": "讲话'第四，坚持对话协商'部分：'在乌克兰、中东、阿富汗等国际和地区热点问题上，中方愿同各方加强沟通和协调，坚持标本兼治，推动政治解决'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821876",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-018",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "中国外交",
+      "topic": "上海合作组织",
+      "tag": "安全为要-核安全观",
+      "difficulty": 2,
+      "stem": "中方倡导的核安全观是：",
+      "options": {
+        "A": "共同、综合、合作、可持续。",
+        "B": "理性、协调、并进。",
+        "C": "开放、包容、普惠、平衡。",
+        "D": "理性、协调、可持续。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "共同、综合、合作、可持续。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "这是一般意义上的安全观（亚洲安全观），不是核安全观。原文明确区分了两者：'践行共同、综合、合作、可持续的安全观'与'倡导理性、协调、并进的核安全观'"
+        },
+        "B": {
+          "content": "理性、协调、并进。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "C": {
+          "content": "开放、包容、普惠、平衡。",
+          "is_correct": false,
+          "type": "无中生有",
+          "error_path": "这是经济全球化的表述，与核安全观无关，原文中不存在此表述"
+        },
+        "D": {
+          "content": "理性、协调、可持续。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "将核安全观中的'并进'偷换为'可持续'，与原文'理性、协调、并进'不符"
+        }
+      },
+      "answer": "B",
+      "explanation": "【出处】讲话'第二，坚持安全为要'部分：'中方倡导理性、协调、并进的核安全观，支持加强核安全多边伙伴关系'\n\n【正确项】B：理性、协调、并进。\n\n【干扰项分析】\n  A项（偷换概念）：这是一般意义上的安全观（亚洲安全观），不是核安全观。原文明确区分了两者：'践行共同、综合、合作、可持续的安全观'与'倡导理性、协调、并进的核安全观'\n  C项（无中生有）：这是经济全球化的表述，与核安全观无关，原文中不存在此表述\n  D项（偷换概念）：将核安全观中的'并进'偷换为'可持续'，与原文'理性、协调、并进'不符\n\n故本题选B。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "共同、综合、合作、可持续。",
+          "type": "偷换概念",
+          "error_path": "这是一般意义上的安全观（亚洲安全观），不是核安全观。原文明确区分了两者：'践行共同、综合、合作、可持续的安全观'与'倡导理性、协调、并进的核安全观'"
+        },
+        {
+          "option": "C",
+          "content": "开放、包容、普惠、平衡。",
+          "type": "无中生有",
+          "error_path": "这是经济全球化的表述，与核安全观无关，原文中不存在此表述"
+        },
+        {
+          "option": "D",
+          "content": "理性、协调、可持续。",
+          "type": "偷换概念",
+          "error_path": "将核安全观中的'并进'偷换为'可持续'，与原文'理性、协调、并进'不符"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §安全为要",
+      "explanation_ref": "讲话'第二，坚持安全为要'部分：'中方倡导理性、协调、并进的核安全观，支持加强核安全多边伙伴关系'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821889",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "RMRB-SCO-019",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "国际组织",
+      "topic": "上海合作组织",
+      "tag": "四点主张",
+      "difficulty": 3,
+      "stem": "习近平主席在讲话中提出推动上海合作组织实现更高质量发展的四点主张。下列属于这四点主张的是：\n①坚持发展优先，开创共同繁荣的前景\n②坚持安全为要，营造普遍安全的环境\n③坚持以人为本，厚植世代友好的根基\n④坚持改革开放，激发区域合作的活力",
+      "options": {
+        "A": "①②④",
+        "B": "②③④",
+        "C": "①②③",
+        "D": "①③④"
+      },
+      "options_detail": {
+        "A": {
+          "content": "①②④",
+          "is_correct": false,
+          "type": "以偏概全",
+          "error_path": "包含错误项④，第四点主张是'坚持对话协商，完善公平有序的治理'，而非'坚持改革开放'"
+        },
+        "B": {
+          "content": "②③④",
+          "is_correct": false,
+          "type": "以偏概全",
+          "error_path": "包含错误项④，且遗漏正确项①'坚持发展优先'"
+        },
+        "C": {
+          "content": "①②③",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        },
+        "D": {
+          "content": "①③④",
+          "is_correct": false,
+          "type": "以偏概全",
+          "error_path": "包含错误项④，且遗漏正确项②'坚持安全为要'"
+        }
+      },
+      "answer": "C",
+      "explanation": "【出处】讲话四点主张标题：'第一，坚持发展优先，开创共同繁荣的前景'；'第二，坚持安全为要，营造普遍安全的环境'；'第三，坚持以人为本，厚植世代友好的根基'；'第四，坚持对话协商，完善公平有序的治理'。④将'坚持对话协商，完善公平有序的治理'偷换为'坚持改革开放，激发区域合作的活力'\n\n【正确项】C：①②③\n\n【干扰项分析】\n  A项（以偏概全）：包含错误项④，第四点主张是'坚持对话协商，完善公平有序的治理'，而非'坚持改革开放'\n  B项（以偏概全）：包含错误项④，且遗漏正确项①'坚持发展优先'\n  D项（以偏概全）：包含错误项④，且遗漏正确项②'坚持安全为要'\n\n故本题选C。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "①②④",
+          "type": "以偏概全",
+          "error_path": "包含错误项④，第四点主张是'坚持对话协商，完善公平有序的治理'，而非'坚持改革开放'"
+        },
+        {
+          "option": "B",
+          "content": "②③④",
+          "type": "以偏概全",
+          "error_path": "包含错误项④，且遗漏正确项①'坚持发展优先'"
+        },
+        {
+          "option": "D",
+          "content": "①③④",
+          "type": "以偏概全",
+          "error_path": "包含错误项④，且遗漏正确项②'坚持安全为要'"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §四点主张",
+      "explanation_ref": "讲话四点主张标题：'第一，坚持发展优先，开创共同繁荣的前景'；'第二，坚持安全为要，营造普遍安全的环境'；'第三，坚持以人为本，厚植世代友好的根基'；'第四，坚持对话协商，完善公平有序的治理'。④将'坚持对话协商，完善公平有序的治理'偷换为'坚持改革开放，激发区域合作的活力'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821904",
+        "param_seed": 42
+      },
+      "question_type": "组合判断",
+      "items": [
+        {
+          "index": "①",
+          "content": "坚持发展优先，开创共同繁荣的前景",
+          "is_correct": true
+        },
+        {
+          "index": "②",
+          "content": "坚持安全为要，营造普遍安全的环境",
+          "is_correct": true
+        },
+        {
+          "index": "③",
+          "content": "坚持以人为本，厚植世代友好的根基",
+          "is_correct": true
+        },
+        {
+          "index": "④",
+          "content": "坚持改革开放，激发区域合作的活力",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question_id": "RMRB-SCO-020",
+      "origin_type": "generated_from_material",
+      "module": "政治理论",
+      "subtype": "国际组织",
+      "topic": "上海合作组织",
+      "tag": "未来发展战略",
+      "difficulty": 2,
+      "stem": "习近平主席在讲话结尾表示，中方愿同各方一道，继续高举“上海精神”旗帜，落实什么，努力实现更高质量发展，为推动构建人类命运共同体作出更大贡献？",
+      "options": {
+        "A": "上海合作组织至2025年发展战略。",
+        "B": "上海合作组织中期发展规划。",
+        "C": "上海合作组织宪章。",
+        "D": "上海合作组织未来10年发展战略。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "上海合作组织至2025年发展战略。",
+          "is_correct": false,
+          "type": "张冠李戴",
+          "error_path": "'至2025年发展战略'是上合组织此前的旧版发展战略名称，本次讲话明确为'未来10年发展战略'"
+        },
+        "B": {
+          "content": "上海合作组织中期发展规划。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "原文为'未来10年发展战略'，'中期发展规划'是编造的名称，与原文不符"
+        },
+        "C": {
+          "content": "上海合作组织宪章。",
+          "is_correct": false,
+          "type": "偷换概念",
+          "error_path": "上海合作组织宪章是基础性法律文件，不是此处要'落实'的发展战略文件"
+        },
+        "D": {
+          "content": "上海合作组织未来10年发展战略。",
+          "is_correct": true,
+          "type": null,
+          "error_path": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【出处】讲话结尾：'中方愿同各方一道，继续高举\\“上海精神\\”旗帜，落实上海合作组织未来10年发展战略，努力实现更高质量发展，为推动构建人类命运共同体作出更大贡献'\n\n【正确项】D：上海合作组织未来10年发展战略。\n\n【干扰项分析】\n  A项（张冠李戴）：'至2025年发展战略'是上合组织此前的旧版发展战略名称，本次讲话明确为'未来10年发展战略'\n  B项（偷换概念）：原文为'未来10年发展战略'，'中期发展规划'是编造的名称，与原文不符\n  C项（偷换概念）：上海合作组织宪章是基础性法律文件，不是此处要'落实'的发展战略文件\n\n故本题选D。",
+      "distractors": [
+        {
+          "option": "A",
+          "content": "上海合作组织至2025年发展战略。",
+          "type": "张冠李戴",
+          "error_path": "'至2025年发展战略'是上合组织此前的旧版发展战略名称，本次讲话明确为'未来10年发展战略'"
+        },
+        {
+          "option": "B",
+          "content": "上海合作组织中期发展规划。",
+          "type": "偷换概念",
+          "error_path": "原文为'未来10年发展战略'，'中期发展规划'是编造的名称，与原文不符"
+        },
+        {
+          "option": "C",
+          "content": "上海合作组织宪章。",
+          "type": "偷换概念",
+          "error_path": "上海合作组织宪章是基础性法律文件，不是此处要'落实'的发展战略文件"
+        }
+      ],
+      "source_ref": "rmrb_20260902_sco_speech.md §结尾",
+      "explanation_ref": "讲话结尾：'中方愿同各方一道，继续高举\\“上海精神\\”旗帜，落实上海合作组织未来10年发展战略，努力实现更高质量发展，为推动构建人类命运共同体作出更大贡献'",
+      "material": "rmrb_20260902_sco_speech.md",
+      "validation": {
+        "options_distinct": true,
+        "answer_unique": true,
+        "distractors_type_labeled": true,
+        "citation_verified": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "rmrb_sco_v1",
+        "generated_at": "2026-09-03T21:52:14.821917",
+        "param_seed": 42
+      }
+    }
+  ]
+}
