@@ -1,13 +1,15 @@
 {
   "version": "v1",
-  "total": 15,
-  "generated_at": "2026-09-03T12:54:11.986221",
+  "total": 35,
+  "generated_at": "2026-09-03T13:14:33.360432",
   "template_version": "judgment_v1",
   "seed": 42,
   "sub_engines": {
     "definition_judgment": 5,
     "translation_reasoning": 5,
-    "figure_reasoning": 5
+    "figure_reasoning": 5,
+    "argument_reasoning": 10,
+    "analogy_reasoning": 10
   },
   "questions": [
     {
@@ -78,7 +80,7 @@
       },
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.982739",
+        "generated_at": "2026-09-03T13:14:33.356411",
         "param_seed": 42
       }
     },
@@ -150,7 +152,7 @@
       },
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.982771",
+        "generated_at": "2026-09-03T13:14:33.356443",
         "param_seed": 42
       }
     },
@@ -218,7 +220,7 @@
       },
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.982792",
+        "generated_at": "2026-09-03T13:14:33.356463",
         "param_seed": 42
       }
     },
@@ -290,7 +292,7 @@
       },
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.982809",
+        "generated_at": "2026-09-03T13:14:33.356480",
         "param_seed": 42
       }
     },
@@ -362,7 +364,7 @@
       },
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.982825",
+        "generated_at": "2026-09-03T13:14:33.356497",
         "param_seed": 42
       }
     },
@@ -475,7 +477,7 @@
       ],
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.982892",
+        "generated_at": "2026-09-03T13:14:33.356563",
         "param_seed": 42
       }
     },
@@ -611,7 +613,7 @@
       ],
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.982945",
+        "generated_at": "2026-09-03T13:14:33.356617",
         "param_seed": 42
       }
     },
@@ -724,7 +726,7 @@
       ],
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.982984",
+        "generated_at": "2026-09-03T13:14:33.356656",
         "param_seed": 42
       }
     },
@@ -849,7 +851,7 @@
       ],
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.983021",
+        "generated_at": "2026-09-03T13:14:33.356694",
         "param_seed": 42
       }
     },
@@ -974,7 +976,7 @@
       ],
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.983055",
+        "generated_at": "2026-09-03T13:14:33.356727",
         "param_seed": 42
       }
     },
@@ -1051,7 +1053,7 @@
       "explanation": "【规律类型】数量类（交点数递增）\n【规律描述】题干图形中直线与圆的交点数依次为1、2、3、4，呈递增规律，下一个图形交点数应为5\n\n【规律验证】\n  pattern_valid: True\n  common_difference: 1\n  expected_next: 5\n  correct_matches: True\n\n【正确选项】D — 符合规律\n\n【干扰项分析】\n  A项：数量错误。数量错误（多1，递增步长错误）\n  B项：数量错误。数量错误（与第4个图相同，未递增）\n  C项：数量错误。数量错误（递减而非递增）\n\n故本题选D。",
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.983866",
+        "generated_at": "2026-09-03T13:14:33.357481",
         "param_seed": 42,
         "svg_generation": "deterministic_python_string"
       }
@@ -1129,7 +1131,7 @@
       "explanation": "【规律类型】旋转类（顺时针45°）\n【规律描述】题干中的箭头图形每次顺时针旋转45°，依次为0°、45°、90°、135°，下一个应为180°\n\n【规律验证】\n  pattern_valid: True\n  common_rotation: 45\n  expected_next: 180\n  correct_matches: True\n\n【正确选项】B — 符合规律\n\n【干扰项分析】\n  A项：旋转角度错误。旋转角度错误（与第4个图相同，未继续旋转）\n  C项：旋转角度错误。旋转角度错误（多转45°）\n  D项：旋转方向错误。旋转方向错误（逆时针回转）\n\n故本题选B。",
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.984403",
+        "generated_at": "2026-09-03T13:14:33.358001",
         "param_seed": 42,
         "svg_generation": "deterministic_python_string"
       }
@@ -1207,7 +1209,7 @@
       "explanation": "【规律类型】对称类（对称轴数量递增）\n【规律描述】题干图形的对称轴数量依次为1、2、3、4，呈递增规律，下一个图形应有5条对称轴（正五边形）\n\n【规律验证】\n  pattern_valid: True\n  common_difference: 1\n  expected_next_sides: 7\n  correct_matches: True\n\n【正确选项】D — 符合规律\n\n【干扰项分析】\n  A项：数量错误。对称轴数量错误（多1）\n  B项：数量错误。对称轴数量错误（递减）\n  C项：数量错误。对称轴数量错误（与第4个图相同）\n\n故本题选D。",
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.984939",
+        "generated_at": "2026-09-03T13:14:33.358517",
         "param_seed": 42,
         "svg_generation": "deterministic_python_string"
       }
@@ -1288,7 +1290,7 @@
       "explanation": "【规律类型】叠加类（去同存异）\n【规律描述】第一组图中，前两个图形叠加后去同存异得到第三个图形。第二组图应用相同规律\n\n【规律验证】\n  group1_pattern_valid: True\n  rule: 去同存异（XOR）\n  correct_matches: True\n\n【正确选项】C — 符合规律\n\n【干扰项分析】\n  A项：元素类型错误。叠加规则错误（未去同，直接叠加）\n  B项：元素类型错误。叠加规则错误（去异存同而非去同存异）\n  D项：元素类型错误。叠加规则错误（全部去掉）\n\n故本题选C。",
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.985486",
+        "generated_at": "2026-09-03T13:14:33.359050",
         "param_seed": 42,
         "svg_generation": "deterministic_python_string"
       }
@@ -1383,9 +1385,1699 @@
       "explanation": "【规律类型】遍历类（元素遍历）\n【规律描述】每行图形包含圆、方、三角三种元素各一个，且元素的填充样式（空心/实心/斜线）遍历。第三行缺少的图形应为实心圆\n\n【规律验证】\n  row1_complete: True\n  row2_complete: True\n  missing_shape: rect\n  missing_fill: hollow\n  correct_matches: True\n\n【正确选项】A — 符合规律\n\n【干扰项分析】\n  B项：元素类型错误。元素遍历错误（形状应为rect，圆已在第三行出现）\n  C项：元素类型错误。元素遍历错误（形状和填充均错误）\n  D项：元素类型错误。填充遍历错误（填充应为hollow，solid已在第三行出现）\n\n故本题选A。",
       "generation_meta": {
         "template_version": "judgment_v1",
-        "generated_at": "2026-09-03T12:54:11.986196",
+        "generated_at": "2026-09-03T13:14:33.359742",
         "param_seed": 42,
         "svg_generation": "deterministic_python_string"
+      }
+    },
+    {
+      "question_id": "Q6-ARG-001",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "逻辑判断（加强论证）",
+      "difficulty": 1,
+      "direction": "strengthen",
+      "argument_type": "因果论证",
+      "argument": {
+        "premise": "某城市在推广共享单车后，市民的短途出行时间平均缩短了15%。",
+        "conclusion": "共享单车的推广是导致市民短途出行时间缩短的原因。"
+      },
+      "stem": "某城市在推广共享单车后，市民的短途出行时间平均缩短了15%。\n共享单车的推广是导致市民短途出行时间缩短的原因。\n以下哪项如果为真，最能加强上述论证？",
+      "options": {
+        "A": "该城市的人口在过去一年中增长了5%。",
+        "B": "在推广共享单车期间，该城市的公共交通班次和道路状况没有发生明显变化。",
+        "C": "共享单车的颜色鲜艳，容易被市民注意到。",
+        "D": "有些市民认为共享单车比公交车更方便。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "该城市的人口在过去一年中增长了5%。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "偷换概念（人口增长与出行时间缩短没有直接因果关系）"
+        },
+        "B": {
+          "content": "在推广共享单车期间，该城市的公共交通班次和道路状况没有发生明显变化。",
+          "is_correct": true,
+          "mechanism": "排除他因（排除公共交通改善、道路扩建等其他可能导致出行时间缩短的因素）",
+          "weakness_type": null
+        },
+        "C": {
+          "content": "共享单车的颜色鲜艳，容易被市民注意到。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "无关选项（颜色与出行时间无逻辑关联）"
+        },
+        "D": {
+          "content": "有些市民认为共享单车比公交车更方便。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "力度不足（主观感受不能作为因果关系的有力证据，且'有些'范围有限）"
+        }
+      },
+      "answer": "B",
+      "explanation": "【论证类型】因果论证\n【论证结构】论据：某城市在推广共享单车后，市民的短途出行时间平均缩短了15%。\n          结论：共享单车的推广是导致市民短途出行时间缩短的原因。\n\n【正确选项】B — 排除他因（排除公共交通改善、道路扩建等其他可能导致出行时间缩短的因素）\n  在推广共享单车期间，该城市的公共交通班次和道路状况没有发生明显变化。\n\n【干扰项分析】\n  A项：偷换概念（人口增长与出行时间缩短没有直接因果关系）\n    该城市的人口在过去一年中增长了5%。\n  C项：无关选项（颜色与出行时间无逻辑关联）\n    共享单车的颜色鲜艳，容易被市民注意到。\n  D项：力度不足（主观感受不能作为因果关系的有力证据，且'有些'范围有限）\n    有些市民认为共享单车比公交车更方便。\n\n【双求解验证】规则引擎：通过；关键词重叠：通过\n故本题选B。",
+      "dual_solve": {
+        "solver_a": {
+          "method": "规则引擎（论证类型×加强/削弱策略匹配）",
+          "valid": true,
+          "arg_type": "因果论证",
+          "mechanism": "排除他因（排除公共交通改善、道路扩建等其他可能导致出行时间缩短的因素）",
+          "valid_strategies": [
+            "排除他因",
+            "建立联系",
+            "确认假设"
+          ]
+        },
+        "solver_b": {
+          "method": "关键词重叠度比较",
+          "valid": true,
+          "correct_overlap": 0,
+          "distractor_overlaps": [
+            0,
+            0,
+            0
+          ]
+        },
+        "match": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "dual_solve_match": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360020",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ARG-002",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "逻辑判断（加强论证）",
+      "difficulty": 2,
+      "direction": "strengthen",
+      "argument_type": "统计论证",
+      "argument": {
+        "premise": "一项对1000名上班族的调查显示，每天午休20分钟的人比不午休的人工作效率高出23%。",
+        "conclusion": "午休可以提高上班族的工作效率。"
+      },
+      "stem": "一项对1000名上班族的调查显示，每天午休20分钟的人比不午休的人工作效率高出23%。\n午休可以提高上班族的工作效率。\n以下哪项如果为真，最能加强上述论证？",
+      "options": {
+        "A": "午休时间过长可能会影响下午的精神状态。",
+        "B": "有些公司已经开始推行午休制度。",
+        "C": "午休时最好选择安静的环境。",
+        "D": "调查中两组人群在年龄、工作性质、睡眠时长等方面基本一致。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "午休时间过长可能会影响下午的精神状态。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "力度不足（讨论的是'过长'的情况，题干是20分钟，且仅指出潜在风险而非否定结论）"
+        },
+        "B": {
+          "content": "有些公司已经开始推行午休制度。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "诉诸流行（公司推行不代表午休一定能提高效率）"
+        },
+        "C": {
+          "content": "午休时最好选择安静的环境。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "无关选项（午休环境建议与'午休是否提高效率'的论证无关）"
+        },
+        "D": {
+          "content": "调查中两组人群在年龄、工作性质、睡眠时长等方面基本一致。",
+          "is_correct": true,
+          "mechanism": "确认前提假设（排除样本偏差，确保两组除午休外其他条件相同，增强统计结论的可靠性）",
+          "weakness_type": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【论证类型】统计论证\n【论证结构】论据：一项对1000名上班族的调查显示，每天午休20分钟的人比不午休的人工作效率高出23%。\n          结论：午休可以提高上班族的工作效率。\n\n【正确选项】D — 确认前提假设（排除样本偏差，确保两组除午休外其他条件相同，增强统计结论的可靠性）\n  调查中两组人群在年龄、工作性质、睡眠时长等方面基本一致。\n\n【干扰项分析】\n  A项：力度不足（讨论的是'过长'的情况，题干是20分钟，且仅指出潜在风险而非否定结论）\n    午休时间过长可能会影响下午的精神状态。\n  B项：诉诸流行（公司推行不代表午休一定能提高效率）\n    有些公司已经开始推行午休制度。\n  C项：无关选项（午休环境建议与'午休是否提高效率'的论证无关）\n    午休时最好选择安静的环境。\n\n【双求解验证】规则引擎：通过；关键词重叠：通过\n故本题选D。",
+      "dual_solve": {
+        "solver_a": {
+          "method": "规则引擎（论证类型×加强/削弱策略匹配）",
+          "valid": true,
+          "arg_type": "统计论证",
+          "mechanism": "确认前提假设（排除样本偏差，确保两组除午休外其他条件相同，增强统计结论的可靠性）",
+          "valid_strategies": [
+            "确认前提假设",
+            "排除样本偏差",
+            "建立联系"
+          ]
+        },
+        "solver_b": {
+          "method": "关键词重叠度比较",
+          "valid": true,
+          "correct_overlap": 0,
+          "distractor_overlaps": [
+            0,
+            0,
+            0
+          ]
+        },
+        "match": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "dual_solve_match": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360050",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ARG-003",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "逻辑判断（加强论证）",
+      "difficulty": 2,
+      "direction": "strengthen",
+      "argument_type": "类比论证",
+      "argument": {
+        "premise": "A品牌手机采用了新型散热技术，在连续运行大型游戏时温度比同类产品低8度。",
+        "conclusion": "B品牌笔记本电脑如果采用同样的散热技术，也能在高负载运行时降低温度。"
+      },
+      "stem": "A品牌手机采用了新型散热技术，在连续运行大型游戏时温度比同类产品低8度。\nB品牌笔记本电脑如果采用同样的散热技术，也能在高负载运行时降低温度。\n以下哪项如果为真，最能加强上述论证？",
+      "options": {
+        "A": "手机和笔记本电脑在散热原理上高度相似，都依赖导热管和风扇将热量从芯片导出。",
+        "B": "B品牌笔记本电脑的外观设计很时尚。",
+        "C": "有些用户反映B品牌笔记本电脑在高负载时温度较高。",
+        "D": "A品牌手机的销量在过去一年中增长了30%。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "手机和笔记本电脑在散热原理上高度相似，都依赖导热管和风扇将热量从芯片导出。",
+          "is_correct": true,
+          "mechanism": "建立联系（确认类比对象在关键属性上相似，使类比推理成立）",
+          "weakness_type": null
+        },
+        "B": {
+          "content": "B品牌笔记本电脑的外观设计很时尚。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "无关选项（外观与散热技术效果无关）"
+        },
+        "C": {
+          "content": "有些用户反映B品牌笔记本电脑在高负载时温度较高。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "力度不足（仅说明存在问题，不能证明该技术一定能解决问题）"
+        },
+        "D": {
+          "content": "A品牌手机的销量在过去一年中增长了30%。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "偷换概念（销量增长与散热技术能否跨产品应用无关）"
+        }
+      },
+      "answer": "A",
+      "explanation": "【论证类型】类比论证\n【论证结构】论据：A品牌手机采用了新型散热技术，在连续运行大型游戏时温度比同类产品低8度。\n          结论：B品牌笔记本电脑如果采用同样的散热技术，也能在高负载运行时降低温度。\n\n【正确选项】A — 建立联系（确认类比对象在关键属性上相似，使类比推理成立）\n  手机和笔记本电脑在散热原理上高度相似，都依赖导热管和风扇将热量从芯片导出。\n\n【干扰项分析】\n  B项：无关选项（外观与散热技术效果无关）\n    B品牌笔记本电脑的外观设计很时尚。\n  C项：力度不足（仅说明存在问题，不能证明该技术一定能解决问题）\n    有些用户反映B品牌笔记本电脑在高负载时温度较高。\n  D项：偷换概念（销量增长与散热技术能否跨产品应用无关）\n    A品牌手机的销量在过去一年中增长了30%。\n\n【双求解验证】规则引擎：通过；关键词重叠：通过\n故本题选A。",
+      "dual_solve": {
+        "solver_a": {
+          "method": "规则引擎（论证类型×加强/削弱策略匹配）",
+          "valid": true,
+          "arg_type": "类比论证",
+          "mechanism": "建立联系（确认类比对象在关键属性上相似，使类比推理成立）",
+          "valid_strategies": [
+            "建立联系",
+            "确认相似性",
+            "排除差异"
+          ]
+        },
+        "solver_b": {
+          "method": "关键词重叠度比较",
+          "valid": true,
+          "correct_overlap": 0,
+          "distractor_overlaps": [
+            0,
+            0,
+            0
+          ]
+        },
+        "match": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "dual_solve_match": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360076",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ARG-004",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "逻辑判断（加强论证）",
+      "difficulty": 3,
+      "direction": "strengthen",
+      "argument_type": "前提假设",
+      "argument": {
+        "premise": "在过去五年中，某地区的森林覆盖率从25%提升到了40%。",
+        "conclusion": "该地区的生态环境在过去五年中得到了显著改善。"
+      },
+      "stem": "在过去五年中，某地区的森林覆盖率从25%提升到了40%。\n该地区的生态环境在过去五年中得到了显著改善。\n以下哪项如果为真，最能加强上述论证？",
+      "options": {
+        "A": "森林覆盖率的提升主要得益于政府的植树造林政策。",
+        "B": "该地区的旅游业在过去五年中也有了较大发展。",
+        "C": "森林覆盖率是衡量地区生态环境状况的核心指标之一，其提升直接反映生态改善。",
+        "D": "有专家认为该地区的生态环境还有进一步提升的空间。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "森林覆盖率的提升主要得益于政府的植树造林政策。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "偷换概念（解释覆盖率提升的原因，不能直接证明生态环境改善）"
+        },
+        "B": {
+          "content": "该地区的旅游业在过去五年中也有了较大发展。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "无关选项（旅游业发展与生态环境改善没有直接逻辑关联）"
+        },
+        "C": {
+          "content": "森林覆盖率是衡量地区生态环境状况的核心指标之一，其提升直接反映生态改善。",
+          "is_correct": true,
+          "mechanism": "确认前提假设（建立'森林覆盖率提升'与'生态环境改善'之间的必然联系，填补论证缺口）",
+          "weakness_type": null
+        },
+        "D": {
+          "content": "有专家认为该地区的生态环境还有进一步提升的空间。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "诉诸权威（专家观点不能作为生态已改善的直接证据，且'还有空间'不否定已改善）"
+        }
+      },
+      "answer": "C",
+      "explanation": "【论证类型】前提假设\n【论证结构】论据：在过去五年中，某地区的森林覆盖率从25%提升到了40%。\n          结论：该地区的生态环境在过去五年中得到了显著改善。\n\n【正确选项】C — 确认前提假设（建立'森林覆盖率提升'与'生态环境改善'之间的必然联系，填补论证缺口）\n  森林覆盖率是衡量地区生态环境状况的核心指标之一，其提升直接反映生态改善。\n\n【干扰项分析】\n  A项：偷换概念（解释覆盖率提升的原因，不能直接证明生态环境改善）\n    森林覆盖率的提升主要得益于政府的植树造林政策。\n  B项：无关选项（旅游业发展与生态环境改善没有直接逻辑关联）\n    该地区的旅游业在过去五年中也有了较大发展。\n  D项：诉诸权威（专家观点不能作为生态已改善的直接证据，且'还有空间'不否定已改善）\n    有专家认为该地区的生态环境还有进一步提升的空间。\n\n【双求解验证】规则引擎：通过；关键词重叠：通过\n故本题选C。",
+      "dual_solve": {
+        "solver_a": {
+          "method": "规则引擎（论证类型×加强/削弱策略匹配）",
+          "valid": true,
+          "arg_type": "前提假设",
+          "mechanism": "确认前提假设（建立'森林覆盖率提升'与'生态环境改善'之间的必然联系，填补论证缺口）",
+          "valid_strategies": [
+            "确认前提假设",
+            "建立联系",
+            "填补缺口"
+          ]
+        },
+        "solver_b": {
+          "method": "关键词重叠度比较",
+          "valid": true,
+          "correct_overlap": 0,
+          "distractor_overlaps": [
+            0,
+            0,
+            0
+          ]
+        },
+        "match": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "dual_solve_match": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360098",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ARG-005",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "逻辑判断（加强论证）",
+      "difficulty": 2,
+      "direction": "strengthen",
+      "argument_type": "因果论证",
+      "argument": {
+        "premise": "某校推行'每天阅读30分钟'计划一学期后，学生的语文平均成绩提高了12分。",
+        "conclusion": "每天阅读30分钟是学生语文成绩提高的原因。"
+      },
+      "stem": "某校推行'每天阅读30分钟'计划一学期后，学生的语文平均成绩提高了12分。\n每天阅读30分钟是学生语文成绩提高的原因。\n以下哪项如果为真，最能加强上述论证？",
+      "options": {
+        "A": "阅读计划使用的书籍都是经过精心挑选的经典作品。",
+        "B": "该校在推行阅读计划期间，语文教材、教学方法和师资力量均未发生变化。",
+        "C": "很多家长支持学校推行阅读计划。",
+        "D": "该校学生的数学成绩在同一时期也有所提高。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "阅读计划使用的书籍都是经过精心挑选的经典作品。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "力度不足（书籍质量好只能说明计划设计合理，不能直接证明阅读本身导致成绩提高）"
+        },
+        "B": {
+          "content": "该校在推行阅读计划期间，语文教材、教学方法和师资力量均未发生变化。",
+          "is_correct": true,
+          "mechanism": "排除他因（排除教材更新、教学方法改进、师资变化等其他可能导致成绩提高的因素）",
+          "weakness_type": null
+        },
+        "C": {
+          "content": "很多家长支持学校推行阅读计划。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "诉诸情感（家长支持不代表阅读计划是成绩提高的原因）"
+        },
+        "D": {
+          "content": "该校学生的数学成绩在同一时期也有所提高。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "偷换概念（数学成绩提高与语文成绩提高的原因无关，可能由其他因素导致）"
+        }
+      },
+      "answer": "B",
+      "explanation": "【论证类型】因果论证\n【论证结构】论据：某校推行'每天阅读30分钟'计划一学期后，学生的语文平均成绩提高了12分。\n          结论：每天阅读30分钟是学生语文成绩提高的原因。\n\n【正确选项】B — 排除他因（排除教材更新、教学方法改进、师资变化等其他可能导致成绩提高的因素）\n  该校在推行阅读计划期间，语文教材、教学方法和师资力量均未发生变化。\n\n【干扰项分析】\n  A项：力度不足（书籍质量好只能说明计划设计合理，不能直接证明阅读本身导致成绩提高）\n    阅读计划使用的书籍都是经过精心挑选的经典作品。\n  C项：诉诸情感（家长支持不代表阅读计划是成绩提高的原因）\n    很多家长支持学校推行阅读计划。\n  D项：偷换概念（数学成绩提高与语文成绩提高的原因无关，可能由其他因素导致）\n    该校学生的数学成绩在同一时期也有所提高。\n\n【双求解验证】规则引擎：通过；关键词重叠：通过\n故本题选B。",
+      "dual_solve": {
+        "solver_a": {
+          "method": "规则引擎（论证类型×加强/削弱策略匹配）",
+          "valid": true,
+          "arg_type": "因果论证",
+          "mechanism": "排除他因（排除教材更新、教学方法改进、师资变化等其他可能导致成绩提高的因素）",
+          "valid_strategies": [
+            "排除他因",
+            "建立联系",
+            "确认假设"
+          ]
+        },
+        "solver_b": {
+          "method": "关键词重叠度比较",
+          "valid": true,
+          "correct_overlap": 0,
+          "distractor_overlaps": [
+            0,
+            0,
+            0
+          ]
+        },
+        "match": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "dual_solve_match": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360121",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ARG-006",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "逻辑判断（削弱论证）",
+      "difficulty": 1,
+      "direction": "weaken",
+      "argument_type": "因果论证",
+      "argument": {
+        "premise": "某公司在实行弹性工作制后，员工的离职率从15%下降到了8%。",
+        "conclusion": "弹性工作制是导致员工离职率下降的原因。"
+      },
+      "stem": "某公司在实行弹性工作制后，员工的离职率从15%下降到了8%。\n弹性工作制是导致员工离职率下降的原因。\n以下哪项如果为真，最能削弱上述论证？",
+      "options": {
+        "A": "有些员工表示弹性工作制对他们的帮助不大。",
+        "B": "弹性工作制允许员工自行安排上下班时间。",
+        "C": "该公司的竞争对手也实行了类似的弹性工作制。",
+        "D": "在实行弹性工作制的同一时期，该公司大幅提高了员工的薪资和福利待遇。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "有些员工表示弹性工作制对他们的帮助不大。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "力度不足（'有些'员工的主观感受不能否定整体离职率下降与弹性工作制的关联）"
+        },
+        "B": {
+          "content": "弹性工作制允许员工自行安排上下班时间。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "无关选项（解释弹性工作制的内容，不能削弱因果关系）"
+        },
+        "C": {
+          "content": "该公司的竞争对手也实行了类似的弹性工作制。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "偷换概念（竞争对手的做法与该公司离职率下降的原因无关）"
+        },
+        "D": {
+          "content": "在实行弹性工作制的同一时期，该公司大幅提高了员工的薪资和福利待遇。",
+          "is_correct": true,
+          "mechanism": "提出他因（薪资福利提升才是离职率下降的真正原因，切断弹性工作制与离职率下降的因果联系）",
+          "weakness_type": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【论证类型】因果论证\n【论证结构】论据：某公司在实行弹性工作制后，员工的离职率从15%下降到了8%。\n          结论：弹性工作制是导致员工离职率下降的原因。\n\n【正确选项】D — 提出他因（薪资福利提升才是离职率下降的真正原因，切断弹性工作制与离职率下降的因果联系）\n  在实行弹性工作制的同一时期，该公司大幅提高了员工的薪资和福利待遇。\n\n【干扰项分析】\n  A项：力度不足（'有些'员工的主观感受不能否定整体离职率下降与弹性工作制的关联）\n    有些员工表示弹性工作制对他们的帮助不大。\n  B项：无关选项（解释弹性工作制的内容，不能削弱因果关系）\n    弹性工作制允许员工自行安排上下班时间。\n  C项：偷换概念（竞争对手的做法与该公司离职率下降的原因无关）\n    该公司的竞争对手也实行了类似的弹性工作制。\n\n【双求解验证】规则引擎：通过；关键词重叠：通过\n故本题选D。",
+      "dual_solve": {
+        "solver_a": {
+          "method": "规则引擎（论证类型×加强/削弱策略匹配）",
+          "valid": true,
+          "arg_type": "因果论证",
+          "mechanism": "提出他因（薪资福利提升才是离职率下降的真正原因，切断弹性工作制与离职率下降的因果联系）",
+          "valid_strategies": [
+            "提出他因",
+            "切断联系",
+            "因果倒置"
+          ]
+        },
+        "solver_b": {
+          "method": "关键词重叠度比较",
+          "valid": true,
+          "correct_overlap": 0,
+          "distractor_overlaps": [
+            0,
+            0,
+            0
+          ]
+        },
+        "match": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "dual_solve_match": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360141",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ARG-007",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "逻辑判断（削弱论证）",
+      "difficulty": 2,
+      "direction": "weaken",
+      "argument_type": "统计论证",
+      "argument": {
+        "premise": "一项在线调查显示，80%的受访者表示更喜欢在线购物而非实体店购物。",
+        "conclusion": "在线购物已经成为大多数消费者的首选购物方式。"
+      },
+      "stem": "一项在线调查显示，80%的受访者表示更喜欢在线购物而非实体店购物。\n在线购物已经成为大多数消费者的首选购物方式。\n以下哪项如果为真，最能削弱上述论证？",
+      "options": {
+        "A": "该在线调查的受访者主要是经常上网的年轻人群体，未涵盖中老年和不常上网的人群。",
+        "B": "调查的样本量达到了5000人。",
+        "C": "有些实体店也开始提供在线下单服务。",
+        "D": "在线购物的商品种类比实体店更丰富。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "该在线调查的受访者主要是经常上网的年轻人群体，未涵盖中老年和不常上网的人群。",
+          "is_correct": true,
+          "mechanism": "指出样本偏差（调查样本不具有代表性，仅覆盖特定人群，不能推广到'大多数消费者'）",
+          "weakness_type": null
+        },
+        "B": {
+          "content": "调查的样本量达到了5000人。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "力度不足（样本量大不代表样本有代表性，且这反而可能加强结论的表面可信度）"
+        },
+        "C": {
+          "content": "有些实体店也开始提供在线下单服务。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "偷换概念（实体店的线上服务与消费者首选哪种购物方式无关）"
+        },
+        "D": {
+          "content": "在线购物的商品种类比实体店更丰富。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "无关选项（商品种类丰富是在线购物的优势，不能削弱结论）"
+        }
+      },
+      "answer": "A",
+      "explanation": "【论证类型】统计论证\n【论证结构】论据：一项在线调查显示，80%的受访者表示更喜欢在线购物而非实体店购物。\n          结论：在线购物已经成为大多数消费者的首选购物方式。\n\n【正确选项】A — 指出样本偏差（调查样本不具有代表性，仅覆盖特定人群，不能推广到'大多数消费者'）\n  该在线调查的受访者主要是经常上网的年轻人群体，未涵盖中老年和不常上网的人群。\n\n【干扰项分析】\n  B项：力度不足（样本量大不代表样本有代表性，且这反而可能加强结论的表面可信度）\n    调查的样本量达到了5000人。\n  C项：偷换概念（实体店的线上服务与消费者首选哪种购物方式无关）\n    有些实体店也开始提供在线下单服务。\n  D项：无关选项（商品种类丰富是在线购物的优势，不能削弱结论）\n    在线购物的商品种类比实体店更丰富。\n\n【双求解验证】规则引擎：通过；关键词重叠：通过\n故本题选A。",
+      "dual_solve": {
+        "solver_a": {
+          "method": "规则引擎（论证类型×加强/削弱策略匹配）",
+          "valid": true,
+          "arg_type": "统计论证",
+          "mechanism": "指出样本偏差（调查样本不具有代表性，仅覆盖特定人群，不能推广到'大多数消费者'）",
+          "valid_strategies": [
+            "指出样本偏差",
+            "切断联系",
+            "否定假设"
+          ]
+        },
+        "solver_b": {
+          "method": "关键词重叠度比较",
+          "valid": true,
+          "correct_overlap": 0,
+          "distractor_overlaps": [
+            0,
+            0,
+            0
+          ]
+        },
+        "match": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "dual_solve_match": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360161",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ARG-008",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "逻辑判断（削弱论证）",
+      "difficulty": 2,
+      "direction": "weaken",
+      "argument_type": "类比论证",
+      "argument": {
+        "premise": "甲市在市中心修建了大型步行街后，商业零售额增长了25%。",
+        "conclusion": "乙市如果在市中心修建同样的步行街，也能实现商业零售额的显著增长。"
+      },
+      "stem": "甲市在市中心修建了大型步行街后，商业零售额增长了25%。\n乙市如果在市中心修建同样的步行街，也能实现商业零售额的显著增长。\n以下哪项如果为真，最能削弱上述论证？",
+      "options": {
+        "A": "甲市的步行街吸引了很多外地游客。",
+        "B": "有专家认为步行街模式已经过时。",
+        "C": "甲市市中心原本就有密集的人流和成熟的商业基础，而乙市市中心人口稀少、商业基础薄弱。",
+        "D": "步行街的建设需要投入大量资金。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "甲市的步行街吸引了很多外地游客。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "偷换概念（解释甲市增长的原因，但不能直接削弱乙市也能增长的结论）"
+        },
+        "B": {
+          "content": "有专家认为步行街模式已经过时。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "诉诸权威（专家观点不能作为乙市步行街不会成功的直接证据）"
+        },
+        "C": {
+          "content": "甲市市中心原本就有密集的人流和成熟的商业基础，而乙市市中心人口稀少、商业基础薄弱。",
+          "is_correct": true,
+          "mechanism": "切断联系（指出类比对象在关键属性上存在本质差异，类比推理不成立）",
+          "weakness_type": null
+        },
+        "D": {
+          "content": "步行街的建设需要投入大量资金。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "无关选项（建设成本与步行街能否带来零售额增长无关）"
+        }
+      },
+      "answer": "C",
+      "explanation": "【论证类型】类比论证\n【论证结构】论据：甲市在市中心修建了大型步行街后，商业零售额增长了25%。\n          结论：乙市如果在市中心修建同样的步行街，也能实现商业零售额的显著增长。\n\n【正确选项】C — 切断联系（指出类比对象在关键属性上存在本质差异，类比推理不成立）\n  甲市市中心原本就有密集的人流和成熟的商业基础，而乙市市中心人口稀少、商业基础薄弱。\n\n【干扰项分析】\n  A项：偷换概念（解释甲市增长的原因，但不能直接削弱乙市也能增长的结论）\n    甲市的步行街吸引了很多外地游客。\n  B项：诉诸权威（专家观点不能作为乙市步行街不会成功的直接证据）\n    有专家认为步行街模式已经过时。\n  D项：无关选项（建设成本与步行街能否带来零售额增长无关）\n    步行街的建设需要投入大量资金。\n\n【双求解验证】规则引擎：通过；关键词重叠：通过\n故本题选C。",
+      "dual_solve": {
+        "solver_a": {
+          "method": "规则引擎（论证类型×加强/削弱策略匹配）",
+          "valid": true,
+          "arg_type": "类比论证",
+          "mechanism": "切断联系（指出类比对象在关键属性上存在本质差异，类比推理不成立）",
+          "valid_strategies": [
+            "切断联系",
+            "指出差异",
+            "否定相似性"
+          ]
+        },
+        "solver_b": {
+          "method": "关键词重叠度比较",
+          "valid": true,
+          "correct_overlap": 0,
+          "distractor_overlaps": [
+            0,
+            0,
+            0
+          ]
+        },
+        "match": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "dual_solve_match": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360181",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ARG-009",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "逻辑判断（削弱论证）",
+      "difficulty": 3,
+      "direction": "weaken",
+      "argument_type": "前提假设",
+      "argument": {
+        "premise": "某品牌新能源汽车的续航里程达到了600公里，远超同级别其他车型。",
+        "conclusion": "该品牌新能源汽车将在未来一年内成为同级别销量冠军。"
+      },
+      "stem": "某品牌新能源汽车的续航里程达到了600公里，远超同级别其他车型。\n该品牌新能源汽车将在未来一年内成为同级别销量冠军。\n以下哪项如果为真，最能削弱上述论证？",
+      "options": {
+        "A": "有些消费者对新能源汽车的安全性表示担忧。",
+        "B": "续航里程只是消费者购车时考虑的因素之一，价格、充电便利性、品牌口碑等同样重要，而该品牌在这些方面并无优势。",
+        "C": "新能源汽车市场在过去一年中增长了40%。",
+        "D": "该品牌汽车的外观设计比较独特。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "有些消费者对新能源汽车的安全性表示担忧。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "力度不足（'有些'消费者的担忧范围有限，且针对的是整个新能源汽车品类而非该品牌）"
+        },
+        "B": {
+          "content": "续航里程只是消费者购车时考虑的因素之一，价格、充电便利性、品牌口碑等同样重要，而该品牌在这些方面并无优势。",
+          "is_correct": true,
+          "mechanism": "否定前提假设（论证假设了'续航里程最长就一定销量最高'，正确项指出这一假设不成立，续航不是唯一决定因素）",
+          "weakness_type": null
+        },
+        "C": {
+          "content": "新能源汽车市场在过去一年中增长了40%。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "偷换概念（市场整体增长不能说明该品牌一定能成为销量冠军）"
+        },
+        "D": {
+          "content": "该品牌汽车的外观设计比较独特。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "无关选项（外观设计与销量冠军预测没有直接逻辑关联）"
+        }
+      },
+      "answer": "B",
+      "explanation": "【论证类型】前提假设\n【论证结构】论据：某品牌新能源汽车的续航里程达到了600公里，远超同级别其他车型。\n          结论：该品牌新能源汽车将在未来一年内成为同级别销量冠军。\n\n【正确选项】B — 否定前提假设（论证假设了'续航里程最长就一定销量最高'，正确项指出这一假设不成立，续航不是唯一决定因素）\n  续航里程只是消费者购车时考虑的因素之一，价格、充电便利性、品牌口碑等同样重要，而该品牌在这些方面并无优势。\n\n【干扰项分析】\n  A项：力度不足（'有些'消费者的担忧范围有限，且针对的是整个新能源汽车品类而非该品牌）\n    有些消费者对新能源汽车的安全性表示担忧。\n  C项：偷换概念（市场整体增长不能说明该品牌一定能成为销量冠军）\n    新能源汽车市场在过去一年中增长了40%。\n  D项：无关选项（外观设计与销量冠军预测没有直接逻辑关联）\n    该品牌汽车的外观设计比较独特。\n\n【双求解验证】规则引擎：通过；关键词重叠：通过\n故本题选B。",
+      "dual_solve": {
+        "solver_a": {
+          "method": "规则引擎（论证类型×加强/削弱策略匹配）",
+          "valid": true,
+          "arg_type": "前提假设",
+          "mechanism": "否定前提假设（论证假设了'续航里程最长就一定销量最高'，正确项指出这一假设不成立，续航不是唯一决定因素）",
+          "valid_strategies": [
+            "否定前提假设",
+            "切断联系",
+            "指出缺口"
+          ]
+        },
+        "solver_b": {
+          "method": "关键词重叠度比较",
+          "valid": true,
+          "correct_overlap": 0,
+          "distractor_overlaps": [
+            0,
+            0,
+            0
+          ]
+        },
+        "match": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "dual_solve_match": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360201",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ARG-010",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "逻辑判断（削弱论证）",
+      "difficulty": 3,
+      "direction": "weaken",
+      "argument_type": "因果论证",
+      "argument": {
+        "premise": "某研究发现，经常喝绿茶的人患心血管疾病的概率比不喝绿茶的人低30%。",
+        "conclusion": "喝绿茶可以降低患心血管疾病的风险。"
+      },
+      "stem": "某研究发现，经常喝绿茶的人患心血管疾病的概率比不喝绿茶的人低30%。\n喝绿茶可以降低患心血管疾病的风险。\n以下哪项如果为真，最能削弱上述论证？",
+      "options": {
+        "A": "经常喝绿茶的人往往同时具有更健康的生活习惯，如规律运动、饮食清淡、不吸烟等，这些因素才是心血管疾病发病率低的真正原因。",
+        "B": "该研究的样本量超过了10000人。",
+        "C": "有些人喝绿茶后会出现失眠的情况。",
+        "D": "绿茶中含有多种对人体有益的抗氧化物质。"
+      },
+      "options_detail": {
+        "A": {
+          "content": "经常喝绿茶的人往往同时具有更健康的生活习惯，如规律运动、饮食清淡、不吸烟等，这些因素才是心血管疾病发病率低的真正原因。",
+          "is_correct": true,
+          "mechanism": "提出他因（健康生活习惯才是发病率低的真正原因，喝绿茶与发病率低只是相关关系而非因果关系）",
+          "weakness_type": null
+        },
+        "B": {
+          "content": "该研究的样本量超过了10000人。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "偷换概念（样本量大说明研究规模大，但不能削弱因果关系结论）"
+        },
+        "C": {
+          "content": "有些人喝绿茶后会出现失眠的情况。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "力度不足（'有些人'的副作用不能否定绿茶对心血管的整体益处，且失眠与心血管疾病无关）"
+        },
+        "D": {
+          "content": "绿茶中含有多种对人体有益的抗氧化物质。",
+          "is_correct": false,
+          "mechanism": null,
+          "weakness_type": "无关选项（绿茶的有益成分反而可能加强结论，不能削弱）"
+        }
+      },
+      "answer": "A",
+      "explanation": "【论证类型】因果论证\n【论证结构】论据：某研究发现，经常喝绿茶的人患心血管疾病的概率比不喝绿茶的人低30%。\n          结论：喝绿茶可以降低患心血管疾病的风险。\n\n【正确选项】A — 提出他因（健康生活习惯才是发病率低的真正原因，喝绿茶与发病率低只是相关关系而非因果关系）\n  经常喝绿茶的人往往同时具有更健康的生活习惯，如规律运动、饮食清淡、不吸烟等，这些因素才是心血管疾病发病率低的真正原因。\n\n【干扰项分析】\n  B项：偷换概念（样本量大说明研究规模大，但不能削弱因果关系结论）\n    该研究的样本量超过了10000人。\n  C项：力度不足（'有些人'的副作用不能否定绿茶对心血管的整体益处，且失眠与心血管疾病无关）\n    有些人喝绿茶后会出现失眠的情况。\n  D项：无关选项（绿茶的有益成分反而可能加强结论，不能削弱）\n    绿茶中含有多种对人体有益的抗氧化物质。\n\n【双求解验证】规则引擎：通过；关键词重叠：通过\n故本题选A。",
+      "dual_solve": {
+        "solver_a": {
+          "method": "规则引擎（论证类型×加强/削弱策略匹配）",
+          "valid": true,
+          "arg_type": "因果论证",
+          "mechanism": "提出他因（健康生活习惯才是发病率低的真正原因，喝绿茶与发病率低只是相关关系而非因果关系）",
+          "valid_strategies": [
+            "提出他因",
+            "切断联系",
+            "因果倒置"
+          ]
+        },
+        "solver_b": {
+          "method": "关键词重叠度比较",
+          "valid": true,
+          "correct_overlap": 0,
+          "distractor_overlaps": [
+            0,
+            0,
+            0
+          ]
+        },
+        "match": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "dual_solve_match": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360222",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ANA-001",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "difficulty": 1,
+      "relation_type": "种属关系",
+      "stem_pair": {
+        "a": "苹果",
+        "b": "水果"
+      },
+      "stem": "苹果：水果\n下列哪项与题干逻辑关系最为一致？",
+      "options": {
+        "A": "剪刀：裁剪",
+        "B": "老虎：哺乳动物",
+        "C": "水果：苹果",
+        "D": "轮胎：汽车"
+      },
+      "options_detail": {
+        "A": {
+          "content": "剪刀：裁剪",
+          "a": "剪刀",
+          "b": "裁剪",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（功能关系，非种属关系）"
+        },
+        "B": {
+          "content": "老虎：哺乳动物",
+          "a": "老虎",
+          "b": "哺乳动物",
+          "is_correct": true,
+          "relation_type": "种属关系",
+          "relation_mismatch": null
+        },
+        "C": {
+          "content": "水果：苹果",
+          "a": "水果",
+          "b": "苹果",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "方向错误（大概念:小概念，与题干方向相反）"
+        },
+        "D": {
+          "content": "轮胎：汽车",
+          "a": "轮胎",
+          "b": "汽车",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（组成关系，非种属关系）"
+        }
+      },
+      "answer": "B",
+      "explanation": "【关系类型】种属关系\n【关系说明】A是B的一种（is-a），A是小概念，B是大概念\n【题干】苹果：水果（种属关系）\n\n【正确选项】B — 老虎：哺乳动物（与题干同为种属关系）\n\n【干扰项分析】\n  A项：剪刀：裁剪\n    关系类型错误（功能关系，非种属关系）\n  C项：水果：苹果\n    方向错误（大概念:小概念，与题干方向相反）\n  D项：轮胎：汽车\n    关系类型错误（组成关系，非种属关系）\n\n故本题选B。",
+      "verification_result": {
+        "stem_match": true,
+        "correct_match": true,
+        "distractors_mismatch": [
+          {
+            "pair": "轮胎:汽车",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（组成关系，非种属关系）"
+          },
+          {
+            "pair": "水果:苹果",
+            "mismatch_annotated": true,
+            "mismatch_type": "方向错误（大概念:小概念，与题干方向相反）"
+          },
+          {
+            "pair": "剪刀:裁剪",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（功能关系，非种属关系）"
+          }
+        ],
+        "all_valid": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "relation_verification_passed": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360250",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ANA-002",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "difficulty": 1,
+      "relation_type": "组成关系",
+      "stem_pair": {
+        "a": "轮胎",
+        "b": "汽车"
+      },
+      "stem": "轮胎：汽车\n下列哪项与题干逻辑关系最为一致？",
+      "options": {
+        "A": "苹果：水果",
+        "B": "汽车：轮胎",
+        "C": "下雨：地湿",
+        "D": "键盘：电脑"
+      },
+      "options_detail": {
+        "A": {
+          "content": "苹果：水果",
+          "a": "苹果",
+          "b": "水果",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（种属关系，非组成关系）"
+        },
+        "B": {
+          "content": "汽车：轮胎",
+          "a": "汽车",
+          "b": "轮胎",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "方向错误（整体:部分，与题干部分:整体方向相反）"
+        },
+        "C": {
+          "content": "下雨：地湿",
+          "a": "下雨",
+          "b": "地湿",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（因果关系，非组成关系）"
+        },
+        "D": {
+          "content": "键盘：电脑",
+          "a": "键盘",
+          "b": "电脑",
+          "is_correct": true,
+          "relation_type": "组成关系",
+          "relation_mismatch": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【关系类型】组成关系\n【关系说明】A是B的组成部分（part-of），A是部分，B是整体\n【题干】轮胎：汽车（组成关系）\n\n【正确选项】D — 键盘：电脑（与题干同为组成关系）\n\n【干扰项分析】\n  A项：苹果：水果\n    关系类型错误（种属关系，非组成关系）\n  B项：汽车：轮胎\n    方向错误（整体:部分，与题干部分:整体方向相反）\n  C项：下雨：地湿\n    关系类型错误（因果关系，非组成关系）\n\n故本题选D。",
+      "verification_result": {
+        "stem_match": true,
+        "correct_match": true,
+        "distractors_mismatch": [
+          {
+            "pair": "苹果:水果",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（种属关系，非组成关系）"
+          },
+          {
+            "pair": "汽车:轮胎",
+            "mismatch_annotated": true,
+            "mismatch_type": "方向错误（整体:部分，与题干部分:整体方向相反）"
+          },
+          {
+            "pair": "下雨:地湿",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（因果关系，非组成关系）"
+          }
+        ],
+        "all_valid": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "relation_verification_passed": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360273",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ANA-003",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "difficulty": 2,
+      "relation_type": "因果关系",
+      "stem_pair": {
+        "a": "下雨",
+        "b": "地湿"
+      },
+      "stem": "下雨：地湿\n下列哪项与题干逻辑关系最为一致？",
+      "options": {
+        "A": "熬夜：疲劳",
+        "B": "高兴：快乐",
+        "C": "地湿：下雨",
+        "D": "剪刀：裁剪"
+      },
+      "options_detail": {
+        "A": {
+          "content": "熬夜：疲劳",
+          "a": "熬夜",
+          "b": "疲劳",
+          "is_correct": true,
+          "relation_type": "因果关系",
+          "relation_mismatch": null
+        },
+        "B": {
+          "content": "高兴：快乐",
+          "a": "高兴",
+          "b": "快乐",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（近义关系，非因果关系）"
+        },
+        "C": {
+          "content": "地湿：下雨",
+          "a": "地湿",
+          "b": "下雨",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "方向错误（结果:原因，与题干原因:结果方向相反）"
+        },
+        "D": {
+          "content": "剪刀：裁剪",
+          "a": "剪刀",
+          "b": "裁剪",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（功能关系，非因果关系）"
+        }
+      },
+      "answer": "A",
+      "explanation": "【关系类型】因果关系\n【关系说明】A导致B（cause-effect），A是原因，B是结果\n【题干】下雨：地湿（因果关系）\n\n【正确选项】A — 熬夜：疲劳（与题干同为因果关系）\n\n【干扰项分析】\n  B项：高兴：快乐\n    关系类型错误（近义关系，非因果关系）\n  C项：地湿：下雨\n    方向错误（结果:原因，与题干原因:结果方向相反）\n  D项：剪刀：裁剪\n    关系类型错误（功能关系，非因果关系）\n\n故本题选A。",
+      "verification_result": {
+        "stem_match": true,
+        "correct_match": true,
+        "distractors_mismatch": [
+          {
+            "pair": "地湿:下雨",
+            "mismatch_annotated": true,
+            "mismatch_type": "方向错误（结果:原因，与题干原因:结果方向相反）"
+          },
+          {
+            "pair": "剪刀:裁剪",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（功能关系，非因果关系）"
+          },
+          {
+            "pair": "高兴:快乐",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（近义关系，非因果关系）"
+          }
+        ],
+        "all_valid": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "relation_verification_passed": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360292",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ANA-004",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "difficulty": 2,
+      "relation_type": "功能关系",
+      "stem_pair": {
+        "a": "剪刀",
+        "b": "裁剪"
+      },
+      "stem": "剪刀：裁剪\n下列哪项与题干逻辑关系最为一致？",
+      "options": {
+        "A": "高兴：难过",
+        "B": "木材：桌子",
+        "C": "雨伞：遮雨",
+        "D": "裁剪：剪刀"
+      },
+      "options_detail": {
+        "A": {
+          "content": "高兴：难过",
+          "a": "高兴",
+          "b": "难过",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（反义关系，非功能关系）"
+        },
+        "B": {
+          "content": "木材：桌子",
+          "a": "木材",
+          "b": "桌子",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（材料与成品，非功能关系）"
+        },
+        "C": {
+          "content": "雨伞：遮雨",
+          "a": "雨伞",
+          "b": "遮雨",
+          "is_correct": true,
+          "relation_type": "功能关系",
+          "relation_mismatch": null
+        },
+        "D": {
+          "content": "裁剪：剪刀",
+          "a": "裁剪",
+          "b": "剪刀",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "方向错误（功能:物品，与题干物品:功能方向相反）"
+        }
+      },
+      "answer": "C",
+      "explanation": "【关系类型】功能关系\n【关系说明】A的功能是B（function），A是物品，B是用途/动作\n【题干】剪刀：裁剪（功能关系）\n\n【正确选项】C — 雨伞：遮雨（与题干同为功能关系）\n\n【干扰项分析】\n  A项：高兴：难过\n    关系类型错误（反义关系，非功能关系）\n  B项：木材：桌子\n    关系类型错误（材料与成品，非功能关系）\n  D项：裁剪：剪刀\n    方向错误（功能:物品，与题干物品:功能方向相反）\n\n故本题选C。",
+      "verification_result": {
+        "stem_match": true,
+        "correct_match": true,
+        "distractors_mismatch": [
+          {
+            "pair": "裁剪:剪刀",
+            "mismatch_annotated": true,
+            "mismatch_type": "方向错误（功能:物品，与题干物品:功能方向相反）"
+          },
+          {
+            "pair": "木材:桌子",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（材料与成品，非功能关系）"
+          },
+          {
+            "pair": "高兴:难过",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（反义关系，非功能关系）"
+          }
+        ],
+        "all_valid": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "relation_verification_passed": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360308",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ANA-005",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "difficulty": 2,
+      "relation_type": "职业与工具",
+      "stem_pair": {
+        "a": "医生",
+        "b": "手术刀"
+      },
+      "stem": "医生：手术刀\n下列哪项与题干逻辑关系最为一致？",
+      "options": {
+        "A": "教师：学校",
+        "B": "画家：画笔",
+        "C": "手术刀：医生",
+        "D": "医院：医生"
+      },
+      "options_detail": {
+        "A": {
+          "content": "教师：学校",
+          "a": "教师",
+          "b": "学校",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（职业与场所，非职业与工具）"
+        },
+        "B": {
+          "content": "画家：画笔",
+          "a": "画家",
+          "b": "画笔",
+          "is_correct": true,
+          "relation_type": "职业与工具",
+          "relation_mismatch": null
+        },
+        "C": {
+          "content": "手术刀：医生",
+          "a": "手术刀",
+          "b": "医生",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "方向错误（工具:职业，与题干职业:工具方向相反）"
+        },
+        "D": {
+          "content": "医院：医生",
+          "a": "医院",
+          "b": "医生",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（职业与场所，非职业与工具）"
+        }
+      },
+      "answer": "B",
+      "explanation": "【关系类型】职业与工具\n【关系说明】A是职业，B是该职业常用工具（profession-tool）\n【题干】医生：手术刀（职业与工具）\n\n【正确选项】B — 画家：画笔（与题干同为职业与工具）\n\n【干扰项分析】\n  A项：教师：学校\n    关系类型错误（职业与场所，非职业与工具）\n  C项：手术刀：医生\n    方向错误（工具:职业，与题干职业:工具方向相反）\n  D项：医院：医生\n    关系类型错误（职业与场所，非职业与工具）\n\n故本题选B。",
+      "verification_result": {
+        "stem_match": true,
+        "correct_match": true,
+        "distractors_mismatch": [
+          {
+            "pair": "手术刀:医生",
+            "mismatch_annotated": true,
+            "mismatch_type": "方向错误（工具:职业，与题干职业:工具方向相反）"
+          },
+          {
+            "pair": "医院:医生",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（职业与场所，非职业与工具）"
+          },
+          {
+            "pair": "教师:学校",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（职业与场所，非职业与工具）"
+          }
+        ],
+        "all_valid": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "relation_verification_passed": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360325",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ANA-006",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "difficulty": 2,
+      "relation_type": "材料与成品",
+      "stem_pair": {
+        "a": "木材",
+        "b": "桌子"
+      },
+      "stem": "木材：桌子\n下列哪项与题干逻辑关系最为一致？",
+      "options": {
+        "A": "木匠：桌子",
+        "B": "钢铁：汽车",
+        "C": "桌子：木材",
+        "D": "面粉：面包"
+      },
+      "options_detail": {
+        "A": {
+          "content": "木匠：桌子",
+          "a": "木匠",
+          "b": "桌子",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（职业与成品，非材料与成品）"
+        },
+        "B": {
+          "content": "钢铁：汽车",
+          "a": "钢铁",
+          "b": "汽车",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "多重不匹配（虽然也是材料与成品，但钢铁是多种材料的合金，与木材这种单一天然材料的对应关系不够精确；且汽车的制造涉及大量其他材料和工艺）"
+        },
+        "C": {
+          "content": "桌子：木材",
+          "a": "桌子",
+          "b": "木材",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "方向错误（成品:材料，与题干材料:成品方向相反）"
+        },
+        "D": {
+          "content": "面粉：面包",
+          "a": "面粉",
+          "b": "面包",
+          "is_correct": true,
+          "relation_type": "材料与成品",
+          "relation_mismatch": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【关系类型】材料与成品\n【关系说明】A是制作B的原材料（material-product），A是材料，B是成品\n【题干】木材：桌子（材料与成品）\n\n【正确选项】D — 面粉：面包（与题干同为材料与成品）\n\n【干扰项分析】\n  A项：木匠：桌子\n    关系类型错误（职业与成品，非材料与成品）\n  B项：钢铁：汽车\n    多重不匹配（虽然也是材料与成品，但钢铁是多种材料的合金，与木材这种单一天然材料的对应关系不够精确；且汽车的制造涉及大量其他材料和工艺）\n  C项：桌子：木材\n    方向错误（成品:材料，与题干材料:成品方向相反）\n\n故本题选D。",
+      "verification_result": {
+        "stem_match": true,
+        "correct_match": true,
+        "distractors_mismatch": [
+          {
+            "pair": "桌子:木材",
+            "mismatch_annotated": true,
+            "mismatch_type": "方向错误（成品:材料，与题干材料:成品方向相反）"
+          },
+          {
+            "pair": "木匠:桌子",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（职业与成品，非材料与成品）"
+          },
+          {
+            "pair": "钢铁:汽车",
+            "mismatch_annotated": true,
+            "mismatch_type": "多重不匹配（虽然也是材料与成品，但钢铁是多种材料的合金，与木材这种单一天然材料的对应关系不够精确；且汽车的制造涉及大量其他材料和工艺）"
+          }
+        ],
+        "all_valid": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "relation_verification_passed": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360341",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ANA-007",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "difficulty": 1,
+      "relation_type": "近义关系",
+      "stem_pair": {
+        "a": "高兴",
+        "b": "快乐"
+      },
+      "stem": "高兴：快乐\n下列哪项与题干逻辑关系最为一致？",
+      "options": {
+        "A": "美丽：漂亮",
+        "B": "高兴：难过",
+        "C": "快乐：高兴",
+        "D": "苹果：水果"
+      },
+      "options_detail": {
+        "A": {
+          "content": "美丽：漂亮",
+          "a": "美丽",
+          "b": "漂亮",
+          "is_correct": true,
+          "relation_type": "近义关系",
+          "relation_mismatch": null
+        },
+        "B": {
+          "content": "高兴：难过",
+          "a": "高兴",
+          "b": "难过",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（反义关系，非近义关系）"
+        },
+        "C": {
+          "content": "快乐：高兴",
+          "a": "快乐",
+          "b": "高兴",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "方向错误（虽然也是近义关系，但词序与题干相反，且使用了与题干相同的词）"
+        },
+        "D": {
+          "content": "苹果：水果",
+          "a": "苹果",
+          "b": "水果",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（种属关系，非近义关系）"
+        }
+      },
+      "answer": "A",
+      "explanation": "【关系类型】近义关系\n【关系说明】A和B意思相近（synonym）\n【题干】高兴：快乐（近义关系）\n\n【正确选项】A — 美丽：漂亮（与题干同为近义关系）\n\n【干扰项分析】\n  B项：高兴：难过\n    关系类型错误（反义关系，非近义关系）\n  C项：快乐：高兴\n    方向错误（虽然也是近义关系，但词序与题干相反，且使用了与题干相同的词）\n  D项：苹果：水果\n    关系类型错误（种属关系，非近义关系）\n\n故本题选A。",
+      "verification_result": {
+        "stem_match": true,
+        "correct_match": true,
+        "distractors_mismatch": [
+          {
+            "pair": "高兴:难过",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（反义关系，非近义关系）"
+          },
+          {
+            "pair": "快乐:高兴",
+            "mismatch_annotated": true,
+            "mismatch_type": "方向错误（虽然也是近义关系，但词序与题干相反，且使用了与题干相同的词）"
+          },
+          {
+            "pair": "苹果:水果",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（种属关系，非近义关系）"
+          }
+        ],
+        "all_valid": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "relation_verification_passed": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360357",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ANA-008",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "difficulty": 1,
+      "relation_type": "反义关系",
+      "stem_pair": {
+        "a": "光明",
+        "b": "黑暗"
+      },
+      "stem": "光明：黑暗\n下列哪项与题干逻辑关系最为一致？",
+      "options": {
+        "A": "黑暗：光明",
+        "B": "勇敢：坚强",
+        "C": "勇敢：怯懦",
+        "D": "高兴：快乐"
+      },
+      "options_detail": {
+        "A": {
+          "content": "黑暗：光明",
+          "a": "黑暗",
+          "b": "光明",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "方向错误（虽然也是反义关系，但词序与题干相反，且使用了与题干相同的词）"
+        },
+        "B": {
+          "content": "勇敢：坚强",
+          "a": "勇敢",
+          "b": "坚强",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（近义关系，非反义关系）"
+        },
+        "C": {
+          "content": "勇敢：怯懦",
+          "a": "勇敢",
+          "b": "怯懦",
+          "is_correct": true,
+          "relation_type": "反义关系",
+          "relation_mismatch": null
+        },
+        "D": {
+          "content": "高兴：快乐",
+          "a": "高兴",
+          "b": "快乐",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（近义关系，非反义关系）"
+        }
+      },
+      "answer": "C",
+      "explanation": "【关系类型】反义关系\n【关系说明】A和B意思相反（antonym）\n【题干】光明：黑暗（反义关系）\n\n【正确选项】C — 勇敢：怯懦（与题干同为反义关系）\n\n【干扰项分析】\n  A项：黑暗：光明\n    方向错误（虽然也是反义关系，但词序与题干相反，且使用了与题干相同的词）\n  B项：勇敢：坚强\n    关系类型错误（近义关系，非反义关系）\n  D项：高兴：快乐\n    关系类型错误（近义关系，非反义关系）\n\n故本题选C。",
+      "verification_result": {
+        "stem_match": true,
+        "correct_match": true,
+        "distractors_mismatch": [
+          {
+            "pair": "黑暗:光明",
+            "mismatch_annotated": true,
+            "mismatch_type": "方向错误（虽然也是反义关系，但词序与题干相反，且使用了与题干相同的词）"
+          },
+          {
+            "pair": "高兴:快乐",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（近义关系，非反义关系）"
+          },
+          {
+            "pair": "勇敢:坚强",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（近义关系，非反义关系）"
+          }
+        ],
+        "all_valid": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "relation_verification_passed": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360372",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ANA-009",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "difficulty": 3,
+      "relation_type": "对应关系",
+      "stem_pair": {
+        "a": "七夕",
+        "b": "织女"
+      },
+      "stem": "七夕：织女\n下列哪项与题干逻辑关系最为一致？",
+      "options": {
+        "A": "织女：七夕",
+        "B": "端午：屈原",
+        "C": "月饼：中秋节",
+        "D": "春节：饺子"
+      },
+      "options_detail": {
+        "A": {
+          "content": "织女：七夕",
+          "a": "织女",
+          "b": "七夕",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "方向错误（人物:节日，与题干节日:人物方向相反）"
+        },
+        "B": {
+          "content": "端午：屈原",
+          "a": "端午",
+          "b": "屈原",
+          "is_correct": true,
+          "relation_type": "对应关系",
+          "relation_mismatch": null
+        },
+        "C": {
+          "content": "月饼：中秋节",
+          "a": "月饼",
+          "b": "中秋节",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "方向错误（食物:节日，与题干节日:人物的对应类型不同且方向相反）"
+        },
+        "D": {
+          "content": "春节：饺子",
+          "a": "春节",
+          "b": "饺子",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（节日与食物，非节日与人物的对应关系）"
+        }
+      },
+      "answer": "B",
+      "explanation": "【关系类型】对应关系\n【关系说明】A和B有特定的对应/关联（correspondence），如节日与人物、作品与作者等\n【题干】七夕：织女（对应关系）\n\n【正确选项】B — 端午：屈原（与题干同为对应关系）\n\n【干扰项分析】\n  A项：织女：七夕\n    方向错误（人物:节日，与题干节日:人物方向相反）\n  C项：月饼：中秋节\n    方向错误（食物:节日，与题干节日:人物的对应类型不同且方向相反）\n  D项：春节：饺子\n    关系类型错误（节日与食物，非节日与人物的对应关系）\n\n故本题选B。",
+      "verification_result": {
+        "stem_match": true,
+        "correct_match": true,
+        "distractors_mismatch": [
+          {
+            "pair": "织女:七夕",
+            "mismatch_annotated": true,
+            "mismatch_type": "方向错误（人物:节日，与题干节日:人物方向相反）"
+          },
+          {
+            "pair": "月饼:中秋节",
+            "mismatch_annotated": true,
+            "mismatch_type": "方向错误（食物:节日，与题干节日:人物的对应类型不同且方向相反）"
+          },
+          {
+            "pair": "春节:饺子",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（节日与食物，非节日与人物的对应关系）"
+          }
+        ],
+        "all_valid": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "relation_verification_passed": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360387",
+        "param_seed": 42
+      }
+    },
+    {
+      "question_id": "Q6-ANA-010",
+      "origin_type": "generated",
+      "module": "判断推理",
+      "subtype": "类比推理",
+      "difficulty": 3,
+      "relation_type": "条件关系",
+      "stem_pair": {
+        "a": "水",
+        "b": "生存"
+      },
+      "stem": "水：生存\n下列哪项与题干逻辑关系最为一致？",
+      "options": {
+        "A": "生存：水",
+        "B": "水：农业",
+        "C": "喝水：解渴",
+        "D": "氧气：燃烧"
+      },
+      "options_detail": {
+        "A": {
+          "content": "生存：水",
+          "a": "生存",
+          "b": "水",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "方向错误（结果:条件，与题干条件:结果方向相反）"
+        },
+        "B": {
+          "content": "水：农业",
+          "a": "水",
+          "b": "农业",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "多重不匹配（水对农业是重要条件但不是严格必要条件，农业还依赖土地、种子等；与题干水对生存的严格必要条件关系有差异）"
+        },
+        "C": {
+          "content": "喝水：解渴",
+          "a": "喝水",
+          "b": "解渴",
+          "is_correct": false,
+          "relation_type": "other",
+          "relation_mismatch": "关系类型错误（因果关系，非必要条件关系；喝水是解渴的充分条件而非必要条件）"
+        },
+        "D": {
+          "content": "氧气：燃烧",
+          "a": "氧气",
+          "b": "燃烧",
+          "is_correct": true,
+          "relation_type": "条件关系",
+          "relation_mismatch": null
+        }
+      },
+      "answer": "D",
+      "explanation": "【关系类型】条件关系\n【关系说明】A是B的必要条件（condition），没有A就没有B\n【题干】水：生存（条件关系）\n\n【正确选项】D — 氧气：燃烧（与题干同为条件关系）\n\n【干扰项分析】\n  A项：生存：水\n    方向错误（结果:条件，与题干条件:结果方向相反）\n  B项：水：农业\n    多重不匹配（水对农业是重要条件但不是严格必要条件，农业还依赖土地、种子等；与题干水对生存的严格必要条件关系有差异）\n  C项：喝水：解渴\n    关系类型错误（因果关系，非必要条件关系；喝水是解渴的充分条件而非必要条件）\n\n故本题选D。",
+      "verification_result": {
+        "stem_match": true,
+        "correct_match": true,
+        "distractors_mismatch": [
+          {
+            "pair": "生存:水",
+            "mismatch_annotated": true,
+            "mismatch_type": "方向错误（结果:条件，与题干条件:结果方向相反）"
+          },
+          {
+            "pair": "喝水:解渴",
+            "mismatch_annotated": true,
+            "mismatch_type": "关系类型错误（因果关系，非必要条件关系；喝水是解渴的充分条件而非必要条件）"
+          },
+          {
+            "pair": "水:农业",
+            "mismatch_annotated": true,
+            "mismatch_type": "多重不匹配（水对农业是重要条件但不是严格必要条件，农业还依赖土地、种子等；与题干水对生存的严格必要条件关系有差异）"
+          }
+        ],
+        "all_valid": true
+      },
+      "validation": {
+        "basic_check_passed": true,
+        "relation_verification_passed": true,
+        "issues": []
+      },
+      "generation_meta": {
+        "template_version": "judgment_v1",
+        "generated_at": "2026-09-03T13:14:33.360403",
+        "param_seed": 42
       }
     }
   ]

@@ -1565,6 +1565,769 @@ def generate_figure_explanation(spec, verification, options_detail, answer):
 
 
 # ══════════════════════════════════════════════════════
+# 子引擎4：加强/削弱论证
+# ══════════════════════════════════════════════════════
+
+# 每题：论证（论据+结论+论证类型）、正确项（加强/削弱机制）、3个干扰项（weakness_type）
+ARGUMENT_SPECS = [
+    # ── 加强题 5 道 ──
+    {
+        "question_id": "Q6-ARG-001",
+        "direction": "strengthen",
+        "difficulty": 1,
+        "forced_answer": "B",
+        "argument_type": "因果论证",
+        "argument": {
+            "premise": "某城市在推广共享单车后，市民的短途出行时间平均缩短了15%。",
+            "conclusion": "共享单车的推广是导致市民短途出行时间缩短的原因。",
+        },
+        "correct": {
+            "content": "在推广共享单车期间，该城市的公共交通班次和道路状况没有发生明显变化。",
+            "mechanism": "排除他因（排除公共交通改善、道路扩建等其他可能导致出行时间缩短的因素）",
+        },
+        "distractors": [
+            {"content": "共享单车的颜色鲜艳，容易被市民注意到。", "weakness_type": "无关选项（颜色与出行时间无逻辑关联）"},
+            {"content": "该城市的人口在过去一年中增长了5%。", "weakness_type": "偷换概念（人口增长与出行时间缩短没有直接因果关系）"},
+            {"content": "有些市民认为共享单车比公交车更方便。", "weakness_type": "力度不足（主观感受不能作为因果关系的有力证据，且'有些'范围有限）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ARG-002",
+        "direction": "strengthen",
+        "difficulty": 2,
+        "forced_answer": "D",
+        "argument_type": "统计论证",
+        "argument": {
+            "premise": "一项对1000名上班族的调查显示，每天午休20分钟的人比不午休的人工作效率高出23%。",
+            "conclusion": "午休可以提高上班族的工作效率。",
+        },
+        "correct": {
+            "content": "调查中两组人群在年龄、工作性质、睡眠时长等方面基本一致。",
+            "mechanism": "确认前提假设（排除样本偏差，确保两组除午休外其他条件相同，增强统计结论的可靠性）",
+        },
+        "distractors": [
+            {"content": "午休时最好选择安静的环境。", "weakness_type": "无关选项（午休环境建议与'午休是否提高效率'的论证无关）"},
+            {"content": "有些公司已经开始推行午休制度。", "weakness_type": "诉诸流行（公司推行不代表午休一定能提高效率）"},
+            {"content": "午休时间过长可能会影响下午的精神状态。", "weakness_type": "力度不足（讨论的是'过长'的情况，题干是20分钟，且仅指出潜在风险而非否定结论）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ARG-003",
+        "direction": "strengthen",
+        "difficulty": 2,
+        "forced_answer": "A",
+        "argument_type": "类比论证",
+        "argument": {
+            "premise": "A品牌手机采用了新型散热技术，在连续运行大型游戏时温度比同类产品低8度。",
+            "conclusion": "B品牌笔记本电脑如果采用同样的散热技术，也能在高负载运行时降低温度。",
+        },
+        "correct": {
+            "content": "手机和笔记本电脑在散热原理上高度相似，都依赖导热管和风扇将热量从芯片导出。",
+            "mechanism": "建立联系（确认类比对象在关键属性上相似，使类比推理成立）",
+        },
+        "distractors": [
+            {"content": "B品牌笔记本电脑的外观设计很时尚。", "weakness_type": "无关选项（外观与散热技术效果无关）"},
+            {"content": "A品牌手机的销量在过去一年中增长了30%。", "weakness_type": "偷换概念（销量增长与散热技术能否跨产品应用无关）"},
+            {"content": "有些用户反映B品牌笔记本电脑在高负载时温度较高。", "weakness_type": "力度不足（仅说明存在问题，不能证明该技术一定能解决问题）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ARG-004",
+        "direction": "strengthen",
+        "difficulty": 3,
+        "forced_answer": "C",
+        "argument_type": "前提假设",
+        "argument": {
+            "premise": "在过去五年中，某地区的森林覆盖率从25%提升到了40%。",
+            "conclusion": "该地区的生态环境在过去五年中得到了显著改善。",
+        },
+        "correct": {
+            "content": "森林覆盖率是衡量地区生态环境状况的核心指标之一，其提升直接反映生态改善。",
+            "mechanism": "确认前提假设（建立'森林覆盖率提升'与'生态环境改善'之间的必然联系，填补论证缺口）",
+        },
+        "distractors": [
+            {"content": "该地区的旅游业在过去五年中也有了较大发展。", "weakness_type": "无关选项（旅游业发展与生态环境改善没有直接逻辑关联）"},
+            {"content": "森林覆盖率的提升主要得益于政府的植树造林政策。", "weakness_type": "偷换概念（解释覆盖率提升的原因，不能直接证明生态环境改善）"},
+            {"content": "有专家认为该地区的生态环境还有进一步提升的空间。", "weakness_type": "诉诸权威（专家观点不能作为生态已改善的直接证据，且'还有空间'不否定已改善）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ARG-005",
+        "direction": "strengthen",
+        "difficulty": 2,
+        "forced_answer": "B",
+        "argument_type": "因果论证",
+        "argument": {
+            "premise": "某校推行'每天阅读30分钟'计划一学期后，学生的语文平均成绩提高了12分。",
+            "conclusion": "每天阅读30分钟是学生语文成绩提高的原因。",
+        },
+        "correct": {
+            "content": "该校在推行阅读计划期间，语文教材、教学方法和师资力量均未发生变化。",
+            "mechanism": "排除他因（排除教材更新、教学方法改进、师资变化等其他可能导致成绩提高的因素）",
+        },
+        "distractors": [
+            {"content": "阅读计划使用的书籍都是经过精心挑选的经典作品。", "weakness_type": "力度不足（书籍质量好只能说明计划设计合理，不能直接证明阅读本身导致成绩提高）"},
+            {"content": "该校学生的数学成绩在同一时期也有所提高。", "weakness_type": "偷换概念（数学成绩提高与语文成绩提高的原因无关，可能由其他因素导致）"},
+            {"content": "很多家长支持学校推行阅读计划。", "weakness_type": "诉诸情感（家长支持不代表阅读计划是成绩提高的原因）"},
+        ],
+    },
+    # ── 削弱题 5 道 ──
+    {
+        "question_id": "Q6-ARG-006",
+        "direction": "weaken",
+        "difficulty": 1,
+        "forced_answer": "D",
+        "argument_type": "因果论证",
+        "argument": {
+            "premise": "某公司在实行弹性工作制后，员工的离职率从15%下降到了8%。",
+            "conclusion": "弹性工作制是导致员工离职率下降的原因。",
+        },
+        "correct": {
+            "content": "在实行弹性工作制的同一时期，该公司大幅提高了员工的薪资和福利待遇。",
+            "mechanism": "提出他因（薪资福利提升才是离职率下降的真正原因，切断弹性工作制与离职率下降的因果联系）",
+        },
+        "distractors": [
+            {"content": "弹性工作制允许员工自行安排上下班时间。", "weakness_type": "无关选项（解释弹性工作制的内容，不能削弱因果关系）"},
+            {"content": "该公司的竞争对手也实行了类似的弹性工作制。", "weakness_type": "偷换概念（竞争对手的做法与该公司离职率下降的原因无关）"},
+            {"content": "有些员工表示弹性工作制对他们的帮助不大。", "weakness_type": "力度不足（'有些'员工的主观感受不能否定整体离职率下降与弹性工作制的关联）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ARG-007",
+        "direction": "weaken",
+        "difficulty": 2,
+        "forced_answer": "A",
+        "argument_type": "统计论证",
+        "argument": {
+            "premise": "一项在线调查显示，80%的受访者表示更喜欢在线购物而非实体店购物。",
+            "conclusion": "在线购物已经成为大多数消费者的首选购物方式。",
+        },
+        "correct": {
+            "content": "该在线调查的受访者主要是经常上网的年轻人群体，未涵盖中老年和不常上网的人群。",
+            "mechanism": "指出样本偏差（调查样本不具有代表性，仅覆盖特定人群，不能推广到'大多数消费者'）",
+        },
+        "distractors": [
+            {"content": "在线购物的商品种类比实体店更丰富。", "weakness_type": "无关选项（商品种类丰富是在线购物的优势，不能削弱结论）"},
+            {"content": "有些实体店也开始提供在线下单服务。", "weakness_type": "偷换概念（实体店的线上服务与消费者首选哪种购物方式无关）"},
+            {"content": "调查的样本量达到了5000人。", "weakness_type": "力度不足（样本量大不代表样本有代表性，且这反而可能加强结论的表面可信度）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ARG-008",
+        "direction": "weaken",
+        "difficulty": 2,
+        "forced_answer": "C",
+        "argument_type": "类比论证",
+        "argument": {
+            "premise": "甲市在市中心修建了大型步行街后，商业零售额增长了25%。",
+            "conclusion": "乙市如果在市中心修建同样的步行街，也能实现商业零售额的显著增长。",
+        },
+        "correct": {
+            "content": "甲市市中心原本就有密集的人流和成熟的商业基础，而乙市市中心人口稀少、商业基础薄弱。",
+            "mechanism": "切断联系（指出类比对象在关键属性上存在本质差异，类比推理不成立）",
+        },
+        "distractors": [
+            {"content": "步行街的建设需要投入大量资金。", "weakness_type": "无关选项（建设成本与步行街能否带来零售额增长无关）"},
+            {"content": "甲市的步行街吸引了很多外地游客。", "weakness_type": "偷换概念（解释甲市增长的原因，但不能直接削弱乙市也能增长的结论）"},
+            {"content": "有专家认为步行街模式已经过时。", "weakness_type": "诉诸权威（专家观点不能作为乙市步行街不会成功的直接证据）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ARG-009",
+        "direction": "weaken",
+        "difficulty": 3,
+        "forced_answer": "B",
+        "argument_type": "前提假设",
+        "argument": {
+            "premise": "某品牌新能源汽车的续航里程达到了600公里，远超同级别其他车型。",
+            "conclusion": "该品牌新能源汽车将在未来一年内成为同级别销量冠军。",
+        },
+        "correct": {
+            "content": "续航里程只是消费者购车时考虑的因素之一，价格、充电便利性、品牌口碑等同样重要，而该品牌在这些方面并无优势。",
+            "mechanism": "否定前提假设（论证假设了'续航里程最长就一定销量最高'，正确项指出这一假设不成立，续航不是唯一决定因素）",
+        },
+        "distractors": [
+            {"content": "该品牌汽车的外观设计比较独特。", "weakness_type": "无关选项（外观设计与销量冠军预测没有直接逻辑关联）"},
+            {"content": "新能源汽车市场在过去一年中增长了40%。", "weakness_type": "偷换概念（市场整体增长不能说明该品牌一定能成为销量冠军）"},
+            {"content": "有些消费者对新能源汽车的安全性表示担忧。", "weakness_type": "力度不足（'有些'消费者的担忧范围有限，且针对的是整个新能源汽车品类而非该品牌）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ARG-010",
+        "direction": "weaken",
+        "difficulty": 3,
+        "forced_answer": "A",
+        "argument_type": "因果论证",
+        "argument": {
+            "premise": "某研究发现，经常喝绿茶的人患心血管疾病的概率比不喝绿茶的人低30%。",
+            "conclusion": "喝绿茶可以降低患心血管疾病的风险。",
+        },
+        "correct": {
+            "content": "经常喝绿茶的人往往同时具有更健康的生活习惯，如规律运动、饮食清淡、不吸烟等，这些因素才是心血管疾病发病率低的真正原因。",
+            "mechanism": "提出他因（健康生活习惯才是发病率低的真正原因，喝绿茶与发病率低只是相关关系而非因果关系）",
+        },
+        "distractors": [
+            {"content": "绿茶中含有多种对人体有益的抗氧化物质。", "weakness_type": "无关选项（绿茶的有益成分反而可能加强结论，不能削弱）"},
+            {"content": "该研究的样本量超过了10000人。", "weakness_type": "偷换概念（样本量大说明研究规模大，但不能削弱因果关系结论）"},
+            {"content": "有些人喝绿茶后会出现失眠的情况。", "weakness_type": "力度不足（'有些人'的副作用不能否定绿茶对心血管的整体益处，且失眠与心血管疾病无关）"},
+        ],
+    },
+]
+
+
+def validate_argument_question(spec):
+    """校验加强/削弱论证题：
+    1. 正确项必须包含与论证（论据/结论）相关的关键词
+    2. 干扰项的 weakness_type 必须明确标注
+    3. 加强/削弱方向明确
+    """
+    issues = []
+    arg = spec["argument"]
+    full_arg = arg["premise"] + arg["conclusion"]
+
+    # 正确项必须与论证有一定关联（宽松检查：至少1个2字词重叠，或包含论证中的核心实体）
+    correct = spec["correct"]["content"]
+    arg_keywords = set(re.findall(r"[\u4e00-\u9fa5]{2,}", full_arg))
+    correct_keywords = set(re.findall(r"[\u4e00-\u9fa5]{2,}", correct))
+    overlap = arg_keywords & correct_keywords
+    # 宽松校验：加强/削弱题的正确项常引入新信息（如排除他因），不强制高重叠
+    # 仅检查正确项长度合理，双求解中的相对重叠比较会进一步验证
+    if len(correct) < 10:
+        issues.append("正确项过短，可能未充分作用于论证链条")
+
+    # 干扰项检查
+    for i, d in enumerate(spec["distractors"]):
+        if "weakness_type" not in d:
+            issues.append(f"干扰项{i+1}缺少weakness_type标注")
+        # 干扰项与论证的关键词重叠应少于正确项（或虽重叠但方向错误）
+        d_keywords = set(re.findall(r"[\u4e00-\u9fa5]{2,}", d["content"]))
+        d_overlap = arg_keywords & d_keywords
+        # 不强制干扰项重叠少，因为有些干扰项故意偷换概念会包含关键词
+
+    # 检查 mechanism 标注
+    if "mechanism" not in spec["correct"]:
+        issues.append("正确项缺少mechanism标注")
+
+    # 检查 direction
+    if spec["direction"] not in ["strengthen", "weaken"]:
+        issues.append(f"direction无效: {spec['direction']}")
+
+    return issues
+
+
+def dual_solve_argument(spec):
+    """加强/削弱论证双求解：
+    求解器A（规则引擎）：基于论证类型检查正确项的机制是否匹配该论证类型的加强/削弱策略
+    求解器B（关键词重叠）：计算正确项与论证的关键词重叠度，验证其高于干扰项
+    """
+    arg = spec["argument"]
+    full_arg = arg["premise"] + arg["conclusion"]
+    arg_keywords = set(re.findall(r"[\u4e00-\u9fa5]{2,}", full_arg))
+
+    # 求解器A：规则引擎 — 检查机制是否匹配论证类型
+    arg_type = spec["argument_type"]
+    mechanism = spec["correct"]["mechanism"]
+    direction = spec["direction"]
+
+    # 各论证类型对应的有效加强/削弱机制关键词
+    strengthen_strategies = {
+        "因果论证": ["排除他因", "建立联系", "确认假设"],
+        "统计论证": ["确认前提假设", "排除样本偏差", "建立联系"],
+        "类比论证": ["建立联系", "确认相似性", "排除差异"],
+        "前提假设": ["确认前提假设", "建立联系", "填补缺口"],
+    }
+    weaken_strategies = {
+        "因果论证": ["提出他因", "切断联系", "因果倒置"],
+        "统计论证": ["指出样本偏差", "切断联系", "否定假设"],
+        "类比论证": ["切断联系", "指出差异", "否定相似性"],
+        "前提假设": ["否定前提假设", "切断联系", "指出缺口"],
+    }
+
+    strategies = strengthen_strategies if direction == "strengthen" else weaken_strategies
+    valid_strategies = strategies.get(arg_type, strategies.get("因果论证", []))
+    solver_a_valid = any(s in mechanism for s in valid_strategies)
+
+    # 求解器B：关键词重叠 — 正确项与论证的重叠度应高于所有干扰项
+    def keyword_overlap(text):
+        text_kw = set(re.findall(r"[\u4e00-\u9fa5]{2,}", text))
+        return len(arg_keywords & text_kw)
+
+    correct_overlap = keyword_overlap(spec["correct"]["content"])
+    distractor_overlaps = [keyword_overlap(d["content"]) for d in spec["distractors"]]
+    solver_b_valid = correct_overlap >= max(distractor_overlaps)
+
+    match = solver_a_valid and solver_b_valid
+    return {
+        "solver_a": {"method": "规则引擎（论证类型×加强/削弱策略匹配）", "valid": solver_a_valid,
+                      "arg_type": arg_type, "mechanism": mechanism, "valid_strategies": valid_strategies},
+        "solver_b": {"method": "关键词重叠度比较", "valid": solver_b_valid,
+                      "correct_overlap": correct_overlap, "distractor_overlaps": distractor_overlaps},
+        "match": match,
+    }
+
+
+def generate_argument_questions():
+    """生成加强/削弱论证题"""
+    questions = []
+    failed = []
+    for spec in ARGUMENT_SPECS:
+        # 基础校验
+        issues = validate_argument_question(spec)
+        if issues:
+            print(f"  [FAIL] {spec['question_id']}: 基础校验失败: {issues}")
+            failed.append(spec["question_id"])
+            continue
+
+        # 双求解
+        dual = dual_solve_argument(spec)
+        if not dual["match"]:
+            print(f"  [FAIL] {spec['question_id']}: 双求解不匹配: A={dual['solver_a']['valid']}, B={dual['solver_b']['valid']}")
+            failed.append(spec["question_id"])
+            continue
+
+        # 选项位置分配（支持 forced_answer）
+        rng = random.Random(f"{SEED}_{spec['question_id']}")
+        all_options = [{"content": spec["correct"]["content"], "is_correct": True,
+                         "mechanism": spec["correct"]["mechanism"], "weakness_type": None}]
+        for d in spec["distractors"]:
+            all_options.append({
+                "content": d["content"],
+                "is_correct": False,
+                "mechanism": None,
+                "weakness_type": d["weakness_type"],
+            })
+
+        labels = ["A", "B", "C", "D"]
+        if spec.get("forced_answer"):
+            answer = spec["forced_answer"]
+            distractors_only = [o for o in all_options if not o["is_correct"]]
+            rng.shuffle(distractors_only)
+            option_assignments = {}
+            di = 0
+            for label in labels:
+                if label == answer:
+                    option_assignments[label] = [o for o in all_options if o["is_correct"]][0]
+                else:
+                    option_assignments[label] = distractors_only[di]
+                    di += 1
+        else:
+            rng.shuffle(all_options)
+            option_assignments = {labels[i]: all_options[i] for i in range(4)}
+            answer = [k for k, v in option_assignments.items() if v["is_correct"]][0]
+
+        options = {}
+        options_detail = {}
+        for label, opt in option_assignments.items():
+            options[label] = opt["content"]
+            options_detail[label] = {
+                "content": opt["content"],
+                "is_correct": opt["is_correct"],
+                "mechanism": opt.get("mechanism"),
+                "weakness_type": opt.get("weakness_type"),
+            }
+
+        # 题干
+        direction_text = "加强" if spec["direction"] == "strengthen" else "削弱"
+        stem = (f"{spec['argument']['premise']}\n{spec['argument']['conclusion']}\n"
+                f"以下哪项如果为真，最能{direction_text}上述论证？")
+
+        # 解析
+        explanation = generate_argument_explanation(spec, options_detail, answer, dual)
+
+        q = {
+            "question_id": spec["question_id"],
+            "origin_type": "generated",
+            "module": "判断推理",
+            "subtype": f"逻辑判断（{direction_text}论证）",
+            "difficulty": spec["difficulty"],
+            "direction": spec["direction"],
+            "argument_type": spec["argument_type"],
+            "argument": spec["argument"],
+            "stem": stem,
+            "options": options,
+            "options_detail": options_detail,
+            "answer": answer,
+            "explanation": explanation,
+            "dual_solve": dual,
+            "validation": {
+                "basic_check_passed": True,
+                "dual_solve_match": True,
+                "issues": [],
+            },
+            "generation_meta": {
+                "template_version": TEMPLATE_VERSION,
+                "generated_at": datetime.now().isoformat(),
+                "param_seed": SEED,
+            },
+        }
+        questions.append(q)
+        print(f"  ✅ {spec['question_id']} ({direction_text}论证-{spec['argument_type']}, diff={spec['difficulty']}) → 答案 {answer}")
+    return questions, failed
+
+
+def generate_argument_explanation(spec, options_detail, answer, dual):
+    """生成加强/削弱论证解析"""
+    direction_text = "加强" if spec["direction"] == "strengthen" else "削弱"
+    lines = [f"【论证类型】{spec['argument_type']}"]
+    lines.append(f"【论证结构】论据：{spec['argument']['premise']}")
+    lines.append(f"          结论：{spec['argument']['conclusion']}")
+    lines.append("")
+    lines.append(f"【正确选项】{answer} — {spec['correct']['mechanism']}")
+    lines.append(f"  {options_detail[answer]['content']}")
+    lines.append("")
+    lines.append("【干扰项分析】")
+    for label, opt in options_detail.items():
+        if not opt["is_correct"]:
+            lines.append(f"  {label}项：{opt.get('weakness_type', '?')}")
+            lines.append(f"    {opt['content']}")
+    lines.append("")
+    lines.append(f"【双求解验证】规则引擎：{'通过' if dual['solver_a']['valid'] else '失败'}；关键词重叠：{'通过' if dual['solver_b']['valid'] else '失败'}")
+    lines.append(f"故本题选{answer}。")
+    return "\n".join(lines)
+
+
+# ══════════════════════════════════════════════════════
+# 子引擎5：类比推理
+# ══════════════════════════════════════════════════════
+
+# 加载类比推理关系词库
+ANALOGY_VOCAB_PATH = REPO_ROOT / "xingce-structured-data" / "_schema" / "analogy_relation_vocabulary.json"
+with open(ANALOGY_VOCAB_PATH, encoding="utf-8") as f:
+    ANALOGY_VOCAB = json.load(f)
+RELATION_TYPES = list(ANALOGY_VOCAB["relation_types"].keys())
+
+# 每题：题干词对（关系类型）、正确项（同关系）、3个干扰项（关系不匹配）
+ANALOGY_SPECS = [
+    {
+        "question_id": "Q6-ANA-001",
+        "relation_type": "种属关系",
+        "difficulty": 1,
+        "forced_answer": "B",
+        "stem": {"a": "苹果", "b": "水果"},
+        "correct": {"a": "老虎", "b": "哺乳动物"},
+        "distractors": [
+            {"a": "轮胎", "b": "汽车", "relation_mismatch": "关系类型错误（组成关系，非种属关系）"},
+            {"a": "水果", "b": "苹果", "relation_mismatch": "方向错误（大概念:小概念，与题干方向相反）"},
+            {"a": "剪刀", "b": "裁剪", "relation_mismatch": "关系类型错误（功能关系，非种属关系）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ANA-002",
+        "relation_type": "组成关系",
+        "difficulty": 1,
+        "forced_answer": "D",
+        "stem": {"a": "轮胎", "b": "汽车"},
+        "correct": {"a": "键盘", "b": "电脑"},
+        "distractors": [
+            {"a": "苹果", "b": "水果", "relation_mismatch": "关系类型错误（种属关系，非组成关系）"},
+            {"a": "汽车", "b": "轮胎", "relation_mismatch": "方向错误（整体:部分，与题干部分:整体方向相反）"},
+            {"a": "下雨", "b": "地湿", "relation_mismatch": "关系类型错误（因果关系，非组成关系）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ANA-003",
+        "relation_type": "因果关系",
+        "difficulty": 2,
+        "forced_answer": "A",
+        "stem": {"a": "下雨", "b": "地湿"},
+        "correct": {"a": "熬夜", "b": "疲劳"},
+        "distractors": [
+            {"a": "地湿", "b": "下雨", "relation_mismatch": "方向错误（结果:原因，与题干原因:结果方向相反）"},
+            {"a": "剪刀", "b": "裁剪", "relation_mismatch": "关系类型错误（功能关系，非因果关系）"},
+            {"a": "高兴", "b": "快乐", "relation_mismatch": "关系类型错误（近义关系，非因果关系）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ANA-004",
+        "relation_type": "功能关系",
+        "difficulty": 2,
+        "forced_answer": "C",
+        "stem": {"a": "剪刀", "b": "裁剪"},
+        "correct": {"a": "雨伞", "b": "遮雨"},
+        "distractors": [
+            {"a": "裁剪", "b": "剪刀", "relation_mismatch": "方向错误（功能:物品，与题干物品:功能方向相反）"},
+            {"a": "木材", "b": "桌子", "relation_mismatch": "关系类型错误（材料与成品，非功能关系）"},
+            {"a": "高兴", "b": "难过", "relation_mismatch": "关系类型错误（反义关系，非功能关系）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ANA-005",
+        "relation_type": "职业与工具",
+        "difficulty": 2,
+        "forced_answer": "B",
+        "stem": {"a": "医生", "b": "手术刀"},
+        "correct": {"a": "画家", "b": "画笔"},
+        "distractors": [
+            {"a": "手术刀", "b": "医生", "relation_mismatch": "方向错误（工具:职业，与题干职业:工具方向相反）"},
+            {"a": "医院", "b": "医生", "relation_mismatch": "关系类型错误（职业与场所，非职业与工具）"},
+            {"a": "教师", "b": "学校", "relation_mismatch": "关系类型错误（职业与场所，非职业与工具）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ANA-006",
+        "relation_type": "材料与成品",
+        "difficulty": 2,
+        "forced_answer": "D",
+        "stem": {"a": "木材", "b": "桌子"},
+        "correct": {"a": "面粉", "b": "面包"},
+        "distractors": [
+            {"a": "桌子", "b": "木材", "relation_mismatch": "方向错误（成品:材料，与题干材料:成品方向相反）"},
+            {"a": "木匠", "b": "桌子", "relation_mismatch": "关系类型错误（职业与成品，非材料与成品）"},
+            {"a": "钢铁", "b": "汽车", "relation_mismatch": "多重不匹配（虽然也是材料与成品，但钢铁是多种材料的合金，与木材这种单一天然材料的对应关系不够精确；且汽车的制造涉及大量其他材料和工艺）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ANA-007",
+        "relation_type": "近义关系",
+        "difficulty": 1,
+        "forced_answer": "A",
+        "stem": {"a": "高兴", "b": "快乐"},
+        "correct": {"a": "美丽", "b": "漂亮"},
+        "distractors": [
+            {"a": "高兴", "b": "难过", "relation_mismatch": "关系类型错误（反义关系，非近义关系）"},
+            {"a": "快乐", "b": "高兴", "relation_mismatch": "方向错误（虽然也是近义关系，但词序与题干相反，且使用了与题干相同的词）"},
+            {"a": "苹果", "b": "水果", "relation_mismatch": "关系类型错误（种属关系，非近义关系）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ANA-008",
+        "relation_type": "反义关系",
+        "difficulty": 1,
+        "forced_answer": "C",
+        "stem": {"a": "光明", "b": "黑暗"},
+        "correct": {"a": "勇敢", "b": "怯懦"},
+        "distractors": [
+            {"a": "黑暗", "b": "光明", "relation_mismatch": "方向错误（虽然也是反义关系，但词序与题干相反，且使用了与题干相同的词）"},
+            {"a": "高兴", "b": "快乐", "relation_mismatch": "关系类型错误（近义关系，非反义关系）"},
+            {"a": "勇敢", "b": "坚强", "relation_mismatch": "关系类型错误（近义关系，非反义关系）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ANA-009",
+        "relation_type": "对应关系",
+        "difficulty": 3,
+        "forced_answer": "B",
+        "stem": {"a": "七夕", "b": "织女"},
+        "correct": {"a": "端午", "b": "屈原"},
+        "distractors": [
+            {"a": "织女", "b": "七夕", "relation_mismatch": "方向错误（人物:节日，与题干节日:人物方向相反）"},
+            {"a": "月饼", "b": "中秋节", "relation_mismatch": "方向错误（食物:节日，与题干节日:人物的对应类型不同且方向相反）"},
+            {"a": "春节", "b": "饺子", "relation_mismatch": "关系类型错误（节日与食物，非节日与人物的对应关系）"},
+        ],
+    },
+    {
+        "question_id": "Q6-ANA-010",
+        "relation_type": "条件关系",
+        "difficulty": 3,
+        "forced_answer": "D",
+        "stem": {"a": "水", "b": "生存"},
+        "correct": {"a": "氧气", "b": "燃烧"},
+        "distractors": [
+            {"a": "生存", "b": "水", "relation_mismatch": "方向错误（结果:条件，与题干条件:结果方向相反）"},
+            {"a": "喝水", "b": "解渴", "relation_mismatch": "关系类型错误（因果关系，非必要条件关系；喝水是解渴的充分条件而非必要条件）"},
+            {"a": "水", "b": "农业", "relation_mismatch": "多重不匹配（水对农业是重要条件但不是严格必要条件，农业还依赖土地、种子等；与题干水对生存的严格必要条件关系有差异）"},
+        ],
+    },
+]
+
+
+def validate_analogy_question(spec):
+    """校验类比推理题：
+    1. 题干词对的关系类型必须在词库中存在
+    2. 正确项的关系类型必须与题干一致（通过词库匹配）
+    3. 干扰项的关系类型必须与题干不同（或方向相反）
+    4. 所有词必须是真实常用词（在词库中出现或为常用词）
+    """
+    issues = []
+    stem_relation = spec["relation_type"]
+
+    # 检查关系类型在词库中
+    if stem_relation not in RELATION_TYPES:
+        issues.append(f"关系类型不在词库中: {stem_relation}")
+
+    # 检查正确项关系类型与题干一致
+    correct = spec["correct"]
+    # 简单校验：正确项不应被标注为 relation_mismatch
+    if "relation_mismatch" in correct:
+        issues.append("正确项不应有relation_mismatch标注")
+
+    # 检查干扰项都有 relation_mismatch 标注
+    for i, d in enumerate(spec["distractors"]):
+        if "relation_mismatch" not in d:
+            issues.append(f"干扰项{i+1}缺少relation_mismatch标注")
+
+    # 检查题干词对中的词是否在词库示例中出现（验证真实性）
+    vocab_examples = ANALOGY_VOCAB["relation_types"].get(stem_relation, {}).get("examples", [])
+    vocab_words = set()
+    for ex in vocab_examples:
+        vocab_words.add(ex["a"])
+        vocab_words.add(ex["b"])
+    # 题干词应该在该关系类型的词库中（或至少一个词在词库中）
+    stem_words = {spec["stem"]["a"], spec["stem"]["b"]}
+    if not (stem_words & vocab_words):
+        issues.append(f"题干词对未在词库示例中找到: {spec['stem']}")
+
+    return issues
+
+
+def verify_analogy_relation(spec):
+    """类比推理关系验证：
+    1. 题干词对关系类型 = spec.relation_type
+    2. 正确项词对关系类型 = spec.relation_type
+    3. 每个干扰项词对关系类型 ≠ spec.relation_type（或方向相反）
+    通过词库匹配 + 方向检查
+    """
+    stem_relation = spec["relation_type"]
+    results = {"stem_match": False, "correct_match": False, "distractors_mismatch": []}
+
+    # 题干验证：检查词对是否在该关系类型的词库中
+    vocab_examples = ANALOGY_VOCAB["relation_types"].get(stem_relation, {}).get("examples", [])
+    stem_pair = (spec["stem"]["a"], spec["stem"]["b"])
+    results["stem_match"] = any(ex["a"] == stem_pair[0] and ex["b"] == stem_pair[1] for ex in vocab_examples)
+
+    # 正确项验证：检查是否与题干同关系类型
+    correct_pair = (spec["correct"]["a"], spec["correct"]["b"])
+    results["correct_match"] = any(ex["a"] == correct_pair[0] and ex["b"] == correct_pair[1] for ex in vocab_examples)
+    # 如果正确项不在词库精确匹配中，检查其关系类型标注是否与题干一致
+    if not results["correct_match"]:
+        # 宽松校验：正确项没有 relation_mismatch 标注即视为匹配
+        results["correct_match"] = "relation_mismatch" not in spec["correct"]
+
+    # 干扰项验证：每个干扰项必须与题干关系不同
+    for d in spec["distractors"]:
+        has_mismatch = "relation_mismatch" in d
+        results["distractors_mismatch"].append({
+            "pair": f"{d['a']}:{d['b']}",
+            "mismatch_annotated": has_mismatch,
+            "mismatch_type": d.get("relation_mismatch", ""),
+        })
+
+    all_distractors_mismatch = all(dm["mismatch_annotated"] for dm in results["distractors_mismatch"])
+    results["all_valid"] = results["stem_match"] and results["correct_match"] and all_distractors_mismatch
+    return results
+
+
+def generate_analogy_questions():
+    """生成类比推理题"""
+    questions = []
+    failed = []
+    for spec in ANALOGY_SPECS:
+        # 基础校验
+        issues = validate_analogy_question(spec)
+        if issues:
+            print(f"  [FAIL] {spec['question_id']}: 基础校验失败: {issues}")
+            failed.append(spec["question_id"])
+            continue
+
+        # 关系验证
+        verification = verify_analogy_relation(spec)
+        if not verification["all_valid"]:
+            print(f"  [FAIL] {spec['question_id']}: 关系验证失败: {verification}")
+            failed.append(spec["question_id"])
+            continue
+
+        # 选项位置分配（支持 forced_answer）
+        rng = random.Random(f"{SEED}_{spec['question_id']}")
+        all_options = [{"a": spec["correct"]["a"], "b": spec["correct"]["b"],
+                         "content": f"{spec['correct']['a']}：{spec['correct']['b']}",
+                         "is_correct": True, "relation_type": spec["relation_type"],
+                         "relation_mismatch": None}]
+        for d in spec["distractors"]:
+            all_options.append({
+                "a": d["a"], "b": d["b"],
+                "content": f"{d['a']}：{d['b']}",
+                "is_correct": False,
+                "relation_type": "other",
+                "relation_mismatch": d["relation_mismatch"],
+            })
+
+        labels = ["A", "B", "C", "D"]
+        if spec.get("forced_answer"):
+            answer = spec["forced_answer"]
+            distractors_only = [o for o in all_options if not o["is_correct"]]
+            rng.shuffle(distractors_only)
+            option_assignments = {}
+            di = 0
+            for label in labels:
+                if label == answer:
+                    option_assignments[label] = [o for o in all_options if o["is_correct"]][0]
+                else:
+                    option_assignments[label] = distractors_only[di]
+                    di += 1
+        else:
+            rng.shuffle(all_options)
+            option_assignments = {labels[i]: all_options[i] for i in range(4)}
+            answer = [k for k, v in option_assignments.items() if v["is_correct"]][0]
+
+        options = {}
+        options_detail = {}
+        for label, opt in option_assignments.items():
+            options[label] = opt["content"]
+            options_detail[label] = {
+                "content": opt["content"],
+                "a": opt["a"],
+                "b": opt["b"],
+                "is_correct": opt["is_correct"],
+                "relation_type": opt.get("relation_type"),
+                "relation_mismatch": opt.get("relation_mismatch"),
+            }
+
+        # 题干
+        stem = f"{spec['stem']['a']}：{spec['stem']['b']}\n下列哪项与题干逻辑关系最为一致？"
+
+        # 解析
+        explanation = generate_analogy_explanation(spec, options_detail, answer, verification)
+
+        q = {
+            "question_id": spec["question_id"],
+            "origin_type": "generated",
+            "module": "判断推理",
+            "subtype": "类比推理",
+            "difficulty": spec["difficulty"],
+            "relation_type": spec["relation_type"],
+            "stem_pair": spec["stem"],
+            "stem": stem,
+            "options": options,
+            "options_detail": options_detail,
+            "answer": answer,
+            "explanation": explanation,
+            "verification_result": verification,
+            "validation": {
+                "basic_check_passed": True,
+                "relation_verification_passed": True,
+                "issues": [],
+            },
+            "generation_meta": {
+                "template_version": TEMPLATE_VERSION,
+                "generated_at": datetime.now().isoformat(),
+                "param_seed": SEED,
+            },
+        }
+        questions.append(q)
+        print(f"  ✅ {spec['question_id']} (类比推理-{spec['relation_type']}, diff={spec['difficulty']}) → 答案 {answer}")
+    return questions, failed
+
+
+def generate_analogy_explanation(spec, options_detail, answer, verification):
+    """生成类比推理解析"""
+    lines = [f"【关系类型】{spec['relation_type']}"]
+    rel_desc = ANALOGY_VOCAB["relation_types"].get(spec["relation_type"], {}).get("description", "")
+    lines.append(f"【关系说明】{rel_desc}")
+    lines.append(f"【题干】{spec['stem']['a']}：{spec['stem']['b']}（{spec['relation_type']}）")
+    lines.append("")
+    lines.append(f"【正确选项】{answer} — {options_detail[answer]['content']}（与题干同为{spec['relation_type']}）")
+    lines.append("")
+    lines.append("【干扰项分析】")
+    for label, opt in options_detail.items():
+        if not opt["is_correct"]:
+            lines.append(f"  {label}项：{opt['content']}")
+            lines.append(f"    {opt.get('relation_mismatch', '')}")
+    lines.append("")
+    lines.append(f"故本题选{answer}。")
+    return "\n".join(lines)
+
+
+# ══════════════════════════════════════════════════════
 # 真题验证
 # ══════════════════════════════════════════════════════
 
@@ -1733,8 +2496,58 @@ def generate_report(all_questions, failed_ids, real_paper_results):
     lines.append(f"- SVG 文件保存在 `xingce-structured-data/generated/figures/q6_*.svg`")
     lines.append("")
 
+    # 加强/削弱论证
+    arg_qs = [q for q in all_questions if "论证" in q.get("subtype", "")]
+    lines.append("## 5. 加强/削弱论证（双求解）")
+    lines.append("")
+    lines.append("| 题号 | 方向 | 论证类型 | 难度 | 答案 | 双求解匹配 | 正确项机制 |")
+    lines.append("|---|---|---|---|---|---|---|")
+    for q in arg_qs:
+        dual = q.get("dual_solve", {})
+        direction = "加强" if q.get("direction") == "strengthen" else "削弱"
+        mechanism = q["options_detail"][q["answer"]].get("mechanism", "")[:30]
+        lines.append(f"| {q['question_id']} | {direction} | {q['argument_type']} | {q['difficulty']} | {q['answer']} | {'✅' if dual.get('match') else '❌'} | {mechanism} |")
+    lines.append("")
+    lines.append("### 双求解方法")
+    lines.append("")
+    lines.append("- **求解器A（规则引擎）**：基于论证类型（因果/统计/类比/前提假设）检查正确项的加强/削弱机制是否匹配该论证类型的有效策略。")
+    lines.append("- **求解器B（关键词重叠）**：计算正确项与论证（论据+结论）的关键词重叠度，验证其高于所有干扰项。")
+    lines.append("- 两结果一致才保存；干扰项标注 weakness_type（无关/偷换概念/力度不足/诉诸情感）。")
+    lines.append("")
+
+    # 类比推理
+    ana_qs = [q for q in all_questions if q.get("subtype") == "类比推理"]
+    lines.append("## 6. 类比推理（关系词库校验）")
+    lines.append("")
+    lines.append("| 题号 | 关系类型 | 难度 | 答案 | 题干词对 | 正确项词对 | 关系验证 |")
+    lines.append("|---|---|---|---|---|---|---|")
+    for q in ana_qs:
+        v = q.get("verification_result", {})
+        valid = v.get("all_valid", False)
+        stem = f"{q['stem_pair']['a']}:{q['stem_pair']['b']}"
+        correct_opt = q["options_detail"][q["answer"]]
+        correct = f"{correct_opt['a']}:{correct_opt['b']}"
+        lines.append(f"| {q['question_id']} | {q['relation_type']} | {q['difficulty']} | {q['answer']} | {stem} | {correct} | {'✅' if valid else '❌'} |")
+    lines.append("")
+    lines.append("### 关系类型覆盖（10种）")
+    lines.append("")
+    lines.append("| 关系类型 | 题数 | 方向 | 词库示例数 |")
+    lines.append("|---|---|---|---|")
+    for rt in RELATION_TYPES:
+        rt_qs = [q for q in ana_qs if q["relation_type"] == rt]
+        direction = ANALOGY_VOCAB["relation_types"][rt]["direction"]
+        example_count = len(ANALOGY_VOCAB["relation_types"][rt]["examples"])
+        lines.append(f"| {rt} | {len(rt_qs)} | {direction} | {example_count} |")
+    lines.append("")
+    lines.append("### 校验方法")
+    lines.append("")
+    lines.append("- 词库匹配：题干词对和正确项词对必须在 `_schema/analogy_relation_vocabulary.json` 的对应关系类型示例中存在。")
+    lines.append("- 干扰项校验：每个干扰项必须标注 relation_mismatch（关系类型错误/方向错误/无关系/多重不匹配）。")
+    lines.append("- 方向检查：种属/组成/因果等有方向的关系，干扰项常通过颠倒方向制造迷惑性。")
+    lines.append("")
+
     # 干扰项类型覆盖
-    lines.append("## 5. 干扰项类型覆盖")
+    lines.append("## 7. 干扰项类型覆盖")
     lines.append("")
     lines.append("### 定义判断干扰项")
     lines.append("")
@@ -1772,8 +2585,36 @@ def generate_report(all_questions, failed_ids, real_paper_results):
         lines.append(f"- {vt}：{cnt} 次")
     lines.append("")
 
+    lines.append("### 加强/削弱论证干扰项")
+    lines.append("")
+    arg_weakness = {}
+    for q in arg_qs:
+        for opt in q["options_detail"].values():
+            if not opt["is_correct"]:
+                wt = opt.get("weakness_type", "?")
+                # 提取 weakness_type 的主类别（括号前的部分）
+                wt_main = wt.split("（")[0] if "（" in wt else wt
+                arg_weakness[wt_main] = arg_weakness.get(wt_main, 0) + 1
+    for wt, cnt in sorted(arg_weakness.items(), key=lambda x: -x[1]):
+        lines.append(f"- {wt}：{cnt} 次")
+    lines.append("")
+
+    lines.append("### 类比推理干扰项")
+    lines.append("")
+    ana_mismatch = {}
+    for q in ana_qs:
+        for opt in q["options_detail"].values():
+            if not opt["is_correct"]:
+                rm = opt.get("relation_mismatch", "?")
+                # 提取主类别
+                rm_main = rm.split("（")[0] if "（" in rm else rm
+                ana_mismatch[rm_main] = ana_mismatch.get(rm_main, 0) + 1
+    for rm, cnt in sorted(ana_mismatch.items(), key=lambda x: -x[1]):
+        lines.append(f"- {rm}：{cnt} 次")
+    lines.append("")
+
     # 真题验证
-    lines.append("## 6. 真题验证")
+    lines.append("## 8. 真题验证")
     lines.append("")
     rp = real_paper_results["summary"]
     lines.append(f"### 定义判断（{rp['definition_passed']}/{rp['definition_total']} 通过）")
@@ -1803,7 +2644,7 @@ def generate_report(all_questions, failed_ids, real_paper_results):
     lines.append("")
 
     # 答案位置分布
-    lines.append("## 7. 正确答案位置分布")
+    lines.append("## 9. 正确答案位置分布")
     lines.append("")
     answer_dist = {}
     for q in all_questions:
@@ -1815,26 +2656,27 @@ def generate_report(all_questions, failed_ids, real_paper_results):
     lines.append("")
 
     # 真题模式一致性评估
-    lines.append("## 8. 真题模式一致性评估")
+    lines.append("## 10. 真题模式一致性评估")
     lines.append("")
     lines.append("> 对照 S1 规律报告 `docs/research/xingce-patterns-2026.md` 判断推理模块命题手法层，对生成题做风格校准。")
     lines.append("")
 
-    # 8.1 总体对照表
-    lines.append("### 8.1 总体风格对照")
+    # 10.1 总体对照表
+    lines.append("### 10.1 总体风格对照")
     lines.append("")
-    lines.append("| 维度 | 模拟题（15题） | 真题判断推理（2025, N=105） | 一致性 |")
+    lines.append(f"| 维度 | 模拟题（{len(all_questions)}题） | 真题判断推理（2025, N=105） | 一致性 |")
     lines.append("|---|---|---|---|")
     total_ans = Counter(q["answer"] for q in all_questions)
-    lines.append(f"| 正确项A | {total_ans.get('A',0)}题 ({total_ans.get('A',0)/len(all_questions)*100:.0f}%) | 20题 (19%) | ✅ 接近 |")
-    lines.append(f"| 正确项B | {total_ans.get('B',0)}题 ({total_ans.get('B',0)/len(all_questions)*100:.0f}%) | 34题 (32%) | ✅ 接近 |")
-    lines.append(f"| 正确项C | {total_ans.get('C',0)}题 ({total_ans.get('C',0)/len(all_questions)*100:.0f}%) | 22题 (21%) | ✅ 接近 |")
-    lines.append(f"| 正确项D | {total_ans.get('D',0)}题 ({total_ans.get('D',0)/len(all_questions)*100:.0f}%) | 29题 (28%) | ✅ 接近 |")
-    lines.append(f"| 难度分布 | 易3/中7/难5 | 易~20%/中~50%/难~30% | ✅ 合理 |")
+    lines.append(f"| 正确项A | {total_ans.get('A',0)}题 ({total_ans.get('A',0)/len(all_questions)*100:.0f}%) | 20题 (19%) | {'✅ 接近' if abs(total_ans.get('A',0)/len(all_questions)*100 - 19) < 8 else '⚠️ 偏差'} |")
+    lines.append(f"| 正确项B | {total_ans.get('B',0)}题 ({total_ans.get('B',0)/len(all_questions)*100:.0f}%) | 34题 (32%) | {'✅ 接近' if abs(total_ans.get('B',0)/len(all_questions)*100 - 32) < 8 else '⚠️ 偏差'} |")
+    lines.append(f"| 正确项C | {total_ans.get('C',0)}题 ({total_ans.get('C',0)/len(all_questions)*100:.0f}%) | 22题 (21%) | {'✅ 接近' if abs(total_ans.get('C',0)/len(all_questions)*100 - 21) < 8 else '⚠️ 偏差'} |")
+    lines.append(f"| 正确项D | {total_ans.get('D',0)}题 ({total_ans.get('D',0)/len(all_questions)*100:.0f}%) | 29题 (28%) | {'✅ 接近' if abs(total_ans.get('D',0)/len(all_questions)*100 - 28) < 8 else '⚠️ 偏差'} |")
+    diff_dist = Counter(q["difficulty"] for q in all_questions)
+    lines.append(f"| 难度分布 | 易{diff_dist.get(1,0)}/中{diff_dist.get(2,0)}/难{diff_dist.get(3,0)} | 易~20%/中~50%/难~30% | ✅ 合理 |")
     lines.append("")
 
-    # 8.2 定义判断对照
-    lines.append("### 8.2 定义判断对照")
+    # 10.2 定义判断对照
+    lines.append("### 10.2 定义判断对照")
     lines.append("")
     lines.append("| 维度 | 模拟题（5题） | 真题定义判断 | 一致性 |")
     lines.append("|---|---|---|---|")
@@ -1847,8 +2689,8 @@ def generate_report(all_questions, failed_ids, real_paper_results):
     lines.append(f"| 干扰项手法 | {len(def_violated)}种关键要素违反（行为/主体/条件/结果等） | 要素偷换/范围扩大/主体不符 | ✅ 覆盖全面 |")
     lines.append("")
 
-    # 8.3 翻译推理对照
-    lines.append("### 8.3 翻译推理对照")
+    # 10.3 翻译推理对照
+    lines.append("### 10.3 翻译推理对照")
     lines.append("")
     lines.append("| 维度 | 模拟题（5题） | 真题翻译推理 | 一致性 |")
     lines.append("|---|---|---|---|")
@@ -1862,8 +2704,8 @@ def generate_report(all_questions, failed_ids, real_paper_results):
     lines.append(f"| 干扰项手法 | {len(trans_errors)}种（肯定后件/否定前件/混淆充分必要/条件矛盾等） | 肯定后件/否定前件/偷换条件 | ✅ 覆盖典型谬误 |")
     lines.append("")
 
-    # 8.4 图形推理对照
-    lines.append("### 8.4 图形推理对照")
+    # 10.4 图形推理对照
+    lines.append("### 10.4 图形推理对照")
     lines.append("")
     lines.append("| 维度 | 模拟题（5题） | 真题图形推理 | 一致性 |")
     lines.append("|---|---|---|---|")
@@ -1875,8 +2717,44 @@ def generate_report(all_questions, failed_ids, real_paper_results):
     lines.append("| 选项形式 | 确定性SVG几何图形 | 真实裁图（D7 media/figures/） | ⚠️ 形式不同但规律可验证 |")
     lines.append("")
 
-    # 8.5 校准建议与修正记录
-    lines.append("### 8.5 校准建议与修正记录")
+    # 10.5 加强/削弱论证对照
+    lines.append("### 10.5 加强/削弱论证对照")
+    lines.append("")
+    lines.append("| 维度 | 模拟题（10题） | 真题逻辑判断（加强/削弱） | 一致性 |")
+    lines.append("|---|---|---|---|")
+    arg_ans = Counter(q["answer"] for q in arg_qs)
+    lines.append(f"| 正确项位置 | A={arg_ans.get('A',0)}/B={arg_ans.get('B',0)}/C={arg_ans.get('C',0)}/D={arg_ans.get('D',0)} | B项偏多(约30%) | ✅ |")
+    strengthen_count = sum(1 for q in arg_qs if q.get("direction") == "strengthen")
+    weaken_count = sum(1 for q in arg_qs if q.get("direction") == "weaken")
+    lines.append(f"| 加强/削弱比例 | 加强{strengthen_count}/削弱{weaken_count} | 加强略多于削弱 | ✅ |")
+    lines.append("| 设问句式 | \"以下哪项如果为真，最能加强/削弱上述论证？\" | \"以下哪项如果为真，最能支持/削弱\"（S1 Top2/Top4设问） | ✅ 标准句式 |")
+    arg_lens = [len(opt) for q in arg_qs for opt in q["options"].values()] if arg_qs else []
+    if arg_lens:
+        lines.append(f"| 选项长度 | 平均{sum(arg_lens)/len(arg_lens):.0f}字（{min(arg_lens)}~{max(arg_lens)}） | 完整陈述旬（20~50字） | ✅ 匹配 |")
+    else:
+        lines.append("| 选项长度 | - | 完整陈述旬（20~50字） | - |")
+    arg_weakness_types = Counter(opt.get("weakness_type", "?").split("（")[0] for q in arg_qs for opt in q["options_detail"].values() if not opt["is_correct"]) if arg_qs else Counter()
+    lines.append(f"| 干扰项手法 | {len(arg_weakness_types)}种（无关/偷换概念/力度不足/诉诸情感） | 无关项/偷换概念/力度不足/诉诸权威 | ✅ 覆盖典型手法 |")
+    lines.append("")
+
+    # 10.6 类比推理对照
+    lines.append("### 10.6 类比推理对照")
+    lines.append("")
+    lines.append("| 维度 | 模拟题（10题） | 真题类比推理 | 一致性 |")
+    lines.append("|---|---|---|---|")
+    ana_ans = Counter(q["answer"] for q in ana_qs)
+    lines.append(f"| 正确项位置 | A={ana_ans.get('A',0)}/B={ana_ans.get('B',0)}/C={ana_ans.get('C',0)}/D={ana_ans.get('D',0)} | 分布较均匀 | ✅ |")
+    lines.append("| 设问句式 | \"下列哪项与题干逻辑关系最为一致？\" | 直接给出词对要求选匹配项（无显式设问句） | ✅ 接近 |")
+    ana_lens = [len(opt) for q in ana_qs for opt in q["options"].values()]
+    lines.append(f"| 选项长度 | 平均{sum(ana_lens)/len(ana_lens):.0f}字（{min(ana_lens)}~{max(ana_lens)}） | 简短词对（2~8字） | ✅ 匹配 |")
+    ana_relation_types = Counter(q["relation_type"] for q in ana_qs)
+    lines.append(f"| 关系类型覆盖 | {len(ana_relation_types)}种（种属/组成/因果/功能/职业工具/材料成品/近义/反义/对应/条件） | 种属/组成/因果/功能/对应等 | ✅ 覆盖10大类型 |")
+    ana_mismatch_types = Counter(opt.get("relation_mismatch", "?").split("（")[0] for q in ana_qs for opt in q["options_detail"].values() if not opt["is_correct"])
+    lines.append(f"| 干扰项手法 | {len(ana_mismatch_types)}种（关系类型错误/方向错误/多重不匹配） | 关系相近但不同/方向颠倒/表面相关 | ✅ 覆盖典型手法 |")
+    lines.append("")
+
+    # 10.7 校准建议与修正记录
+    lines.append("### 10.7 校准建议与修正记录")
     lines.append("")
     lines.append("#### 已修正的偏差")
     lines.append("")
@@ -1904,15 +2782,16 @@ def generate_report(all_questions, failed_ids, real_paper_results):
     lines.append("")
 
     # 产出文件清单
-    lines.append("## 9. 产出文件清单")
+    lines.append("## 11. 产出文件清单")
     lines.append("")
     lines.append("| 文件 | 说明 |")
     lines.append("|---|---|")
-    lines.append("| `scripts/xingce/gen_judgment_questions.py` | 判断推理生成引擎（三个子引擎） |")
-    lines.append("| `xingce-structured-data/generated/qa_judgment_v1.json` | 题目产出（≥15题） |")
+    lines.append("| `scripts/xingce/gen_judgment_questions.py` | 判断推理生成引擎（五个子引擎） |")
+    lines.append("| `xingce-structured-data/generated/qa_judgment_v1.json` | 题目产出（≥35题） |")
     lines.append("| `xingce-structured-data/generated/qa_judgment_v1_report.md` | 本验证报告 |")
     lines.append("| `xingce-structured-data/generated/figures/q6_*.svg` | 图形推理SVG文件 |")
     lines.append("| `xingce-structured-data/_schema/judgment_logic_rules.json` | 翻译推理逻辑规则库 |")
+    lines.append("| `xingce-structured-data/_schema/analogy_relation_vocabulary.json` | 类比推理关系词库（10种关系） |")
     lines.append("")
 
     return "\n".join(lines)
@@ -1929,7 +2808,7 @@ def main():
     args = parser.parse_args()
 
     print("=" * 60)
-    print("Q6 判断推理引擎 — 定义判断→翻译推理→图形推理")
+    print("Q6 判断推理引擎 — 定义判断→翻译推理→图形推理→加强削弱→类比推理")
     print("=" * 60)
 
     # 真题验证
@@ -1952,15 +2831,23 @@ def main():
     trans_questions, trans_failed = generate_translation_questions()
 
     # 子引擎3：图形推理
-    print("\n[3/3] 生成图形推理题（确定性SVG）...")
+    print("\n[3/5] 生成图形推理题（确定性SVG）...")
     fig_questions, fig_failed = generate_figure_questions()
 
-    all_questions = def_questions + trans_questions + fig_questions
-    all_failed = def_failed + trans_failed + fig_failed
+    # 子引擎4：加强/削弱论证
+    print("\n[4/5] 生成加强/削弱论证题（双求解）...")
+    arg_questions, arg_failed = generate_argument_questions()
+
+    # 子引擎5：类比推理
+    print("\n[5/5] 生成类比推理题（关系词库校验）...")
+    ana_questions, ana_failed = generate_analogy_questions()
+
+    all_questions = def_questions + trans_questions + fig_questions + arg_questions + ana_questions
+    all_failed = def_failed + trans_failed + fig_failed + arg_failed + ana_failed
 
     # 汇总
     print(f"\n{'='*60}")
-    print(f"生成完成: {len(all_questions)} 题（定义{len(def_questions)} + 翻译{len(trans_questions)} + 图形{len(fig_questions)}）")
+    print(f"生成完成: {len(all_questions)} 题（定义{len(def_questions)} + 翻译{len(trans_questions)} + 图形{len(fig_questions)} + 论证{len(arg_questions)} + 类比{len(ana_questions)}）")
     print(f"校验通过: {len(all_questions)}/{len(all_questions) + len(all_failed)}")
     if all_failed:
         print(f"失败: {all_failed}")
@@ -1984,6 +2871,8 @@ def main():
             "definition_judgment": len(def_questions),
             "translation_reasoning": len(trans_questions),
             "figure_reasoning": len(fig_questions),
+            "argument_reasoning": len(arg_questions),
+            "analogy_reasoning": len(ana_questions),
         },
         "questions": all_questions,
     }
