@@ -1,0 +1,5139 @@
+{
+  "version": "v1",
+  "created_at": "2026-09-03T08:13:34.050765",
+  "total": 70,
+  "selection_criteria": {
+    "answer_non_empty": true,
+    "exclude_high_risk_flags": [
+      "content_mismatch_needs_source",
+      "duplicate_in_paper",
+      "material_borrowed",
+      "section_type_mismatch",
+      "type_inferred_from_stem"
+    ],
+    "anchor_pending_not_excluded": true,
+    "stem_min_length": 10,
+    "options_require_ABCD": true,
+    "deduplication": "shared questions selected once, prefer 省级",
+    "module_quotas": {
+      "资料分析": 20,
+      "数量关系": 10,
+      "判断推理": 12,
+      "言语理解与表达": 12,
+      "常识判断": 8,
+      "政治理论": 8
+    }
+  },
+  "questions": [
+    {
+      "number": 125,
+      "section": "资料分析",
+      "stem": "关于资料中城市2023年12月电影票房状况，能够从上述资料中推出的是：",
+      "items": null,
+      "options": {
+        "A": "总观众人次数最多的三个城市，当月总观众之和不到1100万人次",
+        "B": "广州平均每场电影的座位数少于深圳",
+        "C": "上座率最高的城市，当月票房是上座率最低城市的2倍以上",
+        "D": "上海、杭州、南京总放映场次是成都、重庆总放映场次的1.5倍以上"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项,由图2可知,2023年12月总观众人次最多的三个城市是北京、上海、成都,三者总观众人次之和为410.74+398.05+308.76>410+390+300=1100万人次,不能推出。\nB项,平均每场电影的座位数=座位总数/总放映场次=总观众人次/(上座率×总放映场次)。由图形可知,2023年12月广州平均每场电影的座位数为294.00/(8.07%×21.67),深圳的为287.82/(8.72%×21.53),总放映场次非常接近,可忽略不计,只比较294.00/8.07%和287.82/8.72%的大小,由\"分子大且分母小的分数大\"可知,前者大于后者,那么294/(8.07%×21.67)>287.82/(8.72%×21.53),不能推出。\nC项,由图2可知,2023年12月上座率最高的城市是北京,最低的城市是重庆;由图1可知,2023年12月北京票房是重庆票房的19324÷8451>2倍,可以推出。故本题选C。\n验证D项,由图1可知,2023年12月上海、杭州、南京总放映场次为28.40+15.76+12.46≈57,成都、重庆总放映场次为24.55+21.41≈46,前者是后者的57÷46=1.2X<1.5倍,不能推出。",
+      "media": [
+        {
+          "path": "media/figures/q121_charts.jpg",
+          "kind": "chart",
+          "label": "票房/场次/人次/上座率双图"
+        },
+        {
+          "path": "media/pages/20252447_p16_data_analysis.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m121_125"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-xingzhengzhifa-125",
+      "module": "资料分析",
+      "subtype": "综合分析",
+      "knowledge_points": [
+        "平均数",
+        "倍数"
+      ],
+      "difficulty": 5,
+      "solution_method": "公式法",
+      "error_traps": [
+        "单位换算/百分号混淆",
+        "平均数基数错误",
+        "是几倍与多几倍混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "410+390+300",
+          "inputs": [
+            "410",
+            "390",
+            "300"
+          ],
+          "result": "1100"
+        },
+        {
+          "operation": "57÷46",
+          "inputs": [
+            "57",
+            "46"
+          ],
+          "result": "1.2"
+        },
+        {
+          "operation": "294.00/8.0",
+          "inputs": [
+            "294.00",
+            "8.0"
+          ],
+          "result": "7%"
+        },
+        {
+          "operation": "287.82/8.7",
+          "inputs": [
+            "287.82",
+            "8.7"
+          ],
+          "result": "2%"
+        },
+        {
+          "operation": "19324÷845",
+          "inputs": [
+            "19324",
+            "845"
+          ],
+          "result": "1"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 125,
+      "fingerprint": "5bfd7c4fed4a"
+    },
+    {
+      "number": 120,
+      "section": "资料分析",
+      "stem": "以下柱状图反映了2021年、2022年和2023年Z省律师、基层法律服务工作哪一指标的同比增量变化趋势（横轴位置表示增量为0）？",
+      "items": null,
+      "options": {
+        "A": "律师事务所总数",
+        "B": "律师人数",
+        "C": "村（社区）法律顾问数",
+        "D": "法律顾问数（不含村、社区）"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：增长量=现期值-基期值,观察柱状图可知,2021—2023年该指标同比增量均大于0,且逐年下降,可逐项分析。\nA项,由表格第二行可知,2021年Z省律师事务所总数同比增量为1705-1636=69家,2022年为1755-1705=50家,2023年为1826-1755=71家,同比增量先降后升,排除。\nB项,由表格第三行可知,2021年Z省律师人数同比增量为30889-27302=3XXX人,2022年为36938-30889=6XXX人,2022年同比增量上升,排除。\nC项,由表格第五行可知,2021年Z省村(社区)法律顾问数同比增量为24951-26153=-1XXX人,同比增量小于0,排除。故本题选D。\n验证D项,由表格第四行可知,2021年Z省法律顾问数(不含村、社区)同比增量为89450-72739=16XXX人,2022年为102251-89450=12XXX人,2023年为111811-102251=9XXX人,同比增量逐年下降,符合柱状图变化趋势。",
+      "media": [
+        {
+          "path": "media/figures/q120_bar.jpg",
+          "kind": "chart",
+          "label": "柱状图"
+        },
+        {
+          "path": "media/figures/q116_table.jpg",
+          "kind": "table",
+          "label": "法律服务数据表"
+        },
+        {
+          "path": "media/pages/20252447_p15_data_table_bar.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m116_120"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-xingzhengzhifa-120",
+      "module": "资料分析",
+      "subtype": "基期量计算",
+      "knowledge_points": [
+        "基期量",
+        "现期量",
+        "增长量",
+        "同比"
+      ],
+      "difficulty": 5,
+      "solution_method": "公式法",
+      "error_traps": [
+        "时间点混淆/基期现期颠倒",
+        "增长率与增长量混淆",
+        "选非题误选"
+      ],
+      "calc_tree": [
+        {
+          "operation": "1705-1636",
+          "inputs": [
+            "1705",
+            "1636"
+          ],
+          "result": "69"
+        },
+        {
+          "operation": "1755-1705",
+          "inputs": [
+            "1755",
+            "1705"
+          ],
+          "result": "50"
+        },
+        {
+          "operation": "1826-1755",
+          "inputs": [
+            "1826",
+            "1755"
+          ],
+          "result": "71"
+        },
+        {
+          "operation": "30889-27302",
+          "inputs": [
+            "30889",
+            "27302"
+          ],
+          "result": "3"
+        },
+        {
+          "operation": "36938-30889",
+          "inputs": [
+            "36938",
+            "30889"
+          ],
+          "result": "6"
+        },
+        {
+          "operation": "89450-72739",
+          "inputs": [
+            "89450",
+            "72739"
+          ],
+          "result": "16"
+        },
+        {
+          "operation": "102251-89450",
+          "inputs": [
+            "102251",
+            "89450"
+          ],
+          "result": "12"
+        },
+        {
+          "operation": "111811-102251",
+          "inputs": [
+            "111811",
+            "102251"
+          ],
+          "result": "9"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 120,
+      "fingerprint": "1953e6af3d6e"
+    },
+    {
+      "number": 130,
+      "section": "资料分析",
+      "stem": "关于我国外贸进出口状况，能够从上述资料中推出的是：",
+      "items": null,
+      "options": {
+        "A": "2023年3月东部地区高技术产品出口额",
+        "B": "2022年第一季度中西部地区一般贸易进出口额",
+        "C": "2023年第一季度全国高技术产品出口额",
+        "D": "2022年东北地区汽车制造业出口额同比增量"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项,第二段中只给出2023年3月东部地区高技术产品出口额的同比增速,没有给出其他与2023年3月东部地区高技术产品出口额相关的数据,不能推出。\nB项,由第一段可知,2023年第一季度,中西部地区进出口1.84万亿元,同比增长12.6%;由第三段可知,一般贸易占中西部地区进出口总额的56.6%,同比提升4.9个百分点。根据\"基期值=现期值/(1+增长率)\"\"部分值=整体值×比重\",可求得2022年第一季度中西部地区一般贸易进出口额为[1.84/(1+12.6%)×(56.6%-4.9%)]万亿元,可以推出。故本题选B。\n验证:C项,第二段只给出2023年第一季度东部地区高技术产品出口额,及其占东部地区出口额的比重,不能求出2023年第一季度全国高技术产品出口额,不能推出;D项,第四段只给出2023年第一季度东北地区汽车制造业出口额的同比增速,没有具体出口额,不能求出2022年东北地区汽车制造业出口额同比增量,不能推出。",
+      "media": [
+        {
+          "path": "media/figures/q126_pies.jpg",
+          "kind": "chart",
+          "label": "饼图选项题126"
+        },
+        {
+          "path": "media/pages/20252447_p18_pie_charts.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m126_130"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-xingzhengzhifa-130",
+      "module": "资料分析",
+      "subtype": "综合分析",
+      "knowledge_points": [
+        "增长率",
+        "基期量",
+        "现期量",
+        "比重"
+      ],
+      "difficulty": 4,
+      "solution_method": "公式法",
+      "error_traps": [
+        "时间点混淆/基期现期颠倒",
+        "单位换算/百分号混淆",
+        "范围扩大/缩小"
+      ],
+      "calc_tree": [
+        {
+          "operation": "1.84/(1+12.6%)×(56.6%-4.9%)",
+          "inputs": [
+            "1.84",
+            "(1+12.6%)",
+            "(56.6%-4.9%)"
+          ],
+          "result": "见解析"
+        },
+        {
+          "operation": "基期值=现期值/(1+增长率)",
+          "inputs": [
+            "基期值"
+          ],
+          "result": "现期值/(1+增长率)"
+        },
+        {
+          "operation": "部分值=整体值×比重",
+          "inputs": [
+            "部分值"
+          ],
+          "result": "整体值×比重"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 130,
+      "fingerprint": "8fba4e67e7f7"
+    },
+    {
+      "number": 123,
+      "section": "资料分析",
+      "stem": "2023年12月，资料中有几个城市平均每人次观众创造的票房超过40元？",
+      "items": null,
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：根据\"平均数=总量/份数=票房/总观众人次\",要使某城市平均每人次观众创造的票房超过40元,则该城市总观众人次×40<票房。由材料可知:\n北京:410.74×40<19324,符合;上海:398.05×40<18682,符合;深圳:287.82×40<12233,符合;广州:294.00×40=(300-6)×40=12000-240=117XX<11841,符合;成都:308.76×40>11085,不符合;武汉:250.78×40>8776,不符合;杭州:218.95×40≈(220-1)×40=8760>8451,不符合;重庆:238.83×40>8451,不符合;西安:199.58×40>7298,不符合;南京:181.65×40>6875,不符合。综上所述,符合的有4个。故本题选B。",
+      "media": [
+        {
+          "path": "media/figures/q121_charts.jpg",
+          "kind": "chart",
+          "label": "票房/场次/人次/上座率双图"
+        },
+        {
+          "path": "media/pages/20252447_p16_data_analysis.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m121_125"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-123",
+      "module": "资料分析",
+      "subtype": "平均数计算",
+      "knowledge_points": [
+        "平均数",
+        "直接查找"
+      ],
+      "difficulty": 5,
+      "solution_method": "比例法",
+      "error_traps": [
+        "平均数基数错误",
+        "选非题误选"
+      ],
+      "calc_tree": [
+        {
+          "operation": "(300-6)×40",
+          "inputs": [
+            "300-6",
+            "40"
+          ],
+          "result": "12000"
+        },
+        {
+          "operation": "(220-1)×40",
+          "inputs": [
+            "220-1",
+            "40"
+          ],
+          "result": "8760"
+        },
+        {
+          "operation": "12000-240",
+          "inputs": [
+            "12000",
+            "240"
+          ],
+          "result": "117"
+        },
+        {
+          "operation": "410.74×4",
+          "inputs": [
+            "410.74",
+            "4"
+          ],
+          "result": "0"
+        },
+        {
+          "operation": "398.05×4",
+          "inputs": [
+            "398.05",
+            "4"
+          ],
+          "result": "0"
+        },
+        {
+          "operation": "287.82×4",
+          "inputs": [
+            "287.82",
+            "4"
+          ],
+          "result": "0"
+        },
+        {
+          "operation": "294.00×4",
+          "inputs": [
+            "294.00",
+            "4"
+          ],
+          "result": "0"
+        },
+        {
+          "operation": "308.76×4",
+          "inputs": [
+            "308.76",
+            "4"
+          ],
+          "result": "0"
+        },
+        {
+          "operation": "250.78×4",
+          "inputs": [
+            "250.78",
+            "4"
+          ],
+          "result": "0"
+        },
+        {
+          "operation": "218.95×4",
+          "inputs": [
+            "218.95",
+            "4"
+          ],
+          "result": "0"
+        },
+        {
+          "operation": "238.83×4",
+          "inputs": [
+            "238.83",
+            "4"
+          ],
+          "result": "0"
+        },
+        {
+          "operation": "199.58×4",
+          "inputs": [
+            "199.58",
+            "4"
+          ],
+          "result": "0"
+        },
+        {
+          "operation": "181.65×4",
+          "inputs": [
+            "181.65",
+            "4"
+          ],
+          "result": "0"
+        },
+        {
+          "operation": "平均数=总量/份数=票房/总观众人次",
+          "inputs": [
+            "平均数"
+          ],
+          "result": "总量/份数=票房/总观众人次"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 123,
+      "fingerprint": "23b0e5183d89"
+    },
+    {
+      "number": 124,
+      "section": "资料分析",
+      "stem": "如某月北京的电影总放映场次和平均每场座位数与2023年12月相同，但上座率增加5个百分点，则该月北京将有约多少万人次观众观影？",
+      "items": null,
+      "options": {
+        "A": "602",
+        "B": "431",
+        "C": "794",
+        "D": "696"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由\"上座率=观众人次/座位数×100%\"可知,观众人次数=座位数×上座率,座位总数=总观众人次/平均上座率=总放映场次×平均每场座位数,总放映场次和平均每场座位数不变,那么座位总数不变。由图2可知,2023年12月北京总观众人次为410.74万人次,上座率为10.75%,则2023年12月北京的座位总数为410.74/10.75%,上座率增加5个百分点,则该月北京将有约410.74/10.75%×(10.75%+5%)≈410.74+20.5/11%≈410.74+186=596.74万人次观众观影,最接近A。故本题选A。",
+      "media": [
+        {
+          "path": "media/figures/q121_charts.jpg",
+          "kind": "chart",
+          "label": "票房/场次/人次/上座率双图"
+        },
+        {
+          "path": "media/pages/20252447_p16_data_analysis.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m121_125"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-xingzhengzhifa-124",
+      "module": "资料分析",
+      "subtype": "平均数计算",
+      "knowledge_points": [
+        "平均数",
+        "百分数与百分点"
+      ],
+      "difficulty": 5,
+      "solution_method": "估算法",
+      "error_traps": [
+        "单位换算/百分号混淆",
+        "比重与百分比混淆",
+        "平均数基数错误"
+      ],
+      "calc_tree": [
+        {
+          "operation": "410.74+186",
+          "inputs": [
+            "410.74",
+            "186"
+          ],
+          "result": "596.74"
+        },
+        {
+          "operation": "410.74/10.75%",
+          "inputs": [
+            "410.74",
+            "10.75%"
+          ],
+          "result": ","
+        },
+        {
+          "operation": "410.74/10.7",
+          "inputs": [
+            "410.74",
+            "10.7"
+          ],
+          "result": "5%"
+        },
+        {
+          "operation": "20.5/11%",
+          "inputs": [
+            "20.5",
+            "11%"
+          ],
+          "result": "410.74"
+        },
+        {
+          "operation": "上座率=观众人次/座位数×100%",
+          "inputs": [
+            "上座率"
+          ],
+          "result": "观众人次/座位数×100%"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 124,
+      "fingerprint": "9283dd363e82"
+    },
+    {
+      "number": 129,
+      "section": "资料分析",
+      "stem": "2023年第一季度，东部地区外贸进出口额占我国外贸进出口总额比重比上年同期：",
+      "items": null,
+      "options": {
+        "A": "上升了5个百分点以上",
+        "B": "上升了不到5个百分点",
+        "C": "下降了5个百分点以上",
+        "D": "下降了不到5个百分点"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由第一段可知,2023年第一季度,我国外贸进出口总额为9.89万亿元,同比增加0.45万亿元。其中东部地区进出口7.75万亿元,同比增长2.9%。根据\"增长率=增长量/(现期值-增长量)\",则2023年第一季度,我国外贸进出口总额同比增长0.45/(9.89-0.45)=0.45/9.44≈5%。根据\"比重增长量=现期部分值/现期整体值×(部分增长率-整体增长率)/(1+部分增长率)\",则所求为7.75/9.89×(2.9%-5%)/(1+2.9%)=-7.75/9.89×2.1%/(1+2.9%),所求应大于-2.1%,即下降了不到5个百分点。故本题选D。",
+      "media": [
+        {
+          "path": "media/figures/q126_pies.jpg",
+          "kind": "chart",
+          "label": "饼图选项题126"
+        },
+        {
+          "path": "media/pages/20252447_p18_pie_charts.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m126_130"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-129",
+      "module": "资料分析",
+      "subtype": "基期量计算",
+      "knowledge_points": [
+        "增长率",
+        "基期量",
+        "现期量",
+        "增长量"
+      ],
+      "difficulty": 5,
+      "solution_method": "公式法",
+      "error_traps": [
+        "时间点混淆/基期现期颠倒",
+        "单位换算/百分号混淆",
+        "范围扩大/缩小"
+      ],
+      "calc_tree": [
+        {
+          "operation": "0.45/9.44",
+          "inputs": [
+            "0.45",
+            "9.44"
+          ],
+          "result": "5%"
+        },
+        {
+          "operation": "7.75/9.8",
+          "inputs": [
+            "7.75",
+            "9.8"
+          ],
+          "result": "9"
+        },
+        {
+          "operation": "增长率=增长量/(现期值-增长量)",
+          "inputs": [
+            "增长率"
+          ],
+          "result": "增长量/(现期值-增长量)"
+        },
+        {
+          "operation": "7.75/9.89",
+          "inputs": [
+            "7.75",
+            "9.89"
+          ],
+          "result": "见解析"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 129,
+      "fingerprint": "51d90d219c6a"
+    },
+    {
+      "number": 114,
+      "section": "资料分析",
+      "stem": "2019—2023年，北京、上海、广州、深圳4个城市五批次累计公示的专精特新“小巨人”企业数量之和约占全国总数的：",
+      "items": null,
+      "options": {
+        "A": "35%",
+        "B": "30%",
+        "C": "25%",
+        "D": "20%"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由材料可知,2019—2023年我国各批次专精特新\"小巨人\"企业数量依次为248家、1744家、2930家、4357家、3671家。2019—2023年,北京、上海、广州、深圳4个城市五批次累计公示的专精特新\"小巨人\"企业数量依次为840家、713家、249家、755家。根据\"比重=部分值/整体值\",所求为(840+713+249+755)/(248+1744+2930+4357+3671)≈(840+710+250+760)/(250+1700+2900+4400+3700)=2560/12950≈20%。故本题选D。",
+      "media": [
+        {
+          "path": "media/figures/q111_chart.jpg",
+          "kind": "chart",
+          "label": "各批次柱状图"
+        },
+        {
+          "path": "media/figures/q111_table.jpg",
+          "kind": "table",
+          "label": "城市累计表"
+        },
+        {
+          "path": "media/pages/20252447_p13_data_analysis.jpg",
+          "kind": "page",
+          "label": "整页资料"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m111_115"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-114",
+      "module": "资料分析",
+      "subtype": "比重计算",
+      "knowledge_points": [
+        "比重",
+        "直接查找"
+      ],
+      "difficulty": 5,
+      "solution_method": "估算法",
+      "error_traps": [
+        "范围扩大/缩小",
+        "比重与百分比混淆",
+        "以偏概全"
+      ],
+      "calc_tree": [
+        {
+          "operation": "2560/12950",
+          "inputs": [
+            "2560",
+            "12950"
+          ],
+          "result": "20%"
+        },
+        {
+          "operation": "比重=部分值/整体值",
+          "inputs": [
+            "比重"
+          ],
+          "result": "部分值/整体值"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 114,
+      "fingerprint": "41ccd7564434"
+    },
+    {
+      "number": 128,
+      "section": "资料分析",
+      "stem": "2023年第一季度，中西部地区对“一带一路”沿线国家进出口贸易额同比增量约占同期中西部地区外贸进出口总额同比增量的：",
+      "items": null,
+      "options": {
+        "A": "33%",
+        "B": "55%",
+        "C": "77%",
+        "D": "99%"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由第一段可知,2023年第一季度,中西部地区进出口额为1.84万亿元,同比增长12.6%;由第三段可知,2023年第一季度,中西部地区对\"一带一路\"沿线国家进出口7400.9亿元(即0.74009万亿元),同比增长38%。根据\"增长量=现期值/(1+增长率)×增长率\"\"比重=部分值/整体值\",所求为0.74009/(1+38%)×38%÷(1.84/(1+12.6%)×12.6%)≈0.74/(1+1/3)×1/3÷(1.8/(1+1/8)×1/8)=0.74/4÷0.2=0.74/0.8=9X%。故本题选D。",
+      "media": [
+        {
+          "path": "media/figures/q126_pies.jpg",
+          "kind": "chart",
+          "label": "饼图选项题126"
+        },
+        {
+          "path": "media/pages/20252447_p18_pie_charts.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m126_130"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-128",
+      "module": "资料分析",
+      "subtype": "比重计算",
+      "knowledge_points": [
+        "增长率",
+        "现期量",
+        "增长量",
+        "比重"
+      ],
+      "difficulty": 5,
+      "solution_method": "估算法",
+      "error_traps": [
+        "时间点混淆/基期现期颠倒",
+        "单位换算/百分号混淆",
+        "范围扩大/缩小"
+      ],
+      "calc_tree": [
+        {
+          "operation": "0.74/4÷0.2",
+          "inputs": [
+            "0.74",
+            "4",
+            "0.2"
+          ],
+          "result": "0.74"
+        },
+        {
+          "operation": "4÷0.2",
+          "inputs": [
+            "4",
+            "0.2"
+          ],
+          "result": "0.74"
+        },
+        {
+          "operation": "增长量=现期值/(1+增长率)×增长率",
+          "inputs": [
+            "增长量"
+          ],
+          "result": "现期值/(1+增长率)×增长率"
+        },
+        {
+          "operation": "比重=部分值/整体值",
+          "inputs": [
+            "比重"
+          ],
+          "result": "部分值/整体值"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 128,
+      "fingerprint": "42dabf170af1"
+    },
+    {
+      "number": 117,
+      "section": "资料分析",
+      "stem": "2020—2023年，Z省律师办理法律业务数之和约是同期基层法律服务工作者办理法律业务数之和的多少倍？",
+      "items": null,
+      "options": {
+        "A": "12",
+        "B": "15",
+        "C": "18",
+        "D": "21"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由表格倒数第四行和倒数第一行可知,2020—2023年,Z省律师办理法律业务数分别为68.36万件、76.43万件、81.24万件、93.55万件,基层法律服务工作者办理法律业务数分别为6.65万件、6.99万件、6.88万件、6.40万件,所求为(68.36+76.43+81.24+93.55)/(6.65+6.99+6.88+6.40)=((68.36+81.24)+(76.43+93.55))/((6.65+6.4)+(6.99+6.88))≈(150+170)/(13+14)=270+50/27≈12倍。故本题选A。",
+      "media": [
+        {
+          "path": "media/figures/q116_table.jpg",
+          "kind": "table",
+          "label": "法律服务数据表"
+        },
+        {
+          "path": "media/figures/q120_bar.jpg",
+          "kind": "chart",
+          "label": "题120柱状图"
+        },
+        {
+          "path": "media/pages/20252447_p15_data_table_bar.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m116_120"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-117",
+      "module": "资料分析",
+      "subtype": "倍数计算",
+      "knowledge_points": [
+        "倍数"
+      ],
+      "difficulty": 5,
+      "solution_method": "估算法",
+      "error_traps": [
+        "单位换算/百分号混淆",
+        "是几倍与多几倍混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "50/27",
+          "inputs": [
+            "50",
+            "27"
+          ],
+          "result": "12"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 117,
+      "fingerprint": "c484e3242937"
+    },
+    {
+      "number": 119,
+      "section": "资料分析",
+      "stem": "如保持2023年同比增量不变，则到哪一年Z省律师办理法律业务数将首次超过150万件？",
+      "items": null,
+      "options": {
+        "A": "2026年",
+        "B": "2027年",
+        "C": "2028年",
+        "D": "2029年"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由表格倒数第四行可知,2023年Z省律师办理法律业务数为93.55万件,2022年为81.24万件,根据\"增长量=现期值-基期值\",2023年同比增加93.55-81.24=12.31万件。结合题目假设条件,设经过n年首次超过150万件,根据\"初期值+增长次数×年均增量=末期值\",则有93.55+12.31×n>150,整理得n>(150-93.55)/12.31=56.45/12.31=4.X,向上取整为5,即在2023+5=2028年,Z省律师办理法律业务数将首次超过150万件。故本题选C。",
+      "media": [
+        {
+          "path": "media/figures/q116_table.jpg",
+          "kind": "table",
+          "label": "法律服务数据表"
+        },
+        {
+          "path": "media/figures/q120_bar.jpg",
+          "kind": "chart",
+          "label": "题120柱状图"
+        },
+        {
+          "path": "media/pages/20252447_p15_data_table_bar.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m116_120"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-119",
+      "module": "资料分析",
+      "subtype": "基期量计算",
+      "knowledge_points": [
+        "基期量",
+        "现期量",
+        "增长量",
+        "同比"
+      ],
+      "difficulty": 5,
+      "solution_method": "方程法",
+      "error_traps": [
+        "时间点混淆/基期现期颠倒",
+        "单位换算/百分号混淆",
+        "增长率与增长量混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "(150-93.55)/12.31",
+          "inputs": [
+            "150-93.55",
+            "12.31"
+          ],
+          "result": "56.45"
+        },
+        {
+          "operation": "93.55-81.24",
+          "inputs": [
+            "93.55",
+            "81.24"
+          ],
+          "result": "12.31"
+        },
+        {
+          "operation": "56.45/12.31",
+          "inputs": [
+            "56.45",
+            "12.31"
+          ],
+          "result": "4."
+        },
+        {
+          "operation": "2023+5",
+          "inputs": [
+            "2023",
+            "5"
+          ],
+          "result": "2028"
+        },
+        {
+          "operation": "增长量=现期值-基期值",
+          "inputs": [
+            "增长量"
+          ],
+          "result": "现期值-基期值"
+        },
+        {
+          "operation": "初期值+增长次数×年均增量=末期值",
+          "inputs": [
+            "初期值+增长次数×年均增量"
+          ],
+          "result": "末期值"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 119,
+      "fingerprint": "87629b8f7293"
+    },
+    {
+      "number": 118,
+      "section": "资料分析",
+      "stem": "2021—2023年，Z省各年律师人数与律师事务所总数的比值：",
+      "items": null,
+      "options": {
+        "A": "先升后降",
+        "B": "先降后升",
+        "C": "持续下降",
+        "D": "持续上升"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由表格第二行和第三行可知,2021—2023年,Z省各年律师人数与律师事务所总数的比值分别为30889/1705<20,36938/1755>20,41924/1826>20。比较36938/1755和41924/1826的大小,利用差分比较,(41924-36938)/(1826-1755)=4986/71=7X>36938/1755=2X,可推出41924/1826>36938/1755。综上可推出,30889/1705<36938/1755<41924/1826,即持续上升。故本题选D。",
+      "media": [
+        {
+          "path": "media/figures/q116_table.jpg",
+          "kind": "table",
+          "label": "法律服务数据表"
+        },
+        {
+          "path": "media/figures/q120_bar.jpg",
+          "kind": "chart",
+          "label": "题120柱状图"
+        },
+        {
+          "path": "media/pages/20252447_p15_data_table_bar.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m116_120"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-118",
+      "module": "资料分析",
+      "subtype": "大小比较",
+      "knowledge_points": [
+        "资料分析"
+      ],
+      "difficulty": 3,
+      "solution_method": "公式法",
+      "error_traps": [],
+      "calc_tree": [
+        {
+          "operation": "4986/71",
+          "inputs": [
+            "4986",
+            "71"
+          ],
+          "result": "7"
+        },
+        {
+          "operation": "36938/1755",
+          "inputs": [
+            "36938",
+            "1755"
+          ],
+          "result": "2"
+        },
+        {
+          "operation": "30889/170",
+          "inputs": [
+            "30889",
+            "170"
+          ],
+          "result": "5"
+        },
+        {
+          "operation": "20,36938/175",
+          "inputs": [
+            "20,36938",
+            "175"
+          ],
+          "result": "5"
+        },
+        {
+          "operation": "20,41924/182",
+          "inputs": [
+            "20,41924",
+            "182"
+          ],
+          "result": "6"
+        },
+        {
+          "operation": "36938/175",
+          "inputs": [
+            "36938",
+            "175"
+          ],
+          "result": "5"
+        },
+        {
+          "operation": "41924/182",
+          "inputs": [
+            "41924",
+            "182"
+          ],
+          "result": "6"
+        },
+        {
+          "operation": ",30889/170",
+          "inputs": [
+            ",30889",
+            "170"
+          ],
+          "result": "5"
+        },
+        {
+          "operation": "41924/1826",
+          "inputs": [
+            "41924",
+            "1826"
+          ],
+          "result": ","
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 118,
+      "fingerprint": "cf950ef86d4f"
+    },
+    {
+      "number": 126,
+      "section": "资料分析",
+      "stem": "以下饼状图中，最能准确反映2023年第一季度我国外贸进出口总额中，东部地区（白色）、中西部地区（斜线）和东北地区（黑色）外贸进出口额占比关系的是：",
+      "items": null,
+      "options": {
+        "A": "（见图）",
+        "B": "（见图）",
+        "C": "（见图）",
+        "D": "（见图）"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由第一段可知,2023年第一季度,我国外贸进出口总额为9.89万亿元,其中东部地区进出口7.75万亿元,中西部、东北地区分别进出口1.84万亿元、2975.4亿元(即0.29754万亿元)。由于7.75/9.89>77.5%>3/4,即白色扇形部分超过圆的3/4,排除C、D;由于1.84/0.29754≈1.83/0.3=6.1倍,即斜线扇形约为黑色扇形的6倍,排除B。故本题选A。",
+      "media": [
+        {
+          "path": "media/figures/q126_pies.jpg",
+          "kind": "chart",
+          "label": "饼图选项"
+        },
+        {
+          "path": "media/pages/20252447_p18_pie_charts.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m126_130"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-xingzhengzhifa-126",
+      "module": "资料分析",
+      "subtype": "比重计算",
+      "knowledge_points": [
+        "比重",
+        "倍数"
+      ],
+      "difficulty": 2,
+      "solution_method": "估算法",
+      "error_traps": [
+        "单位换算/百分号混淆",
+        "范围扩大/缩小",
+        "比重与百分比混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "1.83/0.3",
+          "inputs": [
+            "1.83",
+            "0.3"
+          ],
+          "result": "6.1"
+        },
+        {
+          "operation": "7.75/9.8",
+          "inputs": [
+            "7.75",
+            "9.8"
+          ],
+          "result": "9"
+        },
+        {
+          "operation": "3/4",
+          "inputs": [
+            "3",
+            "4"
+          ],
+          "result": ","
+        },
+        {
+          "operation": "1.84/0.29754",
+          "inputs": [
+            "1.84",
+            "0.29754"
+          ],
+          "result": "1.83"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 126,
+      "fingerprint": "eaebeae04019"
+    },
+    {
+      "number": 115,
+      "section": "资料分析",
+      "stem": "以下饼状图中，最能准确反映2019—2023年五批次公示的专精特新“小巨人”上市企业中，第一批次（黑色）、第二批次（横线）、第三批次（竖线）、第四批次（白色）和第五批次（网格）企业数量比例关系的是：",
+      "items": null,
+      "options": {
+        "A": "（见图）",
+        "B": "（见图）",
+        "C": "（见图）",
+        "D": "（见图）"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由图可知,2019—2023年五批次公示的专精特新\"小巨人\"上市企业中,第一批次(黑色)、第二批次(横线)、第三批次(竖线)、第四批次(白色)和第五批次(网格)企业数量依次为39家、198家、229家、282家、134家。由于282/134略大于2,即白色区域应略大于网格区域的2倍,排除A、C、D。故本题选B。",
+      "media": [
+        {
+          "path": "media/figures/q115_pies.jpg",
+          "kind": "chart",
+          "label": "饼图选项A-D"
+        },
+        {
+          "path": "media/figures/q111_chart.jpg",
+          "kind": "chart",
+          "label": "各批次柱状图"
+        },
+        {
+          "path": "media/figures/q111_table.jpg",
+          "kind": "table",
+          "label": "城市累计表"
+        },
+        {
+          "path": "media/pages/20252447_p13_data_analysis.jpg",
+          "kind": "page",
+          "label": "整页资料"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m111_115"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-xingzhengzhifa-115",
+      "module": "资料分析",
+      "subtype": "图形比例判断",
+      "knowledge_points": [
+        "倍数",
+        "直接查找"
+      ],
+      "difficulty": 1,
+      "solution_method": "比例法",
+      "error_traps": [
+        "是几倍与多几倍混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "282/13",
+          "inputs": [
+            "282",
+            "13"
+          ],
+          "result": "4"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 115,
+      "fingerprint": "d71e3bad34d1"
+    },
+    {
+      "number": 116,
+      "section": "资料分析",
+      "stem": "2023年，Z省含村、社区在内的法律顾问数约是2020年的多少倍？",
+      "items": null,
+      "options": {
+        "A": "1.2",
+        "B": "1.4",
+        "C": "1.6",
+        "D": "1.8"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：含村、社区在内的法律顾问数包括法律顾问数(不含村、社区)、村(社区)法律顾问数这两部分。由表格第四行和第五行可知,2023年Z省法律顾问数(不含村、社区)为111811家,2023年村(社区)法律顾问数为23652家,2020年为26153家,所求为(111811+23652)/(72739+26153)≈(112+24)/(73+26)=136/99≈1.36倍。B项最接近。故本题选B。",
+      "media": [
+        {
+          "path": "media/figures/q116_table.jpg",
+          "kind": "table",
+          "label": "法律服务数据表"
+        },
+        {
+          "path": "media/figures/q120_bar.jpg",
+          "kind": "chart",
+          "label": "题120柱状图"
+        },
+        {
+          "path": "media/pages/20252447_p15_data_table_bar.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m116_120"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-116",
+      "module": "资料分析",
+      "subtype": "倍数计算",
+      "knowledge_points": [
+        "倍数"
+      ],
+      "difficulty": 3,
+      "solution_method": "估算法",
+      "error_traps": [
+        "范围扩大/缩小",
+        "是几倍与多几倍混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "136/99",
+          "inputs": [
+            "136",
+            "99"
+          ],
+          "result": "1.36"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 116,
+      "fingerprint": "753c305a70c4"
+    },
+    {
+      "number": 127,
+      "section": "资料分析",
+      "stem": "2023年第一季度，东部地区外贸进口额约为多少万亿元？",
+      "items": null,
+      "options": {
+        "A": "2.2",
+        "B": "2.8",
+        "C": "3.4",
+        "D": "4.0"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由第一段可知,2023年第一季度东部地区进出口额为7.75万亿元;由第二段可知,2023年第一季度东部地区出口高技术产品7741.7亿元(即0.77417万亿元),占东部地区出口额比重为17.9%。根据\"整体值=部分值/比重\"\"进口额=进出口总额-出口额\",所求为7.75-0.77417/17.9%≈7.75-0.8÷2/11=7.75-4.4=3.35万亿元,最接近C。故本题选C。",
+      "media": [
+        {
+          "path": "media/figures/q126_pies.jpg",
+          "kind": "chart",
+          "label": "饼图选项题126"
+        },
+        {
+          "path": "media/pages/20252447_p18_pie_charts.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m126_130"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-127",
+      "module": "资料分析",
+      "subtype": "比重计算",
+      "knowledge_points": [
+        "比重"
+      ],
+      "difficulty": 4,
+      "solution_method": "估算法",
+      "error_traps": [
+        "单位换算/百分号混淆",
+        "范围扩大/缩小",
+        "比重与百分比混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "7.75-0.8÷2/11",
+          "inputs": [
+            "7.75",
+            "0.8",
+            "2",
+            "11"
+          ],
+          "result": "7.75"
+        },
+        {
+          "operation": "0.77417/17.9%",
+          "inputs": [
+            "0.77417",
+            "17.9%"
+          ],
+          "result": "7.75"
+        },
+        {
+          "operation": "2/11",
+          "inputs": [
+            "2",
+            "11"
+          ],
+          "result": "7.75"
+        },
+        {
+          "operation": "整体值=部分值/比重",
+          "inputs": [
+            "整体值"
+          ],
+          "result": "部分值/比重"
+        },
+        {
+          "operation": "进口额=进出口总额-出口额",
+          "inputs": [
+            "进口额"
+          ],
+          "result": "进出口总额-出口额"
+        },
+        {
+          "operation": "7.75-0.77417/17.9",
+          "inputs": [
+            "7.75",
+            "0.77417",
+            "17.9"
+          ],
+          "result": "见解析"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 127,
+      "fingerprint": "179814ffa759"
+    },
+    {
+      "number": 112,
+      "section": "资料分析",
+      "stem": "以下批次中，公示的专精特新“小巨人”上市企业数量占同批次专精特新“小巨人”企业数量比重最高的是：",
+      "items": null,
+      "options": {
+        "A": "第二批次",
+        "B": "第三批次",
+        "C": "第四批次",
+        "D": "第五批次"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：根据图形材料,结合\"比重=部分值/整体值\"可知,第二批次、第三批次、第四批次、第五批次公示的专精特新\"小巨人\"上市企业数量占同批次专精特新\"小巨人\"企业数量的比重依次为198/1744>0.1,229/2930<0.1,282/4357<0.1,134/3671<0.1,比较可知,比重最高的是第二批次。故本题选A。",
+      "media": [
+        {
+          "path": "media/figures/q111_chart.jpg",
+          "kind": "chart",
+          "label": "各批次柱状图"
+        },
+        {
+          "path": "media/figures/q111_table.jpg",
+          "kind": "table",
+          "label": "城市累计表"
+        },
+        {
+          "path": "media/pages/20252447_p13_data_analysis.jpg",
+          "kind": "page",
+          "label": "整页资料"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m111_115"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-112",
+      "module": "资料分析",
+      "subtype": "比重计算",
+      "knowledge_points": [
+        "比重"
+      ],
+      "difficulty": 2,
+      "solution_method": "公式法",
+      "error_traps": [
+        "范围扩大/缩小",
+        "比重与百分比混淆",
+        "极值方向错误"
+      ],
+      "calc_tree": [
+        {
+          "operation": "198/174",
+          "inputs": [
+            "198",
+            "174"
+          ],
+          "result": "4"
+        },
+        {
+          "operation": "0.1,229/293",
+          "inputs": [
+            "0.1,229",
+            "293"
+          ],
+          "result": "0"
+        },
+        {
+          "operation": "0.1,282/435",
+          "inputs": [
+            "0.1,282",
+            "435"
+          ],
+          "result": "7"
+        },
+        {
+          "operation": "0.1,134/367",
+          "inputs": [
+            "0.1,134",
+            "367"
+          ],
+          "result": "1"
+        },
+        {
+          "operation": "比重=部分值/整体值",
+          "inputs": [
+            "比重"
+          ],
+          "result": "部分值/整体值"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 112,
+      "fingerprint": "8940dc92a688"
+    },
+    {
+      "number": 113,
+      "section": "资料分析",
+      "stem": "已知2023年第五批次公示的专精特新“小巨人”企业分布于全国300个城市中，则这些城市平均每个有多少家第五批次公示的专精特新“小巨人”非上市企业？",
+      "items": null,
+      "options": {
+        "A": "不到11家",
+        "B": "11~12家",
+        "C": "12~13家",
+        "D": "超过13家"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由图可知,2023年第五批次公示的专精特新\"小巨人\"企业数量为3671家,其中上市企业数量为134家,则非上市企业数量为3671-134=3537家。结合题目已知条件(300个城市),根据\"平均数=总量/份数\",所求为3537/300=11.X家。故本题选B。",
+      "media": [
+        {
+          "path": "media/figures/q111_chart.jpg",
+          "kind": "chart",
+          "label": "各批次柱状图"
+        },
+        {
+          "path": "media/figures/q111_table.jpg",
+          "kind": "table",
+          "label": "城市累计表"
+        },
+        {
+          "path": "media/pages/20252447_p13_data_analysis.jpg",
+          "kind": "page",
+          "label": "整页资料"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m111_115"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-113",
+      "module": "资料分析",
+      "subtype": "平均数计算",
+      "knowledge_points": [
+        "平均数",
+        "直接查找"
+      ],
+      "difficulty": 3,
+      "solution_method": "比例法",
+      "error_traps": [
+        "范围扩大/缩小",
+        "平均数基数错误"
+      ],
+      "calc_tree": [
+        {
+          "operation": "3671-134",
+          "inputs": [
+            "3671",
+            "134"
+          ],
+          "result": "3537"
+        },
+        {
+          "operation": "3537/300",
+          "inputs": [
+            "3537",
+            "300"
+          ],
+          "result": "11."
+        },
+        {
+          "operation": "3537/300",
+          "inputs": [
+            "3537",
+            "300"
+          ],
+          "result": "见解析"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 113,
+      "fingerprint": "f18da0b55a99"
+    },
+    {
+      "number": 122,
+      "section": "资料分析",
+      "stem": "以下城市中，2023年12月平均每场电影观众人次数最多的是：",
+      "items": null,
+      "options": {
+        "A": "武汉",
+        "B": "杭州",
+        "C": "重庆",
+        "D": "南京"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：根据图1、图2,结合\"平均数=总量/份数=总观众人次/总放映场次\"可知,2023年12月武汉平均每场电影观众人次为250.78/15.79=15.X,杭州的为218.95/15.76=13.X,重庆的为238.83/21.41=11.X,南京的为181.65/12.46=14.X。比较可知,最多的是武汉。故本题选A。",
+      "media": [
+        {
+          "path": "media/figures/q121_charts.jpg",
+          "kind": "chart",
+          "label": "票房/场次/人次/上座率双图"
+        },
+        {
+          "path": "media/pages/20252447_p16_data_analysis.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m121_125"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-xingzhengzhifa-122",
+      "module": "资料分析",
+      "subtype": "平均数计算",
+      "knowledge_points": [
+        "平均数"
+      ],
+      "difficulty": 3,
+      "solution_method": "比例法",
+      "error_traps": [
+        "平均数基数错误"
+      ],
+      "calc_tree": [
+        {
+          "operation": "250.78/15.79",
+          "inputs": [
+            "250.78",
+            "15.79"
+          ],
+          "result": "15."
+        },
+        {
+          "operation": "218.95/15.76",
+          "inputs": [
+            "218.95",
+            "15.76"
+          ],
+          "result": "13."
+        },
+        {
+          "operation": "238.83/21.41",
+          "inputs": [
+            "238.83",
+            "21.41"
+          ],
+          "result": "11."
+        },
+        {
+          "operation": "181.65/12.46",
+          "inputs": [
+            "181.65",
+            "12.46"
+          ],
+          "result": "14."
+        },
+        {
+          "operation": "平均数=总量/份数=总观众人次/总放映场次",
+          "inputs": [
+            "平均数"
+          ],
+          "result": "总量/份数=总观众人次/总放映场次"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 122,
+      "fingerprint": "1f86a5441402"
+    },
+    {
+      "number": 111,
+      "section": "资料分析",
+      "stem": "2019—2023年，有几个城市五批次累计公示的专精特新“小巨人”上市企业数量占全国的比重超过5%？",
+      "items": null,
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由图可知,2019—2023年,全国五批次累计公示的专精特新\"小巨人\"上市企业数量的5%有(39+198+229+282+134)×5%=882×5%=44.1家。由表格第四列可知,超过44.1家的城市有上海(73家)、深圳(73家)、北京(64家),共3个城市。故本题选C。",
+      "media": [
+        {
+          "path": "media/figures/q111_chart.jpg",
+          "kind": "chart",
+          "label": "各批次柱状图"
+        },
+        {
+          "path": "media/figures/q111_table.jpg",
+          "kind": "table",
+          "label": "城市累计表"
+        },
+        {
+          "path": "media/pages/20252447_p13_data_analysis.jpg",
+          "kind": "page",
+          "label": "整页资料"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m111_115"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-111",
+      "module": "资料分析",
+      "subtype": "比重计算",
+      "knowledge_points": [
+        "比重",
+        "直接查找"
+      ],
+      "difficulty": 4,
+      "solution_method": "公式法",
+      "error_traps": [
+        "范围扩大/缩小",
+        "比重与百分比混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "(39+198+229+282+134)×5%",
+          "inputs": [
+            "39+198+229+282+134",
+            "5%"
+          ],
+          "result": "882"
+        },
+        {
+          "operation": "882×5%",
+          "inputs": [
+            "882",
+            "5%"
+          ],
+          "result": "44.1"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 111,
+      "fingerprint": "7c0ba547600f"
+    },
+    {
+      "number": 121,
+      "section": "资料分析",
+      "stem": "2023年12月，资料中电影总放映场次最多的三个城市票房之和在以下哪个范围内？",
+      "items": null,
+      "options": {
+        "A": "超过5亿元",
+        "B": "4.5亿~4.75亿元",
+        "C": "4.75亿~5亿元",
+        "D": "不到4.5亿元"
+      },
+      "options_in_media": false,
+      "type": "资料分析",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由图1可知,2023年12月,资料中电影总放映场次最多的三个城市是上海、北京、成都,这三个城市票房之和为18682+19324+11085=49XXX万元=4.9X亿元。故本题选C。",
+      "media": [
+        {
+          "path": "media/figures/q121_charts.jpg",
+          "kind": "chart",
+          "label": "票房/场次/人次/上座率双图"
+        },
+        {
+          "path": "media/pages/20252447_p16_data_analysis.jpg",
+          "kind": "page",
+          "label": "整页"
+        }
+      ],
+      "formulas": [],
+      "material_ids": [
+        "m121_125"
+      ],
+      "provenance": {
+        "role": "main",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "资料",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-xingzhengzhifa-121",
+      "module": "资料分析",
+      "subtype": "简单计算",
+      "knowledge_points": [
+        "资料分析"
+      ],
+      "difficulty": 3,
+      "solution_method": "公式法",
+      "error_traps": [
+        "单位换算/百分号混淆",
+        "范围扩大/缩小"
+      ],
+      "calc_tree": [
+        {
+          "operation": "18682+19324+11085",
+          "inputs": [
+            "18682",
+            "19324",
+            "11085"
+          ],
+          "result": "49"
+        }
+      ],
+      "quality_score": 4,
+      "source_paper": "执法",
+      "source_paper_id": "xingzhengzhifa",
+      "source_number": 121,
+      "fingerprint": "5dd7d142ddf2"
+    },
+    {
+      "number": 68,
+      "section": "数量关系",
+      "stem": "化工商店出售200千克某种试剂，前60千克打两折出售，之后60千克打五折出售，剩余部分原价出售。以下坐标图中，最能准确反映该试剂销量和销售收入之间关系的是：",
+      "items": null,
+      "options": {
+        "A": "（见图）",
+        "B": "（见图）",
+        "C": "（见图）",
+        "D": "（见图）"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：方法一,由题意可知,这批试剂分三部分销售:前60千克、之后60千克和剩余的200-(60+60)=80千克,对应的售价分别为打两折、打五折和原价,故销售收入和销量的函数图象应分为三段,排除B、C。出售60千克该种试剂打两折的收入一定低于打五折的收入,即第一段的斜率应小于第二段的,排除D。故本题选A。\n方法二,设该试剂每千克原价为a,销量为x,销售收入为y,由题意可知,当0≤x≤60时,y=0.2ax,y关于x的图象是斜率为0.2a的直线;当60<x≤120时,y=0.2a×60+0.5a×(x-60)=0.5ax-18a,y关于x的图象是斜率为0.5a的直线;当120<x≤200时,y=0.2a×60+0.5a×60+a×(x-120)=ax-78a,y关于x的图象是斜率为a的直线。三段函数图象的斜率逐渐增大,只有A项符合。故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared_with_shidi",
+        "from_paper": "市地级",
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "市地数量",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending",
+        "media_missing"
+      ],
+      "benchmark_id": "BM2025-shidi-068",
+      "module": "数量关系",
+      "subtype": "经济利润问题",
+      "knowledge_points": [
+        "经济利润",
+        "方程法"
+      ],
+      "difficulty": 5,
+      "solution_method": "方程法",
+      "error_traps": [
+        "范围扩大/缩小",
+        "选非题误选",
+        "绝对化表述"
+      ],
+      "calc_tree": [
+        {
+          "operation": "200-(60+60)",
+          "inputs": [
+            "200",
+            "60+60"
+          ],
+          "result": "80"
+        },
+        {
+          "operation": "y=0.2a",
+          "inputs": [
+            "0.2a"
+          ],
+          "result": "y"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "市地",
+      "source_paper_id": "shidi",
+      "source_number": 68,
+      "fingerprint": "cc3c025ce42a"
+    },
+    {
+      "number": 80,
+      "section": "数量关系",
+      "stem": "一个容器的下部分为高12厘米的倒立圆锥体,上部分为圆柱体,且圆锥体和圆柱体的底面半径相等。现匀速向容器中注入水,1分钟后液面高6厘米,又过30分钟后注满。问:整个容器的高度为多少厘米?",
+      "items": null,
+      "options": {
+        "A": "22",
+        "B": "22.5",
+        "C": "23",
+        "D": "23.5"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：根据题意,容器的截面图如下,注水1分钟后液面高度为6厘米,注水部分与容器的圆锥体部分相似,注水部分的高度与圆锥体的高度之比为6:12=1:2,根据\"相似图形的体积比为相似比的立方\",可知体积之比为1:8,因注入水的流速恒定,那么注满圆锥体需要8分钟,则注满圆柱体需要30+1-8=23分钟。因圆锥体和圆柱体的底面半径相同,所以二者的底面积相同,设底面积均为S,圆柱体的高为h,则圆锥体和圆柱体的体积之比为(1/3S×12):(S×h)=8:23,解得h=11.5,因此整个容器的高度为12+11.5=23.5厘米。故本题选D。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared_with_shidi",
+        "from_paper": "市地级",
+        "from_number": 75,
+        "diff_label": null,
+        "raw_note": "与市地共享(市地75)",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-080",
+      "module": "数量关系",
+      "subtype": "几何问题",
+      "knowledge_points": [
+        "方程法"
+      ],
+      "difficulty": 4,
+      "solution_method": "方程法",
+      "error_traps": [
+        "范围扩大/缩小"
+      ],
+      "calc_tree": [
+        {
+          "operation": "30+1-8",
+          "inputs": [
+            "30",
+            "1",
+            "8"
+          ],
+          "result": "23"
+        },
+        {
+          "operation": "12+11.5",
+          "inputs": [
+            "12",
+            "11.5"
+          ],
+          "result": "23.5"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 80,
+      "fingerprint": "8e9e934e85e3"
+    },
+    {
+      "number": 67,
+      "section": "数量关系",
+      "stem": "甲、乙、丙、丁4个部门共有210名员工，且甲部门员工数比丁部门多10人。现乙部门调动20名员工到丙部门且其剩余员工并入丁部门后，甲、丙、丁3个部门的员工数之比为3:3:4。问：原来乙部门有多少名员工？",
+      "items": null,
+      "options": {
+        "A": "41",
+        "B": "46",
+        "C": "51",
+        "D": "56"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由题意知,乙部门员工全部分给丙、丁部门后,甲、丙、丁3个部门的员工数之比为3:3:4,总人数为3+3+4=10份,而调动前后总人数没有变化,仍为210人,故10份对应210人,则1份对应21人,故调动后,甲、丙、丁3个部门的员工数分别为3×21=63人、3×21=63人、4×21=84人。调动前后,甲部门人数没有变化,则原来甲部门有63人,丁部门有63-10=53人,故乙部门调入丁部门的员工有84-53=31人,而乙部门调入丙部门的员工有20人,故原来乙部门有31+20=51名员工。故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared_with_shidi",
+        "from_paper": "市地级",
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "市地数量",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shidi-067",
+      "module": "数量关系",
+      "subtype": "和差倍比问题",
+      "knowledge_points": [
+        "和差倍比"
+      ],
+      "difficulty": 5,
+      "solution_method": "公式法",
+      "error_traps": [
+        "范围扩大/缩小",
+        "绝对化表述"
+      ],
+      "calc_tree": [
+        {
+          "operation": "3+3+4",
+          "inputs": [
+            "3",
+            "3",
+            "4"
+          ],
+          "result": "10"
+        },
+        {
+          "operation": "3×21",
+          "inputs": [
+            "3",
+            "21"
+          ],
+          "result": "63"
+        },
+        {
+          "operation": "4×21",
+          "inputs": [
+            "4",
+            "21"
+          ],
+          "result": "84"
+        },
+        {
+          "operation": "63-10",
+          "inputs": [
+            "63",
+            "10"
+          ],
+          "result": "53"
+        },
+        {
+          "operation": "84-53",
+          "inputs": [
+            "84",
+            "53"
+          ],
+          "result": "31"
+        },
+        {
+          "operation": "31+20",
+          "inputs": [
+            "31",
+            "20"
+          ],
+          "result": "51"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "市地",
+      "source_paper_id": "shidi",
+      "source_number": 67,
+      "fingerprint": "e76f77de653f"
+    },
+    {
+      "number": 77,
+      "section": "数量关系",
+      "stem": "某种机械由3个A模块和2个B模块组成。甲车间每天可生产6个A模块或3个B模块，乙车间每天可生产1个A模块或2个B模块。现两车间合作生产40台该机械所需模块，问：至少需要多少天？",
+      "items": null,
+      "options": {
+        "A": "24",
+        "B": "26",
+        "C": "28",
+        "D": "30"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：生产40台机械需要40×3=120个A模块和40×2=80个B模块。要使所需时间最少,应优先让两个车间分别生产相对效率更高的模块,甲生产A模块的效率是B模块的6÷3=2倍,乙生产A模块的效率是B模块的1÷2=1/2,故甲相对更擅长生产A模块,优先让甲生产A模块,乙生产B模块。甲生产120个A模块需要120÷6=20天,这段时间内乙生产了20×2=40个B模块,剩下的80-40=40个B模块,让甲、乙共同生产,需要40÷(3+2)=8天。则所求为20+8=28天。故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared_with_shidi",
+        "from_paper": "市地级",
+        "from_number": 71,
+        "diff_label": null,
+        "raw_note": "与市地共享(市地71)",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-077",
+      "module": "数量关系",
+      "subtype": "容斥问题",
+      "knowledge_points": [
+        "工程问题",
+        "和差倍比"
+      ],
+      "difficulty": 5,
+      "solution_method": "公式法",
+      "error_traps": [
+        "时间点混淆/基期现期颠倒",
+        "是几倍与多几倍混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "40×3",
+          "inputs": [
+            "40",
+            "3"
+          ],
+          "result": "120"
+        },
+        {
+          "operation": "40×2",
+          "inputs": [
+            "40",
+            "2"
+          ],
+          "result": "80"
+        },
+        {
+          "operation": "6÷3",
+          "inputs": [
+            "6",
+            "3"
+          ],
+          "result": "2"
+        },
+        {
+          "operation": "1÷2",
+          "inputs": [
+            "1",
+            "2"
+          ],
+          "result": "1"
+        },
+        {
+          "operation": "120÷6",
+          "inputs": [
+            "120",
+            "6"
+          ],
+          "result": "20"
+        },
+        {
+          "operation": "20×2",
+          "inputs": [
+            "20",
+            "2"
+          ],
+          "result": "40"
+        },
+        {
+          "operation": "80-40",
+          "inputs": [
+            "80",
+            "40"
+          ],
+          "result": "40"
+        },
+        {
+          "operation": "20+8",
+          "inputs": [
+            "20",
+            "8"
+          ],
+          "result": "28"
+        },
+        {
+          "operation": "20+8",
+          "inputs": [
+            "20",
+            "8"
+          ],
+          "result": "见解析"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 77,
+      "fingerprint": "561ee4de17bb"
+    },
+    {
+      "number": 79,
+      "section": "数量关系",
+      "stem": "小王计划在7天假期自学甲、乙两门在线课程,每门课程需要连学2整天。如在所有可能的安排中随机选择1种,不用学习的3天均不相邻的概率为:",
+      "items": null,
+      "options": {
+        "A": "1/7",
+        "B": "1/8",
+        "C": "1/9",
+        "D": "1/10"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由题意可知,甲、乙两门课程均需连学2整天,可分别将学甲课程和乙课程的2天捆绑,各自看成一个整体,此时7天相当于变成5天,总事件就相当于从这5天中选择2天安排学习甲、乙课程的两个整体,故总事件样本数为A²₅=20。所求事件为不用学习的3天均不相邻,先将学甲、乙课程的两个整体排列,有A²₂=2种方法,再将不相邻的3天分别插入甲、乙两个整体所形成的3个空中,没有顺序要求,有C³₃=1种方法,分步用乘法,故所求事件样本数为2×1=2。综上,所求概率为2/20=1/10。故本题选D。",
+      "media": [],
+      "formulas": [
+        {
+          "latex": "\\dfrac{1}{7}",
+          "role": "option_or_stem"
+        },
+        {
+          "latex": "\\dfrac{1}{8}",
+          "role": "option_or_stem"
+        },
+        {
+          "latex": "\\dfrac{1}{9}",
+          "role": "option_or_stem"
+        },
+        {
+          "latex": "\\dfrac{1}{10}",
+          "role": "option_or_stem"
+        }
+      ],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared_with_shidi",
+        "from_paper": "市地级",
+        "from_number": 74,
+        "diff_label": null,
+        "raw_note": "与市地共享(市地74)",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-079",
+      "module": "数量关系",
+      "subtype": "排列组合与概率",
+      "knowledge_points": [
+        "排列组合",
+        "概率"
+      ],
+      "difficulty": 3,
+      "solution_method": "公式法",
+      "error_traps": [
+        "范围扩大/缩小",
+        "绝对化表述"
+      ],
+      "calc_tree": [
+        {
+          "operation": "2×1",
+          "inputs": [
+            "2",
+            "1"
+          ],
+          "result": "2"
+        },
+        {
+          "operation": "2/20",
+          "inputs": [
+            "2",
+            "20"
+          ],
+          "result": "1"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 79,
+      "fingerprint": "4919b4ba5f4e"
+    },
+    {
+      "number": 78,
+      "section": "数量关系",
+      "stem": "甲船在A港正东n海里，乙船在A港正南√3 n海里，两船相距120海里，同时出发向A港匀速行驶。已知乙船的速度是甲船的2√3倍，比甲船早3小时到A港。问：甲船的速度是多少海里/时？",
+      "items": null,
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "10√3",
+        "D": "15√3"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：根据题意作图如下,B点为甲船位置,C点为乙船位置,△BAC为直角三角形,AC=√3AB,根据\"含30°角的直角三角形三边关系为1:√3:2\",可知△BAC为含30°角的直角三角形,故AB=n=1/2×BC=60海里,AC=√3n=60√3海里。设甲船速度为v海里/时,则乙船速度为2√3v海里/时,根据乙船比甲船早3小时到A港,可得60/v-3=60√3/(2√3v),解得v=10。故本题选A。",
+      "media": [],
+      "formulas": [
+        {
+          "latex": "n",
+          "role": "stem"
+        },
+        {
+          "latex": "\\sqrt{3}n",
+          "role": "stem"
+        },
+        {
+          "latex": "2\\sqrt{3}",
+          "role": "stem"
+        },
+        {
+          "latex": "10\\sqrt{3}",
+          "role": "option"
+        },
+        {
+          "latex": "15\\sqrt{3}",
+          "role": "option"
+        }
+      ],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared_with_shidi",
+        "from_paper": "市地级",
+        "from_number": 73,
+        "diff_label": null,
+        "raw_note": "与市地共享(市地73)",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-078",
+      "module": "数量关系",
+      "subtype": "行程问题",
+      "knowledge_points": [
+        "行程问题",
+        "方程法",
+        "和差倍比"
+      ],
+      "difficulty": 4,
+      "solution_method": "方程法",
+      "error_traps": [
+        "是几倍与多几倍混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "60/v-3=60√3/(2√3v),",
+          "inputs": [
+            "60/v-3",
+            "60√3/(2√3v),"
+          ],
+          "result": "解方程"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 78,
+      "fingerprint": "d2d8b3af4364"
+    },
+    {
+      "number": 72,
+      "section": "数量关系",
+      "stem": "张、王、李、赵4人的平均年龄为28岁，张、王的年龄之和比李大25岁，李、赵的年龄之和比张大27岁。已知张比王大2岁，问：他们4人中年龄最大的比最小的大几岁？",
+      "items": null,
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "3",
+        "D": "4"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：设王的年龄为x岁,则张的年龄为(x+2)岁,李、赵的年龄和为x+2+27=(x+29)岁,已知4人的平均年龄为28岁,则年龄和为28×4=112岁,可列方程x+x+2+x+29=112,解得x=27。则王的年龄为27岁,张的年龄为27+2=29岁,李的年龄为29+27-25=31岁,赵的年龄为27+29-31=25岁,故年龄最大的比最小的大31-25=6岁。故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared_with_shidi",
+        "from_paper": "市地级",
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "市地数量",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shidi-072",
+      "module": "数量关系",
+      "subtype": "年龄问题",
+      "knowledge_points": [
+        "方程法"
+      ],
+      "difficulty": 5,
+      "solution_method": "方程法",
+      "error_traps": [
+        "平均数基数错误",
+        "极值方向错误"
+      ],
+      "calc_tree": [
+        {
+          "operation": "28×4",
+          "inputs": [
+            "28",
+            "4"
+          ],
+          "result": "112"
+        },
+        {
+          "operation": "27+2",
+          "inputs": [
+            "27",
+            "2"
+          ],
+          "result": "29"
+        },
+        {
+          "operation": "29+27-25",
+          "inputs": [
+            "29",
+            "27",
+            "25"
+          ],
+          "result": "31"
+        },
+        {
+          "operation": "27+29-31",
+          "inputs": [
+            "27",
+            "29",
+            "31"
+          ],
+          "result": "25"
+        },
+        {
+          "operation": "31-25",
+          "inputs": [
+            "31",
+            "25"
+          ],
+          "result": "6"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "市地",
+      "source_paper_id": "shidi",
+      "source_number": 72,
+      "fingerprint": "9d2734d25ff8"
+    },
+    {
+      "number": 69,
+      "section": "数量关系",
+      "stem": "某单位65名职工中，拥有甲、乙、丙三项认证中至少一项的职工正好占80%，没有甲认证的职工与有乙认证的职工人数一样多，仅有丙认证的职工有3人，三项认证都有的职工有6人，问：有多少人仅拥有甲、乙两项认证？",
+      "items": null,
+      "options": {
+        "A": "10",
+        "B": "13",
+        "C": "16",
+        "D": "19"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：由题意知,拥有甲、乙、丙三项认证中至少一项的职工人数为65×80%=52,三项认证都没有的人数为65-52=13。设仅有甲、乙两项认证的有x人,仅有乙认证的有a人,仅有乙、丙两项认证的有b人,画文氏图如下:\n根据\"没有甲认证的职工与有乙认证的职工人数一样多\",可得a+b+3+13=a+b+6+x,解得x=10。故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared_with_shidi",
+        "from_paper": "市地级",
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "市地数量",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shidi-069",
+      "module": "数量关系",
+      "subtype": "容斥问题",
+      "knowledge_points": [
+        "数量关系"
+      ],
+      "difficulty": 4,
+      "solution_method": "画图法",
+      "error_traps": [
+        "单位换算/百分号混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "65-52",
+          "inputs": [
+            "65",
+            "52"
+          ],
+          "result": "13"
+        },
+        {
+          "operation": "65×80%",
+          "inputs": [
+            "65",
+            "80%"
+          ],
+          "result": "52,"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "市地",
+      "source_paper_id": "shidi",
+      "source_number": 69,
+      "fingerprint": "1893dddb924c"
+    },
+    {
+      "number": 66,
+      "section": "数量关系",
+      "stem": "张某8:00开车从A地出发，在A、B两地之间往返行驶。8:30第一次到达A、B之间的C点时加速30%继续行驶，并于9:00第二次到达C点。问：AC距离是BC距离的多少倍？",
+      "items": null,
+      "options": {
+        "A": "10/13",
+        "B": "13/10",
+        "C": "20/13",
+        "D": "13/5"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：设张某出发时的速度为v，加速30%后的速度为1.3v，根据题意画行程图并标注如下，由图可知，AC距离为30v，BC距离为1.3v×30÷2=1.3v×15。故AC距离为BC距离的30v/(1.3v×15)=20/13倍。故本题选C。",
+      "media": [],
+      "formulas": [
+        {
+          "latex": "\\dfrac{10}{13}",
+          "role": "option"
+        },
+        {
+          "latex": "\\dfrac{13}{10}",
+          "role": "option"
+        },
+        {
+          "latex": "\\dfrac{20}{13}",
+          "role": "option"
+        },
+        {
+          "latex": "\\dfrac{13}{5}",
+          "role": "option"
+        }
+      ],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared_with_shidi",
+        "from_paper": "市地级",
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "市地数量",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shidi-066",
+      "module": "数量关系",
+      "subtype": "行程问题",
+      "knowledge_points": [
+        "行程问题",
+        "方程法",
+        "和差倍比"
+      ],
+      "difficulty": 3,
+      "solution_method": "方程法",
+      "error_traps": [
+        "是几倍与多几倍混淆"
+      ],
+      "calc_tree": [
+        {
+          "operation": "30÷2",
+          "inputs": [
+            "30",
+            "2"
+          ],
+          "result": "1.3"
+        },
+        {
+          "operation": "20/1",
+          "inputs": [
+            "20",
+            "1"
+          ],
+          "result": "3"
+        }
+      ],
+      "quality_score": 5,
+      "source_paper": "市地",
+      "source_paper_id": "shidi",
+      "source_number": 66,
+      "fingerprint": "62c2d34a0af5"
+    },
+    {
+      "number": 76,
+      "section": "数量关系",
+      "stem": "某竞赛由5道次序固定的判断题组成，参赛者起始为0分，每答对1题加1分，每答错1题扣1分。小王作答了所有试题，答完每道题时当前的得分都不低于1分。问：他的答题情况有多少种不同的可能？",
+      "items": null,
+      "options": {
+        "A": "7",
+        "B": "6",
+        "C": "4",
+        "D": "3"
+      },
+      "options_in_media": false,
+      "type": "数量关系",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：要求答完每道题时当前的得分都不低于1分,那么前两道题均需要答对。可画树状图逐个确定每道题目的作答情况:\n则他的答题情况有6种不同的可能。故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared_with_shidi",
+        "from_paper": "市地级",
+        "from_number": 70,
+        "diff_label": null,
+        "raw_note": "与市地共享(市地70)",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-076",
+      "module": "数量关系",
+      "subtype": "计数枚举问题",
+      "knowledge_points": [
+        "数量关系"
+      ],
+      "difficulty": 2,
+      "solution_method": "画图法",
+      "error_traps": [
+        "绝对化表述"
+      ],
+      "calc_tree": null,
+      "quality_score": 4,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 76,
+      "fingerprint": "f5c5269281d4"
+    },
+    {
+      "number": 113,
+      "section": "判断推理",
+      "stem": "国内市场只有形成完备的市场体系与商业规则环境，才能为企业参与出口竞争提供真正的市场根基，要形成完备的市场体系，必须深化要素市场化配置体制机制改革，只有促进要素自主有序流动，且提高要素配置效率，才能深化要素市场化配置体制机制改革，要形成完备的商业规则环境，必须推进全方位开放并建立全国统一大市场，且加强执法效率和市场司法保障。\n根据以上陈述，可以推出下列哪项？",
+      "items": null,
+      "options": {
+        "A": "只要深化要素市场化配置体制机制改革就能形成完备的市场体系",
+        "B": "如果加强执法效率和司法保障，就能推进全方位开放并建立全国统一大市场",
+        "C": "只有促进要素自主有序流动，且提高要素配置效率，才能使国内市场形成完备的商业规则环境",
+        "D": "除非推进全方位开放并建立全国统一大市场，且加强执法效率和司法保障，否则不能为企业参与出口竞争提供真正的市场根基"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：题干推理关系：①能为企业参与出口竞争提供真正的市场根基⇒国内市场形成完备的市场体系与商业规则环境；②形成完备的市场体系⇒深化要素市场化配置体制机制改革；③深化要素市场化配置体制机制改革⇒促进要素自主有序流动，且提高要素配置效率；④形成完备的商业规则环境⇒推进全方位开放并建立全国统一大市场，且加强执法效率和市场司法保障。\n①②③可构成连锁推理：⑤能为企业参与出口竞争提供真正的市场根基⇒国内市场形成完备的市场体系⇒深化要素市场化配置体制机制改革⇒促进要素自主有序流动，且提高要素配置效率。\n①④可构成连锁推理：⑥能为企业参与出口竞争提供真正的市场根基⇒国内市场形成完备的商业规则环境⇒推进全方位开放并建立全国统一大市场，且加强执法效率和市场司法保障。\nA项，推理关系：深化要素市场化配置体制机制改革⇒形成完备的市场体系，肯定⑤的后件不能推出肯定的前件，排除。\nB项，推理关系：加强执法效率和司法保障⇒推进全方位开放并建立全国统一大市场，根据⑥可知，二者不存在推出关系，排除。\nC项，推理关系：国内市场形成完备的商业规则环境⇒促进要素自主有序流动，且提高要素配置效率，根据⑤⑥可知，二者不存在推出关系，排除。\nD项，推理关系：能为企业参与出口竞争提供真正的市场根基⇒推进全方位开放并建立全国统一大市场，且加强执法效率和司法保障，肯定⑥的前件能推出肯定的后件，当选。\n故本题选D。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "差异卷",
+        "from_number": null,
+        "diff_label": "59",
+        "raw_note": "省级判断差异题(差异卷标注59)",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "subtype": "翻译推理",
+      "benchmark_id": "BM2025-shengji-113",
+      "module": "判断推理",
+      "knowledge_points": [
+        "翻译推理",
+        "加强论证"
+      ],
+      "difficulty": 3,
+      "solution_method": "翻译推理法",
+      "error_traps": [
+        "绝对化表述",
+        "条件不足/无法推出"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 113,
+      "fingerprint": "57412287def1"
+    },
+    {
+      "number": 97,
+      "section": "判断推理",
+      "stem": "考古人员发现了近300枚16亿年前的丝状体生物化石，这些丝状体均由巨型细胞组成，直径20~194微米不等。化石中，有些丝状体直径保持不变，细胞呈短柱状至长柱状；有些丝状体整体向一端均匀收缩，细胞呈柱状、桶状或杯状；而有的丝状体仅一端变细，形态呈现了一定的复杂性。考古人员据此认为，这些丝状体很可能属于真核生物。以下各项如果为真，除哪项外均能支持上述观点？",
+      "items": null,
+      "options": {
+        "A": "这些化石中被发现有类似于现生繁殖细胞——孢子一样的圆形结构，这一结构只出现在真核生物中",
+        "B": "原核生物细胞的直径一般小于2微米，而真核生物细胞的直径一般在10~100微米",
+        "C": "在目前已知的原核生物中，大多数的丝状体形态都比较简单，只有个别呈现出过渡期形态",
+        "D": "经比对，该化石中丝状体与一些现生绿藻（一种真核生物）的藻丝体形态、细胞大小分布和繁殖方式等最为接近"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：题干观点:这些丝状体很可能属于真核生物。题干论据:这些丝状体均由巨型细胞组成,直径20~194微米不等;化石中,有些丝状体直径保持不变,细胞呈短柱状至长柱状;有些丝状体整体向一端均匀收缩,细胞呈柱状、桶状或杯状;而有的丝状体仅一端变细,形态呈现了一定的复杂性。\nA项,指出化石中被发现的圆形结构只出现在真核生物中,说明这些丝状体确实是真核生物,能支持题干观点。\nB项,指出真核生物细胞的直径一般在10~100微米,与题干中丝状体细胞直径20~194微米范围相近,说明这些丝状体确实可能是真核生物,能支持题干观点。\nC项,指出原核生物大多数丝状体呈现出形态简单的特点,但并不能说明呈现出一定复杂性的丝状体一定就是真核生物,不能支持题干观点。\nD项,指出该化石中丝状体与一些现生真核生物的形态特征等相似,说明这些丝状体确实可能是真核生物,能支持题干观点。\n故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "province_only",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "省级判断",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "subtype": "加强论证",
+      "benchmark_id": "BM2025-shengji-097",
+      "module": "判断推理",
+      "knowledge_points": [
+        "定义判断",
+        "翻译推理",
+        "加强论证"
+      ],
+      "difficulty": 3,
+      "solution_method": "加强论证法",
+      "error_traps": [
+        "选非题误选",
+        "绝对化表述"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 97,
+      "fingerprint": "495d24e7e039"
+    },
+    {
+      "number": 112,
+      "section": "判断推理",
+      "stem": "随着通货膨胀的蔓延，H国电子企业主要产品的原材料价格大幅上涨。该国最大的电子企业公报显示，今年该企业智能手机应用处理器价格较上年上涨30%，用于智能手机的相机模块价格上涨11%，用于电视和显示器的面板价格上涨9%。H国经济界认为，电子企业原材料价格居高不下，将严重削弱该国电子企业在国际市场上的竞争力。\n以下哪项如果为真，最能支持上述结论？",
+      "items": null,
+      "options": {
+        "A": "近年来，无论是国际还是国内，硅化合物价格始终呈上涨趋势，这是导致H国电子企业主要产品原材料价格大幅上涨的原因",
+        "B": "在H国电子企业主要产品的原材料价格大幅上涨的同时，由于购买力下降等原因，电子产品的全球消费需求在缩减",
+        "C": "其他国家电子企业都在通过科技创新降低产品原材料价格上涨的影响，以求通过低价在竞争激烈的国际电子产品市场中脱颖而出",
+        "D": "一直以来，H国电子企业生产的产品以其卓越的技术和质量优势在国际市场上极具竞争力，近年来这种竞争优势在逐渐减弱"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：题干结论：H国电子企业原材料价格居高不下，将严重削弱该国电子企业在国际市场上的竞争力。\nA项，指出H国电子企业主要产品原材料价格大幅上涨的原因，与原材料价格上涨是否会导致其国际竞争力被削弱无关，不能支持题干结论。\nB项，指出由于购买力下降等原因，电子产品的全球消费需求在缩减，而题干讨论的是原材料价格上涨与国际市场竞争力的关系，二者话题不一致，不能支持题干结论。\nC项，指出其他国家电子企业都在通过科技创新来应对原材料价格上涨的影响，从而可能保持或提高竞争力，相比之下，如果H国电子企业不能有效应对原材料价格上涨的影响，那么它们的竞争力就可能被削弱，支持了题干结论。\nD项，指出H国电子企业生产的产品一直以来在国际市场上的竞争优势在逐渐减弱，但并不能说明原材料价格上涨是否会削弱H国电子企业在国际市场上的竞争力，不能支持题干结论。\n故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "差异卷",
+        "from_number": null,
+        "diff_label": "58",
+        "raw_note": "省级判断差异题(差异卷标注58)",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "subtype": "加强论证",
+      "benchmark_id": "BM2025-shengji-112",
+      "module": "判断推理",
+      "knowledge_points": [
+        "翻译推理",
+        "加强论证",
+        "削弱论证"
+      ],
+      "difficulty": 3,
+      "solution_method": "加强论证法",
+      "error_traps": [
+        "因果倒置/强加因果",
+        "无关选项"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 112,
+      "fingerprint": "909ec6568350"
+    },
+    {
+      "number": 91,
+      "section": "判断推理",
+      "stem": "求证思维是指用自己掌握的知识和经验去验证某一结论的思维。转化思维是指在解决问题的过程中遇到障碍时,把问题转换成另一种形式……集中思维是指从许多资料中找出合乎逻辑的联系……根据上述定义,下列说法正确的是:",
+      "items": null,
+      "options": {
+        "A": "数学家根据自己所学,从多角度证明某一命题是否成立。这体现了求证思维",
+        "B": "修建铁路时,工程师依据施工方案采用爆破的方法开山劈岭,完成线路铺设。这体现了集中思维",
+        "C": "当发现改变滚珠形状无法减少轴承摩擦时,有人设计出使旋转轴呈悬浮状的空气轴承。这体现了集中思维",
+        "D": "商家通过分析药店互联网化的不同方案,权衡利弊后最终选定线上线下相结合的模式。这体现了转化思维"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：求证思维定义的关键信息:用自己掌握的知识和经验去验证某一结论。转化思维定义的关键信息:在解决问题的过程中遇到障碍时,把问题转换成另一种形式。集中思维定义的关键信息:从许多资料中找出合乎逻辑的联系,从而导出一定的结论,或对几种解决方案加以比较研究,进而导出一种解决办法。\nA项,数学家利用自己的知识和经验,通过多角度去验证某一命题是否成立,属于求证思维。\nB项,工程师只是按照既定方案执行工作,没有体现出从许多资料中找出合乎逻辑的联系,从而导出一定的结论,或对几种解决方案加以比较研究,进而导出一种解决办法,不属于集中思维。\nC项,在遇到问题时采用了全新的解决方案,没有体现出从许多资料中找出合乎逻辑的联系,从而导出一定的结论,或对几种解决方案加以比较研究,进而导出一种解决办法,不属于集中思维。\nD项,商家在分析不同方案后做出了选择,未体现在解决问题的过程中遇到障碍时,把问题转换成另一种形式,不属于转化思维。\n故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "province_only",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "省级判断",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "subtype": "定义判断",
+      "benchmark_id": "BM2025-shengji-091",
+      "module": "判断推理",
+      "knowledge_points": [
+        "定义判断"
+      ],
+      "difficulty": 2,
+      "solution_method": "定义要点法",
+      "error_traps": [
+        "选非题误选",
+        "绝对化表述"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 91,
+      "fingerprint": "bb03a4a4469c"
+    },
+    {
+      "number": 114,
+      "section": "判断推理",
+      "stem": "红霉素是一种抗生素，最早从放线菌糖多孢红霉菌的分泌物中发现，最新研究中，人们发现一种名为文蛤的贝类体内也会分泌红霉素。红霉素主要由微生物合成，此前从未在动物体内发现，研究者据此推测，文蛤合成红霉素的能力应当源于文蛤体内的微生物，正是这些微生物帮助文蛤合成了红霉素。\n以下哪项如果为真，最能削弱研究者的推测？",
+      "items": null,
+      "options": {
+        "A": "文蛤的基因组中具有红霉素合成基因，该基因表达在文蛤外套膜的黏液细胞中",
+        "B": "文蛤贝壳下有一层外套膜，膜的上皮内分布着黏液细胞，它们能存储红霉素",
+        "C": "通过对文蛤体内的所有微生物进行检测并没有发现糖多孢红霉菌",
+        "D": "研究者在其他贝类体内也发现了类似红霉素的抗生素"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：研究者的推测：文蛤合成红霉素的能力应当源于文蛤体内的微生物，正是这些微生物帮助文蛤合成了红霉素。题干论据：人们发现一种名为文蛤的贝类体内也会分泌红霉素；红霉素主要由微生物合成，此前从未在动物体内发现。\nA项，指出文蛤的基因组中具有红霉素合成基因，那么文蛤自身也就具有合成红霉素的能力，而非依赖于体内的微生物，削弱了研究者的推测。\nB项，说的是文蛤有存储红霉素的能力，与文蛤合成红霉素能力的来源无关，不能削弱研究者的推测。\nC项，指出文蛤体内没有发现糖多孢红霉素菌，但糖多孢红霉素菌只是发现红霉素最早的来源，题干并没有说明是否只有这种微生物才能合成红霉素，不能推出文蛤合成红霉素的能力不是来源于微生物，不能削弱研究者的推测。\nD项，说的是其他贝类情况，与文蛤合成红霉素能力的来源无关，不能削弱研究者的推测。\n故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "diff_book",
+        "from_paper": "差异卷",
+        "from_number": null,
+        "diff_label": "60",
+        "raw_note": "省级判断差异题(差异卷标注60)",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "subtype": "削弱论证",
+      "benchmark_id": "BM2025-shengji-114",
+      "module": "判断推理",
+      "knowledge_points": [
+        "翻译推理",
+        "削弱论证"
+      ],
+      "difficulty": 3,
+      "solution_method": "翻译推理法",
+      "error_traps": [
+        "无关选项",
+        "条件不足/无法推出"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 114,
+      "fingerprint": "9ab88daad45a"
+    },
+    {
+      "number": 99,
+      "section": "判断推理",
+      "stem": "我军军语惯于将数字1、2、7、9、0变读为幺、两、拐、勾、洞，这些数字有个共同特点，即其原本的发音部位与发音方法使得在读这些数字时无法发出较大声音，在噪声干扰较为强烈的战场上，通信兵使用通信设备进行情报交流时，话筒对这些数字的实际增音效果并不明显，可能会影响信息的准确性。因此，在军语中将这些数字变读，是为了符合实际需要。以下哪项如果为真，不能支持上述结论？",
+      "items": null,
+      "options": {
+        "A": "常规数字念法中1、7的韵尾相同，发音相似，在嘈杂的战场环境中容易混淆，造成信息传达错误",
+        "B": "士兵一般都来自不同的兵源地，不可避免地带有家乡口音，将数字变读可以避免口音问题",
+        "C": "在国际无线电通话中，也会对字母读音进行变读，如将A读成Alpha，将D读成Delta",
+        "D": "将0读成“洞”时，更容易提高声音，同时也使声音更加干脆清晰，确保信息的准确性"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：题干结论:在军语中将1、2、7、9、0这些数字变读,是为了符合实际需要。题干论据:1、2、7、9、0原本的发音部位与发音方法使得在读这些数字时无法发出较大声音,战场上通信时增音效果不明显,可能影响信息准确性。\nA项,指出不变读数字1、7在战场环境中容易混淆,造成信息传达错误,说明变读数字确实是为了符合实际需要,能支持题干结论。\nB项,指出变读数字可以避免口音问题,说明变读是出于实际交流需要,减少口音差异导致的误解,能支持题干结论。\nC项,指出国际无线电通话中也会对字母读音进行变读,与军语中数字的变读的原因无关,不能支持题干结论。\nD项,指出将0变读时更有利于确保信息的准确性,说明变读数字确实是为了符合实际需要,能支持题干结论。\n故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "province_only",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "省级判断",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "subtype": "加强论证",
+      "benchmark_id": "BM2025-shengji-099",
+      "module": "判断推理",
+      "knowledge_points": [
+        "翻译推理",
+        "加强论证"
+      ],
+      "difficulty": 3,
+      "solution_method": "加强论证法",
+      "error_traps": [
+        "选非题误选",
+        "因果倒置/强加因果",
+        "无关选项"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 99,
+      "fingerprint": "e81d7b6ce0fe"
+    },
+    {
+      "number": 98,
+      "section": "判断推理",
+      "stem": "某企业对于如何进行产教融合，形成如下两种方案：一是“做深”，企业自建培训中心，成立专职和兼职的企业培训师队伍，并根据企业需求，制订专门的培训大纲和计划，该中心与毕业生未来形成签约。二是“做浅”，在学校设立“冠名班”和“订单班”，以学校教育为主，企业与学生当前没有签约意向，但随时保持互相选择的权利。以下理由中，能够支持企业选择第二方案的是：",
+      "items": null,
+      "options": {
+        "A": "企业必须付出人力成本，人力资源自带“稀缺”和“增值”属性，在企业面临竞争压力时尤其要重视",
+        "B": "企业订单量并不是稳定的，遇到订单量突然增加需要扩产的时候，才临时需要大量的人参与进来",
+        "C": "该企业生产使用的是特种专业设备，竞争对手稀少，不具备从市场上挖掘技术人员的条件",
+        "D": "学校教育内容具有普适性，而自建培训中心有利于企业保障准员工的培养质量，提前锁定毕业生"
+      },
+      "options_in_media": false,
+      "type": "逻辑判断",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：题干第二种方案:\"做浅\",在学校设立\"冠名班\"和\"订单班\",以学校教育为主,企业与学生当前没有签约意向,但随时保持互相选择的权利。\nA项,强调了人力资源的重要性和成本,与企业如何选择产教融合方案无关,不能支持第二种方案。\nB项,指出企业订单不是稳定的,订单突然增加时才需要大量人员,而\"做浅\"的方案更具有灵活性,在需要时快速从\"冠名班\"或\"订单班\"中选拔人才,而不必承担长期的人力成本,可以支持第二种方案。\nC项,强调了技术人员的稀缺性和特殊性,更倾向于自建培训中心来确保技术人员的供应和质量的\"做深\"方案,不能支持第二种方案。\nD项,强调了自建培训中心的优势,即能够确保员工的培养质量和稳定性,支持的是\"做深\"方案,不能支持第二种方案。\n故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "province_only",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "省级判断",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "subtype": "加强论证",
+      "benchmark_id": "BM2025-shengji-098",
+      "module": "判断推理",
+      "knowledge_points": [
+        "翻译推理",
+        "加强论证",
+        "类比推理"
+      ],
+      "difficulty": 3,
+      "solution_method": "加强论证法",
+      "error_traps": [
+        "无关选项"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 98,
+      "fingerprint": "32a0c86acca2"
+    },
+    {
+      "number": 94,
+      "section": "判断推理",
+      "stem": "企业薪酬策略主要包括两个方面：一是体现企业支付标准的策略，即薪酬水平策略……二是体现企业支付差异的策略，即薪酬结构策略……根据上述定义,下列说法正确的是:",
+      "items": null,
+      "options": {
+        "A": "甲企业根据市场调查结果,设定行政岗位的薪酬标准。这体现了薪酬结构策略",
+        "B": "乙企业今年盈利颇丰,企业将全员工资普遍调高。这体现了薪酬水平策略",
+        "C": "丙企业工资分为基本工资和绩效工资两部分,绩效工资与员工绩效挂钩。这体现了薪酬水平策略",
+        "D": "丁企业采取不同方式调整高、中、低三个职位层次人员的薪酬。这体现了薪酬水平策略"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：薪酬水平策略定义的关键信息:体现企业支付标准,在市场既定的薪酬水平上设定一个对公司有利的最优报酬水平。薪酬结构策略定义的关键信息:体现企业支付差异,通过企业的工资等级、工资幅度等方面的薪酬政策表现出来。\nA项,只提到设定某一岗位的薪酬标准,并没有体现支付差异,不属于薪酬结构策略。该项说法错误。\nB项,企业根据经营状况调整了全员的薪酬水平,体现了企业的支付标准,属于薪酬水平策略。该项说法正确。\nC项,企业工资分为基本工资和绩效工资两部分,绩效工资与员工绩效挂钩,体现了支付差异,属于薪酬结构策略。该项说法错误。\nD项,采取不同方式调整高、中、低三个职位层次人员的薪酬,属于企业的工资等级、工资幅度的薪酬政策,体现了支付差异,属于薪酬结构策略。该项说法错误。\n故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "province_only",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "省级判断",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "subtype": "定义判断",
+      "benchmark_id": "BM2025-shengji-094",
+      "module": "判断推理",
+      "knowledge_points": [
+        "定义判断"
+      ],
+      "difficulty": 2,
+      "solution_method": "定义要点法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 94,
+      "fingerprint": "998a1c51eff5"
+    },
+    {
+      "number": 86,
+      "section": "判断推理",
+      "stem": "土地监测是利用遥感、遥测技术,对一个国家或地区土地利用状况的动态变化进行定期或不定期的监视和测定,目的在于为国家和地区有关部门提供准确的土地利用变化情况,及时进行土地利用数据更新与对比分析,以便编制土地利用变化图解等。根据上述定义,下列属于土地监测的是:",
+      "items": null,
+      "options": {
+        "A": "通过量化多时相遥感图像空间域、时间域、光谱域的耦合特征,获得土地变化的类型、位置和数量",
+        "B": "利用定期现场踏勘的方式标绘各土地使用单位及各类型土地的界线,对变化的地物界线做出修正",
+        "C": "通过某地区土地权属变更资料的分析,梳理该地区土地所有权、使用权的变化,以及土地纠纷调解情况",
+        "D": "利用植被具有红光强吸收特点,通过遥感设备监测植被的生长状态,并绘制植被的生长周期图"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：土地监测的定义要点:①利用遥感、遥测技术;②对一个国家或地区土地利用状况的动态变化进行定期或不定期的监视和测定。\nA项,明确使用了遥感技术来获取土地变化的信息,包括类型、位置和数量,符合定义。\nB项,\"定期现场踏勘\"不属于遥感、遥测技术,不符合要点①。\nC项,通过土地权属的变更分析梳理土地所有权等以及纠纷调解情况,与土地利用状况的动态变化的监视和测定无直接关系,也不涉及遥感或遥测技术,不符合要点①②。\nD项,\"监测植被的生长状态,并绘制植被的生长周期图\"并不是对土地利用状况的动态变化进行定期或不定期的监视和测定,不符合要点②。\n故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "province_only",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "省级判断",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "subtype": "定义判断",
+      "benchmark_id": "BM2025-shengji-086",
+      "module": "判断推理",
+      "knowledge_points": [
+        "定义判断",
+        "图形推理-数量类"
+      ],
+      "difficulty": 2,
+      "solution_method": "定义要点法",
+      "error_traps": [
+        "选非题误选",
+        "绝对化表述"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 86,
+      "fingerprint": "521db61c4736"
+    },
+    {
+      "number": 89,
+      "section": "判断推理",
+      "stem": "温度习服是指机体长期在高温或低温环境中,逐渐产生的对环境温度的耐受现象,包括热习服和冷习服。……根据上述定义,下列属于温度习服的是:",
+      "items": null,
+      "options": {
+        "A": "长期接受滑雪训练的人都会穿着防水防风、透气保暖的滑雪服进行运动",
+        "B": "生活在北极的因纽特人常表现出较高的基础代谢率以维持体温",
+        "C": "生活在缺氧、干燥、紫外线照射强烈的高原地区的人,脸部呈现出“高原红”特征",
+        "D": "在寒冷天气进行体育锻炼的人,倾向于增加热身时间以适应气温"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：温度习服定义的关键信息:机体长期在高温或低温环境中逐渐产生的对环境温度的耐受现象。热习服定义的关键信息:机体长期生活在炎热或高温环境后产生的适应性变化。冷习服定义的关键信息:机体长期暴露于寒冷环境后逐渐出现的适应性变化。\nA项,穿着特殊的滑雪服,并不是机体自身对环境温度的适应性变化,不属于温度习服。\nB项,因纽特人长期生活在寒冷环境中,机体逐渐产生适应性变化——提高基础代谢率以维持体温,属于冷习服。\nC项,生活在高原地区的人脸部呈现出\"高原红\"特征,是因为缺氧、干燥、紫外线照射强烈,与温度的耐受无关,不属于温度习服。\nD项,增加热身后时间是锻炼的人应对寒冷天气的一种策略,而不是机体长期在寒冷环境中产生的适应性变化,不属于温度习服。\n故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "province_only",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "省级判断",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "subtype": "定义判断",
+      "benchmark_id": "BM2025-shengji-089",
+      "module": "判断推理",
+      "knowledge_points": [
+        "定义判断"
+      ],
+      "difficulty": 2,
+      "solution_method": "定义要点法",
+      "error_traps": [
+        "选非题误选",
+        "因果倒置/强加因果",
+        "无关选项"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 89,
+      "fingerprint": "78f67185ced1"
+    },
+    {
+      "number": 92,
+      "section": "判断推理",
+      "stem": "自动投案是指犯罪事实或者犯罪嫌疑人未被司法机关发觉,或者虽被发觉,但犯罪嫌疑人尚未受到讯问、未被采取强制措施时,主动、直接向公安机关、人民检察院或者人民法院投案。根据上述定义,下列不属于自动投案的是:",
+      "items": null,
+      "options": {
+        "A": "甲实施多起电信诈骗、获利十余万元,在公安机关进行的一次隐患排查入户走访中,发现甲形迹可疑,经盘问甲主动交代了自己的罪行",
+        "B": "乙致人重伤后潜逃,在公安机关经侦查确认乙为该案的犯罪嫌疑人时,乙正因酒后驾驶被行政拘留,经公安机关讯问后,乙交代了自己的罪行",
+        "C": "丙多次挪用公款,其父母发现异常后,多次规劝其投案自首无效,直至单位发现款项异常开始查账后,丙才到公安机关交代自己的罪行",
+        "D": "丁因入室盗窃被判处有期徒刑,在服刑期间,丁主动向公安机关交代自己系公安机关久未破获的“7·26”走私案的主谋之一"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：自动投案的定义要点:①犯罪事实或者犯罪嫌疑人未被司法机关发觉,或者虽被发觉,但犯罪嫌疑人尚未受到讯问、未被采取强制措施时;②主动、直接向公安机关、人民检察院或者人民法院投案。\nA项,甲虽被公安机关发现形迹可疑,但其尚未受到讯问、未被采取强制措施,且甲主动交代了自己的罪行,属于自动投案。\nB项,乙经公安机关讯问后交代了自己的罪行,不符合要点①②,不属于自动投案。\nC项,丙的犯罪事实并未被司法机关发觉,且丙主动到公安机关交代了自己的罪行,属于自动投案。\nD项,丁虽然处于服刑状态,但新交代的罪行是在未被讯问或采取针对该罪行的强制措施时主动交代的,属于自动投案。\n故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "province_only",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "省级判断",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "subtype": "定义判断",
+      "benchmark_id": "BM2025-shengji-092",
+      "module": "判断推理",
+      "knowledge_points": [
+        "定义判断"
+      ],
+      "difficulty": 2,
+      "solution_method": "定义要点法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 92,
+      "fingerprint": "c7d256c16e90"
+    },
+    {
+      "number": 90,
+      "section": "判断推理",
+      "stem": "形象史学是指把形与象作为主要材料,用以研究历史的一门学问。……根据上述定义,下列属于形象史学研究范畴的是:",
+      "items": null,
+      "options": {
+        "A": "结合《晋书》等史书,通过对吉林集安长川1号墓礼佛图主佛形象及莲花纹的考察,研究三燕文化对高句丽佛教产生的影响",
+        "B": "通过对现存的汉画像石的实地考察,分析汉画像石的雕刻风格和雕刻技法",
+        "C": "根据史诗《伊利亚特》的记载,找到特洛伊城的遗址,并在其中发掘出王冠、银瓶、短剑等大量器物",
+        "D": "通过对二十世纪二三十年代齐白石、傅抱石等人具有代表性的国画作品进行研究,分析当时国画中所蕴含的思想意境"
+      },
+      "options_in_media": false,
+      "type": "定义判断",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：形象史学的定义要点:①传世的包括出土(水)的具有研究价值的历史实物、文本图像以及文化史迹;②结合传统文献来综合考察。\nA项,结合《晋书》等史书,通过对吉林集安长川1号墓礼佛图主佛形象及莲花纹的考察,研究三燕文化的影响,即将历史实物作为研究对象,并结合传统文献综合考察,属于形象史学研究范畴。\nB项,只关注了历史实物(汉画像石)的雕刻风格和技法,没有结合传统文献来考察历史,不符合要点②,不属于形象史学研究范畴。\nC项,根据史诗《伊利亚特》的记载,找到特洛伊城的遗址,并在其中发掘出大量器物,是依据文献来进行考古发掘,不符合要点①②,不属于形象史学研究范畴。\nD项,只是对国画作品进行研究,没有结合传统文献综合考察,不符合要点②,不属于形象史学研究范畴。\n故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "province_only",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "省级判断",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "subtype": "定义判断",
+      "benchmark_id": "BM2025-shengji-090",
+      "module": "判断推理",
+      "knowledge_points": [
+        "定义判断"
+      ],
+      "difficulty": 2,
+      "solution_method": "定义要点法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 90,
+      "fingerprint": "fedc478fa2c2"
+    },
+    {
+      "number": 39,
+      "section": "言语理解与表达",
+      "stem": "人才培养是循序渐进的过程，需认识、______、尊重人才成长规律，坚持“严管”和“厚爱”相结合。人才干事创业中难免有失误，如果培养者因为害怕犯错而顾虑重重、______，则违背了人才培育的初衷。所以要为人才“松绑”，建立健全正向激励和容错纠错机制，为人才成长创造宽容的环境。",
+      "items": null,
+      "options": {
+        "A": "把握 因噎废食",
+        "B": "顺应 矫枉过正",
+        "C": "运用 半途而废",
+        "D": "归纳 瞻前顾后"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：本题可从第二空入手。由句意及“、”可知，所填词语应与“如果培养者因为害怕犯错而顾虑重重”表意相近，强调的是培养者因为害怕犯错而有所顾虑。“因噎废食”指因为吃饭噎住过，索性连饭也不吃了，比喻因为怕出问题，索性不干；“瞻前顾后”形容做事以前考虑周密谨慎，也形容顾虑过多，犹豫不决。二者均符合句意，保留A、D。“矫枉过正”指纠正偏差做得过了头，强调的是没有把握好度，未体现“害怕犯错”之意，排除B。“半途而废”指做事情没有完成而终止，多用于批评做事没有毅力，不能用于因为害怕犯错而有顾虑不敢做的语境中，排除C。再看第一空，由句意可知，“认识、______、尊重”三词应构成顺承关系，表达对“规律”的理解不断深化的意思。“认识”是浅层次的了解，“把握”是在“认识”基础上的掌握，“尊重”是在“把握”基础上的应用，故“把握”填入此处符合逻辑，保留A。“归纳”是由一系列具体的事实概括出一般原理的推理方法，论述的是获得规律的过程，不能置于“认识”之后、尊重之前，排除D。故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-039",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "knowledge_points": [
+        "主旨概括",
+        "选词填空"
+      ],
+      "difficulty": 2,
+      "solution_method": "语境分析法",
+      "error_traps": [
+        "选非题误选",
+        "因果倒置/强加因果"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 39,
+      "fingerprint": "dfc2ee4314b0"
+    },
+    {
+      "number": 46,
+      "section": "言语理解与表达",
+      "stem": "面对企业，干部洁身自好只是最低要求，担当作为才是责任所系。民营企业所遇到的困难和问题仍不少，干部不仅要守住廉洁底线，更应主动为企业______。干部同企业家打交道要把握分寸，并不意味着可以对企业家的正当要求______，对企业的合法权益不予保护，而是要积极主动为企业服务。",
+      "items": null,
+      "options": {
+        "A": "雪中送炭 充耳不闻",
+        "B": "保驾护航 退避三舍",
+        "C": "嘘寒问暖 熟视无睹",
+        "D": "排忧解难 置若罔闻"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：第一空，由“民营企业所遇到的困难和问题仍不少”“要积极主动为企业服务”可知，所填词语应体现干部要主动帮助企业解决困难、问题之意。“雪中送炭”比喻在别人急需的时候给以帮助。文段强调的是主动帮企业解决困难问题，而非只在急需时给予帮助，排除A。“嘘寒问暖”形容对别人的生活十分关切，不能用于对企业问题的帮扶，且通常用法为“对……嘘寒问暖”，而非“为……嘘寒问暖”，排除C。“保驾护航”指保护某事物能让其正常发展；“排忧解难”指排除忧愁，解除危难。两词填入均符合帮助企业应对困难、让企业更好发展这一语境，保留B、D。第二空，由“对企业家的正当要求______，对企业的合法权益不予保护”这一平行并列句式可知，所填词语应与“不予保护”意思相近，表达不作为之意。“退避三舍”指对人让步，不与相争，强调主动退让回避，避免冲突，不符合文段中对要求不理会之意，排除B。“置若罔闻”指放在一边儿，好像没听见一样，形容不重视，不关心，填入能够体现对企业家正当要求忽视不管的意思。故本题选D。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-046",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "knowledge_points": [
+        "选词填空"
+      ],
+      "difficulty": 2,
+      "solution_method": "关联词法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 46,
+      "fingerprint": "024088bad513"
+    },
+    {
+      "number": 40,
+      "section": "言语理解与表达",
+      "stem": "党的规模大了，一些人容易出现搞小山头、小圈子、小团伙现象，容易出现______、自行其是问题，破坏党的团结统一，影响党的凝聚力战斗力。随着改革开放逐步深入，社会利益多元化、思想多样化也深刻影响到党员干部的观念和行为。我们必须在重大问题、严峻形势面前始终心往一处想、劲往一处使，做到凝心聚力、______，确保全党紧密团结在党中央周围，步调一致向前进。",
+      "items": null,
+      "options": {
+        "A": "分崩离析 群策群力",
+        "B": "南辕北辙 和衷共济",
+        "C": "尾大不掉 众志成城",
+        "D": "阳奉阴违 同仇敌忾"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：第一空，由“党的规模大了，一些人容易出现搞小山头、小圈子、小团伙现象”“破坏党的团结统一”可知，所填词语应表达因为规模扩大而出现的党内分化、影响团结的问题。“分崩离析”形容集团、国家等分裂瓦解，填入词义程度过重，排除A。“南辕北辙”比喻行动和目的正好相反，不能描述党内分化的结果，排除B。“尾大不掉”指尾巴太大，难以摆动，比喻机构下强上弱，或组织庞大、涣散，以致指挥不灵；“阳奉阴违”指表面上遵从，暗地里违抗。二者均可描述党规模扩大后产生的问题，保留C、D。第二空，由“心往一处想、劲往一处使”“凝心聚力”“紧密团结在党中央周围”可知，所填词语应表达要有凝聚力，团结一心克服困难的意思。“众志成城”指大家同心协力，就像城墙一样的牢固，比喻大家团结一致，就能克服困难，得到成功；“同仇敌忾”指全体一致地仇恨敌人。文段强调的是大家团结一心解决问题，而非“仇恨敌人”，排除D。故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-040",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "knowledge_points": [
+        "选词填空"
+      ],
+      "difficulty": 2,
+      "solution_method": "语境分析法",
+      "error_traps": [
+        "因果倒置/强加因果",
+        "绝对化表述"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 40,
+      "fingerprint": "1c2e99573442"
+    },
+    {
+      "number": 50,
+      "section": "言语理解与表达",
+      "stem": "改进文风就要多写“短实新”的好文章。“实”就是讲符合实际的话不讲脱离实际的话，讲管用的话不讲空话，讲反映自己思考的话不讲______的话，讲有感而发的话不讲______的话，讲通俗明白的话不讲故作高深的话，______，用朴实的语言阐述深刻的理论。",
+      "items": null,
+      "options": {
+        "A": "故弄玄虚 装腔作势 由表及里",
+        "B": "照本宣科 无病呻吟 深入浅出",
+        "C": "人云亦云 言不由衷 举一反三",
+        "D": "陈词滥调 冠冕堂皇 言简意赅"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：第一空，由“讲……不讲……”可知，前后文构成相反相对关系，所填词语应与“反映自己思考”含义相反，表达没有自己思考的意思。“故弄玄虚”指故意玩弄使人迷惑的花招儿，不能表达没有自己思考之意，排除A。“陈词滥调”指陈旧而不切合实际的话，与后文的“话”重复，排除D。“照本宣科”意思是死板地照现成文章或稿子宣读，指不能灵活运用；“人云亦云”指人家说什么自己也跟着说什么，形容没有主见。二者均可表达没有自己思考的意思，保留B、C。第二空，前后文也是相反相对关系，所填词语应与“有感而发”含义相反，表达没有情感的意思。“无病呻吟”比喻没有值得忧虑的事情却长吁短叹，也比喻文艺作品缺乏真情实感，矫揉造作；“言不由衷”意思是说的话不是从内心发出来的，指心口不一致。两词相比，“无病呻吟”更能表达没有情感的意思，排除C。验证第三空，“深入浅出”指文章或言论的内容很深刻，措辞却浅显易懂，填入与后句的“用朴实的语言阐述深刻的理论”照应恰当。故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-050",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "knowledge_points": [
+        "选词填空"
+      ],
+      "difficulty": 2,
+      "solution_method": "语境分析法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 50,
+      "fingerprint": "9fed74890e30"
+    },
+    {
+      "number": 48,
+      "section": "言语理解与表达",
+      "stem": "借鉴各地耕保的好经验、好做法，可以少走弯路，但不可将借鉴当作______。比如，平原地区的耕地恢复方法不一定适合山区，粮食主产区与主销区可能______。有些经验做法依托的是当地经济基础和民风社情，外地可能“借”不来也“学”不好，盲目推广可能导致______、劳民伤财。",
+      "items": null,
+      "options": {
+        "A": "套用 背道而驰 功亏一篑",
+        "B": "照搬 大相径庭 水土不服",
+        "C": "复制 截然不同 物极必反",
+        "D": "效仿 天差地别 弄巧成拙"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：本题可从第三空入手。由句意及“、”可知，所填词语应表达盲目推广不适合本地的经验做法导致的后果。“功亏一篑”比喻一件大事只差最后一点儿人力物力而不能成功（含惋惜意）。不适合本地的经验做法本身就不应盲目推广，此处并非惋惜其失败，排除A。“物极必反”指事物发展到极端，就会向相反的方面转化。此处并未体现“发展到极端”之意，排除C。“弄巧成拙”指想耍巧妙的手段，结果反而坏了事。推广不适合本地的经验做法并非耍“巧妙的手段”，排除D。“水土不服”指对于一个地方的气候条件或饮食习惯不能适应，填入可形象地表达盲目推广与当地情况不符的经验做法导致的后果，锁定B。验证前两空，“照搬”指照原样不动地搬用（现成的方法、经验、教材等），填入句中表达可以借鉴但不能原封不动直接挪用恰当。“大相径庭”表示彼此相差很远或矛盾很大，填入句中描述粮食主产区与主销区的差别恰当。故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-048",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "knowledge_points": [
+        "选词填空"
+      ],
+      "difficulty": 2,
+      "solution_method": "语境分析法",
+      "error_traps": [
+        "因果倒置/强加因果",
+        "绝对化表述"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 48,
+      "fingerprint": "9d81da01c942"
+    },
+    {
+      "number": 49,
+      "section": "言语理解与表达",
+      "stem": "手枪短小轻便、易于隐藏，是军队______的装备。早期手枪由于使用黑火药，燃烧速度较慢，射击速度和射程受到很大限制。随着无烟火药的发明，弹药技术迎来革命性突破，弹匣手枪______，无烟火药燃烧速度快，可大幅提升射击速度和射程，弹匣手枪依托这一技术优势______。",
+      "items": null,
+      "options": {
+        "A": "不可或缺 应运而生 崭露头角",
+        "B": "首当其冲 横空出世 声名鹊起",
+        "C": "必不可少 初露锋芒 后来居上",
+        "D": "屡见不鲜 大放异彩 脱颖而出"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：第一空，由“手枪短小轻便、易于隐藏”可知，所填词语应体现手枪在军队装备中的重要地位。“不可或缺”指不能有一点点缺失；“必不可少”指绝对需要的。二者都能体现出手枪在军队装备中的重要性，保留A、C。“首当其冲”指最先受到攻击或遭遇灾难，与文意不符，排除B。“屡见不鲜”指经常看见，并不新奇，强调常见，不能体现出手枪的重要性，排除D。第二空，由“随着无烟火药的发明，弹药技术迎来革命性突破”可知，所填词语应体现弹匣手枪随着弹药技术突破而产生的意思。“应运而生”指随着某种形势而产生；“初露锋芒”指刚显露出某种力量或才能。两词相比，“应运而生”含有的诞生之意更符合语境，且“运”也与前句的背景描述对应恰当，排除C。验证第三空，“崭露头角”比喻突出地显露出才能和本领（多指青少年），填入句中表达的是依托技术优势，弹匣手枪这一新事物开始引起人们注意，表述恰当。故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-049",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "knowledge_points": [
+        "选词填空"
+      ],
+      "difficulty": 2,
+      "solution_method": "语境分析法",
+      "error_traps": [
+        "选非题误选",
+        "绝对化表述"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 49,
+      "fingerprint": "ae931a133ade"
+    },
+    {
+      "number": 41,
+      "section": "言语理解与表达",
+      "stem": "能量的产生和使用不一定______。可再生能源发电如风力发电、太阳能发电等，会因为天气、季节、地理位置的不同，存在不同时间尺度的间歇性，而用电需求也有______，时多时少。低成本大规模的储能系统可以突破可再生能源“即发即用、不能存储”的瓶颈，显著提高风、光等可再生能源的消纳水平。",
+      "items": null,
+      "options": {
+        "A": "同步 波动性",
+        "B": "协调 机动性",
+        "C": "平衡 规律性",
+        "D": "匹配 差异性"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：本题可从第二空入手。后句的“时多时少”是对空缺处的解释说明，所填词语应体现用电需求的变化和不稳定。“波动性”指数据或变量在一段时间内上下浮动、变化不定的状态，填入符合文意，保留A。“机动性”指个体、组织或系统在适应变化和应对不确定性方面的能力和灵活性，关注的是灵活程度和适应性，而非稳定性，排除B。“规律性”指客观事物相互作用中所固有的稳定的规定性，与“时多时少”表达的意思相悖，排除C。“差异性”指不同事物或个体之间的差别和区别，侧重不同主体之间的差别，而非同一事物不同时间的变化，排除D。验证第一空，后句的“可再生能源发电……存在不同时间尺度的间歇性，而用电需求也……时多时少”是对空缺处的解释说明，所填词语应表达能量的产生和使用在时间上并不一致的意思。“同步”泛指互相关联的事物在进行速度上协调一致，填入符合语境。故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-041",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "knowledge_points": [
+        "选词填空"
+      ],
+      "difficulty": 2,
+      "solution_method": "语境分析法",
+      "error_traps": [
+        "选非题误选",
+        "概念偷换/主体不一致",
+        "因果倒置/强加因果"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 41,
+      "fingerprint": "79a86b77ebf6"
+    },
+    {
+      "number": 43,
+      "section": "言语理解与表达",
+      "stem": "推进中国式现代化是一个探索性事业，还有许多未知领域，需要我们在实践中去大胆探索，通过改革创新来推动事业发展，决不能______、守株待兔。各地区各部门要结合各自具体实际开拓创新，特别是在前沿实践、未知领域，鼓励大胆探索、______，寻求有效解决新矛盾新问题的思路和办法，努力创造可复制、可推广的新鲜经验。",
+      "items": null,
+      "options": {
+        "A": "刻舟求剑 敢为人先",
+        "B": "坐井观天 踔厉奋发",
+        "C": "望梅止渴 推陈出新",
+        "D": "画地为牢 大展拳脚"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：第一空，由“需要……决不能……”可知，前后文构成相反相对关系，所填词语应与“改革创新”含义相反，表达顽固守旧之意。“刻舟求剑”比喻拘泥成例，不知道跟着情势的变化而改变看法或办法；“画地为牢”指在地上画一个圈儿当作监狱，比喻只许在指定的范围之内活动。二者均可表达守旧之意，保留A、D。“坐井观天”比喻眼光狭小，看到的有限；“望梅止渴”比喻用空想或假象宽慰自己。二者均不能与“改革创新”构成相反相对关系，排除B、C。第二空，由“寻求有效解决新矛盾新问题的思路和办法，努力创造可复制、可推广的新鲜经验”可知，所填词语应体现要先人一步，创造新经验之意。“敢为人先”指有勇气做别人没有做过的事；“大展拳脚”指充分施展本领。两词相比，“敢为人先”更能体现在新领域大胆探索的勇气，排除D。故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-043",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "knowledge_points": [
+        "言语理解与表达"
+      ],
+      "difficulty": 2,
+      "solution_method": "语境分析法",
+      "error_traps": [],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 43,
+      "fingerprint": "40406747aab1"
+    },
+    {
+      "number": 51,
+      "section": "言语理解与表达",
+      "stem": "习近平新时代中国特色社会主义思想植根于新时代中国特色社会主义伟大事业的创造性实践，每一个理论成分背后都有着鲜活的实践支撑。比如蕴含“创新、协调、绿色、开放、共享”新发展理念的经济高质量发展案例、体现“党的领导、人民当家作主和依法治国有机统一”政治理念的现代治理案例、体现“绿水青山就是金山银山”的生态文明思想案例等。通过讲述这些蕴含中国观点、体现中国立场、彰显中国智慧、弘扬中国价值的生动故事，让国际社会更加深切地感知和理解习近平新时代中国特色社会主义思想的理论内涵和实践逻辑。这段文字意在强调：",
+      "items": null,
+      "options": {
+        "A": "党的创新理论要在实践中检验和发展",
+        "B": "讲好中国故事有助于提高国际话语权",
+        "C": "要积极利用案例传播党的创新理论",
+        "D": "理论宣传应该综合运用国内外资源"
+      },
+      "options_in_media": false,
+      "type": "片段阅读",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：文段首先指出习近平新时代中国特色社会主义思想植根于创造性实践，每个理论成分背后都有鲜活的实践支撑；接着通过“比如”列举了蕴含相关理念的各类案例；最后总结指出通过讲述这些生动案例能让国际社会更好地感知和理解习近平新时代中国特色社会主义思想的理论内涵和实践逻辑。由此可知，文段为分总结构，末句为文段重点，强调的是通过讲述案例来传播党的创新理论，对应C。A项未提到讲述案例，非文段重点，排除。B项，“提高国际话语权”文段未涉及，排除。D项，“综合运用国内外资源”在文中未体现，排除。故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-051",
+      "module": "言语理解与表达",
+      "subtype": "意图判断",
+      "knowledge_points": [
+        "意图判断"
+      ],
+      "difficulty": 2,
+      "solution_method": "语境分析法",
+      "error_traps": [],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 51,
+      "fingerprint": "64002f2ded3b"
+    },
+    {
+      "number": 42,
+      "section": "言语理解与表达",
+      "stem": "各国正逐步形成以无人机、巡航导弹、弹道导弹、轰炸机等为主力的高效空袭体系，可以实现对目标空域的饱和袭击。这让只能命中单一目标的防空导弹陷入______的境地。面对复杂多样的战场威胁，防空导弹不再______，而是“攥指成拳”，朝着防空导弹系统升级转变。",
+      "items": null,
+      "options": {
+        "A": "腹背受敌 各自为战",
+        "B": "鞭长莫及 形单影只",
+        "C": "捉襟见肘 故步自封",
+        "D": "孤掌难鸣 单打独斗"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：第一空，由“各国正逐步形成……高效空袭体系，可以实现……饱和袭击”可知，只能命中单一目标的防空导弹在此时会显得功能单一、能力不足，所填词语应体现此意。“腹背受敌”指前面和后面都受到敌人的攻击。文段并未体现防空导弹遭受前后夹击的意思，排除A。“鞭长莫及”比喻因距离太远而无能为力。防空导弹无能为力并非因为距离太远，排除B。“捉襟见肘”比喻顾此失彼，应付不过来；“孤掌难鸣”比喻力量单薄，难以成事。两者均能体现防空导弹功能单一、能力不足之意，保留C、D。第二空，由对照词“不再……，而是……”可知，所填词语应与“攥指成拳”构成相反相对关系，表达不合作、独自作战之意。“故步自封”比喻安于现状，不求进步，强调的是不创新，而非不合作，排除C。“单打独斗”指独自一个人去打斗、做事，与“攥指成拳”意思相反，填入恰当。故本题选D。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-042",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "knowledge_points": [
+        "选词填空"
+      ],
+      "difficulty": 2,
+      "solution_method": "语境分析法",
+      "error_traps": [
+        "因果倒置/强加因果"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 42,
+      "fingerprint": "4b68aabc5c38"
+    },
+    {
+      "number": 47,
+      "section": "言语理解与表达",
+      "stem": "刺沙蓬也叫风滚草，一株可以携带约20万粒种子。在随风滚动时，______的翻滚会帮助它抖落出种子，散落在地面上，时机成熟就会长成新的刺沙蓬，如此______。并且，它们对水分的需求量较少，对盐度有较好的耐受性，在海滩、草原和戈壁沙漠中都能______生长。",
+      "items": null,
+      "options": {
+        "A": "连续 环环相扣 广泛",
+        "B": "突然 周而复始 野蛮",
+        "C": "剧烈 循环往复 肆意",
+        "D": "急促 绵绵不绝 疯狂"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：本题可从第二空入手。刺沙蓬随风散落种子，种子成长为新的刺沙蓬，而后新的刺沙蓬会继续随风散落种子，因此所填词语应体现不断循环、重复之意。“环环相扣”指一环扣一环，比喻若干事物之间密切相关，也形容运作步骤安排得紧凑而有序；“绵绵不绝”形容多，连续不断。二者均不能描述生命循环的过程，排除A、D。“周而复始”指一次又一次地循环；“循环往复”形容事物周而复始，来回往复。两词填入均符合文意，保留B、C。再看第一空，所填词语描述的应是刺沙蓬随风翻滚时的状态。“突然”指在短促的时间里发生，出乎意外；“剧烈”指猛烈。刺沙蓬要抖落种子对翻滚的强度有一定要求，但与是否短时间内发生无关，排除B。验证第三空，“肆意”指不顾一切由着自己的性子（去做），填入能体现出刺沙蓬适应环境能力强、可在多种环境中自由生长的状态。故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-047",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "knowledge_points": [
+        "选词填空"
+      ],
+      "difficulty": 2,
+      "solution_method": "语境分析法",
+      "error_traps": [
+        "选非题误选",
+        "绝对化表述",
+        "无关选项"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 47,
+      "fingerprint": "b0851a6a7673"
+    },
+    {
+      "number": 45,
+      "section": "言语理解与表达",
+      "stem": "当前，改革发展任务繁重，需要各级各部门和广大干部高质高效地完成各项任务，才能在日趋激烈的发展竞争中赢得______。而处理日常纷繁复杂的工作，就如同“十个指头弹钢琴”，需要合理分配力量和节奏。一味强求自加压力，势必使某个或多个指头的力量受到影响，导致工作______，工作效能不理想也就在意料之中了。",
+      "items": null,
+      "options": {
+        "A": "主动 左支右绌",
+        "B": "优势 进退维谷",
+        "C": "认可 手忙脚乱",
+        "D": "先机 拖泥带水"
+      },
+      "options_in_media": false,
+      "type": "选词填空",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：第一空，由“需要各级各部门和广大干部高质高效地完成各项任务”可知，所填词语要体现在激烈的竞争中占据有利地位的意思。“主动”指能够造成有利局面，使事情按照自己的意图进行；“优势”指能超过对方的有利形势；“先机”指较早的时机。三者均可表达在竞争中占据有利地位的意思，保留A、B、D。“认可”指许可，同意；认为做得不错。其填入与文意无关，排除C。第二空，由“如同‘十个指头弹钢琴’，需要合理分配力量和节奏”可知，“某个或多个指头的力量受到影响”会打乱工作节奏，影响工作效能。“左支右绌”指力量不足，应付了这方面，那一方面又有了问题；“进退维谷”指进退两难；“拖泥带水”形容说话、写文章不简洁或做事不干脆。三个词语中，只有“左支右绌”填入最恰当，排除B、D。故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-045",
+      "module": "言语理解与表达",
+      "subtype": "选词填空",
+      "knowledge_points": [
+        "意图判断",
+        "选词填空"
+      ],
+      "difficulty": 2,
+      "solution_method": "语境分析法",
+      "error_traps": [
+        "因果倒置/强加因果",
+        "无关选项"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 45,
+      "fingerprint": "3b7d7860c6ed"
+    },
+    {
+      "number": 25,
+      "section": "常识判断",
+      "stem": "《中华人民共和国消费者权益保护法实施条例》自2024年7月1日起施行。下列说法或做法符合相关法律法规的是:",
+      "items": null,
+      "options": {
+        "A": "甲公司在消费者订购云服务前将自动续费条款放置于显著位置,消费者同意订购并勾选自动续费,甲公司可在该服务到期时自动扣费",
+        "B": "乙加油站为消费者提供免费洗车服务时造成车身划痕,该加油站无须承担赔偿责任",
+        "C": "丙在某直播平台上直播卖服装,称自己的服装为尾货和瑕疵品,要求大家谨慎购买,该商品不适用七天无理由退货",
+        "D": "丁健身馆与消费者签订书面合同,约定提供为期半年的健身私教课程服务并收取3000元预付款"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项不符合。《中华人民共和国消费者权益保护法实施条例》（2024年）第十条规定，“……经营者采取自动展期、自动续费等方式提供服务的，应当在消费者接受服务前和自动展期、自动续费等日期前，以显著方式提请消费者注意”。甲公司的扣费说明应当在消费者接受服务前和自动续费日期前都以显著方式提请消费者注意。B项不符合。该条例第七条规定，“消费者在购买商品、使用商品或者接受服务时，依法享有人身和财产安全不受损害的权利。经营者向消费者提供商品或者服务（包括以奖励、赠送、试用等形式向消费者免费提供商品或者服务），应当保证商品或者服务符合保障人身、财产安全的要求。免费提供的商品或者服务存在瑕疵但不违反法律强制性规定且不影响正常使用性能的，经营者应当在提供商品或者服务前如实告知消费者。……”乙加油站在提供洗车服务时损害消费者的财产，应当承担赔偿责任。C项不符合。该条例第十九条规定，“经营者通过网络、电视、电话、邮购等方式销售商品的，应当遵守消费者权益保护法第二十五条规定，不得擅自扩大不适用无理由退货的商品范围。经营者应当以显著方式对不适用无理由退货的商品进行标注，提示消费者在购买时进行确认，不得将不适用无理由退货作为消费者默认同意的选项。未经消费者确认，经营者不得拒绝无理由退货。……”《中华人民共和国消费者权益保护法》（2014年）第二十五条规定，“经营者采用网络、电视、电话、邮购等方式销售商品，消费者有权自收到商品之日起七日内退货，且无需说明理由，但下列商品除外：（一）消费者定作的；（二）鲜活易腐的；（三）在线下载或者消费者拆封的音像制品、计算机软件等数字化商品；（四）交付的报纸、期刊。除前款所列商品外，其他根据商品性质并经消费者在购买时确认不宜退货的商品，不适用无理由退货。……”据此可知，除法律明确规定不适用无理由退货的商品范围以外的商品，未经消费者确认，经营者不得拒绝无理由退货。D项符合。该条例第二十二条规定，“经营者以收取预付款方式提供商品或者服务的，应当与消费者订立书面合同，约定商品或者服务的具体内容、价款或者费用、预付款退还方式、违约责任等事项。……”据此可知，该项内容符合法律规定。故本题选D。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-025",
+      "module": "常识判断",
+      "subtype": "法律法规",
+      "knowledge_points": [
+        "法律常识"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 25,
+      "fingerprint": "da12b2ec0723"
+    },
+    {
+      "number": 23,
+      "section": "常识判断",
+      "stem": "关于所有权的取得,下列说法正确的是：",
+      "items": null,
+      "options": {
+        "A": "甲在公园捡到一条金项链,经多方寻找失主未果,此时甲获得项链的所有权",
+        "B": "乙以市价购买了一辆自行车,后发现该车是卖家借来的,乙仍可获得该车的所有权",
+        "C": "丙继承了一处房产,但尚未办理变更登记,丙此时还未获得该房产的所有权",
+        "D": "丁从村集体处承包了一块田地用于农作物种植,丁同时取得这块田地的所有权"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项说法错误。《中华人民共和国民法典》（2021年）第三百一十四条规定，“拾得遗失物，应当返还权利人。拾得人应当及时通知权利人领取，或者送交公安等有关部门”。该法第三百一十八条规定，“遗失物自发布招领公告之日起一年内无人认领的，归国家所有”。因此，金项链属于遗失物，甲寻找失主未果应送交公安等有关部门，甲不能获得其所有权。B项说法正确。该法第三百一十一条规定，“无处分权人将不动产或者动产转让给受让人的，所有权人有权追回；除法律另有规定外，符合下列情形的，受让人取得该不动产或者动产的所有权：（一）受让人受让该不动产或者动产时是善意；（二）以合理的价格转让；（三）转让的不动产或者动产依照法律规定应当登记的已经登记，不需要登记的已经交付给受让人。……”乙属于善意取得，并支付了合理的价格，可以获得该车的所有权。C项说法错误。该法第二百三十条规定，“因继承取得物权的，自继承开始时发生效力”。据此可知，丙对该房屋所有权的取得，自继承开始时发生效力。D项说法错误。该法第三百二十四条规定，“国家所有或者国家所有由集体使用以及法律规定属于集体所有的自然资源，组织、个人依法可以占有、使用和收益”。据此可知，丁不能取得这块田地的所有权，但丁对该田地依法享有占有、使用和收益的权利。故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-023",
+      "module": "常识判断",
+      "subtype": "法律法规",
+      "knowledge_points": [
+        "法律常识"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [
+        "选非题误选",
+        "绝对化表述"
+      ],
+      "calc_tree": null,
+      "quality_score": 4,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 23,
+      "fingerprint": "adc640b83291"
+    },
+    {
+      "number": 21,
+      "section": "常识判断",
+      "stem": "国家主席习近平在二〇二四年新年贺词中指出：“良渚、二里头的文明曙光，殷墟甲骨的文字传承，三星堆的文化瑰宝，国家版本馆的文脉赓续……泱泱中华，历史何其悠久，文明何其博大，这是我们的自信之基、力量之源。”下列与之相关的说法不准确的是：",
+      "items": null,
+      "options": {
+        "A": "“良渚”遗址中出土了大量的玉器",
+        "B": "“殷墟甲骨”中包含了大量的卜辞",
+        "C": "“蚕丛及鱼凫”与“二里头”遗址有关",
+        "D": "青铜神树是“三星堆的文化瑰宝”之一"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项说法准确。良渚文化是环钱塘江分布的以黑陶和磨光玉器为代表的新石器时代晚期文化，因1936年首先发现于良渚而命名。“良渚”遗址中出土了各式精美的玉器，制作水平在同期诸文化中处于领先地位。B项说法准确。甲骨文是商周时期刻在龟甲、兽骨上的文字，以河南安阳殷墟出土的商代晚期商王室占卜记事的甲骨和兽骨为主。殷墟甲骨文内容丰富，甲骨刻辞大多是占卜的记录，而且占卜的范围很广，涉及祭祀、征伐、农业、田猎、气象、疾病等。C项说法不准确。“蚕丛及鱼凫”出自唐代李白的《蜀道难》。传说中，蚕丛和鱼凫建立了古蜀国，这与位于四川省广汉市的三星堆遗址有关。二里头遗址是夏代晚期的重要遗址，位于河南偃师二里头。D项说法准确。三星堆遗址是同时期长江流域文化内涵最丰富、面积最大的都城遗址，代表了数千年前古蜀文明的发展水平。在遗址上中发现的青铜面具、青铜大立人像、青铜神树、青铜太阳轮都是“三星堆的文化瑰宝”。故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-021",
+      "module": "常识判断",
+      "subtype": "人文历史",
+      "knowledge_points": [
+        "历史人文"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 21,
+      "fingerprint": "ab40a6c333d4"
+    },
+    {
+      "number": 22,
+      "section": "常识判断",
+      "stem": "下列情形不在申请行政复议范围之内的是：",
+      "items": null,
+      "options": {
+        "A": "餐馆甲因食品卫生不达标,被吊销餐饮服务许可证,甲不服",
+        "B": "建设单位乙在申请建筑工程施工许可证时,因申请材料不全被拒绝,乙不服",
+        "C": "公务员丙不能胜任工作,其所属行政机关作出降职处理决定,丙不服",
+        "D": "工人丁提出工伤认定申请,当地人力资源和社会保障局作出不予受理的决定,丁不服"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A、B、D三项不选。《中华人民共和国行政复议法》（2024年）第十一条规定，“有下列情形之一的，公民、法人或者其他组织可以依照本法申请行政复议：（一）对行政机关作出的行政处罚决定不服；（二）对行政机关作出的行政强制措施、行政强制执行决定不服；（三）申请行政许可，行政机关拒绝或者在法定期限内不予答复，或者对行政机关作出的有关行政许可的其他决定不服；……（七）对行政机关作出的不予受理工伤认定申请的决定或者工伤认定结论不服；……（十五）认为行政机关的其他行政行为侵犯其合法权益”。A项属于该法条第一项规定的情形，B项属于该法条第三项规定的情形，D项属于该法条第七项规定的情形，这三种情形在可申请行政复议的范围之内。C项当选。该法第十二条规定，“下列事项不属于行政复议范围：（一）国防、外交等国家行为；（二）行政法规、规章或者行政机关制定、发布的具有普遍约束力的决定、命令等规范性文件；（三）行政机关对行政机关工作人员的奖惩、任免等决定；（四）行政机关对民事纠纷作出的调解”。C项属于该法条第三项规定的情形，不属于行政复议范围。故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-022",
+      "module": "常识判断",
+      "subtype": "法律法规",
+      "knowledge_points": [
+        "常识判断"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 4,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 22,
+      "fingerprint": "e1d11a9a8025"
+    },
+    {
+      "number": 31,
+      "section": "常识判断",
+      "stem": "某博物馆想办一期关于中国自然与人文的地理展览,开设几个专题。以下哪个专题所拟名称不恰当?",
+      "items": null,
+      "options": {
+        "A": "长江:稻作文明与鱼米之乡",
+        "B": "都江堰:千年水道神韵再现",
+        "C": "胡焕庸线:中国的“东与西”",
+        "D": "五岳:高山神圣性的代表"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项名称恰当。长江是中国第一大河，发源于青藏高原的唐古拉山脉，流经青海、西藏、云南、四川、重庆、湖北、湖南、江西、安徽、江苏、上海等省、区、市，注入东海。稻作文明与鱼米之乡形容的是长江流域，尤其是长江中下游地区。B项名称不恰当。都江堰位于四川成都平原西部的岷江上，是战国时期秦蜀郡守李冰父子修建的大型水利工程，是世界文化遗产、世界灌溉工程遗产。都江堰至今未被废弃。截至2024年，断流百年的京杭大运河连续三年全线水流贯通，再现壮美运河千年神韵。C项名称恰当。胡焕庸线是指中国的人口地理分界线，又称黑河—腾冲线，是中国东西分界线。根据胡焕庸当时的计算，线以东的中国东半部面积约占全国的36%，而人口却占全国的96%；线以西的中国西半部面积占全国的64%，而人口仅占全国的4%。D项名称恰当。五岳是远古山神崇拜、五行观念和帝王巡猎封禅相结合的产物，包括东岳泰山、西岳华山、南岳衡山、北岳恒山、中岳嵩山。五岳作为中国五大名山，更是被视为神圣不可侵犯的象征。故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-031",
+      "module": "常识判断",
+      "subtype": "地理环境",
+      "knowledge_points": [
+        "历史人文",
+        "地理常识"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 31,
+      "fingerprint": "be9dcc3f234a"
+    },
+    {
+      "number": 26,
+      "section": "常识判断",
+      "stem": "纪录片《何以中国》讲述了多元一体中华民族的形成和中华文明创生的故事。下列哪句解说词不可能出现在《秦汉》一集中?",
+      "items": null,
+      "options": {
+        "A": "他登峄山、攀泰山、上琅琊,经之罘、过东观、临碣石、至会稽,巡行之处皆刊石勒铭",
+        "B": "武丁左手扶住卜骨,右手持炭棒,灼烧着钻槽,通红的棒头神秘地闪烁,不久后,裂缝在钻槽边绽开,发出脆响",
+        "C": "从长安出发时,车马辚辚百余人,回程路上,只有两人,一十三年间,有利益相诱,有武力相胁,温柔乡、囹圄境,却从未丢失身为汉使的旌节,从未磨灭此行的初心",
+        "D": "龙首原上,长乐、未央两宫东西并峙,于高处制掣全城。桂宫、北宫、明光宫横列两宫之北"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项可能出现。该项描写了秦始皇统一六国后的巡游路线。公元前219年春季，秦始皇开始东巡。此后八年间，他一度封禅，五次东巡，他登峄山、攀泰山、上琅琊、经之罘、过东观、临碣石、至会稽，巡行之处皆刊石勒铭。B项不可能出现。该项描写了武丁进行占卜的情形。武丁是商代帝王，其即位后，发奋图强，勤修政事，重用傅说、甘盘等人，并对周围的土方、鬼方、羌、夷、虎方不断用兵，扩大了疆域，使商王朝达到鼎盛时期。C项可能出现。该项描写了汉武帝派遣张骞出使西域的情形。张骞从长安出发时，车马辚辚百余人，回程路上，只有两人，一十三年间，有利益相诱，有武力相胁，温柔乡、囹圄境，却从未丢失身为汉使的旌节，从未磨灭此行的初心。D项可能出现。该项描写了西汉都城长安的布局。西汉都城长安是当时世界上规模最大的城市之一。龙首原上，长乐、未央两宫东西并峙，于高处制掣全城。桂宫、北宫、明光宫横列两宫之北。故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-026",
+      "module": "常识判断",
+      "subtype": "人文历史",
+      "knowledge_points": [
+        "常识判断"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 26,
+      "fingerprint": "8411c093b13b"
+    },
+    {
+      "number": 27,
+      "section": "常识判断",
+      "stem": "下列物理学家与其提出的著名观点对应错误的是:",
+      "items": null,
+      "options": {
+        "A": "麦克斯韦:能量的交换不是连续的,而是以最小的不可分割的单元进行,这些单元被称为“量子”",
+        "B": "安培:在原子、分子等物质微粒的内部,存在着一种环形电流——分子电流,使每个微粒成为微小的磁体",
+        "C": "牛顿:任何两个物体之间都存在引力,这种力的大小与它们质量的乘积成正比,与它们之间的距离的平方成反比",
+        "D": "伽利略:物体的运动并不需要力来维持,运动的物体之所以会停下来,是因为受到了阻力"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项对应错误。德国物理学家普朗克提出能量子假说，即：能量不是连续的，而是一份一份地进行的，每一份就是一个最小的能量单元。这个不可再分的最小的能量单元被称为“能量子”（简称“量子”）。麦克斯韦是英国物理学家，是经典电磁理论的奠基人。B项对应正确。法国物理学家安培提出了分子电流假说，即：在原子、分子等物质微粒的内部，存在着一种环形电流——分子电流，分子电流使每个物质微粒都成为微小的磁体，它的两侧相当于两个磁极。C项对应正确。英国物理学家牛顿发现了万有引力定律。这个定律指出，任何两个物体之间都存在引力，且这个引力与它们质量的乘积成正比，与它们之间的距离的平方成反比。D项对应正确。意大利物理学家伽利略通过实验分析得出：运动的物体如果受到的阻力为零，将以恒定不变的速度永远运动下去，这说明力不是维持物体运动的原因。而运动的物体之所以停下来，是因为受到了阻力。故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-027",
+      "module": "常识判断",
+      "subtype": "科技生活",
+      "knowledge_points": [
+        "科技常识"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [
+        "选非题误选",
+        "因果倒置/强加因果"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 27,
+      "fingerprint": "23b9e6665315"
+    },
+    {
+      "number": 30,
+      "section": "常识判断",
+      "stem": "关于盆地地形,下列说法错误的是:",
+      "items": null,
+      "options": {
+        "A": "相比平原,盆地更容易富集油气资源",
+        "B": "塔里木盆地是大型封闭性山间盆地",
+        "C": "盆地地形在山地、高原、海洋里都有分布",
+        "D": "华北渤海湾多分布着岩溶盆地"
+      },
+      "options_in_media": false,
+      "type": "常识判断",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项说法正确。盆地容易汇聚周边地区的水流和沉积物，将大量的生物遗体带到盆地中心地带集中沉积。随着地质的演化，这些沉积物被深埋地下，在高温、高压等条件下逐渐转化为油气资源。因此，相比平原，盆地的环境更容易富集油气资源。B项说法正确。塔里木盆地是中国最大的内陆盆地，位于天山山脉和昆仑山脉之间。塔里木盆地是大型封闭性山间盆地，地质构造上是周围被许多深大断裂所限制的稳定地块。C项说法正确。陆地上的盆地多分布在多山的地表上，在丘陵、山地、高原都有相应的不同构造的盆地。在海洋的底部有许多低平的地带，周围是相对高一些的海底山脉，这种类似于陆地上盆地的构造叫作海盆或者洋盆。D项说法错误。岩溶盆地是指岩溶地区的一些宽广平坦的盆地或谷地。在我国，岩溶盆地主要分布在广西、云南和贵州等地。华北渤海湾分布较多的是断陷盆地（断块构造中的沉降地块）。故本题选D。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-030",
+      "module": "常识判断",
+      "subtype": "地理环境",
+      "knowledge_points": [
+        "地理常识"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 4,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 30,
+      "fingerprint": "2a079f02d968"
+    },
+    {
+      "number": 4,
+      "section": "政治理论",
+      "stem": "习近平总书记指出,中国共产党人的理想信念,建立在马克思主义科学真理的基础之上,建立在马克思主义揭示的人类社会发展规律的基础之上,建立在为最广大人民谋利益的崇高价值的基础之上。我们坚定,是因为我们追求的是真理。我们坚定,是因为我们遵循的是规律。我们坚定,是因为我们代表的是最广大人民根本利益。这一论述最直接体现了马克思主义的哪一基本观点?",
+      "items": null,
+      "options": {
+        "A": "真理尺度与价值尺度的辩证统一",
+        "B": "认识世界与改造世界的辩证统一",
+        "C": "量变与质变的辩证统一",
+        "D": "矛盾的普遍性与特殊性的辩证统一"
+      },
+      "options_in_media": false,
+      "type": "政治理论",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项当选。真理尺度与价值尺度是紧密联系、不可分割的辩证统一关系。一方面，价值尺度必须以真理为前提。要想达到实践的目的以满足人类自身的需要，就必须“认识真理，掌握真理，信仰真理，捍卫真理”。脱离了真理尺度，价值尺度就偏离了合理的、正确的轨道。另一方面，人类自身需要的内在尺度，推动着人们不断发现新的真理。科学发明、技术创新、经典思想理论的形成，都是人类为了实现更美好的生活而进行的社会实践。脱离了价值尺度，真理就缺失了主体意义。题干中“中国共产党人的理想信念，建立在马克思主义科学真理的基础之上，建立在马克思主义揭示的人类社会发展规律的基础之上”体现了真理尺度，而“建立在为最广大人民谋利益的崇高价值的基础之上”以及“代表的是最广大人民根本利益”则体现了价值尺度。B项不选。认识世界和改造世界是相互依赖、相互制约的辩证统一关系。一方面，认识世界有助于改造世界，正确认识世界是有效改造世界的必要前提；另一方面，人们只有在改造世界的实践中才能不断地深化、拓展对世界的正确认识。认识世界和改造世界的统一，决定了理论与实践必须相结合。题干对此未予体现。C项不选。量变和质变的辩证关系是：第一，量变是质变的必要准备。任何事物的变化都有一个量变的积累过程，没有量变的积累，质变就不会发生。第二，质变是量变的必然结果，并为新的量变开辟道路。单纯的量变不会永远持续下去，量变达到一定程度必然引起质变。第三，量变和质变是相互渗透的。一方面，在总的量变过程中有阶段性和局部性的部分质变；另一方面，在质变的过程中也有旧质在量上的收缩和新质在量上的扩张。量变和质变是相互依存、相互贯通的，量变引起质变，在新质的基础上，事物又开始新的量变，如此交替循环，构成了事物的发展过程。题干对此未予体现。D项不选。矛盾的普遍性和特殊性是辩证统一的关系。矛盾的普遍性即矛盾的共性，矛盾的特殊性即矛盾的个性。矛盾的共性是无条件的、绝对的，矛盾的个性是有条件的、相对的。任何现实存在的事物的矛盾都是共性和个性的有机统一，共性寓于个性之中，没有离开个性的共性，也没有离开共性的个性。题干对此未予体现。故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-004",
+      "module": "政治理论",
+      "subtype": "习近平新时代中国特色社会主义思想",
+      "knowledge_points": [
+        "习近平新时代中国特色社会主义思想",
+        "马克思主义基本原理"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [
+        "选非题误选",
+        "概念偷换/主体不一致",
+        "因果倒置/强加因果"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 4,
+      "fingerprint": "18a646f94f38"
+    },
+    {
+      "number": 7,
+      "section": "政治理论",
+      "stem": "习近平总书记强调,要坚定不移贯彻新发展理念,更加自觉地把高质量充分就业作为经济社会发展的优先目标。下列关于高质量充分就业的表述正确的有:",
+      "items": [
+        "①全面贯彻劳动者自主就业、政府主导就业、市场促进就业的方针",
+        "②坚持扩大就业容量和提升就业质量相结合",
+        "③坚持就业带动创业",
+        "④加强灵活就业和新就业形态劳动者权益保障,扩大职业伤害保障试点"
+      ],
+      "options": {
+        "A": "①②",
+        "B": "①③",
+        "C": "②④",
+        "D": "③④"
+      },
+      "options_in_media": false,
+      "type": "政治理论",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：2024年5月，中共中央政治局就促进高质量充分就业进行第十四次集体学习。①表述错误。习近平总书记在主持学习时强调，促进高质量充分就业，是新时代新征程就业工作的新定位、新使命。要坚持以人民为中心的发展思想，全面贯彻劳动者自主就业、市场调节就业、政府促进就业和鼓励创业的方针，持续促进就业质的有效提升和量的合理增长，不断增强广大劳动者的获得感幸福感安全感，为以中国式现代化全面推进强国建设、民族复兴伟业提供有力支撑。②表述正确，③表述错误。习近平总书记在主持学习时指出，党的十八大以来，党中央坚持把就业工作摆在治国理政的突出位置，强化就业优先政策，健全就业促进机制，有效应对各种压力挑战，城镇新增就业年均1300万人，为民生改善和经济发展提供了重要支撑。在实践中不断深化对新时代就业工作规律的认识，积累了许多经验。主要包括：坚持把就业作为民生之本；坚持实施就业优先战略；坚持依靠发展促进就业；坚持扩大就业容量和提升就业质量相结合；坚持突出抓好重点群体就业；坚持创业带动就业；坚持营造公平就业环境；坚持构建和谐劳动关系；等等。这些经验十分宝贵，要长期坚持并不断丰富发展。④表述正确。习近平总书记在主持学习时强调，要加强劳动者权益保障。加强灵活就业和新就业形态劳动者权益保障，扩大职业伤害保障试点，及时总结经验、形成制度。故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-007",
+      "module": "政治理论",
+      "subtype": "习近平新时代中国特色社会主义思想",
+      "knowledge_points": [
+        "习近平新时代中国特色社会主义思想",
+        "党的重要会议",
+        "中国式现代化"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 7,
+      "fingerprint": "e5041a002c2c"
+    },
+    {
+      "number": 1,
+      "section": "政治理论",
+      "stem": "习近平总书记指出,马克思主义是为人民立言、为人民代言的理论,是为改变人民命运而创立、在人民求解放的实践中丰富和发展的,人民的创造性实践是马克思主义理论创新的不竭源泉。下列说法与这一论述相符的有:",
+      "items": [
+        "①人民不仅是物质财富的创造者,也是精神财富的创造者",
+        "②要坚持以理论工作者的首创精神为引领,注重从理论创新中总结实践经验",
+        "③无论是毛泽东思想、中国特色社会主义理论体系,还是新时代中国特色社会主义思想,无不源自于人民的智慧、人民的探索、人民的创造",
+        "④各级领导干部身处实践最前沿,对实践变化感知最敏感、感受最深切,也最聪慧"
+      ],
+      "options": {
+        "A": "①②",
+        "B": "①③",
+        "C": "②④",
+        "D": "③④"
+      },
+      "options_in_media": false,
+      "type": "政治理论",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：①当选。习近平总书记的重要文章《开辟马克思主义中国化时代化新境界》指出，“马克思主义是为人民立言、为人民代言的理论，是为改变人民命运而创立、在人民求解放的实践中丰富和发展的，人民的创造性实践是马克思主义理论创新的不竭源泉。人民作为历史的创造者，不仅是物质财富的创造者，也是精神财富的创造者”。②不选。习近平总书记的重要文章《开辟马克思主义中国化时代化新境界》指出，“要尊重人民首创精神，注重从人民的创造性实践中总结新鲜经验，上升为理性认识，提炼出新的理论成果，着力让党的创新理论深入亿万人民心中，成为接地气、聚民智、顺民意、得民心的理论”。②中应尊重的是人民首创精神，并注重从人民的创造性实践中总结新鲜经验。③当选，④不选。习近平总书记的重要文章《开辟马克思主义中国化时代化新境界》指出，“马克思主义中国化时代化成果，都是党和人民实践经验和集体智慧的结晶。无论是毛泽东思想、中国特色社会主义理论体系，还是新时代中国特色社会主义思想，无不源自于人民的智慧、人民的探索、人民的创造。人民群众身处实践最前沿，对实践变化感知最敏感、感受最深切，也最聪慧，只要走到人民群众中去，很多百思不得其解的问题就能豁然开朗、找到答案”。④中“各级领导干部”应为“人民群众”。故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-001",
+      "module": "政治理论",
+      "subtype": "习近平新时代中国特色社会主义思想",
+      "knowledge_points": [
+        "习近平新时代中国特色社会主义思想",
+        "马克思主义基本原理"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 1,
+      "fingerprint": "b95752082dfb"
+    },
+    {
+      "number": 18,
+      "section": "政治理论",
+      "stem": "习近平总书记强调,加强党风廉政建设,一体推进不敢腐、不能腐、不想腐,严格落实中央八项规定精神,督促党员、干部特别是领导干部清廉自守、廉洁从政、干净做事。根据《中国共产党纪律处分条例》,下列违纪情况属于违反廉洁纪律的是:",
+      "items": null,
+      "options": {
+        "A": "在重大原则问题上不同党中央保持一致且有实际言论、行为或者造成不良后果的",
+        "B": "拒不执行党组织的分配、调动、交流等决定的",
+        "C": "干涉生产经营自主权,致使群众财产遭受较大损失的",
+        "D": "利用职权或者职务上的影响操办婚丧喜庆事宜,造成不良影响的"
+      },
+      "options_in_media": false,
+      "type": "政治理论",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项不属于。《中国共产党纪律处分条例》（2024年）第六章“对违反政治纪律行为的处分”第四十九条规定，“在重大原则问题上不同党中央保持一致且有实际言论、行为或者造成不良后果的，给予警告或者严重警告处分；情节较重的，给予撤销党内职务或者留党察看处分；情节严重的，给予开除党籍处分”。B项不属于。该条例第七章“对违反组织纪律行为的处分”第七十九条规定，“拒不执行党组织的分配、调动、交流等决定的，给予警告、严重警告或者撤销党内职务处分”。C项不属于。该条例第九章“对违反群众纪律行为的处分”第一百二十三条规定，“干涉生产经营自主权，致使群众财产遭受较大损失的，对直接责任者和领导责任者，给予警告或者严重警告处分；情节严重的，给予撤销党内职务或者留党察看处分”。D项属于。该条例第八章“对违反廉洁纪律行为的处分”第一百条规定，“利用职权或者职务上的影响操办婚丧喜庆事宜，造成不良影响的，给予警告或者严重警告处分；情节严重的，给予撤销党内职务处分；借机敛财或者有其他侵犯国家、集体和人民利益行为的，从重或者加重处分，直至开除党籍”。故本题选D。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-018",
+      "module": "政治理论",
+      "subtype": "习近平新时代中国特色社会主义思想",
+      "knowledge_points": [
+        "习近平新时代中国特色社会主义思想",
+        "党的重要会议"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 18,
+      "fingerprint": "d1725d68e43f"
+    },
+    {
+      "number": 14,
+      "section": "政治理论",
+      "stem": "完善大统战工作格局,是习近平总书记关于做好新时代党的统一战线工作的重要思想的重要内容,是做好新时代统战工作的重要保障,也是进一步全面深化改革、为推进中国式现代化凝心聚力的重要举措。下列各项不属于完善大统战工作格局的措施的是:",
+      "items": null,
+      "options": {
+        "A": "更好发挥党外人士作用,健全党外代表人士队伍建设制度",
+        "B": "制定民族团结进步促进法,健全铸牢中华民族共同体意识制度机制",
+        "C": "全面构建亲清政商关系,健全促进非公有制经济健康发展、非公有制经济人士健康成长工作机制",
+        "D": "健全人大议事规则和论证、评估、评议、听证制度"
+      },
+      "options_in_media": false,
+      "type": "政治理论",
+      "topic": null,
+      "tag": null,
+      "answer": "D",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A、B、C三项属于。《中共中央关于进一步全面深化改革 推进中国式现代化的决定》指出，“完善大统战工作格局。完善发挥统一战线凝聚人心、汇聚力量政治作用的政策举措。坚持好、发展好、完善好中国新型政党制度。更好发挥党外人士作用，健全党外代表人士队伍建设制度。制定民族团结进步促进法，健全铸牢中华民族共同体意识制度机制，增强中华民族凝聚力。系统推进我国宗教中国化，加强宗教事务治理法治化。完善党外知识分子和新的社会阶层人士政治引领机制。全面构建亲清政商关系，健全促进非公有制经济健康发展、非公有制经济人士健康成长工作机制。完善港澳台和侨务工作机制”。D项不属于。《中共中央关于进一步全面深化改革 推进中国式现代化的决定》指出，“加强人民当家作主制度建设。……健全人大议事规则和论证、评估、评议、听证制度。丰富人大代表联系人民群众的内容和形式”。据此可知，D项举措属于加强人民当家作主制度建设的措施，而非完善大统战工作格局的措施。故本题选D。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-014",
+      "module": "政治理论",
+      "subtype": "习近平新时代中国特色社会主义思想",
+      "knowledge_points": [
+        "习近平新时代中国特色社会主义思想",
+        "党的重要会议",
+        "中国式现代化"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 14,
+      "fingerprint": "e9bd4a44616c"
+    },
+    {
+      "number": 17,
+      "section": "政治理论",
+      "stem": "完善市场经济基础制度是构建高水平社会主义市场经济体制的重要内容。下列不属于完善市场经济基础制度内容的是:",
+      "items": null,
+      "options": {
+        "A": "完善财政转移支付体系",
+        "B": "完善市场信息披露制度",
+        "C": "完善市场准入制度",
+        "D": "完善产权制度"
+      },
+      "options_in_media": false,
+      "type": "政治理论",
+      "topic": null,
+      "tag": null,
+      "answer": "A",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：A项不属于。《中共中央关于进一步全面深化改革 推进中国式现代化的决定》指出，“深化财税体制改革。……完善财政转移支付体系，清理规范专项转移支付，增加一般性转移支付，提升市县财力同事权相匹配程度”。据此可知，A项属于深化财税体制改革的内容。B、C、D三项属于。《中共中央关于进一步全面深化改革 推进中国式现代化的决定》指出，“完善市场经济基础制度。完善产权制度，依法平等长久保护各种所有制经济产权，建立高效的知识产权综合管理体制。完善市场信息披露制度，构建商业秘密保护制度。对侵犯各种所有制经济产权和合法利益的行为实行同罪同罚，完善惩罚性赔偿制度。加强产权执法司法保护，防止和纠正利用行政、刑事手段干预经济纠纷，健全依法甄别纠正涉企冤错案件机制。完善市场准入制度，优化新业态新领域市场准入环境。深化注册资本认缴登记制度改革，实行依法按期认缴。健全企业破产机制，探索建立个人破产制度，推进企业注销配套改革，完善企业退出制度。健全社会信用体系和监管制度”。故本题选A。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-017",
+      "module": "政治理论",
+      "subtype": "党的重要会议与文件",
+      "knowledge_points": [
+        "党的重要会议",
+        "中国式现代化"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [
+        "选非题误选",
+        "绝对化表述"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 17,
+      "fingerprint": "4d2d18aed039"
+    },
+    {
+      "number": 15,
+      "section": "政治理论",
+      "stem": "党的二十届三中全会提出,健全绿色低碳发展机制。实施支持绿色低碳发展的财税、金融、投资、价格政策和标准体系,发展绿色低碳产业,健全绿色消费激励机制,促进绿色低碳循环发展经济体系建设。关于健全绿色低碳发展机制,下列举措不恰当的是:",
+      "items": null,
+      "options": {
+        "A": "优化政府绿色采购政策,完善绿色税制",
+        "B": "建立碳排放双控向能耗双控全面转型新机制",
+        "C": "完善资源总量管理和全面节约制度,健全废弃物循环利用体系",
+        "D": "加快规划建设新型能源体系,完善新能源消纳和调控政策措施"
+      },
+      "options_in_media": false,
+      "type": "政治理论",
+      "topic": null,
+      "tag": null,
+      "answer": "B",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：《中共中央关于进一步全面深化改革 推进中国式现代化的决定》指出，“健全绿色低碳发展机制。实施支持绿色低碳发展的财税、金融、投资、价格政策和标准体系，发展绿色低碳产业，健全绿色消费激励机制，促进绿色低碳循环发展经济体系建设。优化政府绿色采购政策，完善绿色税制。完善资源总量管理和全面节约制度，健全废弃物循环利用体系。健全煤炭清洁高效利用机制。加快规划建设新型能源体系，完善新能源消纳和调控政策措施。完善适应气候变化工作体系。建立能耗双控向碳排放双控全面转型新机制。构建碳排放统计核算体系、产品碳标识认证制度、产品碳足迹管理体系，健全碳市场交易制度、温室气体自愿减排交易制度，积极稳妥推进碳达峰碳中和”。综上可知，B项中“碳排放双控向能耗双控全面转型新机制”的表述前后颠倒，应改为“能耗双控向碳排放双控全面转型新机制”。故本题选B。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [
+        "anchor_pending"
+      ],
+      "benchmark_id": "BM2025-shengji-015",
+      "module": "政治理论",
+      "subtype": "党的重要会议与文件",
+      "knowledge_points": [
+        "党的重要会议",
+        "中国式现代化"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 15,
+      "fingerprint": "374c5925632e"
+    },
+    {
+      "number": 11,
+      "section": "政治理论",
+      "stem": "习近平总书记强调,要牢牢扭住自主创新这个“牛鼻子”。关于自主创新的举措,下列表述正确的有几项?",
+      "items": [
+        "①主动对接国家战略需求,整合和优化科教创新资源",
+        "②积极培育产业园区,加强对口合作,加快科研成果落地转化",
+        "③积极培育新能源、新材料、先进制造、电子信息等战略性新兴产业",
+        "④建设风光火核储一体化能源基地",
+        "⑤逐步弱化央地合作,鼓励各地自主发展新兴产业"
+      ],
+      "options": {
+        "A": "2 项",
+        "B": "3 项",
+        "C": "4 项",
+        "D": "5 项"
+      },
+      "options_in_media": false,
+      "type": "政治理论",
+      "topic": null,
+      "tag": null,
+      "answer": "C",
+      "answer_source": "answer_book_2026-09",
+      "explanation": "完整解析：2023年9月，习近平总书记在新时代推动东北全面振兴座谈会上强调，要牢牢扭住自主创新这个“牛鼻子”，在巩固存量、拓展增量、延伸产业链、提高附加值上下功夫。主动对接国家战略需求，整合和优化科教创新资源，加大研发投入，掌握更多关键核心技术。积极培育产业园区，加强对口合作，加快科研成果落地转化。积极培育新能源、新材料、先进制造、电子信息等战略性新兴产业，积极培育未来产业，加快形成新质生产力，增强发展新动能。加快发展风电、光电、核电等清洁能源，建设风光火核储一体化能源基地。加强生态资源保护利用，依托东北的生态环境和生物资源优势，发展现代生物、大数据等新兴特色产业，发展冰雪经济和海洋经济。继续深化国有企业改革，实施国有企业振兴专项行动，提高国有企业核心竞争力，推动国有资本向重要行业和关键领域集中，强化战略支撑作用。创新央地合作模式，促进央地融合发展，更好带动地方经济发展。据此可知，①②③④表述正确；⑤表述错误，应创新央地合作，而非弱化。故本题选C。",
+      "media": [],
+      "formulas": [],
+      "material_ids": [],
+      "provenance": {
+        "role": "shared",
+        "from_paper": null,
+        "from_number": null,
+        "diff_label": null,
+        "raw_note": "主卷共享",
+        "source_ref": {
+          "file": null,
+          "page": null
+        }
+      },
+      "flags": [],
+      "benchmark_id": "BM2025-shengji-011",
+      "module": "政治理论",
+      "subtype": "习近平新时代中国特色社会主义思想",
+      "knowledge_points": [
+        "习近平新时代中国特色社会主义思想"
+      ],
+      "difficulty": 2,
+      "solution_method": "知识判断法",
+      "error_traps": [
+        "选非题误选"
+      ],
+      "calc_tree": null,
+      "quality_score": 5,
+      "source_paper": "省级",
+      "source_paper_id": "shengji",
+      "source_number": 11,
+      "fingerprint": "6afecee8959a"
+    }
+  ]
+}
