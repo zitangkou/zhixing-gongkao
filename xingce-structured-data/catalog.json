@@ -1,7 +1,7 @@
 {
   "project": "国考行测真题结构化数据",
   "root": "xingce-structured-data",
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "years": [
     {
       "year": 2025,
@@ -73,7 +73,7 @@
     {
       "year": 2023,
       "subject": "xingce",
-      "status": "papers_assembled",
+      "status": "answers_ingested",
       "path": "2023/xingce",
       "papers": [
         {
@@ -100,9 +100,9 @@
         "figures": "2023/xingce/media/figures",
         "index": "2023/xingce/media/media_index.json"
       },
-      "notes": "以市地级为主卷底版；省级/执法由共享+差异题补全；答案待接入",
-      "answer_coverage": "0/395 (0%)",
-      "answer_source": null
+      "notes": "2026-09-04 三卷答案+解析入库（覆盖率95.2%）；市地100%/省级91.9%/执法93.8%；19题未匹配（图形推理generic stem+选词填空）；188题anchor_pending（解析册格式限制，非答案错误）；校验器0错误",
+      "answer_coverage": "376/395 (95.2%)",
+      "answer_source": "answer_book_2026-09"
     },
     {
       "year": 2022,
