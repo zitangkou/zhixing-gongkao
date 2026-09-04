@@ -303,7 +303,42 @@ def main():
 </body></html>"""
     (tmpdir / "cover.html").write_text(cover_html, encoding="utf-8")
     render_png(tmpdir / "cover.html", XHS_DIR / "00_封面.png")
-    print("✅ 封面: 00_封面.png")
+    print("✅ 封面A: 00_封面.png")
+
+    # 封面B：分色对撞（杂志期刊风，参考申论小红书封面B）
+    _title_lines = ARTICLE_TITLE.replace("，", "，\n").split("\n")
+    _title_html = "<br>".join(_title_lines) if len(_title_lines) > 1 else ARTICLE_TITLE
+    cover_b_html = f"""<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<style>*{{box-sizing:border-box;margin:0;padding:0;}}body{{margin:0;padding:0;background:#fff;}}</style>
+</head><body>
+<div style="width:{W}px;height:{H}px;position:relative;overflow:hidden;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;">
+  <div style="position:absolute;top:0;left:0;right:0;height:660px;background:#1F2329;">
+    <div style="position:absolute;top:80px;left:0;right:0;text-align:center;color:#D4B896;font-size:36px;letter-spacing:10px;font-weight:500;">人民日报 · 精读系列</div>
+    <div style="position:absolute;top:200px;left:0;right:0;text-align:center;color:#D4B896;font-size:130px;font-weight:bold;letter-spacing:18px;">考点精拆</div>
+    <div style="position:absolute;top:440px;left:0;right:0;text-align:center;color:#D4B896;font-size:34px;letter-spacing:8px;opacity:0.85;">政治素养 · 考点 · 金句 · 每日一练</div>
+  </div>
+  <div style="position:absolute;top:660px;left:0;right:0;bottom:0;background:#FAF6EE;"></div>
+  <div style="position:absolute;top:520px;left:50%;transform:translateX(-50%);width:280px;height:280px;border-radius:50%;background:{BRAND_RED};display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(208,2,27,0.3);">
+    <div style="color:#fff;font-size:72px;font-weight:bold;letter-spacing:4px;">行测</div>
+    <div style="color:#fff;font-size:32px;letter-spacing:6px;margin-top:8px;opacity:0.9;">时政考点</div>
+  </div>
+  <div style="position:absolute;top:880px;left:80px;display:flex;align-items:center;">
+    <div style="width:8px;height:36px;background:{BRAND_RED};margin-right:16px;"></div>
+    <span style="color:{BRAND_RED};font-size:36px;font-weight:bold;letter-spacing:4px;">本期考点</span>
+  </div>
+  <div style="position:absolute;top:970px;left:80px;right:80px;color:#2A2A2A;font-size:72px;font-weight:bold;line-height:1.35;letter-spacing:2px;">
+    {_title_html}
+  </div>
+  <div style="position:absolute;top:1230px;left:80px;color:#888;font-size:38px;letter-spacing:3px;">上合组织考点 · 命运共同体</div>
+  <div style="position:absolute;bottom:80px;left:80px;border:3px solid {BRAND_RED};border-radius:8px;padding:16px 36px;">
+    <span style="color:{BRAND_RED};font-size:32px;font-weight:bold;letter-spacing:4px;">20题精拆</span>
+  </div>
+  <div style="position:absolute;bottom:90px;right:80px;color:#888;font-size:34px;letter-spacing:3px;">{DATE_STR}</div>
+</div>
+</body></html>"""
+    (tmpdir / "cover_b.html").write_text(cover_b_html, encoding="utf-8")
+    render_png(tmpdir / "cover_b.html", XHS_DIR / "00_封面B_分色对撞.png")
+    print("✅ 封面B: 00_封面B_分色对撞.png")
 
     # 20 张单题卡
     for i, _ in enumerate(questions, 1):
