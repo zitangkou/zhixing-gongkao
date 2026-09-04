@@ -158,7 +158,9 @@
     "formulas_dir": "media/formulas",
     "index": "media/media_index.json"
   },
-  "status": "papers_assembled",
-  "updated": "2026-09-02",
-  "notes": "三卷已组装：shengji 135题完整；shidi/xingzhengzhifa 约125题（以省级为底重排，差异题已提取至_extract/xzzf_diffs.json，精确槽位替换与市地言语差异可继续完善）。图形media待裁。"
+  "status": "answers_ingested",
+  "updated": "2026-09-04",
+  "notes": "三卷385题答案+解析已入库（2026-09-04）。市地/执法卷现有题目全部来自省级卷（题号偏移：Q1-55直映,Q56-65偏移+5,Q66-125偏移+10）。差异题已提取（市地67题/执法36题）但papers JSON无对应题干，待后续重建。313题anchor_pending。",
+  "answer_source": "answer_book_2026-09",
+  "answer_coverage": "385/385 (100%)"
 }

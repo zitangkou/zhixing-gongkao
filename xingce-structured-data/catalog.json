@@ -40,7 +40,7 @@
     {
       "year": 2024,
       "subject": "xingce",
-      "status": "papers_assembled",
+      "status": "answers_ingested",
       "path": "2024/xingce",
       "papers": [
         {
@@ -66,9 +66,10 @@
         "pages": 0,
         "figures": 0
       },
-      "notes": "省级完整135；市地/行政执法以省级为底组装各125（官方应130，缺5题差异槽位替换）；media 为空（图形题不可用）；meta 登记4份源PDF但本机实际缺 20240124.pdf",
-      "answer_coverage": "0/385 (0%)",
-      "answer_source": null
+      "notes": "省级135/市地125/执法125共385题答案+解析已全部入库（来源：解析册4册77页）。市地/执法卷现有题目全部来自省级卷（题号偏移），差异题67/36题已提取但papers JSON无对应题干，待后续重建。313题标记anchor_pending（解析为精炼摘要）。validate 0错误。",
+      "answer_coverage": "385/385 (100%)",
+      "answer_source": "answer_book_2026-09",
+      "updated": "2026-09-04"
     },
     {
       "year": 2023,

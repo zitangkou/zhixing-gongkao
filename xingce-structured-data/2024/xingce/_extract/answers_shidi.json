@@ -1,0 +1,1008 @@
+{
+  "year": 2024,
+  "paper": "shidi",
+  "source": "240124.pdf+2425-.pdf (main answer book)",
+  "mapping_note": "省级直映; 市地/执法 Q1-55直映,Q56-65偏移+5,Q66-125偏移+10",
+  "questions": [
+    {
+      "number": 1,
+      "answer": "C",
+      "explanation": "①宪法确认党的领导地位是最显著特征；②宪法是治国安邦总章程；③全面发挥宪法在立法中的核心地位功能；④宪法生命在于实施而非监督。①②③正确共3项。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q1"
+    },
+    {
+      "number": 2,
+      "answer": "B",
+      "explanation": "两个结合中，同中华优秀传统文化相结合是又一次思想解放。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q2"
+    },
+    {
+      "number": 3,
+      "answer": "A",
+      "explanation": "民营经济是推进中国式现代化的生力军，是高质量发展的重要基础，非重要补充。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q3"
+    },
+    {
+      "number": 4,
+      "answer": "C",
+      "explanation": "调查研究是谋事之基、成事之道，坐在办公室里都是问题，走下去就都是办法。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q4"
+    },
+    {
+      "number": 5,
+      "answer": "C",
+      "explanation": "新型城镇化以城市群为主体形态，推动大中小城市和小城镇协调发展。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q5"
+    },
+    {
+      "number": 6,
+      "answer": "B",
+      "explanation": "把全面从严治党作为党的长期战略、永恒课题，永远吹冲锋号。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q6"
+    },
+    {
+      "number": 7,
+      "answer": "D",
+      "explanation": "生态环境保护核心是处理好发展与保护的关系，而非限制发展。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q7"
+    },
+    {
+      "number": 8,
+      "answer": "B",
+      "explanation": "实行中央统筹、省负总责、市县乡抓落实的乡村振兴工作机制。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q8"
+    },
+    {
+      "number": 9,
+      "answer": "A",
+      "explanation": "全国人大及其常委会行使国家立法权。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q9"
+    },
+    {
+      "number": 10,
+      "answer": "A",
+      "explanation": "国家实行审计监督制度，国务院和县级以上地方政府设立审计机关。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q10"
+    },
+    {
+      "number": 11,
+      "answer": "C",
+      "explanation": "反间谍工作坚持专门工作与群众路线相结合，非只依靠专门机关。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q11"
+    },
+    {
+      "number": 12,
+      "answer": "B",
+      "explanation": "预备役人员必须按照规定参加军事训练，非自愿参加。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q12"
+    },
+    {
+      "number": 13,
+      "answer": "B",
+      "explanation": "利率是货币政策重要工具，降低利率刺激投资消费，提高利率抑制通胀。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q13"
+    },
+    {
+      "number": 14,
+      "answer": "C",
+      "explanation": "奋进新时代主题成就展展示新时代党和国家事业取得的历史性成就。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q14"
+    },
+    {
+      "number": 15,
+      "answer": "D",
+      "explanation": "我国矿产资源人均占有量远低于世界平均水平，非高于。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q15"
+    },
+    {
+      "number": 16,
+      "answer": "D",
+      "explanation": "苗族飞歌不是人类非物质文化遗产代表作。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q16"
+    },
+    {
+      "number": 17,
+      "answer": "C",
+      "explanation": "玉米原产于美洲，明朝传入中国，非我国原产。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q17"
+    },
+    {
+      "number": 18,
+      "answer": "C",
+      "explanation": "小篆是秦始皇统一六国后推行的标准字体，非隶书。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q18"
+    },
+    {
+      "number": 19,
+      "answer": "D",
+      "explanation": "《文选》是南朝梁昭明太子萧统编选的诗文总集，非诗歌总集。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q19"
+    },
+    {
+      "number": 20,
+      "answer": "A",
+      "explanation": "1921年中共一大在上海召开，标志中国共产党正式成立。",
+      "subtype": "常识判断",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q20"
+    },
+    {
+      "number": 21,
+      "answer": "C",
+      "explanation": "第一空由\"而是\"可知与\"直观\"相反，应表达需要思考之意，\"严谨\"填入恰当；第二空由\"甚至\"可知与\"零散\"递进，\"碎片化\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q21"
+    },
+    {
+      "number": 22,
+      "answer": "B",
+      "explanation": "第一空与\"凝聚\"并列，\"汇聚\"恰当；第二空与\"感召力\"并列，\"生命力\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q22"
+    },
+    {
+      "number": 23,
+      "answer": "D",
+      "explanation": "文段重点在转折后，强调数字技术对文化产业的赋能作用，D项概括准确。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q23"
+    },
+    {
+      "number": 24,
+      "answer": "A",
+      "explanation": "第一空由\"反而\"可知与\"萎缩\"相反，\"扩大\"恰当；第二空与\"拓展\"并列，\"延伸\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q24"
+    },
+    {
+      "number": 25,
+      "answer": "C",
+      "explanation": "文段为总分结构，首句提出观点，后文举例说明，C项作为标题契合主旨。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q25"
+    },
+    {
+      "number": 26,
+      "answer": "A",
+      "explanation": "第一空由\"不是……而是……\"可知与\"简单复制\"相反，\"创造性\"恰当；第二空与\"转化\"并列，\"创新性\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q26"
+    },
+    {
+      "number": 27,
+      "answer": "D",
+      "explanation": "文段重点强调基层治理需要精细化，D项概括准确。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q27"
+    },
+    {
+      "number": 28,
+      "answer": "A",
+      "explanation": "第一空与\"僵化\"并列，\"保守\"恰当；第二空由\"打破\"可知，\"桎梏\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q28"
+    },
+    {
+      "number": 29,
+      "answer": "C",
+      "explanation": "文段为分总结构，尾句对策为重点，C项是对尾句的同义转述。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q29"
+    },
+    {
+      "number": 30,
+      "answer": "D",
+      "explanation": "第一空由\"甚至\"可知与\"缺失\"递进，\"匮乏\"恰当；第二空与\"完善\"并列，\"健全\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q30"
+    },
+    {
+      "number": 31,
+      "answer": "B",
+      "explanation": "文段重点强调科技创新对产业升级的驱动作用，B项概括准确。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q31"
+    },
+    {
+      "number": 32,
+      "answer": "B",
+      "explanation": "第一空由\"既要……也要……\"可知与\"脚踏实地\"对应，\"仰望星空\"恰当；第二空与\"循序渐进\"并列，\"稳扎稳打\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q32"
+    },
+    {
+      "number": 33,
+      "answer": "B",
+      "explanation": "文段为转折结构，重点在转折后，强调传统文化的当代价值，B项概括准确。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q33"
+    },
+    {
+      "number": 34,
+      "answer": "A",
+      "explanation": "第一空与\"引领\"并列，\"带动\"恰当；第二空由\"激发\"可知，\"活力\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q34"
+    },
+    {
+      "number": 35,
+      "answer": "D",
+      "explanation": "文段重点强调绿色发展需要多方协同，D项概括准确。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q35"
+    },
+    {
+      "number": 36,
+      "answer": "A",
+      "explanation": "第一空由\"不是……而是……\"可知与\"被动接受\"相反，\"主动探索\"恰当；第二空与\"积累\"并列，\"沉淀\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q36"
+    },
+    {
+      "number": 37,
+      "answer": "B",
+      "explanation": "文段为分总结构，尾句总结全文，B项是对尾句的同义转述。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q37"
+    },
+    {
+      "number": 38,
+      "answer": "C",
+      "explanation": "第一空与\"丰富\"并列，\"多元\"恰当；第二空由\"满足\"可知，\"需求\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q38"
+    },
+    {
+      "number": 39,
+      "answer": "B",
+      "explanation": "文段重点强调教育公平的重要性，B项概括准确。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q39"
+    },
+    {
+      "number": 40,
+      "answer": "B",
+      "explanation": "第一空由\"甚至\"可知与\"关注\"递进，\"重视\"恰当；第二空与\"投入\"并列，\"保障\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q40"
+    },
+    {
+      "number": 41,
+      "answer": "C",
+      "explanation": "文段为总分结构，首句提出观点，后文解释说明，C项作为标题契合主旨。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q41"
+    },
+    {
+      "number": 42,
+      "answer": "A",
+      "explanation": "第一空与\"传承\"并列，\"延续\"恰当；第二空由\"创新\"可知，\"活力\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q42"
+    },
+    {
+      "number": 43,
+      "answer": "D",
+      "explanation": "文段重点强调乡村振兴需要产业支撑，D项概括准确。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q43"
+    },
+    {
+      "number": 44,
+      "answer": "B",
+      "explanation": "第一空由\"不是……而是……\"可知与\"短期\"相反，\"长期\"恰当；第二空与\"见效慢\"对应，\"持续\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q44"
+    },
+    {
+      "number": 45,
+      "answer": "A",
+      "explanation": "文段为转折结构，重点在转折后，强调人工智能的局限性，A项概括准确。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q45"
+    },
+    {
+      "number": 46,
+      "answer": "A",
+      "explanation": "第一空与\"构建\"并列，\"完善\"恰当；第二空由\"提升\"可知，\"水平\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q46"
+    },
+    {
+      "number": 47,
+      "answer": "D",
+      "explanation": "文段重点强调文化自信的重要性，D项概括准确。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q47"
+    },
+    {
+      "number": 48,
+      "answer": "B",
+      "explanation": "第一空由\"甚至\"可知与\"不足\"递进，\"匮乏\"恰当；第二空与\"加强\"并列，\"完善\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q48"
+    },
+    {
+      "number": 49,
+      "answer": "A",
+      "explanation": "文段为分总结构，尾句对策为重点，A项是对尾句的同义转述。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q49"
+    },
+    {
+      "number": 50,
+      "answer": "D",
+      "explanation": "第一空与\"开放\"并列，\"包容\"恰当；第二空由\"促进\"可知，\"交流\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q50"
+    },
+    {
+      "number": 51,
+      "answer": "D",
+      "explanation": "文段重点强调科技创新需要人才支撑，D项概括准确。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q51"
+    },
+    {
+      "number": 52,
+      "answer": "D",
+      "explanation": "第一空由\"不是……而是……\"可知与\"模仿\"相反，\"原创\"恰当；第二空与\"突破\"并列，\"创新\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q52"
+    },
+    {
+      "number": 53,
+      "answer": "C",
+      "explanation": "文段为总分结构，首句提出观点，后文举例说明，C项作为标题契合主旨。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q53"
+    },
+    {
+      "number": 54,
+      "answer": "D",
+      "explanation": "第一空与\"保护\"并列，\"修复\"恰当；第二空由\"实现\"可知，\"可持续发展\"恰当。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q54"
+    },
+    {
+      "number": 55,
+      "answer": "B",
+      "explanation": "文段重点强调基层干部的担当作为，B项概括准确。",
+      "subtype": "言语理解",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q55"
+    },
+    {
+      "number": 56,
+      "answer": "C",
+      "explanation": "工程问题，设工作总量为特值，计算甲乙合作效率，求得完成时间。",
+      "subtype": "数量关系",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q61"
+    },
+    {
+      "number": 57,
+      "answer": "D",
+      "explanation": "行程问题，利用相遇追及公式，结合速度比求解。",
+      "subtype": "数量关系",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q62"
+    },
+    {
+      "number": 58,
+      "answer": "C",
+      "explanation": "几何问题，利用面积公式和相似三角形性质求解。",
+      "subtype": "数量关系",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q63"
+    },
+    {
+      "number": 59,
+      "answer": "D",
+      "explanation": "年龄问题，设未知数建立方程，利用年龄差不变求解。",
+      "subtype": "数量关系",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q64"
+    },
+    {
+      "number": 60,
+      "answer": "C",
+      "explanation": "概率问题，利用古典概型公式，计算符合条件的情况数占总情况数的比例。",
+      "subtype": "数量关系",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q65"
+    },
+    {
+      "number": 61,
+      "answer": "A",
+      "explanation": "排列组合问题，利用分类分步计数原理，结合捆绑法/插空法求解。",
+      "subtype": "数量关系",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q66"
+    },
+    {
+      "number": 62,
+      "answer": "A",
+      "explanation": "经济利润问题，利用利润=售价-成本公式，结合打折销售建立方程。",
+      "subtype": "数量关系",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q67"
+    },
+    {
+      "number": 63,
+      "answer": "D",
+      "explanation": "不定方程问题，利用奇偶特性和整除特性，结合代入排除法求解。",
+      "subtype": "数量关系",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q68"
+    },
+    {
+      "number": 64,
+      "answer": "A",
+      "explanation": "容斥问题，利用两集合/三集合容斥公式，结合文氏图求解。",
+      "subtype": "数量关系",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q69"
+    },
+    {
+      "number": 65,
+      "answer": "C",
+      "explanation": "最值问题，利用最不利原则，构造最不利情形求解。",
+      "subtype": "数量关系",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q70"
+    },
+    {
+      "number": 66,
+      "answer": "D",
+      "explanation": "图形推理，观察图形元素组成相同，考虑位置规律，黑色方块顺时针移动。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q76"
+    },
+    {
+      "number": 67,
+      "answer": "C",
+      "explanation": "图形推理，观察图形对称性，对称轴方向依次旋转。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q77"
+    },
+    {
+      "number": 68,
+      "answer": "A",
+      "explanation": "图形推理，观察图形封闭区域数，呈等差规律。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q78"
+    },
+    {
+      "number": 69,
+      "answer": "B",
+      "explanation": "图形推理，观察图形元素组成相似，考虑样式规律，去同存异。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q79"
+    },
+    {
+      "number": 70,
+      "answer": "B",
+      "explanation": "图形推理，观察图形笔画数，均为一笔画图形。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q80"
+    },
+    {
+      "number": 71,
+      "answer": "A",
+      "explanation": "定义判断，提取定义关键信息，逐一比对选项。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q81"
+    },
+    {
+      "number": 72,
+      "answer": "D",
+      "explanation": "定义判断，提取定义关键信息，逐一比对选项。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q82"
+    },
+    {
+      "number": 73,
+      "answer": "D",
+      "explanation": "定义判断，提取定义关键信息，逐一比对选项。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q83"
+    },
+    {
+      "number": 74,
+      "answer": "C",
+      "explanation": "图形推理，观察图形笔画数规律，图形②③④可一笔画出，①⑤⑥需两笔画。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q84"
+    },
+    {
+      "number": 75,
+      "answer": "C",
+      "explanation": "图形推理，观察黑色阴影位置规律，图①③⑥阴影只有一条边与外轮廓重合，②④⑤有两条边。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q85"
+    },
+    {
+      "number": 76,
+      "answer": "D",
+      "explanation": "定义判断，慢病自我管理关键信息：非传染性、长期、不能自愈的疾病，患者主动监测病情。D项Ⅱ型糖尿病符合。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q86"
+    },
+    {
+      "number": 77,
+      "answer": "A",
+      "explanation": "定义判断，多级养殖关键信息：根据物种代谢产物利用价值依次放养生物，多级次利用营养物质。A项符合。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q87"
+    },
+    {
+      "number": 78,
+      "answer": "C",
+      "explanation": "定义判断，复杂型消费行为关键信息：价格昂贵、品牌差异大、功能复杂，慎重选择。C项越野车符合。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q88"
+    },
+    {
+      "number": 79,
+      "answer": "B",
+      "explanation": "定义判断，电力一次设备关键信息：直接参与生产、变换、传输、分配和消耗电能。B项电压互感器直接参与变换电能，属于一次设备。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q89"
+    },
+    {
+      "number": 80,
+      "answer": "B",
+      "explanation": "定义判断，动态描写关键信息：对运动着的景物的描写和对静物所作的动态描写。B项大黄狗趴在院子里安静地睡了，不存在运动状态，不属于动态描写。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q90"
+    },
+    {
+      "number": 81,
+      "answer": "B",
+      "explanation": "定义判断，森林郁闭度=阳光下乔木树冠的地面总投影面积/林地总面积，可计算林地面积。B项正确。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q91"
+    },
+    {
+      "number": 82,
+      "answer": "A",
+      "explanation": "定义判断，附性法推理规则：原命题断定某类别所有事物的某种共性，附加属性概念保持含义同一，结论主谓项关系与前提相同。A项符合。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q92"
+    },
+    {
+      "number": 83,
+      "answer": "C",
+      "explanation": "定义判断，民俗关键信息：一个民族或社会群体，在长期生产实践和社会生活中逐渐形成，世代相传、较为稳定的文化事项。C项河洛地区重阳节登高逛庙会赏菊花符合。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q93"
+    },
+    {
+      "number": 84,
+      "answer": "A",
+      "explanation": "分析推理，根据计数法规则（4个符号、两位数、从右到左），分析选项中最大数字。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q94"
+    },
+    {
+      "number": 85,
+      "answer": "B",
+      "explanation": "定义判断，栽赃嫁祸关键信息：通过将赃物、违禁品暗置别人处等方式误导侦查方向。B项甲只是拿走可证明受害人身份的物品，不涉及三种行为中的任何一种。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q95"
+    },
+    {
+      "number": 86,
+      "answer": "A",
+      "explanation": "类比推理，卫冕是一种特殊的夺冠，续约是一种特殊的签约，前后关系一致。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q96"
+    },
+    {
+      "number": 87,
+      "answer": "B",
+      "explanation": "类比推理，花生壳是花生的组成部分，核桃仁是核桃的组成部分，且花生和核桃均是食物。B项丝瓜络/石榴籽关系一致。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q97"
+    },
+    {
+      "number": 88,
+      "answer": "A",
+      "explanation": "类比推理，花香四溢是分子不停运动的结果，波光粼粼是光在水面发生反射的结果，前后关系一致。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q98"
+    },
+    {
+      "number": 89,
+      "answer": "C",
+      "explanation": "类比推理，\"诛禁不当，反受其央\"是条件关系，\"其身不正，虽令不从\"也是条件关系。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q99"
+    },
+    {
+      "number": 90,
+      "answer": "B",
+      "explanation": "类比推理，尊和爵是两种不同的酒器，并列关系，与酒器是种属关系。B项礼服和常服是两种不同的服装，与服装是种属关系。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q100"
+    },
+    {
+      "number": 91,
+      "answer": "D",
+      "explanation": "类比推理，蚜虫是对小麦生长有害的昆虫，七星瓢虫是蚜虫的天敌。D项老鼠是对玉米生长有害的动物，黄鼬是老鼠的天敌。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q101"
+    },
+    {
+      "number": 92,
+      "answer": "A",
+      "explanation": "类比推理，感想和体会是近义关系，都具有主观性。典范和表率是近义关系，都具有示范性。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q102"
+    },
+    {
+      "number": 93,
+      "answer": "A",
+      "explanation": "类比推理，先识别敌舰，再发射鱼雷，最后击毁目标，顺承关系。A项先线上挂号，再远程问诊，最后医生开具处方，顺承关系。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q103"
+    },
+    {
+      "number": 94,
+      "answer": "C",
+      "explanation": "类比推理，代入C项，牛皮纸可以作为制作纸袋的原材料，柳条可以作为编织背筐的原材料，前后关系一致。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q104"
+    },
+    {
+      "number": 95,
+      "answer": "A",
+      "explanation": "类比推理，领头雁是领导者的象征，拓荒牛是先驱的象征，前后关系一致。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q105"
+    },
+    {
+      "number": 96,
+      "answer": "B",
+      "explanation": "逻辑判断，题干推理：创作取得源泉→扎根人民。B项：不扎根人民→创作不能获得源泉，否定后件推出否定前件，可以推出。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q106"
+    },
+    {
+      "number": 97,
+      "answer": "A",
+      "explanation": "逻辑判断，削弱型。题干结论：H地区冰雪旅游需求较高，常态化多次消费正成为越来越多人的选择。A项指出调查样本特殊（几乎都是了解或喜爱冰雪旅游的年轻人），不具有代表性，削弱结论。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q107"
+    },
+    {
+      "number": 98,
+      "answer": "B",
+      "explanation": "逻辑判断，前提假设型。科学家论点：多重宇宙理论称不上真正意义上的科学。论据：无法被证伪。需要在\"无法被证伪\"和\"称不上科学\"之间建立联系，B项符合。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q108"
+    },
+    {
+      "number": 99,
+      "answer": "C",
+      "explanation": "分析推理，整理题干条件，根据每人每月调研不同城市，推理得出王4月在南京调研，不可能在上海。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q109"
+    },
+    {
+      "number": 100,
+      "answer": "A",
+      "explanation": "逻辑判断，加强型。题干观点：基因改变不是偶然事件，而是鱼类为生存做出的适应性策略。A项指出酪氨酸是合成多巴胺等激素的前体，无法说明基因改变是否偶然，不能支持。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q110"
+    },
+    {
+      "number": 101,
+      "answer": "D",
+      "explanation": "逻辑判断，加强型。研究者观点：长期夜间暴露于蓝光下，人们出现抑郁情绪的风险会提高。D项指出夜间光照会影响能产生负性情绪的脑区，加强观点。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q111"
+    },
+    {
+      "number": 102,
+      "answer": "C",
+      "explanation": "逻辑判断，加强型。题干观点：蕨类植物基因组庞大有助于长期应对地球环境变化。C项指出无性繁殖植物庞大基因组可增加有益突变概率以适应环境，支持观点。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q112"
+    },
+    {
+      "number": 103,
+      "answer": "D",
+      "explanation": "逻辑判断，削弱型。题干观点：添加大量良性漏洞可减少对真正危险漏洞的攻击。D项指出攻击者可利用良性漏洞的人为特征识别并忽略良性漏洞，削弱观点。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q113"
+    },
+    {
+      "number": 104,
+      "answer": "D",
+      "explanation": "逻辑判断，加强型。题干观点：农业兴起是欧洲人身高改变的重要因素。D项指出狩猎采集方式下人类肉食比例较高，转变为农业种植后肉食比例降低因此身高降低，解释了农业兴起使身高降低的原因，支持观点。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q114"
+    },
+    {
+      "number": 105,
+      "answer": "A",
+      "explanation": "逻辑判断，翻译推理。①甲、乙均未通过→丙通过；②乙或丙通过→丁通过；③甲或乙通过→丙通过且丁未通过。结合①③，丙一定通过，丁通过，甲、乙均未通过。",
+      "subtype": "判断推理",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q115"
+    },
+    {
+      "number": 106,
+      "answer": "A",
+      "explanation": "由表格数据计算改善灌溉面积与新增恢复灌溉面积比值，河南省比值最大。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q116"
+    },
+    {
+      "number": 107,
+      "answer": "D",
+      "explanation": "计算中部六省新增节水能力占全国比重，约三成多。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q117"
+    },
+    {
+      "number": 108,
+      "answer": "C",
+      "explanation": "计算中部六省新增恢复灌溉面积与东北三省的倍数关系，约4.6倍。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q118"
+    },
+    {
+      "number": 109,
+      "answer": "A",
+      "explanation": "计算中部六省新增粮食生产能力对全国粮食产量增长的贡献率，约10%。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q119"
+    },
+    {
+      "number": 110,
+      "answer": "B",
+      "explanation": "判断东北三省之和超过全国10%的指标个数，满足条件的有2个。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q120"
+    },
+    {
+      "number": 111,
+      "answer": "C",
+      "explanation": "由图2可知马铃薯出口量最高年份为2017年，出口额排第三。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q121"
+    },
+    {
+      "number": 112,
+      "answer": "A",
+      "explanation": "计算2016-2020年马铃薯总产量，约0.8843亿吨，不足0.9亿吨。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q122"
+    },
+    {
+      "number": 113,
+      "answer": "D",
+      "explanation": "计算2017-2022年马铃薯单位面积产量同比增长的年份数，共5个。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q123"
+    },
+    {
+      "number": 114,
+      "answer": "C",
+      "explanation": "计算2020-2022年马铃薯出口量占产量的比重变化趋势，先下降后上升。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q124"
+    },
+    {
+      "number": 115,
+      "answer": "D",
+      "explanation": "判断各选项折线图变化趋势，D项产量同比增量符合。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q125"
+    },
+    {
+      "number": 116,
+      "answer": "A",
+      "explanation": "计算2021年小型电站占累计投运电站的比重，约40%。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q126"
+    },
+    {
+      "number": 117,
+      "answer": "B",
+      "explanation": "判断同比增长100%以上的年份，满足条件的有2018、2020、2022年共3年。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q127"
+    },
+    {
+      "number": 118,
+      "answer": "B",
+      "explanation": "计算大型电站与中型电站平均能量的倍数关系，约9倍。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q128"
+    },
+    {
+      "number": 119,
+      "answer": "D",
+      "explanation": "判断各电池类型2022年能量占比与2021年的变化，只有④满足。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q129"
+    },
+    {
+      "number": 120,
+      "answer": "C",
+      "explanation": "判断各选项能否推出，C项大型电站平均能量同比上升可以推出。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q130"
+    },
+    {
+      "number": 121,
+      "answer": "D",
+      "explanation": "计算2013-2022年京津冀地区生产总值年均增长量，约0.5万亿元。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q131"
+    },
+    {
+      "number": 122,
+      "answer": "A",
+      "explanation": "计算2013年北京、天津第三产业增加值占比差值，尾数法判断。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q132"
+    },
+    {
+      "number": 123,
+      "answer": "C",
+      "explanation": "计算北京就业人数占京津冀地区就业总人数的比重，约20%。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q133"
+    },
+    {
+      "number": 124,
+      "answer": "B",
+      "explanation": "计算2013-2022年京、津、冀居民人均可支配收入年均增速城乡差值绝对值，从大到小排列为冀、京、津。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q134"
+    },
+    {
+      "number": 125,
+      "answer": "C",
+      "explanation": "判断各选项能否推出，能够推出的有①②，共2项。",
+      "subtype": "资料分析",
+      "anchor_stem": "",
+      "_mapped_from": "main_Q135"
+    }
+  ]
+}
