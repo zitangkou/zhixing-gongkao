@@ -290,13 +290,13 @@ def main():
 <style>*{{box-sizing:border-box;margin:0;padding:0;}}body{{margin:0;padding:0;background:#fff;}}</style>
 </head><body>
 <div style="width:{W}px;height:{H}px;background:{BRAND_RED};position:relative;overflow:hidden;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;">
-  <div style="position:absolute;top:110px;left:0;right:0;text-align:center;color:rgba(255,255,255,0.85);font-size:44px;letter-spacing:16px;font-weight:500;">时政考点 · 每日一练</div>
-  <div style="position:absolute;top:400px;left:0;right:0;text-align:center;color:#fff;font-size:132px;font-weight:bold;line-height:1.22;letter-spacing:3px;padding:0 60px;">
+  <div style="position:absolute;top:110px;left:0;right:0;text-align:center;color:rgba(255,255,255,0.85);font-size:50px;letter-spacing:16px;font-weight:500;">时政考点 · 每日一练</div>
+  <div style="position:absolute;top:420px;left:0;right:0;text-align:center;color:#fff;font-size:108px;font-weight:bold;line-height:1.28;letter-spacing:3px;padding:0 60px;">
     携手各国发展振兴<br>改革完善全球治理
   </div>
-  <div style="position:absolute;top:880px;left:0;right:0;text-align:center;color:#ffd9dc;font-size:54px;line-height:1.6;padding:0 90px;font-weight:500;">上合组织考点 · 命运共同体</div>
-  <div style="position:absolute;bottom:170px;left:0;right:0;text-align:center;color:#fff;font-size:56px;letter-spacing:8px;font-weight:bold;">公考上岸 · 20 题</div>
-  <div style="position:absolute;bottom:72px;left:0;right:0;text-align:center;color:rgba(255,255,255,0.6);font-size:30px;letter-spacing:4px;">人民日报 2026-09-04 · 价值分 92/100</div>
+  <div style="position:absolute;top:830px;left:0;right:0;text-align:center;color:#ffd9dc;font-size:60px;line-height:1.6;padding:0 90px;font-weight:500;">上合组织考点 · 命运共同体</div>
+  <div style="position:absolute;bottom:175px;left:0;right:0;text-align:center;color:#fff;font-size:62px;letter-spacing:8px;font-weight:bold;">公考上岸 · 20 题</div>
+  <div style="position:absolute;bottom:72px;left:0;right:0;text-align:center;color:rgba(255,255,255,0.6);font-size:34px;letter-spacing:4px;">人民日报 2026-09-04 · 价值分 92/100</div>
   <div style="position:absolute;top:0;left:0;width:18px;height:{H}px;background:rgba(255,255,255,0.18);"></div>
   <div style="position:absolute;top:0;right:0;width:18px;height:{H}px;background:rgba(255,255,255,0.18);"></div>
 </div>
