@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-政治理论模拟题 → 公众号 HTML + 小红书单题卡片 生成器
+时政考点模拟题 → 公众号 HTML + 小红书单题卡片 生成器
 
 数据源：iCloud 云盘 政治理论/物料/2026-09-04/题目/*.json（20题）
 产出：
@@ -87,7 +87,7 @@ def gen_gzh_html(questions):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>政治理论模拟题｜携手各国发展振兴，改革完善全球治理</title>
+<title>时政考点模拟题｜携手各国发展振兴，改革完善全球治理</title>
 <style>
   body{margin:0;padding:0;background:#FAF9F5;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:#333;}
 </style>
@@ -98,8 +98,8 @@ def gen_gzh_html(questions):
   <!-- 报头 -->
   <div style="text-align:center;border-bottom:3px solid #D0021B;padding-bottom:12px;margin-bottom:20px;">
     <div style="font-size:12px;color:#D0021B;letter-spacing:6px;margin-bottom:4px;">人民时评 · 精读系列</div>
-    <div style="font-size:28px;font-weight:bold;color:#D0021B;letter-spacing:2px;">政治理论模拟题</div>
-    <div style="font-size:12px;color:#999;margin-top:6px;">人民日报头版文章 · 公考政治理论出题</div>
+    <div style="font-size:28px;font-weight:bold;color:#D0021B;letter-spacing:2px;">时政考点模拟题</div>
+    <div style="font-size:12px;color:#999;margin-top:6px;">人民日报头版文章 · 公考时政考点出题</div>
   </div>
 """)
 
@@ -108,7 +108,7 @@ def gen_gzh_html(questions):
   <!-- 开篇引导 -->
   <div style="background:#FFF5F6;padding:15px;border-radius:8px;border-left:4px solid #D0021B;margin-bottom:20px;">
     <p style="margin:0;font-size:14px;color:#4A4A4A;line-height:1.7;">
-      <b>【政治理论模拟题】2026-09-04 期</b><br>
+      <b>【时政考点模拟题】2026-09-04 期</b><br>
       素材：《携手各国发展振兴，改革完善全球治理》<br>
       主题：上合组织 · 全球治理 · 命运共同体 · 大国外交<br>
       题量：20 题｜价值分 92/100（高可用）
@@ -150,7 +150,7 @@ def gen_gzh_html(questions):
     parts.append("""
   <!-- 页脚 -->
   <div style="text-align:center;border-top:2px solid #D0021B;padding-top:12px;margin-top:20px;">
-    <div style="font-size:12px;color:#D0021B;">政治理论模拟题 · 每日一练</div>
+    <div style="font-size:12px;color:#D0021B;">时政考点模拟题 · 每日一练</div>
     <div style="font-size:11px;color:#999;margin-top:4px;">素材来源：人民日报 2026-09-04 第01版 ｜ 价值分 92/100</div>
   </div>
 </div>
@@ -191,7 +191,7 @@ def gen_card_html(questions, idx):
     inner = f"""
 <div style="width:{W}px;height:{H}px;background:#fff;position:relative;display:flex;flex-direction:column;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;">
   <div style="background:{PINK_BG};padding:30px 56px;display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid {BRAND_RED};">
-    <span style="color:{BRAND_RED};font-size:32px;font-weight:bold;letter-spacing:5px;">政治理论打卡</span>
+    <span style="color:{BRAND_RED};font-size:32px;font-weight:bold;letter-spacing:5px;">时政考点打卡</span>
     <span style="color:{MID};font-size:26px;">第{idx:02d}/{total:02d}题</span>
   </div>
   <div style="background:{BRAND_RED};padding:30px 56px;">
@@ -203,7 +203,7 @@ def gen_card_html(questions, idx):
     {opts_html}
   </div>
   <div style="padding:30px 56px;border-top:2px solid #eee;display:flex;justify-content:space-between;align-items:center;">
-    <span style="color:{MID};font-size:24px;">人民日报 · 政治理论</span>
+    <span style="color:{MID};font-size:24px;">人民日报 · 时政考点</span>
     <span style="color:{BRAND_RED};font-size:28px;font-weight:bold;">{idx}/{total}</span>
   </div>
 </div>"""
@@ -228,7 +228,7 @@ def gen_answer_card_html(questions):
     inner = f"""
 <div style="width:{W}px;height:{H}px;background:#fff;position:relative;display:flex;flex-direction:column;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;">
   <div style="background:{PINK_BG};padding:30px 56px;display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid {BRAND_RED};">
-    <span style="color:{BRAND_RED};font-size:32px;font-weight:bold;letter-spacing:5px;">政治理论打卡</span>
+    <span style="color:{BRAND_RED};font-size:32px;font-weight:bold;letter-spacing:5px;">时政考点打卡</span>
     <span style="color:{MID};font-size:26px;">答案速查</span>
   </div>
   <div style="background:{BRAND_RED};padding:30px 56px;">
@@ -243,7 +243,7 @@ def gen_answer_card_html(questions):
     <div style="font-size:24px;color:#999;text-align:center;margin-top:26px;line-height:1.6;">答案分布 A/B/C/D 各 5 题 · 与真题一致</div>
   </div>
   <div style="padding:30px 56px;border-top:2px solid #eee;display:flex;justify-content:space-between;align-items:center;">
-    <span style="color:{MID};font-size:24px;">人民日报 · 政治理论</span>
+    <span style="color:{MID};font-size:24px;">人民日报 · 时政考点</span>
     <span style="color:{BRAND_RED};font-size:28px;font-weight:bold;">答案速查</span>
   </div>
 </div>"""
@@ -290,12 +290,12 @@ def main():
 <style>*{{box-sizing:border-box;margin:0;padding:0;}}body{{margin:0;padding:0;background:#fff;}}</style>
 </head><body>
 <div style="width:{W}px;height:{H}px;background:{BRAND_RED};position:relative;overflow:hidden;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;">
-  <div style="position:absolute;top:90px;left:0;right:0;text-align:center;color:rgba(255,255,255,0.85);font-size:30px;letter-spacing:14px;">政治理论 · 每日一练</div>
+  <div style="position:absolute;top:90px;left:0;right:0;text-align:center;color:rgba(255,255,255,0.85);font-size:30px;letter-spacing:14px;">时政考点 · 每日一练</div>
   <div style="position:absolute;top:320px;left:0;right:0;text-align:center;color:#fff;font-size:92px;font-weight:bold;line-height:1.35;letter-spacing:2px;padding:0 70px;">
     携手各国发展振兴<br>改革完善全球治理
   </div>
-  <div style="position:absolute;top:980px;left:0;right:0;text-align:center;color:#ffd9dc;font-size:38px;line-height:1.7;padding:0 100px;">上合组织 · 全球治理 · 命运共同体</div>
-  <div style="position:absolute;bottom:150px;left:0;right:0;text-align:center;color:#fff;font-size:38px;letter-spacing:6px;">政治理论模拟题 · 20 题</div>
+  <div style="position:absolute;top:980px;left:0;right:0;text-align:center;color:#ffd9dc;font-size:38px;line-height:1.7;padding:0 100px;">上合组织考点 · 命运共同体</div>
+  <div style="position:absolute;bottom:150px;left:0;right:0;text-align:center;color:#fff;font-size:38px;letter-spacing:6px;">公考上岸 · 20 题</div>
   <div style="position:absolute;bottom:64px;left:0;right:0;text-align:center;color:rgba(255,255,255,0.55);font-size:24px;letter-spacing:3px;">人民日报 2026-09-04 · 价值分 92/100</div>
   <div style="position:absolute;top:0;left:0;width:18px;height:{H}px;background:rgba(255,255,255,0.18);"></div>
   <div style="position:absolute;top:0;right:0;width:18px;height:{H}px;background:rgba(255,255,255,0.18);"></div>
