@@ -233,6 +233,146 @@ body{{margin:0;padding:0;background:#fff;font-family:-apple-system,'PingFang SC'
     return "\n".join(html_parts)
 
 
+def _gen_question_range_html(questions, start_i, end_i):
+    """生成指定题号范围（0-based, 含start不含end）的题目HTML，含滞后3题答案。"""
+    parts = []
+    for i in range(start_i, end_i):
+        q = questions[i]
+        idx = i + 1
+        if i >= 3:
+            prev_q = questions[i - 3]
+            prev_idx = i - 2
+            brief = extract_brief_explanation(prev_q["explanation"], prev_q["answer"])
+            parts.append(f"""
+  <div style="background:#E8F5E9;border-left:6px solid {GREEN};border-radius:8px;padding:20px 24px;margin:32px 0 8px;">
+    <div style="color:{GREEN};font-size:18px;font-weight:bold;">✅ 第{prev_idx:02d}题答案：{prev_q['answer']}</div>
+    <div style="color:{DARK};font-size:17px;margin-top:8px;line-height:1.7;">{brief}</div>
+  </div>
+""")
+        opts = q["options"]
+        opts_html = ""
+        for letter in ["A", "B", "C", "D"]:
+            if letter in opts:
+                opts_html += f'<div style="padding:10px 0;font-size:19px;color:{DARK};line-height:1.6;"><b style="color:{BRAND_RED};">{letter}.</b> {opts[letter]}</div>'
+        difficulty = q.get("difficulty", 2)
+        diff_label = {1: "简单", 2: "中等", 3: "较难"}.get(difficulty, "中等")
+        topic = q.get("topic", "")
+        parts.append(f"""
+  <div style="margin-top:28px;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="background:{BRAND_RED};color:#fff;font-size:18px;font-weight:bold;padding:4px 14px;border-radius:4px;">第{idx:02d}题</div>
+      <div style="color:{LIGHT};font-size:15px;">{diff_label}｜{topic}</div>
+    </div>
+    <div style="color:{DARK};font-size:20px;line-height:1.75;margin-top:14px;font-weight:500;">{q['stem']}</div>
+    <div style="margin-top:12px;padding-left:8px;">{opts_html}</div>
+  </div>
+""")
+    return "\n".join(parts)
+
+
+def _gen_long_footer_html(questions):
+    """生成最后3题答案 + 速查表 + 底部行动卡。"""
+    parts = []
+    for i in [17, 18, 19]:
+        prev_q = questions[i]
+        prev_idx = i + 1
+        brief = extract_brief_explanation(prev_q["explanation"], prev_q["answer"])
+        parts.append(f"""
+  <div style="background:#E8F5E9;border-left:6px solid {GREEN};border-radius:8px;padding:20px 24px;margin:32px 0 8px;">
+    <div style="color:{GREEN};font-size:18px;font-weight:bold;">✅ 第{prev_idx:02d}题答案：{prev_q['answer']}</div>
+    <div style="color:{DARK};font-size:17px;margin-top:8px;line-height:1.7;">{brief}</div>
+  </div>
+""")
+    answers_html = ""
+    for i, q in enumerate(questions):
+        idx = i + 1
+        answers_html += f'<div style="display:inline-block;width:25%;text-align:center;padding:8px 0;font-size:18px;"><span style="color:{LIGHT};">{idx:02d}.</span> <b style="color:{BRAND_RED};font-size:20px;">{q["answer"]}</b></div>'
+    parts.append(f"""
+  <div style="margin-top:40px;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="font-size:24px;">📋</span>
+      <span style="color:{BRAND_RED};font-size:26px;font-weight:bold;">全部答案速查</span>
+    </div>
+    <div style="width:100%;height:3px;background:{BRAND_RED};margin-top:10px;"></div>
+    <div style="background:{CREAM_BG};border-radius:8px;padding:20px;margin-top:16px;">
+      {answers_html}
+    </div>
+  </div>
+  <div style="background:{BRAND_RED};border-radius:12px;padding:32px;margin-top:40px;text-align:center;">
+    <div style="color:#fff;font-size:24px;font-weight:bold;">📚 今日行动清单</div>
+    <div style="color:rgba(255,255,255,0.9);font-size:19px;line-height:2;margin-top:16px;">
+      ① 独立完成20题，记录错题<br>
+      ② 对照解析理解干扰项手法<br>
+      ③ 收藏本文，考前复习时政考点
+    </div>
+  </div>
+  <div style="text-align:center;color:{LIGHT};font-size:15px;margin-top:30px;padding-bottom:20px;">
+    人民日报 {DATE_STR} · 时政考点每日一练 · 价值分92
+  </div>
+""")
+    return "\n".join(parts)
+
+
+def gen_long_split_html(questions, part_idx, total_parts=4):
+    """生成分段长图HTML。part_idx从0起。
+    第0段：完整报头+引导+第1-5题
+    第1-2段：简化页眉+第6-10/11-15题
+    第3段：简化页眉+第16-20题+最后答案+速查+底部
+    """
+    total = len(questions)
+    per = total // total_parts  # 5
+    start_i = part_idx * per
+    end_i = (part_idx + 1) * per if part_idx < total_parts - 1 else total
+
+    if part_idx == 0:
+        # 第一段：完整报头
+        header = f"""<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<style>
+*{{box-sizing:border-box;margin:0;padding:0;}}
+body{{margin:0;padding:0;background:#fff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;width:{LONG_W}px;}}
+.container{{width:{LONG_W}px;padding:0 40px 60px;}}
+</style></head><body>
+<div class="container">
+  <div style="text-align:center;padding-top:50px;">
+    <div style="color:{BRAND_RED};font-size:22px;letter-spacing:8px;font-weight:500;">时政考点 · 每日一练</div>
+    <div style="color:{BRAND_RED};font-size:56px;font-weight:bold;letter-spacing:6px;margin-top:16px;">考点精拆</div>
+    <div style="color:{MID};font-size:20px;letter-spacing:3px;margin-top:12px;">人民日报权威文章 · 行测政治理论模拟题</div>
+    <div style="width:120px;height:4px;background:{BRAND_RED};margin:24px auto 0;"></div>
+  </div>
+  <div style="background:{PINK_BG};border-left:6px solid {BRAND_RED};border-radius:8px;padding:28px 30px;margin-top:36px;">
+    <div style="color:{BRAND_RED};font-size:20px;font-weight:bold;">【考点精拆】第{DATE_STR}期</div>
+    <div style="color:{DARK};font-size:22px;margin-top:12px;line-height:1.6;">今日素材：《{ARTICLE_TITLE}》</div>
+    <div style="color:{MID};font-size:18px;margin-top:10px;line-height:1.6;">题量：{total}题｜答案分布 A/B/C/D 各5题｜价值分：92/100（高可用）</div>
+    <div style="color:{LIGHT};font-size:16px;margin-top:8px;">💡 答案滞后3题公布，做完再往下翻（共{total_parts}张）</div>
+  </div>
+  <div style="background:{LIGHT_GRAY};border-radius:8px;padding:20px 24px;margin-top:24px;">
+    <div style="color:{DARK};font-size:18px;line-height:1.8;">
+      📖 <b>刷题方式</b>：每题独立思考作答，答案在<b>三题之后</b>公布。全部做完后可对照末尾速查表。
+    </div>
+  </div>
+"""
+    else:
+        # 后续段：简化页眉
+        start_q = start_i + 1
+        end_q = end_i
+        header = f"""<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<style>
+*{{box-sizing:border-box;margin:0;padding:0;}}
+body{{margin:0;padding:0;background:#fff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;width:{LONG_W}px;}}
+.container{{width:{LONG_W}px;padding:0 40px 60px;}}
+</style></head><body>
+<div class="container">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding-top:36px;padding-bottom:20px;border-bottom:3px solid {BRAND_RED};">
+    <div style="color:{BRAND_RED};font-size:22px;font-weight:bold;letter-spacing:4px;">考点精拆 · 第{start_q:02d}-{end_q:02d}题</div>
+    <div style="color:{LIGHT};font-size:16px;">第{DATE_STR}期 · {part_idx + 1}/{total_parts}</div>
+  </div>
+"""
+
+    body = _gen_question_range_html(questions, start_i, end_i)
+    footer = _gen_long_footer_html(questions) if part_idx == total_parts - 1 else ""
+    return header + body + footer + "\n</div></body></html>"
+
+
 def gen_zhihu_html(questions) -> str:
     """生成知乎风格HTML（简洁长文，答案滞后3题）"""
     total = len(questions)
@@ -361,15 +501,27 @@ def main():
     questions = load_questions()
     print(f"加载 {len(questions)} 题")
 
-    # 1. 公众号长图
-    print("\n=== 公众号长图 ===")
+    # 1. 公众号超长图（保留完整版）
+    print("\n=== 公众号超长图 ===")
     long_html = gen_gzh_long_html(questions)
     with tempfile.TemporaryDirectory() as tmpdir:
         hp = Path(tmpdir) / "long.html"
         hp.write_text(long_html, encoding="utf-8")
         out_png = GZH_DIR / f"人民日报{DATE_STR}_{ARTICLE_TITLE}_20题_公众号长图.png"
         size = render_png(hp, out_png)
-        print(f"✅ 公众号长图: {out_png.name} ({size[0]}x{size[1]})")
+        print(f"✅ 超长图: {out_png.name} ({size[0]}x{size[1]})")
+
+    # 1b. 公众号分段长图（拆成4张，加载更快）
+    print("\n=== 公众号分段长图（4张） ===")
+    total_parts = 4
+    with tempfile.TemporaryDirectory() as tmpdir:
+        for part_idx in range(total_parts):
+            split_html = gen_long_split_html(questions, part_idx, total_parts)
+            hp = Path(tmpdir) / f"split_{part_idx}.html"
+            hp.write_text(split_html, encoding="utf-8")
+            out_png = GZH_DIR / f"人民日报{DATE_STR}_{ARTICLE_TITLE}_20题_公众号长图_{part_idx + 1:02d}.png"
+            size = render_png(hp, out_png)
+            print(f"✅ 分段{part_idx + 1}/{total_parts}: {out_png.name} ({size[0]}x{size[1]})")
 
     # 2. 知乎HTML
     print("\n=== 知乎HTML ===")
