@@ -50,14 +50,38 @@ def esc(s):
 
 
 def short_answer_line(q):
-    """生成简短的上一题答案说明（用于放在下一题开头）"""
+    """生成简短的上一题答案说明（用于答案速查卡等紧凑场景）"""
     ans = q["answer"]
-    # 从解析中提取【正确项】一行
     m = re.search(r"【正确项】([^\n]+)", q["explanation"])
     core = m.group(1).strip() if m else ""
-    # 精简：去掉重复的答案字母前缀
     core = re.sub(rf"^{ans}：", "", core)
     return ans, core
+
+
+def medium_answer_block(q):
+    """生成中等长度的上一题答案解析块（用于小红书卡片顶部，利用留白）。
+    包含：正确项解释 + 前2个干扰项手法分析。
+    """
+    ans = q["answer"]
+    parsed = parse_explanation(q)
+    lines = []
+
+    # 正确项
+    correct = parsed["correct"]
+    correct = re.sub(rf"^{ans}[:：]\s*", "", correct)
+    if correct:
+        if len(correct) > 80:
+            correct = correct[:77] + "…"
+        lines.append(f'<div style="font-size:26px;color:#1A1A1A;line-height:1.55;margin-bottom:8px;"><span style="color:#2E7D32;font-weight:bold;">正确项：</span>{esc(correct)}</div>')
+
+    # 干扰项（最多2个）
+    for d in parsed["distractors"][:2]:
+        text = d["text"]
+        if len(text) > 70:
+            text = text[:67] + "…"
+        lines.append(f'<div style="font-size:24px;color:#555;line-height:1.5;margin-bottom:4px;"><span style="color:{BRAND_RED};font-weight:600;">▸ {d["opt"]}项（{d["type"]}）：</span>{esc(text)}</div>')
+
+    return ans, "\n".join(lines) if lines else f'<div style="font-size:26px;color:#333;">详见完整解析</div>'
 
 
 def parse_explanation(q):
@@ -172,11 +196,11 @@ def gen_card_html(questions, idx):
     prev_html = ""
     if idx > 1:
         prev = questions[idx - 2]
-        ans, core = short_answer_line(prev)
+        ans, detail_html = medium_answer_block(prev)
         prev_html = f"""
-  <div style="background:#F3F7FB;border-left:6px solid #2E7D32;border-radius:12px;padding:26px 36px;margin-bottom:28px;">
-    <div style="font-size:30px;font-weight:bold;color:#2E7D32;letter-spacing:2px;margin-bottom:10px;">上题答案 · 第{idx-1:02d}题 → {ans}</div>
-    <div style="font-size:28px;color:#333;line-height:1.6;">{esc(core)}</div>
+  <div style="background:#F3F7FB;border-left:6px solid #2E7D32;border-radius:12px;padding:24px 32px;margin-bottom:24px;">
+    <div style="font-size:30px;font-weight:bold;color:#2E7D32;letter-spacing:2px;margin-bottom:12px;">上题答案 · 第{idx-1:02d}题 → {ans}</div>
+    {detail_html}
   </div>"""
 
     # 选项列表

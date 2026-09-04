@@ -1,8 +1,8 @@
 """
 时政考点模拟题 → 公众号长图 + 知乎HTML 生成器
 
-核心设计：答案滞后2题——第N题的答案+精简解析放在第N+2题前面，
-用户做到第3题才看到第1题答案，延迟满足感更强。
+核心设计：答案滞后3题——第N题的答案+精简解析放在第N+3题前面，
+用户做到第4题才看到第1题答案，延迟满足感更强。
 
 公众号长图：750px宽竖版长图（仿申论「时评精拆」风格）
 知乎HTML：简洁专栏风格，适合知乎发布
@@ -104,7 +104,7 @@ def render_png(html_path: Path, out_path: Path, width: int = LONG_W, height: int
 
 
 def gen_gzh_long_html(questions) -> str:
-    """生成公众号长图HTML（750px宽，答案滞后2题）"""
+    """生成公众号长图HTML（750px宽，答案滞后3题）"""
     total = len(questions)
 
     # 顶部报头 + 引导卡
@@ -128,26 +128,26 @@ body{{margin:0;padding:0;background:#fff;font-family:-apple-system,'PingFang SC'
     <div style="color:{BRAND_RED};font-size:20px;font-weight:bold;">【考点精拆】第{DATE_STR}期</div>
     <div style="color:{DARK};font-size:22px;margin-top:12px;line-height:1.6;">今日素材：《{ARTICLE_TITLE}》</div>
     <div style="color:{MID};font-size:18px;margin-top:10px;line-height:1.6;">题量：{total}题｜答案分布 A/B/C/D 各5题｜价值分：92/100（高可用）</div>
-    <div style="color:{LIGHT};font-size:16px;margin-top:8px;">💡 答案滞后2题公布，做完再往下翻</div>
+    <div style="color:{LIGHT};font-size:16px;margin-top:8px;">💡 答案滞后3题公布，做完再往下翻</div>
   </div>
 
   <!-- 使用说明 -->
   <div style="background:{LIGHT_GRAY};border-radius:8px;padding:20px 24px;margin-top:24px;">
     <div style="color:{DARK};font-size:18px;line-height:1.8;">
-      📖 <b>刷题方式</b>：每题独立思考作答，答案在<b>两题之后</b>公布。全部做完后可对照末尾速查表。
+      📖 <b>刷题方式</b>：每题独立思考作答，答案在<b>三题之后</b>公布。全部做完后可对照末尾速查表。
     </div>
   </div>
 """]
 
-    # 题目区：答案滞后2题
-    # 第1、2题纯题目；第3题前放第1题答案；...第20题前放第18题答案；最后放19、20答案+速查
+    # 题目区：答案滞后3题
+    # 第1、2、3题纯题目；第4题前放第1题答案；...第20题前放第17题答案；最后放18、19、20答案+速查
     for i, q in enumerate(questions):
         idx = i + 1  # 1-based
 
-        # 如果 i >= 2，在本题前面放第 i-1 题的答案（即滞后2题：第3题前放第1题答案）
-        if i >= 2:
-            prev_q = questions[i - 2]
-            prev_idx = i - 1  # 答案对应的题号
+        # 如果 i >= 3，在本题前面放第 i-2 题的答案（滞后3题：第4题前放第1题答案）
+        if i >= 3:
+            prev_q = questions[i - 3]
+            prev_idx = i - 2  # 答案对应的题号
             brief = extract_brief_explanation(prev_q["explanation"], prev_q["answer"])
             html_parts.append(f"""
   <!-- 第{prev_idx}题答案（滞后公布） -->
@@ -181,8 +181,8 @@ body{{margin:0;padding:0;background:#fff;font-family:-apple-system,'PingFang SC'
   </div>
 """)
 
-    # 最后两题答案（19、20）
-    for i in [18, 19]:  # 第19、20题（0-based 18、19）
+    # 最后三题答案（18、19、20）
+    for i in [17, 18, 19]:  # 第18、19、20题（0-based 17、18、19）
         prev_q = questions[i]
         prev_idx = i + 1
         brief = extract_brief_explanation(prev_q["explanation"], prev_q["answer"])
@@ -232,7 +232,7 @@ body{{margin:0;padding:0;background:#fff;font-family:-apple-system,'PingFang SC'
 
 
 def gen_zhihu_html(questions) -> str:
-    """生成知乎风格HTML（简洁长文，答案滞后2题）"""
+    """生成知乎风格HTML（简洁长文，答案滞后3题）"""
     total = len(questions)
 
     html_parts = [f"""<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
@@ -262,16 +262,16 @@ h2{{font-size:22px;font-weight:700;margin:40px 0 16px;padding-bottom:8px;border-
 
 <div class="lead">
 📖 本文基于人民日报头版权威文章生成 {total} 道政治理论模拟题，题型、干扰项手法均对标国考真题。<br>
-<b>刷题方式</b>：答案滞后2题公布——做到第3题时才会看到第1题答案。建议独立作答后再往下翻。全部答案见文末速查表。
+<b>刷题方式</b>：答案滞后3题公布——做到第4题时才会看到第1题答案。建议独立作答后再往下翻。全部答案见文末速查表。
 </div>
 """]
 
     for i, q in enumerate(questions):
         idx = i + 1
 
-        if i >= 2:
-            prev_q = questions[i - 2]
-            prev_idx = i - 1
+        if i >= 3:
+            prev_q = questions[i - 3]
+            prev_idx = i - 2
             brief = extract_brief_explanation(prev_q["explanation"], prev_q["answer"])
             html_parts.append(f"""
 <div class="answer-block">
@@ -298,8 +298,8 @@ h2{{font-size:22px;font-weight:700;margin:40px 0 16px;padding-bottom:8px;border-
 </div>
 """)
 
-    # 最后两题答案
-    for i in [18, 19]:
+    # 最后三题答案（18、19、20）
+    for i in [17, 18, 19]:
         prev_q = questions[i]
         prev_idx = i + 1
         brief = extract_brief_explanation(prev_q["explanation"], prev_q["answer"])
