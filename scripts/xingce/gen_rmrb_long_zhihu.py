@@ -13,6 +13,8 @@
 import json
 import re
 import subprocess
+import sys
+import argparse
 import tempfile
 from pathlib import Path
 from PIL import Image
@@ -337,6 +339,22 @@ h2{{font-size:22px;font-weight:700;margin:40px 0 16px;padding-bottom:8px;border-
 
 
 def main():
+    global DATE_STR, ARTICLE_TITLE, DATE_DIR, JSON_PATH, GZH_DIR, ZHIHU_DIR
+    parser = argparse.ArgumentParser(description="公众号长图 + 知乎HTML生成器（答案滞后3题）")
+    parser.add_argument("--date", default=DATE_STR, help="日期 YYYY-MM-DD")
+    parser.add_argument("--title", default=ARTICLE_TITLE, help="文章标题")
+    args = parser.parse_args()
+    DATE_STR = args.date
+    ARTICLE_TITLE = args.title
+    DATE_DIR = ICLOUD_ROOT / "物料" / DATE_STR
+    JSON_PATH = DATE_DIR / "题目" / f"人民日报{DATE_STR}_{ARTICLE_TITLE}_20题.json"
+    GZH_DIR = DATE_DIR / "公众号"
+    ZHIHU_DIR = DATE_DIR / "知乎"
+
+    if not JSON_PATH.exists():
+        print(f"❌ 题目文件不存在: {JSON_PATH}")
+        sys.exit(1)
+
     GZH_DIR.mkdir(parents=True, exist_ok=True)
     ZHIHU_DIR.mkdir(parents=True, exist_ok=True)
 

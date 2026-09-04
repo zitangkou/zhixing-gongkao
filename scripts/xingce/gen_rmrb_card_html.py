@@ -17,6 +17,7 @@ import os
 import re
 import subprocess
 import sys
+import argparse
 from pathlib import Path
 
 # ── 路径 ──────────────────────────────────────────────
@@ -292,6 +293,23 @@ def render_png(html_path, png_path):
 
 
 def main():
+    global DATE_STR, ARTICLE_TITLE, DATE_DIR, JSON_PATH, GZH_DIR, XHS_DIR, GZH_HTML
+    parser = argparse.ArgumentParser(description="公众号HTML + 小红书卡片生成器")
+    parser.add_argument("--date", default=DATE_STR, help="日期 YYYY-MM-DD")
+    parser.add_argument("--title", default=ARTICLE_TITLE, help="文章标题")
+    args = parser.parse_args()
+    DATE_STR = args.date
+    ARTICLE_TITLE = args.title
+    DATE_DIR = ICLOUD_ROOT / "物料" / DATE_STR
+    JSON_PATH = DATE_DIR / "题目" / f"人民日报{DATE_STR}_{ARTICLE_TITLE}_20题.json"
+    GZH_DIR = DATE_DIR / "公众号"
+    XHS_DIR = DATE_DIR / "小红书" / "图片"
+    GZH_HTML = GZH_DIR / f"人民日报{DATE_STR}_{ARTICLE_TITLE}_20题_公众号.html"
+
+    if not JSON_PATH.exists():
+        print(f"❌ 题目文件不存在: {JSON_PATH}")
+        sys.exit(1)
+
     with open(JSON_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
     questions = data["questions"]
