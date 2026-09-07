@@ -14,6 +14,7 @@ from app.models.rmrb import (
     ShenlunNormTerm,
     ShenlunSentenceType,
     ShenlunSkeletonTemplate,
+    ShenlunTeachingExample,
     ShenlunTermCategory,
 )
 from app.models.events import EventImpression

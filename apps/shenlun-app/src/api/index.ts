@@ -84,6 +84,44 @@ export interface RmrbArticle {
   readCount: number
 }
 
+export interface ShenlunLearningArticle {
+  id: string
+  title: string
+  source: string
+  sourceUrl: string
+  publishDate: string
+  summary: string
+  content: string
+  tags: string[]
+  teachingVersion: string
+}
+
+export interface ShenlunTeachingPractice {
+  prompt: string
+  minLength: number
+  maxLength: number
+  checks: string[]
+  referenceAnswer: string
+}
+
+export interface ShenlunTeachingExample {
+  id: string
+  version: string
+  sourceExcerpt: string
+  argument: ShenlunArgumentSkeleton
+  terms: ShenlunMineTermItem[]
+  quotes: ShenlunQuoteItem[]
+  verbs: ShenlunVerbItem[]
+  templates: ShenlunTemplateItem[]
+  practice: ShenlunTeachingPractice
+}
+
+export interface ShenlunLearningBundle {
+  article: Omit<ShenlunLearningArticle, 'teachingVersion'>
+  example: ShenlunTeachingExample
+  revision: string
+}
+
 export interface UserMe {
   id: string
   username?: string
@@ -143,7 +181,12 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<A
       return { code: response.statusCode, data: null, message: '登录后同步你的今日任务' }
     }
     if (response.statusCode < 200 || response.statusCode >= 300) {
-      return { code: response.statusCode, data: null, message: `服务暂不可用（${response.statusCode}）` }
+      const detail = (response.data as unknown as { detail?: string })?.detail
+      return {
+        code: response.statusCode,
+        data: null,
+        message: detail || `服务暂不可用（${response.statusCode}）`,
+      }
     }
     return response.data
   } catch {
@@ -334,6 +377,12 @@ export const api = {
   },
   getKnowledgeTree(treeKey: string) {
     return request<KnowledgeTree>(`/api/knowledge/tree/${encodeURIComponent(treeKey)}`)
+  },
+  listLearningArticles() {
+    return request<ShenlunLearningArticle[]>('/api/shenlun/learning/articles', { auth: false })
+  },
+  getLearningArticle(id: string) {
+    return request<ShenlunLearningBundle>(`/api/shenlun/learning/articles/${encodeURIComponent(id)}`, { auth: false })
   },
   listArticles() { return request<RmrbArticle[]>('/api/rmrb/articles') },
   getArticle(id: string) { return request<RmrbArticle>(`/api/rmrb/articles/${id}`) },

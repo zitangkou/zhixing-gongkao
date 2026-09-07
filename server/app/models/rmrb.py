@@ -19,6 +19,8 @@ from app.models.base import (
     relationship,
     utcnow,
 )
+
+
 class RmrbArticle(Base):
     """人民日报模块 · 时评/评论文章（独立于首页文章流）"""
     __tablename__ = "rmrb_articles"
@@ -35,6 +37,29 @@ class RmrbArticle(Base):
     is_published: Mapped[bool] = mapped_column(Boolean, default=True)
     sort_order: Mapped[int] = mapped_column(Integer, default=0)
     read_count: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
+
+
+class ShenlunTeachingExample(Base):
+    """公共教研示范；与用户个人开采记录严格分表。"""
+    __tablename__ = "shenlun_teaching_examples"
+    __table_args__ = (
+        UniqueConstraint("article_id", "version", name="uq_shenlun_teaching_article_version"),
+    )
+
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=lambda: gen_id("ste"))
+    article_id: Mapped[str] = mapped_column(ForeignKey("rmrb_articles.id"), index=True)
+    version: Mapped[str] = mapped_column(String(32), default="1")
+    source_excerpt: Mapped[str] = mapped_column(Text, default="")
+    argument_json: Mapped[str] = mapped_column(Text, default="{}")
+    terms_json: Mapped[str] = mapped_column(Text, default="[]")
+    quotes_json: Mapped[str] = mapped_column(Text, default="[]")
+    verbs_json: Mapped[str] = mapped_column(Text, default="[]")
+    templates_json: Mapped[str] = mapped_column(Text, default="[]")
+    practice_json: Mapped[str] = mapped_column(Text, default="{}")
+    content_hash: Mapped[str] = mapped_column(String(64), default="", index=True)
+    status: Mapped[str] = mapped_column(String(16), default="draft", index=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
 
@@ -149,4 +174,3 @@ class ShenlunArgumentMethod(Base):
     is_enabled: Mapped[bool] = mapped_column(Boolean, default=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
-
