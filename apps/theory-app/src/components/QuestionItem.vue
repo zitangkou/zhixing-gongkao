@@ -85,7 +85,7 @@ const typeLabel = computed(() => {
 watch(
   () => props.question.id,
   () => {
-    if (props.showResult && props.selectedAnswer !== undefined) {
+    if (props.selectedAnswer !== undefined) {
       restoreSelectedAnswer()
     } else {
       selected.value = ''
@@ -98,10 +98,11 @@ watch(
 watch(
   () => [props.showResult, props.selectedAnswer] as const,
   () => {
-    if (props.showResult && props.selectedAnswer !== undefined) {
+    if (props.selectedAnswer !== undefined) {
       restoreSelectedAnswer()
     }
   },
+  { immediate: true },
 )
 
 function restoreSelectedAnswer() {

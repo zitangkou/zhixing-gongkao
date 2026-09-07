@@ -1,4 +1,4 @@
-"""政治理论产品的每日学习包编排。"""
+"""时政学习产品的每日学习包编排。"""
 
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ from app.models import Article, DailyLearningTask, Question, gen_id
 THEORY_DAILY_STEPS = [
     {"key": "orient", "title": "读前定向", "description": "先看主体、行动与限定条件"},
     {"key": "read", "title": "原文精读", "description": "理解规范表述和知识位置"},
-    {"key": "quiz", "title": "证据刷题", "description": "每道题都回到原文依据"},
+    {"key": "quiz", "title": "证据练习", "description": "每道题都回到原文依据"},
     {"key": "review", "title": "错因回收", "description": "辨清偷换、扩大与程度变化"},
 ]
 
@@ -84,7 +84,7 @@ def ensure_theory_daily_task(db: Session, task_date: str) -> DailyLearningTask |
         task_date=task_date,
         task_type="theory_daily_pack",
         title=article.title,
-        description=article.summary or "理解一个理论主题，用原文依据辨清易混表述",
+        description=article.summary or "理解一个时政主题，用原文依据辨清易混表述",
         content_type="article",
         content_id=article.id,
         estimated_minutes=15,

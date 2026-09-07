@@ -24,7 +24,7 @@
         <view class="article-summary">{{ article.summary }}</view>
         <view class="focus-row"><view v-for="tag in article.tags.slice(0, 3)" :key="tag" class="focus-tag">{{ tag }}</view></view>
         <view class="card article-card"><view v-for="(paragraph, index) in paragraphs" :key="index" class="paragraph">{{ paragraph }}</view></view>
-        <view class="sticky-action"><view class="primary-action" @tap="finishReading">我已读懂，进入证据刷题</view></view>
+        <view class="sticky-action"><view class="primary-action" @tap="finishReading">我已读懂，进入证据练习</view></view>
       </template>
 
       <template v-else-if="stage === 'quiz'">
@@ -41,7 +41,7 @@
         <view v-for="(question, index) in questions" :key="question.id" class="card review-card">
           <view class="review-status" :class="{ wrong: !resultFor(question.id)?.correct }">{{ resultFor(question.id)?.correct ? '判断准确' : '需要回收' }}</view>
           <view class="question-stem">{{ index + 1 }}. {{ question.stem }}</view>
-          <view class="answer-line">你的答案：{{ answerText(question.id) }}　正确答案：{{ correctText(question.id) }}</view>
+          <view class="answer-line">你的答案：{{ answerText(question.id) }}；正确答案：{{ correctText(question.id) }}</view>
           <view class="evidence"><view class="evidence-label">原文依据</view>{{ question.sourceSentence }}</view>
           <view class="analysis">{{ resultFor(question.id)?.analysis || question.analysis }}</view>
         </view>
@@ -85,7 +85,7 @@ const activeQuestion = computed(() => stage.value === 'orient' ? pretestQuestion
 const hasSelection = computed(() => selection.value.length > 0)
 const paragraphs = computed(() => (article.value?.content || '').split(/\n+/).map((item) => item.trim()).filter(Boolean))
 const progress = computed(() => ({ orient: 15, read: 35, quiz: 65, review: 90, complete: 100 }[stage.value]))
-const stageKicker = computed(() => ({ orient: '第 1 步 · 读前定向', read: '第 2 步 · 原文精读', quiz: '第 3 步 · 证据刷题', review: '第 4 步 · 错因回收', complete: '今日完成' }[stage.value]))
+const stageKicker = computed(() => ({ orient: '第 1 步 · 读前定向', read: '第 2 步 · 原文精读', quiz: '第 3 步 · 证据练习', review: '第 4 步 · 错因回收', complete: '今日完成' }[stage.value]))
 const stageTitle = computed(() => ({ orient: '先判断，再验证', read: '读懂规范表述', quiz: '用证据辨析表述', review: '把每道题落回原文', complete: '理解已经沉淀' }[stage.value]))
 const correctCount = computed(() => Object.values(results.value).filter((item) => item.correct).length)
 

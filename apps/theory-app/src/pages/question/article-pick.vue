@@ -12,7 +12,7 @@
     </view>
     <view v-else-if="!articles.length" class="state-box">
       <text class="state-title">暂无可练文章</text>
-      <text class="state-desc">当前还没有已审核并配题的理论文章</text>
+      <text class="state-desc">当前还没有可用的时政学习文章</text>
     </view>
     <template v-else>
       <view
@@ -66,7 +66,7 @@ async function load() {
 }
 
 function start(articleId: string) {
-  Taro.navigateTo({ url: `/pages/question/taking?articleId=${articleId}` })
+  Taro.navigateTo({ url: `/pages/learning/article?articleId=${encodeURIComponent(articleId)}` })
 }
 
 onMounted(load)

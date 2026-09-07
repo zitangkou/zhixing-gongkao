@@ -104,7 +104,7 @@ import { useDailyTaskStore } from '@/store/dailyTask'
 import type { QuizAnswerRecord, Question, QuizMode } from '@/types'
 import { showConfirm, showToast } from '@/utils/platform'
 
-definePageConfig({ navigationBarTitleText: '刷题' })
+definePageConfig({ navigationBarTitleText: '练习' })
 
 const CORRECT_AUTO_NEXT_MS = 2000
 

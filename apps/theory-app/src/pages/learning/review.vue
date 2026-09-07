@@ -7,7 +7,7 @@
     </view>
     <template v-else-if="task.progress.state === 'completed'">
       <view class="complete-mark">✓</view>
-      <text class="complete-title">今天的理论主题已学完</text>
+      <text class="complete-title">今天的时政主题已学完</text>
       <text class="complete-desc">正确 {{ quizCorrect }}/{{ quizTotal }}，错因和原文依据已留在复习链路。</text>
       <view class="summary-card">
         <text class="summary-label">今日主题</text>
@@ -21,7 +21,7 @@
         <text class="step-kicker">第 4 步 · 错因回收</text>
         <text class="step-title">{{ wrongIds.length ? '错在哪里，要说得具体' : '本次全对，再复核一次边界' }}</text>
         <text class="step-desc">
-          {{ wrongIds.length ? '对照原文依据，为每道错题标记主要干扰方式。' : '不重复刷题，只看容易被偷换的主体、范围和程度词。' }}
+          {{ wrongIds.length ? '对照原文依据，为每道错题标记主要干扰方式。' : '不重复练习，只看容易被偷换的主体、范围和程度词。' }}
         </text>
       </view>
 

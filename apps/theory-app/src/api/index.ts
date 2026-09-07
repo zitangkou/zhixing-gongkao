@@ -115,6 +115,14 @@ export interface AnswerResult {
   pointsEarned: number
 }
 
+export interface LearningBundle {
+  article: Article
+  revision: string
+  collectionComplete: boolean
+  questions: Omit<Question, 'correctAnswer' | 'analysis' | 'sourceSentence'>[]
+  parts: { number: number; questionIds: string[] }[]
+}
+
 interface AuthResult { access_token: string; token_type: string; user: UserMe }
 
 async function request<T>(path: string, options: { method?: 'GET' | 'POST' | 'PUT' | 'DELETE'; data?: unknown; auth?: boolean } = {}): Promise<ApiResponse<T>> {
@@ -134,6 +142,8 @@ async function request<T>(path: string, options: { method?: 'GET' | 'POST' | 'PU
       return { code: response.statusCode, data: null, message: '登录后同步你的今日学习包' }
     }
     if (response.statusCode < 200 || response.statusCode >= 300) {
+      const detail = (response.data as unknown as { detail?: unknown })?.detail
+      if (typeof detail === 'string') return { code: response.statusCode, data: null, message: detail }
       return { code: response.statusCode, data: null, message: `服务暂不可用（${response.statusCode}）` }
     }
     return response.data
@@ -143,6 +153,14 @@ async function request<T>(path: string, options: { method?: 'GET' | 'POST' | 'PU
 }
 
 export const api = {
+  getLearningBundle(articleId: string) {
+    return request<LearningBundle>(`/api/learning/articles/${encodeURIComponent(articleId)}`, { auth: false })
+  },
+  checkLearningAnswer(articleId: string, revision: string, questionId: string, answer: string | string[]) {
+    return request<AnswerResult & { sourceSentence: string }>(`/api/learning/articles/${encodeURIComponent(articleId)}/check`, {
+      method: 'POST', auth: false, data: { revision, questionId, answer },
+    })
+  },
   login(username: string, password: string) {
     return request<AuthResult>('/api/auth/login', {
       method: 'POST', data: { username, password }, auth: false,

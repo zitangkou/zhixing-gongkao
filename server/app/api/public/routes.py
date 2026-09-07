@@ -2,6 +2,7 @@
 from fastapi import APIRouter, Depends
 from app.product import get_product_context
 from app.api.public.article_quiz import router as article_quiz_router
+from app.api.public.article_learning import router as article_learning_router
 from app.api.public.auth_user import router as auth_user_router
 from app.api.public.corpus import router as corpus_router
 from app.api.public.countdown import router as countdown_router
@@ -23,6 +24,7 @@ router = APIRouter(
 )
 router.include_router(auth_user_router)
 router.include_router(article_quiz_router)
+router.include_router(article_learning_router)
 router.include_router(plan_router)
 router.include_router(practice_router)
 router.include_router(product_router)
