@@ -5,7 +5,20 @@ from app.core.response import ApiResponse
 from app.database import get_db
 from app.models import ContentOperationTemplate, ContentPublishPackage
 from app.schemas import ContentPackageGenerateFromArticle, ContentPublishPackageCreate, ContentPublishPackageUpdate, ContentPublishStatusBody
-from app.services.content_ops_service import content_ops_overview, content_reference_library, content_review_config, create_package, export_package, generate_package_from_article, package_out, template_out, transition_package, update_package
+from app.services.content_ops_service import (
+    content_ops_overview,
+    content_reference_library,
+    content_review_config,
+    create_package,
+    export_package,
+    generate_package_from_article,
+    get_package_preflight,
+    list_publishable_targets,
+    package_out,
+    template_out,
+    transition_package,
+    update_package,
+)
 
 router = APIRouter()
 
@@ -34,6 +47,12 @@ def templates(productKey: str | None = None, _admin=Depends(require_permission("
         query = query.filter(ContentOperationTemplate.product_key.in_([productKey, "general"]))
     rows = query.order_by(ContentOperationTemplate.sort_order, ContentOperationTemplate.created_at).all()
     return ApiResponse.ok([template_out(row) for row in rows])
+
+
+@router.get("/content-ops/entry-targets")
+def entry_targets(productKey: str, _admin=Depends(require_permission("content_ops:read")), db: Session = Depends(get_db)):
+    try: return ApiResponse.ok(list_publishable_targets(db, productKey))
+    except ValueError as exc: return ApiResponse.fail(str(exc), code=400)
 
 
 @router.get("/content-ops/packages")
@@ -72,4 +91,10 @@ def package_update(package_id: str, body: ContentPublishPackageUpdate, _admin=De
 @router.get("/content-ops/packages/{package_id}/export")
 def package_export(package_id: str, _admin=Depends(require_permission("content_ops:read")), db: Session = Depends(get_db)):
     try: return ApiResponse.ok(export_package(db, package_id))
+    except ValueError as exc: return ApiResponse.fail(str(exc), code=400)
+
+
+@router.get("/content-ops/packages/{package_id}/preflight")
+def package_preflight(package_id: str, _admin=Depends(require_permission("content_ops:read")), db: Session = Depends(get_db)):
+    try: return ApiResponse.ok(get_package_preflight(db, package_id))
     except ValueError as exc: return ApiResponse.fail(str(exc), code=400)

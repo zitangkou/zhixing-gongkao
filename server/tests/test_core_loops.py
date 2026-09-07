@@ -34,12 +34,14 @@ from app.models import (  # noqa: E402
     AppUser,
     Article,
     Base,
+    ContentPublishPackage,
     DailyLearningTask,
     ExamPaper,
     ExamQuestion,
     Question,
     RmrbArticle,
     Role,
+    ShenlunTeachingExample,
     UserDailyTaskProgress,
     WrongAnswer,
 )
@@ -303,7 +305,40 @@ def test_admin_rbac():
         assert reference_library["platforms"][0]["sourceStatus"] == "knowledge_base_verified"
         assert reference_library["platforms"][1]["sourceStatus"] == "derived_from_repository_plan"
         theory_template = next(item for item in templates if item["code"] == "theory_current")
-        published_article = next(item for item in articles["items"] if item["status"] == "published")
+        assert theory_template["channels"] == ["wechat", "xiaohongshu", "zhihu", "wechat_channels"]
+        content_suffix = uuid.uuid4().hex[:8]
+        content_article_id = f"art-ops-{content_suffix}"
+        with SessionLocal() as db:
+            db.add(Article(
+                id=content_article_id, title="时政学习运营测试", source="学习材料", publish_date=today(),
+                summary="用于验证内容入口。", content="围绕重点内容开展结构化学习。",
+                status="published", allow_quiz=True, is_published=True,
+            ))
+            for index in range(5):
+                db.add(Question(
+                    id=f"q-ops-{content_suffix}-{index}", article_id=content_article_id, type="single",
+                    stem=f"第 {index + 1} 题", options=json.dumps(["正确项", "干扰项"], ensure_ascii=False),
+                    correct_answer="正确项", analysis="依据原文可判断。", source_sentence="围绕重点内容开展结构化学习。",
+                    status="approved", origin="manual", is_active=True,
+                ))
+            db.commit()
+        articles = _ok(client.get("/admin/articles", headers=admin_headers))
+        published_article = next(item for item in articles["items"] if item["id"] == content_article_id)
+        article_questions = _ok(client.get(f"/admin/questions?article_id={published_article['id']}&page_size=200", headers=admin_headers))["items"]
+        _ok(client.put(
+            f"/admin/theory-learning/entries/{published_article['id']}",
+            headers=admin_headers,
+            json={
+                "title": published_article["title"], "description": "运营入口", "isDaily": True, "isEvergreen": False,
+                "parts": [{"title": "今日五题", "questionIds": [item["id"] for item in article_questions[:5]]}],
+                "collectionEnabled": False, "status": "published", "publishStart": "", "publishEnd": "", "sortOrder": 1,
+            },
+        ))
+        theory_target = _ok(client.get("/admin/content-ops/entry-targets?productKey=theory", headers=admin_headers))[0]
+        theory_entry_target = {
+            "topicType": "daily", "entryId": theory_target["entryId"], "h5Path": theory_target["h5Path"],
+            "miniappPath": theory_target["miniappPath"], "qrScene": "theory_core_loop", "officialAccountKeyword": "时政",
+        }
         generated_package = _ok(
             client.post(
                 "/admin/content-ops/packages/generate-from-article",
@@ -313,14 +348,16 @@ def test_admin_rbac():
                     "templateId": theory_template["id"],
                     "articleId": published_article["id"],
                     "campaignKey": "theory-auto-20260823",
-                    "deepLink": "/pages/theory/index",
+                    "deepLink": theory_target["h5Path"],
+                    "entryTarget": theory_entry_target,
                 },
             )
         )
         assert generated_package["sourceType"] == "article"
         assert generated_package["slotValues"]["事实"]
         assert generated_package["slotValues"]["考法"]
-        assert generated_package["variants"]["wechat"]["ctaLink"].endswith("channel=wechat")
+        assert "channel=wechat" in generated_package["variants"]["wechat"]["ctaLink"]
+        assert "product=theory" in generated_package["variants"]["wechat"]["ctaLink"]
         generated_review = client.post(
             f"/admin/content-ops/packages/{generated_package['id']}/status",
             headers=admin_headers,
@@ -356,6 +393,25 @@ def test_admin_rbac():
             )
         )
         assert rmrb_article["sourceUrl"].startswith("https://paper.people.com.cn/")
+        with SessionLocal() as db:
+            db.add(ShenlunTeachingExample(
+                article_id=rmrb_article["id"], version="1", source_excerpt="基层治理学习材料节选。",
+                argument_json=json.dumps({
+                    "overview": "从调研到精准施策", "conclusion": "以务实行动提升治理效能",
+                    "points": [{"title": "深入调研", "claim": "摸清诉求", "evidence": "深入一线了解群众诉求", "summary": "以调研支撑施策", "method": "举例论证", "methodNote": "事实支撑判断", "template": "既要……也要……"}],
+                }, ensure_ascii=False),
+                terms_json=json.dumps([{"term": "因地制宜", "category": "方法"}], ensure_ascii=False),
+                quotes_json="[]", verbs_json="[]",
+                templates_json=json.dumps([{"type": "并列句", "original": "原句", "template": "既要……也要……", "imitate": "既要摸清诉求，也要精准施策。"}], ensure_ascii=False),
+                practice_json=json.dumps({"prompt": "概括治理方法。", "minLength": 10, "maxLength": 100, "checks": ["对象清楚"], "referenceAnswer": "深入调研群众诉求，因地制宜精准施策。"}, ensure_ascii=False),
+                status="published",
+            ))
+            db.commit()
+        shenlun_target = _ok(client.get("/admin/content-ops/entry-targets?productKey=shenlun", headers=admin_headers))[0]
+        shenlun_entry_target = {
+            "topicType": "daily", "entryId": shenlun_target["entryId"], "h5Path": shenlun_target["h5Path"],
+            "miniappPath": shenlun_target["miniappPath"], "qrScene": "shenlun_core_loop", "officialAccountKeyword": "申论",
+        }
         shenlun_generated = _ok(
             client.post(
                 "/admin/content-ops/packages/generate-from-article",
@@ -364,13 +420,15 @@ def test_admin_rbac():
                     "productKey": "shenlun",
                     "templateId": shenlun_template["id"],
                     "articleId": rmrb_article["id"],
-                    "deepLink": f"/shenlun/#/pages/reading/detail?id={rmrb_article['id']}",
+                    "campaignKey": "shenlun-auto-20260820",
+                    "deepLink": shenlun_target["h5Path"],
+                    "entryTarget": shenlun_entry_target,
                 },
             )
         )
         assert shenlun_generated["sourceType"] == "rmrb_article"
         assert all(shenlun_generated["slotValues"].values())
-        assert shenlun_generated["variants"]["wechat"]["ctaLink"].endswith("channel=wechat")
+        assert "channel=wechat" in shenlun_generated["variants"]["wechat"]["ctaLink"]
         package = _ok(
             client.post(
                 "/admin/content-ops/packages",
@@ -378,14 +436,16 @@ def test_admin_rbac():
                 json={
                     "productKey": "shenlun",
                     "templateId": shenlun_template["id"],
-                    "sourceType": "daily_task",
-                    "sourceId": "dlt-demo",
+                    "sourceType": shenlun_target["sourceType"],
+                    "sourceId": shenlun_target["sourceId"],
                     "sourceTitle": "今日三刀训练",
                     "campaignKey": "xhs-20260823",
-                    "deepLink": "/pages/rmrb/index?channel=xiaohongshu",
+                    "deepLink": shenlun_target["h5Path"],
+                    "entryTarget": shenlun_entry_target,
+                    "plannedAt": (now() + timedelta(days=1)).isoformat(),
                     "variants": {
-                        "xiaohongshu": {"title": "一篇时评怎么拆", "slides": ["封面", "骨架"]},
-                        "wechat": {"title": "今日申论学习包", "body": "待审核正文"},
+                        "xiaohongshu": {"title": "一篇时评怎么拆", "body": "从原文学习治理表达。", "slides": ["封面", "骨架"]},
+                        "wechat": {"title": "今日申论学习包", "body": "从原文学习治理表达。"},
                     },
                 },
             )
@@ -398,7 +458,6 @@ def test_admin_rbac():
                 headers=admin_headers,
                 json={
                     "sourceTitle": "今日三刀训练（已编辑）",
-                    "deepLink": "/pages/rmrb/index?channel=wechat",
                     "variants": {
                         "wechat": {"title": "今日申论学习包", "body": "审核前正文"},
                     },
@@ -422,6 +481,9 @@ def test_admin_rbac():
             )
         )
         assert len(package["slotValues"]) == len(shenlun_template["slots"])
+        preflight = _ok(client.get(f"/admin/content-ops/packages/{package['id']}/preflight", headers=admin_headers))
+        assert preflight["passed"] is True
+        assert preflight["resolvedEntry"]["entryId"] == rmrb_article["id"]
 
         invalid_publish = client.post(
             f"/admin/content-ops/packages/{package['id']}/status",
@@ -478,6 +540,20 @@ def test_admin_rbac():
             if status == "ops_review":
                 assert package["reviewHistory"][-1]["stage"] == "teaching"
                 assert package["reviewHistory"][-1]["reviewerUsername"] == "admin"
+                with SessionLocal() as db:
+                    stored_package = db.get(ContentPublishPackage, package["id"])
+                    original_target = stored_package.entry_target_json
+                    stored_package.entry_target_json = "{}"
+                    db.commit()
+                blocked_ready = client.post(
+                    f"/admin/content-ops/packages/{package['id']}/status", headers=admin_headers,
+                    json={"status": "ready", "reviewNote": "入口失效不得通过", "checklist": review_checklists["ready"]},
+                )
+                assert blocked_ready.json()["code"] == 400
+                with SessionLocal() as db:
+                    stored_package = db.get(ContentPublishPackage, package["id"])
+                    stored_package.entry_target_json = original_target
+                    db.commit()
             if status == "ready":
                 assert [item["stage"] for item in package["reviewHistory"]] == ["teaching", "operations"]
             if status == "ready":
@@ -487,8 +563,19 @@ def test_admin_rbac():
                         headers=admin_headers,
                     )
                 )
-                assert publish_bundle["schemaVersion"] == "content-publish-package/v1"
+                assert publish_bundle["schemaVersion"] == "content-publish-package/v2"
+                assert publish_bundle["preflight"]["passed"] is True
                 assert publish_bundle["channels"][0]["manualPublishRequired"] is True
+                with SessionLocal() as db:
+                    example = db.query(ShenlunTeachingExample).filter(ShenlunTeachingExample.article_id == rmrb_article["id"]).first()
+                    example.status = "draft"
+                    db.commit()
+                stale_export = client.get(f"/admin/content-ops/packages/{package['id']}/export", headers=admin_headers)
+                assert stale_export.json()["code"] == 400
+                with SessionLocal() as db:
+                    example = db.query(ShenlunTeachingExample).filter(ShenlunTeachingExample.article_id == rmrb_article["id"]).first()
+                    example.status = "published"
+                    db.commit()
         assert package["status"] == "published" and package["publishedAt"]
         ops_overview = _ok(client.get("/admin/content-ops/overview", headers=admin_headers))
         assert ops_overview["windowDays"] == 7

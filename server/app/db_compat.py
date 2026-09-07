@@ -287,16 +287,22 @@ def _ensure_ziliao_formula_plain_column():
 
 
 def _ensure_content_ops_columns():
-    """兼容首版内容发布包：补结构化栏目槽位。"""
+    """兼容早期内容发布包：补结构化栏目与学习入口字段。"""
     from sqlalchemy import inspect, text
 
     insp = inspect(engine)
     if not insp.has_table("content_publish_packages"):
         return
     cols = {c["name"] for c in insp.get_columns("content_publish_packages")}
+    alters = []
     if "slot_values_json" not in cols:
+        alters.append("ALTER TABLE content_publish_packages ADD COLUMN slot_values_json TEXT DEFAULT '{}'")
+    if "entry_target_json" not in cols:
+        alters.append("ALTER TABLE content_publish_packages ADD COLUMN entry_target_json TEXT DEFAULT '{}'")
+    if alters:
         with engine.begin() as conn:
-            conn.execute(text("ALTER TABLE content_publish_packages ADD COLUMN slot_values_json TEXT DEFAULT '{}'"))
+            for statement in alters:
+                conn.execute(text(statement))
 
 
 def run_compat_migrations() -> None:

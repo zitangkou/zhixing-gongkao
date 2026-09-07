@@ -3,6 +3,15 @@ from typing import Any, Literal
 from pydantic import BaseModel, Field
 
 
+class ContentEntryTarget(BaseModel):
+    topicType: Literal["daily", "evergreen", "review"] = "daily"
+    entryId: str = Field(default="", max_length=64)
+    h5Path: str = Field(default="", max_length=512)
+    miniappPath: str = Field(default="", max_length=512)
+    qrScene: str = Field(default="", max_length=64)
+    officialAccountKeyword: str = Field(default="", max_length=32)
+
+
 class ContentPublishPackageCreate(BaseModel):
     productKey: Literal["shenlun", "theory"]
     templateId: str
@@ -11,6 +20,7 @@ class ContentPublishPackageCreate(BaseModel):
     sourceTitle: str = ""
     campaignKey: str = ""
     deepLink: str = ""
+    entryTarget: ContentEntryTarget = Field(default_factory=ContentEntryTarget)
     slotValues: dict[str, str] = Field(default_factory=dict)
     variants: dict[str, dict[str, Any]] = Field(default_factory=dict)
     plannedAt: datetime | None = None
@@ -26,6 +36,7 @@ class ContentPublishPackageUpdate(BaseModel):
     sourceTitle: str | None = None
     campaignKey: str | None = None
     deepLink: str | None = None
+    entryTarget: ContentEntryTarget | None = None
     slotValues: dict[str, str] | None = None
     variants: dict[str, dict[str, Any]] | None = None
     plannedAt: datetime | None = None
@@ -37,4 +48,5 @@ class ContentPackageGenerateFromArticle(BaseModel):
     articleId: str
     campaignKey: str = ""
     deepLink: str = ""
+    entryTarget: ContentEntryTarget = Field(default_factory=ContentEntryTarget)
     plannedAt: datetime | None = None

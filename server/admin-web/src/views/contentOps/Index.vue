@@ -11,7 +11,7 @@
     </el-alert>
 
     <div v-if="overview" class="metrics-grid">
-      <el-card shadow="never" class="metric-card"><div class="metric-value">{{ overview.scheduledCount }}</div><div class="metric-label">未来 7 天已排期</div><div class="metric-note">申论 {{ overview.productMix.shenlun }} · 政治理论 {{ overview.productMix.theory }}</div></el-card>
+      <el-card shadow="never" class="metric-card"><div class="metric-value">{{ overview.scheduledCount }}</div><div class="metric-label">未来 7 天已排期</div><div class="metric-note">申论学习 {{ overview.productMix.shenlun }} · 时政学习 {{ overview.productMix.theory }}</div></el-card>
       <el-card shadow="never" class="metric-card"><div class="metric-value">{{ overview.readyInventory }}</div><div class="metric-label">待发布库存</div><div class="metric-note">已过双审核，可导出发布</div></el-card>
       <el-card shadow="never" class="metric-card"><div class="metric-value">{{ overview.reviewBacklog }}</div><div class="metric-label">审核处理中</div><div class="metric-note">教研审核 + 运营审核</div></el-card>
       <el-card shadow="never" class="metric-card"><div class="metric-value">{{ overview.unplannedDrafts }}</div><div class="metric-label">未排期草稿</div><div class="metric-note">草稿与已驳回内容</div></el-card>
@@ -24,8 +24,8 @@
       <el-tab-pane label="发布包" name="packages">
         <div class="toolbar">
           <el-select v-model="filters.productKey" clearable placeholder="全部产品" style="width: 150px" @change="loadPackages">
-            <el-option label="申论" value="shenlun" />
-            <el-option label="政治理论" value="theory" />
+            <el-option label="申论学习" value="shenlun" />
+            <el-option label="时政学习" value="theory" />
           </el-select>
           <el-select v-model="filters.status" clearable placeholder="全部状态" style="width: 160px" @change="loadPackages">
             <el-option v-for="item in statusOptions" :key="item.value" :label="item.label" :value="item.value" />
@@ -77,6 +77,7 @@
             <el-table-column label="操作" width="280" fixed="right">
               <template #default="{ row }">
                 <el-button v-if="canEdit(row)" link type="primary" @click="openEdit(row)">编辑</el-button>
+                <el-button link type="primary" @click="showPreflight(row)">发布检查</el-button>
                 <el-button v-if="canExport(row)" link type="primary" @click="downloadPackage(row)">导出</el-button>
                 <el-button v-if="canWrite && nextStatus(row.status)" link type="success" @click="advance(row)">
                   {{ nextAction(row.status) }}
@@ -170,7 +171,7 @@
           <el-col :span="12">
             <el-form-item label="产品">
               <el-select v-model="generateForm.productKey" style="width: 100%" @change="onGenerateProductChange">
-                <el-option label="申论" value="shenlun" /><el-option label="政治理论" value="theory" />
+                <el-option label="申论学习" value="shenlun" /><el-option label="时政学习" value="theory" />
               </el-select>
             </el-form-item>
           </el-col>
@@ -182,14 +183,13 @@
             </el-form-item>
           </el-col>
         </el-row>
-        <el-form-item label="审核文章">
-          <el-select v-model="generateForm.articleId" filterable style="width: 100%" placeholder="选择已发布文章">
-            <el-option v-for="article in publishedArticles" :key="article.id" :label="article.title" :value="article.id">
-              <span>{{ article.title }}</span><span class="option-meta">{{ article.source }} · {{ article.publishDate }}</span>
+        <el-form-item label="学习入口">
+          <el-select v-model="generateForm.articleId" filterable style="width: 100%" placeholder="选择已审核且已开放的入口" @change="onGenerateTargetChange">
+            <el-option v-for="target in publishableTargets" :key="target.entryId" :label="target.title" :value="target.entryId">
+              <span>{{ target.title }}</span><span class="option-meta">{{ target.publishDate }} · {{ target.topicTypes.map(topicTypeLabel).join('/') }}</span>
             </el-option>
           </el-select>
         </el-form-item>
-        <el-form-item label="小程序深链"><el-input v-model="generateForm.deepLink" placeholder="系统会自动附加渠道归因参数" /></el-form-item>
         <el-row :gutter="16">
           <el-col :span="12"><el-form-item label="活动标识"><el-input v-model="generateForm.campaignKey" /></el-form-item></el-col>
           <el-col :span="12"><el-form-item label="计划发布时间"><el-date-picker v-model="generateForm.plannedAt" type="datetime" value-format="YYYY-MM-DDTHH:mm:ss" style="width: 100%" /></el-form-item></el-col>
@@ -207,7 +207,7 @@
           <el-col :span="12">
             <el-form-item label="产品">
               <el-select v-model="form.productKey" :disabled="!!editingId" style="width: 100%" @change="onProductChange">
-                <el-option label="申论" value="shenlun" /><el-option label="政治理论" value="theory" />
+                <el-option label="申论学习" value="shenlun" /><el-option label="时政学习" value="theory" />
               </el-select>
             </el-form-item>
           </el-col>
@@ -219,12 +219,20 @@
             </el-form-item>
           </el-col>
         </el-row>
+        <el-form-item label="学习入口">
+          <el-select v-model="form.entryId" :disabled="!!editingId" filterable style="width: 100%" placeholder="只显示已审核并公开可用的入口" @change="onTargetChange">
+            <el-option v-for="target in publishableTargets" :key="target.entryId" :label="target.title" :value="target.entryId">
+              <span>{{ target.title }}</span><span class="option-meta">{{ target.publishDate }} · {{ target.topicTypes.map(topicTypeLabel).join('/') }}</span>
+            </el-option>
+          </el-select>
+        </el-form-item>
         <el-row :gutter="16">
-          <el-col :span="8"><el-form-item label="母资产类型"><el-input v-model="form.sourceType" :disabled="!!editingId" placeholder="daily_task" /></el-form-item></el-col>
-          <el-col :span="8"><el-form-item label="母资产 ID"><el-input v-model="form.sourceId" :disabled="!!editingId" /></el-form-item></el-col>
-          <el-col :span="8"><el-form-item label="母资产标题"><el-input v-model="form.sourceTitle" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="内容类型"><el-select v-model="form.topicType" style="width:100%"><el-option v-for="kind in selectedTarget?.topicTypes || []" :key="kind" :label="topicTypeLabel(kind)" :value="kind" /></el-select></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="公众号承接词"><el-select v-model="form.officialAccountKeyword" style="width:100%"><el-option label="今日" value="今日" /><el-option label="时政" value="时政" /><el-option label="申论" value="申论" /></el-select></el-form-item></el-col>
         </el-row>
-        <el-form-item label="小程序深链"><el-input v-model="form.deepLink" placeholder="/pages/...?...&channel=xiaohongshu" /></el-form-item>
+        <el-form-item label="H5 路径"><el-input v-model="form.h5Path" readonly /></el-form-item>
+        <el-form-item label="小程序路径"><el-input v-model="form.miniappPath" readonly /></el-form-item>
+        <el-form-item label="码场景值"><el-input v-model="form.qrScene" placeholder="例如 theory_20260907_a，只含字母数字下划线或连字符" /></el-form-item>
         <el-row :gutter="16">
           <el-col :span="12"><el-form-item label="活动标识"><el-input v-model="form.campaignKey" placeholder="栏目-日期-批次" /></el-form-item></el-col>
           <el-col :span="12"><el-form-item label="计划发布时间"><el-date-picker v-model="form.plannedAt" type="datetime" value-format="YYYY-MM-DDTHH:mm:ss" style="width: 100%" /></el-form-item></el-col>
@@ -250,6 +258,17 @@
         <el-button @click="dialogVisible = false">取消</el-button>
         <el-button type="primary" :loading="saving" @click="savePackage">保存草稿</el-button>
       </template>
+    </el-dialog>
+
+    <el-dialog v-model="preflightVisible" title="发布前检查" width="680px">
+      <el-alert v-if="preflight" :title="preflight.passed ? '全部检查通过，可以进入待发布并导出' : `还有 ${preflight.errorCount} 项阻断问题`" :type="preflight.passed ? 'success' : 'error'" :closable="false" class="review-tip" />
+      <div v-loading="preflightLoading" class="preflight-list">
+        <div v-for="item in preflight?.checks || []" :key="item.key" class="preflight-item">
+          <el-tag :type="item.passed ? 'success' : 'danger'" size="small">{{ item.passed ? '通过' : '阻断' }}</el-tag>
+          <div><strong>{{ item.label }}</strong><p>{{ item.message }}</p></div>
+        </div>
+      </div>
+      <template #footer><el-button @click="preflightVisible = false">关闭</el-button></template>
     </el-dialog>
 
     <el-dialog v-model="reviewVisible" :title="`${currentReviewConfig?.label || ''}确认`" width="620px" destroy-on-close>
@@ -281,11 +300,9 @@ import PageShell from '@/components/PageShell.vue'
 import ListState from '@/components/ListState.vue'
 import { useAdminList } from '@/composables/useAdminList'
 import { useAuthStore } from '@/stores/auth'
-import { fetchArticles } from '@/api/articles'
-import type { Article } from '@/types'
 import {
-  createContentPackage, exportContentPackage, fetchContentOpsOverview, fetchContentPackages, fetchContentReferenceLibrary, fetchContentReviewConfig, fetchContentTemplates, generateContentPackageFromArticle, updateContentPackage,
-  updateContentPackageStatus, type ContentOpsOverview, type ContentOpsStatus, type ContentOpsTemplate, type ContentPackage, type ContentReferenceLibrary, type ReviewStage, type ReviewStageConfig,
+  createContentPackage, exportContentPackage, fetchContentOpsOverview, fetchContentPackagePreflight, fetchContentPackages, fetchContentReferenceLibrary, fetchContentReviewConfig, fetchContentTemplates, fetchPublishableTargets, generateContentPackageFromArticle, updateContentPackage,
+  updateContentPackageStatus, type ContentEntryTarget, type ContentOpsOverview, type ContentOpsStatus, type ContentOpsTemplate, type ContentPackage, type ContentPreflight, type ContentReferenceLibrary, type PublishableTarget, type ReviewStage, type ReviewStageConfig,
 } from '@/api/contentOps'
 
 const auth = useAuthStore()
@@ -300,6 +317,9 @@ const filters = reactive({ productKey: '', status: '' })
 const dialogVisible = ref(false)
 const generateVisible = ref(false)
 const reviewVisible = ref(false)
+const preflightVisible = ref(false)
+const preflightLoading = ref(false)
+const preflight = ref<ContentPreflight | null>(null)
 const saving = ref(false)
 const generating = ref(false)
 const reviewSubmitting = ref(false)
@@ -308,14 +328,14 @@ const editingId = ref('')
 const selectedChannels = ref<string[]>([])
 const variantForms = reactive<Record<string, { title: string; body: string }>>({})
 const slotForms = reactive<Record<string, string>>({})
-const publishedArticles = ref<Article[]>([])
+const publishableTargets = ref<PublishableTarget[]>([])
 const reviewStages = ref<ReviewStageConfig[]>([])
 const reviewRow = ref<ContentPackage | null>(null)
 const reviewStage = ref<ReviewStage>('teaching')
 const reviewChecked = ref<string[]>([])
 const reviewNote = ref('')
-const form = reactive({ productKey: 'shenlun', templateId: '', sourceType: 'daily_task', sourceId: '', sourceTitle: '', campaignKey: '', deepLink: '', plannedAt: '' })
-const generateForm = reactive({ productKey: 'shenlun', templateId: '', articleId: '', campaignKey: '', deepLink: '', plannedAt: '' })
+const form = reactive({ productKey: 'shenlun', templateId: '', sourceType: '', sourceId: '', sourceTitle: '', campaignKey: '', deepLink: '', entryId: '', topicType: 'daily' as ContentEntryTarget['topicType'], h5Path: '', miniappPath: '', qrScene: '', officialAccountKeyword: '申论', plannedAt: '' })
+const generateForm = reactive({ productKey: 'shenlun', templateId: '', articleId: '', campaignKey: '', deepLink: '', entryTarget: { topicType: 'daily', entryId: '', h5Path: '', miniappPath: '', qrScene: '', officialAccountKeyword: '申论' } as ContentEntryTarget, plannedAt: '' })
 const statusOptions = [
   ['draft', '草稿'], ['teaching_review', '教研审核'], ['ops_review', '运营审核'],
   ['ready', '待发布'], ['published', '已发布'], ['rejected', '已驳回'],
@@ -324,9 +344,11 @@ const availableTemplates = computed(() => templates.value.filter((item) => item.
 const currentTemplate = computed(() => templates.value.find((item) => item.id === form.templateId))
 const generateTemplates = computed(() => templates.value.filter((item) => item.productKey === generateForm.productKey || item.productKey === 'general'))
 const currentReviewConfig = computed(() => reviewStages.value.find((item) => item.key === reviewStage.value))
+const selectedTarget = computed(() => publishableTargets.value.find((item) => item.entryId === form.entryId))
 
-const productLabel = (key: string) => ({ shenlun: '申论', theory: '政治理论', general: '通用' }[key] || key)
-const channelLabel = (key: string) => ({ xiaohongshu: '小红书', douyin: '抖音', bilibili: 'B站', wechat: '公众号' }[key] || key)
+const productLabel = (key: string) => ({ shenlun: '申论学习', theory: '时政学习', general: '通用' }[key] || key)
+const channelLabel = (key: string) => ({ xiaohongshu: '小红书', zhihu: '知乎', wechat_channels: '微信视频号', douyin: '抖音', bilibili: 'B站', wechat: '公众号' }[key] || key)
+const topicTypeLabel = (key: string) => ({ daily: '今日内容', evergreen: '长期重点', review: '复习回顾' }[key] || key)
 const statusLabel = (key: string) => statusOptions.find((item) => item.value === key)?.label || key
 const statusType = (status: string) => status === 'published' ? 'success' : status === 'rejected' ? 'danger' : status === 'ready' ? 'warning' : 'info'
 const reviewStageLabel = (stage: ReviewStage) => reviewStages.value.find((item) => item.key === stage)?.label || stage
@@ -356,11 +378,17 @@ async function loadPackages() { await runLoad(async () => { packages.value = awa
 async function loadOverview() { overview.value = await fetchContentOpsOverview() }
 async function loadAll() { await Promise.all([loadTemplates(), loadReviewConfig(), loadReferenceLibrary(), loadPackages(), loadOverview()]) }
 async function refreshOperations() { await Promise.all([loadPackages(), loadOverview()]) }
+async function loadTargets(productKey: string) { publishableTargets.value = await fetchPublishableTargets(productKey) }
 
 function initVariant(channel: string, value?: { title?: string; body?: string }) {
   variantForms[channel] = { title: value?.title || '', body: value?.body || '' }
 }
-function onProductChange() { form.templateId = availableTemplates.value[0]?.id || ''; onTemplateChange() }
+async function onProductChange() {
+  form.templateId = availableTemplates.value[0]?.id || ''
+  form.entryId = ''
+  onTemplateChange()
+  await loadTargets(form.productKey)
+}
 function onTemplateChange() {
   Object.keys(variantForms).forEach((key) => delete variantForms[key])
   Object.keys(slotForms).forEach((key) => delete slotForms[key])
@@ -368,40 +396,67 @@ function onTemplateChange() {
   selectedChannels.value.forEach((channel) => initVariant(channel))
   currentTemplate.value?.slots.forEach((slot) => { slotForms[slot] ||= '' })
 }
-function onGenerateProductChange() { generateForm.templateId = generateTemplates.value[0]?.id || '' }
+async function onGenerateProductChange() {
+  generateForm.templateId = generateTemplates.value[0]?.id || ''
+  generateForm.articleId = ''
+  await loadTargets(generateForm.productKey)
+}
+function entryTargetFrom(target: PublishableTarget, topicType?: ContentEntryTarget['topicType']): ContentEntryTarget {
+  return {
+    topicType: topicType && target.topicTypes.includes(topicType) ? topicType : (target.topicTypes[0] || 'daily'),
+    entryId: target.entryId,
+    h5Path: target.h5Path,
+    miniappPath: target.miniappPath,
+    qrScene: `${target.sourceType === 'article' ? 'theory' : 'shenlun'}_${target.entryId}`.replace(/[^A-Za-z0-9_-]/g, '').slice(0, 64),
+    officialAccountKeyword: target.officialAccountKeyword,
+  }
+}
+function onGenerateTargetChange() {
+  const target = publishableTargets.value.find((item) => item.entryId === generateForm.articleId)
+  if (!target) return
+  generateForm.deepLink = target.h5Path
+  generateForm.entryTarget = entryTargetFrom(target)
+}
+function onTargetChange() {
+  const target = selectedTarget.value
+  if (!target) return
+  Object.assign(form, {
+    sourceType: target.sourceType, sourceId: target.sourceId, sourceTitle: target.title, deepLink: target.h5Path,
+    entryId: target.entryId, topicType: target.topicTypes[0] || 'daily', h5Path: target.h5Path, miniappPath: target.miniappPath,
+    qrScene: entryTargetFrom(target).qrScene, officialAccountKeyword: target.officialAccountKeyword,
+  })
+}
 async function openGenerate() {
-  Object.assign(generateForm, { productKey: 'shenlun', templateId: '', articleId: '', campaignKey: '', deepLink: '', plannedAt: '' })
+  Object.assign(generateForm, { productKey: 'shenlun', templateId: '', articleId: '', campaignKey: '', deepLink: '', entryTarget: { topicType: 'daily', entryId: '', h5Path: '', miniappPath: '', qrScene: '', officialAccountKeyword: '申论' }, plannedAt: '' })
   if (!templates.value.length) {
     try { await loadTemplates() }
     catch (error) { ElMessage.error(error instanceof Error ? error.message : '栏目模板加载失败'); return }
   }
-  onGenerateProductChange()
+  await onGenerateProductChange()
   generateVisible.value = true
-  if (!publishedArticles.value.length) {
-    try { publishedArticles.value = (await fetchArticles({ page: 1, page_size: 100, status: 'published' })).items }
-    catch (error) { ElMessage.error(error instanceof Error ? error.message : '审核文章加载失败') }
-  }
 }
-function resetForm() {
-  editingId.value = ''; Object.assign(form, { productKey: 'shenlun', templateId: '', sourceType: 'daily_task', sourceId: '', sourceTitle: '', campaignKey: '', deepLink: '', plannedAt: '' })
-  onProductChange()
+async function resetForm() {
+  editingId.value = ''; Object.assign(form, { productKey: 'shenlun', templateId: '', sourceType: '', sourceId: '', sourceTitle: '', campaignKey: '', deepLink: '', entryId: '', topicType: 'daily', h5Path: '', miniappPath: '', qrScene: '', officialAccountKeyword: '申论', plannedAt: '' })
+  await onProductChange()
 }
-function openCreate() { resetForm(); dialogVisible.value = true }
-function openEdit(row: ContentPackage) {
+async function openCreate() { await resetForm(); dialogVisible.value = true }
+async function openEdit(row: ContentPackage) {
   editingId.value = row.id
-  Object.assign(form, { productKey: row.productKey, templateId: row.templateId, sourceType: row.sourceType, sourceId: row.sourceId, sourceTitle: row.sourceTitle, campaignKey: row.campaignKey, deepLink: row.deepLink, plannedAt: row.plannedAt || '' })
+  await loadTargets(row.productKey)
+  Object.assign(form, { productKey: row.productKey, templateId: row.templateId, sourceType: row.sourceType, sourceId: row.sourceId, sourceTitle: row.sourceTitle, campaignKey: row.campaignKey, deepLink: row.deepLink, entryId: row.entryTarget?.entryId || '', topicType: row.entryTarget?.topicType || 'daily', h5Path: row.entryTarget?.h5Path || '', miniappPath: row.entryTarget?.miniappPath || '', qrScene: row.entryTarget?.qrScene || '', officialAccountKeyword: row.entryTarget?.officialAccountKeyword || '', plannedAt: row.plannedAt || '' })
   selectedChannels.value = Object.keys(row.variants)
   selectedChannels.value.forEach((channel) => initVariant(channel, row.variants[channel]))
   currentTemplate.value?.slots.forEach((slot) => { slotForms[slot] = row.slotValues?.[slot] || '' })
   dialogVisible.value = true
 }
 async function savePackage() {
-  if (!form.templateId || !form.sourceId.trim() || !selectedChannels.value.length) { ElMessage.warning('请补齐模板、母资产和至少一个渠道'); return }
+  if (!form.templateId || !form.sourceId.trim() || !form.entryId || !selectedChannels.value.length) { ElMessage.warning('请补齐模板、学习入口和至少一个渠道'); return }
   const variants = Object.fromEntries(selectedChannels.value.map((channel) => [channel, { ...variantForms[channel] }]))
   const slotValues = Object.fromEntries((currentTemplate.value?.slots || []).map((slot) => [slot, slotForms[slot] || '']))
   saving.value = true
   try {
-    const common = { sourceTitle: form.sourceTitle, campaignKey: form.campaignKey, deepLink: form.deepLink, plannedAt: form.plannedAt || null, slotValues, variants }
+    const entryTarget = { topicType: form.topicType, entryId: form.entryId, h5Path: form.h5Path, miniappPath: form.miniappPath, qrScene: form.qrScene, officialAccountKeyword: form.officialAccountKeyword }
+    const common = { sourceTitle: form.sourceTitle, campaignKey: form.campaignKey, deepLink: form.h5Path, entryTarget, plannedAt: form.plannedAt || null, slotValues, variants }
     if (editingId.value) await updateContentPackage(editingId.value, common)
     else await createContentPackage({ ...common, productKey: form.productKey, templateId: form.templateId, sourceType: form.sourceType, sourceId: form.sourceId })
     dialogVisible.value = false; await refreshOperations(); ElMessage.success('发布包草稿已保存')
@@ -468,6 +523,14 @@ async function downloadPackage(row: ContentPackage) {
     ElMessage.success('发布素材包已导出，请人工发布并回填状态')
   } catch (error) { ElMessage.error(error instanceof Error ? error.message : '导出失败') }
 }
+async function showPreflight(row: ContentPackage) {
+  preflightVisible.value = true
+  preflight.value = null
+  preflightLoading.value = true
+  try { preflight.value = await fetchContentPackagePreflight(row.id) }
+  catch (error) { ElMessage.error(error instanceof Error ? error.message : '发布检查失败') }
+  finally { preflightLoading.value = false }
+}
 onMounted(loadAll)
 </script>
 
@@ -487,6 +550,9 @@ onMounted(loadAll)
 .review-history-title { margin-bottom: 14px; color: #303133; font-weight: 650; }
 .review-record-head { display: flex; align-items: center; gap: 8px; color: #606266; font-size: 13px; }
 .review-record-note { margin-top: 7px; color: #606266; line-height: 1.6; }
+.preflight-list { display: grid; gap: 10px; min-height: 80px; }
+.preflight-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid #ebeef5; }
+.preflight-item p { margin: 4px 0 0; color: #606266; font-size: 13px; }
 .reference-alert { margin-bottom: 12px; }
 .reference-sources { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .reference-card h4 { margin: 16px 0 8px; color: #303133; }
