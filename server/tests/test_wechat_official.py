@@ -92,9 +92,36 @@ def test_text_and_subscribe_replies(monkeypatch):
     parsed = parse_message(theory.content)
     assert parsed.to_user == "user_openid"
     assert parsed.from_user == "gh_duhengge"
-    assert "知行日知" in parsed.content
+    assert "杜衡阁｜时政学习" in parsed.content
     assert "http://203.0.113.10/theory/" in parsed.content
-    assert "欢迎来到杜衡阁" in parse_message(subscribe.content).content
+    assert "欢迎来到「杜衡阁」" in parse_message(subscribe.content).content
+
+
+def test_numeric_menu_and_navigation(monkeypatch):
+    _enable(monkeypatch)
+    with TestClient(app) as client:
+        menu = client.post(f"/api/wechat/callback?{_query(nonce='numeric-0')}", content=_xml(content="0"))
+        today = client.post(
+            f"/api/wechat/callback?{_query(nonce='numeric-1')}",
+            content=_xml(content="1", msg_id="10011"),
+        )
+        theory = client.post(
+            f"/api/wechat/callback?{_query(nonce='numeric-2')}",
+            content=_xml(content="2", msg_id="10012"),
+        )
+        shenlun = client.post(
+            f"/api/wechat/callback?{_query(nonce='numeric-3')}",
+            content=_xml(content="3", msg_id="10013"),
+        )
+
+    menu_text = parse_message(menu.content).content
+    assert "杜衡阁｜学习导航" in menu_text
+    assert "1  今日学习" in menu_text
+    assert "2  时政学习" in menu_text
+    assert "3  申论学习" in menu_text
+    assert "今日任务" in parse_message(today.content).content
+    assert "/theory/" in parse_message(theory.content).content
+    assert "三刀剖析" in parse_message(shenlun.content).content
 
 
 def test_fallback_unsupported_and_unsubscribe(monkeypatch):
@@ -109,7 +136,7 @@ def test_fallback_unsupported_and_unsubscribe(monkeypatch):
             f"/api/wechat/callback?{_query(nonce='nonce-4')}",
             content=_xml(msg_type="event", content="", event="unsubscribe", msg_id="10004"),
         )
-    assert "回复“菜单”" in parse_message(fallback.content).content
+    assert "回复 0 查看学习导航" in parse_message(fallback.content).content
     assert "只能识别文字" in parse_message(image.content).content
     assert unsubscribe.text == "success"
 

@@ -93,8 +93,8 @@ def _link(base_url: str, path: str) -> str:
 
 def _with_link(title: str, description: str, url: str) -> str:
     if not url:
-        return f"{title}\n{description}\n\n入口正在配置中，回复“菜单”可查看当前可用内容。"
-    return f"{title}\n{description}\n\n开始学习：{url}"
+        return f"杜衡阁｜{title}\n\n{description}\n\n入口正在配置中。\n回复 0 返回学习导航。"
+    return f"杜衡阁｜{title}\n\n{description}\n\n进入学习\n{url}\n\n回复 0 返回学习导航。"
 
 
 def decide_reply(message: InboundMessage, public_base_url: str) -> ReplyDecision:
@@ -105,34 +105,56 @@ def decide_reply(message: InboundMessage, public_base_url: str) -> ReplyDecision
         if message.event == "subscribe":
             return ReplyDecision(
                 "subscribe",
-                "欢迎来到杜衡阁。\n\n这里提供时政学习与申论学习内容，帮助你把重要文章读懂、练会、留下学习记录。\n\n回复“今日”，开始今天最值得完成的一次学习；回复“菜单”，查看全部入口。",
+                "欢迎来到「杜衡阁」\n\n"
+                "把重要文章读懂，把关键题目练会。\n\n"
+                "1  今日学习\n"
+                "2  时政学习\n"
+                "3  申论学习\n\n"
+                "回复数字即可进入，回复 0 查看导航。",
             )
         if message.event == "unsubscribe":
             return ReplyDecision("unsubscribe", None)
-        return ReplyDecision("unsupported_event", "已收到。回复“菜单”查看当前学习入口。")
+        return ReplyDecision("unsupported_event", "已收到。\n\n回复 0 查看学习导航。")
 
     if message.msg_type != "text":
-        return ReplyDecision("unsupported_message", "暂时只能识别文字消息。回复“菜单”查看学习入口。")
+        return ReplyDecision("unsupported_message", "暂时只能识别文字消息。\n\n回复 0 查看学习导航。")
 
     text = _normalise_text(message.content)
     aliases = {
-        "today": {"今日", "今天", "今日学习", "今日一练"},
-        "theory": {"时政", "日知", "时政学习"},
-        "shenlun": {"申论", "策论", "申论学习", "三刀"},
-        "menu": {"菜单", "帮助", "导航", "开始"},
+        "today": {"1", "今日", "今天", "今日学习", "今日一练"},
+        "theory": {"2", "时政", "日知", "时政学习"},
+        "shenlun": {"3", "申论", "策论", "申论学习", "三刀"},
+        "menu": {"0", "菜单", "帮助", "导航", "开始"},
     }
     if text in aliases["today"]:
-        return ReplyDecision("today", _with_link("今日学习", "先完成一份短而完整的时政阅读与练习。", theory_url))
+        return ReplyDecision(
+            "today",
+            _with_link("今日学习", "今日任务\n阅读重点内容，再完成一组 5 题练习。", theory_url),
+        )
     if text in aliases["theory"]:
-        return ReplyDecision("theory", _with_link("时政学习｜知行日知", "阅读重点文章，完成 5 题分辑或同文合集。", theory_url))
+        return ReplyDecision(
+            "theory",
+            _with_link("时政学习", "学习路径\n阅读全文 → 提炼重点 → 5 题分辑／同文合集", theory_url),
+        )
     if text in aliases["shenlun"]:
-        return ReplyDecision("shenlun", _with_link("申论学习｜知行策论", "从原文阅读、三刀示范到一次短练习。", shenlun_url))
+        return ReplyDecision(
+            "shenlun",
+            _with_link("申论学习", "学习路径\n阅读全文 → 三刀剖析 → 一次短练习", shenlun_url),
+        )
     if text in aliases["menu"]:
         return ReplyDecision(
             "menu",
-            "杜衡阁学习菜单\n\n回复“今日”：开始今天的学习\n回复“时政”：进入知行日知\n回复“申论”：进入知行策论\n\n每次只选一个任务，完成后再继续。",
+            "杜衡阁｜学习导航\n\n"
+            "1  今日学习\n"
+            "2  时政学习\n"
+            "3  申论学习\n\n"
+            "回复数字即可进入。\n"
+            "每次只选一个任务，完成后再继续。",
         )
-    return ReplyDecision("fallback", "暂时没有识别这个问题。\n\n回复“今日”开始学习，或回复“菜单”查看全部入口。")
+    return ReplyDecision(
+        "fallback",
+        "暂时没有识别这个问题。\n\n回复 1 开始今日学习，回复 0 查看学习导航。",
+    )
 
 
 def message_key(message: InboundMessage) -> str:
