@@ -96,6 +96,19 @@ def check_env(path: Path, report: Report) -> None:
         report.ok(f"ALLOW_REGISTER 已明确设置为 {values['ALLOW_REGISTER'].lower()}")
     if not values.get("DOMAIN"):
         report.warn("DOMAIN 尚未设置；可以先做公网 IP 回调联调，但不能完成小程序正式发布")
+    if values.get("WECHAT_OFFICIAL_ENABLED", "false").lower() == "true":
+        token = values.get("WECHAT_OFFICIAL_TOKEN", "")
+        public_base_url = values.get("WECHAT_OFFICIAL_PUBLIC_BASE_URL", "")
+        if len(token) < 16:
+            report.error("公众号回调已启用，但 WECHAT_OFFICIAL_TOKEN 少于 16 位")
+        else:
+            report.ok("公众号回调 Token 已配置（值不显示）")
+        if not public_base_url.startswith(("http://", "https://")):
+            report.error("公众号回调已启用，但 WECHAT_OFFICIAL_PUBLIC_BASE_URL 不是有效 HTTP(S) 地址")
+        else:
+            report.ok("公众号公开入口基地址已配置")
+        if not values.get("WECHAT_OFFICIAL_APP_ID"):
+            report.warn("WECHAT_OFFICIAL_APP_ID 尚未配置；明文被动回复可联调，主动接口暂不可用")
 
 
 def check_artifacts(path: Path, report: Report) -> None:

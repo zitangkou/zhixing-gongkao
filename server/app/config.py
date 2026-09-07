@@ -19,6 +19,12 @@ class Settings(BaseSettings):
     # 知识框架本地目录（开发可用 Obsidian；生产留空则走 data/knowledge + 管理端上传）
     knowledge_kb_dir: str = ""
 
+    # 杜衡阁公众号基础回调。密钥只允许通过服务器环境变量注入。
+    wechat_official_enabled: bool = False
+    wechat_official_token: str = ""
+    wechat_official_app_id: str = ""
+    wechat_official_public_base_url: str = ""
+
     llm_enabled: bool = False
     llm_api_key: str = ""
     llm_base_url: str = "https://api.deepseek.com"

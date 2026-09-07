@@ -229,3 +229,32 @@ python3 scripts/release-preflight.py --env-file .env --base-url https://你的�
 ```
 
 公网 IP 的 HTTP 地址可以用于公众号服务器回调技术验证，但不能替代微信小程序的正式 HTTPS API 域名。检查工具只显示密钥是否安全配置，不会输出密钥内容。
+
+## 11. 杜衡阁公众号回调联调
+
+基础回调地址固定为：
+
+```text
+http://公网IP/api/wechat/callback
+```
+
+如果容器仍只监听 `127.0.0.1:8081`，应由宿主机 Nginx 的 80 端口转发；不要在微信后台填写容器内部端口。服务器 `.env` 增加：
+
+```dotenv
+WECHAT_OFFICIAL_ENABLED=true
+WECHAT_OFFICIAL_TOKEN=至少16位随机Token
+WECHAT_OFFICIAL_APP_ID=杜衡阁公众号AppID
+WECHAT_OFFICIAL_PUBLIC_BASE_URL=http://公网IP
+```
+
+真实 Token、AppSecret 和 EncodingAESKey 不得提交到 Git。微信公众平台“服务器配置”中的 Token 必须与 `.env` 完全一致。
+
+当前阶段使用明文模式验证 URL、关注回复和文字关键词；支持“今日、时政、申论、菜单”及短兜底。安全模式的 AES 消息会明确拒绝，完成加解密单元后再在公众号后台切换。
+
+配置后先在服务器自检：
+
+```bash
+python3 scripts/release-preflight.py --env-file .env --base-url http://公网IP
+```
+
+备案与证书完成后，将公众号服务器 URL 和 `WECHAT_OFFICIAL_PUBLIC_BASE_URL` 同时切换到 `https://正式域名`。
