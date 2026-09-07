@@ -33,7 +33,8 @@ if [[ ! -f .env ]]; then
   cp .env.docker.example .env
   SECRET="$(openssl rand -hex 32 2>/dev/null || head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \n')"
   ADMIN_PASS="$(openssl rand -hex 8 2>/dev/null || head -c 8 /dev/urandom | od -An -tx1 | tr -d ' \n')"
-  WECHAT_TOKEN="$(openssl rand -hex 24 2>/dev/null || head -c 24 /dev/urandom | od -An -tx1 | tr -d ' \n')"
+  # 微信公众平台 Token 仅接受 3～32 位英文或数字；使用 32 位十六进制随机值。
+  WECHAT_TOKEN="$(openssl rand -hex 16 2>/dev/null || head -c 16 /dev/urandom | od -An -tx1 | tr -d ' \n')"
   perl -0pi -e "s/^SECRET_KEY=.*/SECRET_KEY=${SECRET}/; s/^ADMIN_PASSWORD=.*/ADMIN_PASSWORD=${ADMIN_PASS}/; s/^WECHAT_OFFICIAL_TOKEN=.*/WECHAT_OFFICIAL_TOKEN=${WECHAT_TOKEN}/" .env
   echo "  已生成 SECRET_KEY；管理员账号：admin / ${ADMIN_PASS}（请保存）"
   echo "  已生成公众号 Token（不在日志显示）；启用回调前从服务器 .env 安全复制到微信后台。"
@@ -62,6 +63,13 @@ if [[ "$(env_value SECRET_KEY)" == "please-change-me-use-openssl-rand-hex-32" ]]
 fi
 if [[ "$(env_value ADMIN_PASSWORD)" == "change-this-password" ]] || [[ -z "$(env_value ADMIN_PASSWORD)" ]]; then
   echo "ADMIN_PASSWORD 未安全配置，拒绝部署。请在 .env 中设置强密码。"
+  exit 1
+fi
+
+WECHAT_ENABLED="$(env_value WECHAT_OFFICIAL_ENABLED)"
+WECHAT_TOKEN="$(env_value WECHAT_OFFICIAL_TOKEN)"
+if [[ "${WECHAT_ENABLED,,}" == "true" ]] && [[ ! "$WECHAT_TOKEN" =~ ^[A-Za-z0-9]{16,32}$ ]]; then
+  echo "WECHAT_OFFICIAL_TOKEN 必须为 16～32 位英文或数字（微信平台上限为 32 位）。"
   exit 1
 fi
 

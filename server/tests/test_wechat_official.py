@@ -10,7 +10,7 @@ from app.main import app
 from app.services.wechat_official_service import clear_dedup_cache, parse_message
 
 
-TOKEN = "wechat-test-token-2026"
+TOKEN = "WechatTestToken2026"
 
 
 @pytest.fixture(autouse=True)
@@ -53,6 +53,15 @@ def _enable(monkeypatch, base_url: str = "http://203.0.113.10") -> None:
 def test_callback_is_disabled_by_default(monkeypatch):
     monkeypatch.setenv("WECHAT_OFFICIAL_ENABLED", "false")
     monkeypatch.setenv("WECHAT_OFFICIAL_TOKEN", TOKEN)
+    get_settings.cache_clear()
+    with TestClient(app) as client:
+        response = client.get(f"/api/wechat/callback?{_query()}&echostr=hello")
+    assert response.status_code == 503
+
+
+def test_callback_rejects_token_longer_than_wechat_limit(monkeypatch):
+    monkeypatch.setenv("WECHAT_OFFICIAL_ENABLED", "true")
+    monkeypatch.setenv("WECHAT_OFFICIAL_TOKEN", "a" * 48)
     get_settings.cache_clear()
     with TestClient(app) as client:
         response = client.get(f"/api/wechat/callback?{_query()}&echostr=hello")

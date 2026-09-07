@@ -1,6 +1,8 @@
 """杜衡阁微信公众号服务器回调。"""
 from __future__ import annotations
 
+import re
+
 from fastapi import APIRouter, HTTPException, Query, Request, Response
 from fastapi.responses import PlainTextResponse
 
@@ -19,7 +21,7 @@ def _require_config():
     settings = get_settings()
     if not settings.wechat_official_enabled:
         raise HTTPException(status_code=503, detail="公众号回调未启用")
-    if len(settings.wechat_official_token) < 16:
+    if not re.fullmatch(r"[A-Za-z0-9]{16,32}", settings.wechat_official_token):
         raise HTTPException(status_code=503, detail="公众号回调配置不完整")
     return settings
 

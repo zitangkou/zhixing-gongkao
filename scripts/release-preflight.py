@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -99,8 +100,8 @@ def check_env(path: Path, report: Report) -> None:
     if values.get("WECHAT_OFFICIAL_ENABLED", "false").lower() == "true":
         token = values.get("WECHAT_OFFICIAL_TOKEN", "")
         public_base_url = values.get("WECHAT_OFFICIAL_PUBLIC_BASE_URL", "")
-        if len(token) < 16:
-            report.error("公众号回调已启用，但 WECHAT_OFFICIAL_TOKEN 少于 16 位")
+        if not re.fullmatch(r"[A-Za-z0-9]{16,32}", token):
+            report.error("公众号回调已启用，但 WECHAT_OFFICIAL_TOKEN 不是 16～32 位英文或数字")
         else:
             report.ok("公众号回调 Token 已配置（值不显示）")
         if not public_base_url.startswith(("http://", "https://")):
