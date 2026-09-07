@@ -58,3 +58,25 @@ class UserDailyTaskProgress(Base):
     reviewed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
     completed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
+
+
+class UserGuestLearningRecord(Base):
+    """游客练习登录后的版本化快照；不等同积分、错题或个人开采记录。"""
+
+    __tablename__ = "user_guest_learning_records"
+    __table_args__ = (
+        UniqueConstraint("user_id", "product_key", "record_key", name="uq_user_product_guest_record"),
+    )
+
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=lambda: gen_id("glr"))
+    user_id: Mapped[str] = mapped_column(ForeignKey("app_users.id"), index=True)
+    product_key: Mapped[str] = mapped_column(String(32), index=True)
+    record_key: Mapped[str] = mapped_column(String(180), index=True)
+    record_type: Mapped[str] = mapped_column(String(32), index=True)
+    content_id: Mapped[str] = mapped_column(String(64), index=True)
+    revision: Mapped[str] = mapped_column(String(64), index=True)
+    payload_json: Mapped[str] = mapped_column(Text, default="{}")
+    source_device_id: Mapped[str] = mapped_column(String(64), default="")
+    client_updated_at: Mapped[datetime] = mapped_column(DateTime)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)

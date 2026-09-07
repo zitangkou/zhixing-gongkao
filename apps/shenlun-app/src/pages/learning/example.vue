@@ -143,7 +143,7 @@ import { showToast } from '@/utils/platform'
 import { isLoggedIn } from '@/utils/auth'
 
 type Section = 'article' | 'example' | 'practice'
-interface SavedPractice { answer?: string; checks?: boolean[]; revealed?: boolean }
+interface SavedPractice { answer?: string; checks?: boolean[]; revealed?: boolean; updatedAt?: string }
 
 const router = useRouter()
 const articleId = String(router.params?.id || '').trim()
@@ -173,7 +173,7 @@ function restore() {
 }
 
 function save() {
-  try { Taro.setStorageSync(storageKey.value, { answer: answer.value, checks: checks.value, revealed: revealed.value }) }
+  try { Taro.setStorageSync(storageKey.value, { answer: answer.value, checks: checks.value, revealed: revealed.value, updatedAt: new Date().toISOString() }) }
   catch { showToast('本机保存失败，离开页面后可能丢失练习') }
 }
 

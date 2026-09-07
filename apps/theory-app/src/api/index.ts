@@ -123,6 +123,20 @@ export interface LearningBundle {
   parts: { number: number; questionIds: string[] }[]
 }
 
+export interface GuestLearningRecord {
+  recordType: 'theory_article_quiz'
+  contentId: string
+  revision: string
+  payload: Record<string, unknown>
+  updatedAt: string
+}
+
+export interface GuestLearningMergeResult {
+  accepted: number
+  unchanged: number
+  records: GuestLearningRecord[]
+}
+
 interface AuthResult { access_token: string; token_type: string; user: UserMe }
 
 async function request<T>(path: string, options: { method?: 'GET' | 'POST' | 'PUT' | 'DELETE'; data?: unknown; auth?: boolean } = {}): Promise<ApiResponse<T>> {
@@ -153,6 +167,11 @@ async function request<T>(path: string, options: { method?: 'GET' | 'POST' | 'PU
 }
 
 export const api = {
+  mergeGuestRecords(deviceId: string, records: GuestLearningRecord[]) {
+    return request<GuestLearningMergeResult>('/api/learning/guest-records/merge', {
+      method: 'POST', data: { deviceId, records },
+    })
+  },
   getLearningBundle(articleId: string) {
     return request<LearningBundle>(`/api/learning/articles/${encodeURIComponent(articleId)}`, { auth: false })
   },

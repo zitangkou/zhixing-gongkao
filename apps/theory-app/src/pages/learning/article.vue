@@ -115,7 +115,7 @@ const completed = computed(() => selectedQuestions.value.filter(question => reco
 const correctCount = computed(() => selectedQuestions.value.filter(question => records.value[question.id]?.correct).length)
 
 function save() {
-  try { Taro.setStorageSync(storageKey.value, { records: records.value, drafts: drafts.value, scope: scope.value, index: index.value }) }
+  try { Taro.setStorageSync(storageKey.value, { records: records.value, drafts: drafts.value, scope: scope.value, index: index.value, updatedAt: new Date().toISOString() }) }
   catch { storageNote.value = '本机存储失败，离开页面后可能丢失进度。请检查设备存储空间。' }
 }
 async function load() {

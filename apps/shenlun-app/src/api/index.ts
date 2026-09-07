@@ -122,6 +122,20 @@ export interface ShenlunLearningBundle {
   revision: string
 }
 
+export interface GuestLearningRecord {
+  recordType: 'shenlun_short_practice'
+  contentId: string
+  revision: string
+  payload: Record<string, unknown>
+  updatedAt: string
+}
+
+export interface GuestLearningMergeResult {
+  accepted: number
+  unchanged: number
+  records: GuestLearningRecord[]
+}
+
 export interface UserMe {
   id: string
   username?: string
@@ -195,6 +209,11 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<A
 }
 
 export const api = {
+  mergeGuestRecords(deviceId: string, records: GuestLearningRecord[]) {
+    return request<GuestLearningMergeResult>('/api/learning/guest-records/merge', {
+      method: 'POST', data: { deviceId, records },
+    })
+  },
   login(username: string, password: string) {
     return request<AuthResult>('/api/auth/login', {
       method: 'POST', data: { username, password }, auth: false,
