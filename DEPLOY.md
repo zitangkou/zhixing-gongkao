@@ -1,7 +1,7 @@
 # 知行公考 · 云服务器一键部署
 
-> 适用：一台云服务器（建议 Ubuntu 22.04 / Debian 12，2核4G+）部署整套 H5 + FastAPI + 管理后台。
-> 方案参考：coffee-order 的单机 Docker 部署模式（容器内网端口 + 宿主机 Nginx 网关按域名转发）。
+> 适用：一台独立云服务器（建议 Ubuntu 22.04 / Debian 12，2核4G+）部署整套 H5 + FastAPI + 管理后台。
+> 当前默认：备案前由项目容器直接监听公网 80；备案和证书完成后切换为宿主机 Nginx HTTPS 网关。
 > 更新：2026-09-08
 
 ## 快速命令速查
@@ -16,7 +16,7 @@ cd zhixing-gongkao && bash deploy/setup-docker.sh   # Docker 已就绪时会自�
 bash deploy.sh
 bash scripts/deploy-update.sh
 
-# ③ 域名网关（可选，正式运营推荐）
+# ③ 备案与证书完成后切换 HTTPS 域名网关
 cp deploy/nginx.conf /etc/nginx/sites-available/zhixing-gongkao
 ln -sf /etc/nginx/sites-available/zhixing-gongkao /etc/nginx/sites-enabled/
 nginx -t && systemctl reload nginx
@@ -26,32 +26,27 @@ bash deploy/backup.sh
 bash deploy/install-backup.sh
 ```
 
-## 与现有项目共存（如服务器已部署 coffee-order）
+## 当前部署模式：独立服务器
 
-本项目的部署**与已在跑的项目完全隔离**，不会影响它们：
+服务器重置后只运行本项目，不再保留为其他项目预留的 80 端口。部署分为两个阶段：
 
-| 维度 | coffee-order（示例） | 知行公考 | 冲突风险 |
-|---|---|---|---|
-| compose 项目名 | `coffee-order` | `zhixing-gongkao` | 无（网络 / 卷 / 容器各自独立） |
-| 容器名 | `coffee-web` / `coffee-server` / `coffee-mysql` | `zhixing-gongkao` | 无 |
-| 宿主端口 | `127.0.0.1:8080` | `127.0.0.1:8081`（默认） | 无；若 8081 被占，改 `.env` 的 `HTTP_PORT` |
-| 数据卷 | `coffee-order_*` | `zhixing-gongkao_zhixing-gongkao-data` | 无 |
-| 镜像 | `coffee-order-*` | `zhixing-gongkao-zhixing-gongkao` | 无 |
+| 阶段 | `HTTP_BIND` | `HTTP_PORT` | 公网入口 | 用途 |
+|---|---|---:|---|---|
+| 备案前 | `0.0.0.0` | `80` | 容器直接监听 `http://公网IP` | H5、API、公众号明文回调联调 |
+| 正式上线 | `127.0.0.1` | `8081` | 宿主机 Nginx 监听 80/443 | HTTPS H5、小程序 API、公众号安全回调 |
 
-**关键安全点：**
+备案前注意：
 
-1. **不要重复执行全局 Docker 配置**。`deploy/setup-docker.sh` 已做共存保护：检测到 Docker / Compose 就绪就直接跳过，**不会**覆盖 `/etc/docker/daemon.json`，**不会**重启 docker 守护进程（重启会短暂中断所有容器）。已在跑 coffee-order 的服务器上，直接执行 `bash deploy.sh` 即可。
-2. **compose 命令只作用于本项目**。`docker compose up/down/restart` 在项目目录内执行，只影响 `zhixing-gongkao` 项目；不要用 `docker compose down -v`（连本项目的卷也会删）。
-3. **域名网关互不覆盖**。宿主机 Nginx 每个项目一个站点文件（`/etc/nginx/sites-available/`），本项目的 `deploy/nginx.conf` 用**独立的 server_name**，不修改其它项目配置；`nginx -t` 通过后再 `reload`。
-4. **备份定时任务各自独立**。`deploy/install-backup.sh` 只在 crontab 里追加本项目条目（带项目路径标识），保留已有条目。
+1. 云安全组只放行 `22` 和 `80`，备案与证书完成后再放行 `443`。
+2. HTTP 没有传输加密，不要在公共网络登录管理后台或传输敏感资料。
+3. 公众号 Token 等密钥只写服务器 `.env`，不提交 Git。
+4. 不要执行 `docker compose down -v`，它会删除本项目数据卷。
 
 ## 0. 部署架构（单机）
 
 ```text
-公网 80/443（宿主机 Nginx 网关，按域名转发）
-        │
-        ▼
-项目容器 Nginx（默认 127.0.0.1:8081）
+备案前：公网 80 → 项目容器 Nginx
+正式：公网 80/443 → 宿主机 Nginx → 127.0.0.1:8081 → 项目容器 Nginx
    ├── /          → 综合 H5 静态页
    ├── /shenlun/  → 知行策论 H5
    ├── /theory/   → 知行日知 H5
@@ -77,16 +72,16 @@ bash deploy/install-backup.sh
 
 生产域名网关不对公网开放 `/docs` 与 `/openapi.json`。需要排障时，应通过本机后端端口或 SSH 隧道访问。
 
-宿主机监听由 `.env` 控制：`HTTP_PORT`（默认 `8081`）与 `HTTP_BIND`（默认 `127.0.0.1`）。
+宿主机监听由 `.env` 控制：独立服务器备案前默认 `HTTP_PORT=80`、`HTTP_BIND=0.0.0.0`。
 
 两种对外方式：
 
-- **方案 A：IP:端口直连**（测试阶段）——`.env` 设 `HTTP_BIND=0.0.0.0`，访问 `http://IP:8081/`。
-- **方案 B：域名网关**（推荐，正式运营）——`HTTP_BIND=127.0.0.1`，宿主机 Nginx 按域名转发到 `127.0.0.1:8081`，安全组只需放行 `22/80/443`。
+- **阶段 A：公网 IP 直连**——使用默认值，访问 `http://公网IP/`。
+- **阶段 B：HTTPS 域名网关**——把 `.env` 改为 `HTTP_BIND=127.0.0.1`、`HTTP_PORT=8081`，宿主机 Nginx 转发到 `127.0.0.1:8081`。
 
 ## 2. 服务器准备
 
-- 安全组放行：`22`（SSH）、`80`、`443`（方案 A 还需放行 `8081`）。
+- 安全组放行：备案前 `22`（SSH）和 `80`；正式 HTTPS 再增加 `443`。无需开放 `8000`、`8001`、`8081`。
 - 连接服务器后安装 git：
 
 ```bash
@@ -123,7 +118,20 @@ bash deploy.sh
 nano .env    # 配置 DOMAIN、CORS_ORIGINS、ALLOW_REGISTER，确认 HTTP_BIND/HTTP_PORT
 ```
 
+备案前部署公众号联调时，保持 `DOMAIN=`、`HTTP_BIND=0.0.0.0`、`HTTP_PORT=80`，并将 `WECHAT_OFFICIAL_PUBLIC_BASE_URL` 设置为 `http://公网IP`。
+
 ## 4. 配置域名网关（方案 B）
+
+执行本节前先把 `.env` 改为：
+
+```dotenv
+HTTP_BIND=127.0.0.1
+HTTP_PORT=8081
+DOMAIN=你的正式域名
+WECHAT_OFFICIAL_PUBLIC_BASE_URL=https://你的正式域名
+```
+
+重新执行 `bash deploy.sh`，确认容器只监听本机 8081 后，再配置宿主机 Nginx：
 
 ```bash
 cp deploy/nginx.conf /etc/nginx/sites-available/zhixing-gongkao
@@ -162,7 +170,7 @@ docker compose exec -T zhixing-gongkao sh -c 'cd /app/server && tar -xzf -' < /o
 |---|---|---|
 | `SECRET_KEY` | deploy.sh 自动生成 | JWT 密钥 |
 | `ADMIN_USERNAME` / `ADMIN_PASSWORD` | `admin` / 自动生成 | 管理后台账号 |
-| `HTTP_PORT` / `HTTP_BIND` | `8081` / `127.0.0.1` | 宿主端口与绑定地址 |
+| `HTTP_PORT` / `HTTP_BIND` | `80` / `0.0.0.0` | 备案前公网直连；HTTPS 阶段改为 `8081` / `127.0.0.1` |
 | `DOMAIN` | 空 | 对外域名（deploy.sh 汇总提示用） |
 | `CORS_ORIGINS` | `*` | 同域部署可 `*` |
 | `ALLOW_REGISTER` | `false` | 是否开放学员端自助注册 |

@@ -7,9 +7,9 @@ services:
     container_name: zhixing-gongkao
     restart: unless-stopped
     ports:
-      # 方案B（域名网关，推荐）：只监听本机 127.0.0.1，由宿主机 Nginx 按域名转发；
-      # 方案A（IP:端口直连）：把 .env 的 HTTP_BIND 改为 0.0.0.0
-      - "${HTTP_BIND:-127.0.0.1}:${HTTP_PORT:-8081}:80"
+      # 独立服务器备案前默认直接占用公网 80；HTTPS 上线时改为 127.0.0.1:8081，
+      # 再由宿主机 Nginx 监听公网 80/443。
+      - "${HTTP_BIND:-0.0.0.0}:${HTTP_PORT:-80}:80"
     env_file:
       - .env
     environment:

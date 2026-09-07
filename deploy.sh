@@ -24,7 +24,7 @@ http_get() {
 
 env_value() {
   local key="$1"
-  grep -E "^${key}=" .env | head -1 | cut -d= -f2-
+  awk -v key="$key" '$0 ~ "^" key "=" { sub(/^[^=]*=/, ""); print; exit }' .env
 }
 
 # ---------- 1/5 准备 .env ----------
@@ -33,17 +33,28 @@ if [[ ! -f .env ]]; then
   cp .env.docker.example .env
   SECRET="$(openssl rand -hex 32 2>/dev/null || head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \n')"
   ADMIN_PASS="$(openssl rand -hex 8 2>/dev/null || head -c 8 /dev/urandom | od -An -tx1 | tr -d ' \n')"
-  perl -0pi -e "s/^SECRET_KEY=.*/SECRET_KEY=${SECRET}/; s/^ADMIN_PASSWORD=.*/ADMIN_PASSWORD=${ADMIN_PASS}/" .env
+  WECHAT_TOKEN="$(openssl rand -hex 24 2>/dev/null || head -c 24 /dev/urandom | od -An -tx1 | tr -d ' \n')"
+  perl -0pi -e "s/^SECRET_KEY=.*/SECRET_KEY=${SECRET}/; s/^ADMIN_PASSWORD=.*/ADMIN_PASSWORD=${ADMIN_PASS}/; s/^WECHAT_OFFICIAL_TOKEN=.*/WECHAT_OFFICIAL_TOKEN=${WECHAT_TOKEN}/" .env
   echo "  已生成 SECRET_KEY；管理员账号：admin / ${ADMIN_PASS}（请保存）"
-  echo "  建议继续编辑 .env：DOMAIN=你的域名、CORS_ORIGINS、ALLOW_REGISTER"
+  echo "  已生成公众号 Token（不在日志显示）；启用回调前从服务器 .env 安全复制到微信后台。"
+  echo "  建议继续编辑 .env：公网入口、公众号 AppID、CORS_ORIGINS、ALLOW_REGISTER"
 else
   echo "[1/5] 使用现有 .env"
 fi
 
 HTTP_PORT="$(env_value HTTP_PORT)"
-HTTP_PORT="${HTTP_PORT:-8081}"
+HTTP_PORT="${HTTP_PORT:-80}"
 HTTP_BIND="$(env_value HTTP_BIND)"
-HTTP_BIND="${HTTP_BIND:-127.0.0.1}"
+HTTP_BIND="${HTTP_BIND:-0.0.0.0}"
+
+if [[ ! "$HTTP_PORT" =~ ^[0-9]+$ ]] || (( HTTP_PORT < 1 || HTTP_PORT > 65535 )); then
+  echo "HTTP_PORT 必须是 1～65535 的整数。"
+  exit 1
+fi
+if [[ "$HTTP_BIND" != "0.0.0.0" && "$HTTP_BIND" != "127.0.0.1" ]]; then
+  echo "HTTP_BIND 只允许 0.0.0.0（公网直连）或 127.0.0.1（域名网关）。"
+  exit 1
+fi
 
 if [[ "$(env_value SECRET_KEY)" == "please-change-me-use-openssl-rand-hex-32" ]] || [[ -z "$(env_value SECRET_KEY)" ]]; then
   echo "SECRET_KEY 未安全配置，拒绝部署。请在 .env 中使用随机密钥。"
@@ -90,13 +101,26 @@ if [[ -n "${DOMAIN:-}" ]]; then
   echo "  管理后台:  http://${DOMAIN}/manage/  （账号与密码见 .env）"
   echo "  正式发布前请配置 HTTPS，并再次执行：python3 scripts/release-preflight.py --base-url https://${DOMAIN} --env-file .env"
 else
-  echo "  综合 H5:   http://127.0.0.1:${HTTP_PORT}/"
-  echo "  知行日知:  http://127.0.0.1:${HTTP_PORT}/theory/"
-  echo "  知行策论:  http://127.0.0.1:${HTTP_PORT}/shenlun/"
-  echo "  管理后台:  http://127.0.0.1:${HTTP_PORT}/manage/"
   if [[ "$HTTP_BIND" == "0.0.0.0" ]]; then
-    echo "  当前允许公网 IP:${HTTP_PORT} 访问；请同时限制云安全组来源。"
+    PUBLIC_BASE="$(env_value WECHAT_OFFICIAL_PUBLIC_BASE_URL)"
+    if [[ "$PUBLIC_BASE" =~ ^https?:// ]]; then
+      echo "  综合 H5:   ${PUBLIC_BASE%/}/"
+      echo "  知行日知:  ${PUBLIC_BASE%/}/theory/"
+      echo "  知行策论:  ${PUBLIC_BASE%/}/shenlun/"
+      echo "  管理后台:  ${PUBLIC_BASE%/}/manage/"
+      echo "  公众号回调: ${PUBLIC_BASE%/}/api/wechat/callback"
+    else
+      PORT_SUFFIX=":${HTTP_PORT}"
+      [[ "$HTTP_PORT" == "80" ]] && PORT_SUFFIX=""
+      echo "  公网访问:  http://服务器公网IP${PORT_SUFFIX}/"
+      echo "  公众号回调: http://服务器公网IP${PORT_SUFFIX}/api/wechat/callback"
+    fi
+    echo "  当前直接监听公网；请在云安全组放行 80，并暂时避免通过 HTTP 登录管理后台。"
   else
+    echo "  综合 H5:   http://127.0.0.1:${HTTP_PORT}/"
+    echo "  知行日知:  http://127.0.0.1:${HTTP_PORT}/theory/"
+    echo "  知行策论:  http://127.0.0.1:${HTTP_PORT}/shenlun/"
+    echo "  管理后台:  http://127.0.0.1:${HTTP_PORT}/manage/"
     echo "  当前仅监听本机；公网访问需配置域名网关，或在临时联调时明确改为 HTTP_BIND=0.0.0.0。"
   fi
 fi

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# 知行公考 · Docker 环境初始化（每台服务器只执行一次，且与已有项目共存安全）
+# 知行公考 · Docker 环境初始化（全新独立服务器只执行一次）
 #
 # 重要：
-# - 若服务器已部署过其它项目（如 coffee-order），Docker / Compose 通常已就绪，
-#   本脚本会直接跳过，**不会**覆盖 /etc/docker/daemon.json，也不会重启 docker 守护进程。
+# - 若 Docker / Compose 已就绪，本脚本会直接跳过，
+#   **不会**覆盖 /etc/docker/daemon.json，也不会重启 docker 守护进程。
 # - 只有全新服务器（docker 未安装）才会安装 Docker 并首次配置镜像加速。
 set -euo pipefail
 
