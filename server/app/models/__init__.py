@@ -21,7 +21,7 @@ from app.models.events import EventImpression
 from app.models.corpus import CorpusItem
 from app.models.ziliao import ZiliaoFormula, ZiliaoPracticeLog, ZiliaoQuestionType, ZiliaoTrick
 from app.models.misc import ActivityEvent, ExamCountdown, Feedback
-from app.models.product import DailyLearningTask, UserDailyTaskProgress, UserGuestLearningRecord
+from app.models.product import DailyLearningTask, TheoryLearningEntry, UserDailyTaskProgress, UserGuestLearningRecord
 from app.models.content_ops import ContentOperationTemplate, ContentPublishPackage, ContentReviewRecord
 from app.models.question_bank import (
     ExamPaperUnified,

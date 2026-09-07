@@ -41,6 +41,12 @@ const router = createRouter({
           meta: { title: '账号运营', permissions: ['content_ops:read'] },
         },
         {
+          path: 'theory-learning',
+          name: 'theory-learning',
+          component: () => import('@/views/theoryLearning/Index.vue'),
+          meta: { title: '时政学习入口', permissions: ['article:read'] },
+        },
+        {
           path: 'categories',
           name: 'categories',
           component: () => import('@/views/categories/List.vue'),

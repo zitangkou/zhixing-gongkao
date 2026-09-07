@@ -4,6 +4,7 @@ from datetime import datetime
 
 from app.models.base import (
     Base,
+    Boolean,
     DateTime,
     ForeignKey,
     Integer,
@@ -78,5 +79,26 @@ class UserGuestLearningRecord(Base):
     payload_json: Mapped[str] = mapped_column(Text, default="{}")
     source_device_id: Mapped[str] = mapped_column(String(64), default="")
     client_updated_at: Mapped[datetime] = mapped_column(DateTime)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
+
+
+class TheoryLearningEntry(Base):
+    """时政学习入口编排；不是试卷，只组织单篇文章的分辑练习。"""
+
+    __tablename__ = "theory_learning_entries"
+
+    id: Mapped[str] = mapped_column(String(32), primary_key=True, default=lambda: gen_id("tle"))
+    article_id: Mapped[str] = mapped_column(ForeignKey("articles.id"), unique=True, index=True)
+    title: Mapped[str] = mapped_column(String(128), default="")
+    description: Mapped[str] = mapped_column(String(512), default="")
+    is_daily: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
+    is_evergreen: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
+    parts_json: Mapped[str] = mapped_column(Text, default="[]")
+    collection_enabled: Mapped[bool] = mapped_column(Boolean, default=False)
+    status: Mapped[str] = mapped_column(String(16), default="draft", index=True)
+    publish_start: Mapped[str] = mapped_column(String(10), default="", index=True)
+    publish_end: Mapped[str] = mapped_column(String(10), default="", index=True)
+    sort_order: Mapped[int] = mapped_column(Integer, default=0)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)

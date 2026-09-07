@@ -9,9 +9,11 @@ from sqlalchemy.orm import Session
 from app.models import Article, Question
 from app.services.serializers import article_to_out, question_to_out
 from app.services.user_service import check_answer
+from app.services.theory_learning_entry_service import get_public_entry
 
 
 def load_learning_bundle(db: Session, article_id: str):
+    entry, parts = get_public_entry(db, article_id)
     article = db.get(Article, article_id)
     if not article or not article.is_published or article.status != "published":
         raise HTTPException(404, "文章已下线或不存在")
@@ -36,17 +38,20 @@ def load_learning_bundle(db: Session, article_id: str):
                 and len(set(answers)) == len(answers)
                 and (len(answers) >= 2 if row.type == "multiple" else len(answers) == 1)):
             ready.append((row, out))
+    ready_by_id = {row.id: (row, out) for row, out in ready}
+    configured_ids = [question_id for part in parts for question_id in part["questionIds"]]
+    ready = [ready_by_id[question_id] for question_id in configured_ids if question_id in ready_by_id]
     article_data = article_to_out(article).model_dump()
     fingerprint = json.dumps(
         [{key: article_data[key] for key in ("id", "title", "source", "publishDate", "summary", "content", "sections")},
-         [out for _, out in ready]], ensure_ascii=False, sort_keys=True,
+         [out for _, out in ready], parts, entry.collection_enabled], ensure_ascii=False, sort_keys=True,
     ).encode()
     revision = hashlib.sha256(fingerprint).hexdigest()
-    return article_data, ready, revision, len(ready) == len(active_rows) and bool(active_rows)
+    return article_data, ready, revision, entry.collection_enabled, parts
 
 
 def get_learning_bundle(db: Session, article_id: str):
-    article, ready, revision, complete = load_learning_bundle(db, article_id)
+    article, ready, revision, complete, parts = load_learning_bundle(db, article_id)
     questions = [
         {key: out[key] for key in ("id", "articleId", "type", "stem", "options")}
         for _, out in ready
@@ -54,15 +59,12 @@ def get_learning_bundle(db: Session, article_id: str):
     return {
         "article": article, "revision": revision, "questions": questions,
         "collectionComplete": complete,
-        "parts": [
-            {"number": i // 5 + 1, "questionIds": [q["id"] for q in questions[i:i + 5]]}
-            for i in range(0, len(questions), 5)
-        ],
+        "parts": parts,
     }
 
 
 def check_learning_answer(db: Session, article_id: str, revision: str, question_id: str, answer):
-    _, ready, current_revision, _ = load_learning_bundle(db, article_id)
+    _, ready, current_revision, _, _ = load_learning_bundle(db, article_id)
     if revision != current_revision:
         raise HTTPException(409, "内容已更新，请重新打开学习内容；旧记录仍保留在本机")
     pair = next((pair for pair in ready if pair[0].id == question_id), None)

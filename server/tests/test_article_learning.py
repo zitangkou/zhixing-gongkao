@@ -10,7 +10,7 @@ from sqlalchemy.pool import StaticPool
 
 from app.api.public.article_learning import router
 from app.database import get_db
-from app.models import Article, Question
+from app.models import Article, Question, TheoryLearningEntry
 from app.models.base import Base
 
 THEORY_HEADERS = {"X-Product-Key": "theory"}
@@ -27,6 +27,15 @@ def fixture():
             db.add(Question(id=f'q{i:02}', article_id='a', type='single', stem=f'题目{i}',
                             options=json.dumps(['甲', '乙']), correct_answer='甲',
                             analysis='解析', source_sentence='原文依据', status='approved', is_active=True))
+        db.add(TheoryLearningEntry(
+            id='entry-a', article_id='a', is_daily=True, status='published',
+            collection_enabled=True,
+            parts_json=json.dumps([
+                {'number': 1, 'title': '第 1 辑', 'questionIds': [f'q{i:02}' for i in range(5)]},
+                {'number': 2, 'title': '第 2 辑', 'questionIds': [f'q{i:02}' for i in range(5, 10)]},
+                {'number': 3, 'title': '第 3 辑', 'questionIds': [f'q{i:02}' for i in range(10, 12)]},
+            ]),
+        ))
         db.commit()
         app = FastAPI()
         app.include_router(router)
@@ -87,10 +96,7 @@ def test_incomplete_and_unapproved_questions(fixture):
     db.get(Question, 'q01').status = 'pending'
     db.get(Question, 'q02').is_active = False
     db.commit()
-    data = bundle(client)
-    assert len(data['questions']) == 9
-    assert data['collectionComplete'] is False
-    assert check(client, data).status_code == 404
+    assert client.get('/learning/articles/a', headers=THEORY_HEADERS).status_code == 404
 
 
 @pytest.mark.parametrize('answer', ['', '丙', [], ['甲', '甲'], ['甲', '乙']])

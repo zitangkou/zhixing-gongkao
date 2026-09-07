@@ -45,7 +45,7 @@
     <view v-else class="card guest-note">
       <view class="card-title">无需登录即可开始</view>
       <view class="card-desc">
-        阅读和作答会保存在当前设备。登录功能后续用于跨设备同步，不影响免费体验。
+        阅读和作答会保存在当前设备；主动登录后可同步到同一账号的其他设备，不影响免费体验。
       </view>
     </view>
   </view>

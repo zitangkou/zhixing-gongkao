@@ -38,6 +38,7 @@ export const NAV_GROUPS: NavGroup[] = [
     children: [
       { path: '/articles', title: '文章管理', icon: Document, permissions: ['article:read'] },
       { path: '/content-ops', title: '账号运营', icon: Promotion, permissions: ['content_ops:read'] },
+      { path: '/theory-learning', title: '时政学习入口', icon: Reading, permissions: ['article:read'] },
       { path: '/categories', title: '分类管理', icon: Folder, permissions: ['article:read', 'article:write'] },
     ],
   },
@@ -97,6 +98,7 @@ export const ROUTE_TITLES: Record<string, string> = {
   '/articles': '文章管理',
   '/articles/new': '新建文章',
   '/content-ops': '账号运营',
+  '/theory-learning': '时政学习入口',
   '/categories': '分类管理',
   '/users': '用户管理',
   '/knowledge': '知识框架',

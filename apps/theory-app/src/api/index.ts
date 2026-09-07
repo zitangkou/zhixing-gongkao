@@ -120,7 +120,23 @@ export interface LearningBundle {
   revision: string
   collectionComplete: boolean
   questions: Omit<Question, 'correctAnswer' | 'analysis' | 'sourceSentence'>[]
-  parts: { number: number; questionIds: string[] }[]
+  parts: { number: number; title?: string; questionIds: string[] }[]
+}
+
+export interface TheoryLearningEntry {
+  id: string
+  articleId: string
+  articleTitle: string
+  title: string
+  description: string
+  source: string
+  publishDate: string
+  tags: string[]
+  isDaily: boolean
+  isEvergreen: boolean
+  parts: { number: number; title: string; questionIds: string[] }[]
+  questionCount: number
+  collectionEnabled: boolean
 }
 
 export interface GuestLearningRecord {
@@ -167,6 +183,9 @@ async function request<T>(path: string, options: { method?: 'GET' | 'POST' | 'PU
 }
 
 export const api = {
+  listLearningEntries() {
+    return request<TheoryLearningEntry[]>('/api/learning/entries', { auth: false })
+  },
   mergeGuestRecords(deviceId: string, records: GuestLearningRecord[]) {
     return request<GuestLearningMergeResult>('/api/learning/guest-records/merge', {
       method: 'POST', data: { deviceId, records },

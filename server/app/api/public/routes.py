@@ -17,6 +17,7 @@ from app.api.public.practice import router as practice_router
 from app.api.public.product import router as product_router
 from app.api.public.rmrb import router as rmrb_router
 from app.api.public.shenlun_learning import router as shenlun_learning_router
+from app.api.public.theory_learning_entries import router as theory_learning_entries_router
 from app.api.public.ziliao import router as ziliao_router
 
 router = APIRouter(
@@ -36,6 +37,7 @@ router.include_router(exam_router)
 router.include_router(guest_learning_router)
 router.include_router(rmrb_router)
 router.include_router(shenlun_learning_router)
+router.include_router(theory_learning_entries_router)
 router.include_router(corpus_router)
 router.include_router(events_router)
 router.include_router(ziliao_router)
