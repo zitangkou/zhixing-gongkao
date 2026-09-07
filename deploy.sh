@@ -16,10 +16,15 @@ fi
 http_get() {
   local url="$1"
   if command -v curl >/dev/null 2>&1; then
-    curl -fsS -o /dev/null "$url"
+    curl --connect-timeout 5 --max-time 15 -fsS -o /dev/null "$url"
   else
-    python3 -c "import urllib.request,sys; urllib.request.urlopen(sys.argv[1], timeout=5)" "$url"
+    python3 -c "import urllib.request,sys; urllib.request.urlopen(sys.argv[1], timeout=15)" "$url"
   fi
+}
+
+env_value() {
+  local key="$1"
+  grep -E "^${key}=" .env | head -1 | cut -d= -f2-
 }
 
 # ---------- 1/5 准备 .env ----------
@@ -35,8 +40,19 @@ else
   echo "[1/5] 使用现有 .env"
 fi
 
-HTTP_PORT="$(grep -E '^HTTP_PORT=' .env | head -1 | cut -d= -f2)"
+HTTP_PORT="$(env_value HTTP_PORT)"
 HTTP_PORT="${HTTP_PORT:-8081}"
+HTTP_BIND="$(env_value HTTP_BIND)"
+HTTP_BIND="${HTTP_BIND:-127.0.0.1}"
+
+if [[ "$(env_value SECRET_KEY)" == "please-change-me-use-openssl-rand-hex-32" ]] || [[ -z "$(env_value SECRET_KEY)" ]]; then
+  echo "SECRET_KEY 未安全配置，拒绝部署。请在 .env 中使用随机密钥。"
+  exit 1
+fi
+if [[ "$(env_value ADMIN_PASSWORD)" == "change-this-password" ]] || [[ -z "$(env_value ADMIN_PASSWORD)" ]]; then
+  echo "ADMIN_PASSWORD 未安全配置，拒绝部署。请在 .env 中设置强密码。"
+  exit 1
+fi
 
 # ---------- 2/5 构建并启动 ----------
 echo "[2/5] 构建并启动容器（http://127.0.0.1:${HTTP_PORT}）"
@@ -57,28 +73,37 @@ echo "  /health OK"
 
 # ---------- 4/5 验证关键路由 ----------
 echo "[4/5] 验证关键路由"
-http_get "http://127.0.0.1:${HTTP_PORT}/" && echo "  /           H5 OK"
+http_get "http://127.0.0.1:${HTTP_PORT}/" && echo "  /           综合 H5 OK"
+http_get "http://127.0.0.1:${HTTP_PORT}/theory/" && echo "  /theory/    知行日知 H5 OK"
+http_get "http://127.0.0.1:${HTTP_PORT}/shenlun/" && echo "  /shenlun/   知行策论 H5 OK"
 http_get "http://127.0.0.1:${HTTP_PORT}/api/config" && echo "  /api/       学员 API OK"
 http_get "http://127.0.0.1:${HTTP_PORT}/manage/" && echo "  /manage/    管理后台 OK"
 
 # ---------- 5/5 汇总 ----------
-DOMAIN="$(grep -E '^DOMAIN=' .env | head -1 | cut -d= -f2)"
+DOMAIN="$(env_value DOMAIN)"
 echo ""
 echo "部署完成！"
 if [[ -n "${DOMAIN:-}" ]]; then
-  echo "  H5:        http://${DOMAIN}/"
-  echo "  管理后台:  http://${DOMAIN}/manage/  （admin / 见 .env ADMIN_PASSWORD）"
-  echo "  若已配置域名网关，请确认 deploy/nginx.conf 已挂到宿主机 Nginx。"
+  echo "  综合 H5:   http://${DOMAIN}/"
+  echo "  知行日知:  http://${DOMAIN}/theory/"
+  echo "  知行策论:  http://${DOMAIN}/shenlun/"
+  echo "  管理后台:  http://${DOMAIN}/manage/  （账号与密码见 .env）"
+  echo "  正式发布前请配置 HTTPS，并再次执行：python3 scripts/release-preflight.py --base-url https://${DOMAIN} --env-file .env"
 else
-  echo "  本机访问:  http://127.0.0.1:${HTTP_PORT}/"
+  echo "  综合 H5:   http://127.0.0.1:${HTTP_PORT}/"
+  echo "  知行日知:  http://127.0.0.1:${HTTP_PORT}/theory/"
+  echo "  知行策论:  http://127.0.0.1:${HTTP_PORT}/shenlun/"
   echo "  管理后台:  http://127.0.0.1:${HTTP_PORT}/manage/"
-  echo "  提示: 公网访问需在 .env 设置 HTTP_BIND=0.0.0.0（方案A），"
-  echo "        或配置域名网关（方案B，见 deploy/nginx.conf 与 DEPLOY.md）。"
+  if [[ "$HTTP_BIND" == "0.0.0.0" ]]; then
+    echo "  当前允许公网 IP:${HTTP_PORT} 访问；请同时限制云安全组来源。"
+  else
+    echo "  当前仅监听本机；公网访问需配置域名网关，或在临时联调时明确改为 HTTP_BIND=0.0.0.0。"
+  fi
 fi
 echo ""
 echo "常用命令："
 echo "  日志:    docker compose logs -f zhixing-gongkao"
 echo "  重启:    docker compose restart"
-echo "  更新:    git pull && bash deploy.sh"
+echo "  更新:    bash scripts/deploy-update.sh"
 echo "  备份:    bash deploy/backup.sh（每日定时：bash deploy/install-backup.sh）"
 echo "  停止:    docker compose down"

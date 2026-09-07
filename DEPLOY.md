@@ -2,7 +2,7 @@
 
 > 适用：一台云服务器（建议 Ubuntu 22.04 / Debian 12，2核4G+）部署整套 H5 + FastAPI + 管理后台。
 > 方案参考：coffee-order 的单机 Docker 部署模式（容器内网端口 + 宿主机 Nginx 网关按域名转发）。
-> 更新：2026-08-16
+> 更新：2026-09-08
 
 ## 快速命令速查
 
@@ -12,8 +12,9 @@ apt update && apt install -y git
 cd /opt && git clone git@github.com:zitangkou/zhixing-gongkao.git
 cd zhixing-gongkao && bash deploy/setup-docker.sh   # Docker 已就绪时会自动跳过，不影响其它项目
 
-# ② 一键部署 / 更新
+# ② 首次部署 / 安全更新
 bash deploy.sh
+bash scripts/deploy-update.sh
 
 # ③ 域名网关（可选，正式运营推荐）
 cp deploy/nginx.conf /etc/nginx/sites-available/zhixing-gongkao
@@ -52,13 +53,13 @@ bash deploy/install-backup.sh
         ▼
 项目容器 Nginx（默认 127.0.0.1:8081）
    ├── /          → 综合 H5 静态页
-   ├── /shenlun/  → 申论独立 H5
-   ├── /theory/   → 政治理论独立 H5
+   ├── /shenlun/  → 知行策论 H5
+   ├── /theory/   → 知行日知 H5
    ├── /api/      → FastAPI 学员端接口（uvicorn:8000）
    ├── /admin/    → FastAPI 管理端接口（JWT + RBAC）
    ├── /manage/   → 管理后台静态页（admin-dist）
    ├── /uploads/  → data/uploads（头像/错题图）
-   └── /health、/docs、/openapi.json → 健康检查 / API 文档
+   └── /health    → 健康检查
 ```
 
 ## 1. 端口与路由约定
@@ -66,13 +67,15 @@ bash deploy/install-backup.sh
 | 路由 | 说明 | 容器内处理 |
 |---|---|---|
 | `/` | 学员端 H5 | nginx 静态 `try_files` |
-| `/shenlun/` | 申论独立 H5 | nginx 子目录静态 `try_files` |
-| `/theory/` | 政治理论独立 H5 | nginx 子目录静态 `try_files` |
+| `/shenlun/` | 知行策论 H5 | nginx 子目录静态 `try_files` |
+| `/theory/` | 知行日知 H5 | nginx 子目录静态 `try_files` |
 | `/api/*` | 学员端 API | nginx → uvicorn:8000 |
 | `/admin/*` | 管理端 API | nginx → uvicorn:8000 |
 | `/manage/*` | 管理后台 | nginx → FastAPI 挂载 admin-dist |
 | `/uploads/*` | 上传文件 | nginx `alias` data/uploads |
-| `/health` `/docs` `/openapi.json` | 健康检查 / API 文档 | nginx → uvicorn |
+| `/health` | 健康检查 | nginx → uvicorn |
+
+生产域名网关不对公网开放 `/docs` 与 `/openapi.json`。需要排障时，应通过本机后端端口或 SSH 隧道访问。
 
 宿主机监听由 `.env` 控制：`HTTP_PORT`（默认 `8081`）与 `HTTP_BIND`（默认 `127.0.0.1`）。
 
@@ -108,7 +111,7 @@ cd zhixing-gongkao
 # 一次性：安装 Docker / Compose + 配置镜像加速
 bash deploy/setup-docker.sh
 
-# 一键：生成 .env → 构建 → 启动 → 健康检查 → 验证 /、/api、/manage
+# 一键：生成 .env → 构建 → 启动 → 验证双 H5、API 与管理后台
 bash deploy.sh
 ```
 
@@ -128,15 +131,14 @@ cp deploy/nginx.conf /etc/nginx/sites-available/zhixing-gongkao
 ln -sf /etc/nginx/sites-available/zhixing-gongkao /etc/nginx/sites-enabled/
 nginx -t && systemctl reload nginx
 
-# HTTPS（可选）：certbot --nginx -d 你的域名
+# HTTPS（H5 / 小程序正式发布必需）：certbot --nginx -d 你的域名
 ```
 
 ## 5. 更新与运维
 
 ```bash
-# 更新（拉代码 + 一键重建）
-git pull && bash deploy.sh
-# 或：bash scripts/deploy-update.sh
+# 更新（只允许当前分支快进，不会自动覆盖服务器 tracked 修改）
+bash scripts/deploy-update.sh
 
 # 日志 / 重启 / 停止
 docker compose logs -f zhixing-gongkao
@@ -192,3 +194,38 @@ cd server && source .venv/bin/activate && uvicorn app.main:app --reload --port 8
 npm run dev:h5
 cd server/admin-web && npm run dev
 ```
+
+## 10. 双产品发布产物与上线检查
+
+两个应用的 H5 和微信小程序构建都会写入各自的 `dist`，不能并行构建，也不能构建完两种目标后只取最后一个 `dist`。使用以下命令顺序构建并立即归档：
+
+```bash
+bash scripts/build-release-artifacts.sh --api-url https://你的正式域名
+```
+
+默认输出到系统临时目录，并包含：
+
+```text
+h5/theory
+h5/shenlun
+weapp/theory/project.config.json + dist
+weapp/shenlun/project.config.json + dist
+RELEASE.txt
+```
+
+检查源码 AppID 与产物：
+
+```bash
+python3 scripts/release-preflight.py
+python3 scripts/release-preflight.py --artifact-dir /tmp/实际产物目录
+```
+
+服务器部署后检查环境和全部公开路由：
+
+```bash
+python3 scripts/release-preflight.py --env-file .env --base-url http://公网IP
+# 备案、证书完成后最终检查
+python3 scripts/release-preflight.py --env-file .env --base-url https://你的正式域名
+```
+
+公网 IP 的 HTTP 地址可以用于公众号服务器回调技术验证，但不能替代微信小程序的正式 HTTPS API 域名。检查工具只显示密钥是否安全配置，不会输出密钥内容。

@@ -10,9 +10,23 @@ if [[ ! -f .env ]]; then
   exit 1
 fi
 
+if [[ -n "$(git status --porcelain --untracked-files=no)" ]]; then
+  echo "检测到服务器存在未提交的 tracked 文件修改，已停止更新。"
+  echo "请先确认并提交、暂存或人工处理这些修改；脚本不会自动覆盖服务器文件。"
+  git status --short --untracked-files=no
+  exit 1
+fi
+
+BRANCH="$(git branch --show-current)"
+if [[ -z "$BRANCH" ]]; then
+  echo "当前处于 detached HEAD，无法安全执行自动更新。请先切换到目标分支。"
+  exit 1
+fi
+
 git fetch origin
-if ! git pull --ff-only; then
-  echo "检测到本地改动阻塞 pull，将丢弃与远程冲突的 tracked 文件（.env 不受影响）..."
-  git reset --hard origin/main
+if ! git pull --ff-only origin "$BRANCH"; then
+  echo "远端分支无法快进合并，已停止部署。"
+  echo "请人工检查 git log --oneline --decorate --graph --all，确认后再更新。"
+  exit 1
 fi
 bash deploy.sh
