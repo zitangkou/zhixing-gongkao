@@ -13,6 +13,7 @@ export default defineConfig<'vite'>(() => ({
   alias: { '@': path.resolve(__dirname, '..', 'src') },
   defineConstants: {
     API_BASE_URL: JSON.stringify(process.env.TARO_APP_API_URL ?? 'http://127.0.0.1:8001'),
+    APP_PUBLIC_PATH: JSON.stringify(process.env.TARO_APP_PUBLIC_PATH ?? '/'),
     PRODUCT_KEY: JSON.stringify('shenlun'),
     USE_MOCK: JSON.stringify(process.env.USE_MOCK === 'true'),
   },
